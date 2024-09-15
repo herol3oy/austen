@@ -3,7 +3,6 @@
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   build: {
     target: ['es2020'],
@@ -11,7 +10,13 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     mainFields: ['module'],
   },
-  plugins: [analog()],
+  plugins: [
+    analog({
+      vite: {
+        inlineStylesExtension: 'scss',
+      },
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',

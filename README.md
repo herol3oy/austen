@@ -1,26 +1,19 @@
-# Analog App
+# Austen
 
-This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
+Austen is an AI-powered Angular application initialized with Analog to generate relationships between book characters using Mermaid.
 
-## Setup
+## Libraries Used
 
-Run `npm install` to install the application dependencies.
+- [Angular](https://angular.dev)
+- [Analog](https://analogjs.org/)
+- [Mermaid](https://mermaid.live/)
+- [Angular Material](https://material.angular.io/)
 
-## Development
+## API
 
-Run `npm start` for a dev server. Navigate to `http://localhost:5173/`. The application automatically reloads if you change any of the source files.
+- [Open Library](https://openlibrary.org)
+- [Google Generative AI](https://ai.google/discover/generativeai)
 
-## Build
+## Screenshot
 
-Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
-
-## Test
-
-Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
-
-## Community
-
-- Visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
-- Join the [Discord](https://chat.analogjs.org)
-- Follow us on [Twitter](https://twitter.com/analogjs)
-- Become a [Sponsor](https://github.com/sponsors/brandonroberts)
+![Austen Homepage](./screenshot/austen-homepage.png)
