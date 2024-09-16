@@ -1,13 +1,14 @@
-import { AsyncPipe, CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Component, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule, AsyncPipe } from '@angular/common';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 import {
   FormControl,
   FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -15,72 +16,33 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import mermaid from 'mermaid';
 import {
-  catchError,
+  MatAutocompleteModule,
+  MatAutocompleteSelectedEvent,
+} from '@angular/material/autocomplete';
+
+import {
   debounceTime,
   finalize,
   from,
   map,
-  Observable,
   of,
   startWith,
   switchMap,
 } from 'rxjs';
 
-interface Book {
-  title: string;
-  author_name: string[];
-}
+import { MermaidService } from '../services/mermaid.service';
+import { OpenlibService } from '../services/openlib.service';
 
-interface OpenLibraryResponse {
-  docs: Book[];
-}
+import { Book } from '../types/book';
+import { BookGraph } from '../types/book-graph';
 
-interface BookGraph {
-  id: string;
-  bookName: string;
-  svgGraph: SafeHtml;
-}
-
-@Injectable()
-export class BookSearchService {
-  constructor(private readonly http: HttpClient) {}
-
-  searchBooks(query: string): Observable<Book[]> {
-    return this.http
-      .get<OpenLibraryResponse>(
-        `https://openlibrary.org/search.json?title=${query}`
-      )
-      .pipe(map((response) => response.docs));
-  }
-}
-
-@Injectable()
-export class MermaidService {
-  constructor(private readonly http: HttpClient) {}
-
-  getMermaidContent(bookTitle: string): Observable<string> {
-    return this.http
-      .post<{ mermaidContent: string }>('/api/v1/getMermaidContent', {
-        bookTitle,
-      })
-      .pipe(
-        map((response) => response.mermaidContent),
-        catchError((error) => {
-          console.error('Error fetching Mermaid content:', error);
-          throw error;
-        })
-      );
-  }
-}
+import mermaid from 'mermaid';
 
 @Component({
-  selector: 'app-home',
+  selector: 'austen-home',
   standalone: true,
-  providers: [BookSearchService, MermaidService],
+  providers: [OpenlibService, MermaidService],
   imports: [
     RouterOutlet,
     CommonModule,
@@ -305,7 +267,7 @@ export default class HomeComponent {
   ]);
 
   constructor(
-    private readonly bookSearchService: BookSearchService,
+    private readonly openLibService: OpenlibService,
     private readonly mermaidService: MermaidService,
     private readonly sanitizer: DomSanitizer
   ) {}
@@ -317,13 +279,13 @@ export default class HomeComponent {
       .pipe(
         startWith(''),
         debounceTime(400),
-        switchMap((value) => {
-          if (!value || !this.myControl.valid) {
+        switchMap((bookTitle) => {
+          if (!bookTitle || !this.myControl.valid) {
             return of([]);
           } else {
             this.loading = true;
             this.filteredOptions = [];
-            return this.bookSearchService.searchBooks(value).pipe(
+            return this.openLibService.searchBook(bookTitle).pipe(
               finalize(() => {
                 this.loading = false;
               })
@@ -341,7 +303,7 @@ export default class HomeComponent {
       });
   }
 
-  onOptionSelected(event: any) {
+  onOptionSelected(event: MatAutocompleteSelectedEvent) {
     const selectedBook = event.option.value;
     this.displayGraph(selectedBook);
   }
