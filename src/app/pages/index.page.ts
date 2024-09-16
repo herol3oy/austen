@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { CommonModule, AsyncPipe } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -126,13 +126,13 @@ import mermaid from 'mermaid';
     </form>
 
     <section class="book-graph-section">
-      @if (bookGraph.bookName && bookGraph.svgGraph) {
+      @if (bookGraph?.bookName && bookGraph?.svgGraph) {
       <mat-card class="book-graph-card">
         <mat-card-header>
-          <mat-card-title>{{ bookGraph.bookName }}</mat-card-title>
+          <mat-card-title>{{ bookGraph?.bookName }}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <div [innerHTML]="bookGraph.svgGraph"></div>
+          <div [innerHTML]="bookGraph?.svgGraph"></div>
         </mat-card-content>
       </mat-card>
       } @else if (loading) {
@@ -148,119 +148,14 @@ import mermaid from 'mermaid';
       }
     </section>
   `,
-  styles: [
-    `
-      :host {
-        display: block;
-        font-family: 'Roboto', sans-serif;
-        background-color: #f0f4f8;
-        min-height: 100vh;
-        padding: 2rem;
-      }
-
-      .spinner-container {
-        display: flex;
-        align-items: center;
-      }
-
-      .spinner-container span {
-        margin-left: 0.5rem;
-      }
-
-      .austen-header {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: #2c3e50;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        font-weight: 300;
-      }
-
-      .subtitle {
-        font-size: 1.2rem;
-        color: #7f8c8d;
-      }
-
-      .search-form {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 2rem;
-      }
-
-      mat-form-field {
-        width: 100%;
-        max-width: 40rem;
-      }
-
-      .book-graph-section {
-        display: flex;
-      }
-
-      .book-graph-card {
-        width: 100%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .loading-container,
-      .no-graph-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 20rem;
-        color: #7f8c8d;
-        width: 100vw;
-      }
-
-      .no-graph-container mat-icon {
-        font-size: 3rem;
-        height: 3rem;
-        width: 3rem;
-        margin-bottom: 1rem;
-      }
-
-      .explore-icon {
-        animation: swing 4s ease-in-out infinite;
-      }
-
-      @keyframes swing {
-        0% {
-          transform: rotate(30deg);
-        }
-        50% {
-          transform: rotate(-30deg);
-        }
-        100% {
-          transform: rotate(30deg);
-        }
-      }
-
-      @media (max-width: 600px) {
-        :host {
-          padding: 1rem;
-        }
-
-        h1 {
-          font-size: 2rem;
-        }
-
-        .subtitle {
-          font-size: 1rem;
-        }
-      }
-    `,
-  ],
+  styleUrl: './index.page.scss',
 })
 export default class HomeComponent {
   bookName = '';
   loading = false;
   options: string[] = [];
   filteredOptions: Book[] = [];
-  bookGraph: BookGraph = { id: '', bookName: '', svgGraph: '' };
+  bookGraph: BookGraph | null = null;
   myControl = new FormControl<string>('', [
     Validators.required,
     Validators.minLength(4),
@@ -269,7 +164,8 @@ export default class HomeComponent {
   constructor(
     private readonly openLibService: OpenlibService,
     private readonly mermaidService: MermaidService,
-    private readonly sanitizer: DomSanitizer
+    private readonly sanitizer: DomSanitizer,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -337,6 +233,7 @@ export default class HomeComponent {
             bookName: bookTitle,
             svgGraph: mermaidSyntax,
           };
+          this.cdr.detectChanges();
         },
       });
   }
