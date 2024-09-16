@@ -64,9 +64,7 @@ import mermaid from 'mermaid';
   styleUrl: './index.page.scss',
 })
 export default class HomeComponent {
-  bookName = '';
   loading = false;
-  options: string[] = [];
   filteredOptions: Book[] = [];
   bookGraph: BookGraph | null = null;
   myControl = new FormControl<string>('', [
@@ -93,7 +91,6 @@ export default class HomeComponent {
             return of([]);
           } else {
             this.loading = true;
-            this.filteredOptions = [];
             return this.openLibService.searchBook(bookTitle).pipe(
               finalize(() => {
                 this.loading = false;
@@ -120,18 +117,18 @@ export default class HomeComponent {
   clearSearch() {
     this.myControl.setValue('');
     this.filteredOptions = [];
-    this.bookGraph = { id: '', bookName: '', svgGraph: '' };
+    this.bookGraph = null;
   }
 
   displayGraph(bookTitle: string) {
     this.mermaidService
       .getMermaidContent(bookTitle)
       .pipe(
-        switchMap((content) => {
+        switchMap((mermaidSyntax) => {
           return from(
             mermaid.render(
               'graph_' + Math.random().toString(36).substring(2, 15),
-              content,
+              mermaidSyntax,
             ),
           );
         }),
