@@ -17,7 +17,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { GenerativeModel, GoogleGenerativeAI } from '@google/generative-ai';
 import mermaid from 'mermaid';
 import {
   catchError,
@@ -61,49 +60,20 @@ export class BookSearchService {
 
 @Injectable()
 export class MermaidService {
-  private readonly googleGeminiApiKey = import.meta.env[
-    'VITE_GOOGLE_GEMINI_API_KEY'
-  ];
-  private genAI: GoogleGenerativeAI;
-  private model: GenerativeModel;
-  private systemInstruction = `
-     You're a bookworm and an assistant. You'll provide the name of a book,
-      and you will create a graph for its characters using Mermaid js syntax. 
-      You can find the following as a sample for the book "The Wonderful Wizard of Oz". 
-      Please refrain from including any explanations or descriptions at the beginning or end and 
-      avoid adding notes or anything else and simply provide the syntax. 
-      Do not include syntax highlighting for the syntax.
-
-        graph TD
-          A[Dorothy Gale] -->|Pet| B[Toto]
-          A -->|Family| C[Uncle Henry and Aunt Em]
-          A -->|Friends| D[Scarecrow]
-          A -->|Friends| E[Tin Woodman]
-          A -->|Friends| F[Cowardly Lion]
-          A -->|Enemy| G[The Wicked Witch of The West]
-          A -->|Enemy| H[The Wizard of OZ]
-          A -->|Helps Dorothy| I[Glinda]
-          D -->|Friends| E
-          E -->|Friends| F
-          B -->|In Kansas| C
-          `;
-
-  constructor() {
-    this.genAI = new GoogleGenerativeAI(this.googleGeminiApiKey);
-    this.model = this.genAI.getGenerativeModel({
-      model: 'gemini-1.5-flash',
-      systemInstruction: this.systemInstruction,
-    });
-  }
+  constructor(private readonly http: HttpClient) {}
 
   getMermaidContent(bookTitle: string): Observable<string> {
-    return from(this.model.generateContent(bookTitle)).pipe(
-      map((result) => result.response.text()),
-      catchError((error) => {
-        console.error('Error generating content:', error);
-        throw error;
+    return this.http
+      .post<{ mermaidContent: string }>('/api/v1/getMermaidContent', {
+        bookTitle,
       })
-    );
+      .pipe(
+        map((response) => response.mermaidContent),
+        catchError((error) => {
+          console.error('Error fetching Mermaid content:', error);
+          throw error;
+        })
+      );
   }
 }
 
