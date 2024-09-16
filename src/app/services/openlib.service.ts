@@ -13,7 +13,7 @@ export class OpenlibService {
   searchBook(query: string): Observable<Book[]> {
     return this.http
       .get<OpenLibraryResponse>(
-        `https://openlibrary.org/search.json?title=${query}`
+        `https://openlibrary.org/search.json?title=${query}`,
       )
       .pipe(map((response) => response.docs));
   }

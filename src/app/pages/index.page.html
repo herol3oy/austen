@@ -1,0 +1,86 @@
+<header class="austen-header">
+  <h1>Austen</h1>
+  <p class="subtitle">Discover Story Relationships</p>
+</header>
+
+<form class="search-form">
+  <mat-form-field appearance="outline">
+    <mat-label>Type a book title...</mat-label>
+    <input
+      type="text"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+      name="bookTitle"
+      required
+    />
+
+    @if (myControl.value) {
+    <button
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="clearSearch()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    }
+    <mat-icon matSuffix>book</mat-icon>
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (optionSelected)="onOptionSelected($event)"
+    >
+      @for (option of filteredOptions; track option) {
+      <mat-option [value]="option.title">
+        {{ option.title }}
+        <mat-chip-option color="accent">
+          {{ option.author_name }}
+        </mat-chip-option>
+      </mat-option>
+      } @if (!filteredOptions.length && !loading) {
+      <mat-option disabled>
+        <em>No books found in this realm...</em>
+      </mat-option>
+      } @if (loading) {
+      <mat-option disabled>
+        <div class="spinner-container">
+          <mat-spinner diameter="20"></mat-spinner>
+          <span>Searching the literary cosmos...</span>
+        </div>
+      </mat-option>
+
+      }
+    </mat-autocomplete>
+    @if (myControl.hasError('required')) {
+    <mat-error>A book title is required to begin your journey</mat-error>
+    } @if (myControl.hasError('minlength')) {
+    <mat-error
+      >Book titles must be at least 4 characters to unlock their
+      secrets</mat-error
+    >
+    }
+  </mat-form-field>
+</form>
+
+<section class="book-graph-section">
+  @if (bookGraph?.bookName && bookGraph?.svgGraph) {
+  <mat-card class="book-graph-card">
+    <mat-card-header>
+      <mat-card-title>{{ bookGraph?.bookName }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div [innerHTML]="bookGraph?.svgGraph"></div>
+    </mat-card-content>
+  </mat-card>
+  } @else if (loading) {
+  <div class="loading-container">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Weaving the threads of literary connections...</p>
+  </div>
+  } @else {
+  <div class="no-graph-container">
+    <mat-icon class="explore-icon">explore</mat-icon>
+    <p>Your literary map awaits. Start by searching for a book above!</p>
+  </div>
+  }
+</section>

@@ -48,6 +48,7 @@
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
     "jsdom": "^22.0.0",
+    "prettier": "3.3.3",
     "typescript": "~5.4.2",
     "vite": "^5.0.0",
     "vite-tsconfig-paths": "^4.2.0",

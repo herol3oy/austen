@@ -19,7 +19,7 @@ export class MermaidService {
         catchError((err) => {
           console.error('Error fetching Mermaid content:', err);
           throw err;
-        })
+        }),
       );
   }
 }

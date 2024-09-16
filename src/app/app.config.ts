@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideFileRouter(),
     provideHttpClient(
       withFetch(),
-      withInterceptors([requestContextInterceptor])
+      withInterceptors([requestContextInterceptor]),
     ),
     provideClientHydration(),
     provideAnimations(),
