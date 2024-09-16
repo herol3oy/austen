@@ -1,25 +1,19 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-import { catchError, map, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
-import { MermaidContent } from '../types/mermaid-content';
+import { MermaidSyntax } from '../types/mermaid-syntax';
+
+const GET_MERMAID_SYNTAX_API_URL = '/api/v1/getMermaidSyntax';
 
 @Injectable()
 export class MermaidService {
   constructor(private readonly http: HttpClient) {}
 
-  getMermaidContent(bookTitle: string): Observable<string> {
+  getMermaidSyntax(bookTitle: string): Observable<string> {
     return this.http
-      .post<MermaidContent>('/api/v1/getMermaidContent', {
-        bookTitle,
-      })
-      .pipe(
-        map((res) => res.mermaidContent),
-        catchError((err) => {
-          console.error('Error fetching Mermaid content:', err);
-          throw err;
-        }),
-      );
+      .post<MermaidSyntax>(GET_MERMAID_SYNTAX_API_URL, { bookTitle })
+      .pipe(map((res) => res.mermaidSyntax));
   }
 }

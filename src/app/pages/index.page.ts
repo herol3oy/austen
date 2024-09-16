@@ -1,14 +1,18 @@
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { CommonModule, AsyncPipe } from '@angular/common';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 import {
   FormControl,
   FormsModule,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
+import {
+  MatAutocompleteModule,
+  MatAutocompleteSelectedEvent,
+} from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -16,10 +20,6 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {
-  MatAutocompleteModule,
-  MatAutocompleteSelectedEvent,
-} from '@angular/material/autocomplete';
 
 import {
   debounceTime,
@@ -122,7 +122,7 @@ export default class HomeComponent {
 
   displayGraph(bookTitle: string) {
     this.mermaidService
-      .getMermaidContent(bookTitle)
+      .getMermaidSyntax(bookTitle)
       .pipe(
         switchMap((mermaidSyntax) => {
           return from(

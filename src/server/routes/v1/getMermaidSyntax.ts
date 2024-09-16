@@ -34,10 +34,10 @@ export default defineEventHandler(async (event) => {
 
   try {
     const result = await model.generateContent(bookTitle);
-    const mermaidContent = result.response.text();
-    return { mermaidContent };
+    const mermaidSyntax = result.response.text();
+    return { mermaidSyntax };
   } catch (error) {
-    console.error('Error generating content:', error);
-    return { error: 'Failed to generate Mermaid content' };
+    console.error('Error generating syntax:', error);
+    return { error: 'Failed to generate Mermaid syntax' };
   }
 });
