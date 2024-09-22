@@ -17,3 +17,8 @@ Austen is an AI-powered Angular application initialized with Analog to generate 
 ## Screenshot
 
 ![Austen Homepage](./screenshot/austen-homepage.png)
+
+## Jane Austen logo reference
+
+"Jane Austen Inspired Illustrations", CC-BY 4.0. Quelle: 
+ https://colorconfetti.com/culture-history-environment/jane-austen/jane-austen-inspired-illustrations/
