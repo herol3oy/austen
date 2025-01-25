@@ -1,5 +1,9 @@
 <header class="austen-header">
-  <img class="austen-logo" src="/jane-austen-inspired-illustrations.png" alt="Jane Austen">
+  <img
+    class="austen-logo"
+    src="/jane-austen-inspired-illustrations.png"
+    alt="Jane Austen"
+  />
   <h1>Austen</h1>
   <p class="subtitle">Discover Story Relationships</p>
 </header>
@@ -94,6 +98,10 @@
             Copy Syntax
           </button>
           }
+          <button mat-raised-button color="primary" (click)="shareGraph()">
+            <mat-icon>share</mat-icon>
+            Share Graph
+          </button>
         </div>
         @if (isMermaidSyntaxVisible) {
         <pre><code>{{ bookGraph?.mermaidSyntax }}</code></pre>

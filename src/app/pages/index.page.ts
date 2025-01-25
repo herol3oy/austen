@@ -7,7 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import {
   MatAutocompleteModule,
@@ -34,6 +34,7 @@ import {
 
 import { MermaidService } from '../services/mermaid.service';
 import { OpenlibService } from '../services/openlib.service';
+import { SupabaseService } from '../services/supabase.service';
 
 import { Book } from '../types/book';
 import { BookGraph } from '../types/book-graph';
@@ -43,7 +44,7 @@ import mermaid from 'mermaid';
 @Component({
   selector: 'austen-home',
   standalone: true,
-  providers: [OpenlibService, MermaidService],
+  providers: [OpenlibService, MermaidService, SupabaseService],
   imports: [
     CommonModule,
     RouterModule,
@@ -76,8 +77,10 @@ export default class HomeComponent {
   constructor(
     private readonly openLibService: OpenlibService,
     private readonly mermaidService: MermaidService,
+    private readonly supabaseService: SupabaseService,
     private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
+    private readonly router: Router,
     private cdr: ChangeDetectorRef,
   ) {}
 
@@ -164,6 +167,35 @@ export default class HomeComponent {
         this.snackBar.open('Copied!', 'Close', {
           duration: 1500,
         });
+      });
+    }
+  }
+
+  async shareGraph() {
+    if (!this.bookGraph) return;
+
+    try {
+      const result = await this.supabaseService
+        .saveGraph(this.bookGraph)
+        .toPromise();
+
+      if (result?.error) {
+        throw result.error;
+      }
+
+      await this.router.navigate(['/share', this.bookGraph.id]);
+
+      this.snackBar.open('Graph shared successfully!', 'Close', {
+        duration: 3000,
+        horizontalPosition: 'end',
+        verticalPosition: 'bottom',
+      });
+    } catch (error) {
+      console.error('Error sharing graph:', error);
+      this.snackBar.open('Failed to share graph. Please try again.', 'Close', {
+        duration: 3000,
+        horizontalPosition: 'end',
+        verticalPosition: 'bottom',
       });
     }
   }
