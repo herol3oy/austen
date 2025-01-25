@@ -1,4 +1,4 @@
-import { AsyncPipe, CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef, Component } from '@angular/core';
 import {
   FormControl,
@@ -7,7 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import {
   MatAutocompleteModule,
@@ -20,6 +20,7 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 import {
   debounceTime,
@@ -57,6 +58,7 @@ import mermaid from 'mermaid';
     MatLabel,
     MatAutocompleteModule,
     MatProgressSpinnerModule,
+    MatSnackBarModule,
   ],
   templateUrl: './index.page.html',
   styleUrl: './index.page.scss',
@@ -69,11 +71,13 @@ export default class HomeComponent {
     Validators.required,
     Validators.minLength(4),
   ]);
+  isMermaidSyntaxVisible = false;
 
   constructor(
     private readonly openLibService: OpenlibService,
     private readonly mermaidService: MermaidService,
     private readonly sanitizer: DomSanitizer,
+    private readonly snackBar: MatSnackBar,
     private cdr: ChangeDetectorRef,
   ) {}
 
@@ -147,5 +151,20 @@ export default class HomeComponent {
           this.cdr.detectChanges();
         },
       });
+  }
+
+  toggleMermaidSyntax() {
+    this.isMermaidSyntaxVisible = !this.isMermaidSyntaxVisible;
+    this.cdr.detectChanges();
+  }
+
+  copyMermaidSyntax() {
+    if (this.bookGraph?.mermaidSyntax) {
+      navigator.clipboard.writeText(this.bookGraph.mermaidSyntax).then(() => {
+        this.snackBar.open('Copied!', 'Close', {
+          duration: 1500,
+        });
+      });
+    }
   }
 }

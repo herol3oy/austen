@@ -71,9 +71,37 @@
     </mat-card-header>
     <mat-card-content>
       <div [innerHTML]="bookGraph?.svgGraph"></div>
+      <div class="syntax-header">
+        <div class="syntax-header-buttons">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="toggleMermaidSyntax()"
+          >
+            <mat-icon
+              >{{ isMermaidSyntaxVisible ? 'visibility_off' : 'visibility'
+              }}</mat-icon
+            >
+            {{ isMermaidSyntaxVisible ? 'Hide' : 'Show' }} Mermaid Syntax
+          </button>
+          @if (isMermaidSyntaxVisible) {
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="copyMermaidSyntax()"
+          >
+            <mat-icon>content_copy</mat-icon>
+            Copy Syntax
+          </button>
+          }
+        </div>
+        @if (isMermaidSyntaxVisible) {
+        <pre><code>{{ bookGraph?.mermaidSyntax }}</code></pre>
+        }
+      </div>
     </mat-card-content>
-    <pre><code>{{ bookGraph?.mermaidSyntax }}</code></pre>
   </mat-card>
+
   } @else if (loading) {
   <div class="loading-container">
     <mat-spinner diameter="40"></mat-spinner>
