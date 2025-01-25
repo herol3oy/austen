@@ -45,8 +45,6 @@ import mermaid from 'mermaid';
   providers: [OpenlibService, MermaidService],
   imports: [
     CommonModule,
-    AsyncPipe,
-    RouterOutlet,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
@@ -130,18 +128,21 @@ export default class HomeComponent {
               'graph_' + Math.random().toString(36).substring(2, 15),
               mermaidSyntax,
             ),
+          ).pipe(
+            map(({ svg }) => ({
+              svg: this.sanitizer.bypassSecurityTrustHtml(svg),
+              mermaidSyntax,
+            })),
           );
-        }),
-        map(({ svg }) => {
-          return this.sanitizer.bypassSecurityTrustHtml(svg);
         }),
       )
       .subscribe({
-        next: (mermaidSyntax) => {
+        next: ({ svg, mermaidSyntax }) => {
           this.bookGraph = {
             id: crypto.randomUUID(),
             bookName: bookTitle,
-            svgGraph: mermaidSyntax,
+            svgGraph: svg,
+            mermaidSyntax,
           };
           this.cdr.detectChanges();
         },

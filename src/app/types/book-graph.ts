@@ -4,4 +4,5 @@ export interface BookGraph {
   id: string;
   bookName: string;
   svgGraph: SafeHtml;
+  mermaidSyntax: string;
 }

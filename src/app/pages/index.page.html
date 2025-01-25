@@ -72,6 +72,7 @@
     <mat-card-content>
       <div [innerHTML]="bookGraph?.svgGraph"></div>
     </mat-card-content>
+    <pre><code>{{ bookGraph?.mermaidSyntax }}</code></pre>
   </mat-card>
   } @else if (loading) {
   <div class="loading-container">
