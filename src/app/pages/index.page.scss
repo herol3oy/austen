@@ -95,6 +95,37 @@ mat-form-field {
   }
 }
 
+.book-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+
+  .book-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .author-chip {
+    flex-shrink: 0;
+  }
+}
+
+::ng-deep {
+  .mat-mdc-option {
+    .mdc-list-item__primary-text {
+      width: 100%;
+    }
+  }
+
+  .mat-mdc-chip-option {
+    --mdc-chip-container-height: 24px;
+  }
+}
+
 @keyframes swing {
   0% {
     transform: rotate(30deg);

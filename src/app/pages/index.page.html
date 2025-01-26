@@ -30,10 +30,12 @@
       >
         @for (option of filteredOptions; track option) {
         <mat-option [value]="option.title">
-          {{ option.title }}
-          <mat-chip-option color="accent">
-            {{ option.author_name }}
-          </mat-chip-option>
+          <div class="book-option">
+            <span class="book-title">{{ option.title }}</span>
+            <mat-chip-option color="accent" class="author-chip">
+              {{ option.author_name[0] }}
+            </mat-chip-option>
+          </div>
         </mat-option>
         } @if (!filteredOptions.length && !loading) {
         <mat-option disabled>
