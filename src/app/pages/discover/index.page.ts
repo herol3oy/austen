@@ -29,7 +29,7 @@ import { BookGraph } from '../../types/book-graph';
   templateUrl: './index.page.html',
   styleUrls: ['./index.page.scss'],
 })
-export default class GraphsPage implements OnInit {
+export default class DiscaverPage implements OnInit {
   loading = true;
   error: string | null = null;
   graphs: BookGraph[] = [];
@@ -65,13 +65,12 @@ export default class GraphsPage implements OnInit {
     this.supabaseService
       .getAllGraphs()
       .pipe(
-        switchMap(({ data, error }) => {
-          if (error) throw new Error('Failed to load graphs');
+        switchMap((data) => {
           if (!data) throw new Error('No graphs found');
 
           return from(
             Promise.all(
-              data.map((graph: any) =>
+              data.map((graph) =>
                 mermaid
                   .render(
                     'graph_' + Math.random().toString(36).substring(2, 15),

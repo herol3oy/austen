@@ -196,8 +196,7 @@ export default class SharePage implements OnInit {
     this.supabaseService
       .getGraphById(id)
       .pipe(
-        switchMap(({ data, error }) => {
-          if (error) throw new Error('Failed to load the graph');
+        switchMap((data) => {
           if (!data) throw new Error('Graph not found');
 
           return from(
