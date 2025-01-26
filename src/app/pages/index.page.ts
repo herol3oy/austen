@@ -178,10 +178,8 @@ export default class HomeComponent implements OnInit {
     if (!this.bookGraph) return;
 
     this.supabaseService.saveGraph(this.bookGraph).subscribe({
-      next: async ({ data, error }) => {
-        if (error) throw error;
-
-        await this.router.navigate(['/share', this.bookGraph!.id]);
+      next: () => {
+        this.router.navigate(['/share', this.bookGraph!.id]);
 
         this.snackBar.open('Graph shared successfully!', 'Close', {
           duration: 3000,

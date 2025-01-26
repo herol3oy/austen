@@ -16,8 +16,8 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
-  selector: 'app-share',
   standalone: true,
+  providers: [SupabaseService],
   imports: [
     CommonModule,
     MatCardModule,
@@ -29,7 +29,7 @@ import { SupabaseService } from '../../services/supabase.service';
   ],
   template: `
     <div class="page-container">
-      <app-header></app-header>
+      <austen-header></austen-header>
       @if (loading) {
         <div class="loading-container">
           <mat-spinner diameter="40"></mat-spinner>

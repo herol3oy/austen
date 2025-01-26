@@ -1,0 +1,45 @@
+<div class="page-container">
+  <austen-header></austen-header>
+
+  @if (loading) {
+  <div class="loading-container">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Loading graphs...</p>
+  </div>
+  } @else if (error) {
+  <div class="error-container">
+    <p>{{ error }}</p>
+  </div>
+  } @else if (graphs.length) {
+  <div class="graphs-grid">
+    @for (graph of graphs; track graph.id) {
+    <mat-card class="graph-card" (click)="navigateToGraph(graph.id)">
+      <mat-card-header>
+        <mat-card-title>{{ graph.bookName }}</mat-card-title>
+        <mat-card-subtitle>{{ graph.authorName }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="svg-preview" [innerHTML]="graph.svgGraph"></div>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-card-actions>
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="copyUrl(graph.id, $event)"
+            matTooltip="Copy url"
+          >
+            <mat-icon>link</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+    }
+  </div>
+  } @else {
+  <div class="empty-state">
+    <mat-icon>library_books</mat-icon>
+    <p>No graphs found. Start by creating one!</p>
+  </div>
+  }
+</div>

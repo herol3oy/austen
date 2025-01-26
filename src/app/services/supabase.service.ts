@@ -6,9 +6,7 @@ import { catchError } from 'rxjs/operators';
 
 import { BookGraph } from '../types/book-graph';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class SupabaseService {
   private supabase: SupabaseClient;
 
