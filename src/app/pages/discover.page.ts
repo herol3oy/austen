@@ -45,6 +45,7 @@ import { from, switchMap } from 'rxjs';
             <mat-card class="graph-card" (click)="navigateToGraph(graph.id)">
               <mat-card-header>
                 <mat-card-title>{{ graph.bookName }}</mat-card-title>
+                <mat-card-subtitle>{{ graph.authorName }}</mat-card-subtitle>
               </mat-card-header>
               <mat-card-content>
                 <div class="svg-preview" [innerHTML]="graph.svgGraph"></div>
@@ -194,6 +195,7 @@ export default class GraphsPage implements OnInit {
                   .then(({ svg }) => ({
                     id: graph.id,
                     bookName: graph.book_name,
+                    authorName: graph.author_name,
                     svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
                     mermaidSyntax: graph.mermaid_syntax,
                   })),

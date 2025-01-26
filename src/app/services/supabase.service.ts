@@ -30,6 +30,7 @@ export class SupabaseService {
           {
             id: graph.id,
             book_name: graph.bookName,
+            author_name: graph.authorName,
             svg_graph: graph.svgGraph,
             mermaid_syntax: graph.mermaidSyntax,
           },

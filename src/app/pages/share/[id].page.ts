@@ -43,6 +43,7 @@ import { BookGraph } from 'src/app/types/book-graph';
         <mat-card class="graph-card">
           <mat-card-header>
             <mat-card-title>{{ graph.bookName }}</mat-card-title>
+            <mat-card-subtitle>{{ graph.authorName }}</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
             <div [innerHTML]="graph.svgGraph"></div>
@@ -208,6 +209,7 @@ export default class SharePage implements OnInit {
             map(({ svg }) => ({
               id: data.id,
               bookName: data.book_name,
+              authorName: data.author_name,
               svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
               mermaidSyntax: data.mermaid_syntax,
             })),
