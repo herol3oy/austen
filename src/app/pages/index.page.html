@@ -33,7 +33,7 @@
           <div class="book-option">
             <span class="book-title">{{ option.title }}</span>
             <mat-chip-option color="accent" class="author-chip">
-              {{ option.author_name[0] }}
+              {{ option.author_name }}
             </mat-chip-option>
           </div>
         </mat-option>
@@ -66,6 +66,7 @@
     <mat-card class="book-graph-card">
       <mat-card-header>
         <mat-card-title>{{ bookGraph?.bookName }}</mat-card-title>
+        <mat-card-subtitle>{{ bookGraph?.authorName }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <div [innerHTML]="bookGraph?.svgGraph"></div>

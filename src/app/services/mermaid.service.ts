@@ -11,9 +11,9 @@ const GET_MERMAID_SYNTAX_API_URL = '/api/v1/getMermaidSyntax';
 export class MermaidService {
   constructor(private readonly http: HttpClient) {}
 
-  getMermaidSyntax(bookTitle: string): Observable<string> {
+  getMermaidSyntax(bookTitle: string, authorName: string): Observable<string> {
     return this.http
-      .post<MermaidSyntax>(GET_MERMAID_SYNTAX_API_URL, { bookTitle })
+      .post<MermaidSyntax>(GET_MERMAID_SYNTAX_API_URL, { bookTitle, authorName })
       .pipe(map((res) => res.mermaidSyntax));
   }
 }

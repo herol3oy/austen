@@ -117,8 +117,12 @@ export default class HomeComponent implements OnInit {
   }
 
   onOptionSelected(event: MatAutocompleteSelectedEvent) {
-    const selectedBook = event.option.value;
-    this.displayGraph(selectedBook);
+    const selectedBook = this.filteredOptions.find(
+      (book) => book.title === event.option.value,
+    );
+    if (selectedBook) {
+      this.displayGraph(selectedBook.title, selectedBook.author_name[0]);
+    }
   }
 
   clearSearch() {
@@ -127,9 +131,9 @@ export default class HomeComponent implements OnInit {
     this.bookGraph = null;
   }
 
-  displayGraph(bookTitle: string) {
+  displayGraph(bookTitle: string, authorName: string) {
     this.mermaidService
-      .getMermaidSyntax(bookTitle)
+      .getMermaidSyntax(bookTitle, authorName)
       .pipe(
         switchMap((mermaidSyntax) => {
           return from(
@@ -150,6 +154,7 @@ export default class HomeComponent implements OnInit {
           this.bookGraph = {
             id: crypto.randomUUID(),
             bookName: bookTitle,
+            authorName,
             svgGraph: svg,
             mermaidSyntax,
           };
