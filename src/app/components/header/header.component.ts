@@ -22,6 +22,14 @@ import { RouterModule } from '@angular/router';
         </div>
       </div>
       <nav class="nav-links">
+        <a routerLink="/discover">
+          <mat-icon>grid_view</mat-icon>
+          Discover
+        </a>
+        <a routerLink="/about">
+          <mat-icon>info</mat-icon>
+          About
+        </a>
         <a
           href="https://github.com/herol3oy/austen"
           target="_blank"
@@ -29,10 +37,6 @@ import { RouterModule } from '@angular/router';
         >
           <mat-icon>code</mat-icon>
           GitHub
-        </a>
-        <a routerLink="/about">
-          <mat-icon>info</mat-icon>
-          About
         </a>
       </nav>
     </header>

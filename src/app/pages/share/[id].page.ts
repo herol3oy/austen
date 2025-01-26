@@ -28,7 +28,7 @@ import { BookGraph } from 'src/app/types/book-graph';
     MatSnackBarModule,
   ],
   template: `
-    <div class="share-container">
+    <div class="page-container">
       <app-header></app-header>
       @if (loading) {
         <div class="loading-container">
@@ -56,7 +56,7 @@ import { BookGraph } from 'src/app/types/book-graph';
                   <mat-icon>{{
                     isMermaidSyntaxVisible ? 'visibility_off' : 'visibility'
                   }}</mat-icon>
-                  {{ isMermaidSyntaxVisible ? 'Hide' : 'Show' }} Syntax
+                  {{ isMermaidSyntaxVisible ? 'Hide' : 'Show' }} Mermaid Syntax
                 </button>
                 @if (isMermaidSyntaxVisible) {
                   <button
@@ -84,12 +84,6 @@ import { BookGraph } from 'src/app/types/book-graph';
   `,
   styles: [
     `
-      .share-container {
-        padding: 1rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
       .loading-container,
       .error-container {
         display: flex;
@@ -162,10 +156,10 @@ export default class SharePage implements OnInit {
   isMermaidSyntaxVisible = false;
 
   constructor(
-    private route: ActivatedRoute,
-    private supabaseService: SupabaseService,
-    private sanitizer: DomSanitizer,
-    private snackBar: MatSnackBar,
+    private readonly route: ActivatedRoute,
+    private readonly supabaseService: SupabaseService,
+    private readonly sanitizer: DomSanitizer,
+    private readonly snackBar: MatSnackBar,
   ) {}
 
   ngOnInit() {

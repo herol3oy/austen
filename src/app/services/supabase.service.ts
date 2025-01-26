@@ -57,4 +57,21 @@ export class SupabaseService {
       }),
     );
   }
+
+  getAllGraphs(): Observable<{ data: any; error: any }> {
+    if (!this.supabase) {
+      return throwError(() => new Error('Supabase client not initialized'));
+    }
+
+    return from(
+      this.supabase
+        .from('graphs')
+        .select('*')
+        .order('created_at', { ascending: false }),
+    ).pipe(
+      catchError((error) => {
+        return throwError(() => error);
+      }),
+    );
+  }
 }

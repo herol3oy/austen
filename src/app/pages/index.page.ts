@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import {
   FormControl,
   FormsModule,
@@ -66,7 +66,7 @@ import mermaid from 'mermaid';
   templateUrl: './index.page.html',
   styleUrl: './index.page.scss',
 })
-export default class HomeComponent {
+export default class HomeComponent implements OnInit {
   loading = false;
   filteredOptions: Book[] = [];
   bookGraph: BookGraph | null = null;
@@ -83,7 +83,7 @@ export default class HomeComponent {
     private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
     private readonly router: Router,
-    private cdr: ChangeDetectorRef,
+    private readonly cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {

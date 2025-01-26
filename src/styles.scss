@@ -22,5 +22,11 @@ html {
   height: 100%;
 }
 
+.page-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 @include mat.core();
 @include mat.color-variants-backwards-compatibility($theme);
