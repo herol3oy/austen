@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -26,6 +27,7 @@ import { SupabaseService } from '../../services/supabase.service';
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
+    MatMenuModule,
   ],
   template: `
     <div class="page-container">
@@ -73,7 +75,21 @@ import { SupabaseService } from '../../services/supabase.service';
                   <mat-icon>link</mat-icon>
                   Copy URL
                 </button>
+                <button mat-raised-button [matMenuTriggerFor]="downloadMenu">
+                  <mat-icon>download</mat-icon>
+                  Download
+                </button>
               </div>
+              <mat-menu #downloadMenu="matMenu">
+                <button mat-menu-item (click)="downloadSvg()">
+                  <mat-icon>image</mat-icon>
+                  Download SVG
+                </button>
+                <button mat-menu-item (click)="downloadPng()">
+                  <mat-icon>image</mat-icon>
+                  Download PNG
+                </button>
+              </mat-menu>
               @if (isMermaidSyntaxVisible) {
                 <pre><code>{{ graph.mermaidSyntax }}</code></pre>
               }
@@ -190,6 +206,33 @@ export default class SharePage implements OnInit {
         duration: 1500,
       });
     });
+  }
+
+  downloadSvg(): void {
+    if (this.graph) {
+      const svgElement = document.querySelector('svg');
+      if (svgElement) {
+        const svgString = new XMLSerializer().serializeToString(svgElement);
+        const fileName = `${this.graph.bookName}-graph`;
+        this.supabaseService.downloadSvg(svgString, fileName);
+        this.snackBar.open('SVG downloaded!', 'Close', {
+          duration: 1500,
+        });
+      }
+    }
+  }
+
+  downloadPng(): void {
+    if (this.graph) {
+      const svgElement = document.querySelector('svg');
+      if (svgElement) {
+        const fileName = `${this.graph.bookName}-graph`;
+        this.supabaseService.downloadPng(svgElement, fileName);
+        this.snackBar.open('PNG downloaded!', 'Close', {
+          duration: 1500,
+        });
+      }
+    }
   }
 
   private loadGraph(id: string) {

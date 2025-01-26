@@ -16,6 +16,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -58,6 +59,7 @@ import { BookGraph } from '../types/book-graph';
     MatProgressSpinnerModule,
     MatSnackBarModule,
     HeaderComponent,
+    MatMenuModule
   ],
   templateUrl: './index.page.html',
   styleUrl: './index.page.scss',
@@ -195,5 +197,32 @@ export default class HomeComponent implements OnInit {
         );
       },
     });
+  }
+
+  downloadSvg(): void {
+    if (this.bookGraph) {
+      const svgElement = document.querySelector('svg');
+      if (svgElement) {
+        const svgString = new XMLSerializer().serializeToString(svgElement);
+        const fileName = `${this.bookGraph.bookName}-graph`;
+        this.supabaseService.downloadSvg(svgString, fileName);
+        this.snackBar.open('SVG downloaded!', 'Close', {
+          duration: 1500,
+        });
+      }
+    }
+  }
+
+  downloadPng(): void {
+    if (this.bookGraph) {
+      const svgElement = document.querySelector('svg');
+      if (svgElement) {
+        const fileName = `${this.bookGraph.bookName}-graph`;
+        this.supabaseService.downloadPng(svgElement, fileName);
+        this.snackBar.open('PNG downloaded!', 'Close', {
+          duration: 1500,
+        });
+      }
+    }
   }
 }

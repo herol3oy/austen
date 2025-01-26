@@ -32,6 +32,8 @@
     "@google/generative-ai": "^0.19.0",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.48.1",
+    "@types/dom-to-image": "^2.6.7",
+    "dom-to-image": "^2.6.0",
     "front-matter": "^4.0.2",
     "marked": "^5.0.2",
     "marked-gfm-heading-id": "^3.1.0",

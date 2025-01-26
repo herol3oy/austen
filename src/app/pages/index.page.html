@@ -97,7 +97,21 @@
               <mat-icon>share</mat-icon>
               Share
             </button>
+            <button mat-raised-button [matMenuTriggerFor]="downloadMenu">
+              <mat-icon>download</mat-icon>
+              Download
+            </button>
           </div>
+          <mat-menu #downloadMenu="matMenu">
+            <button mat-menu-item (click)="downloadSvg()">
+              <mat-icon>image</mat-icon>
+              Download SVG
+            </button>
+            <button mat-menu-item (click)="downloadPng()">
+              <mat-icon>image</mat-icon>
+              Download PNG
+            </button>
+          </mat-menu>
           @if (isMermaidSyntaxVisible) {
           <pre><code>{{ bookGraph?.mermaidSyntax }}</code></pre>
           }
