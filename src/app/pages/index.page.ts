@@ -33,6 +33,7 @@ import {
 } from 'rxjs';
 
 import { HeaderComponent } from '../components/header/header.component';
+import { ClipboardService } from '../services/clipboard.service';
 import { MermaidService } from '../services/mermaid.service';
 import { OpenlibService } from '../services/openlib.service';
 import { SupabaseService } from '../services/supabase.service';
@@ -42,7 +43,12 @@ import { BookGraph } from '../types/book-graph';
 @Component({
   selector: 'austen-home',
   standalone: true,
-  providers: [OpenlibService, MermaidService, SupabaseService],
+  providers: [
+    OpenlibService,
+    MermaidService,
+    SupabaseService,
+    ClipboardService,
+  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -59,7 +65,7 @@ import { BookGraph } from '../types/book-graph';
     MatProgressSpinnerModule,
     MatSnackBarModule,
     HeaderComponent,
-    MatMenuModule
+    MatMenuModule,
   ],
   templateUrl: './index.page.html',
   styleUrl: './index.page.scss',
@@ -78,6 +84,7 @@ export default class HomeComponent implements OnInit {
     private readonly openLibService: OpenlibService,
     private readonly mermaidService: MermaidService,
     private readonly supabaseService: SupabaseService,
+    private readonly clipboardService: ClipboardService,
     private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
     private readonly router: Router,
@@ -168,11 +175,9 @@ export default class HomeComponent implements OnInit {
 
   copyMermaidSyntax() {
     if (this.bookGraph?.mermaidSyntax) {
-      navigator.clipboard.writeText(this.bookGraph.mermaidSyntax).then(() => {
-        this.snackBar.open('Copied!', 'Close', {
-          duration: 1500,
-        });
-      });
+      this.clipboardService
+        .copyToClipboard(this.bookGraph.mermaidSyntax, 'Syntax copied!')
+        .subscribe();
     }
   }
 

@@ -5,18 +5,20 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import mermaid from 'mermaid';
 import { from, switchMap } from 'rxjs';
 
 import { HeaderComponent } from '../../components/header/header.component';
+import { ClipboardService } from '../../services/clipboard.service';
 import { SupabaseService } from '../../services/supabase.service';
 import { BookGraph } from '../../types/book-graph';
 
 @Component({
   standalone: true,
-  providers: [SupabaseService],
+  providers: [SupabaseService, ClipboardService],
   imports: [
     CommonModule,
     HeaderComponent,
@@ -25,6 +27,7 @@ import { BookGraph } from '../../types/book-graph';
     MatIconModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatTooltipModule,
   ],
   templateUrl: './index.page.html',
   styleUrls: ['./index.page.scss'],
@@ -36,6 +39,7 @@ export default class DiscaverPage implements OnInit {
 
   constructor(
     private readonly supabaseService: SupabaseService,
+    private readonly clipboardService: ClipboardService,
     private readonly router: Router,
     private readonly snackBar: MatSnackBar,
     private readonly sanitizer: DomSanitizer,
@@ -53,12 +57,30 @@ export default class DiscaverPage implements OnInit {
 
   copyUrl(id: string, event: MouseEvent): void {
     event.stopPropagation();
+
     const url = `${window.location.origin}/share/${id}`;
-    navigator.clipboard.writeText(url).then(() => {
-      this.snackBar.open('URL copied!', 'Close', {
-        duration: 1500,
+
+    this.clipboardService.copyToClipboard(url, 'URL copied!').subscribe();
+  }
+
+  copyMermaidSyntax(id: string, event: MouseEvent): void {
+    event.stopPropagation();
+
+    this.supabaseService
+      .getGraphById(id)
+      .pipe(
+        switchMap((graph) =>
+          this.clipboardService.copyToClipboard(
+            graph.mermaid_syntax,
+            'Syntax copied!',
+          ),
+        ),
+      )
+      .subscribe({
+        error: (err) => {
+          this.snackBar.open(err.message, 'Close', { duration: 1500 });
+        },
       });
-    });
   }
 
   private loadGraphs(): void {

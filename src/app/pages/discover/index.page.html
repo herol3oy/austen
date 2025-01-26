@@ -26,8 +26,16 @@
           <button
             mat-icon-button
             color="primary"
+            (click)="copyMermaidSyntax(graph.id, $event)"
+            matTooltip="Copy Mermaid Syntax"
+          >
+            <mat-icon>content_copy</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            color="primary"
             (click)="copyUrl(graph.id, $event)"
-            matTooltip="Copy url"
+            matTooltip="Copy URL"
           >
             <mat-icon>link</mat-icon>
           </button>
