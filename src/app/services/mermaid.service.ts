@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { map, Observable } from 'rxjs';
 
 import { MermaidSyntax } from '../types/mermaid-syntax';

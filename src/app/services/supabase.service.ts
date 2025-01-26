@@ -3,6 +3,7 @@ import { createBrowserClient } from '@supabase/ssr';
 import { SupabaseClient } from '@supabase/supabase-js';
 import { from, Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+
 import { BookGraph } from '../types/book-graph';
 
 @Injectable({

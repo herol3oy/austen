@@ -7,13 +7,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import mermaid from 'mermaid';
 import { from } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
+import { BookGraph } from 'src/app/types/book-graph';
+
 import { HeaderComponent } from '../../components/header/header.component';
 import { SupabaseService } from '../../services/supabase.service';
-
-import mermaid from 'mermaid';
-import { BookGraph } from 'src/app/types/book-graph';
 
 @Component({
   selector: 'app-share',

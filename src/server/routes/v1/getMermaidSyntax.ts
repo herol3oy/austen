@@ -1,5 +1,5 @@
-import { defineEventHandler, readBody } from 'h3';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { defineEventHandler, readBody } from 'h3';
 
 const systemInstruction = `
   You're a bookworm and an assistant. You'll provide the name of a book and its author,

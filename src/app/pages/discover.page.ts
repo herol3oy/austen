@@ -5,14 +5,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import mermaid from 'mermaid';
+import { from, switchMap } from 'rxjs';
+
 import { HeaderComponent } from '../components/header/header.component';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
-
-import { DomSanitizer } from '@angular/platform-browser';
-import { from, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-graphs',

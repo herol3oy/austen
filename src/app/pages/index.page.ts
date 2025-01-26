@@ -6,9 +6,6 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Router, RouterModule } from '@angular/router';
-
 import {
   MatAutocompleteModule,
   MatAutocompleteSelectedEvent,
@@ -21,7 +18,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { DomSanitizer } from '@angular/platform-browser';
+import { Router, RouterModule } from '@angular/router';
+import mermaid from 'mermaid';
 import {
   debounceTime,
   finalize,
@@ -36,11 +35,8 @@ import { HeaderComponent } from '../components/header/header.component';
 import { MermaidService } from '../services/mermaid.service';
 import { OpenlibService } from '../services/openlib.service';
 import { SupabaseService } from '../services/supabase.service';
-
 import { Book } from '../types/book';
 import { BookGraph } from '../types/book-graph';
-
-import mermaid from 'mermaid';
 
 @Component({
   selector: 'austen-home',
