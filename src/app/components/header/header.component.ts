@@ -22,6 +22,10 @@ import { RouterModule } from '@angular/router';
         </div>
       </div>
       <nav class="nav-links">
+        <a routerLink="/">
+          <mat-icon>home</mat-icon>
+          Home
+        </a>
         <a routerLink="/discover">
           <mat-icon>grid_view</mat-icon>
           Discover
