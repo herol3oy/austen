@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { from } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
+import { HeaderComponent } from '../../components/header/header.component';
 import { SupabaseService } from '../../services/supabase.service';
 
 import mermaid from 'mermaid';
@@ -14,9 +18,18 @@ import { BookGraph } from 'src/app/types/book-graph';
 @Component({
   selector: 'app-share',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatProgressSpinnerModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    HeaderComponent,
+    MatButtonModule,
+    MatIconModule,
+    MatSnackBarModule,
+  ],
   template: `
     <div class="share-container">
+      <app-header></app-header>
       @if (loading) {
         <div class="loading-container">
           <mat-spinner diameter="40"></mat-spinner>
@@ -33,9 +46,36 @@ import { BookGraph } from 'src/app/types/book-graph';
           </mat-card-header>
           <mat-card-content>
             <div [innerHTML]="graph.svgGraph"></div>
-            <div class="syntax-container">
-              <h3>Mermaid Syntax</h3>
-              <pre><code>{{ graph.mermaidSyntax }}</code></pre>
+            <div class="syntax-header">
+              <div class="syntax-header-buttons">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="toggleMermaidSyntax()"
+                >
+                  <mat-icon>{{
+                    isMermaidSyntaxVisible ? 'visibility_off' : 'visibility'
+                  }}</mat-icon>
+                  {{ isMermaidSyntaxVisible ? 'Hide' : 'Show' }} Syntax
+                </button>
+                @if (isMermaidSyntaxVisible) {
+                  <button
+                    mat-raised-button
+                    color="accent"
+                    (click)="copyMermaidSyntax()"
+                  >
+                    <mat-icon>content_copy</mat-icon>
+                    Copy Syntax
+                  </button>
+                }
+                <button mat-raised-button color="primary" (click)="copyUrl()">
+                  <mat-icon>link</mat-icon>
+                  Copy URL
+                </button>
+              </div>
+              @if (isMermaidSyntaxVisible) {
+                <pre><code>{{ graph.mermaidSyntax }}</code></pre>
+              }
             </div>
           </mat-card-content>
         </mat-card>
@@ -45,7 +85,7 @@ import { BookGraph } from 'src/app/types/book-graph';
   styles: [
     `
       .share-container {
-        padding: 2rem;
+        padding: 1rem;
         max-width: 1200px;
         margin: 0 auto;
       }
@@ -64,11 +104,30 @@ import { BookGraph } from 'src/app/types/book-graph';
         width: 100%;
       }
 
-      .syntax-container {
+      .syntax-header {
         margin-top: 2rem;
         padding: 1.5rem;
         background-color: #f8f9fa;
         border-radius: 8px;
+
+        .syntax-header-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          margin-bottom: 1rem;
+
+          button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            mat-icon {
+              font-size: 1.2rem;
+              height: 1.2rem;
+              width: 1.2rem;
+            }
+          }
+        }
 
         h3 {
           margin: 0 0 1rem 0;
@@ -100,17 +159,42 @@ export default class SharePage implements OnInit {
   loading = true;
   error: string | null = null;
   graph: BookGraph | null = null;
+  isMermaidSyntaxVisible = false;
 
   constructor(
     private route: ActivatedRoute,
     private supabaseService: SupabaseService,
     private sanitizer: DomSanitizer,
+    private snackBar: MatSnackBar,
   ) {}
 
   ngOnInit() {
     mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
     const id = this.route.snapshot.params['id'];
     this.loadGraph(id);
+  }
+
+  toggleMermaidSyntax() {
+    this.isMermaidSyntaxVisible = !this.isMermaidSyntaxVisible;
+  }
+
+  copyMermaidSyntax() {
+    if (this.graph?.mermaidSyntax) {
+      navigator.clipboard.writeText(this.graph.mermaidSyntax).then(() => {
+        this.snackBar.open('Copied!', 'Close', {
+          duration: 1500,
+        });
+      });
+    }
+  }
+
+  copyUrl() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+      this.snackBar.open('URL copied!', 'Close', {
+        duration: 1500,
+      });
+    });
   }
 
   private loadGraph(id: string) {

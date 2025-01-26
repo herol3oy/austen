@@ -32,6 +32,7 @@ import {
   switchMap,
 } from 'rxjs';
 
+import { HeaderComponent } from '../components/header/header.component';
 import { MermaidService } from '../services/mermaid.service';
 import { OpenlibService } from '../services/openlib.service';
 import { SupabaseService } from '../services/supabase.service';
@@ -60,6 +61,7 @@ import mermaid from 'mermaid';
     MatAutocompleteModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    HeaderComponent,
   ],
   templateUrl: './index.page.html',
   styleUrl: './index.page.scss',
@@ -174,29 +176,25 @@ export default class HomeComponent {
   async shareGraph() {
     if (!this.bookGraph) return;
 
-    try {
-      const result = await this.supabaseService
-        .saveGraph(this.bookGraph)
-        .toPromise();
+    this.supabaseService.saveGraph(this.bookGraph).subscribe({
+      next: async ({ data, error }) => {
+        if (error) throw error;
 
-      if (result?.error) {
-        throw result.error;
-      }
+        await this.router.navigate(['/share', this.bookGraph!.id]);
 
-      await this.router.navigate(['/share', this.bookGraph.id]);
-
-      this.snackBar.open('Graph shared successfully!', 'Close', {
-        duration: 3000,
-        horizontalPosition: 'end',
-        verticalPosition: 'bottom',
-      });
-    } catch (error) {
-      console.error('Error sharing graph:', error);
-      this.snackBar.open('Failed to share graph. Please try again.', 'Close', {
-        duration: 3000,
-        horizontalPosition: 'end',
-        verticalPosition: 'bottom',
-      });
-    }
+        this.snackBar.open('Graph shared successfully!', 'Close', {
+          duration: 3000,
+        });
+      },
+      error: () => {
+        this.snackBar.open(
+          'Failed to share graph. Please try again.',
+          'Close',
+          {
+            duration: 3000,
+          },
+        );
+      },
+    });
   }
 }
