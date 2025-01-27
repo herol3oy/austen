@@ -1,13 +1,9 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { defineEventHandler, readBody } from 'h3';
+import OpenAI from 'openai';
 
 const systemInstruction = `
-  You're a bookworm and an assistant. You'll provide the name of a book and its author,
-  and you will create a graph for its characters using Mermaid js syntax. 
-  You can find the following as a sample for the book "The Wonderful Wizard of Oz" by "L. Frank Baum". 
-  Please refrain from including any explanations or descriptions at the beginning or end and 
-  avoid adding notes or anything else and simply provide the syntax. 
-  Do not include syntax highlighting for the syntax.
+  You're a bookworm. Given a book title and author, create a simple character graph using valid Mermaid JS syntax. 
+  Example for "The Wonderful Wizard of Oz" by "L. Frank Baum":
 
   graph TD
     A[Dorothy Gale] -->|Pet| B[Toto]
@@ -21,20 +17,28 @@ const systemInstruction = `
     D -->|Friends| E
     E -->|Friends| F
     B -->|In Kansas| C
+
+  - Provide only the Mermaid JS syntax without explanations, notes, or syntax indicators.
 `;
 
-const genAI = new GoogleGenerativeAI(process.env['GOOGLE_GEMINI_API_KEY']!);
-const model = genAI.getGenerativeModel({
-  model: 'gemini-1.5-flash',
-  systemInstruction,
+const openai = new OpenAI({
+  baseURL: 'https://api.deepseek.com',
+  apiKey: process.env['DEEPSEEK_API_KEY'],
 });
 
 export default defineEventHandler(async (event) => {
   const { bookTitle, authorName } = await readBody(event);
 
   try {
-    const result = await model.generateContent(bookTitle, authorName);
-    const mermaidSyntax = result.response.text();
+    const completion = await openai.chat.completions.create({
+      messages: [
+        { role: 'system', content: systemInstruction },
+        { role: 'user', content: `Book: ${bookTitle}, Author: ${authorName}` },
+      ],
+      model: 'deepseek-chat',
+    });
+
+    const mermaidSyntax = completion.choices[0].message.content;
     return { mermaidSyntax };
   } catch (error) {
     console.error('Error generating syntax:', error);

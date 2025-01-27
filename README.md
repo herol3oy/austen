@@ -12,7 +12,7 @@ Austen is an AI-powered Angular application initialized with Analog to generate 
 ## API
 
 - [Open Library](https://openlibrary.org)
-- [Google Generative AI](https://ai.google/discover/generativeai)
+- [DeepSeek](https://deepseek.com)
 
 ## Screenshot
 
