@@ -2,8 +2,10 @@ import { defineEventHandler, readBody } from 'h3';
 import OpenAI from 'openai';
 
 const systemInstruction = `
-  You're a bookworm. Given a book title and author, create a simple character graph using valid Mermaid JS syntax. 
-  Example for "The Wonderful Wizard of Oz" by "L. Frank Baum":
+  You're a bookworm. Given a book title and author, create a simple character graph using valid Mermaid JS syntax.
+  Do not include any explanations or language indicators.
+
+  Example result for "The Wonderful Wizard of Oz" by "L. Frank Baum":
 
   graph TD
     A[Dorothy Gale] -->|Pet| B[Toto]
@@ -17,8 +19,6 @@ const systemInstruction = `
     D -->|Friends| E
     E -->|Friends| F
     B -->|In Kansas| C
-
-  - Provide only the Mermaid JS syntax without explanations, notes, or syntax indicators.
 `;
 
 const openai = new OpenAI({
