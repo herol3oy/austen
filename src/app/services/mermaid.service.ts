@@ -24,12 +24,20 @@ export class MermaidService {
     });
   }
 
-  getMermaidSyntax(bookTitle: string, authorName: string): Observable<string> {
+  getMermaidSyntax(
+    bookTitle: string,
+    authorName: string,
+  ): Observable<MermaidSyntax> {
     return this.http
       .post<MermaidSyntax>(GET_MERMAID_SYNTAX_API_URL, {
         bookTitle,
         authorName,
       })
-      .pipe(map((res) => res.mermaidSyntax));
+      .pipe(
+        map(({ mermaidSyntax, emojis }) => ({
+          mermaidSyntax,
+          emojis,
+        })),
+      );
   }
 }

@@ -106,6 +106,7 @@ export default class DiscaverPage implements OnInit {
                     authorName: graph.author_name,
                     svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
                     mermaidSyntax: graph.mermaid_syntax,
+                    emojis: graph.emojis,
                   })),
               ),
             ),

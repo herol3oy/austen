@@ -5,4 +5,5 @@ export interface StoredGraph {
   svg_graph: string;
   mermaid_syntax: string;
   created_at: string;
+  emojis: string;
 }

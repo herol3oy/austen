@@ -142,7 +142,7 @@ export default class HomeComponent implements OnInit {
     this.mermaidService
       .getMermaidSyntax(bookTitle, authorName)
       .pipe(
-        switchMap((mermaidSyntax) => {
+        switchMap(({ mermaidSyntax, emojis }) => {
           return from(
             mermaid.render(
               'graph_' + Math.random().toString(36).substring(2, 15),
@@ -152,6 +152,7 @@ export default class HomeComponent implements OnInit {
             map(({ svg }) => ({
               svg: this.sanitizer.bypassSecurityTrustHtml(svg),
               mermaidSyntax,
+              emojis,
             })),
           );
         }),
@@ -161,13 +162,14 @@ export default class HomeComponent implements OnInit {
       )
 
       .subscribe({
-        next: ({ svg, mermaidSyntax }) => {
+        next: ({ svg, mermaidSyntax, emojis }) => {
           this.bookGraph = {
             id: crypto.randomUUID(),
             bookName: bookTitle,
             authorName,
             svgGraph: svg,
             mermaidSyntax,
+            emojis,
           };
           this.cdr.detectChanges();
         },

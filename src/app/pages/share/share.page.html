@@ -14,6 +14,7 @@
     <mat-card-header>
       <mat-card-title>{{ graph.bookName }}</mat-card-title>
       <mat-card-subtitle>{{ graph.authorName }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ graph.emojis }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <div [innerHTML]="graph.svgGraph"></div>

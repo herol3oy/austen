@@ -6,4 +6,5 @@ export interface BookGraph {
   authorName: string;
   svgGraph: SafeHtml;
   mermaidSyntax: string;
+  emojis: string;
 }

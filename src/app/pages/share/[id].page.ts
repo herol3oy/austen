@@ -119,6 +119,7 @@ export default class SharePage implements OnInit {
               authorName: data.author_name,
               svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
               mermaidSyntax: data.mermaid_syntax,
+              emojis: data.emojis,
             })),
           );
         }),

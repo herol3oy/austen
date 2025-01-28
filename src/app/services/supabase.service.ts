@@ -41,6 +41,7 @@ export class SupabaseService {
             author_name: graph.authorName,
             svg_graph: graph.svgGraph,
             mermaid_syntax: graph.mermaidSyntax,
+            emojis: graph.emojis,
           },
         ])
         .select(),

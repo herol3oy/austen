@@ -67,6 +67,7 @@
       <mat-card-header>
         <mat-card-title>{{ bookGraph?.bookName }}</mat-card-title>
         <mat-card-subtitle>{{ bookGraph?.authorName }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ bookGraph?.emojis }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <div [innerHTML]="bookGraph?.svgGraph"></div>
