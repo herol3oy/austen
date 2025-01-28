@@ -72,6 +72,7 @@ import { BookGraph } from '../types/book-graph';
 })
 export default class HomeComponent implements OnInit {
   loading = false;
+  graphLoading = false;
   filteredOptions: Book[] = [];
   bookGraph: BookGraph | null = null;
   myControl = new FormControl<string>('', [
@@ -92,7 +93,7 @@ export default class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    this.mermaidService.initializeMermaid();
 
     this.myControl.valueChanges
       .pipe(
@@ -137,6 +138,7 @@ export default class HomeComponent implements OnInit {
   }
 
   displayGraph(bookTitle: string, authorName: string) {
+    this.graphLoading = true;
     this.mermaidService
       .getMermaidSyntax(bookTitle, authorName)
       .pipe(
@@ -153,7 +155,11 @@ export default class HomeComponent implements OnInit {
             })),
           );
         }),
+        finalize(() => {
+          this.graphLoading = false;
+        }),
       )
+
       .subscribe({
         next: ({ svg, mermaidSyntax }) => {
           this.bookGraph = {

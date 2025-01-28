@@ -15,11 +15,12 @@ import { BookGraph } from 'src/app/types/book-graph';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { ClipboardService } from '../../services/clipboard.service';
+import { MermaidService } from '../../services/mermaid.service';
 import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
   standalone: true,
-  providers: [SupabaseService, ClipboardService],
+  providers: [SupabaseService, ClipboardService, MermaidService],
   imports: [
     CommonModule,
     MatCardModule,
@@ -41,6 +42,7 @@ export default class SharePage implements OnInit {
 
   constructor(
     private readonly route: ActivatedRoute,
+    private readonly mermaidService: MermaidService,
     private readonly supabaseService: SupabaseService,
     private readonly clipboardService: ClipboardService,
     private readonly sanitizer: DomSanitizer,
@@ -48,7 +50,8 @@ export default class SharePage implements OnInit {
   ) {}
 
   ngOnInit() {
-    mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    this.mermaidService.initializeMermaid();
+
     const id = this.route.snapshot.params['id'];
     this.loadGraph(id);
   }

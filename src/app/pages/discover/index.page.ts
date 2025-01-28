@@ -13,12 +13,13 @@ import { from, switchMap } from 'rxjs';
 
 import { HeaderComponent } from '../../components/header/header.component';
 import { ClipboardService } from '../../services/clipboard.service';
+import { MermaidService } from '../../services/mermaid.service';
 import { SupabaseService } from '../../services/supabase.service';
 import { BookGraph } from '../../types/book-graph';
 
 @Component({
   standalone: true,
-  providers: [SupabaseService, ClipboardService],
+  providers: [SupabaseService, ClipboardService, MermaidService],
   imports: [
     CommonModule,
     HeaderComponent,
@@ -40,13 +41,14 @@ export default class DiscaverPage implements OnInit {
   constructor(
     private readonly supabaseService: SupabaseService,
     private readonly clipboardService: ClipboardService,
+    private readonly mermaidService: MermaidService,
     private readonly router: Router,
     private readonly snackBar: MatSnackBar,
     private readonly sanitizer: DomSanitizer,
   ) {}
 
   ngOnInit(): void {
-    mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+    this.mermaidService.initializeMermaid();
 
     this.loadGraphs();
   }
