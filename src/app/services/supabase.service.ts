@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { createBrowserClient } from '@supabase/ssr';
 import { SupabaseClient } from '@supabase/supabase-js';
-import domtoimage from 'dom-to-image';
 import { from, Observable, switchMap } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -99,33 +98,5 @@ export class SupabaseService {
     return from(this.supabase.from('graphs').delete().eq('id', graphId)).pipe(
       map(() => void 0),
     );
-  }
-
-  downloadSvg(svgString: string, fileName: string): void {
-    const blob = new Blob([svgString], { type: 'image/svg+xml' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${fileName}.svg`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
-  }
-
-  downloadPng(svgElement: SVGElement, fileName: string): void {
-    domtoimage
-      .toPng(svgElement)
-      .then((dataUrl) => {
-        const link = document.createElement('a');
-        link.href = dataUrl;
-        link.download = `${fileName}.png`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      })
-      .catch((error) => {
-        console.error('Error converting SVG to PNG:', error);
-      });
   }
 }

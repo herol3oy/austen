@@ -34,6 +34,7 @@ import {
 
 import { SupabaseAuthService } from '../services/auth.service';
 import { ClipboardService } from '../services/clipboard.service';
+import { DownloadService } from '../services/download.service';
 import { MermaidService } from '../services/mermaid.service';
 import { OpenlibService } from '../services/openlib.service';
 import { SupabaseService } from '../services/supabase.service';
@@ -49,6 +50,7 @@ import { BookGraph } from '../types/book-graph';
     SupabaseService,
     ClipboardService,
     SupabaseAuthService,
+    DownloadService,
   ],
   imports: [
     CommonModule,
@@ -86,6 +88,7 @@ export default class HomeComponent implements OnInit {
     private readonly openLibService: OpenlibService,
     private readonly mermaidService: MermaidService,
     private readonly supabaseService: SupabaseService,
+    private readonly downloadService: DownloadService,
     private readonly clipboardService: ClipboardService,
     private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
@@ -204,7 +207,7 @@ export default class HomeComponent implements OnInit {
     if (!this.authService.loggedIn()) {
       this.snackBar
         .open('Please login to save and share graphs', 'Login', {
-          duration: 5000,
+          duration: 3000,
         })
         .onAction()
         .subscribe(() => {
@@ -213,10 +216,7 @@ export default class HomeComponent implements OnInit {
       return;
     }
 
-  
-       this.supabaseService.saveGraph(
-        this.bookGraph,
-      ).subscribe({
+    this.supabaseService.saveGraph(this.bookGraph).subscribe({
       next: () => {
         this.router.navigate(['/share', this.bookGraph!.id]);
         this.snackBar.open('Graph shared successfully!', 'Close', {
@@ -240,21 +240,16 @@ export default class HomeComponent implements OnInit {
         }
       },
     });
-
   }
 
   downloadSvg(): void {
     if (!this.bookGraph) return;
 
     if (!this.authService.loggedIn()) {
-      this.snackBar
-        .open('Please login to download graphs', 'Login', {
-          duration: 5000,
-        })
-        .onAction()
-        .subscribe(() => {
-          this.router.navigate(['/login']);
-        });
+      this.snackBar.open('Please login to download graphs', 'Login', {
+        duration: 3000,
+      });
+
       return;
     }
 
@@ -262,9 +257,17 @@ export default class HomeComponent implements OnInit {
     if (svgElement) {
       const svgString = new XMLSerializer().serializeToString(svgElement);
       const fileName = `${this.bookGraph.bookName}-graph`;
-      this.supabaseService.downloadSvg(svgString, fileName);
-      this.snackBar.open('SVG downloaded!', 'Close', {
-        duration: 1500,
+      this.downloadService.createSvg(svgString, fileName).subscribe({
+        next: () => {
+          this.snackBar.open('SVG downloaded!', 'Close', {
+            duration: 3000,
+          });
+        },
+        error: () => {
+          this.snackBar.open('Failed to download SVG', 'Close', {
+            duration: 3000,
+          });
+        },
       });
     }
   }
@@ -274,9 +277,17 @@ export default class HomeComponent implements OnInit {
       const svgElement = document.querySelector('svg');
       if (svgElement) {
         const fileName = `${this.bookGraph.bookName}-graph`;
-        this.supabaseService.downloadPng(svgElement, fileName);
-        this.snackBar.open('PNG downloaded!', 'Close', {
-          duration: 1500,
+        this.downloadService.createPng(svgElement, fileName).subscribe({
+          next: () => {
+            this.snackBar.open('PNG downloaded!', 'Close', {
+              duration: 3000,
+            });
+          },
+          error: () => {
+            this.snackBar.open('Failed to download PNG', 'Close', {
+              duration: 3000,
+            });
+          },
         });
       }
     }
