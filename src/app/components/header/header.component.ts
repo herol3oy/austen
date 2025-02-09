@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, tap } from 'rxjs';
 
@@ -9,7 +11,13 @@ import { SupabaseAuthService } from '../../services/auth.service';
 @Component({
   selector: 'austen-header',
   standalone: true,
-  imports: [RouterModule, MatIconModule, MatButtonModule],
+  imports: [
+    RouterModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+  ],
   styleUrl: './header.component.scss',
   templateUrl: './header.component.html',
 })

@@ -1,12 +1,7 @@
-.austen-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  margin-bottom: 2rem;
-  color: #2c3e50;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.header-container {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 4rem 2rem;
 }
 
 .logo-section {
@@ -21,77 +16,65 @@
 }
 
 .austen-logo {
-  width: 5rem;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  width: 4.5rem;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+  object-fit: cover;
 
   &:hover {
     transform: scale(1.05);
   }
 }
 
-h1 {
+.austen-title {
   font-size: 1.8rem;
   margin: 0;
   font-weight: 300;
 }
 
-.subtitle {
+.austen-subtitle {
   font-size: 0.9rem;
   color: #7f8c8d;
   margin: 0;
 }
 
+.spacer {
+  flex: 1 1 auto;
+}
+
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 0.5rem;
+
+  mat-icon {
+    margin-right: 0.25rem;
+  }
 
   a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #2c3e50;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-
-    mat-icon {
-      font-size: 1.2rem;
-      height: 1.2rem;
-      width: 1.2rem;
-    }
-
-    &:hover {
-      color: #3498db;
+    &.active {
+      color: #1976d2;
+      background: rgba(25, 118, 210, 0.1);
     }
   }
 }
 
-@media (max-width: 600px) {
-  .austen-header {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
   }
 
-  .logo-section {
-    flex-direction: column;
-    text-align: center;
+  .mobile-menu-button {
+    display: block;
   }
+}
 
-  .title-section {
-    align-items: center;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .subtitle {
-    font-size: 0.8rem;
-  }
-
-  .nav-links {
-    gap: 1rem;
+@media (max-width: 480px) {
+  .austen-logo {
+    width: 3.5rem;
   }
 }

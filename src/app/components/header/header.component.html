@@ -1,6 +1,10 @@
-<header class="austen-header">
+<mat-toolbar class="header-container">
   <div class="logo-section">
-    <a routerLink="/">
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
       <img
         class="austen-logo"
         src="/jane-austen-inspired-illustrations.png"
@@ -8,35 +12,87 @@
       />
     </a>
     <div class="title-section">
-      <h1>Austen</h1>
-      <p class="subtitle">discover story relationships</p>
+      <h1 class="austen-title">Austen</h1>
+      <p class="austen-subtitle">discover story relationships</p>
     </div>
   </div>
-  <nav class="nav-links">
-    @if (authService.loggedIn()) {
-      <a routerLink="/dashboard">
-        <mat-icon>dashboard</mat-icon>
-        Dashboard
-      </a>
-    }
-    <a routerLink="/explore">
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links desktop-menu">
+    <a
+      mat-button
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </a>
+    <a mat-button routerLink="/explore" routerLinkActive="active">
       <mat-icon>explore</mat-icon>
-      Explore
+      <span>Explore</span>
     </a>
-    <a routerLink="/about">
+    <a mat-button routerLink="/about" routerLinkActive="active">
       <mat-icon>info</mat-icon>
-      About
+      <span>About</span>
     </a>
     @if (authService.loggedIn()) {
+      <a mat-button routerLink="/dashboard" routerLinkActive="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
       <button mat-button (click)="logout()">
         <mat-icon>logout</mat-icon>
-        Logout
+        <span>Logout</span>
       </button>
     } @else {
-      <a routerLink="/login">
+      <a mat-button routerLink="/login" routerLinkActive="active">
         <mat-icon>login</mat-icon>
-        Login
+        <span>Login</span>
       </a>
     }
   </nav>
-</header>
+
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="mobileMenu"
+    class="mobile-menu-button"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #mobileMenu="matMenu">
+    <a
+      mat-menu-item
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </a>
+    <a mat-menu-item routerLink="/explore" routerLinkActive="active">
+      <mat-icon>explore</mat-icon>
+      <span>Explore</span>
+    </a>
+    <a mat-menu-item routerLink="/about" routerLinkActive="active">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </a>
+    @if (authService.loggedIn()) {
+      <a mat-menu-item routerLink="/dashboard" routerLinkActive="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    } @else {
+      <a mat-menu-item routerLink="/login" routerLinkActive="active">
+        <mat-icon>login</mat-icon>
+        <span>Login</span>
+      </a>
+    }
+  </mat-menu>
+</mat-toolbar>
