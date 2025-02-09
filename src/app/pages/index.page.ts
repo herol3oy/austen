@@ -32,7 +32,7 @@ import {
   switchMap,
 } from 'rxjs';
 
-import { HeaderComponent } from '../components/header/header.component';
+import { SupabaseAuthService } from '../services/auth.service';
 import { ClipboardService } from '../services/clipboard.service';
 import { MermaidService } from '../services/mermaid.service';
 import { OpenlibService } from '../services/openlib.service';
@@ -41,13 +41,14 @@ import { Book } from '../types/book';
 import { BookGraph } from '../types/book-graph';
 
 @Component({
-  selector: 'austen-home',
+  selector: 'app-home',
   standalone: true,
   providers: [
     OpenlibService,
     MermaidService,
     SupabaseService,
     ClipboardService,
+    SupabaseAuthService,
   ],
   imports: [
     CommonModule,
@@ -64,7 +65,6 @@ import { BookGraph } from '../types/book-graph';
     MatAutocompleteModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
-    HeaderComponent,
     MatMenuModule,
   ],
   templateUrl: './index.page.html',
@@ -80,6 +80,7 @@ export default class HomeComponent implements OnInit {
     Validators.minLength(4),
   ]);
   isMermaidSyntaxVisible = false;
+  isOptionSelected = false;
 
   constructor(
     private readonly openLibService: OpenlibService,
@@ -90,6 +91,7 @@ export default class HomeComponent implements OnInit {
     private readonly snackBar: MatSnackBar,
     private readonly router: Router,
     private readonly cdr: ChangeDetectorRef,
+    private readonly authService: SupabaseAuthService,
   ) {}
 
   ngOnInit(): void {
@@ -100,6 +102,11 @@ export default class HomeComponent implements OnInit {
         startWith(''),
         debounceTime(400),
         switchMap((bookTitle) => {
+          if (this.isOptionSelected) {
+            this.isOptionSelected = false;
+            return of([]);
+          }
+
           if (!bookTitle || !this.myControl.valid) {
             return of([]);
           } else {
@@ -123,6 +130,8 @@ export default class HomeComponent implements OnInit {
   }
 
   onOptionSelected(event: MatAutocompleteSelectedEvent) {
+    this.isOptionSelected = true;
+
     const selectedBook = this.filteredOptions.find(
       (book) => book.title === event.option.value,
     );
@@ -192,37 +201,71 @@ export default class HomeComponent implements OnInit {
   async shareGraph() {
     if (!this.bookGraph) return;
 
-    this.supabaseService.saveGraph(this.bookGraph).subscribe({
+    if (!this.authService.loggedIn()) {
+      this.snackBar
+        .open('Please login to save and share graphs', 'Login', {
+          duration: 5000,
+        })
+        .onAction()
+        .subscribe(() => {
+          this.router.navigate(['/login']);
+        });
+      return;
+    }
+
+  
+       this.supabaseService.saveGraph(
+        this.bookGraph,
+      ).subscribe({
       next: () => {
         this.router.navigate(['/share', this.bookGraph!.id]);
-
         this.snackBar.open('Graph shared successfully!', 'Close', {
           duration: 3000,
         });
       },
-      error: () => {
-        this.snackBar.open(
-          'Failed to share graph. Please try again.',
-          'Close',
-          {
+      error: (error) => {
+        if (error.message === 'User not authenticated') {
+          this.router.navigate(['/login']);
+          this.snackBar.open('Please login to save graphs', 'Close', {
             duration: 3000,
-          },
-        );
+          });
+        } else {
+          this.snackBar.open(
+            'Failed to share graph. Please try again.',
+            'Close',
+            {
+              duration: 3000,
+            },
+          );
+        }
       },
     });
+
   }
 
   downloadSvg(): void {
-    if (this.bookGraph) {
-      const svgElement = document.querySelector('svg');
-      if (svgElement) {
-        const svgString = new XMLSerializer().serializeToString(svgElement);
-        const fileName = `${this.bookGraph.bookName}-graph`;
-        this.supabaseService.downloadSvg(svgString, fileName);
-        this.snackBar.open('SVG downloaded!', 'Close', {
-          duration: 1500,
+    if (!this.bookGraph) return;
+
+    if (!this.authService.loggedIn()) {
+      this.snackBar
+        .open('Please login to download graphs', 'Login', {
+          duration: 5000,
+        })
+        .onAction()
+        .subscribe(() => {
+          this.router.navigate(['/login']);
         });
-      }
+      return;
+    }
+
+    const svgElement = document.querySelector('svg');
+    if (svgElement) {
+      const svgString = new XMLSerializer().serializeToString(svgElement);
+      const fileName = `${this.bookGraph.bookName}-graph`;
+      this.supabaseService.downloadSvg(svgString, fileName);
+      this.snackBar.open('SVG downloaded!', 'Close', {
+        duration: 1500,
+      });
     }
   }
 

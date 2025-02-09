@@ -7,25 +7,29 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import mermaid from 'mermaid';
 import { from } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { BookGraph } from 'src/app/types/book-graph';
 
-import { HeaderComponent } from '../../components/header/header.component';
+import { SupabaseAuthService } from '../../services/auth.service';
 import { ClipboardService } from '../../services/clipboard.service';
 import { MermaidService } from '../../services/mermaid.service';
 import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
   standalone: true,
-  providers: [SupabaseService, ClipboardService, MermaidService],
+  providers: [
+    SupabaseService,
+    ClipboardService,
+    MermaidService,
+    SupabaseAuthService,
+  ],
   imports: [
     CommonModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    HeaderComponent,
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
@@ -47,6 +51,8 @@ export default class SharePage implements OnInit {
     private readonly clipboardService: ClipboardService,
     private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
+    private readonly authService: SupabaseAuthService,
+    private readonly router: Router,
   ) {}
 
   ngOnInit() {
@@ -74,29 +80,53 @@ export default class SharePage implements OnInit {
   }
 
   downloadSvg(): void {
-    if (this.graph) {
-      const svgElement = document.querySelector('svg');
-      if (svgElement) {
-        const svgString = new XMLSerializer().serializeToString(svgElement);
-        const fileName = `${this.graph.bookName}-graph`;
-        this.supabaseService.downloadSvg(svgString, fileName);
-        this.snackBar.open('SVG downloaded!', 'Close', {
-          duration: 1500,
+    if (!this.graph) return;
+
+    if (!this.authService.loggedIn()) {
+      this.snackBar
+        .open('Please login to download graphs', 'Login', {
+          duration: 5000,
+        })
+        .onAction()
+        .subscribe(() => {
+          this.router.navigate(['/login']);
         });
-      }
+      return;
+    }
+
+    const svgElement = document.querySelector('svg');
+    if (svgElement) {
+      const svgString = new XMLSerializer().serializeToString(svgElement);
+      const fileName = `${this.graph.bookName}-graph`;
+      this.supabaseService.downloadSvg(svgString, fileName);
+      this.snackBar.open('SVG downloaded!', 'Close', {
+        duration: 1500,
+      });
     }
   }
 
   downloadPng(): void {
-    if (this.graph) {
-      const svgElement = document.querySelector('svg');
-      if (svgElement) {
-        const fileName = `${this.graph.bookName}-graph`;
-        this.supabaseService.downloadPng(svgElement, fileName);
-        this.snackBar.open('PNG downloaded!', 'Close', {
-          duration: 1500,
+    if (!this.graph) return;
+
+    if (!this.authService.loggedIn()) {
+      this.snackBar
+        .open('Please login to download graphs', 'Login', {
+          duration: 5000,
+        })
+        .onAction()
+        .subscribe(() => {
+          this.router.navigate(['/login']);
         });
-      }
+      return;
+    }
+
+    const svgElement = document.querySelector('svg');
+    if (svgElement) {
+      const fileName = `${this.graph.bookName}-graph`;
+      this.supabaseService.downloadPng(svgElement, fileName);
+      this.snackBar.open('PNG downloaded!', 'Close', {
+        duration: 1500,
+      });
     }
   }
 

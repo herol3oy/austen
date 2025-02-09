@@ -13,25 +13,30 @@
     </div>
   </div>
   <nav class="nav-links">
-    <a routerLink="/">
-      <mat-icon>home</mat-icon>
-      Home
-    </a>
-    <a routerLink="/discover">
-      <mat-icon>grid_view</mat-icon>
-      Discover
+    @if (authService.loggedIn()) {
+      <a routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </a>
+    }
+    <a routerLink="/explore">
+      <mat-icon>explore</mat-icon>
+      Explore
     </a>
     <a routerLink="/about">
       <mat-icon>info</mat-icon>
       About
     </a>
-    <a
-      href="https://github.com/herol3oy/austen"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <mat-icon>code</mat-icon>
-      GitHub
-    </a>
+    @if (authService.loggedIn()) {
+      <button mat-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Logout
+      </button>
+    } @else {
+      <a routerLink="/login">
+        <mat-icon>login</mat-icon>
+        Login
+      </a>
+    }
   </nav>
 </header>

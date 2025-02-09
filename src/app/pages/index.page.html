@@ -1,6 +1,4 @@
 <div class="page-container">
-  <austen-header></austen-header>
-
   <form class="search-form">
     <mat-form-field appearance="outline">
       <mat-label>Type a book title...</mat-label>
@@ -10,6 +8,7 @@
         [formControl]="myControl"
         [matAutocomplete]="auto"
         name="bookTitle"
+        (keydown.enter)="$event.preventDefault()"
         required
       />
 

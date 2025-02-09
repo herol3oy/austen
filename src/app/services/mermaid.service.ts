@@ -14,13 +14,9 @@ export class MermaidService {
   initializeMermaid() {
     mermaid.initialize({
       startOnLoad: true,
-      securityLevel: 'loose',
+      securityLevel: 'strict',
       theme: 'forest',
       look: 'handDrawn',
-      elk: {
-        mergeEdges: true,
-        nodePlacementStrategy: 'LINEAR_SEGMENTS',
-      },
     });
   }
 

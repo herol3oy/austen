@@ -6,4 +6,6 @@ export interface StoredGraph {
   mermaid_syntax: string;
   created_at: string;
   emojis: string;
+  user_id: string;
+  is_public: boolean;
 }

@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 import mermaid from 'mermaid';
 import { from, switchMap } from 'rxjs';
 
-import { HeaderComponent } from '../../components/header/header.component';
 import { ClipboardService } from '../../services/clipboard.service';
 import { MermaidService } from '../../services/mermaid.service';
 import { SupabaseService } from '../../services/supabase.service';
@@ -22,7 +21,6 @@ import { BookGraph } from '../../types/book-graph';
   providers: [SupabaseService, ClipboardService, MermaidService],
   imports: [
     CommonModule,
-    HeaderComponent,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
