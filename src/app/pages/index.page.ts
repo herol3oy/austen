@@ -33,8 +33,7 @@ import { Book } from '../types/book';
 import { BookGraph } from '../types/book-graph';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
+  selector: 'austen-home',
   providers: [
     OpenlibService,
     MermaidService,
@@ -91,40 +90,10 @@ export default class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.mermaidService.initializeMermaid();
-
-    this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        debounceTime(400),
-        switchMap((bookTitle) => {
-          if (this.isOptionSelected) {
-            this.isOptionSelected = false;
-            return of([]);
-          }
-
-          if (!bookTitle || !this.myControl.valid) {
-            return of([]);
-          } else {
-            this.loading = true;
-            return this.openLibService.searchBook(bookTitle).pipe(
-              finalize(() => {
-                this.loading = false;
-              }),
-            );
-          }
-        }),
-      )
-      .subscribe({
-        next: (books) => {
-          this.filteredOptions = books.map(({ title, author_name }) => ({
-            title,
-            author_name,
-          }));
-        },
-      });
+    this.initializeBookSearch();
   }
 
-  onOptionSelected(event: MatAutocompleteSelectedEvent) {
+  onOptionSelected(event: MatAutocompleteSelectedEvent): void {
     this.isOptionSelected = true;
 
     const selectedBook = this.filteredOptions.find(
@@ -135,13 +104,13 @@ export default class HomeComponent implements OnInit {
     }
   }
 
-  clearSearch() {
+  clearSearch(): void {
     this.myControl.setValue('');
     this.filteredOptions = [];
     this.bookGraph = null;
   }
 
-  displayGraph(bookTitle: string, authorName: string) {
+  displayGraph(bookTitle: string, authorName: string): void {
     this.graphLoading = true;
     this.mermaidService
       .getMermaidSyntax(bookTitle, authorName)
@@ -172,12 +141,12 @@ export default class HomeComponent implements OnInit {
       });
   }
 
-  toggleMermaidSyntax() {
+  toggleMermaidSyntax(): void {
     this.isMermaidSyntaxVisible = !this.isMermaidSyntaxVisible;
     this.cdr.detectChanges();
   }
 
-  copyMermaidSyntax() {
+  copyMermaidSyntax(): void {
     if (this.bookGraph?.mermaidSyntax) {
       this.clipboardService
         .copyToClipboard(this.bookGraph.mermaidSyntax)
@@ -196,18 +165,13 @@ export default class HomeComponent implements OnInit {
     }
   }
 
-  async shareGraph() {
+  shareGraph(): void {
     if (!this.bookGraph) return;
 
     if (!this.authService.loggedIn()) {
-      this.snackBar
-        .open('Please login to save and share graphs', 'Login', {
-          duration: 3000,
-        })
-        .onAction()
-        .subscribe(() => {
-          this.router.navigate(['/login']);
-        });
+      this.snackBar.open('Please login to save and share graphs', 'Login', {
+        duration: 3000,
+      });
       return;
     }
 
@@ -286,5 +250,38 @@ export default class HomeComponent implements OnInit {
         });
       }
     }
+  }
+
+  private initializeBookSearch(): void {
+    this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        debounceTime(400),
+        switchMap((bookTitle) => {
+          if (this.isOptionSelected) {
+            this.isOptionSelected = false;
+            return of([]);
+          }
+
+          if (!bookTitle || !this.myControl.valid) {
+            return of([]);
+          } else {
+            this.loading = true;
+            return this.openLibService.searchBook(bookTitle).pipe(
+              finalize(() => {
+                this.loading = false;
+              }),
+            );
+          }
+        }),
+      )
+      .subscribe({
+        next: (books) => {
+          this.filteredOptions = books.map(({ title, author_name }) => ({
+            title,
+            author_name,
+          }));
+        },
+      });
   }
 }
