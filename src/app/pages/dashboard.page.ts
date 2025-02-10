@@ -1,6 +1,6 @@
 import { RouteMeta } from '@analogjs/router';
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -9,32 +9,15 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterModule } from '@angular/router';
-import { finalize, from, map } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { from, map, mergeMap, of, reduce, switchMap, tap } from 'rxjs';
 
+import { ConfirmDialogComponent } from '../components/confirm-dialog.component';
 import { SupabaseAuthService } from '../services/auth.service';
 import { MermaidService } from '../services/mermaid.service';
 import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
 import { StoredGraph } from '../types/stored-graph';
-
-@Component({
-  selector: 'app-confirm-dialog',
-  template: `
-    <h2 mat-dialog-title>Delete Graph</h2>
-    <mat-dialog-content>
-      Are you sure you want to delete this graph? This action cannot be undone.
-    </mat-dialog-content>
-    <mat-dialog-actions align="end">
-      <button mat-button mat-dialog-close>Cancel</button>
-      <button mat-button color="warn" [mat-dialog-close]="true">Delete</button>
-    </mat-dialog-actions>
-  `,
-  standalone: true,
-  imports: [MatDialogModule, MatButtonModule],
-})
-export class ConfirmDialogComponent {}
 
 export const routeMeta: RouteMeta = {
   canActivate: [
@@ -54,8 +37,7 @@ export const routeMeta: RouteMeta = {
 };
 
 @Component({
-  selector: 'app-dashboard-page',
-  standalone: true,
+  selector: 'austen-dashboard-page',
   imports: [
     CommonModule,
     MatCardModule,
@@ -226,17 +208,18 @@ export default class DashboardPage implements OnInit {
   actionLoading = false;
   actionLoadingId: string | null = null;
 
-  private authService = inject(SupabaseAuthService);
-  private supabaseService = inject(SupabaseService);
-  private mermaidService = inject(MermaidService);
-  private mermaidRenderService = inject(MermaidRenderService);
-  private router = inject(Router);
-  private cdr = inject(ChangeDetectorRef);
-  private snackBar = inject(MatSnackBar);
-  private dialog = inject(MatDialog);
+  constructor(
+    private readonly authService: SupabaseAuthService,
+    private readonly supabaseService: SupabaseService,
+    private readonly mermaidService: MermaidService,
+    private readonly mermaidRenderService: MermaidRenderService,
+    private readonly router: Router,
+    private readonly snackBar: MatSnackBar,
+    private readonly dialog: MatDialog,
+  ) {}
 
-  async ngOnInit() {
-    await this.mermaidService.initializeMermaid();
+  ngOnInit() {
+    this.mermaidService.initializeMermaid();
     this.loadUserGraphs();
   }
 
@@ -247,35 +230,40 @@ export default class DashboardPage implements OnInit {
   deleteGraph(graphId: string) {
     const dialogRef = this.dialog.open(ConfirmDialogComponent);
 
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-        this.actionLoadingId = graphId;
-        this.actionLoading = true;
-        this.supabaseService.deleteGraph(graphId).subscribe({
-          next: () => {
-            this.graphs = this.graphs.filter((graph) => graph.id !== graphId);
-            this.graphPublicStatus.delete(graphId);
+    dialogRef
+      .afterClosed()
+      .pipe(
+        switchMap((result) => {
+          if (!result) return of(null);
+
+          this.actionLoadingId = graphId;
+          this.actionLoading = true;
+
+          return this.supabaseService
+            .deleteGraph(graphId)
+            .pipe(map(() => graphId));
+        }),
+      )
+      .subscribe({
+        next: (deletedGraphId) => {
+          if (deletedGraphId) {
+            this.graphs = this.graphs.filter(
+              (graph) => graph.id !== deletedGraphId,
+            );
+            this.graphPublicStatus.delete(deletedGraphId);
             this.snackBar.open('Graph deleted successfully', 'Close', {
               duration: 3000,
             });
-            this.actionLoadingId = null;
-            this.actionLoading = false;
-            this.cdr.detectChanges();
-          },
-          error: (error) => {
-            console.error('Error deleting graph:', error);
-            this.snackBar.open(
-              'Failed to delete graph. Please try again.',
-              'Close',
-              { duration: 3000 },
-            );
-            this.actionLoadingId = null;
-            this.actionLoading = false;
-            this.cdr.detectChanges();
-          },
-        });
-      }
-    });
+          }
+          this.resetLoadingState();
+        },
+        error: () => {
+          this.snackBar.open('An error occurred in the dialog.', 'Close', {
+            duration: 3000,
+          });
+          this.resetLoadingState();
+        },
+      });
   }
 
   togglePublicStatus(graphId: string, isPublic: boolean) {
@@ -289,87 +277,77 @@ export default class DashboardPage implements OnInit {
           'Close',
           { duration: 3000 },
         );
-        this.actionLoadingId = null;
-        this.actionLoading = false;
-        this.cdr.detectChanges();
+        this.resetLoadingState();
       },
-      error: (error) => {
-        console.error('Error updating graph status:', error);
+      error: () => {
         this.snackBar.open(
           'Failed to update graph status. Please try again.',
           'Close',
           { duration: 3000 },
         );
         this.graphPublicStatus.set(graphId, !isPublic);
-        this.actionLoadingId = null;
-        this.actionLoading = false;
-        this.cdr.detectChanges();
+        this.resetLoadingState();
       },
     });
   }
 
-  private async loadUserGraphs() {
-    try {
-      this.loading = true;
-      const { data: session } = await this.authService.getSession();
-      if (!session?.session?.user) {
-        this.error = 'User not authenticated';
-        this.loading = false;
-        return;
-      }
+  private resetLoadingState() {
+    this.actionLoadingId = null;
+    this.actionLoading = false;
+  }
 
-      this.supabaseService
-        .getUserGraphs(session.session.user.id)
-        .pipe(
-          switchMap((graphs: StoredGraph[]) => {
-            graphs.forEach((graph) => {
-              this.graphPublicStatus.set(graph.id, graph.is_public);
-            });
+  private loadUserGraphs() {
+    this.loading = true;
 
-            return from(
-              Promise.all(
-                graphs.map((graph) =>
-                  this.mermaidRenderService
-                    .renderMermaid(graph.mermaid_syntax)
-                    .pipe(
-                      map((svgGraph) => ({
-                        id: graph.id,
-                        bookName: graph.book_name,
-                        authorName: graph.author_name,
-                        svgGraph,
-                        mermaidSyntax: graph.mermaid_syntax,
-                        emojis: graph.emojis,
-                      })),
-                    )
-                    .toPromise(),
+    const getUserId$ = from(this.authService.getSession()).pipe(
+      map(({ data: { session } }) => {
+        if (!session?.user) throw new Error('User not authenticated');
+        return session.user.id;
+      }),
+    );
+
+    const renderGraph$ = (graph: StoredGraph) =>
+      this.mermaidRenderService.renderMermaid(graph.mermaid_syntax).pipe(
+        map((svgGraph) => ({
+          id: graph.id,
+          bookName: graph.book_name,
+          authorName: graph.author_name,
+          svgGraph,
+          mermaidSyntax: graph.mermaid_syntax,
+          emojis: graph.emojis,
+        })),
+      );
+
+    getUserId$
+      .pipe(
+        switchMap((userId) => this.supabaseService.getUserGraphs(userId)),
+        tap((graphs) => {
+          graphs.forEach((graph) => {
+            this.graphPublicStatus.set(graph.id, graph.is_public);
+          });
+        }),
+        switchMap((graphs) =>
+          graphs.length
+            ? from(graphs).pipe(
+                mergeMap(renderGraph$),
+                reduce<BookGraph, BookGraph[]>(
+                  (acc, curr) => [...acc, curr],
+                  [],
                 ),
-              ),
-            );
-          }),
-          finalize(() => {
-            this.loading = false;
-            this.cdr.detectChanges();
-          }),
-        )
-        .subscribe({
-          next: (graphs) => {
-            this.graphs = graphs.filter(
-              (graph): graph is BookGraph => graph !== null,
-            );
-            this.cdr.detectChanges();
-          },
-          error: (err) => {
-            console.error('Error loading graphs:', err);
-            this.error =
-              err.message || 'An error occurred while loading your graphs.';
-            this.cdr.detectChanges();
-          },
-        });
-    } catch (error) {
-      console.error('Error in loadUserGraphs:', error);
-      this.error = 'An error occurred while loading your graphs.';
-      this.loading = false;
-      this.cdr.detectChanges();
-    }
+              )
+            : of([]),
+        ),
+      )
+      .subscribe({
+        next: (graphs) => {
+          this.loading = false;
+          this.graphs = graphs;
+        },
+        error: (error) => {
+          this.loading = false;
+          this.error =
+            error.message || 'An error occurred while loading your graphs.';
+        },
+      });
   }
 }
