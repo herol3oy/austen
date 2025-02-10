@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
-import { finalize, from } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { from, of } from 'rxjs';
+import { map, mergeMap, reduce, switchMap } from 'rxjs/operators';
 
 import { MermaidService } from '../services/mermaid.service';
 import { MermaidRenderService } from '../services/mermaid-render.service';
@@ -15,8 +15,7 @@ import { BookGraph } from '../types/book-graph';
 import { StoredGraph } from '../types/stored-graph';
 
 @Component({
-  selector: 'app-explore-page',
-  standalone: true,
+  selector: 'discover-page',
   imports: [
     CommonModule,
     MatCardModule,
@@ -26,8 +25,8 @@ import { StoredGraph } from '../types/stored-graph';
   ],
   providers: [SupabaseService, MermaidService, MermaidRenderService],
   template: `
-    <div class="explore-container">
-      <h2>Explore Public Graphs</h2>
+    <div class="discover-container">
+      <h2>Discover Public Graphs</h2>
       @if (loading) {
         <div class="loading-container">
           <mat-spinner diameter="40"></mat-spinner>
@@ -77,7 +76,7 @@ import { StoredGraph } from '../types/stored-graph';
     </div>
   `,
   styles: `
-    .explore-container {
+    .discover-container {
       padding: 2rem;
       max-width: 1200px;
       margin: 0 auto;
@@ -142,21 +141,22 @@ import { StoredGraph } from '../types/stored-graph';
     }
   `,
 })
-export default class ExplorePage implements OnInit {
+export default class DiscoverPage implements OnInit {
   error: string | null = null;
   graphs: BookGraph[] = [];
   loading = false;
   actionLoading = false;
   actionLoadingId: string | null = null;
 
-  private supabaseService = inject(SupabaseService);
-  private mermaidService = inject(MermaidService);
-  private mermaidRenderService = inject(MermaidRenderService);
-  private router = inject(Router);
-  private cdr = inject(ChangeDetectorRef);
+  constructor(
+    private readonly supabaseService: SupabaseService,
+    private readonly mermaidService: MermaidService,
+    private readonly mermaidRenderService: MermaidRenderService,
+    private readonly router: Router,
+  ) {}
 
-  async ngOnInit() {
-    await this.mermaidService.initializeMermaid();
+  ngOnInit() {
+    this.mermaidService.initializeMermaid();
     this.loadPublicGraphs();
   }
 
@@ -167,57 +167,45 @@ export default class ExplorePage implements OnInit {
   }
 
   private loadPublicGraphs() {
-    try {
-      this.loading = true;
-      this.supabaseService
-        .getPublicGraphs()
-        .pipe(
-          switchMap((graphs: StoredGraph[]) => {
-            return from(
-              Promise.all(
-                graphs.map((graph) =>
-                  this.mermaidRenderService
-                    .renderMermaid(graph.mermaid_syntax)
-                    .pipe(
-                      map((svgGraph) => ({
-                        id: graph.id,
-                        bookName: graph.book_name,
-                        authorName: graph.author_name,
-                        svgGraph,
-                        mermaidSyntax: graph.mermaid_syntax,
-                        emojis: graph.emojis,
-                      })),
-                    )
-                    .toPromise(),
+    this.loading = true;
+
+    const renderGraph$ = (graph: StoredGraph) =>
+      this.mermaidRenderService.renderMermaid(graph.mermaid_syntax).pipe(
+        map((svgGraph) => ({
+          id: graph.id,
+          bookName: graph.book_name,
+          authorName: graph.author_name,
+          svgGraph,
+          mermaidSyntax: graph.mermaid_syntax,
+          emojis: graph.emojis,
+        })),
+      );
+
+    this.supabaseService
+      .getPublicGraphs()
+      .pipe(
+        switchMap((graphs) =>
+          graphs.length
+            ? from(graphs).pipe(
+                mergeMap(renderGraph$),
+                reduce<BookGraph, BookGraph[]>(
+                  (acc, curr) => [...acc, curr],
+                  [],
                 ),
-              ),
-            );
-          }),
-          finalize(() => {
-            this.loading = false;
-            this.cdr.detectChanges();
-          }),
-        )
-        .subscribe({
-          next: (graphs) => {
-            this.graphs = graphs.filter(
-              (graph): graph is BookGraph => graph !== null,
-            );
-            this.cdr.detectChanges();
-          },
-          error: (err) => {
-            console.error('Error loading graphs:', err);
-            this.error =
-              err.message || 'An error occurred while loading the graphs.';
-            this.loading = false;
-            this.cdr.detectChanges();
-          },
-        });
-    } catch (error) {
-      console.error('Error in loadPublicGraphs:', error);
-      this.error = 'An error occurred while loading the graphs.';
-      this.loading = false;
-      this.cdr.detectChanges();
-    }
+              )
+            : of([]),
+        ),
+      )
+      .subscribe({
+        next: (graphs) => {
+          this.loading = false;
+          this.graphs = graphs;
+        },
+        error: (error) => {
+          this.error =
+            error.message || 'An error occurred while loading the graphs.';
+          this.loading = false;
+        },
+      });
   }
 }
