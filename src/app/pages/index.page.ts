@@ -196,8 +196,19 @@ export default class HomeComponent implements OnInit {
   copyMermaidSyntax() {
     if (this.bookGraph?.mermaidSyntax) {
       this.clipboardService
-        .copyToClipboard(this.bookGraph.mermaidSyntax, 'Syntax copied!')
-        .subscribe();
+        .copyToClipboard(this.bookGraph.mermaidSyntax)
+        .subscribe({
+          next: () => {
+            this.snackBar.open('Syntax copied!', 'Close', {
+              duration: 1500,
+            });
+          },
+          error: () => {
+            this.snackBar.open('Failed to copy syntax', 'Close', {
+              duration: 1500,
+            });
+          },
+        });
     }
   }
 

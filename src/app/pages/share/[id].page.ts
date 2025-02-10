@@ -70,14 +70,36 @@ export default class SharePage implements OnInit {
   copyMermaidSyntax() {
     if (this.graph?.mermaidSyntax) {
       this.clipboardService
-        .copyToClipboard(this.graph.mermaidSyntax, 'Syntax copied!')
-        .subscribe();
+        .copyToClipboard(this.graph.mermaidSyntax)
+        .subscribe({
+          next: () => {
+            this.snackBar.open('Syntax copied!', 'Close', {
+              duration: 1500,
+            });
+          },
+          error: () => {
+            this.snackBar.open('Failed to copy syntax', 'Close', {
+              duration: 1500,
+            });
+          },
+        });
     }
   }
 
   copyUrl() {
     const url = window.location.href;
-    this.clipboardService.copyToClipboard(url, 'URL copied!').subscribe();
+    this.clipboardService.copyToClipboard(url).subscribe({
+      next: () => {
+        this.snackBar.open('URL copied!', 'Close', {
+          duration: 1500,
+        });
+      },
+      error: () => {
+        this.snackBar.open('Failed to copy URL', 'Close', {
+          duration: 1500,
+        });
+      },
+    });
   }
 
   downloadSvg(): void {
@@ -93,7 +115,7 @@ export default class SharePage implements OnInit {
     const svgElement = document.querySelector('svg');
     if (svgElement) {
       const svgString = new XMLSerializer().serializeToString(svgElement);
-      const fileName = `${this.graph.bookName}-graph`;
+      const fileName = `${this.graph.bookName}-svg-graph`;
       this.downloadService.createSvg(svgString, fileName).subscribe({
         next: () => {
           this.snackBar.open('SVG downloaded!', 'Close', {
@@ -114,7 +136,7 @@ export default class SharePage implements OnInit {
 
     const svgElement = document.querySelector('svg');
     if (svgElement) {
-      const fileName = `${this.graph.bookName}-graph`;
+      const fileName = `${this.graph.bookName}-png-graph`;
       this.downloadService.createPng(svgElement, fileName).subscribe({
         next: () => {
           this.snackBar.open('PNG downloaded!', 'Close', {
@@ -136,33 +158,30 @@ export default class SharePage implements OnInit {
       .pipe(
         switchMap((data) => {
           if (!data) throw new Error('Graph not found');
-
           return from(
             mermaid.render(
               'graph_' + Math.random().toString(36).substring(2, 15),
               data.mermaid_syntax,
             ),
-          ).pipe(
-            map(({ svg }) => ({
-              id: data.id,
-              bookName: data.book_name,
-              authorName: data.author_name,
-              svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
-              mermaidSyntax: data.mermaid_syntax,
-              emojis: data.emojis,
-            })),
-          );
+          ).pipe(map(({ svg }) => ({ ...data, svg })));
         }),
+        map((data) => ({
+          id: data.id,
+          bookName: data.book_name,
+          authorName: data.author_name,
+          svgGraph: this.sanitizer.bypassSecurityTrustHtml(data.svg),
+          mermaidSyntax: data.mermaid_syntax,
+          emojis: data.emojis,
+        })),
       )
       .subscribe({
         next: (graph) => {
           this.loading = false;
           this.graph = graph;
         },
-        error: (err) => {
+        error: () => {
           this.loading = false;
-          this.error =
-            err.message || 'An error occurred while loading the graph.';
+          this.error = 'An error occurred while loading the graph.';
         },
       });
   }
