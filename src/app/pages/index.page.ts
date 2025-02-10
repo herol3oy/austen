@@ -19,23 +19,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterModule } from '@angular/router';
-import mermaid from 'mermaid';
-import {
-  debounceTime,
-  finalize,
-  from,
-  map,
-  of,
-  startWith,
-  switchMap,
-} from 'rxjs';
+import { debounceTime, finalize, of, startWith, switchMap } from 'rxjs';
 
 import { SupabaseAuthService } from '../services/auth.service';
 import { ClipboardService } from '../services/clipboard.service';
 import { DownloadService } from '../services/download.service';
 import { MermaidService } from '../services/mermaid.service';
+import { MermaidRenderService } from '../services/mermaid-render.service';
 import { OpenlibService } from '../services/openlib.service';
 import { SupabaseService } from '../services/supabase.service';
 import { Book } from '../types/book';
@@ -51,6 +42,7 @@ import { BookGraph } from '../types/book-graph';
     ClipboardService,
     SupabaseAuthService,
     DownloadService,
+    MermaidRenderService,
   ],
   imports: [
     CommonModule,
@@ -90,11 +82,11 @@ export default class HomeComponent implements OnInit {
     private readonly supabaseService: SupabaseService,
     private readonly downloadService: DownloadService,
     private readonly clipboardService: ClipboardService,
-    private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
     private readonly router: Router,
     private readonly cdr: ChangeDetectorRef,
     private readonly authService: SupabaseAuthService,
+    private readonly mermaidRenderService: MermaidRenderService,
   ) {}
 
   ngOnInit(): void {
@@ -155,31 +147,23 @@ export default class HomeComponent implements OnInit {
       .getMermaidSyntax(bookTitle, authorName)
       .pipe(
         switchMap(({ mermaidSyntax, emojis }) => {
-          return from(
-            mermaid.render(
-              'graph_' + Math.random().toString(36).substring(2, 15),
-              mermaidSyntax,
-            ),
-          ).pipe(
-            map(({ svg }) => ({
-              svg: this.sanitizer.bypassSecurityTrustHtml(svg),
-              mermaidSyntax,
-              emojis,
-            })),
-          );
+          return this.mermaidRenderService
+            .renderMermaid(mermaidSyntax)
+            .pipe(
+              switchMap((svgGraph) => of({ svgGraph, mermaidSyntax, emojis })),
+            );
         }),
         finalize(() => {
           this.graphLoading = false;
         }),
       )
-
       .subscribe({
-        next: ({ svg, mermaidSyntax, emojis }) => {
+        next: ({ svgGraph, mermaidSyntax, emojis }) => {
           this.bookGraph = {
             id: crypto.randomUUID(),
             bookName: bookTitle,
             authorName,
-            svgGraph: svg,
+            svgGraph,
             mermaidSyntax,
             emojis,
           };

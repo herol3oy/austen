@@ -4,13 +4,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import mermaid from 'mermaid';
 import { finalize, from } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 
 import { MermaidService } from '../services/mermaid.service';
+import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
 import { StoredGraph } from '../types/stored-graph';
@@ -25,7 +24,7 @@ import { StoredGraph } from '../types/stored-graph';
     MatIconModule,
     MatProgressSpinnerModule,
   ],
-  providers: [SupabaseService, MermaidService],
+  providers: [SupabaseService, MermaidService, MermaidRenderService],
   template: `
     <div class="explore-container">
       <h2>Explore Public Graphs</h2>
@@ -152,7 +151,7 @@ export default class ExplorePage implements OnInit {
 
   private supabaseService = inject(SupabaseService);
   private mermaidService = inject(MermaidService);
-  private sanitizer = inject(DomSanitizer);
+  private mermaidRenderService = inject(MermaidRenderService);
   private router = inject(Router);
   private cdr = inject(ChangeDetectorRef);
 
@@ -176,25 +175,21 @@ export default class ExplorePage implements OnInit {
           switchMap((graphs: StoredGraph[]) => {
             return from(
               Promise.all(
-                graphs.map(async (graph) => {
-                  try {
-                    const { svg } = await mermaid.render(
-                      'graph_' + Math.random().toString(36).substring(2, 15),
-                      graph.mermaid_syntax,
-                    );
-                    return {
-                      id: graph.id,
-                      bookName: graph.book_name,
-                      authorName: graph.author_name,
-                      svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
-                      mermaidSyntax: graph.mermaid_syntax,
-                      emojis: graph.emojis,
-                    };
-                  } catch (error) {
-                    console.error('Error rendering graph:', error);
-                    return null;
-                  }
-                }),
+                graphs.map((graph) =>
+                  this.mermaidRenderService
+                    .renderMermaid(graph.mermaid_syntax)
+                    .pipe(
+                      map((svgGraph) => ({
+                        id: graph.id,
+                        bookName: graph.book_name,
+                        authorName: graph.author_name,
+                        svgGraph,
+                        mermaidSyntax: graph.mermaid_syntax,
+                        emojis: graph.emojis,
+                      })),
+                    )
+                    .toPromise(),
+                ),
               ),
             );
           }),

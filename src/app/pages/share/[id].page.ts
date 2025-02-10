@@ -6,10 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import mermaid from 'mermaid';
-import { from } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { BookGraph } from 'src/app/types/book-graph';
 
@@ -17,6 +14,7 @@ import { SupabaseAuthService } from '../../services/auth.service';
 import { ClipboardService } from '../../services/clipboard.service';
 import { DownloadService } from '../../services/download.service';
 import { MermaidService } from '../../services/mermaid.service';
+import { MermaidRenderService } from '../../services/mermaid-render.service';
 import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
@@ -26,6 +24,7 @@ import { SupabaseService } from '../../services/supabase.service';
     MermaidService,
     SupabaseAuthService,
     DownloadService,
+    MermaidRenderService,
   ],
   imports: [
     CommonModule,
@@ -50,10 +49,10 @@ export default class SharePage implements OnInit {
     private readonly mermaidService: MermaidService,
     private readonly supabaseService: SupabaseService,
     private readonly clipboardService: ClipboardService,
-    private readonly sanitizer: DomSanitizer,
     private readonly snackBar: MatSnackBar,
     private readonly authService: SupabaseAuthService,
     private readonly downloadService: DownloadService,
+    private readonly mermaidRenderService: MermaidRenderService,
   ) {}
 
   ngOnInit() {
@@ -158,21 +157,19 @@ export default class SharePage implements OnInit {
       .pipe(
         switchMap((data) => {
           if (!data) throw new Error('Graph not found');
-          return from(
-            mermaid.render(
-              'graph_' + Math.random().toString(36).substring(2, 15),
-              data.mermaid_syntax,
-            ),
-          ).pipe(map(({ svg }) => ({ ...data, svg })));
+          return this.mermaidRenderService
+            .renderMermaid(data.mermaid_syntax)
+            .pipe(
+              map((svgGraph) => ({
+                id: data.id,
+                bookName: data.book_name,
+                authorName: data.author_name,
+                svgGraph,
+                mermaidSyntax: data.mermaid_syntax,
+                emojis: data.emojis,
+              })),
+            );
         }),
-        map((data) => ({
-          id: data.id,
-          bookName: data.book_name,
-          authorName: data.author_name,
-          svgGraph: this.sanitizer.bypassSecurityTrustHtml(data.svg),
-          mermaidSyntax: data.mermaid_syntax,
-          emojis: data.emojis,
-        })),
       )
       .subscribe({
         next: (graph) => {

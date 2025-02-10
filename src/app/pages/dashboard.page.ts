@@ -8,14 +8,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Router, RouterModule } from '@angular/router';
-import mermaid from 'mermaid';
-import { finalize, from } from 'rxjs';
+import { finalize, from, map } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { SupabaseAuthService } from '../services/auth.service';
 import { MermaidService } from '../services/mermaid.service';
+import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
 import { StoredGraph } from '../types/stored-graph';
@@ -68,7 +67,7 @@ export const routeMeta: RouteMeta = {
     MatDialogModule,
     RouterModule,
   ],
-  providers: [SupabaseService, MermaidService],
+  providers: [SupabaseService, MermaidService, MermaidRenderService],
   template: `
     <div class="dashboard-container">
       <h2>My Graphs</h2>
@@ -230,7 +229,7 @@ export default class DashboardPage implements OnInit {
   private authService = inject(SupabaseAuthService);
   private supabaseService = inject(SupabaseService);
   private mermaidService = inject(MermaidService);
-  private sanitizer = inject(DomSanitizer);
+  private mermaidRenderService = inject(MermaidRenderService);
   private router = inject(Router);
   private cdr = inject(ChangeDetectorRef);
   private snackBar = inject(MatSnackBar);
@@ -329,25 +328,21 @@ export default class DashboardPage implements OnInit {
 
             return from(
               Promise.all(
-                graphs.map(async (graph) => {
-                  try {
-                    const { svg } = await mermaid.render(
-                      'graph_' + Math.random().toString(36).substring(2, 15),
-                      graph.mermaid_syntax,
-                    );
-                    return {
-                      id: graph.id,
-                      bookName: graph.book_name,
-                      authorName: graph.author_name,
-                      svgGraph: this.sanitizer.bypassSecurityTrustHtml(svg),
-                      mermaidSyntax: graph.mermaid_syntax,
-                      emojis: graph.emojis,
-                    };
-                  } catch (error) {
-                    console.error('Error rendering graph:', error);
-                    return null;
-                  }
-                }),
+                graphs.map((graph) =>
+                  this.mermaidRenderService
+                    .renderMermaid(graph.mermaid_syntax)
+                    .pipe(
+                      map((svgGraph) => ({
+                        id: graph.id,
+                        bookName: graph.book_name,
+                        authorName: graph.author_name,
+                        svgGraph,
+                        mermaidSyntax: graph.mermaid_syntax,
+                        emojis: graph.emojis,
+                      })),
+                    )
+                    .toPromise(),
+                ),
               ),
             );
           }),
