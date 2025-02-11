@@ -7,14 +7,17 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class SupabaseAuthService {
-  private supabase = createBrowserClient(import.meta.env['VITE_PUBLIC_SUPABASE_URL'], import.meta.env['VITE_PUBLIC_SUPABASE_ANON_KEY']);
+  private supabase = createBrowserClient(
+    import.meta.env['VITE_PUBLIC_SUPABASE_URL'],
+    import.meta.env['VITE_PUBLIC_SUPABASE_ANON_KEY'],
+  );
   private session = signal<unknown>(null);
   readonly loggedIn = computed(() => !!this.session());
 
   constructor() {
     this.refresh();
 
-    this.supabase.auth.onAuthStateChange((_event) => {
+    this.supabase.auth.onAuthStateChange(() => {
       this.refresh();
     });
   }
@@ -23,7 +26,7 @@ export class SupabaseAuthService {
     return this.supabase.auth.getSession();
   }
 
-  signUp(email: string, password: string): Observable<{ error: any }> {
+  signUp(email: string, password: string): Observable<void> {
     return from(
       this.supabase.auth.signUp({
         email,
@@ -32,20 +35,20 @@ export class SupabaseAuthService {
           emailRedirectTo: `${window.location.origin}/login`,
         },
       }),
-    ).pipe(map(({ error }) => ({ error })));
+    ).pipe(map(() => void 0));
   }
 
-  signIn(email: string, password: string): Observable<{ error: any }> {
+  signIn(email: string, password: string): Observable<void> {
     return from(
       this.supabase.auth.signInWithPassword({
         email,
         password,
       }),
-    ).pipe(map(({ error }) => ({ error })));
+    ).pipe(map(() => void 0));
   }
 
-  async logout() {
-    await this.supabase.auth.signOut();
+  logout(): Observable<void> {
+    return from(this.supabase.auth.signOut()).pipe(map(() => void 0));
   }
 
   refresh() {

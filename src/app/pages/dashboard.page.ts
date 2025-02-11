@@ -13,11 +13,11 @@ import { from, map, mergeMap, of, reduce, switchMap, tap } from 'rxjs';
 
 import { ConfirmDialogComponent } from '../components/confirm-dialog.component';
 import { SupabaseAuthService } from '../services/auth.service';
+import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
 import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
-import { StoredGraph } from '../types/stored-graph';
 
 export const routeMeta: RouteMeta = {
   canActivate: [
@@ -53,16 +53,7 @@ export const routeMeta: RouteMeta = {
   template: `
     <div class="dashboard-container">
       <h2>My Graphs</h2>
-      @if (loading) {
-        <div class="loading-container">
-          <mat-spinner diameter="40"></mat-spinner>
-          <p>Loading your graphs...</p>
-        </div>
-      } @else if (error) {
-        <div class="error-container">
-          <p>{{ error }}</p>
-        </div>
-      } @else if (graphs.length) {
+      @if (graphs.length) {
         <div class="graphs-grid">
           @for (graph of graphs; track graph.id) {
             <mat-card class="graph-card">
@@ -80,17 +71,11 @@ export const routeMeta: RouteMeta = {
                     mat-button
                     color="primary"
                     (click)="viewGraph(graph.id)"
-                    [disabled]="actionLoading"
                   >
                     <mat-icon>visibility</mat-icon>
                     View
                   </button>
-                  <button
-                    mat-button
-                    color="warn"
-                    (click)="deleteGraph(graph.id)"
-                    [disabled]="actionLoading"
-                  >
+                  <button mat-button color="warn" (click)="deleteGraph(graph)">
                     <mat-icon>delete</mat-icon>
                     Delete
                   </button>
@@ -99,18 +84,16 @@ export const routeMeta: RouteMeta = {
                   [checked]="graphPublicStatus.get(graph.id) || false"
                   (change)="togglePublicStatus(graph.id, $event.checked)"
                   color="primary"
-                  [disabled]="actionLoading"
                 >
                   {{ graphPublicStatus.get(graph.id) ? 'Public' : 'Private' }}
                 </mat-slide-toggle>
               </mat-card-actions>
-              @if (actionLoadingId === graph.id) {
-                <div class="action-loading-overlay">
-                  <mat-spinner diameter="30"></mat-spinner>
-                </div>
-              }
             </mat-card>
           }
+        </div>
+      } @else if (error) {
+        <div class="error-container">
+          <p>{{ error }}</p>
         </div>
       } @else {
         <div class="no-graphs-container">
@@ -185,37 +168,22 @@ export const routeMeta: RouteMeta = {
       display: flex;
       gap: 0.5rem;
     }
-
-    .action-loading-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
   `,
 })
 export default class DashboardPage implements OnInit {
   error: string | null = null;
   graphs: BookGraph[] = [];
   graphPublicStatus = new Map<string, boolean>();
-  loading = false;
-  actionLoading = false;
-  actionLoadingId: string | null = null;
 
   constructor(
+    private readonly router: Router,
+    private readonly snackBar: MatSnackBar,
+    private readonly dialog: MatDialog,
     private readonly authService: SupabaseAuthService,
     private readonly supabaseService: SupabaseService,
     private readonly mermaidService: MermaidService,
     private readonly mermaidRenderService: MermaidRenderService,
-    private readonly router: Router,
-    private readonly snackBar: MatSnackBar,
-    private readonly dialog: MatDialog,
+    private readonly loadingStateService: LoadingStateService,
   ) {}
 
   ngOnInit() {
@@ -227,124 +195,116 @@ export default class DashboardPage implements OnInit {
     this.router.navigate(['/share', id]);
   }
 
-  deleteGraph(graphId: string) {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent);
-
-    dialogRef
+  deleteGraph(graph: BookGraph) {
+    this.dialog
+      .open(ConfirmDialogComponent, {
+        data: {
+          bookName: graph.bookName,
+          authorName: graph.authorName,
+        },
+      })
       .afterClosed()
       .pipe(
-        switchMap((result) => {
-          if (!result) return of(null);
-
-          this.actionLoadingId = graphId;
-          this.actionLoading = true;
-
-          return this.supabaseService
-            .deleteGraph(graphId)
-            .pipe(map(() => graphId));
-        }),
+        this.loadingStateService.spinUntilFinished(),
+        switchMap((result) =>
+          result
+            ? this.supabaseService
+                .deleteGraph(graph.id)
+                .pipe(map(() => graph.id))
+            : of(null),
+        ),
       )
       .subscribe({
         next: (deletedGraphId) => {
-          if (deletedGraphId) {
-            this.graphs = this.graphs.filter(
-              (graph) => graph.id !== deletedGraphId,
-            );
-            this.graphPublicStatus.delete(deletedGraphId);
-            this.snackBar.open('Graph deleted successfully', 'Close', {
-              duration: 3000,
-            });
-          }
-          this.resetLoadingState();
+        if (deletedGraphId) {
+          this.graphs = this.graphs.filter(
+            (graph) => graph.id !== deletedGraphId,
+          );
+          this.graphPublicStatus.delete(deletedGraphId);
+          this.snackBar.open('Graph deleted successfully', 'Close', {
+            duration: 3000,
+          });
+        }
         },
         error: () => {
           this.snackBar.open('An error occurred in the dialog.', 'Close', {
             duration: 3000,
           });
-          this.resetLoadingState();
         },
       });
   }
 
   togglePublicStatus(graphId: string, isPublic: boolean) {
-    this.actionLoadingId = graphId;
-    this.actionLoading = true;
-    this.supabaseService.toggleGraphPublicStatus(graphId, isPublic).subscribe({
-      next: (graph) => {
-        this.graphPublicStatus.set(graphId, graph.is_public);
-        this.snackBar.open(
-          `Graph is now ${isPublic ? 'public' : 'private'}`,
-          'Close',
-          { duration: 3000 },
-        );
-        this.resetLoadingState();
-      },
-      error: () => {
-        this.snackBar.open(
-          'Failed to update graph status. Please try again.',
-          'Close',
-          { duration: 3000 },
-        );
-        this.graphPublicStatus.set(graphId, !isPublic);
-        this.resetLoadingState();
-      },
-    });
-  }
-
-  private resetLoadingState() {
-    this.actionLoadingId = null;
-    this.actionLoading = false;
+    this.supabaseService
+      .toggleGraphPublicStatus(graphId, isPublic)
+      .pipe(this.loadingStateService.spinUntilFinished())
+      .subscribe({
+        next: (graph) => {
+          this.graphPublicStatus.set(graphId, graph.is_public);
+          this.snackBar.open(
+            `Graph is now ${isPublic ? 'public' : 'private'}`,
+            'Close',
+            { duration: 3000 },
+          );
+        },
+        error: () => {
+          this.snackBar.open(
+            'Failed to update graph status. Please try again.',
+            'Close',
+            { duration: 3000 },
+          );
+          this.graphPublicStatus.set(graphId, !isPublic);
+        },
+      });
   }
 
   private loadUserGraphs() {
-    this.loading = true;
-
-    const getUserId$ = from(this.authService.getSession()).pipe(
-      map(({ data: { session } }) => {
-        if (!session?.user) throw new Error('User not authenticated');
-        return session.user.id;
-      }),
-    );
-
-    const renderGraph$ = (graph: StoredGraph) =>
-      this.mermaidRenderService.renderMermaid(graph.mermaid_syntax).pipe(
-        map((svgGraph) => ({
-          id: graph.id,
-          bookName: graph.book_name,
-          authorName: graph.author_name,
-          svgGraph,
-          mermaidSyntax: graph.mermaid_syntax,
-          emojis: graph.emojis,
-        })),
-      );
-
-    getUserId$
+    from(this.authService.getSession())
       .pipe(
-        switchMap((userId) => this.supabaseService.getUserGraphs(userId)),
-        tap((graphs) => {
-          graphs.forEach((graph) => {
-            this.graphPublicStatus.set(graph.id, graph.is_public);
-          });
-        }),
-        switchMap((graphs) =>
-          graphs.length
-            ? from(graphs).pipe(
-                mergeMap(renderGraph$),
-                reduce<BookGraph, BookGraph[]>(
-                  (acc, curr) => [...acc, curr],
-                  [],
-                ),
-              )
-            : of([]),
+        this.loadingStateService.spinUntilFinished(),
+        map(({ data: { session } }) => session!.user.id),
+        switchMap((userId) =>
+          this.supabaseService.getUserGraphs(userId).pipe(
+            this.loadingStateService.spinUntilFinished(),
+            tap((graphs) => {
+              graphs.forEach((graph) => {
+                this.graphPublicStatus.set(graph.id, graph.is_public);
+              });
+            }),
+            switchMap((graphs) =>
+              graphs.length
+                ? from(graphs).pipe(
+                    this.loadingStateService.spinUntilFinished(),
+                    mergeMap((graph) =>
+                      this.mermaidRenderService
+                        .renderMermaid(graph.mermaid_syntax)
+                        .pipe(
+                          this.loadingStateService.spinUntilFinished(),
+                          map((svgGraph) => ({
+                            id: graph.id,
+                            bookName: graph.book_name,
+                            authorName: graph.author_name,
+                            svgGraph,
+                            mermaidSyntax: graph.mermaid_syntax,
+                            emojis: graph.emojis,
+                          })),
+                        ),
+                    ),
+                    reduce<BookGraph, BookGraph[]>(
+                      (acc, curr) => [...acc, curr],
+                      [],
+                    ),
+                  )
+                : of([]),
+            ),
+          ),
         ),
       )
       .subscribe({
         next: (graphs) => {
-          this.loading = false;
           this.graphs = graphs;
         },
         error: (error) => {
-          this.loading = false;
           this.error =
             error.message || 'An error occurred while loading your graphs.';
         },

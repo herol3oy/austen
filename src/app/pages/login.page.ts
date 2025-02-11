@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -12,10 +12,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterModule } from '@angular/router';
 
 import { SupabaseAuthService } from '../services/auth.service';
+import { LoadingStateService } from '../services/loadingState.service';
 
 @Component({
   selector: 'app-login-page',
@@ -35,10 +36,6 @@ import { SupabaseAuthService } from '../services/auth.service';
   template: `
     <div class="login-container">
       <mat-card class="login-card">
-        @if (loading) {
-          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-        }
-
         <mat-card-header>
           <mat-card-title>Welcome Back</mat-card-title>
           <mat-card-subtitle>Sign in to your account</mat-card-subtitle>
@@ -111,9 +108,9 @@ import { SupabaseAuthService } from '../services/auth.service';
               color="primary"
               type="submit"
               class="login-button"
-              [disabled]="loginForm.invalid || loading"
+              [disabled]="loginForm.invalid"
             >
-              {{ loading ? 'Signing in...' : 'Sign in' }}
+              Sign in
             </button>
           </form>
         </mat-card-content>
@@ -200,14 +197,15 @@ import { SupabaseAuthService } from '../services/auth.service';
   `,
 })
 export default class LoginPage {
-  private authService = inject(SupabaseAuthService);
-  private snackBar = inject(MatSnackBar);
-  private router = inject(Router);
-  private fb = inject(FormBuilder);
-
-  loading = false;
   error: string | null = null;
   hidePassword = true;
+
+  constructor(
+    private readonly authService: SupabaseAuthService,
+    private readonly router: Router,
+    private readonly fb: FormBuilder,
+    private readonly loadingStateService: LoadingStateService,
+  ) {}
 
   loginForm: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
@@ -217,25 +215,20 @@ export default class LoginPage {
   onSubmit() {
     if (this.loginForm.invalid) return;
 
-    this.loading = true;
     this.error = null;
 
     const { email, password } = this.loginForm.value;
 
-    this.authService.signIn(email, password).subscribe({
-      next: ({ error }) => {
-        this.loading = false;
-        if (error) {
-          this.error = error.message;
-        } else {
+    this.authService
+      .signIn(email, password)
+      .pipe(this.loadingStateService.spinUntilFinished())
+      .subscribe({
+        next: () => {
           this.router.navigate(['/']);
-        }
-      },
-      error: (err) => {
-        this.loading = false;
-        this.error = 'An error occurred during login. Please try again.';
-        console.error('Login error:', err);
-      },
-    });
+        },
+        error: () => {
+          this.error = 'An error occurred during login. Please try again.';
+        },
+      });
   }
 }

@@ -25,6 +25,7 @@ import { debounceTime, finalize, of, startWith, switchMap } from 'rxjs';
 import { SupabaseAuthService } from '../services/auth.service';
 import { ClipboardService } from '../services/clipboard.service';
 import { DownloadService } from '../services/download.service';
+import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
 import { MermaidRenderService } from '../services/mermaid-render.service';
 import { OpenlibService } from '../services/openlib.service';
@@ -86,6 +87,7 @@ export default class HomeComponent implements OnInit {
     private readonly cdr: ChangeDetectorRef,
     private readonly authService: SupabaseAuthService,
     private readonly mermaidRenderService: MermaidRenderService,
+    private readonly loadingStateService: LoadingStateService,
   ) {}
 
   ngOnInit(): void {
@@ -115,12 +117,12 @@ export default class HomeComponent implements OnInit {
     this.mermaidService
       .getMermaidSyntax(bookTitle, authorName)
       .pipe(
+        this.loadingStateService.spinUntilFinished(),
         switchMap(({ mermaidSyntax, emojis }) => {
-          return this.mermaidRenderService
-            .renderMermaid(mermaidSyntax)
-            .pipe(
-              switchMap((svgGraph) => of({ svgGraph, mermaidSyntax, emojis })),
-            );
+          return this.mermaidRenderService.renderMermaid(mermaidSyntax).pipe(
+            this.loadingStateService.spinUntilFinished(),
+            switchMap((svgGraph) => of({ svgGraph, mermaidSyntax, emojis })),
+          );
         }),
         finalize(() => {
           this.graphLoading = false;
@@ -277,10 +279,7 @@ export default class HomeComponent implements OnInit {
       )
       .subscribe({
         next: (books) => {
-          this.filteredOptions = books.map(({ title, author_name }) => ({
-            title,
-            author_name,
-          }));
+          this.filteredOptions = books;
         },
       });
   }

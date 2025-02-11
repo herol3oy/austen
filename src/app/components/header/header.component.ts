@@ -7,10 +7,10 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, tap } from 'rxjs';
 
 import { SupabaseAuthService } from '../../services/auth.service';
+import { LoadingStateService } from '../../services/loadingState.service';
 
 @Component({
   selector: 'austen-header',
-  standalone: true,
   imports: [
     RouterModule,
     MatIconModule,
@@ -25,6 +25,7 @@ export class HeaderComponent {
   constructor(
     readonly authService: SupabaseAuthService,
     private readonly router: Router,
+    private readonly loadingStateService: LoadingStateService,
   ) {
     this.router.events
       .pipe(
@@ -35,7 +36,13 @@ export class HeaderComponent {
   }
 
   logout() {
-    this.authService.logout();
-    this.router.navigate(['/']);
+    this.authService
+      .logout()
+      .pipe(this.loadingStateService.spinUntilFinished())
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/']);
+        },
+      });
   }
 }

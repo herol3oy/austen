@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'austen-confirm-dialog',
   template: `
     <h2 mat-dialog-title>Delete Graph</h2>
     <mat-dialog-content>
-      Are you sure you want to delete this graph?
+      Are you sure you want to delete the graph for "{{ data.bookName }}" by
+      "{{ data.authorName }}"?
     </mat-dialog-content>
     <mat-dialog-actions>
       <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
@@ -16,4 +17,9 @@ import { MatDialogModule } from '@angular/material/dialog';
   `,
   imports: [MatDialogModule, MatButtonModule],
 })
-export class ConfirmDialogComponent {}
+export class ConfirmDialogComponent {
+  constructor(
+    @Inject(MAT_DIALOG_DATA)
+    public data: { bookName: string; authorName: string },
+  ) {}
+}

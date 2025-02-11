@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -16,6 +16,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterModule } from '@angular/router';
 
 import { SupabaseAuthService } from '../services/auth.service';
+import { LoadingStateService } from '../services/loadingState.service';
 
 @Component({
   selector: 'app-signup-page',
@@ -191,10 +192,13 @@ import { SupabaseAuthService } from '../services/auth.service';
   `,
 })
 export default class SignupPage {
-  private authService = inject(SupabaseAuthService);
-  private snackBar = inject(MatSnackBar);
-  private router = inject(Router);
-  private fb = inject(FormBuilder);
+  constructor(
+    private readonly loadingStateService: LoadingStateService,
+    private readonly authService: SupabaseAuthService,
+    private readonly snackBar: MatSnackBar,
+    private readonly router: Router,
+    private readonly fb: FormBuilder,
+  ) {}
 
   loading = false;
   error: string | null = null;
@@ -207,30 +211,26 @@ export default class SignupPage {
   onSubmit() {
     if (this.signupForm.invalid) return;
 
-    this.loading = true;
     this.error = null;
 
     const { email, password } = this.signupForm.value;
 
-    this.authService.signUp(email, password).subscribe({
-      next: ({ error }) => {
-        this.loading = false;
-        if (error) {
-          this.error = error.message;
-        } else {
+    this.authService
+      .signUp(email, password)
+      .pipe(this.loadingStateService.spinUntilFinished())
+      .subscribe({
+        next: () => {
           this.snackBar.open(
             'Please check your email to verify your account',
             'Close',
             { duration: 5000 },
           );
           this.router.navigate(['/login']);
-        }
-      },
-      error: (err) => {
-        this.loading = false;
-        this.error = 'An error occurred during signup. Please try again.';
-        console.error('Signup error:', err);
-      },
-    });
+        },
+        error: (err) => {
+          this.error =
+            err.message || 'An error occurred during signup. Please try again.';
+        },
+      });
   }
 }

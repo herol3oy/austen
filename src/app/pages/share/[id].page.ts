@@ -13,6 +13,7 @@ import { BookGraph } from 'src/app/types/book-graph';
 import { SupabaseAuthService } from '../../services/auth.service';
 import { ClipboardService } from '../../services/clipboard.service';
 import { DownloadService } from '../../services/download.service';
+import { LoadingStateService } from '../../services/loadingState.service';
 import { MermaidService } from '../../services/mermaid.service';
 import { MermaidRenderService } from '../../services/mermaid-render.service';
 import { SupabaseService } from '../../services/supabase.service';
@@ -39,7 +40,6 @@ import { SupabaseService } from '../../services/supabase.service';
   styleUrl: './share.page.scss',
 })
 export default class SharePage implements OnInit {
-  loading = true;
   error: string | null = null;
   graph: BookGraph | null = null;
   isMermaidSyntaxVisible = false;
@@ -53,6 +53,7 @@ export default class SharePage implements OnInit {
     private readonly authService: SupabaseAuthService,
     private readonly downloadService: DownloadService,
     private readonly mermaidRenderService: MermaidRenderService,
+    private readonly loadingStateService: LoadingStateService,
   ) {}
 
   ngOnInit() {
@@ -115,18 +116,21 @@ export default class SharePage implements OnInit {
     if (svgElement) {
       const svgString = new XMLSerializer().serializeToString(svgElement);
       const fileName = `${this.graph.bookName}-svg-graph`;
-      this.downloadService.createSvg(svgString, fileName).subscribe({
-        next: () => {
-          this.snackBar.open('SVG downloaded!', 'Close', {
-            duration: 3000,
-          });
-        },
-        error: () => {
-          this.snackBar.open('Failed to download SVG', 'Close', {
-            duration: 3000,
-          });
-        },
-      });
+      this.downloadService
+        .createSvg(svgString, fileName)
+        .pipe(this.loadingStateService.spinUntilFinished())
+        .subscribe({
+          next: () => {
+            this.snackBar.open('SVG downloaded!', 'Close', {
+              duration: 3000,
+            });
+          },
+          error: () => {
+            this.snackBar.open('Failed to download SVG', 'Close', {
+              duration: 3000,
+            });
+          },
+        });
     }
   }
 
@@ -136,18 +140,22 @@ export default class SharePage implements OnInit {
     const svgElement = document.querySelector('svg');
     if (svgElement) {
       const fileName = `${this.graph.bookName}-png-graph`;
-      this.downloadService.createPng(svgElement, fileName).subscribe({
-        next: () => {
-          this.snackBar.open('PNG downloaded!', 'Close', {
-            duration: 3000,
-          });
-        },
-        error: () => {
-          this.snackBar.open('Failed to download PNG', 'Close', {
-            duration: 3000,
-          });
-        },
-      });
+      this.downloadService
+        .createPng(svgElement, fileName)
+
+        .pipe(this.loadingStateService.spinUntilFinished())
+        .subscribe({
+          next: () => {
+            this.snackBar.open('PNG downloaded!', 'Close', {
+              duration: 3000,
+            });
+          },
+          error: () => {
+            this.snackBar.open('Failed to download PNG', 'Close', {
+              duration: 3000,
+            });
+          },
+        });
     }
   }
 
@@ -155,11 +163,13 @@ export default class SharePage implements OnInit {
     this.supabaseService
       .getGraphById(id)
       .pipe(
+        this.loadingStateService.spinUntilFinished(),
         switchMap((data) => {
           if (!data) throw new Error('Graph not found');
           return this.mermaidRenderService
             .renderMermaid(data.mermaid_syntax)
             .pipe(
+              this.loadingStateService.spinUntilFinished(),
               map((svgGraph) => ({
                 id: data.id,
                 bookName: data.book_name,
@@ -173,11 +183,9 @@ export default class SharePage implements OnInit {
       )
       .subscribe({
         next: (graph) => {
-          this.loading = false;
           this.graph = graph;
         },
         error: () => {
-          this.loading = false;
           this.error = 'An error occurred while loading the graph.';
         },
       });

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { from, of } from 'rxjs';
 import { map, mergeMap, reduce, switchMap } from 'rxjs/operators';
 
+import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
 import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
@@ -27,16 +28,7 @@ import { StoredGraph } from '../types/stored-graph';
   template: `
     <div class="discover-container">
       <h2>Discover Public Graphs</h2>
-      @if (loading) {
-        <div class="loading-container">
-          <mat-spinner diameter="40"></mat-spinner>
-          <p>Discovering public graphs...</p>
-        </div>
-      } @else if (error) {
-        <div class="error-container">
-          <p>{{ error }}</p>
-        </div>
-      } @else if (graphs.length) {
+      @if (graphs.length) {
         <div class="graphs-grid">
           @for (graph of graphs; track graph.id) {
             <mat-card class="graph-card">
@@ -53,19 +45,17 @@ import { StoredGraph } from '../types/stored-graph';
                   mat-button
                   color="primary"
                   (click)="viewGraph(graph.id)"
-                  [disabled]="actionLoading"
                 >
                   <mat-icon>visibility</mat-icon>
                   View
                 </button>
               </mat-card-actions>
-              @if (actionLoadingId === graph.id) {
-                <div class="action-loading-overlay">
-                  <mat-spinner diameter="30"></mat-spinner>
-                </div>
-              }
             </mat-card>
           }
+        </div>
+      } @else if (error) {
+        <div class="error-container">
+          <p>{{ error }}</p>
         </div>
       } @else {
         <div class="no-graphs-container">
@@ -144,15 +134,13 @@ import { StoredGraph } from '../types/stored-graph';
 export default class DiscoverPage implements OnInit {
   error: string | null = null;
   graphs: BookGraph[] = [];
-  loading = false;
-  actionLoading = false;
-  actionLoadingId: string | null = null;
 
   constructor(
     private readonly supabaseService: SupabaseService,
     private readonly mermaidService: MermaidService,
     private readonly mermaidRenderService: MermaidRenderService,
     private readonly router: Router,
+    private readonly loadingStateService: LoadingStateService,
   ) {}
 
   ngOnInit() {
@@ -161,16 +149,14 @@ export default class DiscoverPage implements OnInit {
   }
 
   viewGraph(id: string) {
-    this.actionLoadingId = id;
-    this.actionLoading = true;
     this.router.navigate(['/share', id]);
   }
 
   private loadPublicGraphs() {
-    this.loading = true;
-
     const renderGraph$ = (graph: StoredGraph) =>
       this.mermaidRenderService.renderMermaid(graph.mermaid_syntax).pipe(
+        this.loadingStateService.spinUntilFinished(),
+
         map((svgGraph) => ({
           id: graph.id,
           bookName: graph.book_name,
@@ -184,9 +170,12 @@ export default class DiscoverPage implements OnInit {
     this.supabaseService
       .getPublicGraphs()
       .pipe(
+        this.loadingStateService.spinUntilFinished(),
         switchMap((graphs) =>
           graphs.length
             ? from(graphs).pipe(
+                this.loadingStateService.spinUntilFinished(),
+
                 mergeMap(renderGraph$),
                 reduce<BookGraph, BookGraph[]>(
                   (acc, curr) => [...acc, curr],
@@ -198,13 +187,11 @@ export default class DiscoverPage implements OnInit {
       )
       .subscribe({
         next: (graphs) => {
-          this.loading = false;
           this.graphs = graphs;
         },
         error: (error) => {
           this.error =
             error.message || 'An error occurred while loading the graphs.';
-          this.loading = false;
         },
       });
   }
