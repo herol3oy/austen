@@ -1,15 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
-import { BookGraph } from 'src/app/types/book-graph';
 
+import { GraphCardComponent } from '../../components/graph-card.component';
 import { SupabaseAuthService } from '../../services/auth.service';
 import { ClipboardService } from '../../services/clipboard.service';
 import { DownloadService } from '../../services/download.service';
@@ -17,6 +16,7 @@ import { LoadingStateService } from '../../services/loadingState.service';
 import { MermaidService } from '../../services/mermaid.service';
 import { MermaidRenderService } from '../../services/mermaid-render.service';
 import { SupabaseService } from '../../services/supabase.service';
+import { BookGraph } from '../../types/book-graph';
 
 @Component({
   providers: [
@@ -29,15 +29,57 @@ import { SupabaseService } from '../../services/supabase.service';
   ],
   imports: [
     CommonModule,
-    MatCardModule,
     MatProgressSpinnerModule,
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
     MatMenuModule,
+    GraphCardComponent,
   ],
-  templateUrl: './share.page.html',
-  styleUrl: './share.page.scss',
+  template: `
+    <div class="share-container">
+      @if (error) {
+        <div class="error-container">
+          <p>{{ error }}</p>
+        </div>
+      } @else if (graph) {
+        <div class="graph-details">
+          <austen-graph-card
+            [graph]="graph"
+            [showSyntaxToggle]="true"
+            [showDownload]="true"
+            [showCopyUrl]="true"
+            [showCopySyntax]="true"
+            (downloadSvg)="downloadSvg()"
+            (downloadPng)="downloadPng()"
+            (copyUrl)="copyUrl()"
+            (copySyntax)="copyMermaidSyntax()"
+            (toggleSyntax)="toggleMermaidSyntax()"
+          />
+        </div>
+      }
+    </div>
+  `,
+  styles: `
+    .share-container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .graph-details {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .error-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px;
+    }
+  `,
 })
 export default class SharePage implements OnInit {
   error: string | null = null;
@@ -142,7 +184,6 @@ export default class SharePage implements OnInit {
       const fileName = `${this.graph.bookName}-png-graph`;
       this.downloadService
         .createPng(svgElement, fileName)
-
         .pipe(this.loadingStateService.spinUntilFinished())
         .subscribe({
           next: () => {

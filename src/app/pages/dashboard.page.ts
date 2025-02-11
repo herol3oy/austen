@@ -2,16 +2,15 @@ import { RouteMeta } from '@analogjs/router';
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterModule } from '@angular/router';
 import { from, map, mergeMap, of, reduce, switchMap, tap } from 'rxjs';
 
 import { ConfirmDialogComponent } from '../components/confirm-dialog.component';
+import { GraphCardComponent } from '../components/graph-card.component';
 import { SupabaseAuthService } from '../services/auth.service';
 import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
@@ -40,14 +39,13 @@ export const routeMeta: RouteMeta = {
   selector: 'austen-dashboard-page',
   imports: [
     CommonModule,
-    MatCardModule,
     MatButtonModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatSlideToggleModule,
     MatSnackBarModule,
     MatDialogModule,
     RouterModule,
+    GraphCardComponent,
   ],
   providers: [SupabaseService, MermaidService, MermaidRenderService],
   template: `
@@ -56,39 +54,15 @@ export const routeMeta: RouteMeta = {
       @if (graphs.length) {
         <div class="graphs-grid">
           @for (graph of graphs; track graph.id) {
-            <mat-card class="graph-card">
-              <mat-card-header>
-                <mat-card-title>{{ graph.bookName }}</mat-card-title>
-                <mat-card-subtitle>{{ graph.authorName }}</mat-card-subtitle>
-                <mat-card-subtitle>{{ graph.emojis }}</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <div [innerHTML]="graph.svgGraph"></div>
-              </mat-card-content>
-              <mat-card-actions>
-                <div class="action-buttons">
-                  <button
-                    mat-button
-                    color="primary"
-                    (click)="viewGraph(graph.id)"
-                  >
-                    <mat-icon>visibility</mat-icon>
-                    View
-                  </button>
-                  <button mat-button color="warn" (click)="deleteGraph(graph)">
-                    <mat-icon>delete</mat-icon>
-                    Delete
-                  </button>
-                </div>
-                <mat-slide-toggle
-                  [checked]="graphPublicStatus.get(graph.id) || false"
-                  (change)="togglePublicStatus(graph.id, $event.checked)"
-                  color="primary"
-                >
-                  {{ graphPublicStatus.get(graph.id) ? 'Public' : 'Private' }}
-                </mat-slide-toggle>
-              </mat-card-actions>
-            </mat-card>
+            <austen-graph-card
+              [graph]="graph"
+              [showDelete]="true"
+              [showPublicToggle]="true"
+              [isPublic]="graphPublicStatus.get(graph.id) || false"
+              (view)="viewGraph(graph.id)"
+              (delete)="deleteGraph(graph)"
+              (publicToggle)="togglePublicStatus(graph.id, $event)"
+            />
           }
         </div>
       } @else if (error) {
@@ -123,17 +97,8 @@ export const routeMeta: RouteMeta = {
       padding: 1rem 0;
     }
 
-    .graph-card {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-
     .error-container,
-    .no-graphs-container,
-    .loading-container {
+    .no-graphs-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -143,30 +108,11 @@ export const routeMeta: RouteMeta = {
       gap: 1rem;
     }
 
-    .loading-container p {
-      color: rgba(0, 0, 0, 0.6);
-      font-size: 1.1rem;
-      margin: 0;
-    }
-
     .explore-icon {
       font-size: 48px;
       width: 48px;
       height: 48px;
       margin-bottom: 1rem;
-    }
-
-    mat-card-actions {
-      margin-top: auto;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .action-buttons {
-      display: flex;
-      gap: 0.5rem;
     }
   `,
 })
@@ -216,15 +162,15 @@ export default class DashboardPage implements OnInit {
       )
       .subscribe({
         next: (deletedGraphId) => {
-        if (deletedGraphId) {
-          this.graphs = this.graphs.filter(
-            (graph) => graph.id !== deletedGraphId,
-          );
-          this.graphPublicStatus.delete(deletedGraphId);
-          this.snackBar.open('Graph deleted successfully', 'Close', {
-            duration: 3000,
-          });
-        }
+          if (deletedGraphId) {
+            this.graphs = this.graphs.filter(
+              (graph) => graph.id !== deletedGraphId,
+            );
+            this.graphPublicStatus.delete(deletedGraphId);
+            this.snackBar.open('Graph deleted successfully', 'Close', {
+              duration: 3000,
+            });
+          }
         },
         error: () => {
           this.snackBar.open('An error occurred in the dialog.', 'Close', {

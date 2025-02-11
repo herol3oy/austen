@@ -22,6 +22,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterModule } from '@angular/router';
 import { debounceTime, finalize, of, startWith, switchMap } from 'rxjs';
 
+import { GraphCardComponent } from '../components/graph-card.component';
 import { SupabaseAuthService } from '../services/auth.service';
 import { ClipboardService } from '../services/clipboard.service';
 import { DownloadService } from '../services/download.service';
@@ -60,9 +61,193 @@ import { BookGraph } from '../types/book-graph';
     MatProgressSpinnerModule,
     MatSnackBarModule,
     MatMenuModule,
+    GraphCardComponent,
   ],
-  templateUrl: './index.page.html',
-  styleUrl: './index.page.scss',
+  template: `
+    <div class="page-container">
+      <form class="search-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Type a book title...</mat-label>
+          <input
+            type="text"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+            name="bookTitle"
+            (keydown.enter)="$event.preventDefault()"
+            required
+          />
+
+          @if (myControl.value) {
+            <button
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="clearSearch()"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          }
+          <mat-icon matSuffix>book</mat-icon>
+          <mat-autocomplete
+            #auto="matAutocomplete"
+            (optionSelected)="onOptionSelected($event)"
+          >
+            @for (option of filteredOptions; track option) {
+              <mat-option [value]="option.title">
+                <div class="book-option">
+                  <span class="book-title">{{ option.title }}</span>
+                  <mat-chip-option color="accent" class="author-chip">
+                    {{ option.author_name }}
+                  </mat-chip-option>
+                </div>
+              </mat-option>
+            }
+            @if (!filteredOptions.length && !loading) {
+              <mat-option disabled>
+                <em>No books found in this realm...</em>
+              </mat-option>
+            }
+            @if (loading) {
+              <mat-option disabled>
+                <div class="spinner-container">
+                  <mat-spinner diameter="20"></mat-spinner>
+                  <span>Searching the literary cosmos...</span>
+                </div>
+              </mat-option>
+            }
+          </mat-autocomplete>
+          @if (myControl.hasError('required')) {
+            <mat-error
+              >A book title is required to begin your journey</mat-error
+            >
+          }
+          @if (myControl.hasError('minlength')) {
+            <mat-error
+              >Book titles must be at least 4 characters to unlock their
+              secrets</mat-error
+            >
+          }
+        </mat-form-field>
+      </form>
+
+      <section>
+        @if (bookGraph?.bookName && bookGraph?.svgGraph) {
+          <austen-graph-card
+            [graph]="bookGraph!"
+            [showSyntaxToggle]="true"
+            [showShare]="true"
+            [showDownload]="true"
+            [showCopySyntax]="true"
+            (share)="shareGraph()"
+            (downloadSvg)="downloadSvg()"
+            (downloadPng)="downloadPng()"
+            (copySyntax)="copyMermaidSyntax()"
+            (toggleSyntax)="toggleMermaidSyntax()"
+          />
+        } @else if (loading || graphLoading) {
+          <div class="loading-container">
+            <mat-spinner diameter="40"></mat-spinner>
+            <p>Weaving the threads of literary connections...</p>
+          </div>
+        } @else {
+          <div class="no-graph-container">
+            <mat-icon class="explore-icon">explore</mat-icon>
+            <p>
+              Your literary map awaits. Start by searching for a book above!
+            </p>
+          </div>
+        }
+      </section>
+    </div>
+  `,
+  styles: `
+    .spinner-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .spinner-container span {
+      margin-left: 0.5rem;
+    }
+
+    .search-form {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    mat-form-field {
+      width: 100%;
+      max-width: 40rem;
+    }
+
+    .loading-container,
+    .no-graph-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 20rem;
+      color: #7f8c8d;
+      width: 100%;
+    }
+
+    .no-graph-container mat-icon {
+      font-size: 3rem;
+      height: 3rem;
+      width: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .explore-icon {
+      animation: swing 4s ease-in-out infinite;
+    }
+
+    .book-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+
+      .book-title {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .author-chip {
+        flex-shrink: 0;
+      }
+    }
+
+    ::ng-deep {
+      .mat-mdc-option {
+        .mdc-list-item__primary-text {
+          width: 100%;
+        }
+      }
+
+      .mat-mdc-chip-option {
+        --mdc-chip-container-height: 24px;
+      }
+    }
+
+    @keyframes swing {
+      0% {
+        transform: rotate(30deg);
+      }
+      50% {
+        transform: rotate(-30deg);
+      }
+      100% {
+        transform: rotate(30deg);
+      }
+    }
+  `,
 })
 export default class HomeComponent implements OnInit {
   loading = false;
