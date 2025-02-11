@@ -1,3 +1,5 @@
+import { provideContent } from '@analogjs/content';
+import { withPrismHighlighter } from '@analogjs/content/prism-highlighter';
 import { provideFileRouter, requestContextInterceptor } from '@analogjs/router';
 import {
   provideHttpClient,
@@ -18,5 +20,6 @@ export const appConfig: ApplicationConfig = {
     ),
     provideClientHydration(),
     provideAnimations(),
+    provideContent(withPrismHighlighter()),
   ],
 };

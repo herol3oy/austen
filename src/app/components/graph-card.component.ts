@@ -1,17 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import 'prismjs/components/prism-mermaid';
+import 'prismjs/themes/prism-coy.min.css';
+
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import * as Prism from 'prismjs';
 
 import { BookGraph } from '../types/book-graph';
 
 @Component({
   selector: 'austen-graph-card',
   imports: [
-    CommonModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
@@ -26,7 +28,7 @@ import { BookGraph } from '../types/book-graph';
         <mat-card-subtitle>{{ graph.emojis }}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
-        <code [innerHTML]="graph.svgGraph"></code>
+        <div [innerHTML]="graph.svgGraph"></div>
       </mat-card-content>
       <mat-card-actions>
         <div class="action-buttons">
@@ -103,7 +105,9 @@ import { BookGraph } from '../types/book-graph';
 
       @if (showSyntaxToggle && isSyntaxVisible) {
         <mat-card-content>
-          <pre><code>{{ graph.mermaidSyntax }}</code></pre>
+          <pre>
+            <code [innerHTML]="highlightedCode"></code>
+          </pre>
         </mat-card-content>
       }
     </mat-card>
@@ -131,16 +135,6 @@ import { BookGraph } from '../types/book-graph';
       gap: 0.5rem;
     }
 
-    pre {
-      background: #f5f5f5;
-      padding: 1rem;
-      border-radius: 4px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      margin-top: 1rem;
-    }
-
     @media (max-width: 768px) {
       .action-buttons {
         flex-direction: column;
@@ -158,7 +152,7 @@ import { BookGraph } from '../types/book-graph';
     }
   `,
 })
-export class GraphCardComponent {
+export class GraphCardComponent implements OnInit {
   @Input({ required: true }) graph!: BookGraph;
   @Input() showDelete = false;
   @Input() showSyntaxToggle = false;
@@ -180,6 +174,11 @@ export class GraphCardComponent {
   @Output() toggleSyntax = new EventEmitter<void>();
 
   isSyntaxVisible = false;
+  highlightedCode = '';
+
+  ngOnInit() {
+    this.highlightCode();
+  }
 
   onView() {
     this.view.emit();
@@ -216,5 +215,18 @@ export class GraphCardComponent {
   onToggleSyntax() {
     this.isSyntaxVisible = !this.isSyntaxVisible;
     this.toggleSyntax.emit();
+    if (this.isSyntaxVisible) {
+      this.highlightCode();
+    }
+  }
+
+  private highlightCode() {
+    if (this.graph.mermaidSyntax) {
+      this.highlightedCode = Prism.highlight(
+        this.graph.mermaidSyntax,
+        Prism.languages['mermaid'],
+        'mermaid',
+      );
+    }
   }
 }

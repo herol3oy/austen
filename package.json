@@ -53,6 +53,7 @@
     "@angular/cli": "^19.0.6",
     "@angular/compiler-cli": "^19.0.5",
     "@eslint/js": "^9.19.0",
+    "@types/prismjs": "^1.26.5",
     "eslint": "^9.19.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "globals": "^15.14.0",
