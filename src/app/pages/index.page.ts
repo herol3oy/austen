@@ -135,6 +135,7 @@ import { BookGraph } from '../types/book-graph';
         @if (bookGraph?.bookName && bookGraph?.svgGraph) {
           <austen-graph-card
             [graph]="bookGraph!"
+            [showView]="false"
             [showSyntaxToggle]="true"
             [showShare]="true"
             [showDownload]="true"
@@ -364,7 +365,7 @@ export default class HomeComponent implements OnInit {
 
     this.supabaseService.saveGraph(this.bookGraph).subscribe({
       next: () => {
-        this.router.navigate(['/share', this.bookGraph!.id]);
+        this.router.navigate(['/', this.bookGraph!.id]);
         this.snackBar.open('Graph shared successfully!', 'Close', {
           duration: 3000,
         });

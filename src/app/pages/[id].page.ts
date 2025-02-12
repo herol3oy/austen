@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,15 +7,15 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
 
-import { GraphCardComponent } from '../../components/graph-card.component';
-import { SupabaseAuthService } from '../../services/auth.service';
-import { ClipboardService } from '../../services/clipboard.service';
-import { DownloadService } from '../../services/download.service';
-import { LoadingStateService } from '../../services/loadingState.service';
-import { MermaidService } from '../../services/mermaid.service';
-import { MermaidRenderService } from '../../services/mermaid-render.service';
-import { SupabaseService } from '../../services/supabase.service';
-import { BookGraph } from '../../types/book-graph';
+import { GraphCardComponent } from '../components/graph-card.component';
+import { SupabaseAuthService } from '../services/auth.service';
+import { ClipboardService } from '../services/clipboard.service';
+import { DownloadService } from '../services/download.service';
+import { LoadingStateService } from '../services/loadingState.service';
+import { MermaidService } from '../services/mermaid.service';
+import { MermaidRenderService } from '../services/mermaid-render.service';
+import { SupabaseService } from '../services/supabase.service';
+import { BookGraph } from '../types/book-graph';
 
 @Component({
   providers: [
@@ -28,7 +27,6 @@ import { BookGraph } from '../../types/book-graph';
     MermaidRenderService,
   ],
   imports: [
-    CommonModule,
     MatProgressSpinnerModule,
     MatButtonModule,
     MatIconModule,
@@ -46,15 +44,15 @@ import { BookGraph } from '../../types/book-graph';
         <div class="graph-details">
           <austen-graph-card
             [graph]="graph"
-            [showSyntaxToggle]="true"
+            [showView]="false"
             [showDownload]="true"
             [showCopyUrl]="true"
             [showCopySyntax]="true"
+            [alwaysShowSyntax]="true"
             (downloadSvg)="downloadSvg()"
             (downloadPng)="downloadPng()"
             (copyUrl)="copyUrl()"
             (copySyntax)="copyMermaidSyntax()"
-            (toggleSyntax)="toggleMermaidSyntax()"
           />
         </div>
       }

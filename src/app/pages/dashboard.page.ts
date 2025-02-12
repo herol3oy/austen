@@ -62,6 +62,7 @@ export const routeMeta: RouteMeta = {
               (view)="viewGraph(graph.id)"
               (delete)="deleteGraph(graph)"
               (publicToggle)="togglePublicStatus(graph.id, $event)"
+              [showCopyUrl]="true"
             />
           }
         </div>
@@ -138,7 +139,7 @@ export default class DashboardPage implements OnInit {
   }
 
   viewGraph(id: string) {
-    this.router.navigate(['/share', id]);
+    this.router.navigate(['/', id]);
   }
 
   deleteGraph(graph: BookGraph) {

@@ -4,9 +4,12 @@ import 'prismjs/themes/prism-coy.min.css';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import * as Prism from 'prismjs';
 
 import { BookGraph } from '../types/book-graph';
@@ -19,6 +22,9 @@ import { BookGraph } from '../types/book-graph';
     MatIconModule,
     MatMenuModule,
     MatSlideToggleModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
   ],
   template: `
     <mat-card class="graph-card">
@@ -32,10 +38,12 @@ import { BookGraph } from '../types/book-graph';
       </mat-card-content>
       <mat-card-actions>
         <div class="action-buttons">
-          <button mat-button color="primary" (click)="onView()">
-            <mat-icon>visibility</mat-icon>
-            View
-          </button>
+          @if (showView) {
+            <button mat-button color="primary" (click)="onView()">
+              <mat-icon>visibility</mat-icon>
+              View
+            </button>
+          }
 
           @if (showDelete) {
             <button mat-button color="warn" (click)="onDelete()">
@@ -77,13 +85,6 @@ import { BookGraph } from '../types/book-graph';
             </mat-menu>
           }
 
-          @if (showCopyUrl) {
-            <button mat-button color="primary" (click)="onCopyUrl()">
-              <mat-icon>link</mat-icon>
-              Copy URL
-            </button>
-          }
-
           @if (showCopySyntax && isSyntaxVisible) {
             <button mat-button color="accent" (click)="onCopySyntax()">
               <mat-icon>content_copy</mat-icon>
@@ -103,7 +104,24 @@ import { BookGraph } from '../types/book-graph';
         }
       </mat-card-actions>
 
-      @if (showSyntaxToggle && isSyntaxVisible) {
+      @if (showCopyUrl) {
+        <mat-card-content class="url-section">
+          <mat-form-field appearance="outline" class="url-field">
+            <mat-label>Share URL</mat-label>
+            <input matInput [value]="graphUrl" readonly disabled />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="onCopyUrl()"
+              [matTooltip]="'Copy URL'"
+            >
+              <mat-icon>content_copy</mat-icon>
+            </button>
+          </mat-form-field>
+        </mat-card-content>
+      }
+
+      @if ((showSyntaxToggle && isSyntaxVisible) || alwaysShowSyntax) {
         <mat-card-content>
           <pre>
             <code [innerHTML]="highlightedCode"></code>
@@ -135,6 +153,15 @@ import { BookGraph } from '../types/book-graph';
       gap: 0.5rem;
     }
 
+    .url-field {
+      width: 100%;
+    }
+
+    pre {
+      padding: 1rem;
+      overflow-x: auto;
+    }
+
     @media (max-width: 768px) {
       .action-buttons {
         flex-direction: column;
@@ -154,6 +181,7 @@ import { BookGraph } from '../types/book-graph';
 })
 export class GraphCardComponent implements OnInit {
   @Input({ required: true }) graph!: BookGraph;
+  @Input() showView = true;
   @Input() showDelete = false;
   @Input() showSyntaxToggle = false;
   @Input() showShare = false;
@@ -162,6 +190,7 @@ export class GraphCardComponent implements OnInit {
   @Input() showCopySyntax = false;
   @Input() showPublicToggle = false;
   @Input() isPublic = false;
+  @Input() alwaysShowSyntax = false;
 
   @Output() view = new EventEmitter<void>();
   @Output() delete = new EventEmitter<void>();
@@ -175,9 +204,14 @@ export class GraphCardComponent implements OnInit {
 
   isSyntaxVisible = false;
   highlightedCode = '';
+  graphUrl = '';
 
   ngOnInit() {
     this.highlightCode();
+    this.constructGraphUrl();
+    if (this.alwaysShowSyntax) {
+      this.isSyntaxVisible = true;
+    }
   }
 
   onView() {
@@ -228,5 +262,10 @@ export class GraphCardComponent implements OnInit {
         'mermaid',
       );
     }
+  }
+
+  private constructGraphUrl() {
+    const baseUrl = window.location.origin;
+    this.graphUrl = `${baseUrl}/${this.graph.id}`;
   }
 }

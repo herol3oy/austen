@@ -31,7 +31,11 @@ import { StoredGraph } from '../types/stored-graph';
       @if (graphs.length) {
         <div class="graphs-grid">
           @for (graph of graphs; track graph.id) {
-            <austen-graph-card [graph]="graph" (view)="viewGraph(graph.id)" />
+            <austen-graph-card
+              [graph]="graph"
+              (view)="viewGraph(graph.id)"
+              [showCopyUrl]="true"
+            />
           }
         </div>
       } @else if (error) {
@@ -97,7 +101,7 @@ export default class DiscoverPage implements OnInit {
   }
 
   viewGraph(id: string) {
-    this.router.navigate(['/share', id]);
+    this.router.navigate(['/', id]);
   }
 
   private loadPublicGraphs() {
