@@ -15,7 +15,6 @@ import { SupabaseAuthService } from '../services/auth.service';
 import { ClipboardService } from '../services/clipboard.service';
 import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
-import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
 
@@ -48,12 +47,7 @@ export const routeMeta: RouteMeta = {
     RouterModule,
     GraphCardComponent,
   ],
-  providers: [
-    SupabaseService,
-    MermaidService,
-    MermaidRenderService,
-    ClipboardService,
-  ],
+  providers: [SupabaseService, MermaidService, ClipboardService],
   template: `
     <div class="dashboard-container">
       <h2>My Graphs</h2>
@@ -136,7 +130,6 @@ export default class DashboardPage implements OnInit {
     private readonly authService: SupabaseAuthService,
     private readonly supabaseService: SupabaseService,
     private readonly mermaidService: MermaidService,
-    private readonly mermaidRenderService: MermaidRenderService,
     private readonly loadingStateService: LoadingStateService,
     private readonly clipboardService: ClipboardService,
   ) {}
@@ -247,7 +240,7 @@ export default class DashboardPage implements OnInit {
                 ? from(graphs).pipe(
                     this.loadingStateService.spinUntilFinished(),
                     mergeMap((graph) =>
-                      this.mermaidRenderService
+                      this.mermaidService
                         .renderMermaid(graph.mermaid_syntax)
                         .pipe(
                           this.loadingStateService.spinUntilFinished(),

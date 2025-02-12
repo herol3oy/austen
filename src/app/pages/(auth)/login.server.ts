@@ -1,8 +1,12 @@
-import { fail, PageServerAction, redirect } from '@analogjs/router/server/actions';
+import {
+  fail,
+  PageServerAction,
+  redirect,
+} from '@analogjs/router/server/actions';
 import { ServerRequest } from '@analogjs/router/tokens';
 import { readFormData } from 'h3';
 
-import { createClient } from '../../server/supabase';
+import { createClient } from '../../../server/supabase';
 
 export async function action({ event }: PageServerAction) {
   const form = await readFormData(event);
@@ -17,7 +21,10 @@ export async function action({ event }: PageServerAction) {
     return fail(422, { password: 'Password is required' });
   }
 
-  const client = createClient({ req: event.node.req as ServerRequest, res: event.node.res });
+  const client = createClient({
+    req: event.node.req as ServerRequest,
+    res: event.node.res,
+  });
 
   const { error } = await client.auth.signInWithPassword({ email, password });
 

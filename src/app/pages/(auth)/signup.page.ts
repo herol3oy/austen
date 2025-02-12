@@ -15,8 +15,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router, RouterModule } from '@angular/router';
 
-import { SupabaseAuthService } from '../services/auth.service';
-import { LoadingStateService } from '../services/loadingState.service';
+import { SupabaseAuthService } from '../../services/auth.service';
+import { LoadingStateService } from '../../services/loadingState.service';
 
 @Component({
   selector: 'app-signup-page',

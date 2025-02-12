@@ -12,7 +12,6 @@ import { GraphCardComponent } from '../components/graph-card.component';
 import { ClipboardService } from '../services/clipboard.service';
 import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
-import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
 import { StoredGraph } from '../types/stored-graph';
@@ -26,12 +25,7 @@ import { StoredGraph } from '../types/stored-graph';
     MatProgressSpinnerModule,
     GraphCardComponent,
   ],
-  providers: [
-    SupabaseService,
-    MermaidService,
-    MermaidRenderService,
-    ClipboardService,
-  ],
+  providers: [SupabaseService, MermaidService, ClipboardService],
   template: `
     <div class="discover-container">
       <h2>Discover Public Graphs</h2>
@@ -98,7 +92,6 @@ export default class DiscoverPage implements OnInit {
   constructor(
     private readonly supabaseService: SupabaseService,
     private readonly mermaidService: MermaidService,
-    private readonly mermaidRenderService: MermaidRenderService,
     private readonly router: Router,
     private readonly loadingStateService: LoadingStateService,
     private readonly clipboardService: ClipboardService,
@@ -132,7 +125,7 @@ export default class DiscoverPage implements OnInit {
 
   private loadPublicGraphs() {
     const renderGraph$ = (graph: StoredGraph) =>
-      this.mermaidRenderService.renderMermaid(graph.mermaid_syntax).pipe(
+      this.mermaidService.renderMermaid(graph.mermaid_syntax).pipe(
         this.loadingStateService.spinUntilFinished(),
         map((svgGraph) => ({
           id: graph.id,

@@ -13,7 +13,6 @@ import { ClipboardService } from '../services/clipboard.service';
 import { DownloadService } from '../services/download.service';
 import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
-import { MermaidRenderService } from '../services/mermaid-render.service';
 import { SupabaseService } from '../services/supabase.service';
 import { BookGraph } from '../types/book-graph';
 
@@ -24,7 +23,6 @@ import { BookGraph } from '../types/book-graph';
     MermaidService,
     SupabaseAuthService,
     DownloadService,
-    MermaidRenderService,
   ],
   imports: [
     MatProgressSpinnerModule,
@@ -92,15 +90,23 @@ export default class SharePage implements OnInit {
     private readonly snackBar: MatSnackBar,
     private readonly authService: SupabaseAuthService,
     private readonly downloadService: DownloadService,
-    private readonly mermaidRenderService: MermaidRenderService,
     private readonly loadingStateService: LoadingStateService,
   ) {}
+
+  private readonly pageId = this.route.paramMap.pipe(
+    map((params) => params.get('id')),
+  );
 
   ngOnInit() {
     this.mermaidService.initializeMermaid();
 
-    const id = this.route.snapshot.params['id'];
-    this.loadGraph(id);
+    this.pageId.subscribe({
+      next: (id) => {
+        if (id) {
+          this.loadGraph(id);
+        }
+      },
+    });
   }
 
   toggleMermaidSyntax() {
@@ -205,19 +211,17 @@ export default class SharePage implements OnInit {
         this.loadingStateService.spinUntilFinished(),
         switchMap((data) => {
           if (!data) throw new Error('Graph not found');
-          return this.mermaidRenderService
-            .renderMermaid(data.mermaid_syntax)
-            .pipe(
-              this.loadingStateService.spinUntilFinished(),
-              map((svgGraph) => ({
-                id: data.id,
-                bookName: data.book_name,
-                authorName: data.author_name,
-                svgGraph,
-                mermaidSyntax: data.mermaid_syntax,
-                emojis: data.emojis,
-              })),
-            );
+          return this.mermaidService.renderMermaid(data.mermaid_syntax).pipe(
+            this.loadingStateService.spinUntilFinished(),
+            map((svgGraph) => ({
+              id: data.id,
+              bookName: data.book_name,
+              authorName: data.author_name,
+              svgGraph,
+              mermaidSyntax: data.mermaid_syntax,
+              emojis: data.emojis,
+            })),
+          );
         }),
       )
       .subscribe({

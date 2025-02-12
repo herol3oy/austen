@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, Subject, takeUntil, tap } from 'rxjs';
 
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/header.component';
 import { SupabaseAuthService } from './services/auth.service';
 import { LoadingStateService } from './services/loadingState.service';
 

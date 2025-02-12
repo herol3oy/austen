@@ -28,7 +28,6 @@ import { ClipboardService } from '../services/clipboard.service';
 import { DownloadService } from '../services/download.service';
 import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
-import { MermaidRenderService } from '../services/mermaid-render.service';
 import { OpenlibService } from '../services/openlib.service';
 import { SupabaseService } from '../services/supabase.service';
 import { Book } from '../types/book';
@@ -43,7 +42,6 @@ import { BookGraph } from '../types/book-graph';
     ClipboardService,
     SupabaseAuthService,
     DownloadService,
-    MermaidRenderService,
   ],
   imports: [
     CommonModule,
@@ -272,7 +270,6 @@ export default class HomeComponent implements OnInit {
     private readonly router: Router,
     private readonly cdr: ChangeDetectorRef,
     private readonly authService: SupabaseAuthService,
-    private readonly mermaidRenderService: MermaidRenderService,
     private readonly loadingStateService: LoadingStateService,
   ) {}
 
@@ -305,7 +302,7 @@ export default class HomeComponent implements OnInit {
       .pipe(
         this.loadingStateService.spinUntilFinished(),
         switchMap(({ mermaidSyntax, emojis }) => {
-          return this.mermaidRenderService.renderMermaid(mermaidSyntax).pipe(
+          return this.mermaidService.renderMermaid(mermaidSyntax).pipe(
             this.loadingStateService.spinUntilFinished(),
             switchMap((svgGraph) => of({ svgGraph, mermaidSyntax, emojis })),
           );

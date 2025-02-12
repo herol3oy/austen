@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import mermaid from 'mermaid';
-import { map, Observable } from 'rxjs';
+import { from, map, Observable } from 'rxjs';
 
 import { MermaidSyntax } from '../types/mermaid-syntax';
 
@@ -9,7 +10,10 @@ const GET_MERMAID_SYNTAX_API_URL = '/api/v1/getMermaidSyntax';
 
 @Injectable()
 export class MermaidService {
-  constructor(private readonly http: HttpClient) {}
+  constructor(
+    private readonly http: HttpClient,
+    private readonly sanitizer: DomSanitizer,
+  ) {}
 
   initializeMermaid() {
     mermaid.initialize({
@@ -35,5 +39,12 @@ export class MermaidService {
           emojis,
         })),
       );
+  }
+
+  renderMermaid(syntax: string): Observable<SafeHtml> {
+    const graphId = `graph_${crypto.randomUUID()}`;
+    return from(mermaid.render(graphId, syntax)).pipe(
+      map(({ svg }) => this.sanitizer.bypassSecurityTrustHtml(svg)),
+    );
   }
 }
