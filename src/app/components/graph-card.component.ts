@@ -108,11 +108,17 @@ import { BookGraph } from '../types/book-graph';
         <mat-card-content class="url-section">
           <mat-form-field appearance="outline" class="url-field">
             <mat-label>Share URL</mat-label>
-            <input matInput [value]="graphUrl" readonly disabled />
+            <input
+              matInput
+              #urlInput
+              [value]="graphUrl"
+              (click)="onCopyUrl(urlInput)"
+              readonly
+            />
             <button
               mat-icon-button
               matSuffix
-              (click)="onCopyUrl()"
+              (click)="onCopyUrl(urlInput)"
               [matTooltip]="'Copy URL'"
             >
               <mat-icon>content_copy</mat-icon>
@@ -197,7 +203,7 @@ export class GraphCardComponent implements OnInit {
   @Output() share = new EventEmitter<void>();
   @Output() downloadSvg = new EventEmitter<void>();
   @Output() downloadPng = new EventEmitter<void>();
-  @Output() copyUrl = new EventEmitter<void>();
+  @Output() copyUrl = new EventEmitter<string>();
   @Output() copySyntax = new EventEmitter<void>();
   @Output() publicToggle = new EventEmitter<boolean>();
   @Output() toggleSyntax = new EventEmitter<void>();
@@ -234,8 +240,10 @@ export class GraphCardComponent implements OnInit {
     this.downloadPng.emit();
   }
 
-  onCopyUrl() {
-    this.copyUrl.emit();
+  onCopyUrl(inputElement: HTMLInputElement) {
+    inputElement.select();
+    inputElement.setSelectionRange(0, inputElement.value.length);
+    this.copyUrl.emit(this.graph.id);
   }
 
   onCopySyntax() {

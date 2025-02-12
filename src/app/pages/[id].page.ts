@@ -51,7 +51,7 @@ import { BookGraph } from '../types/book-graph';
             [alwaysShowSyntax]="true"
             (downloadSvg)="downloadSvg()"
             (downloadPng)="downloadPng()"
-            (copyUrl)="copyUrl()"
+            (copyUrl)="copyUrl(graph.id)"
             (copySyntax)="copyMermaidSyntax()"
           />
         </div>
@@ -126,8 +126,8 @@ export default class SharePage implements OnInit {
     }
   }
 
-  copyUrl() {
-    const url = window.location.href;
+  copyUrl(id: string) {
+    const url = `${window.location.origin}/${id}`;
     this.clipboardService.copyToClipboard(url).subscribe({
       next: () => {
         this.snackBar.open('URL copied!', 'Close', {

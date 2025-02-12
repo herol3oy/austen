@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { from, of } from 'rxjs';
 import { map, mergeMap, reduce, switchMap } from 'rxjs/operators';
 
 import { GraphCardComponent } from '../components/graph-card.component';
+import { ClipboardService } from '../services/clipboard.service';
 import { LoadingStateService } from '../services/loadingState.service';
 import { MermaidService } from '../services/mermaid.service';
 import { MermaidRenderService } from '../services/mermaid-render.service';
@@ -24,7 +26,12 @@ import { StoredGraph } from '../types/stored-graph';
     MatProgressSpinnerModule,
     GraphCardComponent,
   ],
-  providers: [SupabaseService, MermaidService, MermaidRenderService],
+  providers: [
+    SupabaseService,
+    MermaidService,
+    MermaidRenderService,
+    ClipboardService,
+  ],
   template: `
     <div class="discover-container">
       <h2>Discover Public Graphs</h2>
@@ -35,6 +42,7 @@ import { StoredGraph } from '../types/stored-graph';
               [graph]="graph"
               (view)="viewGraph(graph.id)"
               [showCopyUrl]="true"
+              (copyUrl)="copyUrl(graph.id)"
             />
           }
         </div>
@@ -93,6 +101,8 @@ export default class DiscoverPage implements OnInit {
     private readonly mermaidRenderService: MermaidRenderService,
     private readonly router: Router,
     private readonly loadingStateService: LoadingStateService,
+    private readonly clipboardService: ClipboardService,
+    private readonly snackBar: MatSnackBar,
   ) {}
 
   ngOnInit() {
@@ -102,6 +112,22 @@ export default class DiscoverPage implements OnInit {
 
   viewGraph(id: string) {
     this.router.navigate(['/', id]);
+  }
+
+  copyUrl(id: string) {
+    const url = `${window.location.origin}/${id}`;
+    this.clipboardService.copyToClipboard(url).subscribe({
+      next: () => {
+        this.snackBar.open('URL copied!', 'Close', {
+          duration: 1500,
+        });
+      },
+      error: () => {
+        this.snackBar.open('Failed to copy URL', 'Close', {
+          duration: 1500,
+        });
+      },
+    });
   }
 
   private loadPublicGraphs() {
