@@ -3,16 +3,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, Subject, takeUntil, tap } from 'rxjs';
 
-import { HeaderComponent } from './components/header.component';
+import { TopbarComponent } from './components/topbar.component';
 import { SupabaseAuthService } from './services/auth.service';
 import { LoadingStateService } from './services/loadingState.service';
 
 @Component({
   selector: 'austen-root',
   providers: [LoadingStateService],
-  imports: [RouterOutlet, HeaderComponent, MatButtonModule],
+  imports: [RouterOutlet, TopbarComponent, MatButtonModule],
   template: `
-    <austen-header></austen-header>
+    <austen-topbar></austen-topbar>
     <router-outlet />
     @if (isSpinnerOn) {
       <div class="overlay">

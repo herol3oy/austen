@@ -10,7 +10,7 @@ import { SupabaseAuthService } from '../services/auth.service';
 import { LoadingStateService } from '../services/loadingState.service';
 
 @Component({
-  selector: 'austen-header',
+  selector: 'austen-topbar',
   imports: [
     RouterModule,
     MatIconModule,
@@ -19,13 +19,22 @@ import { LoadingStateService } from '../services/loadingState.service';
     MatToolbarModule,
   ],
   template: `
-    <mat-toolbar class="header-container">
-      <div class="logo-section">
+    <mat-toolbar class="topbar-container">
+      <nav class="nav-links left-nav desktop-menu">
         <a
-          routerLink="/"
+          mat-flat-button
+          color="primary"
+          routerLink="/discover"
           routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
+          class="discover-btn"
         >
+          <mat-icon>explore</mat-icon>
+          <span>Discover</span>
+        </a>
+      </nav>
+
+      <div class="logo-section">
+        <a routerLink="/">
           <img
             class="austen-logo"
             src="/jane-austen-inspired-illustrations.png"
@@ -38,30 +47,15 @@ import { LoadingStateService } from '../services/loadingState.service';
         </div>
       </div>
 
-      <span class="spacer"></span>
-
-      <nav class="nav-links desktop-menu">
-        <a
-          mat-button
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          <mat-icon>home</mat-icon>
-          <span>Home</span>
-        </a>
-        <a mat-button routerLink="/discover" routerLinkActive="active">
-          <mat-icon>explore</mat-icon>
-          <span>Discover</span>
+      <nav class="nav-links right-nav desktop-menu">
+        <a mat-button href="https://github.com/herol3oy/austen" target="_blank">
+          <mat-icon>code</mat-icon>
+          <span>Github</span>
         </a>
         @if (authService.loggedIn()) {
           <a mat-button routerLink="/my-graphs" routerLinkActive="active">
             <mat-icon>dashboard</mat-icon>
             <span>My Graphs</span>
-          </a>
-          <a mat-button routerLink="/about" routerLinkActive="active">
-            <mat-icon>info</mat-icon>
-            <span>About</span>
           </a>
           <button mat-button (click)="logout()">
             <mat-icon>logout</mat-icon>
@@ -85,20 +79,20 @@ import { LoadingStateService } from '../services/loadingState.service';
       <mat-menu #mobileMenu="matMenu">
         <a
           mat-menu-item
-          routerLink="/"
+          routerLink="/discover"
           routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
+          class="discover-menu-item"
         >
-          <mat-icon>home</mat-icon>
-          <span>Home</span>
-        </a>
-        <a mat-menu-item routerLink="/discover" routerLinkActive="active">
           <mat-icon>explore</mat-icon>
           <span>Discover</span>
         </a>
-        <a mat-menu-item routerLink="/about" routerLinkActive="active">
-          <mat-icon>info</mat-icon>
-          <span>About</span>
+        <a
+          mat-menu-item
+          href="https://github.com/herol3oy/austen"
+          target="_blank"
+        >
+          <mat-icon>code</mat-icon>
+          <span>Github</span>
         </a>
         @if (authService.loggedIn()) {
           <a mat-menu-item routerLink="/my-graphs" routerLinkActive="active">
@@ -119,16 +113,22 @@ import { LoadingStateService } from '../services/loadingState.service';
     </mat-toolbar>
   `,
   styles: `
-    .header-container {
+    .topbar-container {
       background: white;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 4rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo-section {
       display: flex;
       align-items: center;
       gap: 1rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .title-section {
@@ -159,10 +159,6 @@ import { LoadingStateService } from '../services/loadingState.service';
       margin: 0;
     }
 
-    .spacer {
-      flex: 1 1 auto;
-    }
-
     .nav-links {
       display: flex;
       align-items: center;
@@ -180,6 +176,51 @@ import { LoadingStateService } from '../services/loadingState.service';
       }
     }
 
+    .discover-btn {
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      padding: 0.5rem 1.25rem;
+      transition: all 0.2s ease;
+      background-color: #1976d2;
+      color: white;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3);
+        background-color: #1565c0;
+      }
+
+      &.active {
+        background-color: #0d47a1;
+        color: white;
+      }
+
+      mat-icon {
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    .discover-menu-item {
+      color: #1976d2;
+      font-weight: 500;
+
+      &.active {
+        background-color: rgba(25, 118, 210, 0.1);
+      }
+    }
+
+    .left-nav {
+      margin-right: auto;
+    }
+
+    .right-nav {
+      margin-left: auto;
+    }
+
     .mobile-menu-button {
       display: none;
     }
@@ -191,17 +232,37 @@ import { LoadingStateService } from '../services/loadingState.service';
 
       .mobile-menu-button {
         display: block;
+        position: absolute;
+        right: 1rem;
+      }
+
+      .logo-section {
+        position: static;
+        transform: none;
+        margin: 0 auto;
       }
     }
 
     @media (max-width: 480px) {
+      .topbar-container {
+        padding: 2.5rem 1rem;
+      }
+
       .austen-logo {
         width: 3.5rem;
+      }
+
+      .austen-title {
+        font-size: 1.5rem;
+      }
+
+      .austen-subtitle {
+        font-size: 0.8rem;
       }
     }
   `,
 })
-export class HeaderComponent {
+export class TopbarComponent {
   constructor(
     readonly authService: SupabaseAuthService,
     private readonly router: Router,
