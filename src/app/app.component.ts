@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter, Subject, takeUntil, tap } from 'rxjs';
 
@@ -10,12 +9,12 @@ import { LoadingStateService } from './services/loadingState.service';
 @Component({
   selector: 'austen-root',
   providers: [LoadingStateService],
-  imports: [RouterOutlet, TopbarComponent, MatButtonModule],
+  imports: [RouterOutlet, TopbarComponent],
   template: `
     <austen-topbar></austen-topbar>
     <router-outlet />
     @if (isSpinnerOn) {
-      <div class="overlay">
+      <div class="overlay-container">
         <div class="pulsing-background">
           <img
             class="austen-logo pulse-animation"
@@ -27,62 +26,41 @@ import { LoadingStateService } from './services/loadingState.service';
     }
   `,
   styles: `
-    .overlay {
+    .overlay-container {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.75);
+      background-color: rgba(255, 255, 255, 0.2);
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 1000;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(10px);
     }
 
     .pulsing-background {
-      background: rgba(255, 255, 255, 0.15);
       border-radius: 50%;
-      padding: 24px;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-      animation: pulseBackground 2.5s infinite ease-in-out;
+      animation: pulse 3s infinite ease-in-out;
     }
 
     .austen-logo {
-      width: 160px;
-      height: auto;
-      filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.2));
-    }
-
-    .pulse-animation {
-      animation: pulse 2.5s infinite ease-in-out;
+      width: 9rem;
     }
 
     @keyframes pulse {
-      0%,
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: scale(1.1);
-        opacity: 0.85;
-      }
-    }
-
-    @keyframes pulseBackground {
       0% {
         transform: scale(1);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        opacity: 0.7;
       }
       50% {
         transform: scale(1.15);
-        box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        opacity: 1;
       }
       100% {
         transform: scale(1);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        opacity: 0.7;
       }
     }
   `,

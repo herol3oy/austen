@@ -230,6 +230,24 @@ import { LoadingStateService } from '../services/loadingState.service';
         display: none;
       }
 
+      .left-nav.desktop-menu {
+        display: flex;
+        position: absolute;
+        left: 1rem;
+
+        .discover-btn {
+          padding: 0.4rem 1rem;
+          font-size: 0.9rem;
+
+          mat-icon {
+            margin-right: 0.25rem;
+            font-size: 1rem;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+
       .mobile-menu-button {
         display: block;
         position: absolute;
@@ -241,11 +259,15 @@ import { LoadingStateService } from '../services/loadingState.service';
         transform: none;
         margin: 0 auto;
       }
+
+      .discover-menu-item {
+        display: none;
+      }
     }
 
     @media (max-width: 480px) {
       .topbar-container {
-        padding: 2.5rem 1rem;
+        padding: 2.7rem 1rem;
       }
 
       .austen-logo {
@@ -253,11 +275,23 @@ import { LoadingStateService } from '../services/loadingState.service';
       }
 
       .austen-title {
-        font-size: 1.5rem;
+        display: none;
       }
 
       .austen-subtitle {
-        font-size: 0.8rem;
+        display: none;
+      }
+
+      .left-nav.desktop-menu .discover-btn {
+        padding: 0.35rem 0.8rem;
+
+        span {
+          display: none;
+        }
+
+        mat-icon {
+          margin: 0;
+        }
       }
     }
   `,
