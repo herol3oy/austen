@@ -44,6 +44,25 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
     B -->|In Kansas| C
 ```
 
+## Stacks:
+
+- [Angular](https://angular.dev)
+- [Analog](https://analogjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Supabase](https://supabase.com)
+- [Cloudflare Pages](https://pages.cloudflare.com)
+
+## UI
+
+- [Angular Material](https://material.angular.io)
+- [Mermaid](https://mermaid.js.org)
+
+## API
+
+- [Open Library](https://openlibrary.org)
+- [DeepSeek](https://deepseek.com)
+- [OpenAI](https://platform.openai.com/docs/quickstart)
+
 ## Installation & Setup
 
 1. Clone the repository:
@@ -94,25 +113,6 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
    ```bash
    npm run build
    ```
-
-## Libraries and technologies:
-
-- [Angular](https://angular.dev)
-- [Analog](https://analogjs.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Supabase](https://supabase.com)
-- [Cloudflare Pages](https://pages.cloudflare.com)
-
-## UI
-
-- [Angular Material](https://material.angular.io)
-- [Mermaid](https://mermaid.js.org)
-
-## API
-
-- [Open Library](https://openlibrary.org)
-- [DeepSeek](https://deepseek.com)
-- [OpenAI](https://platform.openai.com/docs/quickstart)
 
 ## TODO
 
