@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,6 +18,7 @@ import { LoadingStateService } from '../services/loadingState.service';
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
+    MatDividerModule,
   ],
   template: `
     <mat-toolbar class="topbar-container">
@@ -57,10 +59,16 @@ import { LoadingStateService } from '../services/loadingState.service';
             <mat-icon>dashboard</mat-icon>
             <span>My Graphs</span>
           </a>
-          <button mat-button (click)="logout()">
-            <mat-icon>logout</mat-icon>
-            <span>Logout</span>
+          <button mat-button [matMenuTriggerFor]="userMenu">
+            <mat-icon>account_circle</mat-icon>
+            <span class="user-email">{{ authService.userEmail() }}</span>
           </button>
+          <mat-menu #userMenu="matMenu">
+            <button mat-menu-item (click)="logout()">
+              <mat-icon>logout</mat-icon>
+              <span>Logout</span>
+            </button>
+          </mat-menu>
         } @else {
           <a mat-button routerLink="/login" routerLinkActive="active">
             <mat-icon>login</mat-icon>
@@ -99,6 +107,10 @@ import { LoadingStateService } from '../services/loadingState.service';
             <mat-icon>dashboard</mat-icon>
             <span>My Graphs</span>
           </a>
+          <button mat-menu-item disabled>
+            <mat-icon>account_circle</mat-icon>
+            <span class="user-email">{{ authService.userEmail() }}</span>
+          </button>
           <button mat-menu-item (click)="logout()">
             <mat-icon>logout</mat-icon>
             <span>Logout</span>
@@ -225,6 +237,14 @@ import { LoadingStateService } from '../services/loadingState.service';
       display: none;
     }
 
+    .user-email {
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
+
     @media (max-width: 768px) {
       .desktop-menu {
         display: none;
@@ -284,14 +304,6 @@ import { LoadingStateService } from '../services/loadingState.service';
 
       .left-nav.desktop-menu .discover-btn {
         padding: 0.35rem 0.8rem;
-
-        span {
-          display: none;
-        }
-
-        mat-icon {
-          margin: 0;
-        }
       }
     }
   `,

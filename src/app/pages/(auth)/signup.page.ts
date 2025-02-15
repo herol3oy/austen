@@ -42,9 +42,6 @@ import { LoadingStateService } from '../../services/loadingState.service';
 
         <mat-card-header>
           <mat-card-title>Create Account</mat-card-title>
-          <mat-card-subtitle
-            >Join to save and share your graphs</mat-card-subtitle
-          >
         </mat-card-header>
 
         <mat-card-content>

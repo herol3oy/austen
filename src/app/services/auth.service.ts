@@ -13,6 +13,10 @@ export class SupabaseAuthService {
   );
   private session = signal<unknown>(null);
   readonly loggedIn = computed(() => !!this.session());
+  readonly userEmail = computed(() => {
+    const session = this.session() as { user?: { email?: string } } | null;
+    return session?.user?.email || '';
+  });
 
   constructor() {
     this.refresh();

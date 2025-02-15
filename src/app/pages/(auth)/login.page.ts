@@ -37,8 +37,7 @@ import { LoadingStateService } from '../../services/loadingState.service';
     <div class="login-container">
       <mat-card class="login-card">
         <mat-card-header>
-          <mat-card-title>Welcome Back</mat-card-title>
-          <mat-card-subtitle>Sign in to your account</mat-card-subtitle>
+          <mat-card-title>Welcome</mat-card-title>
         </mat-card-header>
 
         <mat-card-content>
