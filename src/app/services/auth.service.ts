@@ -13,9 +13,20 @@ export class SupabaseAuthService {
   );
   private session = signal<unknown>(null);
   readonly loggedIn = computed(() => !!this.session());
-  readonly userEmail = computed(() => {
-    const session = this.session() as { user?: { email?: string } } | null;
-    return session?.user?.email || '';
+  readonly username = computed(() => {
+    const session = this.session() as {
+      user?: {
+        user_metadata?: {
+          user_name?: string;
+          preferred_username?: string;
+        };
+      };
+    } | null;
+    return (
+      session?.user?.user_metadata?.user_name ||
+      session?.user?.user_metadata?.preferred_username ||
+      'User'
+    );
   });
 
   constructor() {
@@ -30,23 +41,13 @@ export class SupabaseAuthService {
     return this.supabase.auth.getSession();
   }
 
-  signUp(email: string, password: string): Observable<void> {
+  signIn(): Observable<void> {
     return from(
-      this.supabase.auth.signUp({
-        email,
-        password,
+      this.supabase.auth.signInWithOAuth({
+        provider: 'github',
         options: {
-          emailRedirectTo: `${window.location.origin}/login`,
+          redirectTo: window.location.origin,
         },
-      }),
-    ).pipe(map(() => void 0));
-  }
-
-  signIn(email: string, password: string): Observable<void> {
-    return from(
-      this.supabase.auth.signInWithPassword({
-        email,
-        password,
       }),
     ).pipe(map(() => void 0));
   }

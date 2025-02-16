@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, tap } from 'rxjs';
@@ -61,7 +62,7 @@ import { LoadingStateService } from '../services/loadingState.service';
           </a>
           <button mat-button [matMenuTriggerFor]="userMenu">
             <mat-icon>account_circle</mat-icon>
-            <span class="user-email">{{ authService.userEmail() }}</span>
+            <span class="user-email">{{ authService.username() }}</span>
           </button>
           <mat-menu #userMenu="matMenu">
             <button mat-menu-item (click)="logout()">
@@ -109,7 +110,7 @@ import { LoadingStateService } from '../services/loadingState.service';
           </a>
           <button mat-menu-item disabled>
             <mat-icon>account_circle</mat-icon>
-            <span class="user-email">{{ authService.userEmail() }}</span>
+            <span class="user-email">{{ authService.username() }}</span>
           </button>
           <button mat-menu-item (click)="logout()">
             <mat-icon>logout</mat-icon>
@@ -313,6 +314,7 @@ export class TopbarComponent {
     readonly authService: SupabaseAuthService,
     private readonly router: Router,
     private readonly loadingStateService: LoadingStateService,
+    private readonly snackBar: MatSnackBar,
   ) {
     this.router.events
       .pipe(
@@ -328,7 +330,15 @@ export class TopbarComponent {
       .pipe(this.loadingStateService.spinUntilFinished())
       .subscribe({
         next: () => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/discover']);
+          this.snackBar.open('Logged out successfully', 'Close', {
+            duration: 3000,
+          });
+        },
+        error: () => {
+          this.snackBar.open('Error logging out', 'Close', {
+            duration: 3000,
+          });
         },
       });
   }
