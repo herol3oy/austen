@@ -117,13 +117,24 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
 ## TODO
 
 - [ ] Implement Like/Unlike Functionality for Graphs
+
   - [ ] Add like button
   - [ ] Implement like/unlike API endpoints in Supabase
   - [ ] Add like count display
 
+- [ ] Load more graphs in the discover page
+  - [ ] Add a button to load more graphs
+
 ## Screenshot
 
-![Austen Homepage](./screenshot/austen-homepage.png)
+![Austen Homepage](./screenshots/austen-homepage.png)
+Generate a graph for a given book in the homepage
+
+![Austen My Graphs Page](./screenshots/austen-my-graphs-page.png)
+Find your generated graphs in the my graphs page
+
+![Austen Discover Page](./screenshots/austen-discover-page.png)
+Find public graphs in the discover page
 
 ## Jane Austen logo reference
 
