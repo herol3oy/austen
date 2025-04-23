@@ -29,7 +29,7 @@ import { LoadingStateService } from './services/loadingState.service';
     .overlay-container {
       position: fixed;
       inset: 0;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: white;
       display: flex;
       justify-content: center;
       align-items: center;
