@@ -127,6 +127,12 @@ import { BookGraph } from '../types/book-graph';
             >
           }
         </mat-form-field>
+        <div class="set-example-container">
+          <mat-icon>auto_stories</mat-icon>
+          <span class="example-suggestion" (click)="setExampleBook()"
+            >Try Sense and Sensibility by Jane Austen</span
+          >
+        </div>
       </form>
 
       <section>
@@ -172,7 +178,8 @@ import { BookGraph } from '../types/book-graph';
 
     .search-form {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin-bottom: 2rem;
     }
 
@@ -220,6 +227,25 @@ import { BookGraph } from '../types/book-graph';
 
       .author-chip {
         flex-shrink: 0;
+      }
+    }
+
+    .set-example-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #7f8c8d;
+    }
+
+    .example-suggestion {
+      color: #666;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #1976d2;
+        text-decoration: underline;
       }
     }
 
@@ -435,6 +461,11 @@ export default class HomeComponent implements OnInit {
         });
       }
     }
+  }
+
+  setExampleBook(): void {
+    this.myControl.setValue('Sense and Sensibility');
+    this.displayGraph('Sense and Sensibility', 'Jane Austen');
   }
 
   private initializeBookSearch(): void {
