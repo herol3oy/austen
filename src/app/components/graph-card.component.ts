@@ -1,18 +1,30 @@
 import 'prismjs/components/prism-mermaid';
 import 'prismjs/themes/prism-coy.min.css';
 
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import * as Prism from 'prismjs';
 
+import { SupabaseAuthService } from '../services/auth.service';
+import { MermaidService } from '../services/mermaid.service';
 import { BookGraph } from '../types/book-graph';
+import { GraphEditDialogComponent } from './graph-edit-dialog.component';
 
 @Component({
   selector: 'austen-graph-card',
@@ -25,7 +37,9 @@ import { BookGraph } from '../types/book-graph';
     MatFormFieldModule,
     MatInputModule,
     MatTooltipModule,
+    MatDialogModule,
   ],
+  providers: [MermaidService, SupabaseAuthService],
   template: `
     <mat-card class="graph-card">
       <mat-card-header>
@@ -89,6 +103,13 @@ import { BookGraph } from '../types/book-graph';
             <button mat-button color="accent" (click)="onCopySyntax()">
               <mat-icon>content_copy</mat-icon>
               Copy Syntax
+            </button>
+          }
+
+          @if (showEditSyntax) {
+            <button mat-button color="primary" (click)="openEditGraphDialog()">
+              <mat-icon>edit</mat-icon>
+              Edit Graph
             </button>
           }
         </div>
@@ -195,6 +216,7 @@ export class GraphCardComponent implements OnInit {
   @Input() showCopyUrl = false;
   @Input() showCopySyntax = false;
   @Input() showPublicToggle = false;
+  @Input() showEditSyntax = true;
   @Input() isPublic = false;
   @Input() alwaysShowSyntax = false;
 
@@ -207,10 +229,19 @@ export class GraphCardComponent implements OnInit {
   @Output() copySyntax = new EventEmitter<void>();
   @Output() publicToggle = new EventEmitter<boolean>();
   @Output() toggleSyntax = new EventEmitter<void>();
+  @Output() syntaxChange = new EventEmitter<string>();
 
   isSyntaxVisible = false;
   highlightedCode = '';
   graphUrl = '';
+
+  constructor(
+    private readonly mermaidService: MermaidService,
+    private readonly snackBar: MatSnackBar,
+    private readonly dialog: MatDialog,
+    private readonly cdr: ChangeDetectorRef,
+    private readonly authService: SupabaseAuthService,
+  ) {}
 
   ngOnInit() {
     this.highlightCode();
@@ -257,9 +288,49 @@ export class GraphCardComponent implements OnInit {
   onToggleSyntax() {
     this.isSyntaxVisible = !this.isSyntaxVisible;
     this.toggleSyntax.emit();
-    if (this.isSyntaxVisible) {
-      this.highlightCode();
+  }
+
+  openEditGraphDialog(): void {
+    if (!this.authService.loggedIn()) {
+      this.snackBar.open('Please login to edit the graph.', 'Close', {
+        duration: 3000,
+      });
+      return;
     }
+
+    this.dialog
+      .open(GraphEditDialogComponent, {
+        data: { graph: this.graph },
+        width: '600px',
+        minHeight: '400px',
+        maxHeight: '90vh',
+      })
+      .afterClosed()
+      .subscribe({
+        next: (result: string) => {
+          this.updateGraph(result);
+        },
+        error: () => {
+          this.snackBar.open('An error occurred while editing the graph.', 'Close', {
+              duration: 3000,
+          });
+        }
+      });
+  }
+
+  private updateGraph(syntax: string): void {
+    this.mermaidService.renderMermaid(syntax).subscribe({
+      next: (svgGraph) => {
+        this.graph = { ...this.graph, mermaidSyntax: syntax, svgGraph };
+        this.highlightCode();
+        this.cdr.detectChanges();
+      },
+      error: () => {
+        this.snackBar.open('Invalid Mermaid syntax', 'Close', {
+          duration: 3000,
+        });
+      },
+    });
   }
 
   private highlightCode() {

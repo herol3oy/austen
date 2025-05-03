@@ -47,10 +47,12 @@ import { BookGraph } from '../types/book-graph';
             [showCopyUrl]="true"
             [showCopySyntax]="true"
             [alwaysShowSyntax]="true"
+            [showEditSyntax]="isGraphOwner"
             (downloadSvg)="downloadSvg()"
             (downloadPng)="downloadPng()"
             (copyUrl)="copyUrl(graph.id)"
             (copySyntax)="copyMermaidSyntax()"
+            (syntaxChange)="onSyntaxChange($event)"
           />
         </div>
       }
@@ -81,6 +83,7 @@ export default class SharePage implements OnInit {
   error: string | null = null;
   graph: BookGraph | null = null;
   isMermaidSyntaxVisible = false;
+  isGraphOwner = false;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -146,6 +149,25 @@ export default class SharePage implements OnInit {
         });
       },
     });
+  }
+
+  onSyntaxChange(newSyntax: string) {
+    if (this.graph && this.isGraphOwner) {
+      this.supabaseService
+        .updateGraph(this.graph.id, { mermaid_syntax: newSyntax })
+        .subscribe({
+          next: () => {
+            this.snackBar.open('Graph updated successfully', 'Close', {
+              duration: 3000,
+            });
+          },
+          error: () => {
+            this.snackBar.open('Failed to update graph', 'Close', {
+              duration: 3000,
+            });
+          },
+        });
+    }
   }
 
   downloadSvg(): void {
@@ -227,10 +249,29 @@ export default class SharePage implements OnInit {
       .subscribe({
         next: (graph) => {
           this.graph = graph;
+          this.checkGraphOwnership();
         },
         error: () => {
           this.error = 'An error occurred while loading the graph.';
         },
       });
+  }
+
+  private checkGraphOwnership() {
+    if (!this.graph) return;
+
+    this.authService.getSession().then(({ data: { session } }) => {
+      if (session?.user) {
+        this.supabaseService
+          .getGraphById(this.graph!.id)
+        .pipe(this.loadingStateService.spinUntilFinished())
+
+          .subscribe((graphData) => {
+            this.isGraphOwner = graphData?.user_id === session.user.id;
+          });
+      } else {
+        this.isGraphOwner = false;
+      }
+    });
   }
 }

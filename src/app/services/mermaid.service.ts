@@ -47,4 +47,8 @@ export class MermaidService {
       map(({ svg }) => this.sanitizer.bypassSecurityTrustHtml(svg)),
     );
   }
+
+  validateMermaidSyntax(syntax: string) {
+    return from(mermaid.parse(syntax)).pipe(map(() => true));
+  }
 }

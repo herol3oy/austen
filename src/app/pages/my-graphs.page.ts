@@ -64,6 +64,7 @@ export const routeMeta: RouteMeta = {
               (publicToggle)="togglePublicStatus(graph.id, $event)"
               [showCopyUrl]="true"
               (copyUrl)="copyUrl(graph.id)"
+              [showEditSyntax]="false"
             />
           }
         </div>

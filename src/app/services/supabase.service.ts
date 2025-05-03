@@ -58,7 +58,7 @@ export class SupabaseService {
         if (!user) {
           throw new Error('User not authenticated');
         }
-  
+
         return from(
           this.supabase
             .from('graphs')
@@ -76,6 +76,29 @@ export class SupabaseService {
             ])
             .select(),
         ).pipe(map((res) => res.data as StoredGraph[]));
+      }),
+    );
+  }
+
+  updateGraph(
+    graphId: string,
+    updates: Partial<StoredGraph>,
+  ): Observable<StoredGraph> {
+    return from(this.supabase.auth.getUser()).pipe(
+      switchMap(({ data: { user } }) => {
+        if (!user) {
+          throw new Error('User not authenticated');
+        }
+
+        return from(
+          this.supabase
+            .from('graphs')
+            .update(updates)
+            .eq('id', graphId)
+            .eq('user_id', user.id)
+            .select()
+            .single(),
+        ).pipe(map((res) => res.data as StoredGraph));
       }),
     );
   }

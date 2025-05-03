@@ -37,6 +37,7 @@ import { StoredGraph } from '../types/stored-graph';
               (view)="viewGraph(graph.id)"
               [showCopyUrl]="true"
               (copyUrl)="copyUrl(graph.id)"
+              [showEditSyntax]="false"
             />
           }
         </div>
