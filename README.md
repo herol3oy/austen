@@ -1,6 +1,6 @@
 # Austen
 
-Austen is an AI-powered Angular application initialized with Analogjs to generate story relationships between book characters using Mermaidjs diagrams.
+Austen is an AI-powered Nextjs application to generate story relationships between book characters using Mermaidjs diagrams.
 
 ## Features
 
@@ -46,15 +46,15 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
 
 ## Stacks:
 
-- [Angular](https://angular.dev)
-- [Analog](https://analogjs.org)
+- [Nextjs](https://nextjs.org)
+- [React](https://react.dev)
 - [TypeScript](https://www.typescriptlang.org)
 - [Supabase](https://supabase.com)
-- [Cloudflare Pages](https://pages.cloudflare.com)
 
 ## UI
 
-- [Angular Material](https://material.angular.io)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Shadcn/ui](https://ui.shadcn.com/)
 - [Mermaid](https://mermaid.js.org)
 
 ## API
@@ -62,6 +62,7 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
 - [Open Library](https://openlibrary.org)
 - [DeepSeek](https://deepseek.com)
 - [OpenAI](https://platform.openai.com/docs/quickstart)
+- [Brave Search API](https://brave.com/search/api/)
 
 ## Installation & Setup
 
@@ -75,12 +76,12 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
 2. Install dependencies:
 
    ```bash
-   npm install
+   npm i
    ```
 
 3. Set up environment variables:
 
-   - Copy `.env.example` to `.env`
+   - Copy `.env.local.example` to `.env.local`
    - Fill in the required API keys:
      ```env
      DEEPSEEK_API_KEY=your_deepseek_api_key
@@ -126,15 +127,6 @@ A character relationship graph generated for "The Wizard of Oz" by "L. Frank Bau
   - [ ] Add a button to load more graphs
 
 ## Screenshot
-
-![Austen Homepage](./screenshots/austen-homepage.png)
-Generate a graph for a given book in the homepage
-
-![Austen My Graphs Page](./screenshots/austen-my-graphs-page.png)
-Find your generated graphs in the my graphs page
-
-![Austen Discover Page](./screenshots/austen-discover-page.png)
-Find public graphs in the discover page
 
 ## Jane Austen logo reference
 
