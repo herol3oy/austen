@@ -3,7 +3,7 @@
 interface Book {
   key: string
   title: string
-  author_name: string[]
+  author_name: string
 }
 
 interface OpenLibraryDoc {
@@ -16,15 +16,18 @@ interface OpenLibraryResponse {
   docs: OpenLibraryDoc[]
 }
 
-export const searchBooks = async (searchTerm: string): Promise<Book[]> => {
+const OPEN_LIBRARY_SEARCH_URL = 'https://openlibrary.org/search.json'
+
+export const requestOpenlibBooks = async (
+  searchTerm: string,
+): Promise<Book[]> => {
   if (!searchTerm.trim()) {
     return []
   }
 
   try {
     const response = await fetch(
-      `https://openlibrary.org/search.json?title=${encodeURIComponent(searchTerm)}`,
-      { cache: 'no-store' },
+      `${OPEN_LIBRARY_SEARCH_URL}?title=${encodeURIComponent(searchTerm)}`,
     )
 
     if (!response.ok) {
@@ -41,7 +44,7 @@ export const searchBooks = async (searchTerm: string): Promise<Book[]> => {
       .map((book: OpenLibraryDoc) => ({
         key: book.key,
         title: book.title,
-        author_name: book.author_name,
+        author_name: book.author_name[0],
       }))
   } catch (error) {
     console.error('Error fetching books:', error)

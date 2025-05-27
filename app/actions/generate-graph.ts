@@ -1,7 +1,8 @@
-import { NextResponse } from 'next/server'
+'use server'
+
 import OpenAI from 'openai'
 
-const systemInstruction = `
+const SYSTEM_INSTRUCTION = `
   You're a bookworm. Given a book title and author, create a simple character graph using valid Mermaid JS syntax.
   Additionally, provide 5 emojis that are related to the book.
   
@@ -26,80 +27,57 @@ const systemInstruction = `
 `
 
 const openai = new OpenAI({
-  baseURL: 'https://api.deepseek.com',
-  apiKey: process.env.DEEPSEEK_API_KEY,
+  baseURL: process.env.LANGUAGE_MODEL_BASE_URL,
+  apiKey: process.env.LANGUAGE_MODEL_API_KEY,
 })
 
-interface BookRequest {
-  bookTitle: string
-  authorName: string
-}
-
-interface BookResponse {
+interface GenerateGraphResponse {
   mermaidSyntax: string
   emojis: string
+  error?: string
 }
 
-export async function POST(request: Request) {
+export async function generateGraph(
+  bookTitle: string,
+  authorName: string,
+): Promise<GenerateGraphResponse> {
+  if (!bookTitle || !authorName) {
+    throw new Error('Book title and author name are required')
+  }
+
   try {
-    const { bookTitle, authorName } = (await request.json()) as BookRequest
-
-    if (!bookTitle || !authorName) {
-      return NextResponse.json(
-        { error: 'Book title and author name are required' },
-        { status: 400 },
-      )
-    }
-
     const completion = await openai.chat.completions.create({
       messages: [
-        { role: 'system' as const, content: systemInstruction },
+        { role: 'system', content: SYSTEM_INSTRUCTION },
         {
-          role: 'user' as const,
+          role: 'user',
           content: `Book: ${bookTitle}, Author: ${authorName}`,
         },
       ],
-      model: 'deepseek-chat',
+      model: process.env.LANGUAGE_MODEL_NAME!,
       temperature: 0.7,
     })
 
     const responseContent = completion.choices[0]?.message?.content
 
     if (!responseContent) {
-      return NextResponse.json(
-        { error: 'No response from AI model' },
-        { status: 500 },
-      )
+      throw new Error('No response from AI model')
     }
 
     const [mermaidPart, emojisPart] = responseContent.split('Emojis:')
 
     if (!mermaidPart) {
-      return NextResponse.json(
-        { error: 'Invalid response format from AI model' },
-        { status: 500 },
-      )
+      throw new Error('Invalid response format from AI model')
     }
 
-    const responseData: BookResponse = {
+    return {
       mermaidSyntax: mermaidPart.trim(),
       emojis: emojisPart?.trim() || '',
     }
-
-    return NextResponse.json(responseData)
   } catch (error) {
-    console.error('Error generating syntax:', error)
-
-    if (error instanceof Error) {
-      return NextResponse.json(
-        { error: `Failed to generate graph: ${error.message}` },
-        { status: 500 },
-      )
-    }
-
-    return NextResponse.json(
-      { error: 'Failed to generate Mermaid syntax and emojis' },
-      { status: 500 },
-    )
+    console.error('Error generating graph:', error)
+    throw error instanceof Error
+      ? error
+      : new Error('Failed to generate Mermaid syntax and emojis')
   }
 }

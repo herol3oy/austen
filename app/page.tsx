@@ -5,12 +5,18 @@ import { useEffect, useState, useTransition } from 'react'
 
 import { Input } from '@/components/ui/input'
 
-import { searchBooks } from './actions'
+import { generateGraph } from './actions/generate-graph'
+import { requestOpenlibBooks } from './actions/request-openlib-books'
 
 interface Book {
   key: string
   title: string
-  author_name: string[]
+  author_name: string
+}
+
+interface GraphResult {
+  mermaidSyntax: string
+  emojis: string
 }
 
 const MIN_SEARCH_LENGTH = 3
@@ -21,8 +27,9 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [searchResults, setSearchResults] = useState<Book[]>([])
   const [showResults, setShowResults] = useState<boolean>(false)
-  const [selectedBook, setSelectedBook] = useState<Book | null>(null)
+  const [graphResult, setGraphResult] = useState<GraphResult | null>(null)
   const [hasSearched, setHasSearched] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const requestBooks = async () => {
@@ -34,9 +41,11 @@ export default function Home() {
 
       startTransition(async () => {
         try {
-          const books = await searchBooks(searchTerm)
-          setSearchResults(books)
-          setHasSearched(true)
+          const books = await requestOpenlibBooks(searchTerm)
+          startTransition(() => {
+            setSearchResults(books)
+            setHasSearched(true)
+          })
         } catch (error) {
           console.error('Error fetching books:', error)
           setSearchResults([])
@@ -51,7 +60,7 @@ export default function Home() {
 
   const handleClear = () => {
     setSearchTerm('')
-    setSelectedBook(null)
+
     setSearchResults([])
     setShowResults(false)
     setHasSearched(false)
@@ -62,8 +71,25 @@ export default function Home() {
     if (value.length <= MAX_SEARCH_LENGTH) {
       setSearchTerm(value)
       setShowResults(true)
-      setSelectedBook(null)
     }
+  }
+
+  const handleBookSelect = async (book: Book) => {
+    setShowResults(false)
+    setSearchTerm(book.title)
+    setError(null)
+
+    startTransition(async () => {
+      try {
+        const result = await generateGraph(book.title, book.author_name)
+        setGraphResult(result)
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : 'Failed to generate graph',
+        )
+        setGraphResult(null)
+      }
+    })
   }
 
   const isSearchValid = searchTerm.length >= MIN_SEARCH_LENGTH
@@ -80,7 +106,6 @@ export default function Home() {
           onChange={handleInputChange}
           onFocus={() => setShowResults(true)}
           onBlur={() => setTimeout(() => setShowResults(false), 200)}
-          disabled={isPending}
           className={`w-full pr-8 ${isPending ? 'cursor-not-allowed opacity-50' : ''}`}
           maxLength={MAX_SEARCH_LENGTH}
         />
@@ -113,23 +138,16 @@ export default function Home() {
               ) : (
                 <div className="py-1">
                   {searchResults.map((book) => (
-                    <div
+                    <button
                       key={book.key}
-                      className="flex cursor-pointer flex-col px-4 py-3 transition-colors hover:bg-gray-100"
-                      onClick={() => {
-                        setSelectedBook(book)
-                        setShowResults(false)
-                      }}
+                      onClick={() => handleBookSelect(book)}
+                      className="w-full px-4 py-2 text-left hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
                     >
-                      <span className="font-medium text-gray-900">
-                        {book.title}
-                      </span>
-                      <span className="text-sm text-gray-600">
-                        by {book.author_name.slice(0, 2).join(', ')}
-                        {book.author_name.length > 2 &&
-                          ` +${book.author_name.length - 2} more`}
-                      </span>
-                    </div>
+                      <div className="font-medium">{book.title}</div>
+                      <div className="text-sm text-gray-600">
+                        by {book.author_name}
+                      </div>
+                    </button>
                   ))}
                 </div>
               )}
@@ -137,18 +155,21 @@ export default function Home() {
           )}
       </div>
 
-      {selectedBook && (
-        <div className="mt-4 rounded-lg border border-gray-200 bg-white p-4 shadow">
-          <h2 className="text-xl font-semibold text-gray-800">
-            {selectedBook.title}
-          </h2>
-          <p className="mt-1 text-gray-600">
-            by {selectedBook.author_name.slice(0, 3).join(', ')}
-            {selectedBook.author_name.length > 3 &&
-              ` +${selectedBook.author_name.length - 3} more`}
-          </p>
-          <div className="mt-2 text-xs text-gray-500">
-            Selected from search results
+      {error && (
+        <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4 text-red-600">
+          {error}
+        </div>
+      )}
+
+      {graphResult && (
+        <div className="rounded-lg border border-gray-200 bg-white p-4 shadow">
+          <div className="mb-4">
+            <pre className="mt-2 overflow-x-auto text-sm whitespace-pre-wrap">
+              {graphResult.mermaidSyntax}
+            </pre>
+          </div>
+          <div>
+            <div className="mt-2 text-2xl">{graphResult.emojis}</div>
           </div>
         </div>
       )}
