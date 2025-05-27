@@ -5,20 +5,12 @@ import { useEffect, useState, useTransition } from 'react'
 
 import { Input } from '@/components/ui/input'
 
+import { searchBooks } from './actions'
+
 interface Book {
   key: string
   title: string
   author_name: string[]
-}
-
-interface OpenLibraryDoc {
-  key: string
-  title: string
-  author_name: string[]
-}
-
-interface OpenLibraryResponse {
-  docs: OpenLibraryDoc[]
 }
 
 const MIN_SEARCH_LENGTH = 3
@@ -42,31 +34,13 @@ export default function Home() {
 
       startTransition(async () => {
         try {
-          const response = await fetch(
-            `https://openlibrary.org/search.json?title=${encodeURIComponent(searchTerm)}`,
-          )
-          const { docs }: OpenLibraryResponse = await response.json()
-          const books = docs
-            .filter(
-              (book: OpenLibraryDoc) =>
-                book.author_name && book.author_name.length,
-            )
-            .slice(0, 10)
-            .map((book: OpenLibraryDoc) => ({
-              key: book.key,
-              title: book.title,
-              author_name: book.author_name,
-            }))
-          startTransition(() => {
-            setSearchResults(books)
-            setHasSearched(true)
-          })
+          const books = await searchBooks(searchTerm)
+          setSearchResults(books)
+          setHasSearched(true)
         } catch (error) {
           console.error('Error fetching books:', error)
-          startTransition(() => {
-            setSearchResults([])
-            setHasSearched(false)
-          })
+          setSearchResults([])
+          setHasSearched(false)
         }
       })
     }
