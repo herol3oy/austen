@@ -31,6 +31,7 @@ export default function Home() {
   const [graphResult, setGraphResult] = useState<GraphResult | null>(null)
   const [hasSearched, setHasSearched] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null)
 
   useEffect(() => {
     const requestBooks = async () => {
@@ -61,10 +62,10 @@ export default function Home() {
 
   const handleClear = () => {
     setSearchTerm('')
-
     setSearchResults([])
     setShowResults(false)
     setHasSearched(false)
+    setSelectedBook(null)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -79,6 +80,7 @@ export default function Home() {
     setShowResults(false)
     setSearchTerm(book.title)
     setError(null)
+    setSelectedBook(book)
 
     startTransition(async () => {
       try {
@@ -162,10 +164,12 @@ export default function Home() {
         </div>
       )}
 
-      {graphResult && (
+      {graphResult && selectedBook && (
         <MermaidGraphCard
           graphDefinition={graphResult.mermaidSyntax}
           emojis={graphResult.emojis}
+          title={selectedBook.title}
+          author={selectedBook.author_name}
         />
       )}
     </div>

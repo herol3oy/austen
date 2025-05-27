@@ -14,9 +14,12 @@
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dom-to-image": "^2.6.0",
     "lucide-react": "^0.511.0",
+    "mermaid": "^11.6.0",
     "next": "15.3.2",
     "openai": "^4.103.0",
+    "prismjs": "^1.30.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.3.0"
@@ -24,7 +27,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/dom-to-image": "^2.6.7",
     "@types/node": "^20",
+    "@types/prismjs": "^1.26.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
