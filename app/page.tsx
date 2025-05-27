@@ -5,6 +5,7 @@ import { useEffect, useState, useTransition } from 'react'
 
 import { Input } from '@/components/ui/input'
 
+import { MermaidGraphCard } from '../components/MermaidGraphCard'
 import { generateGraph } from './actions/generate-graph'
 import { requestOpenlibBooks } from './actions/request-openlib-books'
 
@@ -162,16 +163,10 @@ export default function Home() {
       )}
 
       {graphResult && (
-        <div className="rounded-lg border border-gray-200 bg-white p-4 shadow">
-          <div className="mb-4">
-            <pre className="mt-2 overflow-x-auto text-sm whitespace-pre-wrap">
-              {graphResult.mermaidSyntax}
-            </pre>
-          </div>
-          <div>
-            <div className="mt-2 text-2xl">{graphResult.emojis}</div>
-          </div>
-        </div>
+        <MermaidGraphCard
+          graphDefinition={graphResult.mermaidSyntax}
+          emojis={graphResult.emojis}
+        />
       )}
     </div>
   )
