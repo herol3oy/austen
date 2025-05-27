@@ -27,6 +27,7 @@ export function MermaidGraphCard({
   const graphRef = useRef<HTMLDivElement>(null)
   const codeRef = useRef<HTMLElement>(null)
   const [svgContent, setSvgContent] = useState<string>('')
+  const [isCopied, setIsCopied] = useState(false)
 
   const getFileName = () => {
     return `austen-pages.dev-${title?.toLowerCase().replace(/\s+/g, '-')}-${author?.toLowerCase().replace(/\s+/g, '-')}-graph`
@@ -59,6 +60,16 @@ export function MermaidGraphCard({
       document.body.removeChild(link)
     } catch (error) {
       console.error('Error generating PNG:', error)
+    }
+  }
+
+  const copyMermaidSyntax = async () => {
+    try {
+      await navigator.clipboard.writeText(graphDefinition)
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 2000)
+    } catch (error) {
+      console.error('Failed to copy syntax:', error)
     }
   }
 
@@ -119,9 +130,12 @@ export function MermaidGraphCard({
           </div>
         </div>
 
-        <h3 className="mb-2 text-sm font-medium text-gray-500">
-          Mermaid Syntax:
-        </h3>
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-medium text-gray-500">Mermaid Syntax:</h3>
+          <Button onClick={copyMermaidSyntax} variant="outline">
+            {isCopied ? 'Copied!' : 'Copy Syntax'}
+          </Button>
+        </div>
         <pre className="overflow-x-auto rounded bg-gray-50 p-4 text-sm">
           <code ref={codeRef} className="language-mermaid">
             {graphDefinition}
