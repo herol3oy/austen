@@ -8,11 +8,13 @@ import 'prismjs/themes/prism-coy.min.css'
 import { createClient } from '@/lib/supabase/client'
 import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
+import { Copy } from 'lucide-react'
+import { Edit2 } from 'lucide-react'
 import mermaid from 'mermaid'
 import { useEffect, useRef, useState } from 'react'
 
 import { saveGraph } from '@/app/actions/save-graph'
-import { Copy } from 'lucide-react'
+import { EditGraphDialog } from './edit-graph-dialog'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
 
@@ -35,11 +37,14 @@ export function MermaidGraphCard({
   const codeRef = useRef<HTMLElement>(null)
   const urlInputRef = useRef<HTMLInputElement>(null)
   const [svgContent, setSvgContent] = useState<string>('')
-  const [isCopied, setIsCopied] = useState(false)
-  const [isUrlCopied, setIsUrlCopied] = useState(false)
-  const [isSaving, setIsSaving] = useState(false)
+  const [isCopied, setIsCopied] = useState<boolean>(false)
+  const [isUrlCopied, setIsUrlCopied] = useState<boolean>(false)
+  const [isSaving, setIsSaving] = useState<boolean>(false)
   const [user, setUser] = useState<User | null>(null)
-  const [shareUrl, setShareUrl] = useState('')
+  const [shareUrl, setShareUrl] = useState<string>('')
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false)
+  const [currentGraphDefinition, setCurrentGraphDefinition] =
+    useState<string>(graphDefinition)
 
   useEffect(() => {
     if (graphId) {
@@ -124,6 +129,27 @@ export function MermaidGraphCard({
     }
   }
 
+  const handleUpdateGraph = async (newSyntax: string) => {
+    if (!graphId || !user) return
+
+    const supabase = createClient()
+    try {
+      const { error } = await supabase
+        .from('graphs')
+        .update({ mermaid_syntax: newSyntax })
+        .eq('id', graphId)
+        .eq('user_id', user.id)
+        .select()
+        .single()
+
+      if (error) throw error
+
+      setCurrentGraphDefinition(newSyntax)
+    } catch (error) {
+      console.error('Error updating graph:', error)
+    }
+  }
+
   useEffect(() => {
     const renderGraph = async () => {
       if (graphRef.current) {
@@ -138,7 +164,7 @@ export function MermaidGraphCard({
           })
 
           const graphId = `graph_${crypto.randomUUID()}`
-          const { svg } = await mermaid.render(graphId, graphDefinition)
+          const { svg } = await mermaid.render(graphId, currentGraphDefinition)
 
           graphRef.current.innerHTML = svg
           setSvgContent(svg)
@@ -153,13 +179,13 @@ export function MermaidGraphCard({
     }
 
     renderGraph()
-  }, [graphDefinition])
+  }, [currentGraphDefinition])
 
   useEffect(() => {
     if (codeRef.current) {
       Prism.highlightElement(codeRef.current)
     }
-  }, [graphDefinition])
+  }, [currentGraphDefinition])
 
   useEffect(() => {
     const supabase = createClient()
@@ -200,9 +226,20 @@ export function MermaidGraphCard({
                 <Button onClick={downloadSvg}>Download SVG</Button>
                 <Button onClick={downloadPng}>Download PNG</Button>
                 {user ? (
-                  <Button onClick={handleSaveGraph} disabled={isSaving}>
-                    {isSaving ? 'Saving...' : 'Save Graph'}
-                  </Button>
+                  <>
+                    <Button onClick={handleSaveGraph} disabled={isSaving}>
+                      {isSaving ? 'Saving...' : 'Save Graph'}
+                    </Button>
+                    {graphId && (
+                      <Button
+                        onClick={() => setIsEditDialogOpen(true)}
+                        variant="outline"
+                      >
+                        <Edit2 className="mr-2 h-4 w-4" />
+                        Edit Graph
+                      </Button>
+                    )}
+                  </>
                 ) : (
                   <Button
                     onClick={() => (window.location.href = '/auth/login')}
@@ -246,7 +283,7 @@ export function MermaidGraphCard({
           data-prismjs-copy="Copy"
         >
           <code ref={codeRef} className="language-mermaid">
-            {graphDefinition}
+            {currentGraphDefinition}
           </code>
         </pre>
 
@@ -259,6 +296,14 @@ export function MermaidGraphCard({
           </div>
         )}
       </div>
+
+      <EditGraphDialog
+        isOpen={isEditDialogOpen}
+        onClose={() => setIsEditDialogOpen(false)}
+        onSave={handleUpdateGraph}
+        initialSyntax={currentGraphDefinition}
+        bookTitle={title}
+      />
     </div>
   )
 }
