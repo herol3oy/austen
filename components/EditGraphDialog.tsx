@@ -3,23 +3,16 @@
 import mermaid from 'mermaid'
 import { useEffect, useState } from 'react'
 
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from './ui/dialog'
-import { Textarea } from './ui/textarea'
-
-interface EditGraphDialogProps {
-  isOpen: boolean
-  onClose: () => void
-  onSave: (syntax: string) => Promise<void>
-  initialSyntax: string
-  bookTitle: string
-}
+} from '@/components/ui/dialog'
+import { Textarea } from '@/components/ui/textarea'
+import { EditGraphDialogProps } from '@/types/edit-graph-dialog-props'
 
 export function EditGraphDialog({
   isOpen,

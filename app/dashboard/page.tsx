@@ -2,7 +2,7 @@ import { formatDistanceToNow } from 'date-fns'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
-import { DeleteGraphDialog } from '@/components/delete-graph-dialog'
+import { DeleteGraphDialog } from '@/components/DeleteGraphDialog'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { createClient } from '@/lib/supabase/server'
 
@@ -12,6 +12,7 @@ export default async function DashboardPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser()
+
   if (!user) {
     redirect('/auth/login')
   }

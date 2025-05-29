@@ -1,22 +1,9 @@
 'use server'
 
-interface Book {
-  key: string
-  title: string
-  author_name: string
-}
-
-interface OpenLibraryDoc {
-  key: string
-  title: string
-  author_name: string[]
-}
-
-interface OpenLibraryResponse {
-  docs: OpenLibraryDoc[]
-}
-
-const OPEN_LIBRARY_SEARCH_URL = 'https://openlibrary.org/search.json'
+import { OPEN_LIBRARY_SEARCH_URL } from '@/consts/open-library-search-url'
+import { Book } from '@/types/book'
+import { OpenLibraryDoc } from '@/types/open-library-doc'
+import { OpenLibraryResponse } from '@/types/open-library-response'
 
 export const requestOpenlibBooks = async (
   searchTerm: string,

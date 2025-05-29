@@ -5,11 +5,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
+import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/client'
 
-import { Button } from './ui/button'
-
-export default function TopBar() {
+export function TopBar() {
   const [user, setUser] = useState<User | null>(null)
   const router = useRouter()
   const supabase = createClient()

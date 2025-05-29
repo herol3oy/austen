@@ -14,18 +14,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
-
-interface DeleteGraphDialogProps {
-  graphId: string
-  graphTitle: string
-}
+import { DeleteGraphDialogProps } from '@/types/delete-graph-dialog-props'
 
 export function DeleteGraphDialog({
   graphId,
   graphTitle,
 }: DeleteGraphDialogProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isDeleting, setIsDeleting] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isDeleting, setIsDeleting] = useState<boolean>(false)
 
   const handleDelete = async (e: React.MouseEvent) => {
     e.preventDefault()

@@ -5,7 +5,6 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-mermaid'
 import 'prismjs/themes/prism-coy.min.css'
 
-import { createClient } from '@/lib/supabase/client'
 import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
 import { Copy, Edit2, Globe2, Lock } from 'lucide-react'
@@ -13,20 +12,13 @@ import mermaid from 'mermaid'
 import { useEffect, useRef, useState } from 'react'
 
 import { saveGraph } from '@/app/actions/save-graph'
-import { EditGraphDialog } from './edit-graph-dialog'
-import { Button } from './ui/button'
-import { Input } from './ui/input'
-import { Label } from './ui/label'
-import { Switch } from './ui/switch'
-
-interface MermaidGraphProps {
-  graphDefinition: string
-  emojis: string
-  title: string
-  author: string
-  graphId?: string
-  isPublic?: boolean
-}
+import { EditGraphDialog } from '@/components/EditGraphDialog'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Switch } from '@/components/ui/switch'
+import { createClient } from '@/lib/supabase/client'
+import { MermaidGraphProps } from '@/types/mermaid-graph-props'
 
 export function MermaidGraphCard({
   graphDefinition,
