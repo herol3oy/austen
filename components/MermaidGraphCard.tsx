@@ -7,9 +7,12 @@ import 'prismjs/themes/prism-coy.min.css'
 
 import domtoimage from 'dom-to-image'
 import mermaid from 'mermaid'
+import { createClient } from '@/lib/supabase/client'
 import { useEffect, useRef, useState } from 'react'
+import type { User } from '@supabase/supabase-js'
 
 import { Button } from './ui/button'
+import { saveGraph } from '@/app/actions/save-graph'
 
 interface MermaidGraphProps {
   graphDefinition: string
@@ -28,6 +31,8 @@ export function MermaidGraphCard({
   const codeRef = useRef<HTMLElement>(null)
   const [svgContent, setSvgContent] = useState<string>('')
   const [isCopied, setIsCopied] = useState(false)
+  const [isSaving, setIsSaving] = useState(false)
+  const [user, setUser] = useState<User | null>(null)
 
   const getFileName = () => {
     return `austen-pages.dev-${title?.toLowerCase().replace(/\s+/g, '-')}-${author?.toLowerCase().replace(/\s+/g, '-')}-graph`
@@ -73,6 +78,25 @@ export function MermaidGraphCard({
     }
   }
 
+  const handleSaveGraph = async () => {
+    if (!svgContent) return
+
+    setIsSaving(true)
+    try {
+      await saveGraph({
+        bookName: title,
+        authorName: author,
+        svgGraph: svgContent,
+        mermaidSyntax: graphDefinition,
+        emojis: emojis,
+      })
+    } catch (error) {
+      console.error('Error saving graph:', error)
+    } finally {
+      setIsSaving(false)
+    }
+  }
+
   useEffect(() => {
     const renderGraph = async () => {
       if (graphRef.current) {
@@ -110,6 +134,29 @@ export function MermaidGraphCard({
     }
   }, [graphDefinition])
 
+  useEffect(() => {
+    const supabase = createClient()
+
+    const getUser = async () => {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser()
+      setUser(user)
+    }
+
+    getUser()
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null)
+    })
+
+    return () => {
+      subscription.unsubscribe()
+    }
+  }, [])
+
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-4 shadow">
       <div className="mb-4 border-b pb-4">
@@ -125,6 +172,18 @@ export function MermaidGraphCard({
               <>
                 <Button onClick={downloadSvg}>Download SVG</Button>
                 <Button onClick={downloadPng}>Download PNG</Button>
+                {user ? (
+                  <Button onClick={handleSaveGraph} disabled={isSaving}>
+                    {isSaving ? 'Saving...' : 'Save Graph'}
+                  </Button>
+                ) : (
+                  <Button
+                    onClick={() => (window.location.href = '/auth/login')}
+                    variant="outline"
+                  >
+                    Login to Save
+                  </Button>
+                )}
               </>
             )}
           </div>
