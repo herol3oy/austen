@@ -241,11 +241,11 @@ export function MermaidGraphCard({
         )}
 
         <pre
+          suppressHydrationWarning
           className="language-mermaid overflow-x-auto rounded bg-gray-50 p-4 text-sm"
-          tabIndex={0}
           data-prismjs-copy="Copy"
         >
-          <code ref={codeRef} className="language-mermaid" spellCheck="false">
+          <code ref={codeRef} className="language-mermaid">
             {graphDefinition}
           </code>
         </pre>
