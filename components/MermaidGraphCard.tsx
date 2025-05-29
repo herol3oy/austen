@@ -8,8 +8,7 @@ import 'prismjs/themes/prism-coy.min.css'
 import { createClient } from '@/lib/supabase/client'
 import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
-import { Copy } from 'lucide-react'
-import { Edit2 } from 'lucide-react'
+import { Copy, Edit2, Globe2, Lock } from 'lucide-react'
 import mermaid from 'mermaid'
 import { useEffect, useRef, useState } from 'react'
 
@@ -17,6 +16,8 @@ import { saveGraph } from '@/app/actions/save-graph'
 import { EditGraphDialog } from './edit-graph-dialog'
 import { Button } from './ui/button'
 import { Input } from './ui/input'
+import { Label } from './ui/label'
+import { Switch } from './ui/switch'
 
 interface MermaidGraphProps {
   graphDefinition: string
@@ -24,6 +25,7 @@ interface MermaidGraphProps {
   title: string
   author: string
   graphId?: string
+  isPublic?: boolean
 }
 
 export function MermaidGraphCard({
@@ -45,6 +47,27 @@ export function MermaidGraphCard({
   const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false)
   const [currentGraphDefinition, setCurrentGraphDefinition] =
     useState<string>(graphDefinition)
+  const [isPublicGraph, setIsPublicGraph] = useState(false)
+
+  const handleTogglePublic = async () => {
+    if (!graphId || !user) return
+
+    const supabase = createClient()
+    try {
+      const { error } = await supabase
+        .from('graphs')
+        .update({ is_public: !isPublicGraph })
+        .eq('id', graphId)
+        .eq('user_id', user.id)
+        .select()
+        .single()
+
+      if (error) throw error
+      setIsPublicGraph(!isPublicGraph)
+    } catch (error) {
+      console.log('Error toggling graph visibility:', error)
+    }
+  }
 
   useEffect(() => {
     if (graphId) {
@@ -231,13 +254,38 @@ export function MermaidGraphCard({
                       {isSaving ? 'Saving...' : 'Save Graph'}
                     </Button>
                     {graphId && (
-                      <Button
-                        onClick={() => setIsEditDialogOpen(true)}
-                        variant="outline"
-                      >
-                        <Edit2 className="mr-2 h-4 w-4" />
-                        Edit Graph
-                      </Button>
+                      <>
+                        <Button
+                          onClick={() => setIsEditDialogOpen(true)}
+                          variant="outline"
+                        >
+                          <Edit2 className="mr-2 h-4 w-4" />
+                          Edit Graph
+                        </Button>
+                        <div className="ml-4 flex items-center space-x-2">
+                          <Switch
+                            id={`public-mode-${graphId}`}
+                            checked={isPublicGraph}
+                            onCheckedChange={handleTogglePublic}
+                          />
+                          <Label
+                            htmlFor={`public-mode-${graphId}`}
+                            className="flex items-center"
+                          >
+                            {isPublicGraph ? (
+                              <>
+                                <Globe2 className="mr-1 h-4 w-4" />
+                                Public
+                              </>
+                            ) : (
+                              <>
+                                <Lock className="mr-1 h-4 w-4" />
+                                Private
+                              </>
+                            )}
+                          </Label>
+                        </div>
+                      </>
                     )}
                   </>
                 ) : (
