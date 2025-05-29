@@ -49,6 +49,9 @@ export default function TopBar() {
         <small>Discover Story Relationships</small>
       </div>
       <nav className="flex items-center gap-4">
+        <Link href="/discover" className="text-gray-600 hover:text-gray-900">
+          Discover
+        </Link>
         <Link
           href="https://github.com/herol3oy/austen"
           target="_blank"
