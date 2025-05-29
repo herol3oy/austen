@@ -6,14 +6,15 @@ import { createClient } from '@/lib/supabase/server'
 export default async function ShareGraphPage({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) {
+  const { id } = await params
   const supabase = await createClient()
 
   const { data: graph } = await supabase
     .from('graphs')
     .select('*')
-    .eq('id', params.id)
+    .eq('id', id)
     .single()
 
   if (!graph) {
@@ -27,6 +28,7 @@ export default async function ShareGraphPage({
         author={graph.author_name}
         graphDefinition={graph.mermaid_syntax}
         emojis={graph.emojis}
+        graphId={id}
       />
     </div>
   )

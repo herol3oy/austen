@@ -5,20 +5,23 @@ import Prism from 'prismjs'
 import 'prismjs/components/prism-mermaid'
 import 'prismjs/themes/prism-coy.min.css'
 
+import { createClient } from '@/lib/supabase/client'
+import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
 import mermaid from 'mermaid'
-import { createClient } from '@/lib/supabase/client'
 import { useEffect, useRef, useState } from 'react'
-import type { User } from '@supabase/supabase-js'
 
-import { Button } from './ui/button'
 import { saveGraph } from '@/app/actions/save-graph'
+import { Copy } from 'lucide-react'
+import { Button } from './ui/button'
+import { Input } from './ui/input'
 
 interface MermaidGraphProps {
   graphDefinition: string
   emojis: string
   title: string
   author: string
+  graphId?: string
 }
 
 export function MermaidGraphCard({
@@ -26,13 +29,23 @@ export function MermaidGraphCard({
   emojis,
   title,
   author,
+  graphId,
 }: MermaidGraphProps) {
   const graphRef = useRef<HTMLDivElement>(null)
   const codeRef = useRef<HTMLElement>(null)
+  const urlInputRef = useRef<HTMLInputElement>(null)
   const [svgContent, setSvgContent] = useState<string>('')
   const [isCopied, setIsCopied] = useState(false)
+  const [isUrlCopied, setIsUrlCopied] = useState(false)
   const [isSaving, setIsSaving] = useState(false)
   const [user, setUser] = useState<User | null>(null)
+  const [shareUrl, setShareUrl] = useState('')
+
+  useEffect(() => {
+    if (graphId) {
+      setShareUrl(`${window.location.origin}/share/${graphId}`)
+    }
+  }, [graphId])
 
   const getFileName = () => {
     return `austen-pages.dev-${title?.toLowerCase().replace(/\s+/g, '-')}-${author?.toLowerCase().replace(/\s+/g, '-')}-graph`
@@ -68,16 +81,6 @@ export function MermaidGraphCard({
     }
   }
 
-  const copyMermaidSyntax = async () => {
-    try {
-      await navigator.clipboard.writeText(graphDefinition)
-      setIsCopied(true)
-      setTimeout(() => setIsCopied(false), 2000)
-    } catch (error) {
-      console.error('Failed to copy syntax:', error)
-    }
-  }
-
   const handleSaveGraph = async () => {
     if (!svgContent) return
 
@@ -94,6 +97,30 @@ export function MermaidGraphCard({
       console.error('Error saving graph:', error)
     } finally {
       setIsSaving(false)
+    }
+  }
+
+  const handleCopyUrl = async () => {
+    urlInputRef.current?.select()
+    await navigator.clipboard.writeText(shareUrl)
+    setIsUrlCopied(true)
+    setTimeout(() => setIsUrlCopied(false), 2000)
+  }
+
+  const handleInputClick = async (e: React.MouseEvent<HTMLInputElement>) => {
+    e.currentTarget.select()
+    await navigator.clipboard.writeText(shareUrl)
+    setIsUrlCopied(true)
+    setTimeout(() => setIsUrlCopied(false), 2000)
+  }
+
+  const copyMermaidSyntax = async () => {
+    try {
+      await navigator.clipboard.writeText(graphDefinition)
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 2000)
+    } catch (error) {
+      console.error('Failed to copy syntax:', error)
     }
   }
 
@@ -190,13 +217,35 @@ export function MermaidGraphCard({
         </div>
 
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-medium text-gray-500">Mermaid Syntax:</h3>
+          <h3 className="text-sm font-medium text-gray-500">Mermaid Syntax:</h3>{' '}
           <Button onClick={copyMermaidSyntax} variant="outline">
+            <Copy className="h-4 w-4" />
             {isCopied ? 'Copied!' : 'Copy Syntax'}
           </Button>
         </div>
-        <pre className="overflow-x-auto rounded bg-gray-50 p-4 text-sm">
-          <code ref={codeRef} className="language-mermaid">
+
+        {graphId && (
+          <div className="flex items-center gap-2">
+            <Input
+              ref={urlInputRef}
+              readOnly
+              value={shareUrl}
+              className="cursor-pointer font-mono text-sm"
+              onClick={handleInputClick}
+            />
+            <Button variant="outline" onClick={handleCopyUrl} className="gap-2">
+              <Copy className="h-4 w-4" />
+              {isUrlCopied ? 'Copied!' : 'Copy URL'}
+            </Button>
+          </div>
+        )}
+
+        <pre
+          className="language-mermaid overflow-x-auto rounded bg-gray-50 p-4 text-sm"
+          tabIndex={0}
+          data-prismjs-copy="Copy"
+        >
+          <code ref={codeRef} className="language-mermaid" spellCheck="false">
             {graphDefinition}
           </code>
         </pre>
