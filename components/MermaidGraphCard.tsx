@@ -6,16 +6,17 @@ import 'prismjs/components/prism-mermaid'
 import 'prismjs/themes/prism-coy.min.css'
 
 import type { User } from '@supabase/supabase-js'
-import domtoimage from 'dom-to-image'
-import { Code2 } from 'lucide-react'
-import { Copy } from 'lucide-react'
-import { Download } from 'lucide-react'
-import { Edit2 } from 'lucide-react'
-import { Globe2 } from 'lucide-react'
-import { Info } from 'lucide-react'
-import { Lock } from 'lucide-react'
-import { Save } from 'lucide-react'
-import { Share2 } from 'lucide-react'
+import {
+  Code2,
+  Copy,
+  Download,
+  Edit2,
+  Globe2,
+  Info,
+  Lock,
+  Save,
+  Share2,
+} from 'lucide-react'
 import mermaid from 'mermaid'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
@@ -28,6 +29,10 @@ import { Label } from '@/components/ui/label'
 import { Switch } from '@/components/ui/switch'
 import { createClient } from '@/lib/supabase/client'
 import { MermaidGraphProps } from '@/types/mermaid-graph-props'
+import { copyMermaidSyntax } from '@/utils/copy-mermaid-syntax'
+import { downloadPng } from '@/utils/download-png'
+import { downloadSvg } from '@/utils/download-svg'
+import { copyUrl } from '@/utils/copy-url'
 
 export function MermaidGraphCard({
   graphDefinition,
@@ -37,9 +42,6 @@ export function MermaidGraphCard({
   graphId,
   isShared = false,
 }: MermaidGraphProps) {
-  const graphRef = useRef<HTMLDivElement>(null)
-  const codeRef = useRef<HTMLElement>(null)
-  const urlInputRef = useRef<HTMLInputElement>(null)
   const [svgContent, setSvgContent] = useState<string>('')
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const [isUrlCopied, setIsUrlCopied] = useState<boolean>(false)
@@ -47,133 +49,19 @@ export function MermaidGraphCard({
   const [user, setUser] = useState<User | null>(null)
   const [shareUrl, setShareUrl] = useState<string>('')
   const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false)
+  const [isPublicGraph, setIsPublicGraph] = useState(false)
   const [currentGraphDefinition, setCurrentGraphDefinition] =
     useState<string>(graphDefinition)
-  const [isPublicGraph, setIsPublicGraph] = useState(false)
 
-  const handleTogglePublic = async () => {
-    if (!graphId || !user) return
-
-    const supabase = createClient()
-    try {
-      const { error } = await supabase
-        .from('graphs')
-        .update({ is_public: !isPublicGraph })
-        .eq('id', graphId)
-        .eq('user_id', user.id)
-        .select()
-        .single()
-
-      if (error) throw error
-      setIsPublicGraph(!isPublicGraph)
-    } catch (error) {
-      console.log('Error toggling graph visibility:', error)
-    }
-  }
+  const graphRef = useRef<HTMLDivElement>(null)
+  const codeRef = useRef<HTMLElement>(null)
+  const urlInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     if (graphId) {
       setShareUrl(`${window.location.origin}/share/${graphId}`)
     }
   }, [graphId])
-
-  const getFileName = () => {
-    return `austen-pages.dev-${title?.toLowerCase().replace(/\s+/g, '-')}-${author?.toLowerCase().replace(/\s+/g, '-')}-graph`
-  }
-
-  const downloadSvg = () => {
-    if (!svgContent) return
-
-    const blob = new Blob([svgContent], { type: 'image/svg+xml' })
-    const url = window.URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `${getFileName()}.svg`
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    window.URL.revokeObjectURL(url)
-  }
-
-  const downloadPng = async () => {
-    if (!graphRef.current) return
-
-    try {
-      const dataUrl = await domtoimage.toPng(graphRef.current)
-      const link = document.createElement('a')
-      link.href = dataUrl
-      link.download = `${getFileName()}.png`
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-    } catch (error) {
-      console.error('Error generating PNG:', error)
-    }
-  }
-
-  const handleSaveGraph = async () => {
-    if (!svgContent) return
-
-    setIsSaving(true)
-    try {
-      await saveGraph({
-        bookName: title,
-        authorName: author,
-        svgGraph: svgContent,
-        mermaidSyntax: graphDefinition,
-        emojis,
-      })
-    } catch (error) {
-      console.error('Error saving graph:', error)
-    } finally {
-      setIsSaving(false)
-    }
-  }
-
-  const handleCopyUrl = async () => {
-    urlInputRef.current?.select()
-    await navigator.clipboard.writeText(shareUrl)
-    setIsUrlCopied(true)
-    setTimeout(() => setIsUrlCopied(false), 2000)
-  }
-
-  const handleInputClick = async (e: React.MouseEvent<HTMLInputElement>) => {
-    e.currentTarget.select()
-    await navigator.clipboard.writeText(shareUrl)
-    setIsUrlCopied(true)
-    setTimeout(() => setIsUrlCopied(false), 2000)
-  }
-
-  const copyMermaidSyntax = async () => {
-    try {
-      await navigator.clipboard.writeText(graphDefinition)
-      setIsCopied(true)
-      setTimeout(() => setIsCopied(false), 2000)
-    } catch (error) {
-      console.error('Failed to copy syntax:', error)
-    }
-  }
-
-  const handleUpdateGraph = async (newSyntax: string) => {
-    if (!graphId || !user) return
-
-    const supabase = createClient()
-    try {
-      const { error } = await supabase
-        .from('graphs')
-        .update({ mermaid_syntax: newSyntax })
-        .eq('id', graphId)
-        .eq('user_id', user.id)
-        .select()
-        .single()
-
-      if (error) throw error
-
-      setCurrentGraphDefinition(newSyntax)
-    } catch (error) {
-      console.error('Error updating graph:', error)
-    }
-  }
 
   useEffect(() => {
     const renderGraph = async () => {
@@ -235,6 +123,90 @@ export function MermaidGraphCard({
     }
   }, [])
 
+  const handleDownloadSvg = () => {
+    if (!svgContent) return
+    downloadSvg(svgContent, title || 'untitled', author || 'unknown')
+  }
+
+  const handleTogglePublic = async () => {
+    if (!graphId || !user) return
+
+    const supabase = createClient()
+    try {
+      const { error } = await supabase
+        .from('graphs')
+        .update({ is_public: !isPublicGraph })
+        .eq('id', graphId)
+        .eq('user_id', user.id)
+        .select()
+        .single()
+
+      if (error) throw error
+      setIsPublicGraph(!isPublicGraph)
+    } catch (error) {
+      console.log('Error toggling graph visibility:', error)
+    }
+  }
+
+  const handleDownloadPng = async () => {
+    await downloadPng(graphRef, title || 'untitled', author || 'unknown')
+  }
+
+  const handleSaveGraph = async () => {
+    if (!svgContent) return
+
+    setIsSaving(true)
+    try {
+      await saveGraph({
+        bookName: title,
+        authorName: author,
+        svgGraph: svgContent,
+        mermaidSyntax: graphDefinition,
+        emojis,
+      })
+    } catch (error) {
+      console.error('Error saving graph:', error)
+    } finally {
+      setIsSaving(false)
+    }
+  }
+
+  const handleCopyUrlClick = async () => {
+    await copyUrl(urlInputRef, setIsUrlCopied)
+  }
+
+  const handleInputClick = async (e: React.MouseEvent<HTMLInputElement>) => {
+    e.currentTarget.select()
+    await navigator.clipboard.writeText(shareUrl)
+    setIsUrlCopied(true)
+    setTimeout(() => setIsUrlCopied(false), 2000)
+  }
+
+  const handleCopyMermaidSyntax = async () => {
+    await copyMermaidSyntax(currentGraphDefinition, setIsCopied)
+  }
+
+  const handleUpdateGraph = async (newSyntax: string) => {
+    if (!graphId || !user) return
+
+    const supabase = createClient()
+    try {
+      const { error } = await supabase
+        .from('graphs')
+        .update({ mermaid_syntax: newSyntax })
+        .eq('id', graphId)
+        .eq('user_id', user.id)
+        .select()
+        .single()
+
+      if (error) throw error
+
+      setCurrentGraphDefinition(newSyntax)
+    } catch (error) {
+      console.error('Error updating graph:', error)
+    }
+  }
+
   return (
     <div className="mx-auto max-w-4xl">
       <div className="overflow-hidden rounded-2xl border border-gray-200/60 bg-white shadow-lg shadow-gray-100/50 transition-all duration-200 hover:shadow-xl hover:shadow-gray-100/60">
@@ -285,14 +257,14 @@ export function MermaidGraphCard({
                   <>
                     <div className="flex items-center gap-2">
                       <Button
-                        onClick={downloadSvg}
+                        onClick={handleDownloadSvg}
                         className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                       >
                         <Download className="h-4 w-4" />
                         Download SVG
                       </Button>
                       <Button
-                        onClick={downloadPng}
+                        onClick={handleDownloadPng}
                         className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                       >
                         <Download className="h-4 w-4" />
@@ -387,7 +359,7 @@ export function MermaidGraphCard({
                   />
                   <Button
                     variant="outline"
-                    onClick={handleCopyUrl}
+                    onClick={handleCopyUrlClick}
                     className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none ${
                       isUrlCopied
                         ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 focus:ring-green-500'
@@ -417,7 +389,7 @@ export function MermaidGraphCard({
                   </Link>
                 </h3>
                 <Button
-                  onClick={copyMermaidSyntax}
+                  onClick={handleCopyMermaidSyntax}
                   variant="outline"
                   className={`inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none ${
                     isCopied
