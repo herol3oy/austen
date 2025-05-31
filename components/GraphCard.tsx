@@ -6,17 +6,16 @@ import 'prismjs/components/prism-mermaid'
 import 'prismjs/themes/prism-coy.min.css'
 
 import type { User } from '@supabase/supabase-js'
-import {
-  Code2,
-  Copy,
-  Download,
-  Edit2,
-  Globe2,
-  Info,
-  Lock,
-  Save,
-  Share2,
-} from 'lucide-react'
+import { Code2 } from 'lucide-react'
+import { Copy } from 'lucide-react'
+import { Download } from 'lucide-react'
+import { Edit2 } from 'lucide-react'
+import { Globe2 } from 'lucide-react'
+import { Info } from 'lucide-react'
+import { Lock } from 'lucide-react'
+import { Share2 } from 'lucide-react'
+import { Pencil } from 'lucide-react'
+
 import mermaid from 'mermaid'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
@@ -229,7 +228,7 @@ export function GraphCard({
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-sm font-medium text-white">
-                  {author.charAt(0)}
+                  <Pencil className="h-4 w-4 text-white" />
                 </div>
                 <p className="text-sm font-medium text-gray-600">by {author}</p>
               </div>
@@ -291,8 +290,8 @@ export function GraphCard({
                           disabled={isSaving}
                           className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                         >
-                          <Save className="h-4 w-4" />
-                          {isSaving ? 'Creating a link...' : 'Share'}
+                          <Share2 className="h-4 w-4" />
+                          {isSaving ? 'Creating link...' : 'Share'}
                         </Button>
                       )}
 
@@ -372,7 +371,7 @@ export function GraphCard({
                     onClick={handleCopyUrlClick}
                     className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none ${
                       isUrlCopied
-                        ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 focus:ring-green-500'
+                        ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 hover:text-white focus:ring-green-500'
                         : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500'
                     }`}
                   >
@@ -403,7 +402,7 @@ export function GraphCard({
                   variant="outline"
                   className={`inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none ${
                     isCopied
-                      ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 focus:ring-green-500'
+                      ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 hover:text-white focus:ring-green-500'
                       : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500'
                   }`}
                 >
