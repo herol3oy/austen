@@ -111,7 +111,7 @@ export function MermaidGraphCard({
         authorName: author,
         svgGraph: svgContent,
         mermaidSyntax: graphDefinition,
-        emojis: emojis,
+        emojis,
       })
     } catch (error) {
       console.error('Error saving graph:', error)
@@ -230,6 +230,7 @@ export function MermaidGraphCard({
       <div className="mb-4 border-b pb-4">
         <h2 className="text-xl font-semibold">{title}</h2>
         <p className="mt-1 text-sm text-gray-600">by {author}</p>
+        {emojis && <span className="text-xl">{emojis}</span>}
       </div>
 
       <div className="space-y-4">
@@ -294,11 +295,9 @@ export function MermaidGraphCard({
         </div>
 
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-medium text-gray-500">Mermaid Syntax:</h3>{' '}
-          <Button onClick={copyMermaidSyntax} variant="outline">
-            <Copy className="h-4 w-4" />
-            {isCopied ? 'Copied!' : 'Copy Syntax'}
-          </Button>
+          <h3 className="text-sm font-medium text-gray-500">
+            Mermaid Syntax:
+          </h3>{' '}
         </div>
 
         {graphId && (
@@ -326,15 +325,10 @@ export function MermaidGraphCard({
             {currentGraphDefinition}
           </code>
         </pre>
-
-        {emojis && (
-          <div className="border-t pt-4">
-            <h3 className="mb-2 text-sm font-medium text-gray-500">
-              Related Emojis:
-            </h3>
-            <div className="text-2xl">{emojis}</div>
-          </div>
-        )}
+        <Button onClick={copyMermaidSyntax} variant="outline">
+          <Copy className="h-4 w-4" />
+          {isCopied ? 'Copied!' : 'Copy Syntax'}
+        </Button>
       </div>
 
       <EditGraphDialog
