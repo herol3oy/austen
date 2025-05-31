@@ -26,6 +26,7 @@ export function MermaidGraphCard({
   title,
   author,
   graphId,
+  isShared = false,
 }: MermaidGraphProps) {
   const graphRef = useRef<HTMLDivElement>(null)
   const codeRef = useRef<HTMLElement>(null)
@@ -243,9 +244,11 @@ export function MermaidGraphCard({
                 <Button onClick={downloadPng}>Download PNG</Button>
                 {user ? (
                   <>
-                    <Button onClick={handleSaveGraph} disabled={isSaving}>
-                      {isSaving ? 'Saving...' : 'Save Graph'}
-                    </Button>
+                    {!isShared && (
+                      <Button onClick={handleSaveGraph} disabled={isSaving}>
+                        {isSaving ? 'Saving...' : 'Save Graph'}
+                      </Button>
+                    )}
                     {graphId && (
                       <>
                         <Button
@@ -294,12 +297,6 @@ export function MermaidGraphCard({
           </div>
         </div>
 
-        <div className="flex items-center justify-between">
-          <h3 className="text-sm font-medium text-gray-500">
-            Mermaid Syntax:
-          </h3>{' '}
-        </div>
-
         {graphId && (
           <div className="flex items-center gap-2">
             <Input
@@ -315,6 +312,10 @@ export function MermaidGraphCard({
             </Button>
           </div>
         )}
+
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-medium text-gray-500">Mermaid Syntax:</h3>
+        </div>
 
         <pre
           suppressHydrationWarning

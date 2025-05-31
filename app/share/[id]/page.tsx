@@ -29,6 +29,7 @@ export default async function ShareGraphPage({
         graphDefinition={graph.mermaid_syntax}
         emojis={graph.emojis}
         graphId={id}
+        isShared={true}
       />
     </div>
   )
