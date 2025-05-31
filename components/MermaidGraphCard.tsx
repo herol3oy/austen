@@ -7,7 +7,7 @@ import 'prismjs/themes/prism-coy.min.css'
 
 import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
-import { Copy, Edit2, Globe2, Lock } from 'lucide-react'
+import { Code2, Copy, Edit2, Globe2, Lock, Share2 } from 'lucide-react'
 import mermaid from 'mermaid'
 import { useEffect, useRef, useState } from 'react'
 
@@ -227,109 +227,202 @@ export function MermaidGraphCard({
   }, [])
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-4 shadow">
-      <div className="mb-4 border-b pb-4">
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <p className="mt-1 text-sm text-gray-600">by {author}</p>
-        {emojis && <span className="text-xl">{emojis}</span>}
-      </div>
+    <div className="mx-auto max-w-4xl">
+      <div className="overflow-hidden rounded-2xl border border-gray-200/60 bg-white shadow-lg shadow-gray-100/50 transition-all duration-200 hover:shadow-xl hover:shadow-gray-100/60">
+        <div className="border-b border-gray-100 bg-gradient-to-r from-gray-50/50 to-white px-8 py-6">
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              <div className="mb-2 flex items-center gap-3">
+                <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+                  {title}
+                </h2>
+                {emojis && (
+                  <span className="text-2xl opacity-80">{emojis}</span>
+                )}
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-sm font-medium text-white">
+                  {author.charAt(0)}
+                </div>
+                <p className="text-sm font-medium text-gray-600">by {author}</p>
+              </div>
+            </div>
 
-      <div className="space-y-4">
-        <div>
-          <div ref={graphRef} />
-          <div className="ml-4 flex gap-2">
-            {svgContent && (
-              <>
-                <Button onClick={downloadSvg}>Download SVG</Button>
-                <Button onClick={downloadPng}>Download PNG</Button>
-                {user ? (
+            <div className="flex items-center gap-2">
+              {isPublicGraph ? (
+                <div className="flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-3 py-1.5 text-sm font-medium text-green-700">
+                  <Globe2 className="h-3.5 w-3.5" />
+                  Public
+                </div>
+              ) : (
+                <div className="flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm font-medium text-gray-700">
+                  <Lock className="h-3.5 w-3.5" />
+                  Private
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="p-8">
+          <div className="space-y-8">
+            <div className="relative">
+              <div className="flex min-h-[300px] items-center justify-center rounded-xl border border-gray-200 bg-gray-50/30 p-6">
+                <div ref={graphRef} className="w-full" />
+              </div>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                {svgContent && (
                   <>
-                    {!isShared && (
-                      <Button onClick={handleSaveGraph} disabled={isSaving}>
-                        {isSaving ? 'Saving...' : 'Save Graph'}
+                    <div className="flex items-center gap-2">
+                      <Button
+                        onClick={downloadSvg}
+                        className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-blue-700 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                      >
+                        Download SVG
+                      </Button>
+                      <Button
+                        onClick={downloadPng}
+                        className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                      >
+                        Download PNG
+                      </Button>
+                    </div>
+
+                    {user ? (
+                      <div className="flex items-center gap-3">
+                        {!isShared && (
+                          <Button
+                            onClick={handleSaveGraph}
+                            disabled={isSaving}
+                            className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                          >
+                            {isSaving ? 'Saving...' : 'Save Graph'}
+                          </Button>
+                        )}
+
+                        {graphId && (
+                          <>
+                            <Button
+                              onClick={() => setIsEditDialogOpen(true)}
+                              variant="outline"
+                              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                            >
+                              <Edit2 className="mr-2 h-4 w-4" />
+                              Edit Graph
+                            </Button>
+
+                            <div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50/50 px-4 py-2.5">
+                              <Label
+                                htmlFor={`public-mode-${graphId}`}
+                                className="text-sm font-medium text-gray-700"
+                              >
+                                Visibility:
+                              </Label>
+                              <Switch
+                                id={`public-mode-${graphId}`}
+                                checked={isPublicGraph}
+                                onCheckedChange={handleTogglePublic}
+                                className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none data-[state=checked]:bg-blue-600 data-[state=unchecked]:bg-gray-300"
+                              />
+                              <Label
+                                htmlFor={`public-mode-${graphId}`}
+                                className="flex items-center text-sm font-medium text-gray-700"
+                              >
+                                {isPublicGraph ? (
+                                  <>
+                                    <Globe2 className="mr-1 h-4 w-4" />
+                                    Public
+                                  </>
+                                ) : (
+                                  <>
+                                    <Lock className="mr-1 h-4 w-4" />
+                                    Private
+                                  </>
+                                )}
+                              </Label>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    ) : (
+                      <Button
+                        onClick={() => (window.location.href = '/auth/login')}
+                        variant="outline"
+                        className="inline-flex items-center gap-2 rounded-lg border border-blue-300 bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-700 shadow-sm transition-all hover:bg-blue-100 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                      >
+                        Login to Save
                       </Button>
                     )}
-                    {graphId && (
-                      <>
-                        <Button
-                          onClick={() => setIsEditDialogOpen(true)}
-                          variant="outline"
-                        >
-                          <Edit2 className="mr-2 h-4 w-4" />
-                          Edit Graph
-                        </Button>
-                        <div className="ml-4 flex items-center space-x-2">
-                          <Switch
-                            id={`public-mode-${graphId}`}
-                            checked={isPublicGraph}
-                            onCheckedChange={handleTogglePublic}
-                          />
-                          <Label
-                            htmlFor={`public-mode-${graphId}`}
-                            className="flex items-center"
-                          >
-                            {isPublicGraph ? (
-                              <>
-                                <Globe2 className="mr-1 h-4 w-4" />
-                                Public
-                              </>
-                            ) : (
-                              <>
-                                <Lock className="mr-1 h-4 w-4" />
-                                Private
-                              </>
-                            )}
-                          </Label>
-                        </div>
-                      </>
-                    )}
                   </>
-                ) : (
-                  <Button
-                    onClick={() => (window.location.href = '/auth/login')}
-                    variant="outline"
-                  >
-                    Login to Save
-                  </Button>
                 )}
-              </>
+              </div>
+            </div>
+
+            {graphId && (
+              <div className="rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50/50 to-white p-6">
+                <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-gray-900">
+                  <Share2 className="h-5 w-5 text-gray-600" />
+                  Share this graph
+                </h3>
+                <div className="flex items-center gap-3">
+                  <Input
+                    ref={urlInputRef}
+                    readOnly
+                    value={shareUrl}
+                    onClick={handleInputClick}
+                    className="flex-1 cursor-pointer rounded-lg border border-gray-300 bg-white px-4 py-3 font-mono text-sm text-gray-700 shadow-sm transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 focus:outline-none"
+                  />
+                  <Button
+                    variant="outline"
+                    onClick={handleCopyUrl}
+                    className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-medium shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none ${
+                      isUrlCopied
+                        ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 focus:ring-green-500'
+                        : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500'
+                    }`}
+                  >
+                    <Copy className="h-4 w-4" />
+                    {isUrlCopied ? 'Copied!' : 'Copy URL'}
+                  </Button>
+                </div>
+              </div>
             )}
+
+            <div className="rounded-xl border border-gray-200 bg-gradient-to-br from-gray-50/50 to-white p-6">
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-900">
+                  <Code2 className="h-5 w-5 text-gray-600" />
+                  Mermaid Syntax
+                </h3>
+                <Button
+                  onClick={copyMermaidSyntax}
+                  variant="outline"
+                  className={`inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:outline-none ${
+                    isCopied
+                      ? 'border-green-600 bg-green-600 text-white hover:bg-green-700 focus:ring-green-500'
+                      : 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500'
+                  }`}
+                >
+                  <Copy className="h-4 w-4" />
+                  {isCopied ? 'Copied!' : 'Copy'}
+                </Button>
+              </div>
+
+              <div className="relative">
+                <pre
+                  suppressHydrationWarning
+                  className="language-mermaid overflow-x-auto rounded bg-gray-50 p-4 text-sm"
+                  data-prismjs-copy="Copy"
+                >
+                  <code ref={codeRef} className="language-mermaid">
+                    {currentGraphDefinition}
+                  </code>
+                </pre>
+              </div>
+            </div>
           </div>
         </div>
-
-        {graphId && (
-          <div className="flex items-center gap-2">
-            <Input
-              ref={urlInputRef}
-              readOnly
-              value={shareUrl}
-              className="cursor-pointer font-mono text-sm"
-              onClick={handleInputClick}
-            />
-            <Button variant="outline" onClick={handleCopyUrl} className="gap-2">
-              <Copy className="h-4 w-4" />
-              {isUrlCopied ? 'Copied!' : 'Copy URL'}
-            </Button>
-          </div>
-        )}
-
-        <div className="flex items-center justify-between">
-          <h3 className="text-sm font-medium text-gray-500">Mermaid Syntax:</h3>
-        </div>
-
-        <pre
-          suppressHydrationWarning
-          className="language-mermaid overflow-x-auto rounded bg-gray-50 p-4 text-sm"
-          data-prismjs-copy="Copy"
-        >
-          <code ref={codeRef} className="language-mermaid">
-            {currentGraphDefinition}
-          </code>
-        </pre>
-        <Button onClick={copyMermaidSyntax} variant="outline">
-          <Copy className="h-4 w-4" />
-          {isCopied ? 'Copied!' : 'Copy Syntax'}
-        </Button>
       </div>
 
       <EditGraphDialog
