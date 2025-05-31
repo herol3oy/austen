@@ -9,6 +9,7 @@ import { LayoutDashboard } from 'lucide-react'
 import { LogOut } from 'lucide-react'
 import { Menu } from 'lucide-react'
 import { X } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -129,6 +130,16 @@ export function TopBar() {
                 )}
               </Link>
             </li>
+            {user && (
+              <li role="none">
+                <Link href="/create">
+                  <Button size="sm" className="gap-2 bg-green-600">
+                    <Plus className="h-4 w-4" />
+                    Create
+                  </Button>
+                </Link>
+              </li>
+            )}
 
             <li role="none">
               {user ? (
@@ -214,6 +225,19 @@ export function TopBar() {
             id="mobile-navigation"
           >
             <ul className="flex flex-col space-y-3" role="menu">
+              {user && (
+                <li role="none">
+                  <Link href="/create" onClick={() => setIsMenuOpen(false)}>
+                    <Button
+                      size="sm"
+                      className="w-full justify-start gap-2 bg-green-600"
+                    >
+                      <Plus className="h-4 w-4" />
+                      Create
+                    </Button>
+                  </Link>
+                </li>
+              )}
               <li role="none">
                 <Link
                   href="/discover"
