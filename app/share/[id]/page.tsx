@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { MermaidGraphCard } from '@/components/MermaidGraphCard'
+import { GraphCard } from '@/components/GraphCard'
 import { createClient } from '@/lib/supabase/server'
 
 export default async function ShareGraphPage({
@@ -23,7 +23,7 @@ export default async function ShareGraphPage({
 
   return (
     <div className="container mx-auto p-4">
-      <MermaidGraphCard
+      <GraphCard
         title={graph.book_name}
         author={graph.author_name}
         graphDefinition={graph.mermaid_syntax}

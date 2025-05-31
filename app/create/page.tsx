@@ -1,14 +1,11 @@
 'use client'
 
-import { AlertCircle } from 'lucide-react'
-import { Search } from 'lucide-react'
-import { Sparkles } from 'lucide-react'
-import { X } from 'lucide-react'
+import { AlertCircle, Search, Sparkles, X } from 'lucide-react'
 import { useEffect, useState, useTransition } from 'react'
 
 import { generateGraph } from '@/app/actions/generate-graph'
 import { requestOpenlibBooks } from '@/app/actions/request-openlib-books'
-import { MermaidGraphCard } from '@/components/MermaidGraphCard'
+import { GraphCard } from '@/components/GraphCard'
 import { Input } from '@/components/ui/input'
 
 interface Book {
@@ -218,7 +215,7 @@ export default function Home() {
 
       {graphResult && selectedBook && (
         <div className="mt-12">
-          <MermaidGraphCard
+          <GraphCard
             graphDefinition={graphResult.mermaidSyntax}
             emojis={graphResult.emojis}
             title={selectedBook.title}

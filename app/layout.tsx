@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 import { TopBar } from '@/components/TopBar'
+import { Toaster } from '@/components/ui/sonner'
 
 export const metadata: Metadata = {
   title: 'Austen',
@@ -18,7 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <TopBar />
-        {children}
+        <main>{children}</main>
+        <Toaster position="bottom-center" richColors />
       </body>
     </html>
   )

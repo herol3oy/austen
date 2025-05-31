@@ -30,11 +30,12 @@ import { Switch } from '@/components/ui/switch'
 import { createClient } from '@/lib/supabase/client'
 import { MermaidGraphProps } from '@/types/mermaid-graph-props'
 import { copyMermaidSyntax } from '@/utils/copy-mermaid-syntax'
+import { toast } from 'sonner'
+import { copyUrl } from '@/utils/copy-url'
 import { downloadPng } from '@/utils/download-png'
 import { downloadSvg } from '@/utils/download-svg'
-import { copyUrl } from '@/utils/copy-url'
 
-export function MermaidGraphCard({
+export function GraphCard({
   graphDefinition,
   emojis,
   title,
@@ -124,8 +125,17 @@ export function MermaidGraphCard({
   }, [])
 
   const handleDownloadSvg = () => {
+    if (!user) {
+      toast.error('Log in to download svg file')
+      return
+    }
     if (!svgContent) return
     downloadSvg(svgContent, title || 'untitled', author || 'unknown')
+  }
+
+  const handleDownloadPng = () => {
+    if (!svgContent) return
+    downloadPng(graphRef, title || 'untitled', author || 'unknown')
   }
 
   const handleTogglePublic = async () => {
@@ -146,10 +156,6 @@ export function MermaidGraphCard({
     } catch (error) {
       console.log('Error toggling graph visibility:', error)
     }
-  }
-
-  const handleDownloadPng = async () => {
-    await downloadPng(graphRef, title || 'untitled', author || 'unknown')
   }
 
   const handleSaveGraph = async () => {
@@ -272,30 +278,42 @@ export function MermaidGraphCard({
                       </Button>
                     </div>
 
-                    {user ? (
-                      <div className="flex items-center gap-3">
-                        {!isShared && (
+                    <div className="flex items-center gap-3">
+                      {!isShared && (
+                        <Button
+                          onClick={() => {
+                            if (!user) {
+                              toast.error('Log in to share the graph')
+                              return
+                            }
+                            handleSaveGraph()
+                          }}
+                          disabled={isSaving}
+                          className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          <Save className="h-4 w-4" />
+                          {isSaving ? 'Creating a link...' : 'Share'}
+                        </Button>
+                      )}
+
+                      {graphId && (
+                        <>
                           <Button
-                            onClick={handleSaveGraph}
-                            disabled={isSaving}
-                            className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                            onClick={() => {
+                              if (!user) {
+                                toast.error('Log in to edit the graph')
+                                return
+                              }
+                              setIsEditDialogOpen(true)
+                            }}
+                            variant="outline"
+                            className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                           >
-                            <Save className="h-4 w-4" />
-                            {isSaving ? 'Saving...' : 'Save Graph'}
+                            <Edit2 className="mr-2 h-4 w-4" />
+                            Edit Graph
                           </Button>
-                        )}
 
-                        {graphId && (
-                          <>
-                            <Button
-                              onClick={() => setIsEditDialogOpen(true)}
-                              variant="outline"
-                              className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
-                            >
-                              <Edit2 className="mr-2 h-4 w-4" />
-                              Edit Graph
-                            </Button>
-
+                          {user && (
                             <div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50/50 px-4 py-2.5">
                               <Label
                                 htmlFor={`public-mode-${graphId}`}
@@ -326,18 +344,10 @@ export function MermaidGraphCard({
                                 )}
                               </Label>
                             </div>
-                          </>
-                        )}
-                      </div>
-                    ) : (
-                      <Button
-                        onClick={() => (window.location.href = '/auth/login')}
-                        variant="outline"
-                        className="inline-flex items-center gap-2 rounded-lg border border-blue-300 bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-700 shadow-sm transition-all hover:bg-blue-100 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
-                      >
-                        Login to Save
-                      </Button>
-                    )}
+                          )}
+                        </>
+                      )}
+                    </div>
                   </>
                 )}
               </div>
