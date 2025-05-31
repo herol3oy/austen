@@ -9,10 +9,12 @@ import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
 import { Code2 } from 'lucide-react'
 import { Copy } from 'lucide-react'
+import { Download } from 'lucide-react'
 import { Edit2 } from 'lucide-react'
 import { Globe2 } from 'lucide-react'
 import { Info } from 'lucide-react'
 import { Lock } from 'lucide-react'
+import { Save } from 'lucide-react'
 import { Share2 } from 'lucide-react'
 import mermaid from 'mermaid'
 import Link from 'next/link'
@@ -284,14 +286,16 @@ export function MermaidGraphCard({
                     <div className="flex items-center gap-2">
                       <Button
                         onClick={downloadSvg}
-                        className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-blue-700 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                        className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                       >
+                        <Download className="h-4 w-4" />
                         Download SVG
                       </Button>
                       <Button
                         onClick={downloadPng}
                         className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                       >
+                        <Download className="h-4 w-4" />
                         Download PNG
                       </Button>
                     </div>
@@ -304,6 +308,7 @@ export function MermaidGraphCard({
                             disabled={isSaving}
                             className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                           >
+                            <Save className="h-4 w-4" />
                             {isSaving ? 'Saving...' : 'Save Graph'}
                           </Button>
                         )}
