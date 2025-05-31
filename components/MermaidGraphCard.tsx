@@ -7,8 +7,15 @@ import 'prismjs/themes/prism-coy.min.css'
 
 import type { User } from '@supabase/supabase-js'
 import domtoimage from 'dom-to-image'
-import { Code2, Copy, Edit2, Globe2, Lock, Share2 } from 'lucide-react'
+import { Code2 } from 'lucide-react'
+import { Copy } from 'lucide-react'
+import { Edit2 } from 'lucide-react'
+import { Globe2 } from 'lucide-react'
+import { Info } from 'lucide-react'
+import { Lock } from 'lucide-react'
+import { Share2 } from 'lucide-react'
 import mermaid from 'mermaid'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 import { saveGraph } from '@/app/actions/save-graph'
@@ -394,6 +401,15 @@ export function MermaidGraphCard({
                 <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-900">
                   <Code2 className="h-5 w-5 text-gray-600" />
                   Mermaid Syntax
+                  <Link
+                    href="https://mermaid.js.org/intro/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative"
+                    title="Learn more about Mermaid"
+                  >
+                    <Info className="h-5 w-5 text-gray-600 hover:text-gray-800" />
+                  </Link>
                 </h3>
                 <Button
                   onClick={copyMermaidSyntax}
