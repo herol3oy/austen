@@ -99,7 +99,7 @@ export default function Home() {
     hasSearched && searchResults.length === 0 && !isPending && isSearchValid
 
   return (
-    <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
+    <div className="animate-in fade-in slide-in-from-bottom-4 relative z-10 mx-auto max-w-7xl px-6 py-20 text-center duration-1000">
       <div className="mb-12 text-center">
         <div className="mb-8">
           <span className="inline-flex items-center rounded-full border border-teal-200/60 bg-white/80 px-4 py-2 text-sm font-medium text-teal-700 backdrop-blur-sm">
