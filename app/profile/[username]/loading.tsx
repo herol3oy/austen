@@ -1,11 +1,14 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 
-export default function DashboardLoading() {
+export default function ProfileLoading() {
   return (
     <div className="container mx-auto p-4 py-8 md:py-12">
-      <div className="mb-10 space-y-2">
-        <div className="h-10 w-1/3 animate-pulse rounded-md bg-gray-200"></div>
-        <div className="h-6 w-1/2 animate-pulse rounded-md bg-gray-200"></div>
+      <div className="mb-10 flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6">
+        <div className="h-24 w-24 animate-pulse rounded-full bg-gray-200 md:h-32 md:w-32"></div>
+        <div className="space-y-2 text-center md:text-left">
+          <div className="h-10 w-48 animate-pulse rounded-md bg-gray-200"></div>
+          <div className="h-6 w-64 animate-pulse rounded-md bg-gray-200"></div>
+        </div>
       </div>
 
       <div className="mb-12 grid gap-6 md:grid-cols-2">
@@ -14,7 +17,7 @@ export default function DashboardLoading() {
             <div className="h-7 w-3/5 animate-pulse rounded-md bg-gray-200"></div>
           </CardHeader>
           <CardContent className="space-y-6">
-            {[...Array(3)].map((_, i) => (
+            {[...Array(2)].map((_, i) => (
               <div key={i}>
                 <div className="mb-1 h-4 w-1/4 animate-pulse rounded-md bg-gray-200"></div>
                 <div className="h-5 w-3/4 animate-pulse rounded-md bg-gray-200"></div>
