@@ -1,4 +1,5 @@
 import { formatDistanceToNow } from 'date-fns'
+import { Plus } from 'lucide-react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
@@ -52,8 +53,16 @@ export default async function DashboardPage() {
         ))}
 
         {!graphs?.length && (
-          <div className="text-muted-foreground col-span-full py-12 text-center">
-            No graph! Start by creating a new graph!
+          <div className="col-span-full py-12 text-center">
+            <p className="text-muted-foreground mb-6">
+              No graphs yet! Start by creating your first graph.
+            </p>
+            <Link href="/create">
+              <button className="inline-flex items-center gap-2 rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none">
+                <Plus className="h-4 w-4" />
+                Create New Graph
+              </button>
+            </Link>
           </div>
         )}
       </div>
