@@ -22,15 +22,13 @@ export default async function ShareGraphPage({
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <GraphCard
-        title={graph.book_name}
-        author={graph.author_name}
-        graphDefinition={graph.mermaid_syntax}
-        emojis={graph.emojis}
-        graphId={id}
-        isShared={true}
-      />
-    </div>
+    <GraphCard
+      title={graph.book_name}
+      author={graph.author_name}
+      graphDefinition={graph.mermaid_syntax}
+      emojis={graph.emojis}
+      graphId={id}
+      isShared={true}
+    />
   )
 }
