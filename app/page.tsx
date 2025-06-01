@@ -110,7 +110,7 @@ export default function StartPage() {
             </button>
           </div>
 
-          <div className="relative mx-auto max-w-4xl">
+          <div className="relative mx-auto max-w-7xl">
             <div className="transform rounded-2xl border border-teal-100 bg-white/90 p-8 shadow-2xl backdrop-blur-sm transition-transform duration-500 hover:scale-102">
               <div className="mb-4 flex items-center justify-center text-sm text-slate-600">
                 <BookOpen className="mr-2 h-4 w-4" />
