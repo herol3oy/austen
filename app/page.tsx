@@ -2,15 +2,13 @@
 
 import { ArrowRight } from 'lucide-react'
 import { BookOpen } from 'lucide-react'
-import { Download } from 'lucide-react'
 import { GitMerge } from 'lucide-react'
-import { Heart } from 'lucide-react'
-import { Share2 } from 'lucide-react'
 import { Sparkles } from 'lucide-react'
-import { Users } from 'lucide-react'
 import mermaid from 'mermaid'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
+
+import { FEATURES, HOW_IT_WORKS } from '@/consts/landing-page-content'
 
 export default function StartPage() {
   const graphRef = useRef<HTMLDivElement>(null)
@@ -60,67 +58,53 @@ export default function StartPage() {
   }, [])
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50 to-emerald-50">
-      <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 h-20 w-20 animate-pulse rounded-full bg-teal-200 opacity-30"></div>
-          <div
-            className="absolute top-40 right-20 h-16 w-16 animate-bounce rounded-full bg-emerald-200 opacity-40"
-            style={{ animationDelay: '1s' }}
-          ></div>
-          <div
-            className="absolute bottom-40 left-20 h-24 w-24 animate-pulse rounded-full bg-cyan-200 opacity-20"
-            style={{ animationDelay: '2s' }}
-          ></div>
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
+        <div className="mb-8">
+          <span className="inline-flex items-center rounded-full border border-teal-200/60 bg-white/80 px-4 py-2 text-sm font-medium text-teal-700 backdrop-blur-sm">
+            <Sparkles className="mr-2 h-4 w-4" />
+            AI-Powered Character Analysis
+          </span>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
-          <div className="mb-8">
-            <span className="inline-flex items-center rounded-full border border-teal-200/60 bg-white/80 px-4 py-2 text-sm font-medium text-teal-700 backdrop-blur-sm">
-              <Sparkles className="mr-2 h-4 w-4" />
-              AI-Powered Character Analysis
-            </span>
-          </div>
+        <h1 className="mb-6 bg-gradient-to-r from-teal-700 via-emerald-700 to-cyan-700 bg-clip-text text-6xl leading-tight font-bold text-transparent md:text-7xl">
+          Unravel Literary
+          <br />
+          <span className="relative">
+            Relationships
+            <div className="absolute right-0 -bottom-4 left-0 h-2 rotate-1 transform rounded-full bg-gradient-to-r from-teal-400 to-emerald-400 opacity-50"></div>
+          </span>
+        </h1>
 
-          <h1 className="mb-6 bg-gradient-to-r from-teal-700 via-emerald-700 to-cyan-700 bg-clip-text text-6xl leading-tight font-bold text-transparent md:text-7xl">
-            Unravel Literary
-            <br />
-            <span className="relative">
-              Relationships
-              <div className="absolute right-0 -bottom-4 left-0 h-2 rotate-1 transform rounded-full bg-gradient-to-r from-teal-400 to-emerald-400 opacity-50"></div>
-            </span>
-          </h1>
+        <p className="mx-auto mb-10 max-w-3xl text-xl leading-relaxed text-slate-700">
+          Discover the connections between your favorite book characters through
+          beautiful, AI-generated relationship diagrams. From Jane Austen to
+          modern classics, explore literature like never before.
+        </p>
 
-          <p className="mx-auto mb-10 max-w-3xl text-xl leading-relaxed text-slate-700">
-            Discover the connections between your favorite book characters
-            through beautiful, AI-generated relationship diagrams. From Jane
-            Austen to modern classics, explore literature like never before.
-          </p>
+        <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            href="/create"
+            className="group flex transform items-center rounded-full bg-gradient-to-r from-teal-600 to-emerald-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            Try Now!
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+          <button className="flex items-center font-medium text-slate-600 transition-colors hover:text-teal-700">
+            <GitMerge className="mr-2 h-5 w-5" />
+            View on GitHub
+          </button>
+        </div>
 
-          <div className="mb-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/create"
-              className="group flex transform items-center rounded-full bg-gradient-to-r from-teal-600 to-emerald-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl"
-            >
-              Try Now!
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <button className="flex items-center font-medium text-slate-600 transition-colors hover:text-teal-700">
-              <GitMerge className="mr-2 h-5 w-5" />
-              View on GitHub
-            </button>
-          </div>
-
-          <div className="relative mx-auto max-w-7xl">
-            <div className="transform rounded-2xl border border-teal-100 bg-white/90 p-8 shadow-2xl backdrop-blur-sm transition-transform duration-500 hover:scale-102">
-              <div className="mb-4 flex items-center justify-center text-sm text-slate-600">
-                <BookOpen className="mr-2 h-4 w-4" />
-                Sample: &quot;Sense and Sensibility&quot; by Jane Austen
-              </div>
-              <div
-                ref={graphRef}
-                className="rounded-xl bg-gradient-to-br from-slate-50 to-teal-50 p-6 font-mono text-sm"
-              ></div>
+        <div className="relative mx-auto max-w-7xl">
+          <div className="transform rounded-2xl border border-teal-100 bg-white/90 p-8 shadow-2xl backdrop-blur-sm transition-transform duration-500 hover:scale-102">
+            <div className="mb-4 flex items-center justify-center text-sm text-slate-600">
+              <BookOpen className="mr-2 h-4 w-4" />
+              Sample: &quot;Sense and Sensibility&quot; by Jane Austen
             </div>
+            <div
+              ref={graphRef}
+              className="rounded-xl bg-gradient-to-br from-slate-50 to-teal-50 p-6 font-mono text-sm"
+            ></div>
           </div>
         </div>
       </div>
@@ -138,50 +122,7 @@ export default function StartPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: BookOpen,
-                title: 'Vast Book Library',
-                description:
-                  "Search and analyze any book from Open Library's extensive collection of literary works.",
-                color: 'from-teal-500 to-teal-600',
-              },
-              {
-                icon: Sparkles,
-                title: 'AI-Powered Analysis',
-                description:
-                  'Advanced AI identifies character relationships and creates meaningful connection insights.',
-                color: 'from-emerald-500 to-emerald-600',
-              },
-              {
-                icon: Users,
-                title: 'Beautiful Diagrams',
-                description:
-                  'Generate stunning Mermaid.js diagrams that visualize character relationships clearly.',
-                color: 'from-cyan-500 to-cyan-600',
-              },
-              {
-                icon: Download,
-                title: 'Export & Save',
-                description:
-                  'Download your diagrams as SVG or PNG files, and save them to your personal collection.',
-                color: 'from-blue-500 to-blue-600',
-              },
-              {
-                icon: Share2,
-                title: 'Share & Discover',
-                description:
-                  'Share your analyses publicly or discover fascinating graphs created by other readers.',
-                color: 'from-indigo-500 to-indigo-600',
-              },
-              {
-                icon: Heart,
-                title: 'Community Driven',
-                description:
-                  'Like, save, and explore popular character relationship analyses from the community.',
-                color: 'from-teal-500 to-emerald-500',
-              },
-            ].map((feature, index) => (
+            {FEATURES.map((feature, index) => (
               <div
                 key={index}
                 className="group transform rounded-2xl border border-teal-100/50 bg-white/80 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
@@ -219,26 +160,7 @@ export default function StartPage() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {[
-              {
-                step: '01',
-                title: 'Search Your Book',
-                description:
-                  "Enter any book title to search through Open Library's vast collection of books.",
-              },
-              {
-                step: '02',
-                title: 'AI Analysis',
-                description:
-                  "Our advanced AI analyzes the book's content to identify characters and their relationships, connections, and interactions.",
-              },
-              {
-                step: '03',
-                title: 'Visualize & Share',
-                description:
-                  'Get beautiful Mermaid diagrams showing character relationships. Save, download, or share your discoveries with the community.',
-              },
-            ].map((step, index) => (
+            {HOW_IT_WORKS.map((step, index) => (
               <div key={index} className="relative">
                 <div className="group rounded-2xl bg-white/90 p-8 text-center shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl">
                   <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-teal-600 to-emerald-600 text-xl font-bold text-white transition-transform duration-300 group-hover:scale-110">
