@@ -172,7 +172,7 @@ export function TopBar() {
                     <DropdownMenuSeparator role="separator" />
                     <DropdownMenuItem
                       onClick={handleSignOut}
-                      className="cursor-pointer"
+                      className="flex cursor-pointer items-center text-red-600 hover:!bg-red-100 hover:!text-red-700 focus:!bg-red-100 focus:!text-red-700 dark:text-red-400 dark:hover:!bg-red-800/30 dark:hover:!text-red-300 dark:focus:!bg-red-800/30 dark:focus:!text-red-300"
                       role="menuitem"
                     >
                       <LogOut className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -260,21 +260,14 @@ export function TopBar() {
                     </div>
                   </li>
                   <li role="none">
-                    <Link
-                      href="/dashboard"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
+                    <Link href="/create" onClick={() => setIsMenuOpen(false)}>
                       <Button
-                        variant="ghost"
                         size="sm"
-                        className="w-full justify-start"
+                        className="w-full justify-start gap-2 bg-green-600 text-white hover:bg-green-700"
                         role="menuitem"
                       >
-                        <LayoutDashboard
-                          className="mr-2 h-4 w-4"
-                          aria-hidden="true"
-                        />
-                        Dashboard
+                        <Plus className="mr-2 h-4 w-4" aria-hidden="true" />
+                        Create
                       </Button>
                     </Link>
                   </li>
@@ -283,7 +276,7 @@ export function TopBar() {
                       variant="ghost"
                       size="sm"
                       onClick={handleSignOut}
-                      className="w-full justify-start"
+                      className="w-full justify-start text-red-600 hover:bg-red-100/50 hover:text-red-700 focus:bg-red-100/50 focus:text-red-700 dark:text-red-400 dark:hover:bg-red-800/20 dark:hover:text-red-300 dark:focus:bg-red-800/20 dark:focus:text-red-300"
                       role="menuitem"
                     >
                       <LogOut className="mr-2 h-4 w-4" aria-hidden="true" />
