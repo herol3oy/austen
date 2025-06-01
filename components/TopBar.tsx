@@ -3,7 +3,6 @@
 import { User } from '@supabase/supabase-js'
 import { ChevronDown } from 'lucide-react'
 import { GitMerge } from 'lucide-react'
-import { Compass } from 'lucide-react'
 import { Star } from 'lucide-react'
 import { LayoutDashboard } from 'lucide-react'
 import { LogOut } from 'lucide-react'
@@ -99,17 +98,6 @@ export function TopBar() {
           <ul className="hidden items-center space-x-4 md:flex" role="menubar">
             <li role="none">
               <Link
-                href="/discover"
-                className="text-muted-foreground hover:text-foreground flex items-center space-x-1 text-sm font-medium transition-colors"
-                role="menuitem"
-              >
-                <Compass className="h-4 w-4" aria-hidden="true" />
-                <span>Discover</span>
-              </Link>
-            </li>
-
-            <li role="none">
-              <Link
                 href="https://github.com/herol3oy/austen"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -130,16 +118,14 @@ export function TopBar() {
                 )}
               </Link>
             </li>
-            {user && (
-              <li role="none">
-                <Link href="/create">
-                  <Button size="sm" className="gap-2 bg-green-600">
-                    <Plus className="h-4 w-4" />
-                    Create
-                  </Button>
-                </Link>
-              </li>
-            )}
+            <li role="none">
+              <Link href="/create">
+                <Button size="sm" className="gap-2 bg-green-600">
+                  <Plus className="h-4 w-4" />
+                  Create
+                </Button>
+              </Link>
+            </li>
 
             <li role="none">
               {user ? (
@@ -225,30 +211,6 @@ export function TopBar() {
             id="mobile-navigation"
           >
             <ul className="flex flex-col space-y-3" role="menu">
-              {user && (
-                <li role="none">
-                  <Link href="/create" onClick={() => setIsMenuOpen(false)}>
-                    <Button
-                      size="sm"
-                      className="w-full justify-start gap-2 bg-green-600"
-                    >
-                      <Plus className="h-4 w-4" />
-                      Create
-                    </Button>
-                  </Link>
-                </li>
-              )}
-              <li role="none">
-                <Link
-                  href="/discover"
-                  className="text-muted-foreground hover:text-foreground flex items-center space-x-2 px-2 py-1 text-sm font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                  role="menuitem"
-                >
-                  <Compass className="h-4 w-4" aria-hidden="true" />
-                  <span>Discover</span>
-                </Link>
-              </li>
               <li role="none">
                 <Link
                   href="https://github.com/herol3oy/austen"
