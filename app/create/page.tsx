@@ -31,6 +31,7 @@ export default function Home() {
   const [hasSearched, setHasSearched] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedBook, setSelectedBook] = useState<Book | null>(null)
+  const [isGeneratingGraph, setIsGeneratingGraph] = useState<boolean>(false)
 
   useEffect(() => {
     const requestBooks = async () => {
@@ -79,7 +80,9 @@ export default function Home() {
     setShowResults(false)
     setSearchTerm(book.title)
     setError(null)
+    setGraphResult(null)
     setSelectedBook(book)
+    setIsGeneratingGraph(true)
 
     startTransition(async () => {
       try {
@@ -89,7 +92,8 @@ export default function Home() {
         setError(
           err instanceof Error ? err.message : 'Failed to generate graph',
         )
-        setGraphResult(null)
+      } finally {
+        setIsGeneratingGraph(false)
       }
     })
   }
@@ -199,6 +203,21 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {isGeneratingGraph && (
+        <div className="mx-auto mb-8 max-w-4xl">
+          <div className="flex flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-lg">
+            <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-300 border-t-teal-600 sm:h-12 sm:w-12" />
+            <p className="mt-4 text-lg font-medium text-gray-800">
+              Generating your story graph
+              {selectedBook && ` for "${selectedBook.title}"`}...
+            </p>
+            <p className="mt-2 text-sm text-gray-500">
+              This might take a few moments.
+            </p>
+          </div>
+        </div>
+      )}
 
       {error && (
         <div className="mx-auto mb-8 max-w-4xl">
