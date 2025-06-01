@@ -41,6 +41,7 @@ export function GraphCard({
   author,
   graphId,
   isShared = false,
+  isPublic = false,
 }: MermaidGraphProps) {
   const [svgContent, setSvgContent] = useState<string>('')
   const [isCopied, setIsCopied] = useState<boolean>(false)
@@ -49,7 +50,7 @@ export function GraphCard({
   const [user, setUser] = useState<User | null>(null)
   const [shareUrl, setShareUrl] = useState<string>('')
   const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false)
-  const [isPublicGraph, setIsPublicGraph] = useState(false)
+  const [isPublicGraph, setIsPublicGraph] = useState(isPublic)
   const [currentGraphDefinition, setCurrentGraphDefinition] =
     useState<string>(graphDefinition)
 
