@@ -118,14 +118,16 @@ export function TopBar() {
                 )}
               </Link>
             </li>
-            <li role="none">
-              <Link href="/create">
-                <Button size="sm" className="gap-2 bg-green-600">
-                  <Plus className="h-4 w-4" />
-                  Create
-                </Button>
-              </Link>
-            </li>
+            {user && (
+              <li role="none">
+                <Link href="/create">
+                  <Button size="sm" className="gap-2 bg-green-600">
+                    <Plus className="h-4 w-4" />
+                    Create
+                  </Button>
+                </Link>
+              </li>
+            )}
 
             <li role="none">
               {user ? (
