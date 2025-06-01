@@ -1,61 +1,13 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
-import { BookOpen } from 'lucide-react'
-import { GitMerge } from 'lucide-react'
-import { Sparkles } from 'lucide-react'
-import mermaid from 'mermaid'
+import { ArrowRight, BookOpen, GitMerge, Sparkles } from 'lucide-react'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
 
 import { FEATURES, HOW_IT_WORKS } from '@/consts/landing-page-content'
+import { useMermaidGraph } from '@/hooks/useMermaidGraph'
 
-export default function StartPage() {
-  const graphRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const renderGraph = async () => {
-      if (graphRef.current) {
-        graphRef.current.innerHTML = ''
-
-        try {
-          await mermaid.initialize({
-            startOnLoad: true,
-            securityLevel: 'strict',
-            theme: 'forest',
-            look: 'handDrawn',
-          })
-
-          const graphId = `graph_${crypto.randomUUID()}`
-          const graphDefinition = `
-          graph LR
-              A(Dorothy Gale) -->|Pet| B([Toto])
-              A -->|Family| C([Uncle Henry and Aunt Em])
-              A -->|Friends| D([Scarecrow])
-              A -->|Friends| E([Tin Woodman])
-              A -->|Friends| F([Cowardly Lion])
-              A -->|Enemy| G([The Wicked Witch of The West])
-              A -->|Enemy| H([The Wizard of OZ])
-              A -->|Helps Dorothy| I([Glinda])
-              D -->|Friends| E
-              E -->|Friends| F
-              B -->|In Kansas| C`
-
-          const { svg } = await mermaid.render(graphId, graphDefinition)
-
-          graphRef.current.innerHTML = svg
-        } catch (error) {
-          console.error('Error rendering graph:', error)
-          graphRef.current.innerHTML = `
-              <div class="p-4 text-red-600">
-                Failed to render graph. Please check the syntax.
-              </div>`
-        }
-      }
-    }
-
-    renderGraph()
-  }, [])
+export default function HomePage() {
+  const graphRef = useMermaidGraph()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50 to-emerald-50">
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
