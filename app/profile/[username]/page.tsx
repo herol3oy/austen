@@ -9,12 +9,12 @@ import { createClient } from '@/lib/supabase/server'
 export default async function ProfilePage({
   params,
 }: {
-  params: {
+  params: Promise<{
     username: string
-  }
+  }>
 }) {
   const supabase = await createClient()
-  const { username: profileUsername } = params
+  const { username: profileUsername } = await params
 
   const { data: profile, error: profileError } = await supabase
     .from('profiles')
