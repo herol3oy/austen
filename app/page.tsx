@@ -4,10 +4,10 @@ import { ArrowRight, BookOpen, GitMerge, Sparkles } from 'lucide-react'
 import Link from 'next/link'
 
 import { FEATURES, HOW_IT_WORKS } from '@/consts/landing-page-content'
-import { useMermaidGraph } from '@/hooks/useMermaidGraph'
+// import { useMermaidGraph } from '@/hooks/useMermaidGraph'
 
 export default function HomePage() {
-  const graphRef = useMermaidGraph()
+  // const graphRef = useMermaidGraph()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50 to-emerald-50">
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
@@ -19,12 +19,9 @@ export default function HomePage() {
         </div>
 
         <h1 className="mb-6 bg-gradient-to-r from-teal-700 via-emerald-700 to-cyan-700 bg-clip-text text-6xl leading-tight font-bold text-transparent md:text-7xl">
-          Unravel Literary
+          Discover Story
           <br />
-          <span className="relative">
-            Relationships
-            <div className="absolute right-0 -bottom-4 left-0 h-2 rotate-1 transform rounded-full bg-gradient-to-r from-teal-400 to-emerald-400 opacity-50"></div>
-          </span>
+          Relationships
         </h1>
 
         <p className="mx-auto mb-10 max-w-3xl text-xl leading-relaxed text-slate-700">
@@ -54,7 +51,7 @@ export default function HomePage() {
               Sample: &quot;Sense and Sensibility&quot; by Jane Austen
             </div>
             <div
-              ref={graphRef}
+              // ref={graphRef}
               className="rounded-xl bg-gradient-to-br from-slate-50 to-teal-50 p-6 font-mono text-sm"
             ></div>
           </div>
