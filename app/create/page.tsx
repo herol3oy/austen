@@ -28,44 +28,43 @@ export default function Home() {
   const [searchResults, setSearchResults] = useState<Book[]>([])
   const [showResults, setShowResults] = useState<boolean>(false)
   const [graphResult, setGraphResult] = useState<GraphResult | null>(null)
-  const [hasSearched, setHasSearched] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedBook, setSelectedBook] = useState<Book | null>(null)
   const [isGeneratingGraph, setIsGeneratingGraph] = useState<boolean>(false)
 
-  useEffect(() => {
-    const requestBooks = async () => {
-      if (!searchTerm.trim() || searchTerm.length < MIN_SEARCH_LENGTH) {
-        setSearchResults([])
-        setHasSearched(false)
-        return
-      }
+  const isSearchValid = searchTerm.length >= MIN_SEARCH_LENGTH
+  const hasSearched =
+    searchResults.length > 0 ||
+    (!isPending && isSearchValid && searchTerm.trim())
 
+  useEffect(() => {
+    if (!searchTerm.trim() || !isSearchValid) {
+      setSearchResults([])
+      return
+    }
+
+    const debounceTimer = setTimeout(() => {
       startTransition(async () => {
         try {
           const books = await requestOpenlibBooks(searchTerm)
-          startTransition(() => {
-            setSearchResults(books)
-            setHasSearched(true)
-          })
+          setSearchResults(books)
         } catch (error) {
           console.error('Error fetching books:', error)
           setSearchResults([])
-          setHasSearched(false)
         }
       })
-    }
+    }, 400)
 
-    const debounceTimer = setTimeout(requestBooks, 400)
     return () => clearTimeout(debounceTimer)
-  }, [searchTerm])
+  }, [searchTerm, isSearchValid])
 
   const handleClear = () => {
     setSearchTerm('')
     setSearchResults([])
     setShowResults(false)
-    setHasSearched(false)
     setSelectedBook(null)
+    setError(null)
+    setGraphResult(null)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,6 +72,7 @@ export default function Home() {
     if (value.length <= MAX_SEARCH_LENGTH) {
       setSearchTerm(value)
       setShowResults(true)
+      setError(null)
     }
   }
 
@@ -84,21 +84,16 @@ export default function Home() {
     setSelectedBook(book)
     setIsGeneratingGraph(true)
 
-    startTransition(async () => {
-      try {
-        const result = await generateGraph(book.title, book.author_name)
-        setGraphResult(result)
-      } catch (err) {
-        setError(
-          err instanceof Error ? err.message : 'Failed to generate graph',
-        )
-      } finally {
-        setIsGeneratingGraph(false)
-      }
-    })
+    try {
+      const result = await generateGraph(book.title, book.author_name)
+      setGraphResult(result)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to generate graph')
+    } finally {
+      setIsGeneratingGraph(false)
+    }
   }
 
-  const isSearchValid = searchTerm.length >= MIN_SEARCH_LENGTH
   const showNoResults =
     hasSearched && searchResults.length === 0 && !isPending && isSearchValid
 
@@ -116,8 +111,7 @@ export default function Home() {
         </h1>
 
         <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600 sm:text-xl">
-          Search for any book and discover its story structure through
-          interactive diagrams
+          Search for any book and discover its story relationships
         </p>
 
         <div className="relative mx-auto w-full max-w-4xl">
@@ -129,11 +123,7 @@ export default function Home() {
               onChange={handleInputChange}
               onFocus={() => setShowResults(true)}
               onBlur={() => setTimeout(() => setShowResults(false), 200)}
-              className={`h-16 w-full rounded-2xl border-2 border-gray-200 bg-white px-6 pr-16 text-lg shadow-lg transition-all duration-200 placeholder:text-gray-400 focus:border-blue-500 focus:shadow-xl focus:ring-4 focus:ring-blue-500/20 sm:h-20 sm:px-8 sm:pr-20 sm:text-xl ${
-                isPending
-                  ? 'cursor-not-allowed opacity-50'
-                  : 'hover:border-gray-300 hover:shadow-xl'
-              }`}
+              className={`h-16 w-full rounded-2xl border-2 border-gray-200 bg-white px-6 pr-16 text-lg shadow-lg transition-all duration-200 placeholder:text-gray-400 hover:border-gray-300 hover:shadow-xl focus:border-blue-500 focus:shadow-xl focus:ring-4 focus:ring-blue-500/20 sm:h-20 sm:px-8 sm:pr-20 sm:text-xl`}
               maxLength={MAX_SEARCH_LENGTH}
             />
 
@@ -141,8 +131,8 @@ export default function Home() {
               {searchTerm ? (
                 <button
                   onClick={handleClear}
-                  disabled={isPending}
                   className="rounded-full p-2 text-gray-400 transition-all duration-200 hover:bg-gray-100 hover:text-gray-600 disabled:cursor-not-allowed disabled:opacity-50"
+                  aria-label="Clear search"
                 >
                   <X size={24} className="sm:h-6 sm:w-6" />
                 </button>
