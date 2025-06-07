@@ -1,5 +1,6 @@
 import './globals.css'
 
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 
 import { TopBar } from '@/components/TopBar'
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         <TopBar />
-        <main>{children}</main>
+        <main>
+          {children}
+          <Analytics />
+        </main>
         <Toaster position="bottom-center" richColors />
       </body>
     </html>
