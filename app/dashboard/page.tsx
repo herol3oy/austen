@@ -23,89 +23,8 @@ export default async function DashboardPage() {
     .eq('user_id', user.id)
     .order('created_at', { ascending: false })
 
-  const username =
-    user.user_metadata?.username || user.email?.split('@')[0] || 'User'
-
-  const publicGraphCount = userGraphs?.filter((g) => g.is_public).length || 0
-  const privateGraphCount = userGraphs?.filter((g) => !g.is_public).length || 0
-
   return (
     <div className="container mx-auto p-4 py-8 md:py-12">
-      <div className="mb-10 space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
-          {username}&apos;s Profile
-        </h1>
-        <p className="text-muted-foreground text-lg">
-          View your profile information and manage all your graphs.
-        </p>
-      </div>
-
-      <div className="mb-12 grid gap-6 md:grid-cols-2">
-        <Card className="shadow-sm">
-          <CardHeader>
-            <CardTitle className="text-xl">Profile Information</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <h3 className="text-sm font-medium text-gray-500">Username</h3>
-              <p className="mt-1 text-lg font-semibold text-gray-800">
-                {username}
-              </p>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-gray-500">Email</h3>
-              <p className="mt-1 text-gray-700">{user.email}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-gray-500">
-                Account Created
-              </h3>
-              <p className="mt-1 text-gray-700">
-                {user.created_at
-                  ? formatDistanceToNow(new Date(user.created_at), {
-                      addSuffix: true,
-                    })
-                  : 'Unknown'}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="shadow-sm">
-          <CardHeader>
-            <CardTitle className="text-xl">Graph Statistics</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="rounded-lg border bg-gray-50 p-4">
-                <h3 className="text-sm font-medium text-gray-500">
-                  Total Graphs
-                </h3>
-                <p className="mt-1 text-3xl font-bold text-gray-800">
-                  {userGraphs?.length || 0}
-                </p>
-              </div>
-              <div className="rounded-lg border bg-gray-50 p-4">
-                <h3 className="text-sm font-medium text-gray-500">
-                  Public Graphs
-                </h3>
-                <p className="mt-1 text-3xl font-bold text-gray-800">
-                  {publicGraphCount}
-                </p>
-              </div>
-              <div className="rounded-lg border bg-gray-50 p-4">
-                <h3 className="text-sm font-medium text-gray-500">
-                  Private Graphs
-                </h3>
-                <p className="mt-1 text-3xl font-bold text-gray-800">
-                  {privateGraphCount}
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
       <div>
         <h2 className="mb-6 text-2xl font-bold">Your Graphs</h2>
         {userGraphs && userGraphs.length > 0 ? (

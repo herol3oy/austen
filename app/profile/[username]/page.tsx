@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { createClient } from '@/lib/supabase/server'
 
-export default async function ProfilePage({
+export default async function UserProfilePage({
   params,
 }: {
   params: Promise<{

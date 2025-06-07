@@ -9,6 +9,7 @@ import { LogOut } from 'lucide-react'
 import { Menu } from 'lucide-react'
 import { X } from 'lucide-react'
 import { Plus } from 'lucide-react'
+import { UserCircle } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -119,14 +120,26 @@ export function TopBar() {
               </Link>
             </li>
             {user && (
-              <li role="none">
-                <Link href="/create">
-                  <Button size="sm" className="gap-2 bg-green-600">
-                    <Plus className="h-4 w-4" />
-                    Create
-                  </Button>
-                </Link>
-              </li>
+              <>
+                <li role="none">
+                  <Link
+                    href="/dashboard"
+                    className="text-muted-foreground hover:text-foreground flex items-center space-x-1 text-sm font-medium transition-colors"
+                    role="menuitem"
+                  >
+                    <LayoutDashboard className="h-4 w-4" aria-hidden="true" />
+                    <span>Dashboard</span>
+                  </Link>
+                </li>
+                <li role="none">
+                  <Link href="/create">
+                    <Button size="sm" className="gap-2 bg-green-600">
+                      <Plus className="h-4 w-4" />
+                      Create
+                    </Button>
+                  </Link>
+                </li>
+              </>
             )}
 
             <li role="none">
@@ -158,15 +171,15 @@ export function TopBar() {
                   <DropdownMenuContent align="end" className="w-56" role="menu">
                     <DropdownMenuItem asChild role="none">
                       <Link
-                        href="/dashboard"
+                        href="/profile"
                         className="flex cursor-pointer items-center"
                         role="menuitem"
                       >
-                        <LayoutDashboard
+                        <UserCircle
                           className="mr-2 h-4 w-4"
                           aria-hidden="true"
                         />
-                        Dashboard
+                        Profile
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator role="separator" />
@@ -269,6 +282,31 @@ export function TopBar() {
                         <Plus className="mr-2 h-4 w-4" aria-hidden="true" />
                         Create
                       </Button>
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      href="/dashboard"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-muted-foreground hover:text-foreground flex items-center space-x-2 px-2 py-1 text-sm font-medium transition-colors"
+                      role="menuitem"
+                    >
+                      <LayoutDashboard
+                        className="mr-2 h-4 w-4"
+                        aria-hidden="true"
+                      />
+                      <span>Dashboard</span>
+                    </Link>
+                  </li>
+                  <li role="none">
+                    <Link
+                      href="/profile"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-muted-foreground hover:text-foreground flex items-center space-x-2 px-2 py-1 text-sm font-medium transition-colors"
+                      role="menuitem"
+                    >
+                      <UserCircle className="mr-2 h-4 w-4" aria-hidden="true" />
+                      <span>Profile</span>
                     </Link>
                   </li>
                   <li role="none">
