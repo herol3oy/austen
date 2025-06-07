@@ -3,7 +3,7 @@
 import { Trash2 } from 'lucide-react'
 import { useState } from 'react'
 
-import { deleteGraph } from '@/app/actions/delete-graph'
+import { deleteGraphAction } from '@/app/actions/delete-graph-action'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -28,7 +28,7 @@ export function DeleteGraphDialog({
     e.stopPropagation()
     setIsDeleting(true)
     try {
-      await deleteGraph(graphId)
+      await deleteGraphAction(graphId)
       setIsOpen(false)
     } catch (error) {
       console.error('Error deleting graph:', error)
