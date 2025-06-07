@@ -29,13 +29,16 @@ export default function Home() {
   const [showResults, setShowResults] = useState<boolean>(false)
   const [graphResult, setGraphResult] = useState<GraphResult | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [selectedBook, setSelectedBook] = useState<Book | null>(null)
+  const [selectedBookKey, setSelectedBookKey] = useState<string | null>(null)
   const [isGeneratingGraph, setIsGeneratingGraph] = useState<boolean>(false)
 
   const isSearchValid = searchTerm.length >= MIN_SEARCH_LENGTH
   const hasSearched =
     searchResults.length > 0 ||
     (!isPending && isSearchValid && searchTerm.trim())
+
+  const selectedBook =
+    searchResults.find((b) => b.key === selectedBookKey) || null
 
   useEffect(() => {
     if (!searchTerm.trim() || !isSearchValid) {
@@ -62,7 +65,7 @@ export default function Home() {
     setSearchTerm('')
     setSearchResults([])
     setShowResults(false)
-    setSelectedBook(null)
+    setSelectedBookKey(null)
     setError(null)
     setGraphResult(null)
   }
@@ -81,7 +84,7 @@ export default function Home() {
     setSearchTerm(book.title)
     setError(null)
     setGraphResult(null)
-    setSelectedBook(book)
+    setSelectedBookKey(book.key)
     setIsGeneratingGraph(true)
 
     try {
