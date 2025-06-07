@@ -6,4 +6,5 @@ export interface MermaidGraphProps {
   graphId?: string
   isPublic?: boolean
   isShared?: boolean
+  userId?: string
 }

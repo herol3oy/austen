@@ -48,9 +48,7 @@ export function DeleteGraphDialog({
     >
       <DialogTrigger asChild>
         <Button
-          variant="ghost"
-          size="icon"
-          className="text-muted-foreground hover:text-destructive absolute top-2 right-2"
+          variant="destructive"
           onClick={(e) => {
             e.preventDefault()
             e.stopPropagation()
@@ -58,6 +56,7 @@ export function DeleteGraphDialog({
           }}
         >
           <Trash2 className="h-4 w-4" />
+          Delete
         </Button>
       </DialogTrigger>
       <DialogContent onClick={(e) => e.stopPropagation()}>

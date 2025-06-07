@@ -22,6 +22,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import { saveGraph } from '@/app/actions/save-graph'
 import { EditGraphDialog } from '@/components/EditGraphDialog'
+import { DeleteGraphDialog } from '@/components/DeleteGraphDialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -42,6 +43,7 @@ export function GraphCard({
   graphId,
   isShared = false,
   isPublic = false,
+  userId,
 }: MermaidGraphProps) {
   const [svgContent, setSvgContent] = useState<string>('')
   const [isCopied, setIsCopied] = useState<boolean>(false)
@@ -309,6 +311,13 @@ export function GraphCard({
                           <Edit2 className="mr-2 h-4 w-4" />
                           Edit Graph
                         </Button>
+
+                        {user && user.id === userId && (
+                          <DeleteGraphDialog
+                            graphId={graphId}
+                            graphTitle={title}
+                          />
+                        )}
 
                         {user && (
                           <div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50/50 px-4 py-2.5">

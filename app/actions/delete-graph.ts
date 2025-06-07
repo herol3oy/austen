@@ -1,6 +1,6 @@
 'use server'
 
-import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 
 import { createClient } from '@/lib/supabase/server'
 
@@ -28,5 +28,5 @@ export const deleteGraph = async (graphId: string) => {
     throw err
   }
 
-  revalidatePath('/dashboard')
+  redirect('/dashboard')
 }

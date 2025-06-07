@@ -30,6 +30,7 @@ export default async function ShareGraphPage({
       graphId={id}
       isPublic={graph.is_public}
       isShared={true}
+      userId={graph.user_id}
     />
   )
 }
