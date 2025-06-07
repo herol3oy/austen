@@ -1,13 +1,12 @@
 'use client'
 
 import { ArrowRight, BookOpen, GitMerge, Sparkles } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { FEATURES, HOW_IT_WORKS } from '@/consts/landing-page-content'
-import { useMermaidGraph } from '@/hooks/useMermaidGraph'
 
 export default function HomePage() {
-  const graphRef = useMermaidGraph()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-teal-50 to-emerald-50">
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
@@ -50,10 +49,14 @@ export default function HomePage() {
               <BookOpen className="mr-2 h-4 w-4" />
               Sample: &quot;Sense and Sensibility&quot; by Jane Austen
             </div>
-            <div
-              ref={graphRef}
-              className="rounded-xl bg-gradient-to-br from-slate-50 to-teal-50 p-6 font-mono text-sm"
-            ></div>
+
+            <Image
+              src="/austen-pages.dev-sense-and-sensibility-jane-austen-graph.svg"
+              width={720}
+              height={540}
+              objectFit="cover"
+              alt="Sense and Sensibility Story Book Relationships Graph"
+            />
           </div>
         </div>
       </div>
