@@ -1,10 +1,5 @@
 'use client'
 
-// eslint-disable-next-line simple-import-sort/imports
-import Prism from 'prismjs'
-import 'prismjs/components/prism-mermaid'
-import 'prismjs/themes/prism-coy.min.css'
-
 import type { User } from '@supabase/supabase-js'
 import { Code2 } from 'lucide-react'
 import { Copy } from 'lucide-react'
@@ -15,14 +10,14 @@ import { Info } from 'lucide-react'
 import { Lock } from 'lucide-react'
 import { Share2 } from 'lucide-react'
 import { Pencil } from 'lucide-react'
-
 import mermaid from 'mermaid'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { toast } from 'sonner'
 
 import { saveGraph } from '@/app/actions/save-graph'
-import { EditGraphDialog } from '@/components/EditGraphDialog'
 import { DeleteGraphDialog } from '@/components/DeleteGraphDialog'
+import { EditGraphDialog } from '@/components/EditGraphDialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -30,10 +25,10 @@ import { Switch } from '@/components/ui/switch'
 import { createClient } from '@/lib/supabase/client'
 import { MermaidGraphProps } from '@/types/mermaid-graph-props'
 import { copyMermaidSyntax } from '@/utils/copy-mermaid-syntax'
-import { toast } from 'sonner'
 import { copyUrl } from '@/utils/copy-url'
 import { downloadPng } from '@/utils/download-png'
 import { downloadSvg } from '@/utils/download-svg'
+import { highlighter } from '@/utils/highlighter'
 
 export function GraphCard({
   graphDefinition,
@@ -57,7 +52,6 @@ export function GraphCard({
     useState<string>(graphDefinition)
 
   const graphRef = useRef<HTMLDivElement>(null)
-  const codeRef = useRef<HTMLElement>(null)
   const urlInputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
@@ -95,12 +89,6 @@ export function GraphCard({
     }
 
     renderGraph()
-  }, [currentGraphDefinition])
-
-  useEffect(() => {
-    if (codeRef.current) {
-      Prism.highlightElement(codeRef.current)
-    }
   }, [currentGraphDefinition])
 
   useEffect(() => {
@@ -214,6 +202,14 @@ export function GraphCard({
       console.error('Error updating graph:', error)
     }
   }
+
+  const highlightedHtml = highlighter.codeToHtml(
+    '```mermaid\n' + currentGraphDefinition + '\n```',
+    {
+      theme: 'light-plus',
+      lang: 'mermaid',
+    },
+  )
 
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200/60 bg-white shadow-lg shadow-gray-100/50 transition-all duration-200 hover:shadow-xl hover:shadow-gray-100/60">
@@ -418,17 +414,10 @@ export function GraphCard({
               </Button>
             </div>
 
-            <div className="relative">
-              <pre
-                suppressHydrationWarning
-                className="language-mermaid overflow-x-auto rounded bg-gray-50 p-4 text-sm"
-                data-prismjs-copy="Copy"
-              >
-                <code ref={codeRef} className="language-mermaid">
-                  {currentGraphDefinition}
-                </code>
-              </pre>
-            </div>
+            <div
+              className="overflow-x-auto rounded p-4 text-sm"
+              dangerouslySetInnerHTML={{ __html: highlightedHtml }}
+            />
           </div>
         </div>
       </div>
