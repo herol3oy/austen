@@ -1,6 +1,6 @@
-import { getFileName } from '@/utils/get-graph-file-name'
+import { generateGraphFileName } from '@/utils/get-graph-file-name'
 
-export const downloadSvg = (
+export const exportGraphAsSvg = (
   svgContent: string,
   title: string,
   author: string,
@@ -11,7 +11,7 @@ export const downloadSvg = (
   const url = window.URL.createObjectURL(blob)
   const link = document.createElement('a')
   link.href = url
-  link.download = `${getFileName(title, author)}.svg`
+  link.download = `${generateGraphFileName(title, author)}.svg`
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)

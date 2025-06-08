@@ -1,15 +1,17 @@
 'use client'
 
 import type { User } from '@supabase/supabase-js'
-import { Code2 } from 'lucide-react'
-import { Copy } from 'lucide-react'
-import { Download } from 'lucide-react'
-import { Edit2 } from 'lucide-react'
-import { Globe2 } from 'lucide-react'
-import { Info } from 'lucide-react'
-import { Lock } from 'lucide-react'
-import { Share2 } from 'lucide-react'
-import { Pencil } from 'lucide-react'
+import {
+  Code2,
+  Copy,
+  Download,
+  Edit2,
+  Globe2,
+  Info,
+  Lock,
+  Pencil,
+  Share2,
+} from 'lucide-react'
 import mermaid from 'mermaid'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
@@ -24,10 +26,10 @@ import { Label } from '@/components/ui/label'
 import { Switch } from '@/components/ui/switch'
 import { createClient } from '@/lib/supabase/client'
 import { MermaidGraphProps } from '@/types/mermaid-graph-props'
-import { copyMermaidSyntax } from '@/utils/copy-mermaid-syntax'
-import { copyUrl } from '@/utils/copy-url'
-import { downloadPng } from '@/utils/download-png'
-import { downloadSvg } from '@/utils/download-svg'
+import { copyMermaidToClipboard } from '@/utils/copy-mermaid-syntax'
+import { copyUrlToClipboard } from '@/utils/copy-url'
+import { exportGraphAsPng } from '@/utils/download-png'
+import { exportGraphAsSvg } from '@/utils/download-svg'
 import { highlighter } from '@/utils/highlighter'
 
 export function GraphCard({
@@ -47,7 +49,7 @@ export function GraphCard({
   const [user, setUser] = useState<User | null>(null)
   const [shareUrl, setShareUrl] = useState<string>('')
   const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false)
-  const [isPublicGraph, setIsPublicGraph] = useState(isPublic)
+  const [isPublicGraph, setIsPublicGraph] = useState<boolean>(isPublic)
   const [currentGraphDefinition, setCurrentGraphDefinition] =
     useState<string>(graphDefinition)
 
@@ -120,12 +122,12 @@ export function GraphCard({
       return
     }
     if (!svgContent) return
-    downloadSvg(svgContent, title || 'untitled', author || 'unknown')
+    exportGraphAsSvg(svgContent, title || 'untitled', author || 'unknown')
   }
 
   const handleDownloadPng = () => {
     if (!svgContent) return
-    downloadPng(graphRef, title || 'untitled', author || 'unknown')
+    exportGraphAsPng(graphRef, title || 'untitled', author || 'unknown')
   }
 
   const handleTogglePublic = async () => {
@@ -168,7 +170,7 @@ export function GraphCard({
   }
 
   const handleCopyUrlClick = async () => {
-    await copyUrl(urlInputRef, setIsUrlCopied)
+    await copyUrlToClipboard(urlInputRef, setIsUrlCopied)
   }
 
   const handleInputClick = async (e: React.MouseEvent<HTMLInputElement>) => {
@@ -179,7 +181,7 @@ export function GraphCard({
   }
 
   const handleCopyMermaidSyntax = async () => {
-    await copyMermaidSyntax(currentGraphDefinition, setIsCopied)
+    await copyMermaidToClipboard(currentGraphDefinition, setIsCopied)
   }
 
   const handleUpdateGraph = async (newSyntax: string) => {

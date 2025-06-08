@@ -1,4 +1,4 @@
-export const copyUrl = async (
+export const copyUrlToClipboard = async (
   urlInputRef: React.RefObject<HTMLInputElement | null>,
   setUrlCopied: (value: boolean) => void,
 ) => {

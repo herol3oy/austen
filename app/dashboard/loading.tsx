@@ -7,7 +7,6 @@ export default function DashboardLoading() {
         <div className="h-10 w-1/3 animate-pulse rounded-md bg-gray-200"></div>
         <div className="h-6 w-1/2 animate-pulse rounded-md bg-gray-200"></div>
       </div>
-
       <div className="mb-12 grid gap-6 md:grid-cols-2">
         <Card className="shadow-sm">
           <CardHeader>
@@ -38,7 +37,6 @@ export default function DashboardLoading() {
           </CardContent>
         </Card>
       </div>
-
       <div>
         <div className="mb-6 h-8 w-1/4 animate-pulse rounded-md bg-gray-200"></div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

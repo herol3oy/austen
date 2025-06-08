@@ -1,9 +1,9 @@
 import domtoimage from 'dom-to-image'
 import type { RefObject } from 'react'
 
-import { getFileName } from '@/utils/get-graph-file-name'
+import { generateGraphFileName } from '@/utils/get-graph-file-name'
 
-export const downloadPng = async (
+export const exportGraphAsPng = async (
   graphRef: RefObject<HTMLDivElement | null>,
   title: string,
   author: string,
@@ -14,7 +14,7 @@ export const downloadPng = async (
     const dataUrl = await domtoimage.toPng(graphRef.current)
     const link = document.createElement('a')
     link.href = dataUrl
-    link.download = `${getFileName(title, author)}.png`
+    link.download = `${generateGraphFileName(title, author)}.png`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)

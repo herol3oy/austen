@@ -10,7 +10,6 @@ export default function ProfileLoading() {
           <div className="h-6 w-64 animate-pulse rounded-md bg-gray-200"></div>
         </div>
       </div>
-
       <div className="mb-12 grid gap-6 md:grid-cols-2">
         <Card className="shadow-sm">
           <CardHeader>
@@ -41,7 +40,6 @@ export default function ProfileLoading() {
           </CardContent>
         </Card>
       </div>
-
       <div>
         <div className="mb-6 h-8 w-1/4 animate-pulse rounded-md bg-gray-200"></div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

@@ -1,4 +1,4 @@
-export const copyMermaidSyntax = async (
+export const copyMermaidToClipboard = async (
   graphDefinition: string,
   setIsCopied: (value: boolean) => void,
 ) => {
