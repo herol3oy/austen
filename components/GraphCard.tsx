@@ -415,7 +415,7 @@ export function GraphCard({
             </div>
 
             <div
-              className="overflow-x-auto rounded p-4 text-sm"
+              className="overflow-x-auto rounded p-4 text-left text-sm"
               dangerouslySetInnerHTML={{ __html: highlightedHtml }}
             />
           </div>
