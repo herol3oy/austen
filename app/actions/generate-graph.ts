@@ -11,9 +11,12 @@ const openai = new OpenAI({
 })
 
 export const generateGraph = async (
-  bookTitle: string,
-  authorName: string,
+  _: GenerateGraphResponse | null,
+  formData: FormData,
 ): Promise<GenerateGraphResponse> => {
+  const bookTitle = formData.get('title') as string
+  const authorName = formData.get('author') as string
+
   if (!bookTitle || !authorName) {
     throw new Error('Book title and author name are required')
   }
