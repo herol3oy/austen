@@ -32,6 +32,9 @@ export const requestOpenlibBooks = async (
         key: book.key,
         title: book.title,
         author_name: book.author_name[0],
+        coverImageUrl: book.cover_i
+          ? `https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`
+          : undefined,
       }))
   } catch (error) {
     console.error('Error fetching books:', error)

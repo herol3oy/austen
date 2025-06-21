@@ -1,6 +1,7 @@
 'use client'
 
 import { X } from 'lucide-react'
+import Image from 'next/image'
 import { useActionState, useEffect, useState } from 'react'
 
 import { generateGraph } from '@/app/actions/generate-graph'
@@ -11,6 +12,7 @@ interface Book {
   key: string
   title: string
   author_name: string
+  coverImageUrl?: string
 }
 
 const MIN_SEARCH_LENGTH = 3
@@ -123,10 +125,27 @@ export default function Home() {
                 <li
                   key={book.key}
                   onClick={() => handleSelectBook(book)}
-                  className="cursor-pointer border-b border-gray-200 p-4 last:border-b-0 hover:bg-gray-100"
+                  className="flex cursor-pointer items-center gap-4 border-b border-gray-200 p-4 last:border-b-0 hover:bg-gray-100"
                 >
-                  <div className="text-lg font-bold">{book.title}</div>
-                  <div className="text-gray-600">by {book.author_name}</div>
+                  {book.coverImageUrl && (
+                    <Image
+                      className="h-15 w-10 rounded border border-gray-200 object-cover"
+                      src={book.coverImageUrl}
+                      alt={`Cover of ${book.title}`}
+                      width={40}
+                      height={60}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM89R8AApkBy17XrZoAAAAASUVORK5CYII="
+                    />
+                  )}
+                  <div className="min-w-0 flex-1">
+                    <div className="truncate text-lg font-bold">
+                      {book.title}
+                    </div>
+                    <div className="truncate text-gray-600">
+                      by {book.author_name}
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
