@@ -13,6 +13,7 @@ import {
   Share2,
 } from 'lucide-react'
 import mermaid from 'mermaid'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { toast } from 'sonner'
@@ -37,6 +38,7 @@ export function GraphCard({
   emojis,
   title,
   author,
+  coverImageUrl,
   graphId,
   isShared = false,
   isPublic = false,
@@ -247,6 +249,21 @@ export function GraphCard({
           </div>
         </div>
       </div>
+
+      {coverImageUrl && (
+        <div className="flex justify-center border-b border-gray-100 bg-gray-50/50 p-4">
+          <div className="relative h-48 w-32 overflow-hidden rounded-md border border-gray-200 shadow-sm">
+            <Image
+              src={coverImageUrl}
+              alt={`Cover of ${title} by ${author}`}
+              width={600}
+              height={900}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM89R8AApkBy17XrZoAAAAASUVORK5CYII="
+            />
+          </div>
+        </div>
+      )}
 
       <div className="p-8">
         <div className="space-y-8">

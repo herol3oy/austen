@@ -204,6 +204,7 @@ export default function Home() {
           emojis={state.emojis}
           title={selectedBook.title}
           author={selectedBook.author_name}
+          coverImageUrl={selectedBook.coverImageUrl}
         />
       )}
     </div>

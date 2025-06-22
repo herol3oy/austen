@@ -7,4 +7,5 @@ export interface MermaidGraphProps {
   isPublic?: boolean
   isShared?: boolean
   userId?: string
+  coverImageUrl?: string
 }

@@ -33,7 +33,7 @@ export const requestOpenlibBooks = async (
         title: book.title,
         author_name: book.author_name[0],
         coverImageUrl: book.cover_i
-          ? `https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`
+          ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
           : undefined,
       }))
   } catch (error) {
