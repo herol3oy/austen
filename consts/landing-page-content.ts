@@ -61,7 +61,7 @@ export const HOW_IT_WORKS = [
     step: '02',
     title: 'AI Analysis',
     description:
-      "Our advanced AI analyzes the book's content to identify characters and their relationships, connections, and interactions.",
+      "AI analyzes the book's content to identify characters and their relationships and connections.",
   },
   {
     step: '03',
