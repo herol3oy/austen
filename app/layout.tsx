@@ -7,8 +7,9 @@ import { TopBar } from '@/components/TopBar'
 import { Toaster } from '@/components/ui/sonner'
 
 export const metadata: Metadata = {
-  title: 'Austen',
-  description: 'Discover Story Relationships',
+  title: 'Austen | Discover Story Relationships',
+  description:
+    'Discover the connections between your favorite book characters through AI-generated relationship diagrams',
 }
 
 export default function RootLayout({
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body>
         <TopBar />
         <main>
           {children}
