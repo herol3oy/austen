@@ -1,6 +1,6 @@
 'use client'
 
-import { X } from 'lucide-react'
+import { Sparkles, X } from 'lucide-react'
 import Image from 'next/image'
 import { useActionState, useEffect, useState } from 'react'
 
@@ -76,9 +76,17 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-4xl p-8">
-      <h1 className="mb-8 text-center text-4xl font-bold">
-        Book Graph Generator
-      </h1>
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 text-center">
+        <div className="mb-8">
+          <span className="inline-flex items-center rounded-full border border-teal-300 bg-white px-4 py-2 text-sm font-medium text-teal-700">
+            <Sparkles className="mr-2 h-4 w-4" />
+            Discover Story Relationships
+          </span>
+        </div>
+        <h1 className="mb-6 text-5xl leading-tight font-bold text-teal-800 md:text-7xl">
+          Find Your Book
+        </h1>
+      </div>
 
       <form action={handleSubmit} className="space-y-6">
         <div className="relative">

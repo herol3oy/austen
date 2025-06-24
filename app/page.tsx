@@ -49,13 +49,16 @@ export default function HomePage() {
               <BookOpen className="mr-2 h-4 w-4" />
               Sample: &quot;Sense and Sensibility&quot; by Jane Austen
             </div>
-
             <Image
+              className="mx-auto items-center"
               src="/austen-pages.dev-sense-and-sensibility-jane-austen-graph.svg"
               width={720}
               height={540}
+              layout="responsive"
               objectFit="cover"
               alt="Sense and Sensibility Story Book Relationships Graph"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM89R8AApkBy17XrZoAAAAASUVORK5CYII="
             />
           </div>
         </div>
