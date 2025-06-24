@@ -1,15 +1,18 @@
 'use client'
 
 import { User } from '@supabase/supabase-js'
-import { ChevronDown } from 'lucide-react'
-import { GitMerge } from 'lucide-react'
-import { Star } from 'lucide-react'
-import { LayoutDashboard } from 'lucide-react'
-import { LogOut } from 'lucide-react'
-import { Menu } from 'lucide-react'
-import { X } from 'lucide-react'
-import { Plus } from 'lucide-react'
-import { UserCircle } from 'lucide-react'
+import {
+  ChevronDown,
+  GitMerge,
+  LayoutDashboard,
+  LogOut,
+  Menu,
+  Plus,
+  Star,
+  UserCircle,
+  X,
+} from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -25,6 +28,8 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { GITHUB_REPO_URL } from '@/consts/github-repo-url'
 import { createClient } from '@/lib/supabase/client'
+
+import AustenLogo from '../public/jane-austen-inspired-illustrations_logo.png'
 
 export function TopBar() {
   const [user, setUser] = useState<User | null>(null)
@@ -91,6 +96,17 @@ export function TopBar() {
           aria-label="Main navigation"
         >
           <Link href="/" className="flex items-center space-x-2">
+            <div className="relative h-8 w-8">
+              <Image
+                src={AustenLogo}
+                alt="Austen Logo"
+                fill
+                sizes="32px"
+                className="object-contain"
+                priority
+                placeholder="blur"
+              />
+            </div>
             <h1 className="text-foreground hover:text-primary text-xl font-bold transition-colors">
               Austen
             </h1>

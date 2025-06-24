@@ -158,12 +158,7 @@ export default function HomePage() {
       <footer className="border-t border-teal-100 bg-slate-50 py-12">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col items-center justify-between md:flex-row">
-            <div className="mb-4 flex items-center space-x-3 md:mb-0">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600">
-                <BookOpen className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-slate-800">Austen</span>
-            </div>
+            <span className="text-xl font-bold text-slate-800">Austen</span>
             <div className="flex items-center space-x-6">
               <Link
                 href="https://github.com/herol3oy/austen"
