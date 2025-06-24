@@ -82,9 +82,7 @@ export default function HomePage() {
                 key={feature.title}
                 className="group transform rounded-2xl border border-teal-100 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
-                <div
-                  className={`h-12 w-12 bg-teal-600 ${feature.color} mb-4 flex items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110`}
-                >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-teal-600 transition-transform duration-300 group-hover:scale-110">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold text-slate-800">
