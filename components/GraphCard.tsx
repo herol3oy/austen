@@ -5,7 +5,6 @@ import {
   Code2,
   Copy,
   Download,
-  Edit2,
   Globe2,
   Info,
   Lock,
@@ -15,8 +14,8 @@ import {
 import mermaid from 'mermaid'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { toast } from 'sonner'
 
 import { saveGraph } from '@/app/actions/save-graph'
 import { DeleteGraphDialog } from '@/components/DeleteGraphDialog'
@@ -49,7 +48,11 @@ export function GraphCard({
   const [isUrlCopied, setIsUrlCopied] = useState<boolean>(false)
   const [isSaving, setIsSaving] = useState<boolean>(false)
   const [user, setUser] = useState<User | null>(null)
-  const [shareUrl, setShareUrl] = useState<string>('')
+  const router = useRouter()
+  const shareUrl =
+    typeof window !== 'undefined' && graphId
+      ? `${window.location.origin}/share/${graphId}`
+      : ''
   const [isEditDialogOpen, setIsEditDialogOpen] = useState<boolean>(false)
   const [isPublicGraph, setIsPublicGraph] = useState<boolean>(isPublic)
   const [currentGraphDefinition, setCurrentGraphDefinition] =
@@ -57,12 +60,6 @@ export function GraphCard({
 
   const graphRef = useRef<HTMLDivElement>(null)
   const urlInputRef = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    if (graphId) {
-      setShareUrl(`${window.location.origin}/share/${graphId}`)
-    }
-  }, [graphId])
 
   useEffect(() => {
     const renderGraph = async () => {
@@ -119,10 +116,10 @@ export function GraphCard({
   }, [])
 
   const handleDownloadSvg = () => {
-    if (!user) {
-      toast.error('Log in to download svg file')
-      return
-    }
+    // if (!user) {
+    //   toast.error('Log in to download svg file')
+    //   return
+    // }
     if (!svgContent) return
     exportGraphAsSvg(svgContent, title || 'untitled', author || 'unknown')
   }
@@ -152,18 +149,23 @@ export function GraphCard({
     }
   }
 
-  const handleSaveGraph = async () => {
+  const handleSaveGraph = async (shouldRedirect = false) => {
     if (!svgContent) return
 
     setIsSaving(true)
     try {
-      await saveGraph({
+      const result = await saveGraph({
         bookName: title,
         authorName: author,
         svgGraph: svgContent,
         mermaidSyntax: graphDefinition,
         emojis,
+        isPublic: !user, // Guest users' graphs are public by default
       })
+
+      if (shouldRedirect && result?.graphId) {
+        router.push(`/share/${result.graphId}`)
+      }
     } catch (error) {
       console.error('Error saving graph:', error)
     } finally {
@@ -278,14 +280,14 @@ export function GraphCard({
                   <div className="flex items-center gap-2">
                     <Button
                       onClick={handleDownloadSvg}
-                      className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                      className="inline-flex items-center gap-2 rounded-lg border bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                     >
                       <Download className="h-4 w-4" />
                       Download SVG
                     </Button>
                     <Button
                       onClick={handleDownloadPng}
-                      className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+                      className="inline-flex items-center gap-2 rounded-lg border bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
                     >
                       <Download className="h-4 w-4" />
                       Download PNG
@@ -295,13 +297,7 @@ export function GraphCard({
                   <div className="flex items-center gap-3">
                     {!isShared && (
                       <Button
-                        onClick={() => {
-                          if (!user) {
-                            toast.error('Log in to share the graph')
-                            return
-                          }
-                          handleSaveGraph()
-                        }}
+                        onClick={() => handleSaveGraph(true)}
                         disabled={isSaving}
                         className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-all hover:bg-green-700 hover:shadow-md focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                       >
@@ -312,7 +308,7 @@ export function GraphCard({
 
                     {graphId && (
                       <>
-                        <Button
+                        {/* <Button
                           onClick={() => {
                             if (!user) {
                               toast.error('Log in to edit the graph')
@@ -325,7 +321,7 @@ export function GraphCard({
                         >
                           <Edit2 className="mr-2 h-4 w-4" />
                           Edit Graph
-                        </Button>
+                        </Button> */}
 
                         {user && user.id === userId && (
                           <DeleteGraphDialog

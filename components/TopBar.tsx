@@ -8,6 +8,7 @@ import {
   LogOut,
   Menu,
   Plus,
+  Sparkles,
   Star,
   UserCircle,
   X,
@@ -135,6 +136,17 @@ export function TopBar() {
                 )}
               </Link>
             </li>
+            <li role="none">
+              <Link
+                href="/discover"
+                className="text-muted-foreground hover:text-foreground flex items-center space-x-1 text-sm font-medium transition-colors"
+                role="menuitem"
+              >
+                <Sparkles className="h-4 w-4" aria-hidden="true" />
+                <span>Discover</span>
+              </Link>
+            </li>
+
             {user && (
               <>
                 <li role="none">
@@ -210,11 +222,12 @@ export function TopBar() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
-                <Link href="/auth/login">
-                  <Button variant="default" size="sm">
-                    Login
-                  </Button>
-                </Link>
+                <></>
+                // <Link href="/auth/login">
+                //   <Button variant="default" size="sm">
+                //     Login
+                //   </Button>
+                // </Link>
               )}
             </li>
           </ul>
@@ -266,6 +279,18 @@ export function TopBar() {
                       <span className="text-xs font-medium">{starCount}</span>
                     </div>
                   )}
+                </Link>
+              </li>
+
+              <li role="none">
+                <Link
+                  href="/discover"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-muted-foreground hover:text-foreground flex items-center space-x-2 px-2 py-1 text-sm font-medium transition-colors"
+                  role="menuitem"
+                >
+                  <Sparkles className="mr-2 h-4 w-4" aria-hidden="true" />
+                  <span>Discover</span>
                 </Link>
               </li>
 

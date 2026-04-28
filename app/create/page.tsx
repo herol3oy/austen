@@ -31,15 +31,17 @@ export default function Home() {
     if (selectedBook) return
 
     if (searchTerm.length < MIN_SEARCH_LENGTH) {
-      setResults([])
       return
     }
 
     const debounce = setTimeout(() => {
       setIsSearchingOpenLib(true)
       requestOpenlibBooks(searchTerm)
-        .then(setResults)
-        .finally(() => setIsSearchingOpenLib(false))
+        .then((books) => {
+          setResults(books)
+          setIsSearchingOpenLib(false)
+        })
+        .catch(() => setIsSearchingOpenLib(false))
     }, 400)
 
     return () => clearTimeout(debounce)

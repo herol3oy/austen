@@ -1,7 +1,7 @@
 'use client'
 
 import mermaid from 'mermaid'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -24,10 +24,6 @@ export function EditGraphDialog({
   const [syntax, setSyntax] = useState(initialSyntax)
   const [error, setError] = useState<string | null>(null)
   const [isSaving, setIsSaving] = useState(false)
-
-  useEffect(() => {
-    setSyntax(initialSyntax)
-  }, [initialSyntax])
 
   const validateMermaidSyntax = async (graphSyntax: string) => {
     try {

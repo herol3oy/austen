@@ -4,4 +4,5 @@ export interface SaveGraphParams {
   svgGraph: string
   mermaidSyntax: string
   emojis: string
+  isPublic?: boolean
 }

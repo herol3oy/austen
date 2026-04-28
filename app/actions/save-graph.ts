@@ -1,7 +1,5 @@
 'use server'
 
-import { redirect } from 'next/navigation'
-
 import { createClient } from '@/lib/supabase/server'
 import { SaveGraphParams } from '@/types/save-graph-params'
 
@@ -11,16 +9,13 @@ export const saveGraph = async ({
   svgGraph,
   mermaidSyntax,
   emojis,
-}: SaveGraphParams) => {
+  isPublic = false,
+}: SaveGraphParams & { isPublic?: boolean }) => {
   const supabase = await createClient()
 
   const {
     data: { user },
   } = await supabase.auth.getUser()
-
-  if (!user) {
-    throw new Error('User must be logged in to save graphs')
-  }
 
   const graphId = crypto.randomUUID()
 
@@ -33,8 +28,8 @@ export const saveGraph = async ({
         svg_graph: svgGraph,
         mermaid_syntax: mermaidSyntax,
         emojis,
-        user_id: user.id,
-        is_public: false,
+        user_id: user?.id ?? null,
+        is_public: isPublic,
       },
     ])
 
@@ -44,5 +39,5 @@ export const saveGraph = async ({
     throw err
   }
 
-  redirect(`/share/${graphId}`)
+  return { graphId }
 }
