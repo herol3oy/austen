@@ -50,7 +50,6 @@ export const updateSession = async (request: NextRequest) => {
   if (
     !user &&
     request.nextUrl.pathname !== '/' &&
-    request.nextUrl.pathname !== '/create' &&
     !request.nextUrl.pathname.startsWith('/share/') &&
     !request.nextUrl.pathname.startsWith('/profile/') &&
     !request.nextUrl.pathname.startsWith('/login') &&

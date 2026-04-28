@@ -148,7 +148,7 @@ export function TopBar() {
                   </Link>
                 </li>
                 <li role="none">
-                  <Link href="/create">
+                  <Link href="/">
                     <Button size="sm" className="gap-2 bg-green-600">
                       <Plus className="h-4 w-4" />
                       Create
@@ -289,7 +289,7 @@ export function TopBar() {
                     </div>
                   </li>
                   <li role="none">
-                    <Link href="/create" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="/" onClick={() => setIsMenuOpen(false)}>
                       <Button
                         size="sm"
                         className="w-full justify-start gap-2 bg-green-600 text-white hover:bg-green-700"

@@ -100,7 +100,7 @@ export default async function DashboardPage() {
               Get started by creating your first character relationship graph.
             </p>
             <div className="mt-6">
-              <Link href="/create">
+              <Link href="/">
                 <button
                   type="button"
                   className="inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
