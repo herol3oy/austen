@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Austen — Book Relationship Diagrams</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --color-paper: #faf7f0;
+      --color-paper-dim: #f0ebe0;
+      --color-paper-warm: #e8e1d3;
+      --color-ink: #2c2825;
+      --color-ink-muted: #7a7168;
+      --color-ink-faint: #a39e94;
+      --color-green: #2d5a3d;
+      --color-green-dark: #1e3f2b;
+      --color-green-faded: rgba(45, 90, 61, 0.1);
+      --color-green-line: rgba(45, 90, 61, 0.18);
+      --color-wine: #8b3a3a;
+      --color-wine-faded: rgba(139, 58, 58, 0.12);
+      --color-brass: #b8943e;
+      --color-brass-faded: rgba(184, 148, 62, 0.15);
+
+      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --radius: 8px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 3px rgba(44, 40, 37, 0.06);
+      --shadow-md: 0 4px 16px rgba(44, 40, 37, 0.08);
+      --shadow-lg: 0 8px 32px rgba(44, 40, 37, 0.1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li,
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--color-paper);
+      color: var(--color-ink);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding-bottom: 3rem;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.15;
+      color: var(--color-ink);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .site-header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+
+    .header-titles {
+      justify-self: start;
+    }
+
+    .logo-link {
+      justify-self: center;
+      display: inline-block;
+      transition: opacity 0.25s ease;
+    }
+
+    .logo-link:hover {
+      opacity: 0.7;
+    }
+
+    .github-link {
+      justify-self: end;
+    }
+
+    .site-logo {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .header-titles h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .header-titles .tagline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--color-ink-muted);
+      margin-top: 0.1rem;
+    }
+
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--color-ink-muted);
+      text-decoration: none;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--color-green-line);
+      transition: all 0.25s ease;
+    }
+
+    .github-link:hover {
+      color: var(--color-green);
+      border-color: var(--color-green);
+      background: var(--color-green-faded);
+    }
+
+    .ornament {
+      text-align: center;
+      color: var(--color-ink-faint);
+      font-size: 0.7rem;
+      letter-spacing: 0.6em;
+      user-select: none;
+      padding: 0.25rem 0 0;
+      opacity: 0.5;
+    }
+
+    #search-section {
+      text-align: center;
+      padding: 3.5rem 0 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #search-section h2 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--color-green);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.025em;
+    }
+
+    .search-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--color-ink-muted);
+      margin-bottom: 2rem;
+    }
+
+    .search-bar {
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1.15rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-ink-faint);
+      pointer-events: none;
+      transition: color 0.25s;
+    }
+
+    .search-bar input[type="search"] {
+      width: 100%;
+      padding: 0.95rem 1.25rem 0.95rem 3rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--color-ink);
+      background: #fff;
+      border: 1.5px solid var(--color-green-line);
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      appearance: none;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .search-bar input[type="search"]:focus {
+      outline: none;
+      border-color: var(--color-green);
+      box-shadow: var(--shadow-md), 0 0 0 4px var(--color-green-faded);
+      background: #fff;
+    }
+
+    .search-bar input[type="search"]:focus~.search-icon {
+      color: var(--color-green);
+    }
+
+    .search-bar input[type="search"]::placeholder {
+      color: var(--color-ink-faint);
+      font-weight: 300;
+    }
+
+    button {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius);
+      border: 1.5px solid transparent;
+      background: var(--color-green);
+      color: #fff;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    button:hover:not(:disabled) {
+      background: var(--color-green-dark);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(0);
+      box-shadow: var(--shadow-sm);
+    }
+
+    button:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--color-green-faded);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: var(--color-green);
+      border: 1.5px solid var(--color-green-line);
+      box-shadow: none;
+    }
+
+    button.secondary:hover:not(:disabled) {
+      background: var(--color-green-faded);
+      border-color: var(--color-green);
+      box-shadow: none;
+      transform: none;
+    }
+
+    .status-line {
+      min-height: 1.4em;
+      font-size: 0.85rem;
+      margin-block: 0.5rem 0;
+      color: var(--color-ink-muted);
+    }
+
+    .status-line[data-tone="error"] {
+      color: var(--color-wine);
+    }
+
+    .status-line[data-tone="success"] {
+      color: var(--color-green);
+    }
+
+    .status-line:empty {
+      margin: 0;
+    }
+
+    .catalog {
+      list-style: none;
+      margin: 1.25rem 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .catalog-card {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      width: 100%;
+      text-align: left;
+      background: #fff;
+      border: 1px solid rgba(44, 40, 37, 0.07);
+      border-radius: var(--radius);
+      padding: 0.8rem;
+      color: var(--color-ink);
+      font-weight: normal;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .catalog-card:hover:not(:disabled),
+    .catalog-card:focus-visible {
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-green-line);
+      transform: translateY(-2px);
+    }
+
+    .catalog-card img {
+      width: 44px;
+      height: 62px;
+      object-fit: cover;
+      background: var(--color-paper-dim);
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .catalog-card .cover-placeholder {
+      width: 44px;
+      height: 62px;
+      flex-shrink: 0;
+      background: var(--color-paper-dim);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .catalog-card .meta {
+      min-width: 0;
+    }
+
+    .catalog-card .meta strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--color-ink);
+    }
+
+    .catalog-card .meta span {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      margin-top: 0.15rem;
+      line-height: 1.35;
+    }
+
+    .bookplate {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      background: #fff;
+      border: 1px solid rgba(44, 40, 37, 0.07);
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .bookplate img,
+    .bookplate .cover-placeholder {
+      width: 72px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bookplate .cover-placeholder {
+      background: var(--color-paper-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+
+    .bookplate .details {
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .bookplate .details h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .bookplate .details p {
+      margin: 0;
+      color: var(--color-ink-muted);
+      font-size: 0.88rem;
+    }
+
+    .bookplate .actions {
+      flex-shrink: 0;
+    }
+
+    .mermaid-frame {
+      background: #fff;
+      border: 1px solid rgba(44, 40, 37, 0.07);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .mermaid-scroll {
+      overflow: auto;
+      max-height: 65vh;
+    }
+
+    .mermaid-scroll svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .mermaid-fallback {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 0.82rem;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      color: var(--color-ink-muted);
+      background: var(--color-paper-dim);
+      padding: 1rem;
+      border-radius: var(--radius);
+    }
+
+    .actions-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .share-link-group {
+      display: flex;
+      gap: 0.4rem;
+      flex: 1;
+      min-width: 0;
+      align-items: stretch;
+    }
+
+    .share-url-input {
+      flex: 1;
+      min-width: 0;
+      padding: 0.55rem 0.85rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--color-ink-muted);
+      background: #fff;
+      border: 1.5px solid var(--color-green-line);
+      border-radius: var(--radius);
+      appearance: none;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .share-url-input:focus {
+      outline: none;
+      border-color: var(--color-green);
+      box-shadow: 0 0 0 3px var(--color-green-faded);
+    }
+
+    .share-link-group button {
+      flex-shrink: 0;
+    }
+
+    .source-group {
+      display: flex;
+      gap: 0.4rem;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .source-textarea {
+      flex: 1;
+      min-width: 0;
+      padding: 0.55rem 0.85rem;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: var(--color-ink-muted);
+      background: #fff;
+      border: 1.5px solid var(--color-green-line);
+      border-radius: var(--radius);
+      appearance: none;
+      box-shadow: var(--shadow-sm);
+      resize: vertical;
+      min-height: 5rem;
+      max-height: 12rem;
+    }
+
+    .source-textarea:focus {
+      outline: none;
+      border-color: var(--color-green);
+      box-shadow: 0 0 0 3px var(--color-green-faded);
+    }
+
+    .source-group button {
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+
+    #actions-section .status-line {
+      margin: 0;
+      min-height: 1.2em;
+    }
+
+    .shelf {
+      list-style: none;
+      margin: 0.75rem 0 0;
+    }
+
+    .shelf-item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      text-align: left;
+      background: none;
+      border: none;
+      border-bottom: 1px solid rgba(44, 40, 37, 0.06);
+      padding: 0.7rem 0.4rem;
+      border-radius: 0;
+      color: var(--color-ink);
+      font-family: var(--font-body);
+      font-weight: normal;
+      box-shadow: none;
+      transition: all 0.2s ease;
+    }
+
+    .shelf-item:hover:not(:disabled),
+    .shelf-item:focus-visible {
+      color: var(--color-green);
+      background: var(--color-green-faded);
+      border-radius: var(--radius);
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .shelf-item .shelf-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+
+    .shelf-item .shelf-meta {
+      font-size: 0.78rem;
+      color: var(--color-ink-faint);
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 4rem;
+    }
+
+    footer p {
+      text-align: center;
+      color: var(--color-ink-faint);
+      font-size: 0.82rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(44, 40, 37, 0.06);
+    }
+
+    footer p small {
+      display: block;
+    }
+
+    footer p small+small {
+      margin-top: 0.35rem;
+      font-style: italic;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      #search-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .search-subtitle {
+        font-size: 1rem;
+      }
+
+      .site-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .bookplate {
+        padding: 1.15rem;
+        gap: 1rem;
+      }
+
+      .bookplate .details h3 {
+        font-size: 1.2rem;
+      }
+
+      .catalog {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header container">
+    <div class="header-titles">
+      <h1>Austen</h1>
+      <p class="tagline">Discover story relationships.</p>
+    </div>
+    <a href="/" class="logo-link">
+      <img src="logo.png" alt="Austen logo" class="site-logo">
+    </a>
+    <a href="https://github.com/herol3oy/austen/" class="github-link" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+      </svg>
+      <span id="github-stars">354</span>
+    </a>
+  </header>
+
+  <div class="ornament container" aria-hidden="true">- - -</div>
+
+  <main class="container">
+
+    <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
+
+    <section id="search-section">
+      <h2>Find a book</h2>
+      <p class="search-subtitle">Search by title or author to discover character relationships</p>
+      <div class="search-bar">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <path d="M21 21l-4.35-4.35" />
+        </svg>
+        <input type="search" id="search-input" name="search" placeholder="Pride and Prejudice, Dune, 1984..."
+          autocomplete="off" aria-describedby="search-status">
+      </div>
+      <p id="search-status" class="status-line" role="status" aria-live="polite"></p>
+      <ul id="search-results" class="catalog"></ul>
+    </section>
+
+    <section id="selected-book-section" hidden>
+      <h2>Selected book</h2>
+      <article class="bookplate" id="selected-book-card" aria-labelledby="selected-book-heading">
+        <h3 id="selected-book-heading" class="sr-only">Selected book details</h3>
+      </article>
+      <p id="generate-status" class="status-line" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="mermaid-section" hidden>
+      <h2>Relationship diagram</h2>
+      <div class="mermaid-frame">
+        <div id="mermaid-container" class="mermaid-scroll"></div>
+      </div>
+    </section>
+
+    <section id="actions-section" hidden>
+      <h2>Actions</h2>
+      <div class="actions-row">
+        <div class="source-group">
+          <textarea id="mermaid-source" class="source-textarea" readonly aria-label="Mermaid source"></textarea>
+          <button id="copy-btn" class="secondary" type="button">Copy</button>
+        </div>
+        <p id="copy-status" class="status-line" role="status" aria-live="polite"></p>
+        <div class="share-link-group">
+          <input type="text" id="share-url-input" class="share-url-input" readonly aria-label="Share link URL">
+          <button id="share-btn" class="secondary" type="button">Copy</button>
+        </div>
+        <p id="share-status" class="status-line" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="history-section">
+      <h2 id="history-heading">Recent volumes</h2>
+      <p id="history-status" class="status-line" role="status" aria-live="polite"></p>
+      <ul id="history-list" class="shelf"></ul>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <p>
+      <small>Built in Warsaw, Poland</small>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11.16.0/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+  <script>
+    "use strict";
+
+    const API_BASE_URL = (() => {
+      if (location.protocol === "file:") {
+        return "http://127.0.0.1:8787";
+      }
+      return "https://austen-api.potato0.workers.dev";
+    })();
+
+    const HISTORY_STORAGE_KEY = "austen-history";
+    const HISTORY_LIMIT = 30;
+    const STATUS_MESSAGE_DURATION_MS = 2500;
+
+    let state = {
+      book: null,
+      graph: null,
+      searchQuery: "",
+      searchResults: [],
+      searchLoading: false,
+      generateLoading: false,
+      error: null,
+      history: [],
+      copyStatus: null,
+      shareStatus: null,
+    };
+
+    function setState(patch) {
+      state = { ...state, ...patch };
+      render();
+    }
+
+    function clearErrorScope(scope) {
+      return state.error && state.error.scope === scope ? null : state.error;
+    }
+
+    const el = {
+      globalStatus: document.getElementById("global-status"),
+      searchInput: document.getElementById("search-input"),
+      searchStatus: document.getElementById("search-status"),
+      searchResults: document.getElementById("search-results"),
+
+      selectedBookSection: document.getElementById("selected-book-section"),
+      selectedBookCard: document.getElementById("selected-book-card"),
+      generateStatus: document.getElementById("generate-status"),
+
+      mermaidSection: document.getElementById("mermaid-section"),
+      mermaidContainer: document.getElementById("mermaid-container"),
+
+      actionsSection: document.getElementById("actions-section"),
+      copyBtn: document.getElementById("copy-btn"),
+      mermaidSource: document.getElementById("mermaid-source"),
+      copyStatus: document.getElementById("copy-status"),
+      shareBtn: document.getElementById("share-btn"),
+      shareUrlInput: document.getElementById("share-url-input"),
+      shareStatus: document.getElementById("share-status"),
+
+      historyHeading: document.getElementById("history-heading"),
+      historyStatus: document.getElementById("history-status"),
+      historyList: document.getElementById("history-list"),
+    };
+
+
+    let lastRenderedGraph = null;
+
+    function render() {
+      renderGlobalStatus();
+      renderSearch();
+      renderSelectedBook();
+      renderMermaidSection();
+      renderActions();
+      renderHistory();
+    }
+
+    function renderGlobalStatus() {
+      if (state.error && state.error.scope === "share") {
+        setStatus(el.globalStatus, state.error.message, "error");
+      } else {
+        setStatus(el.globalStatus, "", null);
+      }
+    }
+
+    function renderSearch() {
+      if (state.searchLoading) {
+        setStatus(el.searchStatus, "Searching…", null);
+      } else if (state.error && state.error.scope === "search") {
+        setStatus(el.searchStatus, state.error.message, "error");
+      } else if (state.searchQuery.length >= 3 && state.searchResults.length === 0) {
+        setStatus(el.searchStatus, "No books found. Try a different title or author.", null);
+      } else {
+        setStatus(el.searchStatus, "", null);
+      }
+
+      el.searchResults.innerHTML = "";
+      for (const book of state.searchResults) {
+        el.searchResults.appendChild(buildCatalogCard(book));
+      }
+    }
+
+    function buildCatalogCard(book) {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "catalog-card";
+      button.addEventListener("click", () => selectBook(book));
+
+      button.appendChild(buildCoverElement(book, 44, 62));
+
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      const title = document.createElement("strong");
+      title.textContent = book.title;
+      const author = document.createElement("span");
+      author.textContent = book.authors.length ? book.authors.join(", ") : "Unknown author";
+      const year = document.createElement("span");
+      year.textContent = book.publishYear ? String(book.publishYear) : "Publish year unknown";
+      meta.append(title, author, year);
+
+      button.appendChild(meta);
+      li.appendChild(button);
+      return li;
+    }
+
+    function buildCoverElement(book, width, height) {
+      if (book.coverId) {
+        const img = document.createElement("img");
+        img.src = `https://covers.openlibrary.org/b/id/${book.coverId}-M.jpg`;
+        img.alt = `Cover of ${book.title}`;
+        img.width = width;
+        img.height = height;
+        img.loading = "lazy";
+        img.addEventListener("error", () => {
+          img.replaceWith(buildPlaceholderCover(width, height));
+        });
+        return img;
+      }
+      return buildPlaceholderCover(width, height);
+    }
+
+    function buildPlaceholderCover(width, height) {
+      const div = document.createElement("div");
+      div.className = "cover-placeholder";
+      div.style.width = `${width}px`;
+      div.style.height = `${height}px`;
+      div.textContent = "\u{1F4D6}";
+      div.setAttribute("aria-hidden", "true");
+      return div;
+    }
+
+    function renderSelectedBook() {
+      el.selectedBookSection.hidden = !state.book;
+      if (!state.book) return;
+
+      el.selectedBookCard.innerHTML = "";
+      el.selectedBookCard.appendChild(buildCoverElement(state.book, 72, 100));
+
+      const details = document.createElement("div");
+      details.className = "details";
+      const h3 = document.createElement("h3");
+      h3.textContent = state.book.title;
+      const authorP = document.createElement("p");
+      authorP.textContent = state.book.authors.length ? state.book.authors.join(", ") : "Unknown author";
+      const yearP = document.createElement("p");
+      yearP.textContent = state.book.publishYear ? String(state.book.publishYear) : "Publish year unknown";
+      details.append(h3, authorP, yearP);
+
+      const actions = document.createElement("div");
+      actions.className = "actions";
+      const generateBtn = document.createElement("button");
+      generateBtn.type = "button";
+      generateBtn.textContent = state.generateLoading ? "Generating\u2026" : "Generate diagram";
+      generateBtn.disabled = state.generateLoading;
+      generateBtn.addEventListener("click", handleGenerateClick);
+      actions.appendChild(generateBtn);
+
+      el.selectedBookCard.append(details, actions);
+
+      if (state.error && state.error.scope === "generate") {
+        setStatus(el.generateStatus, state.error.message, "error");
+      } else if (state.generateLoading) {
+        setStatus(el.generateStatus, "Asking the backend for a diagram\u2026", null);
+      } else {
+        setStatus(el.generateStatus, "", null);
+      }
+    }
+
+    function renderMermaidSection() {
+      el.mermaidSection.hidden = !state.graph;
+      if (!state.graph) {
+        lastRenderedGraph = null;
+        return;
+      }
+      if (state.graph !== lastRenderedGraph) {
+        lastRenderedGraph = state.graph;
+        renderMermaidGraph(state.graph);
+      }
+    }
+
+    function renderActions() {
+      el.actionsSection.hidden = !state.graph;
+
+      if (state.graph) {
+        el.mermaidSource.value = state.graph;
+        el.shareUrlInput.value = buildShareUrl();
+      } else {
+        el.mermaidSource.value = "";
+        el.shareUrlInput.value = "";
+      }
+
+      if (state.copyStatus) {
+        setStatus(el.copyStatus, state.copyStatus.text, state.copyStatus.tone);
+      } else {
+        setStatus(el.copyStatus, "", null);
+      }
+
+      if (state.shareStatus) {
+        setStatus(el.shareStatus, state.shareStatus.text, state.shareStatus.tone);
+      } else {
+        setStatus(el.shareStatus, "", null);
+      }
+    }
+
+    function renderHistory() {
+      el.historyHeading.textContent = `Recent volumes (${state.history.length})`;
+
+      if (state.error && state.error.scope === "history") {
+        setStatus(el.historyStatus, state.error.message, "error");
+      } else if (state.history.length === 0) {
+        setStatus(el.historyStatus, "Diagrams you generate will be saved here.", null);
+      } else {
+        setStatus(el.historyStatus, "", null);
+      }
+
+      el.historyList.innerHTML = "";
+      for (const entry of state.history) {
+        el.historyList.appendChild(buildHistoryItem(entry));
+      }
+    }
+
+    function buildHistoryItem(entry) {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "shelf-item";
+      button.addEventListener("click", () => restoreFromHistory(entry));
+
+      const title = document.createElement("span");
+      title.className = "shelf-title";
+      title.textContent = entry.book.title;
+
+      const meta = document.createElement("span");
+      meta.className = "shelf-meta";
+      meta.textContent = formatTimestamp(entry.generatedAt);
+
+      button.append(title, meta);
+      li.appendChild(button);
+      return li;
+    }
+
+    function formatTimestamp(iso) {
+      const date = new Date(iso);
+      if (Number.isNaN(date.getTime())) return "";
+      return date.toLocaleString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+      });
+    }
+
+    function setStatus(node, text, tone) {
+      node.textContent = text || "";
+      if (tone) {
+        node.dataset.tone = tone;
+      } else {
+        delete node.dataset.tone;
+      }
+    }
+
+    let searchDebounceTimer = null;
+    let searchAbortController = null;
+
+    function handleSearchInput(e) {
+      const query = e.target.value.trim();
+      setState({ searchQuery: query, error: clearErrorScope("search") });
+
+      if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
+
+      if (query.length < 3) {
+        if (searchAbortController) searchAbortController.abort();
+        const cleared = query.length === 0;
+        setState({
+          searchResults: [],
+          searchLoading: false,
+          book: cleared ? null : state.book,
+          graph: cleared ? null : state.graph,
+          copyStatus: cleared ? null : state.copyStatus,
+          shareStatus: cleared ? null : state.shareStatus,
+        });
+        return;
+      }
+
+      setState({
+        book: null,
+        graph: null,
+        copyStatus: null,
+        shareStatus: null,
+      });
+
+      searchDebounceTimer = setTimeout(() => runSearch(query), 300);
+    }
+
+    async function runSearch(query) {
+      if (searchAbortController) searchAbortController.abort();
+      searchAbortController = new AbortController();
+
+      setState({ searchLoading: true, error: clearErrorScope("search") });
+
+      try {
+        const results = await searchOpenLibrary(query, searchAbortController.signal);
+        setState({ searchResults: results, searchLoading: false });
+      } catch (err) {
+        if (err.name === "AbortError") return;
+        setState({
+          searchResults: [],
+          searchLoading: false,
+          error: { scope: "search", message: "Couldn't reach OpenLibrary. Please try again." },
+        });
+      }
+    }
+
+    async function searchOpenLibrary(query, signal) {
+      const url =
+        "https://openlibrary.org/search.json" +
+        `?q=${encodeURIComponent(query)}` +
+        "&fields=title,author_name,first_publish_year,cover_i" +
+        "&limit=12";
+
+      const response = await fetch(url, { signal });
+      if (!response.ok) throw new Error(`OpenLibrary responded with ${response.status}`);
+
+      const data = await response.json();
+      const docs = Array.isArray(data.docs) ? data.docs : [];
+
+      return docs.map((doc) => ({
+        title: doc.title || "Untitled",
+        authors: Array.isArray(doc.author_name) ? doc.author_name : [],
+        publishYear: typeof doc.first_publish_year === "number" ? doc.first_publish_year : null,
+        coverId: typeof doc.cover_i === "number" ? doc.cover_i : null,
+      }));
+    }
+
+    function selectBook(book) {
+      setState({
+        book,
+        graph: null,
+        error: null,
+        copyStatus: null,
+        shareStatus: null,
+        searchResults: [],
+        searchQuery: "",
+      });
+    }
+
+    async function handleGenerateClick() {
+      if (!state.book || state.generateLoading) return;
+
+      setState({ generateLoading: true, error: clearErrorScope("generate") });
+
+      try {
+        const { mermaid, generatedAt } = await requestDiagram(state.book);
+        const sanitized = sanitizeMermaid(mermaid);
+        setState({ graph: sanitized, generateLoading: false, copyStatus: null, shareStatus: null });
+        addHistoryEntry(state.book, sanitized, generatedAt);
+      } catch (err) {
+        setState({
+          generateLoading: false,
+          error: { scope: "generate", message: "Couldn't generate a diagram right now. Please try again." },
+        });
+      }
+    }
+
+    async function requestDiagram(book) {
+      const response = await fetch(API_BASE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          book: {
+            title: book.title,
+            authors: book.authors,
+            publishYear: book.publishYear,
+          },
+        }),
+      });
+
+      if (!response.ok) throw new Error(`Backend responded with ${response.status}`);
+      return response.json();
+    }
+
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: "strict",
+      theme: "base",
+      themeVariables: {
+        primaryColor: "#f0ebe0",
+        primaryTextColor: "#2c2825",
+        primaryBorderColor: "#2d5a3d",
+        lineColor: "#7a7168",
+        secondaryColor: "#faf7f0",
+        tertiaryColor: "#faf7f0",
+        fontFamily: "Inter, system-ui, sans-serif",
+        fontSize: "14px",
+      },
+    });
+
+    function sanitizeMermaid(raw) {
+      return String(raw)
+        .trim()
+        .replace(/^```(?:mermaid)?\s*/i, "")
+        .replace(/```\s*$/i, "")
+        .trim();
+    }
+
+    async function renderMermaidGraph(graphDefinition) {
+      const renderId = `mermaid-graph-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+
+      try {
+        const { svg } = await mermaid.render(renderId, graphDefinition);
+        el.mermaidContainer.innerHTML = svg;
+      } catch (err) {
+        el.mermaidContainer.innerHTML = "";
+        const pre = document.createElement("pre");
+        pre.className = "mermaid-fallback";
+        pre.textContent = graphDefinition;
+        el.mermaidContainer.appendChild(pre);
+      }
+    }
+
+    function buildShareUrl() {
+      const payload = {
+        book: state.book,
+        mermaid: state.graph,
+        generatedAt: new Date().toISOString(),
+      };
+      const compressed = LZString.compressToEncodedURIComponent(JSON.stringify(payload));
+      const url = new URL(location.href);
+      url.search = "";
+      url.searchParams.set("graph", compressed);
+      return url.toString();
+    }
+
+    async function handleShareClick() {
+      try {
+        await copyText(el.shareUrlInput.value);
+        flashStatus("shareStatus", "Share link copied to clipboard.", "success");
+      } catch (err) {
+        flashStatus("shareStatus", "Couldn't copy the share link.", "error");
+      }
+    }
+
+    function restoreFromShareUrl() {
+      const params = new URLSearchParams(location.search);
+      const compressed = params.get("graph");
+      if (!compressed) return false;
+
+      try {
+        const json = LZString.decompressFromEncodedURIComponent(compressed);
+        if (!json) throw new Error("empty payload");
+        const payload = JSON.parse(json);
+
+        if (!payload || typeof payload !== "object" || !payload.book || !payload.mermaid) {
+          throw new Error("malformed payload");
+        }
+
+        setState({
+          book: payload.book,
+          graph: sanitizeMermaid(payload.mermaid),
+          error: null,
+        });
+        return true;
+      } catch (err) {
+        setState({
+          error: { scope: "share", message: "That share link looks corrupted, so it wasn't loaded." },
+        });
+        return false;
+      }
+    }
+
+    function loadHistory() {
+      let raw;
+      try {
+        raw = localStorage.getItem(HISTORY_STORAGE_KEY);
+      } catch (err) {
+        return { list: [], corrupted: false };
+      }
+      if (!raw) return { list: [], corrupted: false };
+
+      try {
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) throw new Error("not an array");
+        return { list: parsed.filter(isValidHistoryEntry), corrupted: false };
+      } catch (err) {
+        try {
+          localStorage.removeItem(HISTORY_STORAGE_KEY);
+        } catch (_) {
+        }
+        return { list: [], corrupted: true };
+      }
+    }
+
+    function isValidHistoryEntry(entry) {
+      return (
+        entry &&
+        typeof entry === "object" &&
+        entry.book &&
+        typeof entry.book.title === "string" &&
+        typeof entry.mermaid === "string"
+      );
+    }
+
+    function saveHistory(list) {
+      try {
+        localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(list));
+      } catch (err) {
+        setState({
+          error: { scope: "history", message: "Couldn't save history locally (storage may be full)." },
+        });
+      }
+    }
+
+    function historyKey(book) {
+      return [book.title, (book.authors || []).join(","), book.publishYear].join("|");
+    }
+
+    function addHistoryEntry(book, mermaidStr, generatedAt) {
+      const key = historyKey(book);
+      const withoutDuplicate = state.history.filter((entry) => historyKey(entry.book) !== key);
+      const nextHistory = [{ book, mermaid: mermaidStr, generatedAt }, ...withoutDuplicate].slice(
+        0,
+        HISTORY_LIMIT
+      );
+      setState({ history: nextHistory });
+      saveHistory(nextHistory);
+    }
+
+    function restoreFromHistory(entry) {
+      setState({
+        book: entry.book,
+        graph: sanitizeMermaid(entry.mermaid),
+        error: null,
+        copyStatus: null,
+        shareStatus: null,
+      });
+      const url = buildShareUrl();
+      history.replaceState(null, "", url);
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const ok = document.execCommand("copy");
+      textarea.remove();
+      if (!ok) throw new Error("execCommand copy failed");
+    }
+
+    async function handleCopyClick() {
+      if (!el.mermaidSource.value) return;
+      try {
+        await copyText(el.mermaidSource.value);
+        flashStatus("copyStatus", "Mermaid source copied to clipboard.", "success");
+      } catch (err) {
+        flashStatus("copyStatus", "Couldn't copy to clipboard.", "error");
+      }
+    }
+
+    let flashTimers = {};
+    function flashStatus(field, text, tone) {
+      if (flashTimers[field]) clearTimeout(flashTimers[field]);
+      setState({ [field]: { text, tone } });
+      flashTimers[field] = setTimeout(() => {
+        setState({ [field]: null });
+      }, STATUS_MESSAGE_DURATION_MS);
+    }
+
+    function init() {
+      el.searchInput.addEventListener("input", handleSearchInput);
+      el.copyBtn.addEventListener("click", handleCopyClick);
+      el.shareBtn.addEventListener("click", handleShareClick);
+
+      restoreFromShareUrl();
+
+      const { list, corrupted } = loadHistory();
+      setState({
+        history: list,
+        error: corrupted
+          ? { scope: "history", message: "Your saved history couldn't be read, so it was reset." }
+          : state.error,
+      });
+    }
+
+    init();
+
+    fetch("https://api.github.com/repos/herol3oy/austen")
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.stargazers_count != null) {
+          document.getElementById("github-stars").textContent = d.stargazers_count;
+        }
+      })["catch"](function () { });
+  </script>
+
+</body>
+
+</html>

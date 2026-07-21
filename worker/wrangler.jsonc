@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "austen-api",
+  "main": "index.js",
+  "compatibility_date": "2025-07-21",
+  "account_id": "2380e8a4a3e0db37d83a32018d783550"
+}
