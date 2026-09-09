@@ -1,38 +1,43 @@
-# Austen
+# Astro Starter Kit: Minimal
 
-Generate character relationship diagrams for books using Mermaid.js.
-
-## Features
-
-- 🔍 **Book search** — Find books via the OpenLibrary API
-- 🤖 **AI-powered diagrams** — Generates Mermaid character relationship graphs
-- 🔗 **Share links** — Copy a shareable encoded URL
-- 📋 **Copy source** — Copy the Mermaid source
-- ✏️ **Edit and refine** — Correct Mermaid source with safe live previews and validation
-- ⬇️ **Diagram downloads** — Export the full relationship map as PNG or SVG
-- 📚 **History** — Save recent diagrams locally, with individual removal and Undo
-
-## Example
-
-[Pride and Prejudice — Jane Austen (1813)](https://herol3oy.github.io/austen/?graph=N4IgRg9hDWIFygC4EtEBsCm8QAUBOyAJhgAQCGAdoSfhgFYCuhyAxlgDQhkOIAWEeAM7wA2iABSlUgEEGgxBgogAupwAODMGmSDeATQxk88AIwAOEwGZOLCADcMeAJKFTAFktuzAVksB2AF9OAFtHYLIibABzPDI1XhIAFQARAB0KEkySAFFtAC8yMAw%2BACFFCmKSAFoqgD4AHwBZIwIMQXqSZKMWAE90rJJJCrKKCsRquqaW5DaOkuQKKMw%2BjKzc5AKi0vLKmoaAZR0FIQ6hjBGx-rX8wuLeC93Jw-lHdpIAGR7mMgfEK8z1ps7r8Jgcjq8Os08D1fv8cjctvcduM9vVnsc3gBpVCIGHIuFdPC9UH1ABirSob3mi2WcM%2B3xBqKhrTeAHVWNBeGRgnD2SxOdySdkKsEZm9Cb04YDbttRo8Gk4KKhkGQ0Ggep0dNpoLNOt0VgMJRrUdJCKK8LrpYjYatMo08IzJqSyHxHB0rcD8baSPbBI6Go0IK68O6EZ65YgQJwoopHC6MIRpJG4CAAEwABlTADYqum-FVUyZEiY3HB0944G4swA6ACcHgAWiAAkA)
-
-```mermaid
-graph LR
-    ElizabethBennet -->|Marries| Darcy
-    JaneBennet -->|Marries| Bingley
-    ElizabethBennet -->|Sisters| JaneBennet
-    ElizabethBennet -->|Sisters| LydiaBennet
-    ElizabethBennet -->|Sisters| MaryBennet
-    ElizabethBennet -->|Sisters| KittyBennet
-    Darcy -->|Friends| Bingley
-    LydiaBennet -->|Marries| Wickham
-    Wickham -->|Enemies| Darcy
-    ElizabethBennet -->|Initially Dislikes| Darcy
-    Darcy -->|Admires| ElizabethBennet
-    MrBennet -->|Father| ElizabethBennet
-    MrsBennet -->|Mother| ElizabethBennet
+```sh
+pnpm create astro@latest -- --template minimal
 ```
 
-## Credits
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-Jane Austen Inspired Illustrations, CC-BY 4.0. Quelle: https://colorconfetti.com/culture-history-environment/jane-austen/jane-austen-inspired-illustrations/
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm build`           | Build your production site to `./dist/`          |
+| `pnpm preview`         | Preview your build locally, before deploying     |
+| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
