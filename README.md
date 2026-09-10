@@ -87,13 +87,13 @@ Deployment order:
 
 1. Verify `pnpm worker:check` and the tests, then run `pnpm worker:deploy`. If necessary, set the Worker secret with `pnpm exec wrangler secret put DEEPSEEK_API_KEY --config worker/wrangler.jsonc`. This does not make the secret available to local batch scripts.
 2. Smoke-test the compatible Worker before the frontend rollout. Set `PUBLIC_API_BASE_URL` only if overriding its public URL.
-3. Switch repository **Settings → Pages → Source** to **GitHub Actions**. The verified existing setting is currently branch publication from `main` at `/`.
+3. Keep repository **Settings → Pages → Source** set to **GitHub Actions**. This repository is configured for workflow deployment. Branch publication would also start the legacy Jekyll workflow, which cannot build Astro source files.
 4. Commit published revisions, SVGs and pointers with the code, then push to `main` (or dispatch `.github/workflows/deploy.yml`). The workflow checks, tests, builds from committed data, and uploads `dist`; it never ingests or generates library data. No provider credentials are needed in GitHub Actions.
 5. Verify homepage/catalog, book deep-link refresh, 404, the old encoded share, local history, editor controls and downloads at `/austen/`.
 
 For rollback, restore the previous publication pointers **and their referenced revision files** from Git and rebuild. Restore code with a reviewed revert and redeploy Pages. Use `pnpm exec wrangler rollback --config worker/wrangler.jsonc` for a previous Worker deployment, checking the intended deployment ID first; set the generation switch off if stopping requests is required. Keep historical map revisions so pointer rollback remains possible.
 
-Deployment settings have been inspected; this migration has not been deployed. The legacy source, CSS, logo, favicon, 404 and MIT license have been transferred. The legacy README example is retained as a compatibility fixture.
+The Astro frontend is deployed through the **Verify and deploy Austen** workflow. Worker deployment is managed separately. The legacy source, CSS, logo, favicon, 404 and MIT license have been transferred. The legacy README example is retained as a compatibility fixture.
 
 ## Credits
 
