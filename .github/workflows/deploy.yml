@@ -25,8 +25,13 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm test
-      - name: Install browser for rendering tests
-        run: pnpm exec puppeteer browsers install chrome
+      - name: Configure runner Chrome for rendering tests
+        shell: bash
+        run: |
+          chrome_path="$(command -v google-chrome)"
+          test -x "$chrome_path"
+          "$chrome_path" --version
+          printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$chrome_path" >> "$GITHUB_ENV"
       - run: pnpm test:browser
       - run: pnpm build
       - uses: actions/upload-pages-artifact@v3

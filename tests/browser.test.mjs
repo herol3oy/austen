@@ -17,8 +17,8 @@ const delay = ms => new Promise(r => setTimeout(r, ms));
 
 test('built static library and migrated workspace', { timeout: 180000 }, async t => {
   const { root, book, catalog } = await fixtureRoot(t);
-  await assert.rejects(renderSvg('graph LR\nend["Reserved identifier"]\nC2["Other"]\nend -->|Knows| C2'), error => error.code === 'invalid_graph');
   const svg = await renderSvg(graph); assert.ok(validateSvg(svg).width > 0);
+  await assert.rejects(renderSvg('graph LR\nend["Reserved identifier"]\nC2["Other"]\nend -->|Knows| C2'), error => error.code === 'invalid_graph');
   const extra = Array.from({ length: 51 }, (_, i) => ({ ...book, id: `fixture-author/book-${i}`, slug: `fixture-author-book-${i}`, title: `Fixture ${i}`, year: '1900', category: 'Poetry', ebookUrl: `https://standardebooks.org/ebooks/fixture-author/book-${i}` }));
   catalog.books.push(...extra);
   await writeJson(resolve(root, 'data/catalog/books.json'), catalog);

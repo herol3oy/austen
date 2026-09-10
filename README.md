@@ -71,6 +71,8 @@ pnpm worker:check
 
 Puppeteer downloads are explicit and are unnecessary for ordinary static builds. To use an existing browser, set `PUPPETEER_EXECUTABLE_PATH=/path/to/chrome`. `PUPPETEER_CONFIG=/path/to/launch-options.json` optionally supplies Mermaid CLI launch settings. Browser tests need an environment capable of starting Chromium and listening on a local port.
 
+GitHub Actions uses [Chrome supplied by the Ubuntu runner image](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md#browsers-and-drivers). The workflow checks its executable, logs its version, and exports `PUPPETEER_EXECUTABLE_PATH` for both Mermaid CLI and the browser tests. CI does not require a `.env` file or a separate Puppeteer browser download.
+
 The CLI and frontend both resolve Mermaid **11.16.0**, enforced by `pnpm-workspace.yaml`. They use `shared/mermaid.config.json` with strict security and HTML labels disabled. A restricted graph grammar and SVG element/reference checks precede embedding. `valid` means these automated checks passed; it does not certify factual accuracy. Automatic maps are labeled AI-generated.
 
 The browser suite builds more than 50 automatically published fixture maps with `fetch` disabled. It verifies static SVGs without JavaScript, publication labels, catalog states, unpublished route exclusion, canonical sharing, the old homepage share, malformed history, Undo, stale discovery/generation, invalid drafts, revert/cancel/save, pan/zoom, and full PNG/SVG downloads. Provider calls are mocked; fixture maps never enter the public data.
