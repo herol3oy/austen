@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "james-stephens/the-demi-gods",
+  "metadata": {
+    "title": "The Demi-Gods",
+    "authors": [
+      "James Stephens"
+    ],
+    "year": "1914"
+  },
+  "inputHash": "042d0e2c6b92760e90567af544076938ffe3b35296376409ce3e5db01af4c0d0",
+  "promptHash": "0e02250bb56576d48e6d878018f527646c7a9768fa4ebd4f9fc2d576c1dde983",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:13.680Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:13.680Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:14.387Z",
+      "finishedAt": "2026-09-10T17:46:14.387Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:46:14.387Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

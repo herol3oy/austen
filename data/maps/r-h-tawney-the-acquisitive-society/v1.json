@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "r-h-tawney/the-acquisitive-society",
+  "metadata": {
+    "title": "The Acquisitive Society",
+    "authors": [
+      "R. H. Tawney"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "0103a3b28709f718f150d1071c1bb298444ab78676749c971e464cf8e2b61141",
+  "promptHash": "05762fde54311afb04b355fc5bf9dd529fe98eeee66df2bbad50ab1fa342e876",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:50.700Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:50.700Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:51.622Z",
+      "finishedAt": "2026-09-10T18:06:51.622Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:06:51.622Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-hope/the-prisoner-of-zenda",
+  "metadata": {
+    "title": "The Prisoner of Zenda",
+    "authors": [
+      "Anthony Hope"
+    ],
+    "year": "1894"
+  },
+  "inputHash": "4b31e890da3262cade03123103a379752fe745c0cfa806ec0e64d4acb2edfd04",
+  "promptHash": "09b94e47cb7ee15cfff580d48447a11a3ad233e37d850f26eb1578bd14643c03",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:15.629Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:15.629Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Rudolf Rassendyll\"]\nC2[\"Rudolf Elphberg\"]\nC3[\"Flavia\"]\nC4[\"Michael\"]\nC5[\"Rupert of Hentzau\"]\nC6[\"Colonel Sapt\"]\nC7[\"Fritz von Tarlenheim\"]\nC8[\"Antoinette de Mauban\"]\nC1 -->|Impersonates| C2\nC1 -->|Loves| C3\nC2 -->|Betrothed to| C3\nC4 -->|Half-brother of| C2\nC4 -->|Rival of| C1\nC4 -->|Commands| C5\nC5 -->|Serves| C4\nC5 -->|Kills| C4\nC6 -->|Mentor of| C1\nC6 -->|Serves| C2\nC7 -->|Friend of| C1\nC7 -->|Serves| C2\nC8 -->|Loves| C4\nC8 -->|Betrays| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 223,
+        "total_tokens": 1782,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:17.563Z",
+      "finishedAt": "2026-09-10T17:26:17.563Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Rudolf Rassendyll\"]\nC2[\"Rudolf Elphberg\"]\nC3[\"Flavia\"]\nC4[\"Michael\"]\nC5[\"Rupert of Hentzau\"]\nC6[\"Colonel Sapt\"]\nC7[\"Fritz von Tarlenheim\"]\nC8[\"Antoinette de Mauban\"]\nC1 -->|Impersonates| C2\nC1 -->|Loves| C3\nC2 -->|Betrothed to| C3\nC4 -->|Half-brother of| C2\nC4 -->|Rival of| C1\nC4 -->|Commands| C5\nC5 -->|Serves| C4\nC5 -->|Kills| C4\nC6 -->|Mentor of| C1\nC6 -->|Serves| C2\nC7 -->|Friend of| C1\nC7 -->|Serves| C2\nC8 -->|Loves| C4\nC8 -->|Betrays| C4",
+  "mermaidHash": "632e77bf337d556a8eb6baa756be1ff91c61ebaf9624bc941a89c7ce0336c753",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "632e77bf337d556a8eb6baa756be1ff91c61ebaf9624bc941a89c7ce0336c753",
+    "svgHash": "782e39197e142e2afd7f18282756964289db795d6015e3803499716e971ac7e5",
+    "validatedAt": "2026-09-10T17:26:19.041Z",
+    "width": 1376.868408203125,
+    "height": 413.8162841796875
+  },
+  "generatedAt": "2026-09-10T17:26:17.563Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 223,
+    "total_tokens": 1782,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

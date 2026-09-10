@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ernest-hemingway/a-farewell-to-arms",
+  "metadata": {
+    "title": "A Farewell to Arms",
+    "authors": [
+      "Ernest Hemingway"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "a5b9694d12d4aa2bf18caf894fe7376a194146ecdcce360c1046e391bcda249a",
+  "promptHash": "935e0b1e4822e9daf1dcb98a223a59a42aeaaf4a61374835ec585435b36bedeb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:33.877Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:33.877Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frederic Henry\"]\nC2[\"Catherine Barkley\"]\nC3[\"Rinaldi\"]\nC4[\"The Priest\"]\nC5[\"Helen Ferguson\"]\nC6[\"Ettore Moretti\"]\nC7[\"Gino\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC2 -->|Friend of| C5\nC5 -->|Friend of| C2\nC1 -->|Serves with| C3\nC1 -->|Serves with| C6\nC1 -->|Serves with| C7\nC1 -->|Deserts to be with| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 177,
+        "total_tokens": 1736,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:35.514Z",
+      "finishedAt": "2026-09-10T17:36:35.514Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frederic Henry\"]\nC2[\"Catherine Barkley\"]\nC3[\"Rinaldi\"]\nC4[\"The Priest\"]\nC5[\"Helen Ferguson\"]\nC6[\"Ettore Moretti\"]\nC7[\"Gino\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC2 -->|Friend of| C5\nC5 -->|Friend of| C2\nC1 -->|Serves with| C3\nC1 -->|Serves with| C6\nC1 -->|Serves with| C7\nC1 -->|Deserts to be with| C2",
+  "mermaidHash": "14f7700b80cf7a3aaccdfcf55c1cf17578965248d135024a0c5b2b471326b26d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "14f7700b80cf7a3aaccdfcf55c1cf17578965248d135024a0c5b2b471326b26d",
+    "svgHash": "531507be5161bb027e5d6f9bbb9b04ab10c0fa7a224efa6e55db84f46777f094",
+    "validatedAt": "2026-09-10T17:36:36.922Z",
+    "width": 802.4555053710938,
+    "height": 529.5
+  },
+  "generatedAt": "2026-09-10T17:36:35.514Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 177,
+    "total_tokens": 1736,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

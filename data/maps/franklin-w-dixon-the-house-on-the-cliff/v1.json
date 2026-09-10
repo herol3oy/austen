@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "franklin-w-dixon/the-house-on-the-cliff",
+  "metadata": {
+    "title": "The House on the Cliff",
+    "authors": [
+      "Franklin W. Dixon"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "bc45287461d0c0c1e8c1b4776ef2d5df828d1e96a30a8caa7134dc695f6e7383",
+  "promptHash": "611e810ed6bcde77c07d35c94744f70bcdcaa10630cb28ddc82c19ba5f8f3898",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:53.339Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:53.339Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Aunt Gertrude\"]\nC6[\"Chet Morton\"]\nC7[\"Biff Hooper\"]\nC8[\"Tony Prito\"]\nC1 -->|Brother of| C2\nC2 -->|Brother of| C1\nC3 -->|Father of| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C1\nC4 -->|Mother of| C2\nC5 -->|Aunt of| C1\nC5 -->|Aunt of| C2\nC6 -->|Friend of| C1\nC6 -->|Friend of| C2\nC7 -->|Friend of| C1\nC7 -->|Friend of| C2\nC8 -->|Friend of| C1\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 201,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:54.569Z",
+      "finishedAt": "2026-09-10T17:37:54.569Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Aunt Gertrude\"]\nC6[\"Chet Morton\"]\nC7[\"Biff Hooper\"]\nC8[\"Tony Prito\"]\nC1 -->|Brother of| C2\nC2 -->|Brother of| C1\nC3 -->|Father of| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C1\nC4 -->|Mother of| C2\nC5 -->|Aunt of| C1\nC5 -->|Aunt of| C2\nC6 -->|Friend of| C1\nC6 -->|Friend of| C2\nC7 -->|Friend of| C1\nC7 -->|Friend of| C2\nC8 -->|Friend of| C1\nC8 -->|Friend of| C2",
+  "mermaidHash": "30cfca5156a9953e43405c83ecf13be8a65d76634e86eff4c6681948dcd178fb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "30cfca5156a9953e43405c83ecf13be8a65d76634e86eff4c6681948dcd178fb",
+    "svgHash": "ca2b63a4e731bc459b30fb8547c2d9448905a76202d5dcf7b5849ca420736a25",
+    "validatedAt": "2026-09-10T17:37:55.955Z",
+    "width": 681.0842895507812,
+    "height": 594
+  },
+  "generatedAt": "2026-09-10T17:37:54.569Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 201,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

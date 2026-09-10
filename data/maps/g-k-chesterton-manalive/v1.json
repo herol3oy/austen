@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "g-k-chesterton/manalive",
+  "metadata": {
+    "title": "Manalive",
+    "authors": [
+      "G. K. Chesterton"
+    ],
+    "year": "1912"
+  },
+  "inputHash": "09cc1aede13df0107a01aa8a2a0de0e6f783d64daae9ed1a0b5262b1bd3d9eac",
+  "promptHash": "c1285ca3f7802958d166005a68fab8ffd35dc8b05f0b2dcf9871fd7e7bd230bf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:01.322Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:01.322Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Innocent Smith\"]\nC2[\"Mary Gray\"]\nC3[\"Michael Moon\"]\nC4[\"Arthur Inglewood\"]\nC5[\"James Pym\"]\nC6[\"Herbert Moses\"]\nC7[\"Rupert Warner\"]\nC8[\"Diana Duke\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Alleged identity of| C5\nC1 -->|Alleged identity of| C6\nC1 -->|Alleged identity of| C7\nC1 -->|Alleged identity of| C8\nC3 -->|Friend of| C4\nC3 -->|Defends| C1\nC4 -->|Friend of| C3\nC4 -->|Defends| C1\nC5 -->|Accuses| C1\nC6 -->|Accuses| C1\nC7 -->|Accuses| C1\nC8 -->|Accuses| C1\nC2 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 231,
+        "total_tokens": 1791,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:02.776Z",
+      "finishedAt": "2026-09-10T17:39:02.776Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Innocent Smith\"]\nC2[\"Mary Gray\"]\nC3[\"Michael Moon\"]\nC4[\"Arthur Inglewood\"]\nC5[\"James Pym\"]\nC6[\"Herbert Moses\"]\nC7[\"Rupert Warner\"]\nC8[\"Diana Duke\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Alleged identity of| C5\nC1 -->|Alleged identity of| C6\nC1 -->|Alleged identity of| C7\nC1 -->|Alleged identity of| C8\nC3 -->|Friend of| C4\nC3 -->|Defends| C1\nC4 -->|Friend of| C3\nC4 -->|Defends| C1\nC5 -->|Accuses| C1\nC6 -->|Accuses| C1\nC7 -->|Accuses| C1\nC8 -->|Accuses| C1\nC2 -->|Loves| C1",
+  "mermaidHash": "0c3c7170aa9b0e8a8d640ae05eec63c61fc06e200572b3e54cecd10ccda2abe0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0c3c7170aa9b0e8a8d640ae05eec63c61fc06e200572b3e54cecd10ccda2abe0",
+    "svgHash": "a36896cb2dbac432edf57ad785a26343102073a634e8f38018bdf5aee21ccb92",
+    "validatedAt": "2026-09-10T17:39:04.176Z",
+    "width": 799.2235107421875,
+    "height": 674.75
+  },
+  "generatedAt": "2026-09-10T17:39:02.776Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 231,
+    "total_tokens": 1791,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

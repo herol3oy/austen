@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ring-lardner/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Ring Lardner"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "bc2ed4a2d52ac09e1bead14b4c4406070c8ea32fe1870df38e842400fcb06dbc",
+  "promptHash": "f74893878e2d2ccc8ab7a98290d2e8316e58003ab20691457e011ea6a005550b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:32.840Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:32.840Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 2,
+        "total_tokens": 1559,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 149
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:33.744Z",
+      "finishedAt": "2026-09-10T18:07:33.744Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:07:33.744Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 2,
+    "total_tokens": 1559,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 149
+  }
+}

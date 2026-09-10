@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sylvia-townsend-warner/lolly-willowes",
+  "metadata": {
+    "title": "Lolly Willowes",
+    "authors": [
+      "Sylvia Townsend Warner"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "e64fecc66a39890ead85209967aaf6d66d2015fac954f89e6cb6ab2f68ea24e3",
+  "promptHash": "938062774ef50a843e7b2f0e10172b6273f8af2dd70ca7da6836c567cdf22b73",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:11.442Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:11.442Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Laura Willowes\"]\nC2[\"Caroline Willowes\"]\nC3[\"Henry Willowes\"]\nC4[\"Everard Willowes\"]\nC5[\"Sibyl Willowes\"]\nC6[\"Titus Willowes\"]\nC7[\"Mr. Saunter\"]\nC1 -->|Sister of| C2\nC1 -->|Sister of| C3\nC1 -->|Sister of| C4\nC2 -->|Married to| C3\nC1 -->|Aunt of| C5\nC1 -->|Aunt of| C6\nC3 -->|Parent of| C5\nC3 -->|Parent of| C6\nC2 -->|Parent of| C5\nC2 -->|Parent of| C6\nC1 -->|Loves| C7\nC7 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 183,
+        "total_tokens": 1743,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:12.796Z",
+      "finishedAt": "2026-09-10T18:10:12.796Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Laura Willowes\"]\nC2[\"Caroline Willowes\"]\nC3[\"Henry Willowes\"]\nC4[\"Everard Willowes\"]\nC5[\"Sibyl Willowes\"]\nC6[\"Titus Willowes\"]\nC7[\"Mr. Saunter\"]\nC1 -->|Sister of| C2\nC1 -->|Sister of| C3\nC1 -->|Sister of| C4\nC2 -->|Married to| C3\nC1 -->|Aunt of| C5\nC1 -->|Aunt of| C6\nC3 -->|Parent of| C5\nC3 -->|Parent of| C6\nC2 -->|Parent of| C5\nC2 -->|Parent of| C6\nC1 -->|Loves| C7\nC7 -->|Loves| C1",
+  "mermaidHash": "96b8d784548f83c07ff4551d66ce61eadece775a2e08ff40196e984a88bd6e2a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "96b8d784548f83c07ff4551d66ce61eadece775a2e08ff40196e984a88bd6e2a",
+    "svgHash": "42073346d1c0dac1fd82686016cb1b9074db920f59c72694da6de981efec09ad",
+    "validatedAt": "2026-09-10T18:10:14.186Z",
+    "width": 1013.4848022460938,
+    "height": 463.75
+  },
+  "generatedAt": "2026-09-10T18:10:12.796Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 183,
+    "total_tokens": 1743,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

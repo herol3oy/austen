@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "evelyn-waugh/decline-and-fall",
+  "metadata": {
+    "title": "Decline and Fall",
+    "authors": [
+      "Evelyn Waugh"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "dbd761d2f94947e79f33964048459dd44d1a44daa04bb5069f52779999c386ee",
+  "promptHash": "fcf7a57f2ccc155e2ab252fcf99cdbbaa492fe3d731c2d0e1567ba6a686591cb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:53.847Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:53.847Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Paul Pennyfeather\"]\nC2[\"Margot Beste-Chetwynde\"]\nC3[\"Dr Fagan\"]\nC4[\"Captain Grimes\"]\nC5[\"Mr Prendergast\"]\nC6[\"Solomon Philbrick\"]\nC7[\"Peter Beste-Chetwynde\"]\nC8[\"Sir Humphrey Maltravers\"]\nC1 -->|Loves| C2\nC2 -->|Marries| C8\nC2 -->|Parent of| C7\nC1 -->|Engaged to| C2\nC1 -->|Betrayed by| C2\nC3 -->|Employer of| C1\nC3 -->|Employer of| C4\nC3 -->|Employer of| C5\nC3 -->|Employer of| C6\nC3 -->|Parent of| C7\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC6 -->|Blackmails| C3\nC8 -->|Arrests| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 223,
+        "total_tokens": 1783,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:55.476Z",
+      "finishedAt": "2026-09-10T17:36:55.476Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Paul Pennyfeather\"]\nC2[\"Margot Beste-Chetwynde\"]\nC3[\"Dr Fagan\"]\nC4[\"Captain Grimes\"]\nC5[\"Mr Prendergast\"]\nC6[\"Solomon Philbrick\"]\nC7[\"Peter Beste-Chetwynde\"]\nC8[\"Sir Humphrey Maltravers\"]\nC1 -->|Loves| C2\nC2 -->|Marries| C8\nC2 -->|Parent of| C7\nC1 -->|Engaged to| C2\nC1 -->|Betrayed by| C2\nC3 -->|Employer of| C1\nC3 -->|Employer of| C4\nC3 -->|Employer of| C5\nC3 -->|Employer of| C6\nC3 -->|Parent of| C7\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC6 -->|Blackmails| C3\nC8 -->|Arrests| C1",
+  "mermaidHash": "0ea699074f8e9fd9a764e78319b3f917d1b3998214ae307f089453c8b7804ab3",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0ea699074f8e9fd9a764e78319b3f917d1b3998214ae307f089453c8b7804ab3",
+    "svgHash": "fda766eeeed2b601bd2a524a5ee249e40456fcc283656c8fe1ea1e39b405cece",
+    "validatedAt": "2026-09-10T17:36:56.869Z",
+    "width": 1444.38037109375,
+    "height": 380.5
+  },
+  "generatedAt": "2026-09-10T17:36:55.476Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 223,
+    "total_tokens": 1783,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

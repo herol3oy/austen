@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "leonid-andreyev/he-who-gets-slapped/gregory-zilboorg",
+  "metadata": {
+    "title": "He Who Gets Slapped",
+    "authors": [
+      "Leonid Andreyev"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "cee4ee7b93a86dd6237b072709d6350470f087eab0e0b030f6a480ce2f6e3e91",
+  "promptHash": "9b96e93932daf026a73fb9e600ec9d47e7b0c3bd6ce2ae7015ee80a8f810281c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:28.245Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:28.245Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:29.163Z",
+      "finishedAt": "2026-09-10T17:50:29.163Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:50:29.163Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

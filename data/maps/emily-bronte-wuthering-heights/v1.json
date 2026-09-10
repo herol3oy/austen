@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "emily-bronte/wuthering-heights",
+  "metadata": {
+    "title": "Wuthering Heights",
+    "authors": [
+      "Emily Brontë"
+    ],
+    "year": "1847"
+  },
+  "inputHash": "36c800cb972b37dfef88bb78e7d143606b22b85b665b8fb221e7417a12487725",
+  "promptHash": "0c1704fef458f7b33450171207b6179b7d05a9df865295b27b9a37947d9ba4f6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:23.969Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:23.969Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Heathcliff\"]\nC2[\"Catherine Earnshaw\"]\nC3[\"Edgar Linton\"]\nC4[\"Hindley Earnshaw\"]\nC5[\"Isabella Linton\"]\nC6[\"Nelly Dean\"]\nC7[\"Catherine Linton\"]\nC8[\"Hareton Earnshaw\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Married to| C3\nC1 -->|Married to| C5\nC4 -->|Sibling of| C2\nC4 -->|Adoptive brother of| C1\nC1 -->|Enemy of| C4\nC3 -->|Sibling of| C5\nC1 -->|Enemy of| C3\nC6 -->|Serves| C3\nC6 -->|Confidante of| C2\nC1 -->|Parent of| C7\nC2 -->|Parent of| C7\nC3 -->|Parent of| C7\nC1 -->|Forces marriage with| C7\nC7 -->|Loves| C8\nC8 -->|Loves| C7\nC1 -->|Raises| C8\nC4 -->|Parent of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 270,
+        "total_tokens": 1829,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:25.788Z",
+      "finishedAt": "2026-09-10T17:36:25.788Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Heathcliff\"]\nC2[\"Catherine Earnshaw\"]\nC3[\"Edgar Linton\"]\nC4[\"Hindley Earnshaw\"]\nC5[\"Isabella Linton\"]\nC6[\"Nelly Dean\"]\nC7[\"Catherine Linton\"]\nC8[\"Hareton Earnshaw\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Married to| C3\nC1 -->|Married to| C5\nC4 -->|Sibling of| C2\nC4 -->|Adoptive brother of| C1\nC1 -->|Enemy of| C4\nC3 -->|Sibling of| C5\nC1 -->|Enemy of| C3\nC6 -->|Serves| C3\nC6 -->|Confidante of| C2\nC1 -->|Parent of| C7\nC2 -->|Parent of| C7\nC3 -->|Parent of| C7\nC1 -->|Forces marriage with| C7\nC7 -->|Loves| C8\nC8 -->|Loves| C7\nC1 -->|Raises| C8\nC4 -->|Parent of| C8",
+  "mermaidHash": "0c9990a4cd78cb2ed930738a6dcf6d9b2698b05dcb5e297080b319897b4c6024",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0c9990a4cd78cb2ed930738a6dcf6d9b2698b05dcb5e297080b319897b4c6024",
+    "svgHash": "29b49f19c12645cea3c04f0a4e18ed2fc2fdc4ea69b3d528383171b7edbdc7c5",
+    "validatedAt": "2026-09-10T17:36:27.227Z",
+    "width": 1666.0750732421875,
+    "height": 638
+  },
+  "generatedAt": "2026-09-10T17:36:25.788Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 270,
+    "total_tokens": 1829,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

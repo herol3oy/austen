@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fyodor-dostoevsky/demons/constance-garnett",
+  "metadata": {
+    "title": "Demons",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "year": "1873"
+  },
+  "inputHash": "fed736d76b728f88a8c03d11ee27ad22bde97e6405af4cce947f729d7e59331f",
+  "promptHash": "76ebca0d2f8026020f5203eb7c411350df771beab4a645af21d023a124273223",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:35.979Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:35.979Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nikolai Stavrogin\"]\nC2[\"Pyotr Verkhovensky\"]\nC3[\"Stepan Verkhovensky\"]\nC4[\"Varvara Stavrogina\"]\nC5[\"Ivan Shatov\"]\nC6[\"Alexei Kirillov\"]\nC7[\"Maria Lebyadkina\"]\nC8[\"Liza Tushina\"]\nC1 -->|Son of| C4\nC3 -->|Friend of| C4\nC3 -->|Tutor of| C1\nC2 -->|Son of| C3\nC2 -->|Manipulates| C1\nC1 -->|Married to| C7\nC1 -->|Loves| C8\nC5 -->|Devoted to| C1\nC6 -->|Devoted to| C1\nC1 -->|Betrays| C5\nC2 -->|Orders killing of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 195,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:37.474Z",
+      "finishedAt": "2026-09-10T17:38:37.474Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nikolai Stavrogin\"]\nC2[\"Pyotr Verkhovensky\"]\nC3[\"Stepan Verkhovensky\"]\nC4[\"Varvara Stavrogina\"]\nC5[\"Ivan Shatov\"]\nC6[\"Alexei Kirillov\"]\nC7[\"Maria Lebyadkina\"]\nC8[\"Liza Tushina\"]\nC1 -->|Son of| C4\nC3 -->|Friend of| C4\nC3 -->|Tutor of| C1\nC2 -->|Son of| C3\nC2 -->|Manipulates| C1\nC1 -->|Married to| C7\nC1 -->|Loves| C8\nC5 -->|Devoted to| C1\nC6 -->|Devoted to| C1\nC1 -->|Betrays| C5\nC2 -->|Orders killing of| C5",
+  "mermaidHash": "220d45217d6da59b5ceffa789fab458ec72c5ded34a0e7223ee18ca7e4aef400",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "220d45217d6da59b5ceffa789fab458ec72c5ded34a0e7223ee18ca7e4aef400",
+    "svgHash": "fb8c51a64e1eb6e658c360bc17e2408bb02983738e03f97b0bbb3e06189a1e8a",
+    "validatedAt": "2026-09-10T17:38:38.842Z",
+    "width": 1146.9464111328125,
+    "height": 411.25
+  },
+  "generatedAt": "2026-09-10T17:38:37.474Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 195,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

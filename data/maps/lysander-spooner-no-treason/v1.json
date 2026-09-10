@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "lysander-spooner/no-treason",
+  "metadata": {
+    "title": "No Treason",
+    "authors": [
+      "Lysander Spooner"
+    ],
+    "year": "1867"
+  },
+  "inputHash": "3ad758be0b2cc3a7ee72e3905570b658953dc412f6dfe450c4b865bfe7900bc8",
+  "promptHash": "49eb147d301a16647cc0f9315d4b016d4f1de0d4596e39d7b267729330f8e39e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:13.709Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:13.709Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:14.348Z",
+      "finishedAt": "2026-09-10T17:51:14.348Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:51:14.348Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

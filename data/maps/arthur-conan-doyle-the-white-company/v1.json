@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-conan-doyle/the-white-company",
+  "metadata": {
+    "title": "The White Company",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "year": "1891"
+  },
+  "inputHash": "77e2d0d3239b9c4f40ddfbfc62adac66b3eee4f386bf316072a293c6461e1223",
+  "promptHash": "1fc73b5c8ec6cef4d964c7d95c8dac16619869b2fbbe681fdbe06de310b57cf7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:15.683Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:15.683Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Alleyne Edricson\"]\nC2[\"Hordle John\"]\nC3[\"Samkin Aylward\"]\nC4[\"Sir Nigel Loring\"]\nC5[\"Lady Mary Loring\"]\nC6[\"Bertrand du Guesclin\"]\nC7[\"Abbot Berghersh\"]\nC8[\"Edricson\"]\nC1 -->|Ward of| C7\nC1 -->|Son of| C8\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Serves| C4\nC1 -->|Loves| C5\nC2 -->|Friend of| C3\nC2 -->|Serves| C4\nC3 -->|Serves| C4\nC4 -->|Married to| C5\nC4 -->|Mentor of| C1\nC4 -->|Commands| C2\nC4 -->|Commands| C3\nC4 -->|Rival of| C6\nC6 -->|Enemy of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 225,
+        "total_tokens": 1783,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:17.577Z",
+      "finishedAt": "2026-09-10T17:28:17.577Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Alleyne Edricson\"]\nC2[\"Hordle John\"]\nC3[\"Samkin Aylward\"]\nC4[\"Sir Nigel Loring\"]\nC5[\"Lady Mary Loring\"]\nC6[\"Bertrand du Guesclin\"]\nC7[\"Abbot Berghersh\"]\nC8[\"Edricson\"]\nC1 -->|Ward of| C7\nC1 -->|Son of| C8\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Serves| C4\nC1 -->|Loves| C5\nC2 -->|Friend of| C3\nC2 -->|Serves| C4\nC3 -->|Serves| C4\nC4 -->|Married to| C5\nC4 -->|Mentor of| C1\nC4 -->|Commands| C2\nC4 -->|Commands| C3\nC4 -->|Rival of| C6\nC6 -->|Enemy of| C4",
+  "mermaidHash": "143cd92427fec3b90906f25d1c130c66782a1f4b358b3779e94f6b25eba4d700",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "143cd92427fec3b90906f25d1c130c66782a1f4b358b3779e94f6b25eba4d700",
+    "svgHash": "4f8b27108862a49025c20925ad6274daa9b6d19a728c348aba008d258207d96c",
+    "validatedAt": "2026-09-10T17:28:18.973Z",
+    "width": 1368.3336181640625,
+    "height": 519.2210083007812
+  },
+  "generatedAt": "2026-09-10T17:28:17.577Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 225,
+    "total_tokens": 1783,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "friedrich-nietzsche/thus-spake-zarathustra/thomas-common",
+  "metadata": {
+    "title": "Thus Spake Zarathustra",
+    "authors": [
+      "Friedrich Nietzsche"
+    ],
+    "year": "1883–1885"
+  },
+  "inputHash": "44feb713bfb1528101f4f578fd69cf44d8a1a9b7a977654fa0cbd70b865a35d4",
+  "promptHash": "e993466dc4e3b6d620633229524230ea4aa9b4043671703755810dfc70d3216f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:27.033Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:27.033Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:27.848Z",
+      "finishedAt": "2026-09-10T17:38:27.848Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:38:27.848Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

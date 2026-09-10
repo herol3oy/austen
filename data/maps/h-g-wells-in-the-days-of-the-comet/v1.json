@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/in-the-days-of-the-comet",
+  "metadata": {
+    "title": "In the Days of the Comet",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1906"
+  },
+  "inputHash": "5fc120f64bc0f23fa773438edc2d9eb9d170fd6f672c197edadad16632ce2f33",
+  "promptHash": "faa7611db8dbaa85b23ecf579cbb7585986d2fcf50eb0216296361067a0b7397",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:46.250Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:46.250Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"William Leadford\"]\nC2[\"Nettie Stuart\"]\nC3[\"Edward Verrall\"]\nC4[\"Mr. Stuart\"]\nC5[\"Mrs. Stuart\"]\nC6[\"Parload\"]\nC7[\"Anna\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC1 -->|Rival of| C3\nC1 -->|Kills| C3\nC4 -->|Parent of| C2\nC5 -->|Parent of| C2\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 162,
+        "total_tokens": 1725,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:47.736Z",
+      "finishedAt": "2026-09-10T17:41:47.736Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"William Leadford\"]\nC2[\"Nettie Stuart\"]\nC3[\"Edward Verrall\"]\nC4[\"Mr. Stuart\"]\nC5[\"Mrs. Stuart\"]\nC6[\"Parload\"]\nC7[\"Anna\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC1 -->|Rival of| C3\nC1 -->|Kills| C3\nC4 -->|Parent of| C2\nC5 -->|Parent of| C2\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "a00cba318006ec37ce607a7e96c297709f7e173f1d5639053cba87f4f5f436b4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a00cba318006ec37ce607a7e96c297709f7e173f1d5639053cba87f4f5f436b4",
+    "svgHash": "e1f367439056117c1b893c1b29380881dfd0579442498622fed4e666d830be55",
+    "validatedAt": "2026-09-10T17:41:49.068Z",
+    "width": 693.5344848632812,
+    "height": 504.75
+  },
+  "generatedAt": "2026-09-10T17:41:47.736Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 162,
+    "total_tokens": 1725,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-cowper-powys/wolf-solent",
+  "metadata": {
+    "title": "Wolf Solent",
+    "authors": [
+      "John Cowper Powys"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "9f829dbfed52aa5bb240613fa57a772fe1f23c009c7c61c26261f5b76484a64e",
+  "promptHash": "16635a4b270cf3d8a22dd3cd6d6fa4b1a4165028baa03c631e7d57902ee835ee",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:09.128Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:09.128Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:09.890Z",
+      "finishedAt": "2026-09-10T17:47:09.890Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:47:09.890Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

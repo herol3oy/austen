@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "lewis-carroll/through-the-looking-glass/john-tenniel",
+  "metadata": {
+    "title": "Through the Looking-Glass",
+    "authors": [
+      "Lewis Carroll"
+    ],
+    "year": "1871"
+  },
+  "inputHash": "95c82def11b521a81146da7cd72fa020712f01179166f23bc16f039e9e3f57f0",
+  "promptHash": "4bbe1786be5f47e57a16b63e39695d0c8d54c1b965c93bc9b5c4755d34f1f8e6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:37.867Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:37.867Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Alice\"]\nC2[\"Red Queen\"]\nC3[\"White Queen\"]\nC4[\"White Knight\"]\nC5[\"Tweedledum\"]\nC6[\"Tweedledee\"]\nC7[\"Humpty Dumpty\"]\nC8[\"Red King\"]\nC1 -->|Meets| C2\nC1 -->|Meets| C3\nC1 -->|Rescued by| C4\nC1 -->|Meets| C5\nC1 -->|Meets| C6\nC1 -->|Meets| C7\nC1 -->|Meets| C8\nC5 -->|Sibling of| C6\nC2 -->|Married to| C8\nC3 -->|Rival of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 160,
+        "total_tokens": 1718,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:39.200Z",
+      "finishedAt": "2026-09-10T17:50:39.200Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Alice\"]\nC2[\"Red Queen\"]\nC3[\"White Queen\"]\nC4[\"White Knight\"]\nC5[\"Tweedledum\"]\nC6[\"Tweedledee\"]\nC7[\"Humpty Dumpty\"]\nC8[\"Red King\"]\nC1 -->|Meets| C2\nC1 -->|Meets| C3\nC1 -->|Rescued by| C4\nC1 -->|Meets| C5\nC1 -->|Meets| C6\nC1 -->|Meets| C7\nC1 -->|Meets| C8\nC5 -->|Sibling of| C6\nC2 -->|Married to| C8\nC3 -->|Rival of| C2",
+  "mermaidHash": "56cdf54a4ed3537267e12c438ac07b181f39c7aae20931d331ef463eb1db245d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "56cdf54a4ed3537267e12c438ac07b181f39c7aae20931d331ef463eb1db245d",
+    "svgHash": "bab1bbd7153a2d029ce64a88076eb100f092ee513d4acccc3dcf2c08a99518bb",
+    "validatedAt": "2026-09-10T17:50:40.500Z",
+    "width": 903.5031127929688,
+    "height": 494.5
+  },
+  "generatedAt": "2026-09-10T17:50:39.200Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 160,
+    "total_tokens": 1718,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

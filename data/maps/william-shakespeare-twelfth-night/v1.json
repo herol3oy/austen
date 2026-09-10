@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/twelfth-night",
+  "metadata": {
+    "title": "Twelfth Night",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1601"
+  },
+  "inputHash": "5cb4786c56ee581253e2c4539f6a3362731152500503775ad69716e2dc64a990",
+  "promptHash": "7a2b5e06208205b2fcfbf6b65b0fa984393ad34d5b4e0585bb20af7f9ffe1ed0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:17.354Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:17.354Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Viola\"]\nC2[\"Orsino\"]\nC3[\"Olivia\"]\nC4[\"Sebastian\"]\nC5[\"Antonio\"]\nC6[\"Malvolio\"]\nC7[\"Sir Toby Belch\"]\nC8[\"Maria\"]\nC1 -->|Serves| C2\nC1 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Sibling of| C4\nC4 -->|Sibling of| C1\nC4 -->|Loves| C3\nC5 -->|Friend of| C4\nC5 -->|Protects| C4\nC7 -->|Uncle of| C3\nC7 -->|Friend of| C8\nC8 -->|Married to| C7\nC7 -->|Torments| C6\nC8 -->|Tricks| C6\nC3 -->|Employer of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 209,
+        "total_tokens": 1765,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:18.721Z",
+      "finishedAt": "2026-09-10T18:16:18.721Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Viola\"]\nC2[\"Orsino\"]\nC3[\"Olivia\"]\nC4[\"Sebastian\"]\nC5[\"Antonio\"]\nC6[\"Malvolio\"]\nC7[\"Sir Toby Belch\"]\nC8[\"Maria\"]\nC1 -->|Serves| C2\nC1 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Sibling of| C4\nC4 -->|Sibling of| C1\nC4 -->|Loves| C3\nC5 -->|Friend of| C4\nC5 -->|Protects| C4\nC7 -->|Uncle of| C3\nC7 -->|Friend of| C8\nC8 -->|Married to| C7\nC7 -->|Torments| C6\nC8 -->|Tricks| C6\nC3 -->|Employer of| C6",
+  "mermaidHash": "b0c06e576b9fbfef15db09e726722c990e9d2a764457705cc631f78de0b56480",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b0c06e576b9fbfef15db09e726722c990e9d2a764457705cc631f78de0b56480",
+    "svgHash": "95bc894d0b96c2144e5445e80d5bd16f0bd862e8857f8cc63773c6c4c37d4aa4",
+    "validatedAt": "2026-09-10T18:16:20.117Z",
+    "width": 866.3761596679688,
+    "height": 483
+  },
+  "generatedAt": "2026-09-10T18:16:18.721Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 209,
+    "total_tokens": 1765,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v3",
+  "bookId": "jorge-isaacs/maria/rollo-ogden",
+  "metadata": {
+    "title": "María",
+    "authors": [
+      "Jorge Isaacs"
+    ],
+    "year": "1867"
+  },
+  "inputHash": "8fb742e2dafc07690b5a7b49ae4124c09146012ed5ffd248c8b69c73aafdd5fc",
+  "promptHash": "1a2340ccd44e327094915499e46394ac40a7a78a09159f9730f7983796ca5d4b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:44.204Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:44.204Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"María\"]\nC2[\"Efraín\"]\nC3[\"Emma\"]\nC4[\"Carlos\"]\nC5[\"Salomón\"]\nC6[\"Lucía\"]\nC7[\"Don Ignacio\"]\nC8[\"Doña Andrea\"]\n\nC2 -->|Loves| C1\nC1 -->|Loves| C2\nC2 -->|Sibling of| C3\nC3 -->|Confidante of| C1\nC4 -->|Rival of| C2\nC4 -->|Pursues| C1\nC5 -->|Friend of| C2\nC6 -->|Friend of| C1\nC7 -->|Parent of| C2\nC8 -->|Parent of| C2\nC7 -->|Parent of| C3\nC8 -->|Parent of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 178,
+        "total_tokens": 1735,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 149
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:45.401Z",
+      "finishedAt": "2026-09-10T18:16:45.401Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"María\"]\nC2[\"Efraín\"]\nC3[\"Emma\"]\nC4[\"Carlos\"]\nC5[\"Salomón\"]\nC6[\"Lucía\"]\nC7[\"Don Ignacio\"]\nC8[\"Doña Andrea\"]\n\nC2 -->|Loves| C1\nC1 -->|Loves| C2\nC2 -->|Sibling of| C3\nC3 -->|Confidante of| C1\nC4 -->|Rival of| C2\nC4 -->|Pursues| C1\nC5 -->|Friend of| C2\nC6 -->|Friend of| C1\nC7 -->|Parent of| C2\nC8 -->|Parent of| C2\nC7 -->|Parent of| C3\nC8 -->|Parent of| C3",
+  "mermaidHash": "2561c3f826cbfdfb72e4368e634611aaec717cf0086b914ca7c735592410e156",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2561c3f826cbfdfb72e4368e634611aaec717cf0086b914ca7c735592410e156",
+    "svgHash": "66c81d711499427df0c59d3c778815936adaf13238fd3346b645f1695eb0de04",
+    "validatedAt": "2026-09-10T18:16:46.775Z",
+    "width": 809.942626953125,
+    "height": 482.25
+  },
+  "generatedAt": "2026-09-10T18:16:45.401Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 178,
+    "total_tokens": 1735,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 149
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "baroness-orczy/the-triumph-of-the-scarlet-pimpernel",
+  "metadata": {
+    "title": "The Triumph of the Scarlet Pimpernel",
+    "authors": [
+      "Baroness Orczy"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "f032a71e2fe552e0a4a3053c89a6d23000855c89ba4a8f776b389fc0109007fe",
+  "promptHash": "ae11b8ef46f301159cf1389979ed95752fa3093cbea490cb9033dedcf753294e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:46.276Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:46.277Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1565,
+        "completion_tokens": 2,
+        "total_tokens": 1567,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 285
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:47.681Z",
+      "finishedAt": "2026-09-10T17:28:47.681Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:28:47.681Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2,
+    "total_tokens": 1567,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 285
+  }
+}

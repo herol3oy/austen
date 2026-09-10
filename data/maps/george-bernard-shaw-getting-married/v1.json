@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-bernard-shaw/getting-married",
+  "metadata": {
+    "title": "Getting Married",
+    "authors": [
+      "George Bernard Shaw"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "03d0c94c0c16ebedffb7149285aa2cd25102058828146a8bfb747bea00bacc81",
+  "promptHash": "59b48f64e7e46acf140e3fb5e60b5e8225745b42e3a578af9e75e87d916fb613",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:41.679Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:41.679Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 2,
+        "total_tokens": 1558,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:42.498Z",
+      "finishedAt": "2026-09-10T17:39:42.499Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:39:42.498Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 2,
+    "total_tokens": 1558,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

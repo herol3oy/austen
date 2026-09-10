@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "erskine-childers/the-riddle-of-the-sands",
+  "metadata": {
+    "title": "The Riddle of the Sands",
+    "authors": [
+      "Erskine Childers"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "debd560b2f0b418e2a2cc0544aabfe0b3835dbdeab11d2ab52ccc710c6418b7e",
+  "promptHash": "48a86fa421af1b55d66976dc32c138a9e93ca2cfed5c9489bc4809e26cb1e757",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:47.600Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:47.600Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Carruthers\"]\nC2[\"Arthur Davies\"]\nC3[\"Dollmann\"]\nC4[\"Clara Dollmann\"]\nC5[\"Commander von Brüning\"]\nC6[\"Grimm\"]\nC7[\"Böhme\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 56,
+        "total_tokens": 1618,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:48.725Z",
+      "finishedAt": "2026-09-10T17:36:48.725Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Carruthers\"]\nC2[\"Arthur Davies\"]\nC3[\"Dollmann\"]\nC4[\"Clara Dollmann\"]\nC5[\"Commander von Brüning\"]\nC6[\"Grimm\"]\nC7[\"Böhme\"]",
+  "mermaidHash": "efe797b09dd7571546ed70b52275826607d931d78d3aef80aabc397a3effe762",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:36:48.725Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 56,
+    "total_tokens": 1618,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

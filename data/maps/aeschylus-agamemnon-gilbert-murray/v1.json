@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "aeschylus/agamemnon/gilbert-murray",
+  "metadata": {
+    "title": "Agamemnon",
+    "authors": [
+      "Aeschylus"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "0951426c3d67ee52d7a3b45a1c73987e4eec5f81cd3071dab4e9e25b4fcb4184",
+  "promptHash": "4de15ebedc3dfbbb2a38420edf7d7eeb8e54660fc1a36d392c53af4b09857d1f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:50.009Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:50.009Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:50.719Z",
+      "finishedAt": "2026-09-10T17:23:50.719Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:23:50.719Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

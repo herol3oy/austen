@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/a-prefects-uncle",
+  "metadata": {
+    "title": "A Prefect’s Uncle",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "c325554b49f84137e5f5e85f3443c7b1012a4abc29a204cfdeb22422422f3ea1",
+  "promptHash": "730d200921abec14253908a92d2010b266146ada7b2c6f9e75b7ee85a3ae9c5e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:33.149Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:33.149Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:34.168Z",
+      "finishedAt": "2026-09-10T18:05:34.168Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:05:34.168Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

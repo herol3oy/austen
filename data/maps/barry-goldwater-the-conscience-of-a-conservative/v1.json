@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "barry-goldwater/the-conscience-of-a-conservative",
+  "metadata": {
+    "title": "The Conscience of a Conservative",
+    "authors": [
+      "Barry Goldwater"
+    ],
+    "year": "1960"
+  },
+  "inputHash": "90f01aedcbfd71b4778b29efae9f27559277217f26773012462bae05efefe56c",
+  "promptHash": "ee12149f831d789e1a0648dfdba60cd17877f6a719851a9c49c9bb61547453a2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:47.682Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:47.682Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:48.370Z",
+      "finishedAt": "2026-09-10T17:28:48.370Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:28:48.370Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

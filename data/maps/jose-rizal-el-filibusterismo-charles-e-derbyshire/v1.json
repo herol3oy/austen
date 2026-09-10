@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jose-rizal/el-filibusterismo/charles-e-derbyshire",
+  "metadata": {
+    "title": "El Filibusterismo",
+    "authors": [
+      "José Rizal"
+    ],
+    "year": "1891"
+  },
+  "inputHash": "4cbcca15ff8182635d1d88ceb92cf36fa5fcff1e1d64e0d1e26336de0419095a",
+  "promptHash": "9a0fb1732c7c08c20030d10ab99ec0868ba792ece23fc9826ecff50872bbb06e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:54.784Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:54.784Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Crisóstomo Ibarra\"]\nC2[\"Basilio\"]\nC3[\"Simoun\"]\nC4[\"María Clara\"]\nC5[\"Padre Florentino\"]\nC6[\"Kabesang Tales\"]\nC7[\"Juli\"]\nC8[\"Isagani\"]\nC1 -->|Alter ego of| C3\nC1 -->|Loves| C4\nC2 -->|Serves| C3\nC2 -->|Protects| C7\nC3 -->|Manipulates| C2\nC3 -->|Enemy of| C5\nC3 -->|Foments rebellion among| C6\nC6 -->|Parent of| C7\nC7 -->|Loves| C2\nC8 -->|Loves| C7\nC8 -->|Friend of| C2\nC5 -->|Mentor of| C8\nC5 -->|Opposes| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 201,
+        "total_tokens": 1761,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:56.893Z",
+      "finishedAt": "2026-09-10T17:47:56.893Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Crisóstomo Ibarra\"]\nC2[\"Basilio\"]\nC3[\"Simoun\"]\nC4[\"María Clara\"]\nC5[\"Padre Florentino\"]\nC6[\"Kabesang Tales\"]\nC7[\"Juli\"]\nC8[\"Isagani\"]\nC1 -->|Alter ego of| C3\nC1 -->|Loves| C4\nC2 -->|Serves| C3\nC2 -->|Protects| C7\nC3 -->|Manipulates| C2\nC3 -->|Enemy of| C5\nC3 -->|Foments rebellion among| C6\nC6 -->|Parent of| C7\nC7 -->|Loves| C2\nC8 -->|Loves| C7\nC8 -->|Friend of| C2\nC5 -->|Mentor of| C8\nC5 -->|Opposes| C3",
+  "mermaidHash": "4fb5babda22320fefab5ad755861c45194dfabf35643ac4d34f9f415c6560a53",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4fb5babda22320fefab5ad755861c45194dfabf35643ac4d34f9f415c6560a53",
+    "svgHash": "5605e1089e0a7f0e72ceae128320374279ccffafc88a3fd34a9ec7e262fcf262",
+    "validatedAt": "2026-09-10T17:47:58.183Z",
+    "width": 1551.965087890625,
+    "height": 284.0477294921875
+  },
+  "generatedAt": "2026-09-10T17:47:56.893Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 201,
+    "total_tokens": 1761,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

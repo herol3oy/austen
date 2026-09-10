@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "earl-derr-biggers/the-house-without-a-key",
+  "metadata": {
+    "title": "The House Without a Key",
+    "authors": [
+      "Earl Derr Biggers"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "a4a8e233cbaa65af247188f7aff4797cfefa93b4ce452d6b5ad6cc9d8ef636f0",
+  "promptHash": "dc03e7b8aa5a51da8a7f93b6b29f60e837456aa565b7f0b16f2dbb5481414264",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:52.209Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:52.210Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Charlie Chan\"]\nC2[\"John Quincy Winterslip\"]\nC3[\"Dan Winterslip\"]\nC4[\"Minerva Winterslip\"]\nC5[\"Barbara Winterslip\"]\nC6[\"Amos Winterslip\"]\nC7[\"Carlota Egan\"]\nC8[\"Harry Jennison\"]\nC1 -->|Investigates| C3\nC1 -->|Protects| C2\nC2 -->|Nephew of| C3\nC2 -->|Nephew of| C4\nC2 -->|Cousin of| C5\nC3 -->|Brother of| C4\nC3 -->|Brother of| C6\nC3 -->|Father of| C5\nC4 -->|Sister of| C6\nC5 -->|Daughter of| C3\nC7 -->|Loves| C2\nC8 -->|Kills| C3\nC8 -->|Rival of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 202,
+        "total_tokens": 1764,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:53.724Z",
+      "finishedAt": "2026-09-10T17:33:53.724Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Charlie Chan\"]\nC2[\"John Quincy Winterslip\"]\nC3[\"Dan Winterslip\"]\nC4[\"Minerva Winterslip\"]\nC5[\"Barbara Winterslip\"]\nC6[\"Amos Winterslip\"]\nC7[\"Carlota Egan\"]\nC8[\"Harry Jennison\"]\nC1 -->|Investigates| C3\nC1 -->|Protects| C2\nC2 -->|Nephew of| C3\nC2 -->|Nephew of| C4\nC2 -->|Cousin of| C5\nC3 -->|Brother of| C4\nC3 -->|Brother of| C6\nC3 -->|Father of| C5\nC4 -->|Sister of| C6\nC5 -->|Daughter of| C3\nC7 -->|Loves| C2\nC8 -->|Kills| C3\nC8 -->|Rival of| C2",
+  "mermaidHash": "85be96c6980af6d6a6c13e8ad1e6fc04a114d00ef376ee4f6d84b2de39cd25f2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "85be96c6980af6d6a6c13e8ad1e6fc04a114d00ef376ee4f6d84b2de39cd25f2",
+    "svgHash": "7cb54b58b05fe5c600112a5270be13b2d476d84ef7e93adeade68ea0afb873af",
+    "validatedAt": "2026-09-10T17:33:55.068Z",
+    "width": 1370.7926025390625,
+    "height": 373
+  },
+  "generatedAt": "2026-09-10T17:33:53.724Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 202,
+    "total_tokens": 1764,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

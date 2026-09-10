@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "theodore-dreiser/the-financier",
+  "metadata": {
+    "title": "The Financier",
+    "authors": [
+      "Theodore Dreiser"
+    ],
+    "year": "1912"
+  },
+  "inputHash": "fed16179c9f5c5f0f69b866634cd3932a8640ffd4de16259a5149f733c3ff045",
+  "promptHash": "18c6c96efeefdade5418da1fb32b3df58b37f13979cdb2c03a0daf8c6d38834a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:25.451Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:25.451Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frank Cowperwood\"]\nC2[\"Lillian Semple\"]\nC3[\"Edward Butler\"]\nC4[\"Aileen Butler\"]\nC5[\"Henry Cowperwood\"]\nC6[\"Peter Laughlin\"]\nC7[\"George Waterman\"]\nC8[\"Josephine Cowperwood\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C4\nC4 -->|Daughter of| C3\nC3 -->|Enemy of| C1\nC1 -->|Father of| C8\nC5 -->|Father of| C1\nC6 -->|Partner of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 145,
+        "total_tokens": 1704,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:26.975Z",
+      "finishedAt": "2026-09-10T18:10:26.975Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frank Cowperwood\"]\nC2[\"Lillian Semple\"]\nC3[\"Edward Butler\"]\nC4[\"Aileen Butler\"]\nC5[\"Henry Cowperwood\"]\nC6[\"Peter Laughlin\"]\nC7[\"George Waterman\"]\nC8[\"Josephine Cowperwood\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C4\nC4 -->|Daughter of| C3\nC3 -->|Enemy of| C1\nC1 -->|Father of| C8\nC5 -->|Father of| C1\nC6 -->|Partner of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "6fbd8356d4091b1ce3613e49d44af245174a050261a97e3f8fbc1982cc7b0fdb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6fbd8356d4091b1ce3613e49d44af245174a050261a97e3f8fbc1982cc7b0fdb",
+    "svgHash": "913ed74d28bc5060d1e5ac4192a8d16696fd291556053e30d8f116e013b3a0a8",
+    "validatedAt": "2026-09-10T18:10:28.355Z",
+    "width": 1143.7205810546875,
+    "height": 321
+  },
+  "generatedAt": "2026-09-10T18:10:26.975Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 145,
+    "total_tokens": 1704,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

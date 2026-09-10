@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-first-men-in-the-moon",
+  "metadata": {
+    "title": "The First Men in the Moon",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "f40fc88bf2d00c07cf3d893437b3bde7a1de006b571075cc7f330a1d9179c617",
+  "promptHash": "1747793308138c200c249f4d5f7e9d8c48a769fecbfc5774ea9a2d87fae1fe43",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:53.614Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:53.615Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mr. Bedford\"]\nC2[\"Mr. Cavor\"]\nC3[\"Grand Lunar\"]\nC4[\"Selentites\"]\nC5[\"Mr. Wendigee\"]\nC6[\"Cavor's Assistant\"]\nC1 -->|Business partner of| C2\nC1 -->|Travels to Moon with| C2\nC2 -->|Created| C4\nC2 -->|Subject of| C3\nC3 -->|Ruler of| C4\nC5 -->|Receives transmissions from| C2\nC6 -->|Assists| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 123,
+        "total_tokens": 1685,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:55.664Z",
+      "finishedAt": "2026-09-10T17:41:55.664Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mr. Bedford\"]\nC2[\"Mr. Cavor\"]\nC3[\"Grand Lunar\"]\nC4[\"Selentites\"]\nC5[\"Mr. Wendigee\"]\nC6[\"Cavor's Assistant\"]\nC1 -->|Business partner of| C2\nC1 -->|Travels to Moon with| C2\nC2 -->|Created| C4\nC2 -->|Subject of| C3\nC3 -->|Ruler of| C4\nC5 -->|Receives transmissions from| C2\nC6 -->|Assists| C2",
+  "mermaidHash": "af5edad27f886449bdc253cd3579b21f7c4aae7b2a79e9f43bff3266fe3078c7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "af5edad27f886449bdc253cd3579b21f7c4aae7b2a79e9f43bff3266fe3078c7",
+    "svgHash": "df8e9e9fa3d59ee546e073da5642083e379fda5d52a779dbf9539d46aee16311",
+    "validatedAt": "2026-09-10T17:41:57.069Z",
+    "width": 1044.3853759765625,
+    "height": 271.5
+  },
+  "generatedAt": "2026-09-10T17:41:55.664Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 123,
+    "total_tokens": 1685,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

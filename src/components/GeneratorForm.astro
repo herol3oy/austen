@@ -1,0 +1,51 @@
+<section id="search-section">
+  <p class="section-kicker">A literary map</p>
+  <h1>See the story between the lines.</h1>
+  <p class="search-subtitle">
+    Find a novel through OpenLibrary, or enter its details below. Generation uses book metadata and may need corrections.
+  </p>
+  <div class="search-bar">
+    <svg
+      class="search-icon"
+      viewBox="0 0 24 24"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <path d="M21 21l-4.35-4.35" />
+    </svg>
+    <input
+      type="search"
+      id="search-input"
+      name="search"
+      placeholder="Search by title or author"
+      autocomplete="off"
+      aria-describedby="search-status" aria-label="Search OpenLibrary by title or author"
+    >
+  </div>
+  <p id="search-status" class="status-line" role="status" aria-live="polite"></p>
+  <ul id="search-results" class="catalog"></ul>
+<details class="manual-entry"><summary>Enter book details manually</summary>
+<form id="manual-book-form">
+<label>Title <input name="title" type="text" required maxlength="300" /></label>
+<label>Author <input name="author" type="text" maxlength="160" /></label>
+<label>Year <input name="year" type="text" maxlength="40" /></label>
+<button type="submit">Select book</button>
+</form></details>
+</section>
+
+<section id="selected-book-section" hidden>
+  <div class="section-heading">
+    <h2>Your selected volume</h2>
+    <span class="section-number" aria-hidden="true">01 / SELECT</span>
+  </div>
+  <article class="bookplate" id="selected-book-card" aria-labelledby="selected-book-heading">
+    <h3 id="selected-book-heading" class="sr-only">Selected book details</h3>
+  </article>
+  <p id="generate-status" class="status-line" role="status" aria-live="polite"></p>
+</section>

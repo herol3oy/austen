@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "franklin-w-dixon/the-shore-road-mystery",
+  "metadata": {
+    "title": "The Shore Road Mystery",
+    "authors": [
+      "Franklin W. Dixon"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "f4b319025a393fe2393715d19ce2456385ccb9eb785277ac30692063594d5a23",
+  "promptHash": "442c4655ddd6bbc93bc64a1182ad816ff1a86203af407c8556651bfbbac7cd16",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:03.617Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:03.617Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Chet Morton\"]\nC6[\"Biff Hooper\"]\nC7[\"Tony Prito\"]\nC8[\"Callie Shaw\"]\nC1 -->|Sibling of| C2\nC1 -->|Son of| C3\nC2 -->|Son of| C3\nC3 -->|Father of| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C1\nC4 -->|Mother of| C2\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC1 -->|Friend of| C6\nC2 -->|Friend of| C6\nC1 -->|Friend of| C7\nC2 -->|Friend of| C7\nC1 -->|Romantic interest of| C8\nC2 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 209,
+        "total_tokens": 1769,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:05.523Z",
+      "finishedAt": "2026-09-10T17:38:05.523Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Chet Morton\"]\nC6[\"Biff Hooper\"]\nC7[\"Tony Prito\"]\nC8[\"Callie Shaw\"]\nC1 -->|Sibling of| C2\nC1 -->|Son of| C3\nC2 -->|Son of| C3\nC3 -->|Father of| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C1\nC4 -->|Mother of| C2\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC1 -->|Friend of| C6\nC2 -->|Friend of| C6\nC1 -->|Friend of| C7\nC2 -->|Friend of| C7\nC1 -->|Romantic interest of| C8\nC2 -->|Friend of| C8",
+  "mermaidHash": "a8a6c7c97b41ffac1bd9725907c65436511199034d965bf02e80da87ceb9d023",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a8a6c7c97b41ffac1bd9725907c65436511199034d965bf02e80da87ceb9d023",
+    "svgHash": "eb326781f8108d19d437b05ed1391fc2103f5ff286f4323c3b6c051bad85b177",
+    "validatedAt": "2026-09-10T17:38:06.897Z",
+    "width": 938.0044555664062,
+    "height": 559.5
+  },
+  "generatedAt": "2026-09-10T17:38:05.523Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 209,
+    "total_tokens": 1769,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

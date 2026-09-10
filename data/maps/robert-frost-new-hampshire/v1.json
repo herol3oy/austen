@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-frost/new-hampshire",
+  "metadata": {
+    "title": "New Hampshire",
+    "authors": [
+      "Robert Frost"
+    ],
+    "year": "1923"
+  },
+  "inputHash": "afb9f87463f8999d354a98b74351e576b3fbb2b59d2b3ffb469f8e332874a2ee",
+  "promptHash": "70720122eb422180b7e0853c8f5f5e6f139c136df02d56739090811611bed3df",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:37.827Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:37.827Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 2,
+        "total_tokens": 1557,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:38.932Z",
+      "finishedAt": "2026-09-10T18:07:38.932Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:07:38.932Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2,
+    "total_tokens": 1557,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

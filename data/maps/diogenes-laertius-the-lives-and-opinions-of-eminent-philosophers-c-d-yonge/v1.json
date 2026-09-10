@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "diogenes-laertius/the-lives-and-opinions-of-eminent-philosophers/c-d-yonge",
+  "metadata": {
+    "title": "The Lives and Opinions of Eminent Philosophers",
+    "authors": [
+      "Diogenes Laërtius"
+    ],
+    "year": "1853"
+  },
+  "inputHash": "d131ebec9bb60073dc54e178ed13adf45a5c1419cd885efd198d82bcbcf3d8dc",
+  "promptHash": "eaeed8bf05421bcff790d89163b665fde05af443f040252d932cc6b53cdd13f2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:08.392Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:08.392Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 2,
+        "total_tokens": 1568,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 286
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:09.309Z",
+      "finishedAt": "2026-09-10T17:32:09.309Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:32:09.309Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1566,
+    "completion_tokens": 2,
+    "total_tokens": 1568,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 286
+  }
+}

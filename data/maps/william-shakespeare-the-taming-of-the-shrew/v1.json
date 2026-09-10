@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/the-taming-of-the-shrew",
+  "metadata": {
+    "title": "The Taming of the Shrew",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1593"
+  },
+  "inputHash": "3d09cc3834c98fa0f7281c22bc8af65f6d5b750dee1c5f9a2ae518755fb7d937",
+  "promptHash": "cbbae64e3873a87f5f723d99a6bce5e6a6244b6ac2007f9fc5db1ccd1ea9e9f4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:57.643Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:57.643Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Petruchio\"]\nC2[\"Katherina\"]\nC3[\"Bianca\"]\nC4[\"Baptista Minola\"]\nC5[\"Lucentio\"]\nC6[\"Tranio\"]\nC7[\"Hortensio\"]\nC8[\"Gremio\"]\nC1 -->|Marries| C2\nC2 -->|Sister of| C3\nC4 -->|Father of| C2\nC4 -->|Father of| C3\nC5 -->|Loves| C3\nC5 -->|Serves| C4\nC6 -->|Serves| C5\nC7 -->|Loves| C3\nC8 -->|Loves| C3\nC7 -->|Friend of| C1\nC1 -->|Tames| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 172,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:58.844Z",
+      "finishedAt": "2026-09-10T18:15:58.844Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Petruchio\"]\nC2[\"Katherina\"]\nC3[\"Bianca\"]\nC4[\"Baptista Minola\"]\nC5[\"Lucentio\"]\nC6[\"Tranio\"]\nC7[\"Hortensio\"]\nC8[\"Gremio\"]\nC1 -->|Marries| C2\nC2 -->|Sister of| C3\nC4 -->|Father of| C2\nC4 -->|Father of| C3\nC5 -->|Loves| C3\nC5 -->|Serves| C4\nC6 -->|Serves| C5\nC7 -->|Loves| C3\nC8 -->|Loves| C3\nC7 -->|Friend of| C1\nC1 -->|Tames| C2",
+  "mermaidHash": "da5d041ce1125cb29e4c1765ed76ccd4317e0564af440a1e13ff3dfcc9e67e35",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "da5d041ce1125cb29e4c1765ed76ccd4317e0564af440a1e13ff3dfcc9e67e35",
+    "svgHash": "4643a1a220c95f04c090e141f76b3577e1bf33c3a847eb717573fb1eeb075b3d",
+    "validatedAt": "2026-09-10T18:16:00.222Z",
+    "width": 1067.24853515625,
+    "height": 320.5
+  },
+  "generatedAt": "2026-09-10T18:15:58.844Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 172,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

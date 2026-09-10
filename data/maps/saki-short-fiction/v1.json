@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "saki/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Saki"
+    ],
+    "year": "1904—1915"
+  },
+  "inputHash": "fa572fd417e61b69515c0a9b904f9043b83de1edb8f2e8f3df6de6b6178d6062",
+  "promptHash": "c463397832ca5d459c9e7c02e8ba42ab63a01a2653ba428718592401b71a6050",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:43.899Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:43.899Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 150
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:44.610Z",
+      "finishedAt": "2026-09-10T18:08:44.610Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:08:44.610Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 150
+  }
+}

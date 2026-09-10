@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "a-a-milne/the-house-at-pooh-corner",
+  "metadata": {
+    "title": "The House at Pooh Corner",
+    "authors": [
+      "A. A. Milne"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "10efd6b7b807e2566eb538b7114e2f3c6ab475dd736543c979a3e275f5585a62",
+  "promptHash": "bbc1b051b6c6b47354b25165dcf632c3812e4b1990d1d87d4d7d72323e9b4ad9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:27.534Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:27.534Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Winnie-the-Pooh\"]\nC2[\"Piglet\"]\nC3[\"Eeyore\"]\nC4[\"Tigger\"]\nC5[\"Rabbit\"]\nC6[\"Christopher Robin\"]\nC7[\"Owl\"]\nC8[\"Kanga\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8\nC3 -->|Friend of| C4\nC3 -->|Friend of| C5\nC3 -->|Friend of| C6\nC3 -->|Friend of| C7\nC3 -->|Friend of| C8\nC4 -->|Friend of| C5\nC4 -->|Friend of| C6\nC4 -->|Friend of| C7\nC4 -->|Friend of| C8\nC5 -->|Friend of| C6\nC5 -->|Friend of| C7\nC5 -->|Friend of| C8\nC6 -->|Friend of| C7\nC6 -->|Friend of| C8\nC7 -->|Friend of| C8\nC6 -->|Protects| C1\nC6 -->|Protects| C2\nC6 -->|Protects| C3\nC6 -->|Protects| C4\nC6 -->|Protects| C5\nC6 -->|Protects| C7\nC6 -->|Protects| C8\nC8 -->|Parent of| C4\nC5 -->|Hosts| C1\nC5 -->|Hosts| C2\nC5 -->|Hosts| C3\nC5 -->|Hosts| C4\nC5 -->|Hosts| C6\nC5 -->|Hosts| C7\nC5 -->|Hosts| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 487,
+        "total_tokens": 2050,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1563
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:29.532Z",
+      "finishedAt": "2026-09-10T17:23:29.532Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Winnie-the-Pooh\"]\nC2[\"Piglet\"]\nC3[\"Eeyore\"]\nC4[\"Tigger\"]\nC5[\"Rabbit\"]\nC6[\"Christopher Robin\"]\nC7[\"Owl\"]\nC8[\"Kanga\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8\nC3 -->|Friend of| C4\nC3 -->|Friend of| C5\nC3 -->|Friend of| C6\nC3 -->|Friend of| C7\nC3 -->|Friend of| C8\nC4 -->|Friend of| C5\nC4 -->|Friend of| C6\nC4 -->|Friend of| C7\nC4 -->|Friend of| C8\nC5 -->|Friend of| C6\nC5 -->|Friend of| C7\nC5 -->|Friend of| C8\nC6 -->|Friend of| C7\nC6 -->|Friend of| C8\nC7 -->|Friend of| C8\nC6 -->|Protects| C1\nC6 -->|Protects| C2\nC6 -->|Protects| C3\nC6 -->|Protects| C4\nC6 -->|Protects| C5\nC6 -->|Protects| C7\nC6 -->|Protects| C8\nC8 -->|Parent of| C4\nC5 -->|Hosts| C1\nC5 -->|Hosts| C2\nC5 -->|Hosts| C3\nC5 -->|Hosts| C4\nC5 -->|Hosts| C6\nC5 -->|Hosts| C7\nC5 -->|Hosts| C8",
+  "mermaidHash": "8f1c3e527bd8de863deed436686f3868efd6db7dbc9e0812e6b429aa6e60934f",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:23:29.532Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 487,
+    "total_tokens": 2050,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1563
+  }
+}

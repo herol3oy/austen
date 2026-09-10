@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dante-alighieri/the-divine-comedy/henry-wadsworth-longfellow",
+  "metadata": {
+    "title": "The Divine Comedy",
+    "authors": [
+      "Dante Alighieri"
+    ],
+    "year": "1320"
+  },
+  "inputHash": "3eea83d8d40817dc7ccb5d56de7ef9d8afd401fc12ca88a3170152520a42a1d3",
+  "promptHash": "130efbd08759c49f9e5e59050e23d954afccfcf4f721d7587d174cf77955c69d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:47.013Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:47.013Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dante\"]\nC2[\"Virgil\"]\nC3[\"Beatrice\"]\nC4[\"Charon\"]\nC5[\"Minos\"]\nC6[\"Lucifer\"]\nC7[\"Saint Bernard\"]\nC8[\"Cato of Utica\"]\nC1 -->|Guided by| C2\nC2 -->|Mentor of| C1\nC3 -->|Beloved of| C1\nC3 -->|Guides| C1\nC1 -->|Loves| C3\nC2 -->|Serves| C3\nC4 -->|Ferries| C1\nC5 -->|Judges| C1\nC6 -->|Torments| C1\nC7 -->|Guides| C1\nC8 -->|Oversees| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 168,
+        "total_tokens": 1727,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:49.034Z",
+      "finishedAt": "2026-09-10T17:31:49.034Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dante\"]\nC2[\"Virgil\"]\nC3[\"Beatrice\"]\nC4[\"Charon\"]\nC5[\"Minos\"]\nC6[\"Lucifer\"]\nC7[\"Saint Bernard\"]\nC8[\"Cato of Utica\"]\nC1 -->|Guided by| C2\nC2 -->|Mentor of| C1\nC3 -->|Beloved of| C1\nC3 -->|Guides| C1\nC1 -->|Loves| C3\nC2 -->|Serves| C3\nC4 -->|Ferries| C1\nC5 -->|Judges| C1\nC6 -->|Torments| C1\nC7 -->|Guides| C1\nC8 -->|Oversees| C1",
+  "mermaidHash": "2ed8e92ee99f6304c8fa049ea53904ba9a456f994eabe1b164469c058dba74aa",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2ed8e92ee99f6304c8fa049ea53904ba9a456f994eabe1b164469c058dba74aa",
+    "svgHash": "e4d3ee4c4bb8eb3fae06719391848e89876884eb3ff99e09b76ce34a94a8c9bd",
+    "validatedAt": "2026-09-10T17:31:50.354Z",
+    "width": 808.8717041015625,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T17:31:49.034Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 168,
+    "total_tokens": 1727,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

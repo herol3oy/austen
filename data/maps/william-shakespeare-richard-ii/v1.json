@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/richard-ii",
+  "metadata": {
+    "title": "Richard II",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1595"
+  },
+  "inputHash": "092ec2d11a816ae3548e94efb48d86aced4afdec3b5869422a6308e25920df7e",
+  "promptHash": "9b86f186769dca7cdbdd543b5293970cebabb9298e8730e4333fc2aee5c13db4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:39.814Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:39.814Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Richard II\"]\nC2[\"Henry Bolingbroke\"]\nC3[\"John of Gaunt\"]\nC4[\"Edmund of Langley\"]\nC5[\"Thomas Mowbray\"]\nC6[\"Duke of York\"]\nC7[\"Queen Isabel\"]\nC8[\"Bishop of Carlisle\"]\n\nC1 -->|Cousin of| C2\nC1 -->|Uncle of| C3\nC1 -->|Uncle of| C4\nC1 -->|Uncle of| C6\nC1 -->|Married to| C7\nC1 -->|Exiles| C2\nC1 -->|Exiles| C5\nC1 -->|Seizes lands of| C3\nC1 -->|Seizes lands of| C2\nC1 -->|Deposed by| C2\nC2 -->|Cousin of| C1\nC2 -->|Son of| C3\nC2 -->|Exiled by| C1\nC2 -->|Deposes| C1\nC2 -->|Kills| C1\nC3 -->|Father of| C2\nC3 -->|Brother of| C4\nC3 -->|Brother of| C6\nC3 -->|Uncle of| C1\nC4 -->|Brother of| C3\nC4 -->|Brother of| C6\nC4 -->|Uncle of| C1\nC5 -->|Rival of| C2\nC5 -->|Exiled by| C1\nC6 -->|Brother of| C3\nC6 -->|Brother of| C4\nC6 -->|Uncle of| C1\nC6 -->|Uncle of| C2\nC6 -->|Supports| C2\nC7 -->|Married to| C1\nC8 -->|Supports| C1\nC8 -->|Opposes| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 412,
+        "total_tokens": 1967,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:41.958Z",
+      "finishedAt": "2026-09-10T18:15:41.958Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard II\"]\nC2[\"Henry Bolingbroke\"]\nC3[\"John of Gaunt\"]\nC4[\"Edmund of Langley\"]\nC5[\"Thomas Mowbray\"]\nC6[\"Duke of York\"]\nC7[\"Queen Isabel\"]\nC8[\"Bishop of Carlisle\"]\n\nC1 -->|Cousin of| C2\nC1 -->|Uncle of| C3\nC1 -->|Uncle of| C4\nC1 -->|Uncle of| C6\nC1 -->|Married to| C7\nC1 -->|Exiles| C2\nC1 -->|Exiles| C5\nC1 -->|Seizes lands of| C3\nC1 -->|Seizes lands of| C2\nC1 -->|Deposed by| C2\nC2 -->|Cousin of| C1\nC2 -->|Son of| C3\nC2 -->|Exiled by| C1\nC2 -->|Deposes| C1\nC2 -->|Kills| C1\nC3 -->|Father of| C2\nC3 -->|Brother of| C4\nC3 -->|Brother of| C6\nC3 -->|Uncle of| C1\nC4 -->|Brother of| C3\nC4 -->|Brother of| C6\nC4 -->|Uncle of| C1\nC5 -->|Rival of| C2\nC5 -->|Exiled by| C1\nC6 -->|Brother of| C3\nC6 -->|Brother of| C4\nC6 -->|Uncle of| C1\nC6 -->|Uncle of| C2\nC6 -->|Supports| C2\nC7 -->|Married to| C1\nC8 -->|Supports| C1\nC8 -->|Opposes| C2",
+  "mermaidHash": "fc65dd72aef90d2dfc2df30aef5f267f55993bd127fab7d7ceddc1d8bbec0295",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fc65dd72aef90d2dfc2df30aef5f267f55993bd127fab7d7ceddc1d8bbec0295",
+    "svgHash": "1b68d0d341cca847601cb6bc6099168d99aab9aaba59dd91246d6a001c729969",
+    "validatedAt": "2026-09-10T18:15:43.340Z",
+    "width": 1907.683349609375,
+    "height": 1009
+  },
+  "generatedAt": "2026-09-10T18:15:41.958Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 412,
+    "total_tokens": 1967,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

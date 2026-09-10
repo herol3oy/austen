@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ella-cheever-thayer/wired-love",
+  "metadata": {
+    "title": "Wired Love",
+    "authors": [
+      "Ella Cheever Thayer"
+    ],
+    "year": "1880"
+  },
+  "inputHash": "dae32af27e35c434176b46a0728ede9c3b4fca08c485ccd5d0967a63399cc95c",
+  "promptHash": "53e011d463ca753874a8466313d6e5907180f6322768d80417238407e9223599",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:11.284Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:11.284Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:12.406Z",
+      "finishedAt": "2026-09-10T17:36:12.406Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:36:12.406Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

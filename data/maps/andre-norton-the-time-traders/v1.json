@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "andre-norton/the-time-traders",
+  "metadata": {
+    "title": "The Time Traders",
+    "authors": [
+      "Andre Norton"
+    ],
+    "year": "1958"
+  },
+  "inputHash": "1a40f90b49851b09a8bb8b5f6c46d71269d21eb8516ab869bf9410971fc2e526",
+  "promptHash": "8d72d9f8113156eb106f323afa6e541401acd50de01c8cbba2e708dfe9aa4a30",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:29.331Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:29.331Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ross Murdock\"]\nC2[\"Major John Kelgarries\"]\nC3[\"Dr. Gordon Ashe\"]\nC4[\"Travis Fox\"]\nC5[\"Hardy\"]\nC6[\"Millaird\"]\nC7[\"Baldies\"]\nC1 -->|Recruited by| C2\nC2 -->|Commands| C1\nC2 -->|Commands| C3\nC3 -->|Mentor of| C1\nC1 -->|Friend of| C4\nC4 -->|Serves| C2\nC5 -->|Rival of| C1\nC6 -->|Serves| C2\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 157,
+        "total_tokens": 1715,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:30.971Z",
+      "finishedAt": "2026-09-10T17:25:30.971Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ross Murdock\"]\nC2[\"Major John Kelgarries\"]\nC3[\"Dr. Gordon Ashe\"]\nC4[\"Travis Fox\"]\nC5[\"Hardy\"]\nC6[\"Millaird\"]\nC7[\"Baldies\"]\nC1 -->|Recruited by| C2\nC2 -->|Commands| C1\nC2 -->|Commands| C3\nC3 -->|Mentor of| C1\nC1 -->|Friend of| C4\nC4 -->|Serves| C2\nC5 -->|Rival of| C1\nC6 -->|Serves| C2\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C4",
+  "mermaidHash": "63618c8074f2d53d09d46487b928befaef9e48747dc9b76c6147e5a01334b2c0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "63618c8074f2d53d09d46487b928befaef9e48747dc9b76c6147e5a01334b2c0",
+    "svgHash": "af4cc70fe648fa875c98389a20485e0453666a4324bb2842af451af8febe31a9",
+    "validatedAt": "2026-09-10T17:25:32.322Z",
+    "width": 1251.465087890625,
+    "height": 346
+  },
+  "generatedAt": "2026-09-10T17:25:30.971Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 157,
+    "total_tokens": 1715,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

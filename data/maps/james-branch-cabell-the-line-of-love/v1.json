@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "james-branch-cabell/the-line-of-love",
+  "metadata": {
+    "title": "The Line of Love",
+    "authors": [
+      "James Branch Cabell"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "96ac9d32bf4f4cc1e5b9a8a1c62c76a66f1f69f707c28cf1dd214537af53d81e",
+  "promptHash": "a370792c0f0c61b98f7738f733001d20fb4c9d35eef89792142e09b9201e15ac",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:57.496Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:57.496Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:58.208Z",
+      "finishedAt": "2026-09-10T17:45:58.208Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:45:58.208Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

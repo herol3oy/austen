@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dorothy-l-sayers/the-unpleasantness-at-the-bellona-club",
+  "metadata": {
+    "title": "The Unpleasantness at the Bellona Club",
+    "authors": [
+      "Dorothy L. Sayers"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "8d1428c15cc215fe895f8598f7b1244ee6e5a256a3d5b23bdd8cb05fc5e2a0ee",
+  "promptHash": "9a23703f428f90863c501438244b67f6d25e4ce67085b8e7d49ecd3e64cd073b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:23.630Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:23.630Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Mervyn Bunter\"]\nC3[\"Charles Parker\"]\nC4[\"General Fentiman\"]\nC5[\"Lady Dormer\"]\nC6[\"Ann Dorland\"]\nC7[\"George Fentiman\"]\nC8[\"Robert Fentiman\"]\nC1 -->|Serves| C2\nC1 -->|Friend of| C3\nC1 -->|Investigates death of| C4\nC4 -->|Brother of| C5\nC4 -->|Grandfather of| C7\nC4 -->|Grandfather of| C8\nC5 -->|Aunt of| C6\nC7 -->|Sibling of| C8\nC6 -->|Inherits from| C5\nC8 -->|Inherits from| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 176,
+        "total_tokens": 1742,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 286
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:25.283Z",
+      "finishedAt": "2026-09-10T17:32:25.283Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Mervyn Bunter\"]\nC3[\"Charles Parker\"]\nC4[\"General Fentiman\"]\nC5[\"Lady Dormer\"]\nC6[\"Ann Dorland\"]\nC7[\"George Fentiman\"]\nC8[\"Robert Fentiman\"]\nC1 -->|Serves| C2\nC1 -->|Friend of| C3\nC1 -->|Investigates death of| C4\nC4 -->|Brother of| C5\nC4 -->|Grandfather of| C7\nC4 -->|Grandfather of| C8\nC5 -->|Aunt of| C6\nC7 -->|Sibling of| C8\nC6 -->|Inherits from| C5\nC8 -->|Inherits from| C4",
+  "mermaidHash": "930b5baed8829886173172122b0913d7e0c9ae781c1e06c583460450db286e79",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "930b5baed8829886173172122b0913d7e0c9ae781c1e06c583460450db286e79",
+    "svgHash": "5fb36847bc08032aeb97a1aa36a088f28b9d73d2912c0f82e47fffaeceed79e4",
+    "validatedAt": "2026-09-10T17:32:26.635Z",
+    "width": 1209.7318115234375,
+    "height": 350
+  },
+  "generatedAt": "2026-09-10T17:32:25.283Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1566,
+    "completion_tokens": 176,
+    "total_tokens": 1742,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 286
+  }
+}

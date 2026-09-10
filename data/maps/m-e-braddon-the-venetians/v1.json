@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "m-e-braddon/the-venetians",
+  "metadata": {
+    "title": "The Venetians",
+    "authors": [
+      "M. E. Braddon"
+    ],
+    "year": "1893"
+  },
+  "inputHash": "41d87deb96c07c28db9123f6a07676f9f06d589d1baaa1ee51dcc5d4b3491c33",
+  "promptHash": "c713b3dd247839f4d7d8e27501870af8835ece6dd9b192df284b9d25af1cfe1d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:21.290Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:21.290Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:22.207Z",
+      "finishedAt": "2026-09-10T17:51:22.207Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:51:22.207Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

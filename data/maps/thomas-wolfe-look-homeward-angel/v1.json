@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-wolfe/look-homeward-angel",
+  "metadata": {
+    "title": "Look Homeward, Angel",
+    "authors": [
+      "Thomas Wolfe"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "761e60c82d1b131c4ccd5d4330b005ab5268b01327fdc6f77c3a52253f41780e",
+  "promptHash": "bcfad82c1152057011bc079f7d9594546e29c9b6c3236f63507db380b55ca446",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:26.164Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:26.164Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Eugene Gant\"]\nC2[\"Eliza Gant\"]\nC3[\"Oliver Gant\"]\nC4[\"Ben Gant\"]\nC5[\"Helen Gant\"]\nC6[\"Luke Gant\"]\nC7[\"Margaret Leonard\"]\nC8[\"Laura James\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Married to| C3\nC4 -->|Brother of| C1\nC5 -->|Sister of| C1\nC6 -->|Brother of| C1\nC4 -->|Son of| C2\nC4 -->|Son of| C3\nC5 -->|Daughter of| C2\nC5 -->|Daughter of| C3\nC6 -->|Son of| C2\nC6 -->|Son of| C3\nC7 -->|Mentor of| C1\nC1 -->|Loves| C8\nC5 -->|Cares for| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 218,
+        "total_tokens": 1776,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:27.697Z",
+      "finishedAt": "2026-09-10T18:11:27.697Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Eugene Gant\"]\nC2[\"Eliza Gant\"]\nC3[\"Oliver Gant\"]\nC4[\"Ben Gant\"]\nC5[\"Helen Gant\"]\nC6[\"Luke Gant\"]\nC7[\"Margaret Leonard\"]\nC8[\"Laura James\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Married to| C3\nC4 -->|Brother of| C1\nC5 -->|Sister of| C1\nC6 -->|Brother of| C1\nC4 -->|Son of| C2\nC4 -->|Son of| C3\nC5 -->|Daughter of| C2\nC5 -->|Daughter of| C3\nC6 -->|Son of| C2\nC6 -->|Son of| C3\nC7 -->|Mentor of| C1\nC1 -->|Loves| C8\nC5 -->|Cares for| C4",
+  "mermaidHash": "cdf76fde7a8326500100d6cdbd69cc58ff730325f9afb30801b8fee001983392",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cdf76fde7a8326500100d6cdbd69cc58ff730325f9afb30801b8fee001983392",
+    "svgHash": "52b2746fad5dd77dcbd300ff0188e379f048d6b1b1041ada8c9481ba0fe9ccfa",
+    "validatedAt": "2026-09-10T18:11:29.023Z",
+    "width": 1217.61962890625,
+    "height": 457.5
+  },
+  "generatedAt": "2026-09-10T18:11:27.697Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 218,
+    "total_tokens": 1776,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

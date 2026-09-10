@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/tarzan-of-the-apes",
+  "metadata": {
+    "title": "Tarzan of the Apes",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1914"
+  },
+  "inputHash": "d7957285adfb31f213382afdbc21eeac825cc4692c9c793c2e141ea616e1feff",
+  "promptHash": "6d10294eedb5e00f1ca3d7f2b5caa2d0d8c41c04697aa8ff768a58073d796d85",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:23.863Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:23.863Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jane Porter\"]\nC3[\"John Clayton\"]\nC4[\"Alice Clayton\"]\nC5[\"Kala\"]\nC6[\"Kerchak\"]\nC7[\"Paul D'Arnot\"]\nC8[\"William Cecil Clayton\"]\nC1 -->|Son of| C3\nC1 -->|Son of| C4\nC1 -->|Raised by| C5\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Father of| C1\nC4 -->|Mother of| C1\nC5 -->|Adopted mother of| C1\nC6 -->|Enemy of| C1\nC7 -->|Friend of| C1\nC8 -->|Cousin of| C2\nC8 -->|Rival of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 181,
+        "total_tokens": 1744,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:25.196Z",
+      "finishedAt": "2026-09-10T17:34:25.197Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jane Porter\"]\nC3[\"John Clayton\"]\nC4[\"Alice Clayton\"]\nC5[\"Kala\"]\nC6[\"Kerchak\"]\nC7[\"Paul D'Arnot\"]\nC8[\"William Cecil Clayton\"]\nC1 -->|Son of| C3\nC1 -->|Son of| C4\nC1 -->|Raised by| C5\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Father of| C1\nC4 -->|Mother of| C1\nC5 -->|Adopted mother of| C1\nC6 -->|Enemy of| C1\nC7 -->|Friend of| C1\nC8 -->|Cousin of| C2\nC8 -->|Rival of| C1",
+  "mermaidHash": "69f63cc8f92291687e0441f0d89787a5edc443b92b7b630c9fab6827594b7fbf",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "69f63cc8f92291687e0441f0d89787a5edc443b92b7b630c9fab6827594b7fbf",
+    "svgHash": "1acac0ca46e4a0356d636795e4c097bbca5e29eb3014ea7f4404cc3b401021be",
+    "validatedAt": "2026-09-10T17:34:26.504Z",
+    "width": 757.8917846679688,
+    "height": 387
+  },
+  "generatedAt": "2026-09-10T17:34:25.196Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 181,
+    "total_tokens": 1744,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "adam-mickiewicz/pan-tadeusz/maude-ashurst-biggs",
+  "metadata": {
+    "title": "Pan Tadeusz",
+    "authors": [
+      "Adam Mickiewicz"
+    ],
+    "year": "1834"
+  },
+  "inputHash": "381b8345c0fbd2b915325469e4db89c9838ad91382663524df343dcaa5593287",
+  "promptHash": "2b38a5b72e2e2f1b899709516d075180e8eebd18dab5dbcfe7744889bd299c7b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:45.324Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:45.325Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tadeusz Soplica\"]\nC2[\"Jacek Soplica\"]\nC3[\"Zosia Horeszko\"]\nC4[\"Telimena\"]\nC5[\"Hrabia Horeszko\"]\nC6[\"Gerwazy Rębajło\"]\nC7[\"Sędzia Soplica\"]\nC8[\"Hrabia\"]\nC1 -->|Son of| C2\nC1 -->|Loves| C3\nC2 -->|Brother of| C7\nC2 -->|Kills| C5\nC2 -->|Enemy of| C6\nC3 -->|Ward of| C4\nC4 -->|Guardian of| C3\nC5 -->|Descendant of| C6\nC6 -->|Serves| C5\nC7 -->|Uncle of| C1\nC8 -->|Rival of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 192,
+        "total_tokens": 1750,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:47.197Z",
+      "finishedAt": "2026-09-10T17:23:47.197Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tadeusz Soplica\"]\nC2[\"Jacek Soplica\"]\nC3[\"Zosia Horeszko\"]\nC4[\"Telimena\"]\nC5[\"Hrabia Horeszko\"]\nC6[\"Gerwazy Rębajło\"]\nC7[\"Sędzia Soplica\"]\nC8[\"Hrabia\"]\nC1 -->|Son of| C2\nC1 -->|Loves| C3\nC2 -->|Brother of| C7\nC2 -->|Kills| C5\nC2 -->|Enemy of| C6\nC3 -->|Ward of| C4\nC4 -->|Guardian of| C3\nC5 -->|Descendant of| C6\nC6 -->|Serves| C5\nC7 -->|Uncle of| C1\nC8 -->|Rival of| C7",
+  "mermaidHash": "cc4cccd869f0385977dd92457d3f7f74ad52332eedc595e7daa8098fb6dbb0d1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cc4cccd869f0385977dd92457d3f7f74ad52332eedc595e7daa8098fb6dbb0d1",
+    "svgHash": "dcf0b89e215364f0ba0b164fc86c6371d8b07509472979168d62c7af3bbf6085",
+    "validatedAt": "2026-09-10T17:23:48.575Z",
+    "width": 1057.111083984375,
+    "height": 408.5
+  },
+  "generatedAt": "2026-09-10T17:23:47.197Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 192,
+    "total_tokens": 1750,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

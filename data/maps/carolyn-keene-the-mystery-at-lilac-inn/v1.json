@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "carolyn-keene/the-mystery-at-lilac-inn",
+  "metadata": {
+    "title": "The Mystery at Lilac Inn",
+    "authors": [
+      "Carolyn Keene"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "30ae9baed42c025f517b16bff78e3dc01565197d0a4d389615abb84aed9fa701",
+  "promptHash": "3bc376ccb10f5d9610fb90e1518bd66dfa0a5fe082d340c22c1746159f85c532",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:30.505Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:30.505Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nancy Drew\"]\nC2[\"Helen Corning\"]\nC3[\"Emily Crandall\"]\nC4[\"Jane Willoughby\"]\nC5[\"Dick Farnsworth\"]\nC6[\"Maude Farnsworth\"]\nC7[\"John Crandall\"]\nC8[\"Mary Mason\"]\nC1 -->|Friend of| C2\nC1 -->|Protects| C3\nC1 -->|Investigates| C4\nC1 -->|Enemy of| C5\nC5 -->|Impersonates| C1\nC5 -->|Accomplice of| C6\nC6 -->|Guardian of| C3\nC7 -->|Parent of| C3\nC8 -->|Former guardian of| C3\nC4 -->|Attempts to swindle| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 169,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:31.714Z",
+      "finishedAt": "2026-09-10T17:29:31.714Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nancy Drew\"]\nC2[\"Helen Corning\"]\nC3[\"Emily Crandall\"]\nC4[\"Jane Willoughby\"]\nC5[\"Dick Farnsworth\"]\nC6[\"Maude Farnsworth\"]\nC7[\"John Crandall\"]\nC8[\"Mary Mason\"]\nC1 -->|Friend of| C2\nC1 -->|Protects| C3\nC1 -->|Investigates| C4\nC1 -->|Enemy of| C5\nC5 -->|Impersonates| C1\nC5 -->|Accomplice of| C6\nC6 -->|Guardian of| C3\nC7 -->|Parent of| C3\nC8 -->|Former guardian of| C3\nC4 -->|Attempts to swindle| C3",
+  "mermaidHash": "0810d3da1cf7f4f7b9f7eed84662d2e1f5820a2200ccf59e6e3b191bd356c4c5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0810d3da1cf7f4f7b9f7eed84662d2e1f5820a2200ccf59e6e3b191bd356c4c5",
+    "svgHash": "8b8b53702de2fadfbf4a08204e06061446aec8faea6fff75e3891273522df7bb",
+    "validatedAt": "2026-09-10T17:29:33.114Z",
+    "width": 1137.638916015625,
+    "height": 488.5
+  },
+  "generatedAt": "2026-09-10T17:29:31.714Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 169,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "honore-de-balzac/eugenie-grandet/clara-bell",
+  "metadata": {
+    "title": "Eugénie Grandet",
+    "authors": [
+      "Honoré de Balzac"
+    ],
+    "year": "1833"
+  },
+  "inputHash": "44389cced932b0fcdb69014ec6d1335a1851a24ae2ddf03be607deaa9defb34a",
+  "promptHash": "1bc0a0df4c89a7e5a52e5ae046b70d737d7d6e9418f4be99ef88d3556a1e7d85",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:11.221Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:11.221Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Eugénie Grandet\"]\nC2[\"Félix Grandet\"]\nC3[\"Charles Grandet\"]\nC4[\"Madame des Grassins\"]\nC5[\"Monsieur des Grassins\"]\nC6[\"Adolphe des Grassins\"]\nC7[\"Cornoiller\"]\nC8[\"Nanon\"]\nC1 -->|Daughter of| C2\nC2 -->|Father of| C1\nC3 -->|Cousin of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC4 -->|Friend of| C1\nC5 -->|Husband of| C4\nC6 -->|Son of| C4\nC7 -->|Servant of| C2\nC8 -->|Servant of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 177,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:12.838Z",
+      "finishedAt": "2026-09-10T17:44:12.838Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Eugénie Grandet\"]\nC2[\"Félix Grandet\"]\nC3[\"Charles Grandet\"]\nC4[\"Madame des Grassins\"]\nC5[\"Monsieur des Grassins\"]\nC6[\"Adolphe des Grassins\"]\nC7[\"Cornoiller\"]\nC8[\"Nanon\"]\nC1 -->|Daughter of| C2\nC2 -->|Father of| C1\nC3 -->|Cousin of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC4 -->|Friend of| C1\nC5 -->|Husband of| C4\nC6 -->|Son of| C4\nC7 -->|Servant of| C2\nC8 -->|Servant of| C2",
+  "mermaidHash": "c129ede30a38bdddd59e5e9cc774d96bd52fcbd43a8b8396d4f2e98e052a2537",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c129ede30a38bdddd59e5e9cc774d96bd52fcbd43a8b8396d4f2e98e052a2537",
+    "svgHash": "157d1ad41a1176bec3466cfc9470c6573ea8b75d2017e670cf2e5f41d62fe93f",
+    "validatedAt": "2026-09-10T17:44:14.128Z",
+    "width": 1147.5731201171875,
+    "height": 370.5
+  },
+  "generatedAt": "2026-09-10T17:44:12.838Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 177,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "katharine-susannah-prichard/the-black-opal",
+  "metadata": {
+    "title": "The Black Opal",
+    "authors": [
+      "Katharine Susannah Prichard"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "8689b1cac0efac146eaad7f4790a4e58c24fc486637e94bf862f368edf3d9831",
+  "promptHash": "b414ea1a8c2f3012f16a534f157afe9d4f788b38667300b1a5f8d482488f63d9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:30.798Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:30.798Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 2,
+        "total_tokens": 1564,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:31.614Z",
+      "finishedAt": "2026-09-10T17:49:31.614Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:49:31.614Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 2,
+    "total_tokens": 1564,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

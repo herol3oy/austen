@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "herman-melville/typee",
+  "metadata": {
+    "title": "Typee",
+    "authors": [
+      "Herman Melville"
+    ],
+    "year": "1846"
+  },
+  "inputHash": "d1c8af3f244feed6a63265639f6820c42ae07f3148a550465da133ffdcbd618b",
+  "promptHash": "34a1359c86ecf0be010b08ed5e64d12d3a8f65e1175032b6e1564f7d3c2d9860",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:40.995Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:40.995Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tommo\"]\nC2[\"Toby\"]\nC3[\"Mehevi\"]\nC4[\"Fayaway\"]\nC5[\"Kory-Kory\"]\nC6[\"Marnoo\"]\nC7[\"Typee\"]\nC8[\"Happar\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C4\nC1 -->|Captive of| C3\nC1 -->|Served by| C5\nC1 -->|Meets| C6\nC3 -->|Chief of| C7\nC7 -->|Enemy of| C8\nC6 -->|Enemy of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 140,
+        "total_tokens": 1696,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:42.426Z",
+      "finishedAt": "2026-09-10T17:43:42.426Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tommo\"]\nC2[\"Toby\"]\nC3[\"Mehevi\"]\nC4[\"Fayaway\"]\nC5[\"Kory-Kory\"]\nC6[\"Marnoo\"]\nC7[\"Typee\"]\nC8[\"Happar\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C4\nC1 -->|Captive of| C3\nC1 -->|Served by| C5\nC1 -->|Meets| C6\nC3 -->|Chief of| C7\nC7 -->|Enemy of| C8\nC6 -->|Enemy of| C7",
+  "mermaidHash": "4503db63b511ae8dcb73865e7a6e5d867045c42c022f31b74d119e9895867ba6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4503db63b511ae8dcb73865e7a6e5d867045c42c022f31b74d119e9895867ba6",
+    "svgHash": "1e40e3e82991759950545934f83d36a49efcaa593a080d21e80fbc638d50b2ac",
+    "validatedAt": "2026-09-10T17:43:43.834Z",
+    "width": 814.327880859375,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T17:43:42.426Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 140,
+    "total_tokens": 1696,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

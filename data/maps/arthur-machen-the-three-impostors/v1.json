@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-machen/the-three-impostors",
+  "metadata": {
+    "title": "The Three Impostors",
+    "authors": [
+      "Arthur Machen"
+    ],
+    "year": "1895"
+  },
+  "inputHash": "edf276ee5ea18690a1304952627afed6af86e784aa86945a2f9f0d0ce84b74d9",
+  "promptHash": "5fa718103dcbb4ab978646db68d21104fe59ee1b6edaa6b6c95d96bdbf6df93e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:21.265Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:21.265Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:21.977Z",
+      "finishedAt": "2026-09-10T17:28:21.977Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:28:21.977Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

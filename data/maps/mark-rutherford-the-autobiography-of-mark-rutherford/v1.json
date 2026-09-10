@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mark-rutherford/the-autobiography-of-mark-rutherford",
+  "metadata": {
+    "title": "The Autobiography of Mark Rutherford",
+    "authors": [
+      "Mark Rutherford"
+    ],
+    "year": "1881"
+  },
+  "inputHash": "1a967eead22b04811642b8420b0ce32acf0e467f4b33a4c4f06c89133239d7a7",
+  "promptHash": "ea4a2f8a2cfbb5e2e84931d1b9dafe0a2f8a01c2a688d7cd493157bbc4d93712",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:52:01.943Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:52:01.943Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:52:02.860Z",
+      "finishedAt": "2026-09-10T17:52:02.860Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:52:02.860Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

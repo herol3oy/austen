@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fyodor-dostoevsky/notes-from-underground/constance-garnett",
+  "metadata": {
+    "title": "Notes from Underground",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "year": "1864"
+  },
+  "inputHash": "6ca55528be55aa3a3b826b92b9f7b001ddb56f9e86a09eb1e664ea560aa9c954",
+  "promptHash": "7d13db5719f16d27c29ba7c9d3250c185b1e9771507f98aff01704284c1ebae2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:38.849Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:38.849Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"The Underground Man\"]\nC2[\"Liza\"]\nC3[\"Zverkov\"]\nC4[\"Simonov\"]\nC5[\"Ferfichkin\"]\nC6[\"Trudolyubov\"]\nC7[\"Apollon\"]\nC1 -->|Obsessed with| C3\nC1 -->|Loves| C2\nC1 -->|Betrays| C2\nC1 -->|Friend of| C4\nC1 -->|Rival of| C5\nC1 -->|Rival of| C6\nC1 -->|Serves| C7\nC4 -->|Friend of| C3\nC5 -->|Friend of| C3\nC6 -->|Friend of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 155,
+        "total_tokens": 1716,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:40.342Z",
+      "finishedAt": "2026-09-10T17:38:40.342Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"The Underground Man\"]\nC2[\"Liza\"]\nC3[\"Zverkov\"]\nC4[\"Simonov\"]\nC5[\"Ferfichkin\"]\nC6[\"Trudolyubov\"]\nC7[\"Apollon\"]\nC1 -->|Obsessed with| C3\nC1 -->|Loves| C2\nC1 -->|Betrays| C2\nC1 -->|Friend of| C4\nC1 -->|Rival of| C5\nC1 -->|Rival of| C6\nC1 -->|Serves| C7\nC4 -->|Friend of| C3\nC5 -->|Friend of| C3\nC6 -->|Friend of| C3",
+  "mermaidHash": "be1c6c0b781da3d8ee5ddc2ef24e269a1faa0d8ff8c3f47b3a1ae80cfd0f094d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "be1c6c0b781da3d8ee5ddc2ef24e269a1faa0d8ff8c3f47b3a1ae80cfd0f094d",
+    "svgHash": "921b830576353d3a72eab860bd08a15c8efb27f458c15fca6312fa2ac8e0a144",
+    "validatedAt": "2026-09-10T17:38:41.722Z",
+    "width": 709.5166625976562,
+    "height": 505.75
+  },
+  "generatedAt": "2026-09-10T17:38:40.342Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 155,
+    "total_tokens": 1716,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

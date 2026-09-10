@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "selma-lagerlof/short-fiction/various-translators",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Selma Lagerlöf"
+    ],
+    "year": "1894–1908"
+  },
+  "inputHash": "6c7460c3c43fb8535996992e0a44dbf832b13ba4af60817606fc73e8d4c2d0db",
+  "promptHash": "a92ac36f07543740d1612901d1735258da451c536a7962afe1c84a809b0f9dd9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:02.400Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:02.400Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 2,
+        "total_tokens": 1564,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:04.132Z",
+      "finishedAt": "2026-09-10T18:09:04.132Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:09:04.132Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 2,
+    "total_tokens": 1564,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

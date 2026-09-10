@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-malory/le-morte-darthur",
+  "metadata": {
+    "title": "Le Morte d’Arthur",
+    "authors": [
+      "Thomas Malory"
+    ],
+    "year": "1485"
+  },
+  "inputHash": "7d955ce20e4e5c493def12a1a91e9bbed78da9699de289e6c7198b3b4784aef0",
+  "promptHash": "342bea349bdcdc2621a0de84b925d73b84d5d999f1c9538002c2fe0f90e290df",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:11.224Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:11.225Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Arthur\"]\nC2[\"Guinevere\"]\nC3[\"Lancelot\"]\nC4[\"Merlin\"]\nC5[\"Morgan le Fay\"]\nC6[\"Gawain\"]\nC7[\"Mordred\"]\nC8[\"Galahad\"]\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC3 -->|Serves| C1\nC4 -->|Mentor of| C1\nC5 -->|Sister of| C1\nC5 -->|Enemy of| C1\nC6 -->|Nephew of| C1\nC6 -->|Brother of| C7\nC7 -->|Son of| C1\nC7 -->|Enemy of| C1\nC3 -->|Father of| C8\nC8 -->|Son of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 195,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:13.787Z",
+      "finishedAt": "2026-09-10T18:11:13.787Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Arthur\"]\nC2[\"Guinevere\"]\nC3[\"Lancelot\"]\nC4[\"Merlin\"]\nC5[\"Morgan le Fay\"]\nC6[\"Gawain\"]\nC7[\"Mordred\"]\nC8[\"Galahad\"]\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC3 -->|Serves| C1\nC4 -->|Mentor of| C1\nC5 -->|Sister of| C1\nC5 -->|Enemy of| C1\nC6 -->|Nephew of| C1\nC6 -->|Brother of| C7\nC7 -->|Son of| C1\nC7 -->|Enemy of| C1\nC3 -->|Father of| C8\nC8 -->|Son of| C3",
+  "mermaidHash": "2f5bbce4db1da4db340341beb048063872a3fcd00abb3cf1e25de6240875dce2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2f5bbce4db1da4db340341beb048063872a3fcd00abb3cf1e25de6240875dce2",
+    "svgHash": "afc99217d8b9c92b8321ca90530ab692dd9c7d1034214c1ef838f958943c71fa",
+    "validatedAt": "2026-09-10T18:11:15.148Z",
+    "width": 1345.598876953125,
+    "height": 309.5
+  },
+  "generatedAt": "2026-09-10T18:11:13.787Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 195,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

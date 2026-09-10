@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "denis-diderot/the-indiscreet-jewels/r-freeman",
+  "metadata": {
+    "title": "The Indiscreet Jewels",
+    "authors": [
+      "Denis Diderot"
+    ],
+    "year": "1748"
+  },
+  "inputHash": "2579fd31964aea4d7bd348bd07484eda62df7f2722aec5f2fd08e203bafcaeff",
+  "promptHash": "1413d50eabbbdd97bfafd872bdebe35b03dd267de65df080d9d8818263974714",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:07.467Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:07.467Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:08.387Z",
+      "finishedAt": "2026-09-10T17:32:08.388Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:32:08.387Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "louis-couperus/the-tour/alexander-teixeira-de-mattos",
+  "metadata": {
+    "title": "The Tour",
+    "authors": [
+      "Louis Couperus"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "814463076dd16902c8dc2e35fb6bd8efef321fc42791ba8c14bff284012ba8d9",
+  "promptHash": "abb5e9c9196d22f0ef8c02da1258bc4d28b8d413dd13480f2ab47e6bcf4a8b7f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:57.224Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:57.224Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 2,
+        "total_tokens": 1559,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:58.655Z",
+      "finishedAt": "2026-09-10T17:50:58.655Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:50:58.655Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 2,
+    "total_tokens": 1559,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-r-eddison/styrbiorn-the-strong",
+  "metadata": {
+    "title": "Styrbiorn the Strong",
+    "authors": [
+      "E. R. Eddison"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "0fc36721e28498d091ce12115aa1b0d48e4fae7af9a9ff52fc431d16adb449a5",
+  "promptHash": "441215d5dc499cc75ffa0246b58aea8814580fcd7aec580bdf08c95967dfc56e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:36.456Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:36.456Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:37.783Z",
+      "finishedAt": "2026-09-10T17:33:37.783Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:33:37.783Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edward-thomas/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Edward Thomas"
+    ],
+    "year": "1916–1927"
+  },
+  "inputHash": "6000124c82e9a46a6465ec608a72cfe18db69b3732de61e042f8779ab9d04094",
+  "promptHash": "e0d0cea1aa680290cc58582631d2b7e12504ec083ea9dc7c6d7e548769065f58",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:51.109Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:51.109Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 150
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:52.142Z",
+      "finishedAt": "2026-09-10T17:35:52.142Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:35:52.142Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 150
+  }
+}

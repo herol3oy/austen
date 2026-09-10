@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "philip-k-dick/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "year": "1952–1957"
+  },
+  "inputHash": "406722081b914cd621f66bebbeba47cc23676c5121204472ef05f3c928d3e26a",
+  "promptHash": "075d5911e7b066a5a57291719ac4c031cab7add74eb14e12230d5d567847abd1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:29.918Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:29.918Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 152
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:30.733Z",
+      "finishedAt": "2026-09-10T18:06:30.733Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:06:30.733Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 152
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "hilaire-belloc/the-servile-state",
+  "metadata": {
+    "title": "The Servile State",
+    "authors": [
+      "Hilaire Belloc"
+    ],
+    "year": "1912"
+  },
+  "inputHash": "9c30f17b40fdd5e38e839794faee385e0ae0ce3078c52d9a962bdd8827389bcd",
+  "promptHash": "76dbe7a5361109bd1cabdee3e0f2268c0c79d435ac3dba1e6f489f0548175da3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:56.151Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:56.152Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:57.069Z",
+      "finishedAt": "2026-09-10T17:43:57.069Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:43:57.069Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

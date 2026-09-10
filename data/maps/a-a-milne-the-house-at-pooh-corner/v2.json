@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "a-a-milne/the-house-at-pooh-corner",
+  "metadata": {
+    "title": "The House at Pooh Corner",
+    "authors": [
+      "A. A. Milne"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "10efd6b7b807e2566eb538b7114e2f3c6ab475dd736543c979a3e275f5585a62",
+  "promptHash": "bbc1b051b6c6b47354b25165dcf632c3812e4b1990d1d87d4d7d72323e9b4ad9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:14.286Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:14.286Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Winnie-the-Pooh\"]\nC2[\"Christopher Robin\"]\nC3[\"Piglet\"]\nC4[\"Eeyore\"]\nC5[\"Tigger\"]\nC6[\"Rabbit\"]\nC7[\"Owl\"]\nC8[\"Kanga\"]\nC9[\"Roo\"]\nC2 -->|Friend of| C1\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC5 -->|Friend of| C9\nC8 -->|Parent of| C9\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 163,
+        "total_tokens": 1726,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 155
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:15.718Z",
+      "finishedAt": "2026-09-10T18:02:15.718Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Winnie-the-Pooh\"]\nC2[\"Christopher Robin\"]\nC3[\"Piglet\"]\nC4[\"Eeyore\"]\nC5[\"Tigger\"]\nC6[\"Rabbit\"]\nC7[\"Owl\"]\nC8[\"Kanga\"]\nC9[\"Roo\"]\nC2 -->|Friend of| C1\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC5 -->|Friend of| C9\nC8 -->|Parent of| C9\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "7ab059d85c86b7c64070c632834bb97b725490ae2d756e2776e71280fbe2fba4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7ab059d85c86b7c64070c632834bb97b725490ae2d756e2776e71280fbe2fba4",
+    "svgHash": "cdeb4349216239a1e2e1c4fca2574c5f972939f2d8559ec7ec3aedb4cac646b8",
+    "validatedAt": "2026-09-10T18:02:17.093Z",
+    "width": 899.4979858398438,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T18:02:15.718Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 163,
+    "total_tokens": 1726,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 155
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/a-midsummer-nights-dream",
+  "metadata": {
+    "title": "A Midsummer Night’s Dream",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1600"
+  },
+  "inputHash": "09ddad2fb97ee4134d42597fe2022087da30441f3d7268bc64fd744f590f6c2e",
+  "promptHash": "4e3f4dae8772ee2b922553436d8921ce426f718fe4702d53e6654ce3cfd877b5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:34.731Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:34.731Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Theseus\"]\nC2[\"Hippolyta\"]\nC3[\"Egeus\"]\nC4[\"Hermia\"]\nC5[\"Lysander\"]\nC6[\"Demetrius\"]\nC7[\"Helena\"]\nC8[\"Oberon\"]\nC9[\"Titania\"]\nC10[\"Puck\"]\nC1 -->|Betrothed to| C2\nC3 -->|Father of| C4\nC3 -->|Wants marry| C6\nC4 -->|Loves| C5\nC5 -->|Loves| C4\nC6 -->|Betrothed to| C4\nC7 -->|Loves| C6\nC8 -->|King of fairies| C9\nC8 -->|Commands| C10\nC10 -->|Serves| C8\nC10 -->|Serves| C9\nC8 -->|Enemy of| C9\nC10 -->|Causes love| C5\nC10 -->|Causes love| C6\nC10 -->|Causes love| C9",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 229,
+        "total_tokens": 1790,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:36.269Z",
+      "finishedAt": "2026-09-10T18:14:36.269Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Theseus\"]\nC2[\"Hippolyta\"]\nC3[\"Egeus\"]\nC4[\"Hermia\"]\nC5[\"Lysander\"]\nC6[\"Demetrius\"]\nC7[\"Helena\"]\nC8[\"Oberon\"]\nC9[\"Titania\"]\nC10[\"Puck\"]\nC1 -->|Betrothed to| C2\nC3 -->|Father of| C4\nC3 -->|Wants marry| C6\nC4 -->|Loves| C5\nC5 -->|Loves| C4\nC6 -->|Betrothed to| C4\nC7 -->|Loves| C6\nC8 -->|King of fairies| C9\nC8 -->|Commands| C10\nC10 -->|Serves| C8\nC10 -->|Serves| C9\nC8 -->|Enemy of| C9\nC10 -->|Causes love| C5\nC10 -->|Causes love| C6\nC10 -->|Causes love| C9",
+  "mermaidHash": "f20f8bf8e34ff2c868220a082f77aff38e2d01177b2ff884f0ff61016642e2a5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f20f8bf8e34ff2c868220a082f77aff38e2d01177b2ff884f0ff61016642e2a5",
+    "svgHash": "0410cebb9581c979c248e33c8d4e0add14d351e3e2b0eff13c072513b1d6e054",
+    "validatedAt": "2026-09-10T18:14:37.687Z",
+    "width": 1117.4443359375,
+    "height": 467.5
+  },
+  "generatedAt": "2026-09-10T18:14:36.269Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 229,
+    "total_tokens": 1790,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

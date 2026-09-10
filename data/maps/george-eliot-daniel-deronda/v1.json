@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-eliot/daniel-deronda",
+  "metadata": {
+    "title": "Daniel Deronda",
+    "authors": [
+      "George Eliot"
+    ],
+    "year": "1876"
+  },
+  "inputHash": "88cd130adc11d1cbe5efd5e0bc082129952afd084a98809904e101b8b390802e",
+  "promptHash": "1449d3f4bd6779a0ff231b628386e6c5ef0dc3684ded24c5533daafa130bd4b6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:09.442Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:09.442Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Daniel Deronda\"]\nC2[\"Gwendolen Harleth\"]\nC3[\"Mirah Lapidoth\"]\nC4[\"Mordecai\"]\nC5[\"Sir Hugo Mallinger\"]\nC6[\"Henleigh Grandcourt\"]\nC7[\"Ezra Cohen\"]\nC8[\"Joseph Kalonymos\"]\nC1 -->|Ward of| C5\nC1 -->|Loves| C3\nC1 -->|Disciple of| C4\nC1 -->|Friend of| C2\nC2 -->|Married to| C6\nC2 -->|Confides in| C1\nC6 -->|Abuses| C2\nC6 -->|Enemy of| C1\nC4 -->|Sibling of| C3\nC4 -->|Mentor of| C1\nC7 -->|Friend of| C1\nC8 -->|Reveals identity to| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 199,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:11.294Z",
+      "finishedAt": "2026-09-10T17:40:11.294Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Daniel Deronda\"]\nC2[\"Gwendolen Harleth\"]\nC3[\"Mirah Lapidoth\"]\nC4[\"Mordecai\"]\nC5[\"Sir Hugo Mallinger\"]\nC6[\"Henleigh Grandcourt\"]\nC7[\"Ezra Cohen\"]\nC8[\"Joseph Kalonymos\"]\nC1 -->|Ward of| C5\nC1 -->|Loves| C3\nC1 -->|Disciple of| C4\nC1 -->|Friend of| C2\nC2 -->|Married to| C6\nC2 -->|Confides in| C1\nC6 -->|Abuses| C2\nC6 -->|Enemy of| C1\nC4 -->|Sibling of| C3\nC4 -->|Mentor of| C1\nC7 -->|Friend of| C1\nC8 -->|Reveals identity to| C1",
+  "mermaidHash": "83fc40b29b3967b1f149b111a50c0e1747b84de23c643a52bf974b779fdb9a68",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "83fc40b29b3967b1f149b111a50c0e1747b84de23c643a52bf974b779fdb9a68",
+    "svgHash": "bb700913fb3d80e90a0d875560132172f868f52691a7cd89e782f67e9ef6f5da",
+    "validatedAt": "2026-09-10T17:40:12.658Z",
+    "width": 1172.6875,
+    "height": 382.5
+  },
+  "generatedAt": "2026-09-10T17:40:11.294Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 199,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

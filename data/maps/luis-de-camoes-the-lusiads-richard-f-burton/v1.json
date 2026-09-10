@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "luis-de-camoes/the-lusiads/richard-f-burton",
+  "metadata": {
+    "title": "The Lusiads",
+    "authors": [
+      "Luís de Camões"
+    ],
+    "year": "1572"
+  },
+  "inputHash": "ef2f63cbe5421699101e40d00976c075ff64d171fea877fdff6baea4acac9ed7",
+  "promptHash": "db3900eee5ae922fa11ec52165ddf686aa67db525af8dd18f68ef8900c242650",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:12.995Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:12.995Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:13.707Z",
+      "finishedAt": "2026-09-10T17:51:13.707Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:51:13.707Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

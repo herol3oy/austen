@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "stendhal/the-charterhouse-of-parma/c-k-scott-moncrieff",
+  "metadata": {
+    "title": "The Charterhouse of Parma",
+    "authors": [
+      "Stendhal"
+    ],
+    "year": "1839"
+  },
+  "inputHash": "4e4487cceec8c55e5e1a5bb3919d353790f97527ddc10389ff88c685bcafe668",
+  "promptHash": "afaf8ec002c271c6b6fd919fd315481c6322c83f87e862508c06e5579c3bc1c1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:53.284Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:53.284Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Fabrizio del Dongo\"]\nC2[\"Gina Sanseverina\"]\nC3[\"Count Mosca\"]\nC4[\"Clelia Conti\"]\nC5[\"Abbé Blanès\"]\nC6[\"Marquis del Dongo\"]\nC7[\"Giletti\"]\nC8[\"Ferrante Palla\"]\nC1 -->|Nephew of| C2\nC2 -->|Aunt of| C1\nC2 -->|Loves| C1\nC3 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Protects| C1\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Mentor of| C1\nC6 -->|Father of| C1\nC7 -->|Rival of| C1\nC1 -->|Kills| C7\nC8 -->|Loves| C2\nC8 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 215,
+        "total_tokens": 1775,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:54.842Z",
+      "finishedAt": "2026-09-10T18:09:54.842Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Fabrizio del Dongo\"]\nC2[\"Gina Sanseverina\"]\nC3[\"Count Mosca\"]\nC4[\"Clelia Conti\"]\nC5[\"Abbé Blanès\"]\nC6[\"Marquis del Dongo\"]\nC7[\"Giletti\"]\nC8[\"Ferrante Palla\"]\nC1 -->|Nephew of| C2\nC2 -->|Aunt of| C1\nC2 -->|Loves| C1\nC3 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Protects| C1\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Mentor of| C1\nC6 -->|Father of| C1\nC7 -->|Rival of| C1\nC1 -->|Kills| C7\nC8 -->|Loves| C2\nC8 -->|Serves| C2",
+  "mermaidHash": "7834fa4efcf3a8d38c84d3250343bb9fe65b3efe6c88757339a6c23528d27ed5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7834fa4efcf3a8d38c84d3250343bb9fe65b3efe6c88757339a6c23528d27ed5",
+    "svgHash": "bbcec7c5b34e38b6f8213acf76cdaa7ca304fc8f8f3b3327d316e4f535dd89c0",
+    "validatedAt": "2026-09-10T18:09:56.202Z",
+    "width": 1042.9881591796875,
+    "height": 404.25
+  },
+  "generatedAt": "2026-09-10T18:09:54.842Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 215,
+    "total_tokens": 1775,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

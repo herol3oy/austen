@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-carlos-williams/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "William Carlos Williams"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "4f317d347e286d67388dc0538a69aa385659f1111e735e999615a885fefcbd7b",
+  "promptHash": "b8d365c59b81c651eeb9c68c626e82e99316c5eb49e83754c84eaa1e8e49ca4c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:41.951Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:41.951Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 2,
+        "total_tokens": 1558,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 148
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:43.174Z",
+      "finishedAt": "2026-09-10T18:13:43.174Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:13:43.174Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 2,
+    "total_tokens": 1558,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 148
+  }
+}

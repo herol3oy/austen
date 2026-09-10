@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "oscar-wilde/the-picture-of-dorian-gray",
+  "metadata": {
+    "title": "The Picture of Dorian Gray",
+    "authors": [
+      "Oscar Wilde"
+    ],
+    "year": "1890"
+  },
+  "inputHash": "80277f08846ae4846fe5133161b7c884f27f7e898cbf81f62f4bbb1850d5be55",
+  "promptHash": "ee36cc093b5a748aaa1a215fd3c2a37b243c1939fa13e0b751d03122495f0bed",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:20.614Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:20.614Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dorian Gray\"]\nC2[\"Lord Henry Wotton\"]\nC3[\"Basil Hallward\"]\nC4[\"Sibyl Vane\"]\nC5[\"James Vane\"]\nC6[\"Alan Campbell\"]\nC7[\"Lady Victoria Wotton\"]\nC1 -->|Friend of| C2\nC2 -->|Influences| C1\nC3 -->|Paints portrait of| C1\nC3 -->|Friend of| C2\nC1 -->|Loves| C4\nC4 -->|Sister of| C5\nC1 -->|Drives to suicide| C4\nC5 -->|Seeks revenge on| C1\nC1 -->|Blackmails| C6\nC1 -->|Kills| C3\nC1 -->|Kills| C6\nC2 -->|Married to| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 187,
+        "total_tokens": 1747,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:22.763Z",
+      "finishedAt": "2026-09-10T18:05:22.763Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dorian Gray\"]\nC2[\"Lord Henry Wotton\"]\nC3[\"Basil Hallward\"]\nC4[\"Sibyl Vane\"]\nC5[\"James Vane\"]\nC6[\"Alan Campbell\"]\nC7[\"Lady Victoria Wotton\"]\nC1 -->|Friend of| C2\nC2 -->|Influences| C1\nC3 -->|Paints portrait of| C1\nC3 -->|Friend of| C2\nC1 -->|Loves| C4\nC4 -->|Sister of| C5\nC1 -->|Drives to suicide| C4\nC5 -->|Seeks revenge on| C1\nC1 -->|Blackmails| C6\nC1 -->|Kills| C3\nC1 -->|Kills| C6\nC2 -->|Married to| C7",
+  "mermaidHash": "6550d904a22a0abe21f60327e52982d45c1d360f72b70c45960a062e28052106",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6550d904a22a0abe21f60327e52982d45c1d360f72b70c45960a062e28052106",
+    "svgHash": "803d781acdfc6e555118a32d7a52f00b1d5adaf101c8757624057e0fa0228ede",
+    "validatedAt": "2026-09-10T18:05:24.889Z",
+    "width": 1095.7359619140625,
+    "height": 429
+  },
+  "generatedAt": "2026-09-10T18:05:22.763Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 187,
+    "total_tokens": 1747,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

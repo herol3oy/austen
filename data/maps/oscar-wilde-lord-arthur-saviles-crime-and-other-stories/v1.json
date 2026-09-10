@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "oscar-wilde/lord-arthur-saviles-crime-and-other-stories",
+  "metadata": {
+    "title": "Lord Arthur Savile’s Crime and Other Stories",
+    "authors": [
+      "Oscar Wilde"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "e4a4129e3280de9c72d3a0194ce5993c34926e4d49add77e282f782c43d271de",
+  "promptHash": "02e353b428bf0060ce58298b8cbd4e426d5d93db80e7f807042bfa3f33c92977",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:15.224Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:15.224Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:16.155Z",
+      "finishedAt": "2026-09-10T18:05:16.155Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:05:16.155Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

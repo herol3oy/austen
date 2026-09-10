@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "james-joyce/a-portrait-of-the-artist-as-a-young-man",
+  "metadata": {
+    "title": "A Portrait of the Artist as a Young Man",
+    "authors": [
+      "James Joyce"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "1662d2897cceee6d949f6169cb326c5ab3b0af2b5295f47b85ceac6f7af3bc93",
+  "promptHash": "b0bd47ba7d215e40d021051a1efe4af05ee30fb47953f5ecf58abce78d9f6c0b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:03.027Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:03.027Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Stephen Dedalus\"]\nC2[\"Simon Dedalus\"]\nC3[\"Mary Dedalus\"]\nC4[\"Emma Clery\"]\nC5[\"Cranly\"]\nC6[\"Dante Riordan\"]\nC7[\"Father Arnall\"]\nC8[\"Eileen Vance\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Husband of| C3\nC1 -->|Loves| C4\nC1 -->|Friend of| C5\nC1 -->|Raised by| C6\nC1 -->|Student of| C7\nC1 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 142,
+        "total_tokens": 1704,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:04.454Z",
+      "finishedAt": "2026-09-10T17:46:04.454Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Stephen Dedalus\"]\nC2[\"Simon Dedalus\"]\nC3[\"Mary Dedalus\"]\nC4[\"Emma Clery\"]\nC5[\"Cranly\"]\nC6[\"Dante Riordan\"]\nC7[\"Father Arnall\"]\nC8[\"Eileen Vance\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Husband of| C3\nC1 -->|Loves| C4\nC1 -->|Friend of| C5\nC1 -->|Raised by| C6\nC1 -->|Student of| C7\nC1 -->|Friend of| C8",
+  "mermaidHash": "ba49841d1103d4d983d8a212e18720a5bf8e1db3e233855e6a12198cd45886e1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ba49841d1103d4d983d8a212e18720a5bf8e1db3e233855e6a12198cd45886e1",
+    "svgHash": "c1a3901346888e2ebd3c76f55b56994704f9311405bf7913b5ebc5bb568258b1",
+    "validatedAt": "2026-09-10T17:46:05.717Z",
+    "width": 753.2025146484375,
+    "height": 618
+  },
+  "generatedAt": "2026-09-10T17:46:04.454Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 142,
+    "total_tokens": 1704,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

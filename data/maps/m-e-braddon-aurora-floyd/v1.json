@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "m-e-braddon/aurora-floyd",
+  "metadata": {
+    "title": "Aurora Floyd",
+    "authors": [
+      "M. E. Braddon"
+    ],
+    "year": "1863"
+  },
+  "inputHash": "d2b56c10437db0b713c4bcd49848595f5a69e8060039c1442ddba629157d4d61",
+  "promptHash": "f2fd09be626623a8e0216ca982407fbc857c753f8057d88b5161d05efda99183",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:15.964Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:15.964Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:16.675Z",
+      "finishedAt": "2026-09-10T17:51:16.675Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:51:16.675Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

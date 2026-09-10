@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "s-s-van-dine/the-greene-murder-case",
+  "metadata": {
+    "title": "The Greene Murder Case",
+    "authors": [
+      "S. S. Van Dine"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "db558075dfb2720d2a73771edc768c728a1ba0c7da14d9b9dc9e48c732035805",
+  "promptHash": "571ca4fc8dc94791c9a78020e063247cf5e3b19aad8a7417526ce221f09732e3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:40.998Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:40.998Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Philo Vance\"]\nC2[\"John F.-X. Markham\"]\nC3[\"S. Heath\"]\nC4[\"Tobias Greene\"]\nC5[\"Julia Greene\"]\nC6[\"Sibella Greene\"]\nC7[\"Rex Greene\"]\nC8[\"Ada Greene\"]\nC1 -->|Assists| C2\nC2 -->|Commands| C3\nC4 -->|Parent of| C5\nC4 -->|Parent of| C6\nC4 -->|Parent of| C7\nC4 -->|Parent of| C8\nC5 -->|Sibling of| C6\nC5 -->|Sibling of| C7\nC5 -->|Sibling of| C8\nC6 -->|Sibling of| C7\nC6 -->|Sibling of| C8\nC7 -->|Sibling of| C8\nC8 -->|Kills| C4\nC8 -->|Kills| C5\nC8 -->|Kills| C6\nC8 -->|Kills| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 227,
+        "total_tokens": 1789,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:42.525Z",
+      "finishedAt": "2026-09-10T18:08:42.525Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Philo Vance\"]\nC2[\"John F.-X. Markham\"]\nC3[\"S. Heath\"]\nC4[\"Tobias Greene\"]\nC5[\"Julia Greene\"]\nC6[\"Sibella Greene\"]\nC7[\"Rex Greene\"]\nC8[\"Ada Greene\"]\nC1 -->|Assists| C2\nC2 -->|Commands| C3\nC4 -->|Parent of| C5\nC4 -->|Parent of| C6\nC4 -->|Parent of| C7\nC4 -->|Parent of| C8\nC5 -->|Sibling of| C6\nC5 -->|Sibling of| C7\nC5 -->|Sibling of| C8\nC6 -->|Sibling of| C7\nC6 -->|Sibling of| C8\nC7 -->|Sibling of| C8\nC8 -->|Kills| C4\nC8 -->|Kills| C5\nC8 -->|Kills| C6\nC8 -->|Kills| C7",
+  "mermaidHash": "f3e191ebfdbc056b07374ea5b9d98627c39121666f7f5b99412fad4d6a6fa04f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f3e191ebfdbc056b07374ea5b9d98627c39121666f7f5b99412fad4d6a6fa04f",
+    "svgHash": "8cf710b7106a267a8e2861f8b00a656945bd985e1be07d6d089efd2e799a1571",
+    "validatedAt": "2026-09-10T18:08:43.891Z",
+    "width": 1264.367431640625,
+    "height": 559.75
+  },
+  "generatedAt": "2026-09-10T18:08:42.525Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 227,
+    "total_tokens": 1789,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

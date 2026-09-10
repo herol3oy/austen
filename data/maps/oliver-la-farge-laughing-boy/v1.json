@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "oliver-la-farge/laughing-boy",
+  "metadata": {
+    "title": "Laughing Boy",
+    "authors": [
+      "Oliver La Farge"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "c2902335af8b521ea832418be4acebc421e35d79390dfd7bd914c5dc1a0fb163",
+  "promptHash": "6594f37dbed722ab23852dde1541881646945c47f4cd5ec0665f3692fe0b21dd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:07.722Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:07.722Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Laughing Boy\"]\nC2[\"Slim Girl\"]\nC3[\"Wounded Face\"]\nC4[\"Red Man\"]\nC5[\"Yellow Singer\"]\nC6[\"George\"]\nC7[\"Laughing Boy's Mother\"]\nC1 -->|Loves| C2\nC1 -->|Married to| C2\nC3 -->|Enemy of| C1\nC3 -->|Rival of| C1\nC3 -->|Kills| C2\nC1 -->|Kills| C3\nC4 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Friend of| C2\nC7 -->|Parent of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 156,
+        "total_tokens": 1715,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:09.295Z",
+      "finishedAt": "2026-09-10T18:05:09.295Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Laughing Boy\"]\nC2[\"Slim Girl\"]\nC3[\"Wounded Face\"]\nC4[\"Red Man\"]\nC5[\"Yellow Singer\"]\nC6[\"George\"]\nC7[\"Laughing Boy's Mother\"]\nC1 -->|Loves| C2\nC1 -->|Married to| C2\nC3 -->|Enemy of| C1\nC3 -->|Rival of| C1\nC3 -->|Kills| C2\nC1 -->|Kills| C3\nC4 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Friend of| C2\nC7 -->|Parent of| C1",
+  "mermaidHash": "1d2999f28c9d2da2356573a2d6cdf7c35f96f2667058ee5f662f5bb637d4c84b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "1d2999f28c9d2da2356573a2d6cdf7c35f96f2667058ee5f662f5bb637d4c84b",
+    "svgHash": "0f0c0fa73919f462a331671f21b545d059027cbe748240d1f9e7e9e75938d4df",
+    "validatedAt": "2026-09-10T18:05:10.614Z",
+    "width": 1002.6339111328125,
+    "height": 290
+  },
+  "generatedAt": "2026-09-10T18:05:09.295Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 156,
+    "total_tokens": 1715,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

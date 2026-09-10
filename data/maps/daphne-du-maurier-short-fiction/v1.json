@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "daphne-du-maurier/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Daphne du Maurier"
+    ],
+    "year": "1928–1930"
+  },
+  "inputHash": "5973c715427090b3c6a95585c35af759fcf72ab7168ae49f2b2b8524aef5de80",
+  "promptHash": "acf8c05f5962e87aedf5b9eccaa9e22a47ac0e03ee4bd2a38e676a7662633ee8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:50.359Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:50.359Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 2,
+        "total_tokens": 1564,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:51.147Z",
+      "finishedAt": "2026-09-10T17:31:51.147Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:31:51.147Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 2,
+    "total_tokens": 1564,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

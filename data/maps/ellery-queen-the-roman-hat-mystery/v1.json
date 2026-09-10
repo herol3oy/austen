@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ellery-queen/the-roman-hat-mystery",
+  "metadata": {
+    "title": "The Roman Hat Mystery",
+    "authors": [
+      "Ellery Queen"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "3871b529eecae56781687b5edaf6bfd10aa476c53ef3643a6119a0b589dd9dcf",
+  "promptHash": "da25e28827e2c175adf89fcd8821f441b16602810bdd71b84b814c458b803eb6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:12.408Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:12.408Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:13.230Z",
+      "finishedAt": "2026-09-10T17:36:13.231Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:36:13.230Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

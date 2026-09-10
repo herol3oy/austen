@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-rider-haggard/allan-quatermain",
+  "metadata": {
+    "title": "Allan Quatermain",
+    "authors": [
+      "H. Rider Haggard"
+    ],
+    "year": "1887"
+  },
+  "inputHash": "194ae8fa0effc11c67f33b62f632f9d4e45d6ae6ae39c2ccc59b6e346004514e",
+  "promptHash": "5696726b2b9db5f0f98fc87a4507d07e3579e99da4c92f3406bb04d54fbd335d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:24.686Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:24.686Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Allan Quatermain\"]\nC2[\"Sir Henry Curtis\"]\nC3[\"Captain John Good\"]\nC4[\"Umslopogaas\"]\nC5[\"Zulu\"]\nC6[\"Nyleptha\"]\nC7[\"Sorais\"]\nC8[\"Agon\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Friend of| C3\nC4 -->|Serves| C1\nC4 -->|Protects| C1\nC6 -->|Sister of| C7\nC6 -->|Loves| C1\nC7 -->|Loves| C1\nC7 -->|Rival of| C6\nC8 -->|Advisor of| C6\nC8 -->|Advisor of| C7\nC8 -->|Betrays| C6\nC8 -->|Betrays| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 204,
+        "total_tokens": 1766,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:26.442Z",
+      "finishedAt": "2026-09-10T17:42:26.442Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Allan Quatermain\"]\nC2[\"Sir Henry Curtis\"]\nC3[\"Captain John Good\"]\nC4[\"Umslopogaas\"]\nC5[\"Zulu\"]\nC6[\"Nyleptha\"]\nC7[\"Sorais\"]\nC8[\"Agon\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Friend of| C3\nC4 -->|Serves| C1\nC4 -->|Protects| C1\nC6 -->|Sister of| C7\nC6 -->|Loves| C1\nC7 -->|Loves| C1\nC7 -->|Rival of| C6\nC8 -->|Advisor of| C6\nC8 -->|Advisor of| C7\nC8 -->|Betrays| C6\nC8 -->|Betrays| C7",
+  "mermaidHash": "e861dbca944a22b6cc8697af39b7fed4ca19b4044bb73091bf103a632c17869e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e861dbca944a22b6cc8697af39b7fed4ca19b4044bb73091bf103a632c17869e",
+    "svgHash": "9aa4cc2cf5af46e0805a9a1a78c539f8eaf4584274688018d593a7c66a541f40",
+    "validatedAt": "2026-09-10T17:42:27.815Z",
+    "width": 1401.9197998046875,
+    "height": 254.5
+  },
+  "generatedAt": "2026-09-10T17:42:26.442Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 204,
+    "total_tokens": 1766,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

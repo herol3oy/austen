@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-bernard-shaw/major-barbara",
+  "metadata": {
+    "title": "Major Barbara",
+    "authors": [
+      "George Bernard Shaw"
+    ],
+    "year": "1907"
+  },
+  "inputHash": "f3b1c89d411645acede4b54e18e1178dbf1cabdd21bad73bf481eacf6d050500",
+  "promptHash": "69a8ce4c2c336c13295abb9d719e6abfafad7d87526f374e1115cc74f72a1058",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:45.690Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:45.690Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lady Britomart Undershaft\"]\nC2[\"Andrew Undershaft\"]\nC3[\"Barbara Undershaft\"]\nC4[\"Adolphus Cusins\"]\nC5[\"Stephen Undershaft\"]\nC6[\"Sarah Undershaft\"]\nC7[\"Charles Lomax\"]\nC8[\"Peter Shirley\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C5\nC1 -->|Parent of| C6\nC2 -->|Parent of| C3\nC2 -->|Parent of| C5\nC2 -->|Parent of| C6\nC3 -->|Daughter of| C2\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC4 -->|Allied with| C3\nC5 -->|Son of| C2\nC6 -->|Engaged to| C7\nC2 -->|Employs| C8\nC3 -->|Protects| C8\nC4 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 233,
+        "total_tokens": 1789,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:47.413Z",
+      "finishedAt": "2026-09-10T17:39:47.413Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lady Britomart Undershaft\"]\nC2[\"Andrew Undershaft\"]\nC3[\"Barbara Undershaft\"]\nC4[\"Adolphus Cusins\"]\nC5[\"Stephen Undershaft\"]\nC6[\"Sarah Undershaft\"]\nC7[\"Charles Lomax\"]\nC8[\"Peter Shirley\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C5\nC1 -->|Parent of| C6\nC2 -->|Parent of| C3\nC2 -->|Parent of| C5\nC2 -->|Parent of| C6\nC3 -->|Daughter of| C2\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC4 -->|Allied with| C3\nC5 -->|Son of| C2\nC6 -->|Engaged to| C7\nC2 -->|Employs| C8\nC3 -->|Protects| C8\nC4 -->|Serves| C2",
+  "mermaidHash": "8cf626c71d2b9608f0e5acdaac50ed480698d841fffde82da5921bf386ef25be",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8cf626c71d2b9608f0e5acdaac50ed480698d841fffde82da5921bf386ef25be",
+    "svgHash": "a8f251586c7d71d13d10b6fe428e6df299dc905cb535c03b3897e05aa2557285",
+    "validatedAt": "2026-09-10T17:39:48.802Z",
+    "width": 1189.7510986328125,
+    "height": 447.6219482421875
+  },
+  "generatedAt": "2026-09-10T17:39:47.413Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 233,
+    "total_tokens": 1789,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

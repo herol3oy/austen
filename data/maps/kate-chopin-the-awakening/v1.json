@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "kate-chopin/the-awakening",
+  "metadata": {
+    "title": "The Awakening",
+    "authors": [
+      "Kate Chopin"
+    ],
+    "year": "1899"
+  },
+  "inputHash": "a979dc3780bd212d264b2ccddc9515731a769051e44da0e9b085773cacf6c98c",
+  "promptHash": "db46d2be6c38e7690a74690289a2e1aaa1c0228108d386f53591e986633c4bb9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:27.288Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:27.288Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Edna Pontellier\"]\nC2[\"Léonce Pontellier\"]\nC3[\"Robert Lebrun\"]\nC4[\"Adèle Ratignolle\"]\nC5[\"Mademoiselle Reisz\"]\nC6[\"Alcée Arobin\"]\nC7[\"Raoul Pontellier\"]\nC8[\"Etienne Pontellier\"]\nC2 -->|Married to| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Lover of| C1\nC1 -->|Parent of| C7\nC1 -->|Parent of| C8\nC2 -->|Parent of| C7\nC2 -->|Parent of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 188,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:28.542Z",
+      "finishedAt": "2026-09-10T17:49:28.542Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Edna Pontellier\"]\nC2[\"Léonce Pontellier\"]\nC3[\"Robert Lebrun\"]\nC4[\"Adèle Ratignolle\"]\nC5[\"Mademoiselle Reisz\"]\nC6[\"Alcée Arobin\"]\nC7[\"Raoul Pontellier\"]\nC8[\"Etienne Pontellier\"]\nC2 -->|Married to| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Lover of| C1\nC1 -->|Parent of| C7\nC1 -->|Parent of| C8\nC2 -->|Parent of| C7\nC2 -->|Parent of| C8",
+  "mermaidHash": "bebd91d0874a0e79da77e83c5351847496dd45b4c4678bee42f1ac99f989d957",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "bebd91d0874a0e79da77e83c5351847496dd45b4c4678bee42f1ac99f989d957",
+    "svgHash": "46969469a43af06cd4cc47a014456a02f769e4112c7230e05e9e4be0bdefbfae",
+    "validatedAt": "2026-09-10T17:49:29.836Z",
+    "width": 780.7493286132812,
+    "height": 402
+  },
+  "generatedAt": "2026-09-10T17:49:28.542Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 188,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mary-shelley/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Mary Shelley"
+    ],
+    "year": "1823–1959"
+  },
+  "inputHash": "ffee7085c3ccfdb961bb1ee2f9f482465271c6512f26f8ec76716c4f07a130a9",
+  "promptHash": "b192efd4386680c9e80bb03b4539e3bac6f34e88fa4a46929fe1c2f8a33a8998",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:23.142Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:23.142Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 150
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:23.986Z",
+      "finishedAt": "2026-09-10T18:03:23.986Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:03:23.986Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 150
+  }
+}

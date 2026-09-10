@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-henry-newman/verses-on-various-occasions",
+  "metadata": {
+    "title": "Verses on Various Occasions",
+    "authors": [
+      "John Henry Newman"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "8bcf9584b1c1bb4493709f567ff77a3e2707915ca0d9bb02e7b1a6cec2d9fda3",
+  "promptHash": "0b6c2980180df6f4715609a4b4c88eb5005dcbe39a901da2199987d052572c4b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:20.579Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:20.579Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:21.154Z",
+      "finishedAt": "2026-09-10T17:47:21.154Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:47:21.154Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/dombey-and-son",
+  "metadata": {
+    "title": "Dombey and Son",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1848"
+  },
+  "inputHash": "1f5174f90585f2089a69dd63fabb5ca973f7982bf20adfec03c5484a57c3c3ca",
+  "promptHash": "20d3c53b68b01ab67f95bb608f4ebf5ce937a16fb9eb8ef4429f8108304294ef",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:03.155Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:03.156Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Paul Dombey\"]\nC2[\"Florence Dombey\"]\nC3[\"Edith Granger\"]\nC4[\"Walter Gay\"]\nC5[\"James Carker\"]\nC6[\"Solomon Gills\"]\nC7[\"Susan Nipper\"]\nC8[\"Mr. Toots\"]\nC1 -->|Father of| C2\nC1 -->|Married to| C3\nC1 -->|Employs| C5\nC1 -->|Friend of| C6\nC2 -->|Loves| C4\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8\nC3 -->|Stepmother of| C2\nC3 -->|Hated by| C1\nC4 -->|Nephew of| C6\nC4 -->|Friend of| C2\nC5 -->|Betrays| C1\nC5 -->|Manipulates| C3\nC5 -->|Enemy of| C4\nC6 -->|Guardian of| C4\nC7 -->|Servant of| C1\nC7 -->|Protects| C2\nC8 -->|Loves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 255,
+        "total_tokens": 1813,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:04.650Z",
+      "finishedAt": "2026-09-10T17:30:04.650Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Paul Dombey\"]\nC2[\"Florence Dombey\"]\nC3[\"Edith Granger\"]\nC4[\"Walter Gay\"]\nC5[\"James Carker\"]\nC6[\"Solomon Gills\"]\nC7[\"Susan Nipper\"]\nC8[\"Mr. Toots\"]\nC1 -->|Father of| C2\nC1 -->|Married to| C3\nC1 -->|Employs| C5\nC1 -->|Friend of| C6\nC2 -->|Loves| C4\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8\nC3 -->|Stepmother of| C2\nC3 -->|Hated by| C1\nC4 -->|Nephew of| C6\nC4 -->|Friend of| C2\nC5 -->|Betrays| C1\nC5 -->|Manipulates| C3\nC5 -->|Enemy of| C4\nC6 -->|Guardian of| C4\nC7 -->|Servant of| C1\nC7 -->|Protects| C2\nC8 -->|Loves| C2",
+  "mermaidHash": "7e7e88ed9f1d9b669e594292d5566246299c65dd168e0c9a53d4d53faf75d18e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7e7e88ed9f1d9b669e594292d5566246299c65dd168e0c9a53d4d53faf75d18e",
+    "svgHash": "3928871be5b6cd419a8563fc96acbffa0d97433602cbc9fc60b092dbd1a0fd4f",
+    "validatedAt": "2026-09-10T17:30:06.022Z",
+    "width": 1581.7457275390625,
+    "height": 369
+  },
+  "generatedAt": "2026-09-10T17:30:04.650Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 255,
+    "total_tokens": 1813,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

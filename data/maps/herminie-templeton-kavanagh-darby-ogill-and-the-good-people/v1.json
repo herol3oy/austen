@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "herminie-templeton-kavanagh/darby-ogill-and-the-good-people",
+  "metadata": {
+    "title": "Darby O’Gill and the Good People",
+    "authors": [
+      "Herminie Templeton Kavanagh"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "4b579612b7fd9486a2dcd49f967e6b3fa98aad24dfb6c0474126f62fc00dcb9b",
+  "promptHash": "27f2c5967d83bc2451dfc46ca1c2ee978084c8202e926120384744a85fbbdbc0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:50.622Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:50.622Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1569,
+        "completion_tokens": 2,
+        "total_tokens": 1571,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 289
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:51.436Z",
+      "finishedAt": "2026-09-10T17:43:51.437Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:43:51.436Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1569,
+    "completion_tokens": 2,
+    "total_tokens": 1571,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 289
+  }
+}

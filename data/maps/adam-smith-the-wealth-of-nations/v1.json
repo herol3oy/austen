@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "adam-smith/the-wealth-of-nations",
+  "metadata": {
+    "title": "The Wealth of Nations",
+    "authors": [
+      "Adam Smith"
+    ],
+    "year": "1776"
+  },
+  "inputHash": "4ec2a8e5d3bdd92950fcbe30ffbb762e44adbe1cfd4b43b9404870fad986ab4b",
+  "promptHash": "2229091577463d628d1441d79c4347181811005d4ed81b009980418c42b4ca99",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:49.190Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:49.190Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 2,
+        "total_tokens": 1559,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:50.005Z",
+      "finishedAt": "2026-09-10T17:23:50.005Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:23:50.005Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 2,
+    "total_tokens": 1559,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

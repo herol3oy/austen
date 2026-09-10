@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frank-belknap-long/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Frank Belknap Long"
+    ],
+    "year": "1922–1954"
+  },
+  "inputHash": "43f38408048da0153e085d0e03a3b3f470151e609e9587db70d93a5bc5c4dcc3",
+  "promptHash": "e207cf15b5d692b44e315f6bfb7c3c88acb1672c64b8c6921485011c7ef7c860",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:43.203Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:43.203Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 153
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:43.821Z",
+      "finishedAt": "2026-09-10T17:37:43.821Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:37:43.821Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 153
+  }
+}

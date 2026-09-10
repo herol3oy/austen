@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-m-forster/where-angels-fear-to-tread",
+  "metadata": {
+    "title": "Where Angels Fear to Tread",
+    "authors": [
+      "E. M. Forster"
+    ],
+    "year": "1905"
+  },
+  "inputHash": "43d436d8ab337d080730050baeb6b6d86d51cbce540f80a8a98c73888a6f6257",
+  "promptHash": "9c48b0e3b83c6435cb28a9bd5c29597faf6b06eb123adbb3a89fbe339d1fa3a8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:03.585Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:03.585Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lilia Herriton\"]\nC2[\"Philip Herriton\"]\nC3[\"Harriet Herriton\"]\nC4[\"Mrs. Herriton\"]\nC5[\"Gino Carella\"]\nC6[\"Caroline Abbott\"]\nC7[\"Irma Herriton\"]\nC1 -->|Married to| C5\nC1 -->|Daughter-in-law of| C4\nC2 -->|Brother of| C1\nC3 -->|Sister of| C1\nC4 -->|Mother of| C2\nC4 -->|Mother of| C3\nC4 -->|Mother-in-law of| C1\nC5 -->|Father of| C7\nC1 -->|Mother of| C7\nC6 -->|Friend of| C1\nC6 -->|Loves| C2\nC2 -->|Loves| C6\nC2 -->|Rival of| C5\nC3 -->|Dislikes| C5\nC4 -->|Disapproves of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 223,
+        "total_tokens": 1786,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:05.222Z",
+      "finishedAt": "2026-09-10T17:33:05.223Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lilia Herriton\"]\nC2[\"Philip Herriton\"]\nC3[\"Harriet Herriton\"]\nC4[\"Mrs. Herriton\"]\nC5[\"Gino Carella\"]\nC6[\"Caroline Abbott\"]\nC7[\"Irma Herriton\"]\nC1 -->|Married to| C5\nC1 -->|Daughter-in-law of| C4\nC2 -->|Brother of| C1\nC3 -->|Sister of| C1\nC4 -->|Mother of| C2\nC4 -->|Mother of| C3\nC4 -->|Mother-in-law of| C1\nC5 -->|Father of| C7\nC1 -->|Mother of| C7\nC6 -->|Friend of| C1\nC6 -->|Loves| C2\nC2 -->|Loves| C6\nC2 -->|Rival of| C5\nC3 -->|Dislikes| C5\nC4 -->|Disapproves of| C5",
+  "mermaidHash": "aa93dbf05fc56dbed869542891c523dde3cdb367dc69b324faa3fc2f438f2758",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "aa93dbf05fc56dbed869542891c523dde3cdb367dc69b324faa3fc2f438f2758",
+    "svgHash": "569e2a47dc80f79c38fb9f8930420fca631c803e248b7a8af934b82b1c62225b",
+    "validatedAt": "2026-09-10T17:33:06.612Z",
+    "width": 1309.494384765625,
+    "height": 411.25
+  },
+  "generatedAt": "2026-09-10T17:33:05.222Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 223,
+    "total_tokens": 1786,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

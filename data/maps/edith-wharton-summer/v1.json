@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edith-wharton/summer",
+  "metadata": {
+    "title": "Summer",
+    "authors": [
+      "Edith Wharton"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "88aef523ca2e715c7b412a804a865c696f664d74ac6e8a08e63b0f8072538da3",
+  "promptHash": "50f846d6c226d8d0aa30301edc1ed6a0110a2a7c63ee42b0276fe97a00ae09f6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:28.687Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:28.687Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 2,
+        "total_tokens": 1558,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:29.604Z",
+      "finishedAt": "2026-09-10T17:35:29.605Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:35:29.604Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 2,
+    "total_tokens": 1558,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/the-secret-agent",
+  "metadata": {
+    "title": "The Secret Agent",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1907"
+  },
+  "inputHash": "18c9865839f905f874a1b1b159b5b2fbb1dbaec4afac459938144dd824584034",
+  "promptHash": "5ac68a206e4922cfeff31ebeaa1dae9c52220169ef1a6e9cce125fea9b098f49",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:25.559Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:25.559Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mr. Verloc\"]\nC2[\"Winnie Verloc\"]\nC3[\"Stevie\"]\nC4[\"Adolf Verloc\"]\nC5[\"Chief Inspector Heat\"]\nC6[\"Mr. Vladimir\"]\nC7[\"Ossipon\"]\nC8[\"Michaelis\"]\nC1 -->|Married to| C2\nC2 -->|Sister of| C3\nC2 -->|Protects| C3\nC1 -->|Employed by| C6\nC1 -->|Betrays| C3\nC3 -->|Killed by| C1\nC2 -->|Kills| C1\nC5 -->|Investigates| C1\nC7 -->|Friend of| C1\nC8 -->|Associate of| C1\nC6 -->|Commands| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 175,
+        "total_tokens": 1731,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:27.201Z",
+      "finishedAt": "2026-09-10T17:48:27.201Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mr. Verloc\"]\nC2[\"Winnie Verloc\"]\nC3[\"Stevie\"]\nC4[\"Adolf Verloc\"]\nC5[\"Chief Inspector Heat\"]\nC6[\"Mr. Vladimir\"]\nC7[\"Ossipon\"]\nC8[\"Michaelis\"]\nC1 -->|Married to| C2\nC2 -->|Sister of| C3\nC2 -->|Protects| C3\nC1 -->|Employed by| C6\nC1 -->|Betrays| C3\nC3 -->|Killed by| C1\nC2 -->|Kills| C1\nC5 -->|Investigates| C1\nC7 -->|Friend of| C1\nC8 -->|Associate of| C1\nC6 -->|Commands| C1",
+  "mermaidHash": "41aa32a2341c489e5e39751e2dab942cb71ff519fd18eecd973819bb9574ab88",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "41aa32a2341c489e5e39751e2dab942cb71ff519fd18eecd973819bb9574ab88",
+    "svgHash": "36f88189f9abfadbed360d3b8ee93a6cffdf0404a713c9b2899d94788c0acce0",
+    "validatedAt": "2026-09-10T17:48:28.549Z",
+    "width": 966.4693603515625,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:48:27.201Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 175,
+    "total_tokens": 1731,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

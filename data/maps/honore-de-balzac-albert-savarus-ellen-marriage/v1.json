@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "honore-de-balzac/albert-savarus/ellen-marriage",
+  "metadata": {
+    "title": "Albert Savarus",
+    "authors": [
+      "Honoré de Balzac"
+    ],
+    "year": "1842"
+  },
+  "inputHash": "3ad43effec9ed0919f8587de40fa4e9bdf307c8bebc310f019efb24e1302f429",
+  "promptHash": "4da16f1438cc08f61373703906fb853fa9d95affc684a752b8e9f04b7e943191",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:07.510Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:07.510Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Albert Savarus\"]\nC2[\"Rosalie de Watteville\"]\nC3[\"Mademoiselle des Touches\"]\nC4[\"Amédée de Soulas\"]\nC5[\"Francesca Colonna\"]\nC6[\"Rodolphe\"]\nC7[\"Duc d'Argaiolo\"]\nC1 -->|Loves| C5\nC5 -->|Married to| C7\nC2 -->|Loves| C1\nC2 -->|Rival of| C5\nC4 -->|Courts| C2\nC3 -->|Friend of| C1\nC1 -->|Ally of| C3\nC2 -->|Manipulates| C1\nC1 -->|Created| C6\nC6 -->|Pseudonym of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 170,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:08.948Z",
+      "finishedAt": "2026-09-10T17:44:08.948Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Albert Savarus\"]\nC2[\"Rosalie de Watteville\"]\nC3[\"Mademoiselle des Touches\"]\nC4[\"Amédée de Soulas\"]\nC5[\"Francesca Colonna\"]\nC6[\"Rodolphe\"]\nC7[\"Duc d'Argaiolo\"]\nC1 -->|Loves| C5\nC5 -->|Married to| C7\nC2 -->|Loves| C1\nC2 -->|Rival of| C5\nC4 -->|Courts| C2\nC3 -->|Friend of| C1\nC1 -->|Ally of| C3\nC2 -->|Manipulates| C1\nC1 -->|Created| C6\nC6 -->|Pseudonym of| C1",
+  "mermaidHash": "e6927102e820dc5b375f7bb5de555aa35fae3be057dc9a48b4eda1bd2a972c42",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e6927102e820dc5b375f7bb5de555aa35fae3be057dc9a48b4eda1bd2a972c42",
+    "svgHash": "3a57d5c7598084776f14542c16e382dd72dc7d682109b360570b8cb4958425f0",
+    "validatedAt": "2026-09-10T17:44:10.251Z",
+    "width": 1446.2052001953125,
+    "height": 274
+  },
+  "generatedAt": "2026-09-10T17:44:08.948Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 170,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

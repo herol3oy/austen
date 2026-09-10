@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-wallace/the-crimson-circle",
+  "metadata": {
+    "title": "The Crimson Circle",
+    "authors": [
+      "Edgar Wallace"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "ab04477191c53ce8283528b70b51c0e1e62c63c22a9bc90ab92704f252fe4f71",
+  "promptHash": "1ff9d547ff31c185c4a599da3ece706469aa30d3764489ed5a8db23db36136c9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:14.252Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:14.252Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 2,
+        "total_tokens": 1559,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:15.371Z",
+      "finishedAt": "2026-09-10T17:35:15.371Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:35:15.371Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 2,
+    "total_tokens": 1559,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

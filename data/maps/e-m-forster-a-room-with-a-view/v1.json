@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-m-forster/a-room-with-a-view",
+  "metadata": {
+    "title": "A Room With a View",
+    "authors": [
+      "E. M. Forster"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "c4f7effa21091cfc81f94a6f38dbd09813b6dc7b5109eeb4afbd2cc6da4c212f",
+  "promptHash": "6f64d68e5060a5520d61a3554c73f9b66811aecbb4959cdce3072ec9deded27b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:56.232Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:56.232Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lucy Honeychurch\"]\nC2[\"George Emerson\"]\nC3[\"Charlotte Bartlett\"]\nC4[\"Cecil Vyse\"]\nC5[\"Mr. Emerson\"]\nC6[\"Freddy Honeychurch\"]\nC7[\"Miss Lavish\"]\nC8[\"Mr. Beebe\"]\nC1 -->|Cousin of| C3\nC1 -->|Engaged to| C4\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC5 -->|Father of| C2\nC1 -->|Sister of| C6\nC3 -->|Chaperone of| C1\nC8 -->|Friend of| C1\nC7 -->|Friend of| C3\nC4 -->|Fiancé of| C1\nC5 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 181,
+        "total_tokens": 1743,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:58.052Z",
+      "finishedAt": "2026-09-10T17:32:58.052Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lucy Honeychurch\"]\nC2[\"George Emerson\"]\nC3[\"Charlotte Bartlett\"]\nC4[\"Cecil Vyse\"]\nC5[\"Mr. Emerson\"]\nC6[\"Freddy Honeychurch\"]\nC7[\"Miss Lavish\"]\nC8[\"Mr. Beebe\"]\nC1 -->|Cousin of| C3\nC1 -->|Engaged to| C4\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC5 -->|Father of| C2\nC1 -->|Sister of| C6\nC3 -->|Chaperone of| C1\nC8 -->|Friend of| C1\nC7 -->|Friend of| C3\nC4 -->|Fiancé of| C1\nC5 -->|Friend of| C1",
+  "mermaidHash": "93e0af300d1131d49910137b917542cd745b23957efdc3210bde501d7eff3809",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "93e0af300d1131d49910137b917542cd745b23957efdc3210bde501d7eff3809",
+    "svgHash": "e1cdd9d6d68f9f7eeab0117df25bca05b4e70c3388fe7297e0e15f6cc4fc74e4",
+    "validatedAt": "2026-09-10T17:32:59.386Z",
+    "width": 792.9542846679688,
+    "height": 418.75
+  },
+  "generatedAt": "2026-09-10T17:32:58.052Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 181,
+    "total_tokens": 1743,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

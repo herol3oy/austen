@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-dewey/democracy-and-education",
+  "metadata": {
+    "title": "Democracy and Education",
+    "authors": [
+      "John Dewey"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "c9c66130ae6afb7cff0adf2d3a3fec840f41d382f13b08eed6e3df4ed7050bd0",
+  "promptHash": "36a6fcef6923ad3a70943fd1de2f8770926da5e64964c8d2be719cf9f05a3111",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:09.894Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:09.894Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 2,
+        "total_tokens": 1559,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:10.915Z",
+      "finishedAt": "2026-09-10T17:47:10.915Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:47:10.915Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 2,
+    "total_tokens": 1559,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

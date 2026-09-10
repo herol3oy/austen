@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dorothy-l-sayers/strong-poison",
+  "metadata": {
+    "title": "Strong Poison",
+    "authors": [
+      "Dorothy L. Sayers"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "a8895b5f0cc2bb28f71925d974ef802755bae4e56b14e0825dafc62f7b4fe9aa",
+  "promptHash": "146a6500c09d104e3a76bee349542fcdfba6ece433f15866eb7b1843858c1872",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:20.738Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:20.738Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Harriet Vane\"]\nC3[\"Philip Boyes\"]\nC4[\"Miss Climpson\"]\nC5[\"Inspector Parker\"]\nC6[\"Norman Urquhart\"]\nC7[\"Cremorna Garden\"]\nC8[\"Eiluned Price\"]\nC1 -->|Loves| C2\nC1 -->|Investigates murder of| C3\nC2 -->|Accused of murdering| C3\nC3 -->|Former lover of| C2\nC3 -->|Cousin of| C6\nC6 -->|Cousin of| C3\nC7 -->|Aunt of| C3\nC8 -->|Friend of| C2\nC1 -->|Friend of| C5\nC5 -->|Assists| C1\nC4 -->|Assists| C1\nC4 -->|Investigates for| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 197,
+        "total_tokens": 1756,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:22.314Z",
+      "finishedAt": "2026-09-10T17:32:22.314Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Harriet Vane\"]\nC3[\"Philip Boyes\"]\nC4[\"Miss Climpson\"]\nC5[\"Inspector Parker\"]\nC6[\"Norman Urquhart\"]\nC7[\"Cremorna Garden\"]\nC8[\"Eiluned Price\"]\nC1 -->|Loves| C2\nC1 -->|Investigates murder of| C3\nC2 -->|Accused of murdering| C3\nC3 -->|Former lover of| C2\nC3 -->|Cousin of| C6\nC6 -->|Cousin of| C3\nC7 -->|Aunt of| C3\nC8 -->|Friend of| C2\nC1 -->|Friend of| C5\nC5 -->|Assists| C1\nC4 -->|Assists| C1\nC4 -->|Investigates for| C1",
+  "mermaidHash": "373dcb9b0553c5a0774c2ae841ce8fa1da9d019eecd59402353240dec552a996",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "373dcb9b0553c5a0774c2ae841ce8fa1da9d019eecd59402353240dec552a996",
+    "svgHash": "617439a731b88d750e17815701a4642b34faa5bf54d4b42d111b325245321571",
+    "validatedAt": "2026-09-10T17:32:23.622Z",
+    "width": 1438.8892822265625,
+    "height": 329.25
+  },
+  "generatedAt": "2026-09-10T17:32:22.314Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 197,
+    "total_tokens": 1756,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

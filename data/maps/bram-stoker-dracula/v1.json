@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "bram-stoker/dracula",
+  "metadata": {
+    "title": "Dracula",
+    "authors": [
+      "Bram Stoker"
+    ],
+    "year": "1897"
+  },
+  "inputHash": "3c3982a45732d2906c6ca377f8e629f1ad1a38326502d9109e7525d969db002a",
+  "promptHash": "8e418f2aa4e7f644ee30bb86aa5bb968fe5a738cefae07ceaaa5de51a432a23e",
+  "promptVersion": "1",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T12:34:48.698Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T12:34:48.698Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nJonathan[\"Jonathan Harker\"] -->|Marries| Mina[\"Mina Murray\"]\nMina -->|Friend of| Lucy[\"Lucy Westenra\"]\nLucy -->|Engaged to| Arthur[\"Arthur Holmwood\"]\nLucy -->|Loved by| Seward[\"John Seward\"]\nLucy -->|Loved by| Quincey[\"Quincey Morris\"]\nDracula[\"Count Dracula\"] -->|Bites| Lucy\nDracula -->|Attacks| Mina\nVanHelsing[\"Abraham Van Helsing\"] -->|Mentor of| Seward\nVanHelsing -->|Leads| Arthur\nVanHelsing -->|Leads| Quincey\nVanHelsing -->|Leads| Jonathan\nVanHelsing -->|Leads| Mina\nArthur -->|Kills| Lucy\nJonathan -->|Kills| Dracula\nMina -->|Kills| Dracula\nQuincey -->|Kills| Dracula\nSeward -->|Kills| Dracula\nArthur -->|Kills| Dracula\nVanHelsing -->|Kills| Dracula\nDracula -->|Enemy of| VanHelsing",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 198,
+        "completion_tokens": 247,
+        "total_tokens": 445,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 198
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:50.749Z",
+      "finishedAt": "2026-09-10T12:34:50.749Z"
+    }
+  ],
+  "mermaid": "graph LR\nJonathan[\"Jonathan Harker\"] -->|Marries| Mina[\"Mina Murray\"]\nMina -->|Friend of| Lucy[\"Lucy Westenra\"]\nLucy -->|Engaged to| Arthur[\"Arthur Holmwood\"]\nLucy -->|Loved by| Seward[\"John Seward\"]\nLucy -->|Loved by| Quincey[\"Quincey Morris\"]\nDracula[\"Count Dracula\"] -->|Bites| Lucy\nDracula -->|Attacks| Mina\nVanHelsing[\"Abraham Van Helsing\"] -->|Mentor of| Seward\nVanHelsing -->|Leads| Arthur\nVanHelsing -->|Leads| Quincey\nVanHelsing -->|Leads| Jonathan\nVanHelsing -->|Leads| Mina\nArthur -->|Kills| Lucy\nJonathan -->|Kills| Dracula\nMina -->|Kills| Dracula\nQuincey -->|Kills| Dracula\nSeward -->|Kills| Dracula\nArthur -->|Kills| Dracula\nVanHelsing -->|Kills| Dracula\nDracula -->|Enemy of| VanHelsing",
+  "mermaidHash": "3288ca63d0a7435d78087cd187d41e5471599ee789847643867c43f276ffd054",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3288ca63d0a7435d78087cd187d41e5471599ee789847643867c43f276ffd054",
+    "svgHash": "897d9a13e4cd7e61e2ca35643dfd0a66e9ce040d4bb456ae16aae0d288d95c6d",
+    "validatedAt": "2026-09-10T17:23:26.245Z",
+    "width": 1847.010986328125,
+    "height": 526.0308227539062
+  },
+  "generatedAt": "2026-09-10T12:34:50.749Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 198,
+    "completion_tokens": 247,
+    "total_tokens": 445,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 198
+  }
+}

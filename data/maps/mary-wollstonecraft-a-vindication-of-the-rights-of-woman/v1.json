@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mary-wollstonecraft/a-vindication-of-the-rights-of-woman",
+  "metadata": {
+    "title": "A Vindication of the Rights of Woman",
+    "authors": [
+      "Mary Wollstonecraft"
+    ],
+    "year": "1792"
+  },
+  "inputHash": "d3ad03dac3a6cd8a055b8c4a6324a8a99cfcb9e71bc9f5f9c401d707dec4678e",
+  "promptHash": "01e164851c7aed94182921478e4b4e84be27566ff4ddea879f2ab397a49cb773",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:28.395Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:28.396Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:29.105Z",
+      "finishedAt": "2026-09-10T18:03:29.105Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:03:29.105Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

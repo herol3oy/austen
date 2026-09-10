@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-e-howard/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Robert E. Howard"
+    ],
+    "year": "1925–1936"
+  },
+  "inputHash": "5a3180b538bafa7dad0609d12a2c3874a9ea62df62023c6e3db95da52fe25799",
+  "promptHash": "164da72c2b61265c2e023f63115a1dacf95f813ffc11c4a902e04f37891b5bfd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:37.298Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:37.298Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 152
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:37.826Z",
+      "finishedAt": "2026-09-10T18:07:37.826Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:07:37.826Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 152
+  }
+}

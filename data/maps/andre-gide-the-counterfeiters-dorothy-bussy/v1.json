@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "andre-gide/the-counterfeiters/dorothy-bussy",
+  "metadata": {
+    "title": "The Counterfeiters",
+    "authors": [
+      "André Gide"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "f194a81d2a8627958cd7a66373ab0a656fe9d68a8d7471fcfea8c539e61fcc8e",
+  "promptHash": "9c15b0c6bd43212ce2f61ab282b243f4e18fffffd8be5d536b75063f199b4b85",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:18.276Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:18.276Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Bernard Profitendieu\"]\nC2[\"Olivier Molinier\"]\nC3[\"Édouard\"]\nC4[\"Vincent Molinier\"]\nC5[\"Laura Douviers\"]\nC6[\"Passavant\"]\nC7[\"Boris\"]\nC8[\"George Molinier\"]\nC1 -->|Friend of| C2\nC1 -->|Lover of| C5\nC2 -->|Friend of| C1\nC2 -->|Brother of| C4\nC2 -->|Brother of| C8\nC2 -->|Loves| C3\nC3 -->|Uncle of| C2\nC3 -->|Uncle of| C4\nC3 -->|Uncle of| C8\nC3 -->|Friend of| C1\nC4 -->|Brother of| C2\nC4 -->|Brother of| C8\nC4 -->|Lover of| C5\nC5 -->|Loves| C4\nC5 -->|Friend of| C3\nC6 -->|Rival of| C3\nC6 -->|Influences| C2\nC7 -->|Friend of| C2\nC8 -->|Brother of| C2\nC8 -->|Brother of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 277,
+        "total_tokens": 1836,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:19.707Z",
+      "finishedAt": "2026-09-10T17:25:19.707Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Bernard Profitendieu\"]\nC2[\"Olivier Molinier\"]\nC3[\"Édouard\"]\nC4[\"Vincent Molinier\"]\nC5[\"Laura Douviers\"]\nC6[\"Passavant\"]\nC7[\"Boris\"]\nC8[\"George Molinier\"]\nC1 -->|Friend of| C2\nC1 -->|Lover of| C5\nC2 -->|Friend of| C1\nC2 -->|Brother of| C4\nC2 -->|Brother of| C8\nC2 -->|Loves| C3\nC3 -->|Uncle of| C2\nC3 -->|Uncle of| C4\nC3 -->|Uncle of| C8\nC3 -->|Friend of| C1\nC4 -->|Brother of| C2\nC4 -->|Brother of| C8\nC4 -->|Lover of| C5\nC5 -->|Loves| C4\nC5 -->|Friend of| C3\nC6 -->|Rival of| C3\nC6 -->|Influences| C2\nC7 -->|Friend of| C2\nC8 -->|Brother of| C2\nC8 -->|Brother of| C4",
+  "mermaidHash": "0e4f841e8245fe268d4fdefdaf436e9a34e8765435cea1284ba03f6e7fd1f536",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0e4f841e8245fe268d4fdefdaf436e9a34e8765435cea1284ba03f6e7fd1f536",
+    "svgHash": "f1b42e997ddbf17b7671944a5f55b85509480e729cad86e54486b951d79f8a7f",
+    "validatedAt": "2026-09-10T17:25:21.121Z",
+    "width": 1570.4937744140625,
+    "height": 648
+  },
+  "generatedAt": "2026-09-10T17:25:19.707Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 277,
+    "total_tokens": 1836,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

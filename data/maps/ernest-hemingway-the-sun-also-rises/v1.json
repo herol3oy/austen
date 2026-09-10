@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ernest-hemingway/the-sun-also-rises",
+  "metadata": {
+    "title": "The Sun Also Rises",
+    "authors": [
+      "Ernest Hemingway"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "d9293b7bc2d01e71ee1af44365fc0f149e74536e0668125426a7040875725cd5",
+  "promptHash": "da2ec3ac7bc215a983cf8b97f73830474cb386b1c7fea620329cf0865ccabc64",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:37.874Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:37.874Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jake Barnes\"]\nC2[\"Lady Brett Ashley\"]\nC3[\"Robert Cohn\"]\nC4[\"Mike Campbell\"]\nC5[\"Bill Gorton\"]\nC6[\"Pedro Romero\"]\nC7[\"Frances Clyne\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Engaged to| C4\nC2 -->|Affair with| C3\nC2 -->|Affair with| C6\nC3 -->|Loves| C2\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC7 -->|Partner of| C3\nC1 -->|Friend of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 163,
+        "total_tokens": 1722,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:39.370Z",
+      "finishedAt": "2026-09-10T17:36:39.370Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jake Barnes\"]\nC2[\"Lady Brett Ashley\"]\nC3[\"Robert Cohn\"]\nC4[\"Mike Campbell\"]\nC5[\"Bill Gorton\"]\nC6[\"Pedro Romero\"]\nC7[\"Frances Clyne\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Engaged to| C4\nC2 -->|Affair with| C3\nC2 -->|Affair with| C6\nC3 -->|Loves| C2\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC7 -->|Partner of| C3\nC1 -->|Friend of| C3",
+  "mermaidHash": "de5609d66fb10c1673777ab601a974690ac16bb1e0849c71a9ebfa9f042f68d4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "de5609d66fb10c1673777ab601a974690ac16bb1e0849c71a9ebfa9f042f68d4",
+    "svgHash": "5fafe2da7150082c39a1900c0cdb9d9891f7fb28a1e802da5776ea80777aecab",
+    "validatedAt": "2026-09-10T17:36:40.797Z",
+    "width": 951.708251953125,
+    "height": 432.4129943847656
+  },
+  "generatedAt": "2026-09-10T17:36:39.370Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 163,
+    "total_tokens": 1722,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

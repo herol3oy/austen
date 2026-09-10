@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/romeo-and-juliet",
+  "metadata": {
+    "title": "Romeo and Juliet",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1597"
+  },
+  "inputHash": "c1a21d1f8a07b5289811f5182b27f8f44b10ceb8b754d25acab87ca009cce9dc",
+  "promptHash": "18ad231389686c3e4ca4d0cd6cc7c2962e7fc23e77ce290f0dbf3b3c0121ce8a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:46.368Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:46.368Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Romeo\"]\nC2[\"Juliet\"]\nC3[\"Friar Laurence\"]\nC4[\"Mercutio\"]\nC5[\"Tybalt\"]\nC6[\"Capulet\"]\nC7[\"Lady Capulet\"]\nC8[\"Montague\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Married to| C2\nC2 -->|Married to| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Kills| C5\nC5 -->|Kills| C4\nC5 -->|Enemy of| C1\nC5 -->|Cousin of| C2\nC6 -->|Parent of| C2\nC7 -->|Parent of| C2\nC8 -->|Parent of| C1\nC3 -->|Mentor of| C1\nC3 -->|Mentor of| C2\nC3 -->|Marries| C1\nC3 -->|Marries| C2\nC6 -->|Enemy of| C8\nC8 -->|Enemy of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 256,
+        "total_tokens": 1813,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:47.796Z",
+      "finishedAt": "2026-09-10T18:15:47.796Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Romeo\"]\nC2[\"Juliet\"]\nC3[\"Friar Laurence\"]\nC4[\"Mercutio\"]\nC5[\"Tybalt\"]\nC6[\"Capulet\"]\nC7[\"Lady Capulet\"]\nC8[\"Montague\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Married to| C2\nC2 -->|Married to| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Kills| C5\nC5 -->|Kills| C4\nC5 -->|Enemy of| C1\nC5 -->|Cousin of| C2\nC6 -->|Parent of| C2\nC7 -->|Parent of| C2\nC8 -->|Parent of| C1\nC3 -->|Mentor of| C1\nC3 -->|Mentor of| C2\nC3 -->|Marries| C1\nC3 -->|Marries| C2\nC6 -->|Enemy of| C8\nC8 -->|Enemy of| C6",
+  "mermaidHash": "60aee9c6e56aa3de996b258799160e7386006fe8e918b1c5e938384f362fffb9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "60aee9c6e56aa3de996b258799160e7386006fe8e918b1c5e938384f362fffb9",
+    "svgHash": "4d045ca6ae4dcbea7e8fea4605089110b24e690125465b166a5584a02d3c34ef",
+    "validatedAt": "2026-09-10T18:15:49.185Z",
+    "width": 1126.5352783203125,
+    "height": 600.5
+  },
+  "generatedAt": "2026-09-10T18:15:47.796Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 256,
+    "total_tokens": 1813,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

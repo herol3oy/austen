@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ann-radcliffe/the-mysteries-of-udolpho",
+  "metadata": {
+    "title": "The Mysteries of Udolpho",
+    "authors": [
+      "Ann Radcliffe"
+    ],
+    "year": "1794"
+  },
+  "inputHash": "feddccb4bf5ba8ef213c6fb658b62f48ac5d3634d03b3a453d4af35603f01a36",
+  "promptHash": "d86ee00569dc2f58a453a037f10c7fe4693bf6aafc8aa5cabe3e46b6b9a08ff6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:37.729Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:37.729Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Emily St. Aubert\"]\nC2[\"Valancourt\"]\nC3[\"Montoni\"]\nC4[\"Madame Montoni\"]\nC5[\"Signor Montoni\"]\nC6[\"St. Aubert\"]\nC7[\"Ludovico\"]\nC8[\"Annette\"]\nC1 -->|Daughter of| C6\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Niece of| C4\nC4 -->|Married to| C3\nC3 -->|Guardian of| C1\nC3 -->|Enemy of| C1\nC4 -->|Sister of| C6\nC7 -->|Servant of| C3\nC8 -->|Servant of| C4\nC1 -->|Friend of| C8\nC1 -->|Friend of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 190,
+        "total_tokens": 1751,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:39.263Z",
+      "finishedAt": "2026-09-10T17:25:39.263Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Emily St. Aubert\"]\nC2[\"Valancourt\"]\nC3[\"Montoni\"]\nC4[\"Madame Montoni\"]\nC5[\"Signor Montoni\"]\nC6[\"St. Aubert\"]\nC7[\"Ludovico\"]\nC8[\"Annette\"]\nC1 -->|Daughter of| C6\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Niece of| C4\nC4 -->|Married to| C3\nC3 -->|Guardian of| C1\nC3 -->|Enemy of| C1\nC4 -->|Sister of| C6\nC7 -->|Servant of| C3\nC8 -->|Servant of| C4\nC1 -->|Friend of| C8\nC1 -->|Friend of| C7",
+  "mermaidHash": "9b1c00f75b5c98505e01bbd1630c6c37f9a48b964b6e2d9f0806ab5dfb32186c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9b1c00f75b5c98505e01bbd1630c6c37f9a48b964b6e2d9f0806ab5dfb32186c",
+    "svgHash": "2c60fadc9e319358ac08f259c06726f13700efb53d2fd553f8ff0ec70e496471",
+    "validatedAt": "2026-09-10T17:25:40.584Z",
+    "width": 985.3136596679688,
+    "height": 430.5
+  },
+  "generatedAt": "2026-09-10T17:25:39.263Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 190,
+    "total_tokens": 1751,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

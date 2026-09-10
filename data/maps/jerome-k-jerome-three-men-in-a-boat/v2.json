@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "jerome-k-jerome/three-men-in-a-boat",
+  "metadata": {
+    "title": "Three Men in a Boat",
+    "authors": [
+      "Jerome K. Jerome"
+    ],
+    "year": "1889"
+  },
+  "inputHash": "39d445e454a18f6cc28d31eb36aa1c73c69c9ad83a284f59224c39f35c5f6889",
+  "promptHash": "255fc662b3b222e204a8426d9a705de62ec960e3c34536789c6413cd17af13a4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:41.275Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:41.275Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"J.\"]\nC2[\"George\"]\nC3[\"Harris\"]\nC4[\"Montmorency\"]\nC5[\"Uncle Podger\"]\nC6[\"Mrs. Poppets\"]\nC7[\"Tom\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Owner of| C4\nC2 -->|Friend of| C3\nC5 -->|Uncle of| C1\nC5 -->|Uncle of| C2\nC5 -->|Uncle of| C3\nC6 -->|Housekeeper of| C5\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 142,
+        "total_tokens": 1703,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 153
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:42.516Z",
+      "finishedAt": "2026-09-10T18:02:42.516Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"J.\"]\nC2[\"George\"]\nC3[\"Harris\"]\nC4[\"Montmorency\"]\nC5[\"Uncle Podger\"]\nC6[\"Mrs. Poppets\"]\nC7[\"Tom\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Owner of| C4\nC2 -->|Friend of| C3\nC5 -->|Uncle of| C1\nC5 -->|Uncle of| C2\nC5 -->|Uncle of| C3\nC6 -->|Housekeeper of| C5\nC7 -->|Friend of| C1",
+  "mermaidHash": "0bac80fed2ee1a9fc617225bbc7e5cf3c5b83702ca1a22ce234321bb818a4628",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0bac80fed2ee1a9fc617225bbc7e5cf3c5b83702ca1a22ce234321bb818a4628",
+    "svgHash": "7f87ddd10b79f2715cc333ca2b5b0430b1a633c3f62c9ad8dd523928cbd278eb",
+    "validatedAt": "2026-09-10T18:02:43.881Z",
+    "width": 1138.7431640625,
+    "height": 276
+  },
+  "generatedAt": "2026-09-10T18:02:42.516Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 142,
+    "total_tokens": 1703,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 153
+  }
+}

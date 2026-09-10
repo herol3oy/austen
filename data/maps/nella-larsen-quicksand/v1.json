@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nella-larsen/quicksand",
+  "metadata": {
+    "title": "Quicksand",
+    "authors": [
+      "Nella Larsen"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "310f68871f75c7dfdefd6923c17addf16429c0d068ebf06fd6d26ca70f291c81",
+  "promptHash": "ac91a361a703d38c7215900b10ae8fc0acbb4b2bd5c0d2695b46426fa9daecc7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:35.156Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:35.156Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Helga Crane\"]\nC2[\"Naxos\"]\nC3[\"James Vayle\"]\nC4[\"Anne Grey\"]\nC5[\"Robert Anderson\"]\nC6[\"Axel Olsen\"]\nC7[\"Reverend Pleasant Green\"]\nC8[\"Audrey Denney\"]\nC1 -->|Engaged to| C3\nC1 -->|Friend of| C4\nC1 -->|Loves| C5\nC1 -->|Married to| C6\nC1 -->|Married to| C7\nC1 -->|Mother of| C8\nC4 -->|Friend of| C5\nC5 -->|Married to| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 144,
+        "total_tokens": 1701,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:36.513Z",
+      "finishedAt": "2026-09-10T18:04:36.513Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Helga Crane\"]\nC2[\"Naxos\"]\nC3[\"James Vayle\"]\nC4[\"Anne Grey\"]\nC5[\"Robert Anderson\"]\nC6[\"Axel Olsen\"]\nC7[\"Reverend Pleasant Green\"]\nC8[\"Audrey Denney\"]\nC1 -->|Engaged to| C3\nC1 -->|Friend of| C4\nC1 -->|Loves| C5\nC1 -->|Married to| C6\nC1 -->|Married to| C7\nC1 -->|Mother of| C8\nC4 -->|Friend of| C5\nC5 -->|Married to| C4",
+  "mermaidHash": "6b334bcbac460ea9a3449475ad3e186a7243313856b2dfa629ed357ed4c87184",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6b334bcbac460ea9a3449475ad3e186a7243313856b2dfa629ed357ed4c87184",
+    "svgHash": "fa8250615133f0cf53fd41bf35998f9ab4e0c226eac37ffe69fef24441d5949e",
+    "validatedAt": "2026-09-10T18:04:37.884Z",
+    "width": 806.886474609375,
+    "height": 504
+  },
+  "generatedAt": "2026-09-10T18:04:36.513Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 144,
+    "total_tokens": 1701,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -9,12 +9,34 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "test": "node --test tests/catalog.test.mjs tests/generation.test.mjs tests/publication.test.mjs tests/sync.test.mjs tests/worker.test.mjs",
+    "test:browser": "node --env-file-if-exists=.env --test tests/browser.test.mjs",
+    "catalog:ingest": "node scripts/ingest-catalog.mjs",
+    "maps:generate": "node --env-file-if-exists=.env scripts/generate-maps.mjs",
+    "maps:sync": "node --env-file-if-exists=.env scripts/sync-maps.mjs",
+    "maps:validate": "node --env-file-if-exists=.env scripts/validate-maps.mjs",
+    "maps:publish": "node --env-file-if-exists=.env scripts/publish-map.mjs",
+    "worker:check": "wrangler deploy --dry-run --config worker/wrangler.jsonc",
+    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",
+    "maps:revise": "node --env-file-if-exists=.env scripts/revise-map.mjs"
   },
   "dependencies": {
-    "astro": "^7.3.2"
+    "@fontsource/cormorant-garamond": "5.3.0",
+    "@fontsource/inter": "5.3.0",
+    "@panzoom/panzoom": "4.6.0",
+    "astro": "^7.3.2",
+    "cheerio": "1.2.0",
+    "lz-string": "1.5.0",
+    "mermaid": "11.16.0"
   },
-  "allowScripts": {
-    "esbuild": true
-  }
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@mermaid-js/mermaid-cli": "11.17.0",
+    "puppeteer": "24.43.1",
+    "typescript": "6.0.3",
+    "wrangler": "4.130.0"
+  },
+  "packageManager": "pnpm@12.3.4"
 }

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "upton-sinclair/the-jungle",
+  "metadata": {
+    "title": "The Jungle",
+    "authors": [
+      "Upton Sinclair"
+    ],
+    "year": "1906"
+  },
+  "inputHash": "e4b7d91fa9d57d9f170a6e172bce43abf1fda9b204087708f0034ffb514d6b7b",
+  "promptHash": "8f3a0d1c935938c67888cda2850cf89e6281c400b2cf64e6671942d0ac85f103",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:43.559Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:43.559Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jurgis Rudkus\"]\nC2[\"Ona Lukoszaite\"]\nC3[\"Teta Elzbieta Lukoszaite\"]\nC4[\"Marija Berczynskas\"]\nC5[\"Jonas\"]\nC6[\"Antanas Rudkus\"]\nC7[\"Stanislovas Lukoszaite\"]\nC8[\"Phil Connor\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C2\nC3 -->|Stepmother of| C2\nC3 -->|Mother of| C7\nC1 -->|Father of| C6\nC2 -->|Mother of| C6\nC4 -->|Cousin of| C2\nC5 -->|Brother of| C3\nC1 -->|Works for| C8\nC8 -->|Rapes| C2\nC1 -->|Attacks| C8\nC1 -->|Imprisoned for| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 206,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:46.789Z",
+      "finishedAt": "2026-09-10T18:11:46.789Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jurgis Rudkus\"]\nC2[\"Ona Lukoszaite\"]\nC3[\"Teta Elzbieta Lukoszaite\"]\nC4[\"Marija Berczynskas\"]\nC5[\"Jonas\"]\nC6[\"Antanas Rudkus\"]\nC7[\"Stanislovas Lukoszaite\"]\nC8[\"Phil Connor\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C2\nC3 -->|Stepmother of| C2\nC3 -->|Mother of| C7\nC1 -->|Father of| C6\nC2 -->|Mother of| C6\nC4 -->|Cousin of| C2\nC5 -->|Brother of| C3\nC1 -->|Works for| C8\nC8 -->|Rapes| C2\nC1 -->|Attacks| C8\nC1 -->|Imprisoned for| C8",
+  "mermaidHash": "03b0842b109b386325e1f7e8406e407fdbb7e7940c8db4d05d4b8e88e802a63f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "03b0842b109b386325e1f7e8406e407fdbb7e7940c8db4d05d4b8e88e802a63f",
+    "svgHash": "23064df5339cd680235291a453b0db3ce9f29d237b806514accb13b760268452",
+    "validatedAt": "2026-09-10T18:11:48.178Z",
+    "width": 1180.4122314453125,
+    "height": 412.20306396484375
+  },
+  "generatedAt": "2026-09-10T18:11:46.789Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 206,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

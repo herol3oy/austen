@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frances-hodgson-burnett/little-lord-fauntleroy",
+  "metadata": {
+    "title": "Little Lord Fauntleroy",
+    "authors": [
+      "Frances Hodgson Burnett"
+    ],
+    "year": "1886"
+  },
+  "inputHash": "a05288f8ac55effa7115ef6a23eff814386b79b38c7342edff6033d9e17295c5",
+  "promptHash": "750353cbfa3655376a7ede2a6ea035f11595d3cbdd2facf51fc2b9b9364edf67",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:34.525Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:34.525Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Cedric Errol\"]\nC2[\"Cedric Errol Sr\"]\nC3[\"Earl of Dorincourt\"]\nC4[\"Dearest\"]\nC5[\"Mr. Hobbs\"]\nC6[\"Dick Tipton\"]\nC7[\"Minnie\"]\nC8[\"Tom Tipton\"]\nC1 -->|Grandson of| C3\nC3 -->|Grandfather of| C1\nC2 -->|Father of| C1\nC4 -->|Mother of| C1\nC3 -->|Father of| C2\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC6 -->|Brother of| C8\nC7 -->|Mother of| C8\nC6 -->|Protects| C8\nC1 -->|Heir of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 181,
+        "total_tokens": 1743,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:36.282Z",
+      "finishedAt": "2026-09-10T17:37:36.282Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Cedric Errol\"]\nC2[\"Cedric Errol Sr\"]\nC3[\"Earl of Dorincourt\"]\nC4[\"Dearest\"]\nC5[\"Mr. Hobbs\"]\nC6[\"Dick Tipton\"]\nC7[\"Minnie\"]\nC8[\"Tom Tipton\"]\nC1 -->|Grandson of| C3\nC3 -->|Grandfather of| C1\nC2 -->|Father of| C1\nC4 -->|Mother of| C1\nC3 -->|Father of| C2\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC6 -->|Brother of| C8\nC7 -->|Mother of| C8\nC6 -->|Protects| C8\nC1 -->|Heir of| C3",
+  "mermaidHash": "b29b3121202aa43562aa2f489303147d3aa828748ec6e65d7ee35ba44731f0f4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b29b3121202aa43562aa2f489303147d3aa828748ec6e65d7ee35ba44731f0f4",
+    "svgHash": "5256b7d2aabf0974fc7840f978cb0e9e8393c8b023da15c03cfd7dde9e1303c5",
+    "validatedAt": "2026-09-10T17:37:37.638Z",
+    "width": 990.2808837890625,
+    "height": 434.3409423828125
+  },
+  "generatedAt": "2026-09-10T17:37:36.282Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 181,
+    "total_tokens": 1743,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

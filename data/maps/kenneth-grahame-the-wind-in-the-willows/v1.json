@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "kenneth-grahame/the-wind-in-the-willows",
+  "metadata": {
+    "title": "The Wind in the Willows",
+    "authors": [
+      "Kenneth Grahame"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "35a2d822ade9b3e745c96050da8f4bd22163ec9818427ff0ac45397a8e14aec3",
+  "promptHash": "c749e383d2a2fa680c72ccd2d3af65d53ad8865b76c23d40308d683d2cb0da59",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:31.618Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:31.618Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mole\"]\nC2[\"Rat\"]\nC3[\"Toad\"]\nC4[\"Badger\"]\nC5[\"Otter\"]\nC6[\"Chief Weasel\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C3\nC3 -->|Friend of| C4\nC4 -->|Mentor of| C3\nC2 -->|Friend of| C4\nC1 -->|Friend of| C4\nC3 -->|Friend of| C1\nC2 -->|Friend of| C5\nC4 -->|Enemy of| C6\nC6 -->|Enemy of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 143,
+        "total_tokens": 1705,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:32.536Z",
+      "finishedAt": "2026-09-10T17:49:32.536Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mole\"]\nC2[\"Rat\"]\nC3[\"Toad\"]\nC4[\"Badger\"]\nC5[\"Otter\"]\nC6[\"Chief Weasel\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C3\nC3 -->|Friend of| C4\nC4 -->|Mentor of| C3\nC2 -->|Friend of| C4\nC1 -->|Friend of| C4\nC3 -->|Friend of| C1\nC2 -->|Friend of| C5\nC4 -->|Enemy of| C6\nC6 -->|Enemy of| C3",
+  "mermaidHash": "6b7647a58e0239790ccd2b1d86ffdef6faab8b8b2df11cec1d47660545e03503",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6b7647a58e0239790ccd2b1d86ffdef6faab8b8b2df11cec1d47660545e03503",
+    "svgHash": "addef7c05704fda2d680b1c36557444c22d021ca9db1fa4fbbae62cf9c33e9d6",
+    "validatedAt": "2026-09-10T17:49:33.800Z",
+    "width": 1002.8212280273438,
+    "height": 283.75
+  },
+  "generatedAt": "2026-09-10T17:49:32.536Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 143,
+    "total_tokens": 1705,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

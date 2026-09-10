@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maria-edgeworth/castle-rackrent",
+  "metadata": {
+    "title": "Castle Rackrent",
+    "authors": [
+      "Maria Edgeworth"
+    ],
+    "year": "1800"
+  },
+  "inputHash": "9a3a61dbb59900b9d9372028b78fa32d51d58544bbb6fa2dd43b8e33c97b03dd",
+  "promptHash": "78fc27ab8021e9bde9d5653f328b2726e5faa4bc567195476c277634816061eb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:51.087Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:51.087Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Thady Quirk\"]\nC2[\"Sir Patrick O'Shaughlin\"]\nC3[\"Sir Murtagh Rackrent\"]\nC4[\"Sir Kit Rackrent\"]\nC5[\"Sir Condy Rackrent\"]\nC6[\"Jason Quirk\"]\nC7[\"Isabella Rackrent\"]\nC8[\"Judy Quirk\"]\nC1 -->|Serves| C2\nC1 -->|Serves| C3\nC1 -->|Serves| C4\nC1 -->|Serves| C5\nC1 -->|Father of| C6\nC2 -->|Ancestor of| C3\nC3 -->|Sibling of| C4\nC4 -->|Sibling of| C5\nC5 -->|Married to| C7\nC5 -->|Cousin of| C7\nC6 -->|Serves| C5\nC6 -->|Betrays| C5\nC6 -->|Takes estate from| C5\nC8 -->|Daughter of| C1\nC8 -->|Loves| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 234,
+        "total_tokens": 1793,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:52.721Z",
+      "finishedAt": "2026-09-10T17:51:52.721Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Thady Quirk\"]\nC2[\"Sir Patrick O'Shaughlin\"]\nC3[\"Sir Murtagh Rackrent\"]\nC4[\"Sir Kit Rackrent\"]\nC5[\"Sir Condy Rackrent\"]\nC6[\"Jason Quirk\"]\nC7[\"Isabella Rackrent\"]\nC8[\"Judy Quirk\"]\nC1 -->|Serves| C2\nC1 -->|Serves| C3\nC1 -->|Serves| C4\nC1 -->|Serves| C5\nC1 -->|Father of| C6\nC2 -->|Ancestor of| C3\nC3 -->|Sibling of| C4\nC4 -->|Sibling of| C5\nC5 -->|Married to| C7\nC5 -->|Cousin of| C7\nC6 -->|Serves| C5\nC6 -->|Betrays| C5\nC6 -->|Takes estate from| C5\nC8 -->|Daughter of| C1\nC8 -->|Loves| C5",
+  "mermaidHash": "15ceec4af42a18e1c8103f7b6efe86e326d500c4874394f976f12727ea04c1f7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "15ceec4af42a18e1c8103f7b6efe86e326d500c4874394f976f12727ea04c1f7",
+    "svgHash": "8899e415c7581a2f6d95400b0da1e67f7ca00f7db24a45b02047e9d65d5d52ea",
+    "validatedAt": "2026-09-10T17:51:54.052Z",
+    "width": 1985.22265625,
+    "height": 354.75
+  },
+  "generatedAt": "2026-09-10T17:51:52.721Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 234,
+    "total_tokens": 1793,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

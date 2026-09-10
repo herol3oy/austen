@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ameen-rihani/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Ameen Rihani"
+    ],
+    "year": "1905–1921"
+  },
+  "inputHash": "7e29a52e52d0b16a490b95e10423d37d53524629808dffcfa19a5bf2140f7b2c",
+  "promptHash": "be2f0e2d47c8eb4cd9bca57051b864dc67ed09dbb29a07c3f6d530eba5813634",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:14.487Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:14.487Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 2,
+        "total_tokens": 1564,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:15.203Z",
+      "finishedAt": "2026-09-10T17:25:15.203Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:25:15.203Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 2,
+    "total_tokens": 1564,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

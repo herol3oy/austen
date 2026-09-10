@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "james-joyce/ulysses",
+  "metadata": {
+    "title": "Ulysses",
+    "authors": [
+      "James Joyce"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "08562866791b898e84b6aa751608e4dcab707ba9d6f9a3a8c1a100e55e0fbab0",
+  "promptHash": "21ad8eedf7cd8f98900c45d5535479248d81908f3582a951fa40909c1feb3467",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:07.732Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:07.732Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Leopold Bloom\"]\nC2[\"Molly Bloom\"]\nC3[\"Stephen Dedalus\"]\nC4[\"Simon Dedalus\"]\nC5[\"Buck Mulligan\"]\nC6[\"Blazes Boylan\"]\nC7[\"Hugh C. Haines\"]\nC1 -->|Married to| C2\nC2 -->|Affair with| C6\nC1 -->|Father figure to| C3\nC4 -->|Father of| C3\nC5 -->|Friend of| C3\nC5 -->|Rival of| C1\nC7 -->|Friend of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 129,
+        "total_tokens": 1684,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:09.474Z",
+      "finishedAt": "2026-09-10T17:46:09.474Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Leopold Bloom\"]\nC2[\"Molly Bloom\"]\nC3[\"Stephen Dedalus\"]\nC4[\"Simon Dedalus\"]\nC5[\"Buck Mulligan\"]\nC6[\"Blazes Boylan\"]\nC7[\"Hugh C. Haines\"]\nC1 -->|Married to| C2\nC2 -->|Affair with| C6\nC1 -->|Father figure to| C3\nC4 -->|Father of| C3\nC5 -->|Friend of| C3\nC5 -->|Rival of| C1\nC7 -->|Friend of| C5",
+  "mermaidHash": "c3f22c2e36c2d35f2d832f18d375c19cfe895e3d5a25fd407e750a94906672ef",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c3f22c2e36c2d35f2d832f18d375c19cfe895e3d5a25fd407e750a94906672ef",
+    "svgHash": "1e773cd038225a8075f3565534861ee69621396e326a26017a199452334e5393",
+    "validatedAt": "2026-09-10T17:46:10.748Z",
+    "width": 1306.9503173828125,
+    "height": 243.5
+  },
+  "generatedAt": "2026-09-10T17:46:09.474Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 129,
+    "total_tokens": 1684,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

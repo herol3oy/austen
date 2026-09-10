@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-p-lovecraft/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "H. P. Lovecraft"
+    ],
+    "year": "1905–1935"
+  },
+  "inputHash": "ecd71147be323f665cad9ca95d7d55efdf28659b1cc362a123910969e5067e60",
+  "promptHash": "c72eb2d6b0a9a229abdac5309cfd6afafbeb9d9b9001a923d6cd303f27c2eb0d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:20.796Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:20.796Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 2,
+        "total_tokens": 1564,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:21.527Z",
+      "finishedAt": "2026-09-10T17:42:21.527Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:42:21.527Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 2,
+    "total_tokens": 1564,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

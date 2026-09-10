@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frank-norris/mcteague",
+  "metadata": {
+    "title": "McTeague",
+    "authors": [
+      "Frank Norris"
+    ],
+    "year": "1899"
+  },
+  "inputHash": "c9d650f07b6016835e2a884e4a84353cb8db354e44623a62aef45f49121299fa",
+  "promptHash": "0ccbc05b98fe98fa24eceabd60e367920eb5881c3947ed0404078e6ca2f97fce",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:44.844Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:44.844Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"McTeague\"]\nC2[\"Trina Sieppe\"]\nC3[\"Marcus Schouler\"]\nC4[\"Zerkow\"]\nC5[\"Maria Macapa\"]\nC6[\"Selina Sieppe\"]\nC7[\"Old Grannis\"]\nC8[\"Miss Baker\"]\nC1 -->|Married to| C2\nC3 -->|Friend of| C1\nC3 -->|Loves| C2\nC3 -->|Betrays| C1\nC1 -->|Kills| C3\nC4 -->|Obsessed with| C5\nC4 -->|Kills| C5\nC5 -->|Lies to| C4\nC6 -->|Sister of| C2\nC7 -->|Loves| C8\nC8 -->|Loves| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 174,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:46.482Z",
+      "finishedAt": "2026-09-10T17:37:46.482Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"McTeague\"]\nC2[\"Trina Sieppe\"]\nC3[\"Marcus Schouler\"]\nC4[\"Zerkow\"]\nC5[\"Maria Macapa\"]\nC6[\"Selina Sieppe\"]\nC7[\"Old Grannis\"]\nC8[\"Miss Baker\"]\nC1 -->|Married to| C2\nC3 -->|Friend of| C1\nC3 -->|Loves| C2\nC3 -->|Betrays| C1\nC1 -->|Kills| C3\nC4 -->|Obsessed with| C5\nC4 -->|Kills| C5\nC5 -->|Lies to| C4\nC6 -->|Sister of| C2\nC7 -->|Loves| C8\nC8 -->|Loves| C7",
+  "mermaidHash": "4fe0758e21bef339e56beb5088ec6ca9438e36fd44e91a29b16e23683cb4588f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4fe0758e21bef339e56beb5088ec6ca9438e36fd44e91a29b16e23683cb4588f",
+    "svgHash": "4622d243f532f22448523c8967ded2b1b0f027ef9bdd8737ff3d94b15bced178",
+    "validatedAt": "2026-09-10T17:37:47.861Z",
+    "width": 723.6735229492188,
+    "height": 473.25
+  },
+  "generatedAt": "2026-09-10T17:37:46.482Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 174,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

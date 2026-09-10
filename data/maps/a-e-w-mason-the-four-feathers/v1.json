@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "a-e-w-mason/the-four-feathers",
+  "metadata": {
+    "title": "The Four Feathers",
+    "authors": [
+      "A. E. W. Mason"
+    ],
+    "year": "1902"
+  },
+  "inputHash": "044d1fd87abc77e6a8d81855296a2977899362b1903f922185fb704f296c37e6",
+  "promptHash": "1596e947a326ee7098a08d223783d763d76122aa7380e67e5687445321c71b9a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:36.896Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:36.896Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Harry Feversham\"]\nC2[\"Ethne Eustace\"]\nC3[\"Jack Durrance\"]\nC4[\"Captain Trench\"]\nC5[\"Willoughby\"]\nC6[\"Castleton\"]\nC7[\"Lieutenant Sutch\"]\nC8[\"Mrs. Adair\"]\nC1 -->|Engaged to| C2\nC2 -->|Breaks engagement with| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC3 -->|Loves| C2\nC2 -->|Marries| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC4 -->|Serves with| C1\nC5 -->|Serves with| C1\nC6 -->|Serves with| C1\nC7 -->|Mentor of| C1\nC8 -->|Friend of| C2\nC8 -->|Confidante of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 221,
+        "total_tokens": 1783,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:38.430Z",
+      "finishedAt": "2026-09-10T17:23:38.430Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Harry Feversham\"]\nC2[\"Ethne Eustace\"]\nC3[\"Jack Durrance\"]\nC4[\"Captain Trench\"]\nC5[\"Willoughby\"]\nC6[\"Castleton\"]\nC7[\"Lieutenant Sutch\"]\nC8[\"Mrs. Adair\"]\nC1 -->|Engaged to| C2\nC2 -->|Breaks engagement with| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC3 -->|Loves| C2\nC2 -->|Marries| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC4 -->|Serves with| C1\nC5 -->|Serves with| C1\nC6 -->|Serves with| C1\nC7 -->|Mentor of| C1\nC8 -->|Friend of| C2\nC8 -->|Confidante of| C3",
+  "mermaidHash": "e5d5a6e749da02714f828006edacfc63db31c60b79d4defe545e3f07792f8190",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e5d5a6e749da02714f828006edacfc63db31c60b79d4defe545e3f07792f8190",
+    "svgHash": "4d422e5ad95dfd2b71f6279106bfc3c78a1111bc9fd14ca91df2f4f7c2dad286",
+    "validatedAt": "2026-09-10T17:23:39.979Z",
+    "width": 1114.8492431640625,
+    "height": 606
+  },
+  "generatedAt": "2026-09-10T17:23:38.430Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 221,
+    "total_tokens": 1783,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

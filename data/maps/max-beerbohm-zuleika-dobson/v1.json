@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "max-beerbohm/zuleika-dobson",
+  "metadata": {
+    "title": "Zuleika Dobson",
+    "authors": [
+      "Max Beerbohm"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "77fa5997f3b3ee8e9a3a7a337fe902175a8c198fd80f0edfc19829a517c99d9e",
+  "promptHash": "506c8b2ffbe50f8f1e9f6a781ab0491f46bda55c79bd61fafe99b161483a2548",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:02.287Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:02.287Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Zuleika Dobson\"]\nC2[\"Duke of Dorset\"]\nC3[\"Katie Batch\"]\nC4[\"Abimelech\"]\nC5[\"Mr. Dobson\"]\nC6[\"Lord Sayes\"]\nC7[\"Noaks\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Granddaughter of| C5\nC2 -->|Nephew of| C4\nC3 -->|Sister of| C2\nC3 -->|Loves| C2\nC6 -->|Friend of| C2\nC7 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 139,
+        "total_tokens": 1699,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:04.230Z",
+      "finishedAt": "2026-09-10T18:04:04.230Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Zuleika Dobson\"]\nC2[\"Duke of Dorset\"]\nC3[\"Katie Batch\"]\nC4[\"Abimelech\"]\nC5[\"Mr. Dobson\"]\nC6[\"Lord Sayes\"]\nC7[\"Noaks\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Granddaughter of| C5\nC2 -->|Nephew of| C4\nC3 -->|Sister of| C2\nC3 -->|Loves| C2\nC6 -->|Friend of| C2\nC7 -->|Loves| C1",
+  "mermaidHash": "4c729f2698c637619263ec9e258413c0d4a8a9dc57277d6cea6f36ae885120b3",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4c729f2698c637619263ec9e258413c0d4a8a9dc57277d6cea6f36ae885120b3",
+    "svgHash": "5fc3378840c4b174ed1712b085dc58b859e1e8b328bee060932efcb984fa831c",
+    "validatedAt": "2026-09-10T18:04:05.622Z",
+    "width": 959.4592895507812,
+    "height": 299.5
+  },
+  "generatedAt": "2026-09-10T18:04:04.230Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 139,
+    "total_tokens": 1699,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

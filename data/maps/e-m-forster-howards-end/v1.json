@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-m-forster/howards-end",
+  "metadata": {
+    "title": "Howards End",
+    "authors": [
+      "E. M. Forster"
+    ],
+    "year": "1910"
+  },
+  "inputHash": "760b5711115fe28b68b984edbcec004c58c4d7d5531a737a08f8a70ccdc244c8",
+  "promptHash": "97d7725ac3111756e5b1e7081dc1d57fea1e75810e2ecfd311005229efcf7f12",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:00.079Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:00.079Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Margaret Schlegel\"]\nC2[\"Helen Schlegel\"]\nC3[\"Tibby Schlegel\"]\nC4[\"Henry Wilcox\"]\nC5[\"Ruth Wilcox\"]\nC6[\"Charles Wilcox\"]\nC7[\"Leonard Bast\"]\nC8[\"Jacky Bast\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC2 -->|Sibling of| C3\nC1 -->|Married to| C4\nC4 -->|Married to| C5\nC4 -->|Parent of| C6\nC5 -->|Parent of| C6\nC2 -->|Loves| C7\nC7 -->|Married to| C8\nC4 -->|Former lover of| C8\nC6 -->|Kills| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 178,
+        "total_tokens": 1738,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:01.429Z",
+      "finishedAt": "2026-09-10T17:33:01.429Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Margaret Schlegel\"]\nC2[\"Helen Schlegel\"]\nC3[\"Tibby Schlegel\"]\nC4[\"Henry Wilcox\"]\nC5[\"Ruth Wilcox\"]\nC6[\"Charles Wilcox\"]\nC7[\"Leonard Bast\"]\nC8[\"Jacky Bast\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC2 -->|Sibling of| C3\nC1 -->|Married to| C4\nC4 -->|Married to| C5\nC4 -->|Parent of| C6\nC5 -->|Parent of| C6\nC2 -->|Loves| C7\nC7 -->|Married to| C8\nC4 -->|Former lover of| C8\nC6 -->|Kills| C7",
+  "mermaidHash": "6e7c9844a5fa071f0f39094691d89d7b0538ff7d7162ebcf971b35ee7745a595",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6e7c9844a5fa071f0f39094691d89d7b0538ff7d7162ebcf971b35ee7745a595",
+    "svgHash": "08fbf08f33b5e4c031661204d71f1bcaff58f911507f1998627605e73e8d40dc",
+    "validatedAt": "2026-09-10T17:33:02.753Z",
+    "width": 1502.51513671875,
+    "height": 317.5
+  },
+  "generatedAt": "2026-09-10T17:33:01.429Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 178,
+    "total_tokens": 1738,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

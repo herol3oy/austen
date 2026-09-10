@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/the-merchant-of-venice",
+  "metadata": {
+    "title": "The Merchant of Venice",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1596"
+  },
+  "inputHash": "d0ba0f7c7027862654b12bc6cf78860d57580082cedccc31aef56cc58da645ad",
+  "promptHash": "ceca261604bbda89c07cbf946516878a1fe36bf6f326afc49387980d390b4e24",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:51.779Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:51.779Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Shylock\"]\nC2[\"Antonio\"]\nC3[\"Bassanio\"]\nC4[\"Portia\"]\nC5[\"Jessica\"]\nC6[\"Lorenzo\"]\nC7[\"Nerissa\"]\nC8[\"Duke of Venice\"]\nC1 -->|Enemy of| C2\nC1 -->|Parent of| C5\nC2 -->|Friend of| C3\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC4 -->|Married to| C3\nC5 -->|Daughter of| C1\nC5 -->|Loves| C6\nC6 -->|Loves| C5\nC5 -->|Elopes with| C6\nC7 -->|Friend of| C4\nC7 -->|Married to| C6\nC4 -->|Disguised as lawyer| C8\nC1 -->|Seeks revenge on| C2\nC2 -->|Borrows from| C1\nC3 -->|Borrows from| C1\nC1 -->|Attempts to kill| C2\nC4 -->|Defeats| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 253,
+        "total_tokens": 1810,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:53.634Z",
+      "finishedAt": "2026-09-10T18:15:53.634Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Shylock\"]\nC2[\"Antonio\"]\nC3[\"Bassanio\"]\nC4[\"Portia\"]\nC5[\"Jessica\"]\nC6[\"Lorenzo\"]\nC7[\"Nerissa\"]\nC8[\"Duke of Venice\"]\nC1 -->|Enemy of| C2\nC1 -->|Parent of| C5\nC2 -->|Friend of| C3\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC4 -->|Married to| C3\nC5 -->|Daughter of| C1\nC5 -->|Loves| C6\nC6 -->|Loves| C5\nC5 -->|Elopes with| C6\nC7 -->|Friend of| C4\nC7 -->|Married to| C6\nC4 -->|Disguised as lawyer| C8\nC1 -->|Seeks revenge on| C2\nC2 -->|Borrows from| C1\nC3 -->|Borrows from| C1\nC1 -->|Attempts to kill| C2\nC4 -->|Defeats| C1",
+  "mermaidHash": "21545cf176dd48e9c0d956cf0491321303f8585e51fe4235962278a5ef63450a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "21545cf176dd48e9c0d956cf0491321303f8585e51fe4235962278a5ef63450a",
+    "svgHash": "bd86368ee6948c478cb8264f6ac48c926fe9db55abeed1afd44910ff57451092",
+    "validatedAt": "2026-09-10T18:15:54.999Z",
+    "width": 1219.9873046875,
+    "height": 470.25
+  },
+  "generatedAt": "2026-09-10T18:15:53.634Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 253,
+    "total_tokens": 1810,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

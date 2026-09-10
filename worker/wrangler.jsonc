@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "austen-api",
+  "main": "index.js",
+  "compatibility_date": "2026-09-09",
+  "account_id": "2380e8a4a3e0db37d83a32018d783550",
+  "vars": { "DEEPSEEK_MODEL": "deepseek-v4-flash", "GENERATION_ENABLED": "true" },
+  "ratelimits": [{ "name": "GENERATION_LIMITER", "namespace_id": "284731", "simple": { "limit": 3, "period": 60 } }],
+  "observability": { "enabled": true, "head_sampling_rate": 1 }
+}

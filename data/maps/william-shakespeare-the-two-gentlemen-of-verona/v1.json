@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/the-two-gentlemen-of-verona",
+  "metadata": {
+    "title": "The Two Gentlemen of Verona",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1594"
+  },
+  "inputHash": "2ea83a926bfca5f0785a657ff725e46f484f96aa3ca5ce7daef6145efa7efd21",
+  "promptHash": "159123683d055f9e90fc91ff5b4813d1c722802ec5243323faabfaa71451c240",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:03.069Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:03.069Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Valentine\"]\nC2[\"Proteus\"]\nC3[\"Julia\"]\nC4[\"Silvia\"]\nC5[\"Duke of Milan\"]\nC6[\"Antonio\"]\nC7[\"Thurio\"]\nC8[\"Launce\"]\nC1 -->|Friend of| C2\nC2 -->|Betrays| C1\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC2 -->|Pursues| C4\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Parent of| C4\nC5 -->|Commands| C7\nC7 -->|Wants to marry| C4\nC6 -->|Parent of| C2\nC8 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 176,
+        "total_tokens": 1736,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:04.421Z",
+      "finishedAt": "2026-09-10T18:16:04.421Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Valentine\"]\nC2[\"Proteus\"]\nC3[\"Julia\"]\nC4[\"Silvia\"]\nC5[\"Duke of Milan\"]\nC6[\"Antonio\"]\nC7[\"Thurio\"]\nC8[\"Launce\"]\nC1 -->|Friend of| C2\nC2 -->|Betrays| C1\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC2 -->|Pursues| C4\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Parent of| C4\nC5 -->|Commands| C7\nC7 -->|Wants to marry| C4\nC6 -->|Parent of| C2\nC8 -->|Serves| C2",
+  "mermaidHash": "564e91594d14c16e440f7f667365147b369bb954572d7809b88be99da585ae03",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "564e91594d14c16e440f7f667365147b369bb954572d7809b88be99da585ae03",
+    "svgHash": "f0bfa1476e9eff3ffda443cb3289e6cc510ba73b0e8ee3bd1504981055bd2eeb",
+    "validatedAt": "2026-09-10T18:16:05.781Z",
+    "width": 657.758544921875,
+    "height": 463.25
+  },
+  "generatedAt": "2026-09-10T18:16:04.421Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 176,
+    "total_tokens": 1736,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

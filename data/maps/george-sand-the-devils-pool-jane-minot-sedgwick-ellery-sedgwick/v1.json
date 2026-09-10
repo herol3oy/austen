@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-sand/the-devils-pool/jane-minot-sedgwick_ellery-sedgwick",
+  "metadata": {
+    "title": "The Devil’s Pool",
+    "authors": [
+      "George Sand"
+    ],
+    "year": "1846"
+  },
+  "inputHash": "1ca3a4aa30dd6d0b20759dd00a22c686bcc07ffde8dc5cd2b6f650577466e6d5",
+  "promptHash": "c7ebac085612d6acb90eed273edda0ee897e846299034ecddc3ee7b7b0ea1576",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:48.102Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:48.102Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Germain\"]\nC2[\"Marie\"]\nC3[\"Petit Pierre\"]\nC4[\"Père Maurice\"]\nC5[\"Mère Maurice\"]\nC6[\"Catherine\"]\nC7[\"Thérèse\"]\nC8[\"Fadette\"]\nC1 -->|Son of| C4\nC1 -->|Son of| C5\nC1 -->|Widower of| C6\nC1 -->|Father of| C3\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Cares for| C3\nC7 -->|Mother of| C2\nC8 -->|Sister of| C2\nC8 -->|Rival of| C2\nC8 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 169,
+        "total_tokens": 1727,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:49.367Z",
+      "finishedAt": "2026-09-10T17:40:49.367Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Germain\"]\nC2[\"Marie\"]\nC3[\"Petit Pierre\"]\nC4[\"Père Maurice\"]\nC5[\"Mère Maurice\"]\nC6[\"Catherine\"]\nC7[\"Thérèse\"]\nC8[\"Fadette\"]\nC1 -->|Son of| C4\nC1 -->|Son of| C5\nC1 -->|Widower of| C6\nC1 -->|Father of| C3\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Cares for| C3\nC7 -->|Mother of| C2\nC8 -->|Sister of| C2\nC8 -->|Rival of| C2\nC8 -->|Loves| C1",
+  "mermaidHash": "a6c6e2622e59398671061b6e34d9361c7d97929486f2c340366a78b61eb2b3c7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a6c6e2622e59398671061b6e34d9361c7d97929486f2c340366a78b61eb2b3c7",
+    "svgHash": "59b1e0188692d8a8fb5cb84f3c92f0ad6e88f221b2952cc14ad3fb1b6e7e9ae7",
+    "validatedAt": "2026-09-10T17:40:50.749Z",
+    "width": 862.272705078125,
+    "height": 514.5
+  },
+  "generatedAt": "2026-09-10T17:40:49.367Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 169,
+    "total_tokens": 1727,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "louisa-may-alcott/behind-a-mask",
+  "metadata": {
+    "title": "Behind a Mask",
+    "authors": [
+      "Louisa May Alcott"
+    ],
+    "year": "1866"
+  },
+  "inputHash": "b04b1fc0ff5b54ea9cdc7c6a069a6e7f5890b92d41bd4df51a5faef6b95c9d46",
+  "promptHash": "304d4e3fe7d63626c03b6572c12d8073155addb8d9339a64bb274fdaff4e8184",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:02.751Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:02.751Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jean Muir\"]\nC2[\"Sir John Coventry\"]\nC3[\"Gerald Coventry\"]\nC4[\"Edward Coventry\"]\nC5[\"Lucia Coventry\"]\nC6[\"Bella Coventry\"]\nC7[\"Lady Coventry\"]\nC1 -->|Governess of| C6\nC1 -->|Engaged to| C3\nC1 -->|Manipulates| C2\nC1 -->|Manipulates| C4\nC1 -->|Manipulates| C5\nC2 -->|Father of| C3\nC2 -->|Father of| C4\nC2 -->|Father of| C5\nC2 -->|Father of| C6\nC2 -->|Married to| C7\nC3 -->|Brother of| C4\nC3 -->|Brother of| C5\nC3 -->|Brother of| C6\nC4 -->|Brother of| C5\nC4 -->|Brother of| C6\nC5 -->|Sister of| C6\nC4 -->|Loves| C5\nC1 -->|Betrays| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 241,
+        "total_tokens": 1800,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:04.287Z",
+      "finishedAt": "2026-09-10T17:51:04.288Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jean Muir\"]\nC2[\"Sir John Coventry\"]\nC3[\"Gerald Coventry\"]\nC4[\"Edward Coventry\"]\nC5[\"Lucia Coventry\"]\nC6[\"Bella Coventry\"]\nC7[\"Lady Coventry\"]\nC1 -->|Governess of| C6\nC1 -->|Engaged to| C3\nC1 -->|Manipulates| C2\nC1 -->|Manipulates| C4\nC1 -->|Manipulates| C5\nC2 -->|Father of| C3\nC2 -->|Father of| C4\nC2 -->|Father of| C5\nC2 -->|Father of| C6\nC2 -->|Married to| C7\nC3 -->|Brother of| C4\nC3 -->|Brother of| C5\nC3 -->|Brother of| C6\nC4 -->|Brother of| C5\nC4 -->|Brother of| C6\nC5 -->|Sister of| C6\nC4 -->|Loves| C5\nC1 -->|Betrays| C3",
+  "mermaidHash": "d3db8b9cdba85b5abbe201376fc33966a68bca05794a58ed5907d9cbe7aeb7e8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d3db8b9cdba85b5abbe201376fc33966a68bca05794a58ed5907d9cbe7aeb7e8",
+    "svgHash": "4aa0320b3f272f0863ecd46ede008c76fd8096387ab02e037499cde98ad8eaa3",
+    "validatedAt": "2026-09-10T17:51:05.684Z",
+    "width": 1610.0380859375,
+    "height": 616.3583374023438
+  },
+  "generatedAt": "2026-09-10T17:51:04.287Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 241,
+    "total_tokens": 1800,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

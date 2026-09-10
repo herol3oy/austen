@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "earl-derr-biggers/the-chinese-parrot",
+  "metadata": {
+    "title": "The Chinese Parrot",
+    "authors": [
+      "Earl Derr Biggers"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "38a99fcd2233e98c2e25bfcde88096ed7cdf2dbefda0f5aac9dbea8c6dc5209f",
+  "promptHash": "6bd8066a0fbb180854e93f55c8fe199c2e0fd8b35efa4d777849c3bb9e4d075a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:49.563Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:49.563Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Charlie Chan\"]\nC2[\"Bob Eden\"]\nC3[\"Sally Jordan\"]\nC4[\"P.J. Madden\"]\nC5[\"Alexander Eden\"]\nC6[\"Will Holley\"]\nC7[\"Ah Kim\"]\nC8[\"Louie Wong\"]\nC1 -->|Investigates for| C5\nC1 -->|Protects| C3\nC2 -->|Friend of| C1\nC2 -->|Loves| C3\nC3 -->|Daughter of| C4\nC4 -->|Employer of| C1\nC5 -->|Father of| C2\nC5 -->|Friend of| C4\nC6 -->|Friend of| C2\nC7 -->|Servant of| C4\nC8 -->|Servant of| C4\nC7 -->|Kills| C8\nC7 -->|Impersonates| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 192,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:50.788Z",
+      "finishedAt": "2026-09-10T17:33:50.788Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Charlie Chan\"]\nC2[\"Bob Eden\"]\nC3[\"Sally Jordan\"]\nC4[\"P.J. Madden\"]\nC5[\"Alexander Eden\"]\nC6[\"Will Holley\"]\nC7[\"Ah Kim\"]\nC8[\"Louie Wong\"]\nC1 -->|Investigates for| C5\nC1 -->|Protects| C3\nC2 -->|Friend of| C1\nC2 -->|Loves| C3\nC3 -->|Daughter of| C4\nC4 -->|Employer of| C1\nC5 -->|Father of| C2\nC5 -->|Friend of| C4\nC6 -->|Friend of| C2\nC7 -->|Servant of| C4\nC8 -->|Servant of| C4\nC7 -->|Kills| C8\nC7 -->|Impersonates| C8",
+  "mermaidHash": "be00d4d945e940c4ae4b81b5f98db5c74882c02b5fcdfaf7081bb05ef3e7d629",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "be00d4d945e940c4ae4b81b5f98db5c74882c02b5fcdfaf7081bb05ef3e7d629",
+    "svgHash": "481ee45693b13b49ec819e90d8f6191a8da8137b40e378180727d5965fa8dcb3",
+    "validatedAt": "2026-09-10T17:33:52.195Z",
+    "width": 1271.7764892578125,
+    "height": 498.5
+  },
+  "generatedAt": "2026-09-10T17:33:50.788Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 192,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

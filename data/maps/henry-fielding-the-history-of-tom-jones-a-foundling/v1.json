@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-fielding/the-history-of-tom-jones-a-foundling",
+  "metadata": {
+    "title": "The History of Tom Jones, a Foundling",
+    "authors": [
+      "Henry Fielding"
+    ],
+    "year": "1749"
+  },
+  "inputHash": "b6ef0bf3961a9ed96d66ef832f90484598a2910c0dad7fd129732b786a7a940d",
+  "promptHash": "cd47c2050a5bfa0b78fcdf6b12434485fa3ad114e89e7fd2b5ddf7a65b53269f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:00.812Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:00.812Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tom Jones\"]\nC2[\"Sophia Western\"]\nC3[\"Squire Allworthy\"]\nC4[\"Master Blifil\"]\nC5[\"Squire Western\"]\nC6[\"Molly Seagrim\"]\nC7[\"Lady Bellaston\"]\nC8[\"Partridge\"]\nC3 -->|Adoptive father of| C1\nC3 -->|Uncle of| C4\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC5 -->|Father of| C2\nC5 -->|Opposes marriage of| C2\nC4 -->|Rival of| C1\nC4 -->|Betrays| C1\nC1 -->|Lover of| C6\nC7 -->|Pursues| C1\nC8 -->|Servant of| C1\nC1 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 190,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:02.492Z",
+      "finishedAt": "2026-09-10T17:43:02.492Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tom Jones\"]\nC2[\"Sophia Western\"]\nC3[\"Squire Allworthy\"]\nC4[\"Master Blifil\"]\nC5[\"Squire Western\"]\nC6[\"Molly Seagrim\"]\nC7[\"Lady Bellaston\"]\nC8[\"Partridge\"]\nC3 -->|Adoptive father of| C1\nC3 -->|Uncle of| C4\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC5 -->|Father of| C2\nC5 -->|Opposes marriage of| C2\nC4 -->|Rival of| C1\nC4 -->|Betrays| C1\nC1 -->|Lover of| C6\nC7 -->|Pursues| C1\nC8 -->|Servant of| C1\nC1 -->|Friend of| C8",
+  "mermaidHash": "e21fd0539244636a902f8c7a41064c62947ca5d57e3d7a40915a07a407bd9fe1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e21fd0539244636a902f8c7a41064c62947ca5d57e3d7a40915a07a407bd9fe1",
+    "svgHash": "d1f6fd9ffb17e1dbf89aaf1c2a05941dfc51c3bf4fd47598ac66cc8356701cf3",
+    "validatedAt": "2026-09-10T17:43:03.793Z",
+    "width": 1074.4776611328125,
+    "height": 327.5
+  },
+  "generatedAt": "2026-09-10T17:43:02.492Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 190,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

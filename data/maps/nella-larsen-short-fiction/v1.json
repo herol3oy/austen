@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nella-larsen/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Nella Larsen"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "d20eb6fd2dc98cb1db0dc14270272def44768f40acc106be6c11c3cb17cea4ae",
+  "promptHash": "79bd4967900282a07a3a45ae417cbf6f7192f8828e9aeff938708e734aa849ad",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:37.895Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:37.895Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 2,
+        "total_tokens": 1558,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 148
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:38.532Z",
+      "finishedAt": "2026-09-10T18:04:38.532Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:04:38.532Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 2,
+    "total_tokens": 1558,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 148
+  }
+}

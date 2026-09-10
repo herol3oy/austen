@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "james-de-mille/a-strange-manuscript-found-in-a-copper-cylinder",
+  "metadata": {
+    "title": "A Strange Manuscript Found in a Copper Cylinder",
+    "authors": [
+      "James De Mille"
+    ],
+    "year": "1888"
+  },
+  "inputHash": "3707e7bc66769e8c0c6cfccf377d351497f7e49c5a107ccc6c89e2b3193f2af8",
+  "promptHash": "2aefed9d6b5680fac1eb517e1c390871e9819249c4cd9e0461a5efd65b50a5db",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:58.209Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:58.210Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:58.925Z",
+      "finishedAt": "2026-09-10T17:45:58.925Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:45:58.925Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

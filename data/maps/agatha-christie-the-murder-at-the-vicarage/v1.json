@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "agatha-christie/the-murder-at-the-vicarage",
+  "metadata": {
+    "title": "The Murder at the Vicarage",
+    "authors": [
+      "Agatha Christie"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "c03df95999d455c2c696adabf9c9d6d8b898cae01033bba8fa36535881bef0db",
+  "promptHash": "d18ad7523943f4de59125fd468855ae4ab56b7983322a7b1775cb8cfb35ae962",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:06.756Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:06.756Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Miss Marple\"]\nC2[\"Colonel Protheroe\"]\nC3[\"Griselda Clement\"]\nC4[\"Leonard Clement\"]\nC5[\"Anne Protheroe\"]\nC6[\"Lawrence Redding\"]\nC7[\"Inspector Slack\"]\nC8[\"Raymond West\"]\nC4 -->|Married to| C3\nC2 -->|Married to| C5\nC5 -->|Loves| C6\nC6 -->|Loves| C5\nC6 -->|Kills| C2\nC5 -->|Kills| C2\nC4 -->|Friend of| C6\nC7 -->|Investigates| C2\nC1 -->|Solves murder of| C2\nC8 -->|Nephew of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 169,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:08.128Z",
+      "finishedAt": "2026-09-10T17:24:08.128Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Miss Marple\"]\nC2[\"Colonel Protheroe\"]\nC3[\"Griselda Clement\"]\nC4[\"Leonard Clement\"]\nC5[\"Anne Protheroe\"]\nC6[\"Lawrence Redding\"]\nC7[\"Inspector Slack\"]\nC8[\"Raymond West\"]\nC4 -->|Married to| C3\nC2 -->|Married to| C5\nC5 -->|Loves| C6\nC6 -->|Loves| C5\nC6 -->|Kills| C2\nC5 -->|Kills| C2\nC4 -->|Friend of| C6\nC7 -->|Investigates| C2\nC1 -->|Solves murder of| C2\nC8 -->|Nephew of| C1",
+  "mermaidHash": "ddee6a8be109743703471085c13ad8e3d26d397ad619b0735f95778a11d1ae0a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ddee6a8be109743703471085c13ad8e3d26d397ad619b0735f95778a11d1ae0a",
+    "svgHash": "869b884824e9fe7283ab9f10ace0e792cf93401b24f387ce6e883743f61a0ed0",
+    "validatedAt": "2026-09-10T17:24:09.508Z",
+    "width": 1408.3094482421875,
+    "height": 286.25
+  },
+  "generatedAt": "2026-09-10T17:24:08.128Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 169,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

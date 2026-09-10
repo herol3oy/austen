@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "epictetus/short-works/george-long",
+  "metadata": {
+    "title": "Short Works",
+    "authors": [
+      "Epictetus"
+    ],
+    "year": "1877"
+  },
+  "inputHash": "b234c0a34d4686b6d1ccc8acef49170bf48da6c8ed9ecfbecefb5a8c4fd2adcb",
+  "promptHash": "d620dc85c06a04ce4d038d65c8c5a6cbd74ea8e13f894ace352c643ca82a34df",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:28.761Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:28.761Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 2,
+        "total_tokens": 1558,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:30.087Z",
+      "finishedAt": "2026-09-10T17:36:30.087Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:36:30.087Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 2,
+    "total_tokens": 1558,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "poul-anderson/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Poul Anderson"
+    ],
+    "year": "1951–1963"
+  },
+  "inputHash": "119b9e53868ea04b8bae03a22a376b532e5d151fee476f69f27d16110b431d6b",
+  "promptHash": "7ac8b47f1672a1bd0b29ab3de36de752a98f6c63bd5e8dea5100252b201df158",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:39.773Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:39.773Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 151
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:40.563Z",
+      "finishedAt": "2026-09-10T18:06:40.563Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:06:40.563Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 151
+  }
+}

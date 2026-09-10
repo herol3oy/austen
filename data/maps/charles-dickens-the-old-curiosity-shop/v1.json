@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/the-old-curiosity-shop",
+  "metadata": {
+    "title": "The Old Curiosity Shop",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1841"
+  },
+  "inputHash": "8285b1504aebeb8b54683ce349dcb5a61bd07805fd9205f00808aa6429094ad3",
+  "promptHash": "1c7139ba481e0033862d093cbf2a0521e42785a8dd68245795cb16ee3cbd3d6c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:29.224Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:29.224Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nell Trent\"]\nC2[\"Daniel Quilp\"]\nC3[\"Grandfather Trent\"]\nC4[\"Kit Nubbles\"]\nC5[\"Frederick Trent\"]\nC6[\"Richard Swiveller\"]\nC7[\"Sampson Brass\"]\nC8[\"Sally Brass\"]\nC1 -->|Granddaughter of| C3\nC3 -->|Guardian of| C1\nC2 -->|Torments| C3\nC2 -->|Persecutes| C1\nC2 -->|Employs| C7\nC2 -->|Employs| C8\nC4 -->|Friend of| C1\nC4 -->|Serves| C3\nC5 -->|Brother of| C3\nC5 -->|Seeks to marry| C1\nC6 -->|Friend of| C4\nC6 -->|Works for| C7\nC7 -->|Serves| C2\nC8 -->|Sister of| C7\nC8 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 220,
+        "total_tokens": 1777,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:31.069Z",
+      "finishedAt": "2026-09-10T17:30:31.069Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nell Trent\"]\nC2[\"Daniel Quilp\"]\nC3[\"Grandfather Trent\"]\nC4[\"Kit Nubbles\"]\nC5[\"Frederick Trent\"]\nC6[\"Richard Swiveller\"]\nC7[\"Sampson Brass\"]\nC8[\"Sally Brass\"]\nC1 -->|Granddaughter of| C3\nC3 -->|Guardian of| C1\nC2 -->|Torments| C3\nC2 -->|Persecutes| C1\nC2 -->|Employs| C7\nC2 -->|Employs| C8\nC4 -->|Friend of| C1\nC4 -->|Serves| C3\nC5 -->|Brother of| C3\nC5 -->|Seeks to marry| C1\nC6 -->|Friend of| C4\nC6 -->|Works for| C7\nC7 -->|Serves| C2\nC8 -->|Sister of| C7\nC8 -->|Serves| C2",
+  "mermaidHash": "8f892a2a2bea2c539914609c3c3193021a208bf868b139230be593778ab50901",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8f892a2a2bea2c539914609c3c3193021a208bf868b139230be593778ab50901",
+    "svgHash": "73bb65d42ff59ff6106ef70dc40dfb6e095e2a2e0f3fcc375b00192e5b41ebf0",
+    "validatedAt": "2026-09-10T17:30:32.389Z",
+    "width": 1095.708251953125,
+    "height": 558.5
+  },
+  "generatedAt": "2026-09-10T17:30:31.069Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 220,
+    "total_tokens": 1777,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

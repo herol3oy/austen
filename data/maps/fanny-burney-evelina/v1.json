@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fanny-burney/evelina",
+  "metadata": {
+    "title": "Evelina",
+    "authors": [
+      "Fanny Burney"
+    ],
+    "year": "1778"
+  },
+  "inputHash": "c47f5a3818d15204f9d8aa5ee6fb06df66bc68b1fcc2e1bf5f33a7aacbbcce42",
+  "promptHash": "f25a7ac2a47aa4f2a5bed9992cb7dbaee84e5625ff31162e2f6299fbff437062",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:06.941Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:06.941Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Evelina Anville\"]\nC2[\"Sir John Belmont\"]\nC3[\"Lady Belmont\"]\nC4[\"Mr Villars\"]\nC5[\"Lord Orville\"]\nC6[\"Sir Clement Willoughby\"]\nC7[\"Madame Duval\"]\nC8[\"Captain Mirvan\"]\nC1 -->|Daughter of| C2\nC1 -->|Daughter of| C3\nC4 -->|Guardian of| C1\nC1 -->|Loves| C5\nC5 -->|Loves| C1\nC6 -->|Pursues| C1\nC7 -->|Grandmother of| C1\nC8 -->|Friend of| C4\nC8 -->|Enemy of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 158,
+        "total_tokens": 1716,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:08.690Z",
+      "finishedAt": "2026-09-10T17:37:08.690Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Evelina Anville\"]\nC2[\"Sir John Belmont\"]\nC3[\"Lady Belmont\"]\nC4[\"Mr Villars\"]\nC5[\"Lord Orville\"]\nC6[\"Sir Clement Willoughby\"]\nC7[\"Madame Duval\"]\nC8[\"Captain Mirvan\"]\nC1 -->|Daughter of| C2\nC1 -->|Daughter of| C3\nC4 -->|Guardian of| C1\nC1 -->|Loves| C5\nC5 -->|Loves| C1\nC6 -->|Pursues| C1\nC7 -->|Grandmother of| C1\nC8 -->|Friend of| C4\nC8 -->|Enemy of| C7",
+  "mermaidHash": "f29b0836a0ecc5be9dab691c155e4c1c2f902fdb7842d74006b839570711beb4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f29b0836a0ecc5be9dab691c155e4c1c2f902fdb7842d74006b839570711beb4",
+    "svgHash": "c220874de382e3d04245ae62de55eeb101cba25f0be5441c05a241259a2aedf1",
+    "validatedAt": "2026-09-10T17:37:10.038Z",
+    "width": 1126.8192138671875,
+    "height": 263
+  },
+  "generatedAt": "2026-09-10T17:37:08.690Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 158,
+    "total_tokens": 1716,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anne-bronte/the-tenant-of-wildfell-hall",
+  "metadata": {
+    "title": "The Tenant of Wildfell Hall",
+    "authors": [
+      "Anne Brontë"
+    ],
+    "year": "1848"
+  },
+  "inputHash": "f192bcab0427ec83c741b4b7b2e8786e4197348539170a9b913b4dbb68f9e6e5",
+  "promptHash": "e6764137604c4d046d0e066f56d2f64c295edf6fd3d275a913b84c6e41c554a2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:56.553Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:56.553Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Gilbert Markham\"]\nC2[\"Helen Graham\"]\nC3[\"Arthur Huntingdon\"]\nC4[\"Frederick Lawrence\"]\nC5[\"Annabella Wilmot\"]\nC6[\"Millicent Hargrave\"]\nC7[\"Mr. Lawrence\"]\nC8[\"Rachel\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C3\nC3 -->|Betrays| C2\nC3 -->|Loves| C5\nC5 -->|Betrays| C3\nC2 -->|Sister of| C4\nC4 -->|Brother of| C2\nC1 -->|Friend of| C4\nC6 -->|Friend of| C2\nC7 -->|Father of| C4\nC7 -->|Father of| C2\nC8 -->|Serves| C2\nC3 -->|Friend of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 194,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:58.002Z",
+      "finishedAt": "2026-09-10T17:25:58.002Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Gilbert Markham\"]\nC2[\"Helen Graham\"]\nC3[\"Arthur Huntingdon\"]\nC4[\"Frederick Lawrence\"]\nC5[\"Annabella Wilmot\"]\nC6[\"Millicent Hargrave\"]\nC7[\"Mr. Lawrence\"]\nC8[\"Rachel\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C3\nC3 -->|Betrays| C2\nC3 -->|Loves| C5\nC5 -->|Betrays| C3\nC2 -->|Sister of| C4\nC4 -->|Brother of| C2\nC1 -->|Friend of| C4\nC6 -->|Friend of| C2\nC7 -->|Father of| C4\nC7 -->|Father of| C2\nC8 -->|Serves| C2\nC3 -->|Friend of| C5",
+  "mermaidHash": "5209f6532a68ac6be60fc0ef06de204ea2baa95fa2ee760e0c667f2976f8ce10",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5209f6532a68ac6be60fc0ef06de204ea2baa95fa2ee760e0c667f2976f8ce10",
+    "svgHash": "b5bc029c7c985b489c2623a31a306b7cc1df8df959b532b46ee9dbfa079e7687",
+    "validatedAt": "2026-09-10T17:25:59.464Z",
+    "width": 1066.8333740234375,
+    "height": 380.89617919921875
+  },
+  "generatedAt": "2026-09-10T17:25:58.002Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 194,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

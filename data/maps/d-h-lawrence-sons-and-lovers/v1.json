@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "d-h-lawrence/sons-and-lovers",
+  "metadata": {
+    "title": "Sons and Lovers",
+    "authors": [
+      "D. H. Lawrence"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "bde26a395c3a126e28509309013f08274a40e5e860dbb1ef9ceb0f25db126d04",
+  "promptHash": "1abf8886e1adf5466a3181a76d1006c6c9769290680c33e1f16e805a0305ae19",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:29.507Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:29.507Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Paul Morel\"]\nC2[\"Gertrude Morel\"]\nC3[\"Walter Morel\"]\nC4[\"William Morel\"]\nC5[\"Miriam Leivers\"]\nC6[\"Clara Dawes\"]\nC7[\"Baxter Dawes\"]\nC8[\"Annie Morel\"]\nC2 -->|Married to| C3\nC2 -->|Parent of| C1\nC2 -->|Parent of| C4\nC2 -->|Parent of| C8\nC3 -->|Parent of| C1\nC3 -->|Parent of| C4\nC3 -->|Parent of| C8\nC1 -->|Sibling of| C4\nC1 -->|Sibling of| C8\nC1 -->|Loves| C5\nC1 -->|Loves| C6\nC6 -->|Married to| C7\nC1 -->|Friend of| C7\nC7 -->|Rival of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 210,
+        "total_tokens": 1771,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:31.011Z",
+      "finishedAt": "2026-09-10T17:31:31.011Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Paul Morel\"]\nC2[\"Gertrude Morel\"]\nC3[\"Walter Morel\"]\nC4[\"William Morel\"]\nC5[\"Miriam Leivers\"]\nC6[\"Clara Dawes\"]\nC7[\"Baxter Dawes\"]\nC8[\"Annie Morel\"]\nC2 -->|Married to| C3\nC2 -->|Parent of| C1\nC2 -->|Parent of| C4\nC2 -->|Parent of| C8\nC3 -->|Parent of| C1\nC3 -->|Parent of| C4\nC3 -->|Parent of| C8\nC1 -->|Sibling of| C4\nC1 -->|Sibling of| C8\nC1 -->|Loves| C5\nC1 -->|Loves| C6\nC6 -->|Married to| C7\nC1 -->|Friend of| C7\nC7 -->|Rival of| C1",
+  "mermaidHash": "05a9fc9f4eb4d03d399bd87f4577d95017d01a47fc7016c0d423c2d4e302d5bb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "05a9fc9f4eb4d03d399bd87f4577d95017d01a47fc7016c0d423c2d4e302d5bb",
+    "svgHash": "15af0e4bdf69bafb9245e8f20612b1abc224b208379a6bd9eded688e8f0a9db9",
+    "validatedAt": "2026-09-10T17:31:32.405Z",
+    "width": 1239.420166015625,
+    "height": 562
+  },
+  "generatedAt": "2026-09-10T17:31:31.011Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 210,
+    "total_tokens": 1771,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

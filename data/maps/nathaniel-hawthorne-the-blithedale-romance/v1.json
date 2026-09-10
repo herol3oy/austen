@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nathaniel-hawthorne/the-blithedale-romance",
+  "metadata": {
+    "title": "The Blithedale Romance",
+    "authors": [
+      "Nathaniel Hawthorne"
+    ],
+    "year": "1852"
+  },
+  "inputHash": "62fc8df55d5b0e003e07c2d41408c80eca6a9e6bce9399911a2d6d99becf9f74",
+  "promptHash": "49c85d8db6a6b4d7ebd3211661fc71ed3b82bb189471bffb89f531bee214dda5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:25.023Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:25.023Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Miles Coverdale\"]\nC2[\"Zenobia\"]\nC3[\"Priscilla\"]\nC4[\"Hollingsworth\"]\nC5[\"Old Moodie\"]\nC6[\"Westervelt\"]\nC1 -->|Narrates about| C2\nC1 -->|Narrates about| C3\nC1 -->|Narrates about| C4\nC1 -->|Friend of| C4\nC2 -->|Loves| C4\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC2 -->|Rival of| C3\nC2 -->|Sister of| C3\nC5 -->|Father of| C2\nC5 -->|Father of| C3\nC6 -->|Former husband of| C2\nC6 -->|Manipulates| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 186,
+        "total_tokens": 1746,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:26.346Z",
+      "finishedAt": "2026-09-10T18:04:26.346Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Miles Coverdale\"]\nC2[\"Zenobia\"]\nC3[\"Priscilla\"]\nC4[\"Hollingsworth\"]\nC5[\"Old Moodie\"]\nC6[\"Westervelt\"]\nC1 -->|Narrates about| C2\nC1 -->|Narrates about| C3\nC1 -->|Narrates about| C4\nC1 -->|Friend of| C4\nC2 -->|Loves| C4\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC2 -->|Rival of| C3\nC2 -->|Sister of| C3\nC5 -->|Father of| C2\nC5 -->|Father of| C3\nC6 -->|Former husband of| C2\nC6 -->|Manipulates| C3",
+  "mermaidHash": "450a0a7ac2cf1f6f19622a5ecbc7171d08efeff1cdb993282f315181f5ddaf69",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "450a0a7ac2cf1f6f19622a5ecbc7171d08efeff1cdb993282f315181f5ddaf69",
+    "svgHash": "704a56b8721c3c2fdc58b3b18a4abb62649f10bd5c2aaf916099b8d9cf6de761",
+    "validatedAt": "2026-09-10T18:04:27.838Z",
+    "width": 982.4232177734375,
+    "height": 399.5
+  },
+  "generatedAt": "2026-09-10T18:04:26.346Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 186,
+    "total_tokens": 1746,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

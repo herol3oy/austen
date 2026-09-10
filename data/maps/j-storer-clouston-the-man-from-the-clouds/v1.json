@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "j-storer-clouston/the-man-from-the-clouds",
+  "metadata": {
+    "title": "The Man from the Clouds",
+    "authors": [
+      "J. Storer Clouston"
+    ],
+    "year": "1918"
+  },
+  "inputHash": "5b475bc5835441d2823636cee999e4afd66ed0f4ef3c4239ebbf8878ff77dde0",
+  "promptHash": "8f6dc1f02941767338c52b42317a3a00059586df5ad4f54ead47afbe45dff6ed",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:26.775Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:26.775Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:27.898Z",
+      "finishedAt": "2026-09-10T17:45:27.898Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:45:27.898Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

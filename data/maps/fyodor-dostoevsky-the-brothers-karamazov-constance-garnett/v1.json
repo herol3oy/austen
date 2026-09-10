@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fyodor-dostoevsky/the-brothers-karamazov/constance-garnett",
+  "metadata": {
+    "title": "The Brothers Karamazov",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "year": "1880"
+  },
+  "inputHash": "f2031ed6157f3378ef28bf5b051309e0fc5369ea614584a687fb5381819876ec",
+  "promptHash": "88f0149117830007194ccd9fc86d0ddc1d0d9d961a9c8ffdbb90717e4eb15862",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:44.245Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:44.245Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Fyodor Pavlovich Karamazov\"]\nC2[\"Dmitri Karamazov\"]\nC3[\"Ivan Karamazov\"]\nC4[\"Alexei Karamazov\"]\nC5[\"Pavel Smerdyakov\"]\nC6[\"Grushenka\"]\nC7[\"Katerina Ivanovna\"]\nC8[\"Zosima\"]\nC1 -->|Father of| C2\nC1 -->|Father of| C3\nC1 -->|Father of| C4\nC1 -->|Father of| C5\nC2 -->|Engaged to| C7\nC2 -->|Loves| C6\nC3 -->|Loves| C7\nC4 -->|Disciple of| C8\nC5 -->|Kills| C1\nC5 -->|Betrays| C3\nC6 -->|Loves| C4\nC7 -->|Loves| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 204,
+        "total_tokens": 1768,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:45.780Z",
+      "finishedAt": "2026-09-10T17:38:45.780Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Fyodor Pavlovich Karamazov\"]\nC2[\"Dmitri Karamazov\"]\nC3[\"Ivan Karamazov\"]\nC4[\"Alexei Karamazov\"]\nC5[\"Pavel Smerdyakov\"]\nC6[\"Grushenka\"]\nC7[\"Katerina Ivanovna\"]\nC8[\"Zosima\"]\nC1 -->|Father of| C2\nC1 -->|Father of| C3\nC1 -->|Father of| C4\nC1 -->|Father of| C5\nC2 -->|Engaged to| C7\nC2 -->|Loves| C6\nC3 -->|Loves| C7\nC4 -->|Disciple of| C8\nC5 -->|Kills| C1\nC5 -->|Betrays| C3\nC6 -->|Loves| C4\nC7 -->|Loves| C3",
+  "mermaidHash": "962d8e348aa76182cc613bc4b5f5a38170f57a6d2c1e7f6caea76a4a7103e31e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "962d8e348aa76182cc613bc4b5f5a38170f57a6d2c1e7f6caea76a4a7103e31e",
+    "svgHash": "939f0ed7ae822b16bc9494b8e03b7b6b971682dbcf595245319cd9c22b2be189",
+    "validatedAt": "2026-09-10T17:38:47.131Z",
+    "width": 1365.4532470703125,
+    "height": 344.5
+  },
+  "generatedAt": "2026-09-10T17:38:45.780Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 204,
+    "total_tokens": 1768,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

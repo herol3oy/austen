@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "id": "jane-austen/pride-and-prejudice",
+      "workId": "jane-austen/pride-and-prejudice",
+      "decision": "approved",
+      "form": "novel",
+      "reason": "Individual novel selected for the five-book pilot; map publication requires separate editorial review."
+    },
+    {
+      "id": "charlotte-bronte/jane-eyre",
+      "workId": "charlotte-bronte/jane-eyre",
+      "decision": "approved",
+      "form": "novel",
+      "reason": "Individual novel selected for the five-book pilot; map publication requires separate editorial review."
+    },
+    {
+      "id": "charles-dickens/great-expectations",
+      "workId": "charles-dickens/great-expectations",
+      "decision": "approved",
+      "form": "novel",
+      "reason": "Individual novel selected for the five-book pilot; map publication requires separate editorial review."
+    },
+    {
+      "id": "bram-stoker/dracula",
+      "workId": "bram-stoker/dracula",
+      "decision": "approved",
+      "form": "novel",
+      "reason": "Individual novel selected for the five-book pilot; map publication requires separate editorial review."
+    },
+    {
+      "id": "f-scott-fitzgerald/the-great-gatsby",
+      "workId": "f-scott-fitzgerald/the-great-gatsby",
+      "decision": "approved",
+      "form": "novel",
+      "reason": "Individual novel selected for the five-book pilot; map publication requires separate editorial review."
+    }
+  ]
+}

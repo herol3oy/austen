@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "claude-mckay/home-to-harlem",
+  "metadata": {
+    "title": "Home to Harlem",
+    "authors": [
+      "Claude McKay"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "b59f83db675183a7818599c7a881e77600540cd49bac6fa8bb1c01d73159cf76",
+  "promptHash": "6a02e90dec58f9cd0a7149a6055b512e123400331706e0ba7eaea2d1443541b6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:19.436Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:19.436Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jake Brown\"]\nC2[\"Felice\"]\nC3[\"Ray\"]\nC4[\"Zeddy\"]\nC5[\"Rose\"]\nC6[\"Madame Laura\"]\nC7[\"Grant\"]\nC8[\"Cocktail\"]\nC1 -->|Loves| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Serves| C7\nC2 -->|Loves| C1\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC4 -->|Loves| C1\nC5 -->|Friend of| C1\nC6 -->|Employer of| C2\nC7 -->|Commands| C1\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 171,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:20.975Z",
+      "finishedAt": "2026-09-10T17:31:20.975Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jake Brown\"]\nC2[\"Felice\"]\nC3[\"Ray\"]\nC4[\"Zeddy\"]\nC5[\"Rose\"]\nC6[\"Madame Laura\"]\nC7[\"Grant\"]\nC8[\"Cocktail\"]\nC1 -->|Loves| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Serves| C7\nC2 -->|Loves| C1\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC4 -->|Loves| C1\nC5 -->|Friend of| C1\nC6 -->|Employer of| C2\nC7 -->|Commands| C1\nC8 -->|Friend of| C1",
+  "mermaidHash": "fa47105101f50061bd55cda0d9ef03183d2f5471e940bd0d3332fcae2aa26a61",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fa47105101f50061bd55cda0d9ef03183d2f5471e940bd0d3332fcae2aa26a61",
+    "svgHash": "6ee120d5372a7347a4c6820b95fa8eebc12a9dfc2a91f084a9c174ca9d002dfd",
+    "validatedAt": "2026-09-10T17:31:22.373Z",
+    "width": 635.796875,
+    "height": 428.5
+  },
+  "generatedAt": "2026-09-10T17:31:20.975Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 171,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

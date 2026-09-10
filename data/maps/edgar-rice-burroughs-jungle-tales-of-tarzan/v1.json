@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/jungle-tales-of-tarzan",
+  "metadata": {
+    "title": "Jungle Tales of Tarzan",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1919"
+  },
+  "inputHash": "29baf3641b3a7662717736076d0139d2954d034703fd365dcdf1af397937022c",
+  "promptHash": "32e0814681ae0b2417768dab086b6e0047c88a937b2cb7e14b35fbfa71794d17",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:07.585Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:07.585Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Teeka\"]\nC3[\"Taug\"]\nC4[\"Gazal\"]\nC5[\"Mumga\"]\nC6[\"Tantor\"]\nC7[\"Kulonga\"]\nC8[\"Tibo\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Mate of| C2\nC1 -->|Friend of| C6\nC1 -->|Protects| C8\nC5 -->|Mother of| C1\nC7 -->|Enemy of| C1\nC4 -->|Sibling of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 134,
+        "total_tokens": 1698,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:08.929Z",
+      "finishedAt": "2026-09-10T17:34:08.929Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Teeka\"]\nC3[\"Taug\"]\nC4[\"Gazal\"]\nC5[\"Mumga\"]\nC6[\"Tantor\"]\nC7[\"Kulonga\"]\nC8[\"Tibo\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C3\nC3 -->|Mate of| C2\nC1 -->|Friend of| C6\nC1 -->|Protects| C8\nC5 -->|Mother of| C1\nC7 -->|Enemy of| C1\nC4 -->|Sibling of| C2",
+  "mermaidHash": "2e2654ffa35be7cf99abb1b2c5c6f931e9afb231d06feb2bf2d968d2469b35c2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2e2654ffa35be7cf99abb1b2c5c6f931e9afb231d06feb2bf2d968d2469b35c2",
+    "svgHash": "a0e02aa4ebb3e2883e50a5ea1f8653cd8d9a43ba92e7ec263f8168cc3e3e2b23",
+    "validatedAt": "2026-09-10T17:34:10.278Z",
+    "width": 771.2113037109375,
+    "height": 284.5
+  },
+  "generatedAt": "2026-09-10T17:34:08.929Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 134,
+    "total_tokens": 1698,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

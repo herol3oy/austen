@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hughes/tom-browns-school-days",
+  "metadata": {
+    "title": "Tom Brown’s School Days",
+    "authors": [
+      "Thomas Hughes"
+    ],
+    "year": "1857"
+  },
+  "inputHash": "1938579b9b2e62fce2952bd2a6ac0f7105b114ff89a158d093d9d50bd675a37d",
+  "promptHash": "9490636b7fdcec2f4bedf4e31af95114cfc16978f4c830debb1dcb06e2c127ad",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:04.876Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:04.877Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tom Brown\"]\nC2[\"Harry Flashman\"]\nC3[\"George Arthur\"]\nC4[\"East\"]\nC5[\"Dr. Thomas Arnold\"]\nC6[\"Squire Brown\"]\nC7[\"Tom Brown Sr.\"]\nC1 -->|Friend of| C4\nC1 -->|Protects| C3\nC1 -->|Enemy of| C2\nC2 -->|Bullies| C3\nC4 -->|Friend of| C1\nC5 -->|Headmaster of| C1\nC5 -->|Mentor of| C1\nC6 -->|Father of| C1\nC7 -->|Father of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 143,
+        "total_tokens": 1702,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:06.398Z",
+      "finishedAt": "2026-09-10T18:11:06.398Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tom Brown\"]\nC2[\"Harry Flashman\"]\nC3[\"George Arthur\"]\nC4[\"East\"]\nC5[\"Dr. Thomas Arnold\"]\nC6[\"Squire Brown\"]\nC7[\"Tom Brown Sr.\"]\nC1 -->|Friend of| C4\nC1 -->|Protects| C3\nC1 -->|Enemy of| C2\nC2 -->|Bullies| C3\nC4 -->|Friend of| C1\nC5 -->|Headmaster of| C1\nC5 -->|Mentor of| C1\nC6 -->|Father of| C1\nC7 -->|Father of| C6",
+  "mermaidHash": "e912bd19dd0e28e88367f2333b3a5dbfb8adb29d9023e292a510c70e9ec9da53",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e912bd19dd0e28e88367f2333b3a5dbfb8adb29d9023e292a510c70e9ec9da53",
+    "svgHash": "a9133b43bca637fb14a4bd1d0f4d0c59b3c76c3024c859cbaa88c2dc44422894",
+    "validatedAt": "2026-09-10T18:11:07.730Z",
+    "width": 1286.72705078125,
+    "height": 223.75
+  },
+  "generatedAt": "2026-09-10T18:11:06.398Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 143,
+    "total_tokens": 1702,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

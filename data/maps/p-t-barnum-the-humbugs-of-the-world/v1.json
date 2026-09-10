@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-t-barnum/the-humbugs-of-the-world",
+  "metadata": {
+    "title": "The Humbugs of the World",
+    "authors": [
+      "P. T. Barnum"
+    ],
+    "year": "1866"
+  },
+  "inputHash": "f4ed0f4b01a6de090b56f13fd9147010bbc0520b75744911f949d2ec9921a13b",
+  "promptHash": "9877ace470267384c08682e1d44d28522340dbda3362f65fd2b2999bf4ee0fb6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:15.658Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:15.658Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:16.647Z",
+      "finishedAt": "2026-09-10T18:06:16.647Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:06:16.647Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

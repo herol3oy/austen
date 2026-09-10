@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/under-western-eyes",
+  "metadata": {
+    "title": "Under Western Eyes",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "1acd10b6f5c47c438504699c75eda0aed97eb6d295e41234682d8d1cf6ad3e73",
+  "promptHash": "70686bd1583b6865366a50818c70628c672dd76fb1e7eb86d2b13f7864baa864",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:30.074Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:30.074Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Razumov\"]\nC2[\"Victor Haldin\"]\nC3[\"Natalia Haldin\"]\nC4[\"Peter Ivanovitch\"]\nC5[\"Sophia Antonovna\"]\nC6[\"Tekla\"]\nC7[\"Madame de S\"]\nC8[\"Laszlo\"]\nC1 -->|Betrays| C2\nC2 -->|Sister of| C3\nC3 -->|Loves| C1\nC1 -->|Loves| C3\nC4 -->|Mentor of| C3\nC4 -->|Manipulates| C1\nC5 -->|Friend of| C3\nC5 -->|Suspicious of| C1\nC6 -->|Servant of| C4\nC6 -->|Friend of| C3\nC7 -->|Patron of| C4\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 194,
+        "total_tokens": 1750,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:31.810Z",
+      "finishedAt": "2026-09-10T17:48:31.810Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Razumov\"]\nC2[\"Victor Haldin\"]\nC3[\"Natalia Haldin\"]\nC4[\"Peter Ivanovitch\"]\nC5[\"Sophia Antonovna\"]\nC6[\"Tekla\"]\nC7[\"Madame de S\"]\nC8[\"Laszlo\"]\nC1 -->|Betrays| C2\nC2 -->|Sister of| C3\nC3 -->|Loves| C1\nC1 -->|Loves| C3\nC4 -->|Mentor of| C3\nC4 -->|Manipulates| C1\nC5 -->|Friend of| C3\nC5 -->|Suspicious of| C1\nC6 -->|Servant of| C4\nC6 -->|Friend of| C3\nC7 -->|Patron of| C4\nC8 -->|Friend of| C1",
+  "mermaidHash": "131aec8b812c915a6cca3d1b9088e8e03f421ec3284e90b503d6b8e80877670f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "131aec8b812c915a6cca3d1b9088e8e03f421ec3284e90b503d6b8e80877670f",
+    "svgHash": "cf3bc35c236a399fda452eaffbe64da8b66733c5a4088d6e107bf1dd48cf2170",
+    "validatedAt": "2026-09-10T17:48:33.068Z",
+    "width": 1257.497314453125,
+    "height": 421.25
+  },
+  "generatedAt": "2026-09-10T17:48:31.810Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 194,
+    "total_tokens": 1750,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

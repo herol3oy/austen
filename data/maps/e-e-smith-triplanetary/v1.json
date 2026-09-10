@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-e-smith/triplanetary",
+  "metadata": {
+    "title": "Triplanetary",
+    "authors": [
+      "E. E. Smith"
+    ],
+    "year": "1948"
+  },
+  "inputHash": "5a0b664cd1ff5a2cb16e72862a6d3cf9a73f95f4ac43b8565cf612512ae06301",
+  "promptHash": "6395ad005c65b0ae015d5667eb24b784048c97edd4dce6d9c351d4b18371928b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:47.643Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:47.643Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Conway Costigan\"]\nC2[\"Clio Marsden\"]\nC3[\"Bradley\"]\nC4[\"Cleveland\"]\nC5[\"Nerado\"]\nC6[\"Virgil Samms\"]\nC7[\"Roger\"]\nC8[\"Lyman Cleveland\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC6 -->|Commands| C1\nC6 -->|Commands| C3\nC7 -->|Enemy of| C6\nC8 -->|Serves| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 169,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:49.274Z",
+      "finishedAt": "2026-09-10T17:32:49.274Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Conway Costigan\"]\nC2[\"Clio Marsden\"]\nC3[\"Bradley\"]\nC4[\"Cleveland\"]\nC5[\"Nerado\"]\nC6[\"Virgil Samms\"]\nC7[\"Roger\"]\nC8[\"Lyman Cleveland\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC6 -->|Commands| C1\nC6 -->|Commands| C3\nC7 -->|Enemy of| C6\nC8 -->|Serves| C5",
+  "mermaidHash": "77eec63b2e9d5eda66c96d17ea839d74db74401fea1cb946f40d001693aa5a9f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "77eec63b2e9d5eda66c96d17ea839d74db74401fea1cb946f40d001693aa5a9f",
+    "svgHash": "7485a36043e896ee7cc4c423b412473849703b1a81158a684836cb4ae18cdc38",
+    "validatedAt": "2026-09-10T17:32:50.664Z",
+    "width": 1013.4278564453125,
+    "height": 322.25
+  },
+  "generatedAt": "2026-09-10T17:32:49.274Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 169,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

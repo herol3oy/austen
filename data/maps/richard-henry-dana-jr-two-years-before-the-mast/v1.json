@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "richard-henry-dana-jr/two-years-before-the-mast",
+  "metadata": {
+    "title": "Two Years Before the Mast",
+    "authors": [
+      "Richard Henry Dana Jr."
+    ],
+    "year": "1916"
+  },
+  "inputHash": "baeee4a2433c18431bac54e8242a08aa1cc88609d32445b4d3f8f7da34aa6c1a",
+  "promptHash": "7261bc1aa5449c333c7856b23cdb473f9c0c407e9aeb86da87b7d7d2dabacf8b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:18.324Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:18.324Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Richard Henry Dana Jr.\"]\nC2[\"Captain Frank Thompson\"]\nC3[\"Sam\"]\nC4[\"George\"]\nC5[\"John\"]\nC6[\"Ben\"]\nC7[\"Tom\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 44,
+        "total_tokens": 1604,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:19.551Z",
+      "finishedAt": "2026-09-10T18:07:19.551Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard Henry Dana Jr.\"]\nC2[\"Captain Frank Thompson\"]\nC3[\"Sam\"]\nC4[\"George\"]\nC5[\"John\"]\nC6[\"Ben\"]\nC7[\"Tom\"]",
+  "mermaidHash": "a62ea887b34d5c09bc8442e969ace62fd951b22c44484a0bf9951cc0ca401eb6",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:07:19.551Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 44,
+    "total_tokens": 1604,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

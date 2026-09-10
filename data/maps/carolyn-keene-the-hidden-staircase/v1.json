@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "carolyn-keene/the-hidden-staircase",
+  "metadata": {
+    "title": "The Hidden Staircase",
+    "authors": [
+      "Carolyn Keene"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "7d37a9ec0904e7ca5181f26d65bff9d53f68bfbed68d4db4c1e8e8504d1720e5",
+  "promptHash": "2f6086ef0550b3ae53db205fef3276b3ddc5a52f1b99248982b35fc7897b41e8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:27.658Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:27.658Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nancy Drew\"]\nC2[\"Carson Drew\"]\nC3[\"Helen Corning\"]\nC4[\"Rosemary Turnbull\"]\nC5[\"Florence Turnbull\"]\nC6[\"Mr. Turnbull\"]\nC7[\"Nathan Gomber\"]\nC8[\"Abigail Rowen\"]\nC1 -->|Daughter of| C2\nC1 -->|Friend of| C3\nC3 -->|Niece of| C4\nC4 -->|Sister of| C5\nC6 -->|Husband of| C4\nC7 -->|Threatens| C4\nC7 -->|Threatens| C5\nC8 -->|Former owner of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 150,
+        "total_tokens": 1710,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:29.158Z",
+      "finishedAt": "2026-09-10T17:29:29.158Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nancy Drew\"]\nC2[\"Carson Drew\"]\nC3[\"Helen Corning\"]\nC4[\"Rosemary Turnbull\"]\nC5[\"Florence Turnbull\"]\nC6[\"Mr. Turnbull\"]\nC7[\"Nathan Gomber\"]\nC8[\"Abigail Rowen\"]\nC1 -->|Daughter of| C2\nC1 -->|Friend of| C3\nC3 -->|Niece of| C4\nC4 -->|Sister of| C5\nC6 -->|Husband of| C4\nC7 -->|Threatens| C4\nC7 -->|Threatens| C5\nC8 -->|Former owner of| C4",
+  "mermaidHash": "e70c13fd6f499899aaede88d7b2d1769e5165ff751bcf65c17e3c2dfa42b8cb1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e70c13fd6f499899aaede88d7b2d1769e5165ff751bcf65c17e3c2dfa42b8cb1",
+    "svgHash": "e55b612e0e53ddbaba111a55ea92a867db5d74aa50490d6e4cee2825441867d6",
+    "validatedAt": "2026-09-10T17:29:30.499Z",
+    "width": 1089.1651611328125,
+    "height": 479.5
+  },
+  "generatedAt": "2026-09-10T17:29:29.158Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 150,
+    "total_tokens": 1710,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

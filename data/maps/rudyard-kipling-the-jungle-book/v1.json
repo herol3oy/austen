@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "rudyard-kipling/the-jungle-book",
+  "metadata": {
+    "title": "The Jungle Book",
+    "authors": [
+      "Rudyard Kipling"
+    ],
+    "year": "1894"
+  },
+  "inputHash": "f334ba79351b68410c3c631bc22d6820a1984a3bf335fc5b98b58e65a419e003",
+  "promptHash": "07015f3264f54ea080cdfcc3c1814294fd46a6b2bd5ffa987ecb3d83fe3895a9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:24.416Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:24.416Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mowgli\"]\nC2[\"Bagheera\"]\nC3[\"Baloo\"]\nC4[\"Shere Khan\"]\nC5[\"Akela\"]\nC6[\"Kaa\"]\nC7[\"Mother Wolf\"]\nC8[\"Father Wolf\"]\nC1 -->|Raised by| C7\nC1 -->|Raised by| C8\nC7 -->|Protects| C1\nC8 -->|Protects| C1\nC2 -->|Mentor of| C1\nC3 -->|Mentor of| C1\nC2 -->|Friend of| C3\nC5 -->|Leads| C1\nC1 -->|Enemy of| C4\nC4 -->|Enemy of| C1\nC6 -->|Protects| C1\nC2 -->|Protects| C1\nC3 -->|Protects| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 191,
+        "total_tokens": 1750,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:26.960Z",
+      "finishedAt": "2026-09-10T18:08:26.960Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mowgli\"]\nC2[\"Bagheera\"]\nC3[\"Baloo\"]\nC4[\"Shere Khan\"]\nC5[\"Akela\"]\nC6[\"Kaa\"]\nC7[\"Mother Wolf\"]\nC8[\"Father Wolf\"]\nC1 -->|Raised by| C7\nC1 -->|Raised by| C8\nC7 -->|Protects| C1\nC8 -->|Protects| C1\nC2 -->|Mentor of| C1\nC3 -->|Mentor of| C1\nC2 -->|Friend of| C3\nC5 -->|Leads| C1\nC1 -->|Enemy of| C4\nC4 -->|Enemy of| C1\nC6 -->|Protects| C1\nC2 -->|Protects| C1\nC3 -->|Protects| C1",
+  "mermaidHash": "9fbff0d1d1e3d21226c0d8255b2b0b39630f0786a5d21b23561d05719b8119d9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9fbff0d1d1e3d21226c0d8255b2b0b39630f0786a5d21b23561d05719b8119d9",
+    "svgHash": "58415a74d660b2aa2aec726fb3330b8761a6f949735221ca4778bd90e681a7a4",
+    "validatedAt": "2026-09-10T18:08:28.278Z",
+    "width": 839.6204833984375,
+    "height": 385.6842956542969
+  },
+  "generatedAt": "2026-09-10T18:08:26.960Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 191,
+    "total_tokens": 1750,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

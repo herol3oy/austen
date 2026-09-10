@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mark-twain/the-adventures-of-tom-sawyer",
+  "metadata": {
+    "title": "The Adventures of Tom Sawyer",
+    "authors": [
+      "Mark Twain"
+    ],
+    "year": "1876"
+  },
+  "inputHash": "15e051d9194267df77e1714ec5c156b8727a6e8ccb00c4d8f925652879616751",
+  "promptHash": "d04cd929e9f560392c56666fff2afa63aed764193a4fa1666710cfc1202a04c2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:56.699Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:56.699Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tom Sawyer\"]\nC2[\"Huckleberry Finn\"]\nC3[\"Becky Thatcher\"]\nC4[\"Aunt Polly\"]\nC5[\"Injun Joe\"]\nC6[\"Sid Sawyer\"]\nC7[\"Muff Potter\"]\nC8[\"Joe Harper\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C3\nC4 -->|Guardian of| C1\nC4 -->|Guardian of| C6\nC1 -->|Sibling of| C6\nC1 -->|Friend of| C8\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC5 -->|Kills| C7\nC1 -->|Protects| C7\nC2 -->|Protects| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 172,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:58.181Z",
+      "finishedAt": "2026-09-10T18:02:58.182Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tom Sawyer\"]\nC2[\"Huckleberry Finn\"]\nC3[\"Becky Thatcher\"]\nC4[\"Aunt Polly\"]\nC5[\"Injun Joe\"]\nC6[\"Sid Sawyer\"]\nC7[\"Muff Potter\"]\nC8[\"Joe Harper\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C3\nC4 -->|Guardian of| C1\nC4 -->|Guardian of| C6\nC1 -->|Sibling of| C6\nC1 -->|Friend of| C8\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC5 -->|Kills| C7\nC1 -->|Protects| C7\nC2 -->|Protects| C7",
+  "mermaidHash": "f0353bf2c080e071c53cc66c494dcf12c2968922964590915b4da514c274c439",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f0353bf2c080e071c53cc66c494dcf12c2968922964590915b4da514c274c439",
+    "svgHash": "c5e6106af793f6acca16391b85cbc083f377eedf66972f13266b38319dad4129",
+    "validatedAt": "2026-09-10T18:02:59.543Z",
+    "width": 947.7902221679688,
+    "height": 454.25
+  },
+  "generatedAt": "2026-09-10T18:02:58.181Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 172,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

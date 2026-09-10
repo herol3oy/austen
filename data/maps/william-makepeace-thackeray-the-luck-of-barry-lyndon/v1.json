@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-makepeace-thackeray/the-luck-of-barry-lyndon",
+  "metadata": {
+    "title": "The Luck of Barry Lyndon",
+    "authors": [
+      "William Makepeace Thackeray"
+    ],
+    "year": "1844"
+  },
+  "inputHash": "f0a1046c280b3edbabb88867b92704a03de7cabde285370c87a499efc0484e34",
+  "promptHash": "977ae4808f1540565016ca9531011c46a0122a81ab4b0242298b07263acec3f8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:16.100Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:16.100Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Redmond Barry\"]\nC2[\"Nora Brady\"]\nC3[\"Captain John Quin\"]\nC4[\"Mick Brady\"]\nC5[\"Lady Lyndon\"]\nC6[\"Lord Bullingdon\"]\nC7[\"Chevalier de Balibari\"]\nC8[\"Bryan Lyndon\"]\nC1 -->|Loves| C2\nC2 -->|Cousin of| C1\nC3 -->|Rival of| C1\nC4 -->|Father of| C2\nC1 -->|Married to| C5\nC5 -->|Mother of| C6\nC1 -->|Stepfather of| C6\nC7 -->|Mentor of| C1\nC1 -->|Father of| C8\nC6 -->|Rival of| C1\nC6 -->|Kills| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 182,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:17.685Z",
+      "finishedAt": "2026-09-10T18:14:17.685Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Redmond Barry\"]\nC2[\"Nora Brady\"]\nC3[\"Captain John Quin\"]\nC4[\"Mick Brady\"]\nC5[\"Lady Lyndon\"]\nC6[\"Lord Bullingdon\"]\nC7[\"Chevalier de Balibari\"]\nC8[\"Bryan Lyndon\"]\nC1 -->|Loves| C2\nC2 -->|Cousin of| C1\nC3 -->|Rival of| C1\nC4 -->|Father of| C2\nC1 -->|Married to| C5\nC5 -->|Mother of| C6\nC1 -->|Stepfather of| C6\nC7 -->|Mentor of| C1\nC1 -->|Father of| C8\nC6 -->|Rival of| C1\nC6 -->|Kills| C1",
+  "mermaidHash": "32092a45f44817006f0c5ede417003ebdeba5d02c2875e5ccaed2a8ec4bd1544",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "32092a45f44817006f0c5ede417003ebdeba5d02c2875e5ccaed2a8ec4bd1544",
+    "svgHash": "08aa825a1932f27e13552f00db9477c4737ba43c537860e31f3d58c8a7d64b6c",
+    "validatedAt": "2026-09-10T18:14:19.087Z",
+    "width": 1055.9715576171875,
+    "height": 422
+  },
+  "generatedAt": "2026-09-10T18:14:17.685Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 182,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

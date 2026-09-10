@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nikolai-gogol/dead-souls/c-j-hogarth",
+  "metadata": {
+    "title": "Dead Souls",
+    "authors": [
+      "Nikolai Gogol"
+    ],
+    "year": "1842"
+  },
+  "inputHash": "038db7e8a7bd74e7290ab0f0a70033ae34ef0ae39350e0e2d01ebf587a4054bc",
+  "promptHash": "e3f0139d8937b27328c125698b8d0719352945accea3854fb99040a286e4875e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:40.276Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:40.276Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Chichikov\"]\nC2[\"Manilov\"]\nC3[\"Korobochka\"]\nC4[\"Nozdryov\"]\nC5[\"Sobakevich\"]\nC6[\"Plyushkin\"]\nC7[\"Selifan\"]\nC8[\"Captain Kopeikin\"]\nC1 -->|Visits| C2\nC1 -->|Visits| C3\nC1 -->|Visits| C4\nC1 -->|Visits| C5\nC1 -->|Visits| C6\nC1 -->|Buys dead souls from| C2\nC1 -->|Buys dead souls from| C3\nC1 -->|Buys dead souls from| C4\nC1 -->|Buys dead souls from| C5\nC1 -->|Buys dead souls from| C6\nC7 -->|Serves| C1\nC2 -->|Friend of| C1\nC4 -->|Rival of| C1\nC5 -->|Rival of| C1\nC8 -->|Fought for| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 232,
+        "total_tokens": 1790,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:42.016Z",
+      "finishedAt": "2026-09-10T18:04:42.016Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Chichikov\"]\nC2[\"Manilov\"]\nC3[\"Korobochka\"]\nC4[\"Nozdryov\"]\nC5[\"Sobakevich\"]\nC6[\"Plyushkin\"]\nC7[\"Selifan\"]\nC8[\"Captain Kopeikin\"]\nC1 -->|Visits| C2\nC1 -->|Visits| C3\nC1 -->|Visits| C4\nC1 -->|Visits| C5\nC1 -->|Visits| C6\nC1 -->|Buys dead souls from| C2\nC1 -->|Buys dead souls from| C3\nC1 -->|Buys dead souls from| C4\nC1 -->|Buys dead souls from| C5\nC1 -->|Buys dead souls from| C6\nC7 -->|Serves| C1\nC2 -->|Friend of| C1\nC4 -->|Rival of| C1\nC5 -->|Rival of| C1\nC8 -->|Fought for| C1",
+  "mermaidHash": "10f5e074abea3a22cfa84d7efc8fc9ce64fbe42cf2b2b81371c001010160f0ef",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "10f5e074abea3a22cfa84d7efc8fc9ce64fbe42cf2b2b81371c001010160f0ef",
+    "svgHash": "e50f0dea2c85ab1c84484930842d247e79bc0705e57748c70297ca43d62f9898",
+    "validatedAt": "2026-09-10T18:04:43.468Z",
+    "width": 768.9845581054688,
+    "height": 566
+  },
+  "generatedAt": "2026-09-10T18:04:42.016Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 232,
+    "total_tokens": 1790,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

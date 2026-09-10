@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/phineas-finn",
+  "metadata": {
+    "title": "Phineas Finn",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1869"
+  },
+  "inputHash": "9e8e3c7ddd2cd0936440ef26073c111d013aad418f3387dc4c4d2694654c66c5",
+  "promptHash": "36899973f6879ae04bf0ed8b255718a31832aac45561e9b975de41c6ff0ba0fd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:44.064Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:44.064Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Phineas Finn\"]\nC2[\"Lady Laura Standish\"]\nC3[\"Violet Effingham\"]\nC4[\"Mary Flood Jones\"]\nC5[\"Mr. Monk\"]\nC6[\"Lord Chiltern\"]\nC7[\"Madame Max Goesler\"]\nC8[\"Mr. Kennedy\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C6\nC2 -->|Friend of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C6\nC6 -->|Sibling of| C2\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Mentor of| C1\nC1 -->|Friend of| C7\nC7 -->|Loves| C1\nC2 -->|Married to| C8\nC8 -->|Controls| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 197,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:45.723Z",
+      "finishedAt": "2026-09-10T17:26:45.723Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Phineas Finn\"]\nC2[\"Lady Laura Standish\"]\nC3[\"Violet Effingham\"]\nC4[\"Mary Flood Jones\"]\nC5[\"Mr. Monk\"]\nC6[\"Lord Chiltern\"]\nC7[\"Madame Max Goesler\"]\nC8[\"Mr. Kennedy\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C6\nC2 -->|Friend of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C6\nC6 -->|Sibling of| C2\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Mentor of| C1\nC1 -->|Friend of| C7\nC7 -->|Loves| C1\nC2 -->|Married to| C8\nC8 -->|Controls| C2",
+  "mermaidHash": "ae9aabab737d27ae8264bae7e4890645dde8ac6ae1d5b6e3d0d945e7b3c3bdf7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ae9aabab737d27ae8264bae7e4890645dde8ac6ae1d5b6e3d0d945e7b3c3bdf7",
+    "svgHash": "dcf732b4a4c8a4bef937dc17894968067c2acd191b4ee88d275acd3bfd7f87a2",
+    "validatedAt": "2026-09-10T17:26:47.227Z",
+    "width": 988.8572387695312,
+    "height": 377
+  },
+  "generatedAt": "2026-09-10T17:26:45.723Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 197,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

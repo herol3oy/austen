@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/lord-jim",
+  "metadata": {
+    "title": "Lord Jim",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1900"
+  },
+  "inputHash": "15b20d02e9ffff3fb139d5f6b7015c5058f2a5dcc50eb859fdce461922ae0a82",
+  "promptHash": "297f6510223c5b55be9126494865d4bc013c363f6c77dc0d768786d88be49d1b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:10.928Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:10.928Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jim\"]\nC2[\"Marlow\"]\nC3[\"Jewel\"]\nC4[\"Doramin\"]\nC5[\"Dain Waris\"]\nC6[\"Cornelius\"]\nC7[\"Gentleman Brown\"]\nC8[\"Stein\"]\nC1 -->|Betrays trust of| C4\nC1 -->|Friend of| C5\nC1 -->|Loves| C3\nC1 -->|Confides in| C2\nC2 -->|Mentor of| C1\nC2 -->|Friend of| C8\nC3 -->|Daughter of| C6\nC4 -->|Father of| C5\nC4 -->|Rival of| C1\nC6 -->|Guardian of| C3\nC7 -->|Enemy of| C1\nC7 -->|Kills| C5\nC8 -->|Mentor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 194,
+        "total_tokens": 1749,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:12.657Z",
+      "finishedAt": "2026-09-10T17:48:12.657Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jim\"]\nC2[\"Marlow\"]\nC3[\"Jewel\"]\nC4[\"Doramin\"]\nC5[\"Dain Waris\"]\nC6[\"Cornelius\"]\nC7[\"Gentleman Brown\"]\nC8[\"Stein\"]\nC1 -->|Betrays trust of| C4\nC1 -->|Friend of| C5\nC1 -->|Loves| C3\nC1 -->|Confides in| C2\nC2 -->|Mentor of| C1\nC2 -->|Friend of| C8\nC3 -->|Daughter of| C6\nC4 -->|Father of| C5\nC4 -->|Rival of| C1\nC6 -->|Guardian of| C3\nC7 -->|Enemy of| C1\nC7 -->|Kills| C5\nC8 -->|Mentor of| C1",
+  "mermaidHash": "e7cb8ca395da531c2360000efd3fab1c2a2062eb2e31da506c34c06e7906c712",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e7cb8ca395da531c2360000efd3fab1c2a2062eb2e31da506c34c06e7906c712",
+    "svgHash": "1cacbeeabed9996daa46230c72a82838ae1d1f933734e7d75ac36a99b57e03e2",
+    "validatedAt": "2026-09-10T17:48:13.949Z",
+    "width": 933.692138671875,
+    "height": 414
+  },
+  "generatedAt": "2026-09-10T17:48:12.657Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 194,
+    "total_tokens": 1749,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "d-h-lawrence/the-rainbow",
+  "metadata": {
+    "title": "The Rainbow",
+    "authors": [
+      "D. H. Lawrence"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "e169485550260ccf29e31ff1a5d69556b985f7c541dcd0081dd1904b87a2b367",
+  "promptHash": "1cd7fea830df97b8cb543d8838627f7fe8061685a038f1fbe143a692c68bf4c8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:33.413Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:33.413Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ursula Brangwen\"]\nC2[\"Gudrun Brangwen\"]\nC3[\"Anna Brangwen\"]\nC4[\"Will Brangwen\"]\nC5[\"Tom Brangwen\"]\nC6[\"Lydia Lensky\"]\nC7[\"Skrebensky\"]\nC8[\"Winifred Inger\"]\nC1 -->|Sister of| C2\nC3 -->|Parent of| C1\nC3 -->|Parent of| C2\nC4 -->|Parent of| C1\nC4 -->|Parent of| C2\nC5 -->|Parent of| C3\nC6 -->|Parent of| C3\nC5 -->|Married to| C6\nC3 -->|Married to| C4\nC1 -->|Loves| C7\nC1 -->|Loves| C8\nC8 -->|Mentor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 195,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:34.699Z",
+      "finishedAt": "2026-09-10T17:31:34.699Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ursula Brangwen\"]\nC2[\"Gudrun Brangwen\"]\nC3[\"Anna Brangwen\"]\nC4[\"Will Brangwen\"]\nC5[\"Tom Brangwen\"]\nC6[\"Lydia Lensky\"]\nC7[\"Skrebensky\"]\nC8[\"Winifred Inger\"]\nC1 -->|Sister of| C2\nC3 -->|Parent of| C1\nC3 -->|Parent of| C2\nC4 -->|Parent of| C1\nC4 -->|Parent of| C2\nC5 -->|Parent of| C3\nC6 -->|Parent of| C3\nC5 -->|Married to| C6\nC3 -->|Married to| C4\nC1 -->|Loves| C7\nC1 -->|Loves| C8\nC8 -->|Mentor of| C1",
+  "mermaidHash": "5b230dbef1f00f3a11401e72cdbbb5f2f1e3e298859a7d20152d359ec1cf529e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5b230dbef1f00f3a11401e72cdbbb5f2f1e3e298859a7d20152d359ec1cf529e",
+    "svgHash": "ca1ea041a0bac0333dba8a5550aa6eefc0d4cceb1e405f03d2004e0390cbc0ed",
+    "validatedAt": "2026-09-10T17:31:36.078Z",
+    "width": 1593.19189453125,
+    "height": 278.75
+  },
+  "generatedAt": "2026-09-10T17:31:34.699Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 195,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "leo-tolstoy/anna-karenina/constance-garnett",
+  "metadata": {
+    "title": "Anna Karenina",
+    "authors": [
+      "Leo Tolstoy"
+    ],
+    "year": "1878"
+  },
+  "inputHash": "4192f58554effe503719e958ff83684ae1eea1e1a17fa71e8994fa114ab94a8d",
+  "promptHash": "aa78531bc44b9de746a09ce127a83c84758926a9403ef9297870db1a6d1ee0fc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:15.486Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:15.487Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Anna Karenina\"]\nC2[\"Alexei Karenin\"]\nC3[\"Count Vronsky\"]\nC4[\"Konstantin Levin\"]\nC5[\"Kitty Shcherbatskaya\"]\nC6[\"Dolly Oblonskaya\"]\nC7[\"Stiva Oblonsky\"]\nC8[\"Sergei Koznyshev\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC2 -->|Married to| C1\nC3 -->|Loves| C1\nC4 -->|Loves| C5\nC5 -->|Married to| C4\nC6 -->|Sister of| C5\nC7 -->|Married to| C6\nC7 -->|Brother of| C1\nC4 -->|Friend of| C7\nC8 -->|Brother of| C4\nC1 -->|Betrays| C2\nC3 -->|Rival of| C2\nC2 -->|Refuses divorce to| C1\nC1 -->|Abandons| C2\nC3 -->|Abandons| C1\nC1 -->|Kills| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 257,
+        "total_tokens": 1814,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:17.180Z",
+      "finishedAt": "2026-09-10T17:50:17.180Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Anna Karenina\"]\nC2[\"Alexei Karenin\"]\nC3[\"Count Vronsky\"]\nC4[\"Konstantin Levin\"]\nC5[\"Kitty Shcherbatskaya\"]\nC6[\"Dolly Oblonskaya\"]\nC7[\"Stiva Oblonsky\"]\nC8[\"Sergei Koznyshev\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC2 -->|Married to| C1\nC3 -->|Loves| C1\nC4 -->|Loves| C5\nC5 -->|Married to| C4\nC6 -->|Sister of| C5\nC7 -->|Married to| C6\nC7 -->|Brother of| C1\nC4 -->|Friend of| C7\nC8 -->|Brother of| C4\nC1 -->|Betrays| C2\nC3 -->|Rival of| C2\nC2 -->|Refuses divorce to| C1\nC1 -->|Abandons| C2\nC3 -->|Abandons| C1\nC1 -->|Kills| C1",
+  "mermaidHash": "aa765f96f12b09bd1f6faa3825a1c429795b2e6906073ef0c29f094c634477a5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "aa765f96f12b09bd1f6faa3825a1c429795b2e6906073ef0c29f094c634477a5",
+    "svgHash": "e758e2d65f38e6d872d92551177643375fdc7ce763ff651ce3ba63050feecbce",
+    "validatedAt": "2026-09-10T17:50:18.522Z",
+    "width": 1626.2520751953125,
+    "height": 505.4250183105469
+  },
+  "generatedAt": "2026-09-10T17:50:17.180Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 257,
+    "total_tokens": 1814,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

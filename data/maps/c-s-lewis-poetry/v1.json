@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "c-s-lewis/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "C. S. Lewis"
+    ],
+    "year": "1919–1926"
+  },
+  "inputHash": "7d428f9bcd428fc8a8cc5bc5296a4a9e748fc5a5691ab38fff7c8b356f622b52",
+  "promptHash": "d4203c2423f8e747b16bb27dee9e16a8f2ed1d18c64276b35392daec6b389f47",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:17.689Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:17.689Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 153
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:18.401Z",
+      "finishedAt": "2026-09-10T17:29:18.401Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:29:18.401Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 153
+  }
+}

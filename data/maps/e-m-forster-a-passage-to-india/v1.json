@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-m-forster/a-passage-to-india",
+  "metadata": {
+    "title": "A Passage to India",
+    "authors": [
+      "E. M. Forster"
+    ],
+    "year": "1924"
+  },
+  "inputHash": "067023c1374d2516c5ae2c77d92e3d8c3ae65f8094c6eca6b8a4afae700fa6e7",
+  "promptHash": "a6e8f3c225229a6747698dd733b5be21352c0fb24e44de22706f7d7de9d477b5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:53.244Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:53.244Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dr. Aziz\"]\nC2[\"Cyril Fielding\"]\nC3[\"Adela Quested\"]\nC4[\"Mrs. Moore\"]\nC5[\"Ronny Heaslop\"]\nC6[\"Mr. Turton\"]\nC7[\"Mrs. Turton\"]\nC8[\"Professor Godbole\"]\nC1 -->|Friend of| C2\nC1 -->|Accused by| C3\nC1 -->|Friend of| C4\nC3 -->|Engaged to| C5\nC4 -->|Mother of| C5\nC5 -->|Fiancé of| C3\nC6 -->|Superior of| C5\nC7 -->|Wife of| C6\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC1 -->|Serves| C6\nC8 -->|Colleague of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 193,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:54.878Z",
+      "finishedAt": "2026-09-10T17:32:54.878Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dr. Aziz\"]\nC2[\"Cyril Fielding\"]\nC3[\"Adela Quested\"]\nC4[\"Mrs. Moore\"]\nC5[\"Ronny Heaslop\"]\nC6[\"Mr. Turton\"]\nC7[\"Mrs. Turton\"]\nC8[\"Professor Godbole\"]\nC1 -->|Friend of| C2\nC1 -->|Accused by| C3\nC1 -->|Friend of| C4\nC3 -->|Engaged to| C5\nC4 -->|Mother of| C5\nC5 -->|Fiancé of| C3\nC6 -->|Superior of| C5\nC7 -->|Wife of| C6\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC1 -->|Serves| C6\nC8 -->|Colleague of| C2",
+  "mermaidHash": "0a2502f9c14a0fdc0e016d6b24b553a509b35273f517be3cd77aabb45b825832",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0a2502f9c14a0fdc0e016d6b24b553a509b35273f517be3cd77aabb45b825832",
+    "svgHash": "e7a6680ccbead1ee8748845c7f19417ffae4eb098208015fa0b7aab682408f6a",
+    "validatedAt": "2026-09-10T17:32:56.226Z",
+    "width": 1038.76123046875,
+    "height": 398.84014892578125
+  },
+  "generatedAt": "2026-09-10T17:32:54.878Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 193,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

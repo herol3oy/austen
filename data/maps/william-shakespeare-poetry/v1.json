@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1593–1609"
+  },
+  "inputHash": "7aa659923922ea2b6e4d47160e523fc3143c7fcfb709513be15dceb22b7ecfb2",
+  "promptHash": "dc2a859b701b6cc21f5fb50707ecc13e19fd4d600142c02ec16760580778f7cc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:38.993Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:38.994Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 150
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:39.810Z",
+      "finishedAt": "2026-09-10T18:15:39.810Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:15:39.810Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 150
+  }
+}

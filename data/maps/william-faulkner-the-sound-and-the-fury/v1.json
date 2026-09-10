@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-faulkner/the-sound-and-the-fury",
+  "metadata": {
+    "title": "The Sound and the Fury",
+    "authors": [
+      "William Faulkner"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "0530935331f2eccc90b8fb9b7ad70de21aec74f51c86d41ed5ac953726992157",
+  "promptHash": "5cd4fcdb03b9305ff53d88082d38f72f59075f39c9c951ee1a085158ddf41a66",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:58.538Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:58.538Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Caddy Compson\"]\nC2[\"Benjy Compson\"]\nC3[\"Quentin Compson\"]\nC4[\"Jason Compson IV\"]\nC5[\"Dilsey Gibson\"]\nC6[\"Miss Quentin\"]\nC7[\"Caroline Compson\"]\nC8[\"Jason Compson III\"]\nC1 -->|Sister of| C2\nC1 -->|Sister of| C3\nC1 -->|Sister of| C4\nC1 -->|Mother of| C6\nC2 -->|Brother of| C3\nC2 -->|Brother of| C4\nC3 -->|Brother of| C4\nC5 -->|Cares for| C2\nC5 -->|Cares for| C3\nC5 -->|Cares for| C4\nC5 -->|Cares for| C6\nC7 -->|Mother of| C1\nC7 -->|Mother of| C2\nC7 -->|Mother of| C3\nC7 -->|Mother of| C4\nC8 -->|Father of| C1\nC8 -->|Father of| C2\nC8 -->|Father of| C3\nC8 -->|Father of| C4\nC6 -->|Niece of| C2\nC6 -->|Niece of| C3\nC6 -->|Niece of| C4\nC4 -->|Guardian of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 308,
+        "total_tokens": 1866,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:00.865Z",
+      "finishedAt": "2026-09-10T18:14:00.865Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Caddy Compson\"]\nC2[\"Benjy Compson\"]\nC3[\"Quentin Compson\"]\nC4[\"Jason Compson IV\"]\nC5[\"Dilsey Gibson\"]\nC6[\"Miss Quentin\"]\nC7[\"Caroline Compson\"]\nC8[\"Jason Compson III\"]\nC1 -->|Sister of| C2\nC1 -->|Sister of| C3\nC1 -->|Sister of| C4\nC1 -->|Mother of| C6\nC2 -->|Brother of| C3\nC2 -->|Brother of| C4\nC3 -->|Brother of| C4\nC5 -->|Cares for| C2\nC5 -->|Cares for| C3\nC5 -->|Cares for| C4\nC5 -->|Cares for| C6\nC7 -->|Mother of| C1\nC7 -->|Mother of| C2\nC7 -->|Mother of| C3\nC7 -->|Mother of| C4\nC8 -->|Father of| C1\nC8 -->|Father of| C2\nC8 -->|Father of| C3\nC8 -->|Father of| C4\nC6 -->|Niece of| C2\nC6 -->|Niece of| C3\nC6 -->|Niece of| C4\nC4 -->|Guardian of| C6",
+  "mermaidHash": "c0de616e747069e7fd16bfa965b5981deb2032cef531a5ae229a6163672642a4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c0de616e747069e7fd16bfa965b5981deb2032cef531a5ae229a6163672642a4",
+    "svgHash": "9ac9a5859816770f7b10003ea1b5770fa81dd1b429474f02beaa367ab8088027",
+    "validatedAt": "2026-09-10T18:14:02.258Z",
+    "width": 1656.34912109375,
+    "height": 736
+  },
+  "generatedAt": "2026-09-10T18:14:00.865Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 308,
+    "total_tokens": 1866,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "wilkie-collins/the-woman-in-white",
+  "metadata": {
+    "title": "The Woman in White",
+    "authors": [
+      "Wilkie Collins"
+    ],
+    "year": "1859"
+  },
+  "inputHash": "184c606ade55f506d0e5dd363e48d77edb2440ebe8fb67e17034770e6fe00c2f",
+  "promptHash": "0ac98c899b6daa2258bf2e84408fe82d72ca97a8d59cb46a23311486a3020414",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:20.072Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:20.072Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Walter Hartright\"]\nC2[\"Laura Fairlie\"]\nC3[\"Marian Halcombe\"]\nC4[\"Sir Percival Glyde\"]\nC5[\"Count Fosco\"]\nC6[\"Anne Catherick\"]\nC7[\"Mr. Fairlie\"]\nC8[\"Vincent Gilmore\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Married to| C4\nC3 -->|Half-sister of| C2\nC3 -->|Friend of| C1\nC4 -->|Enemy of| C1\nC4 -->|Conspires with| C5\nC5 -->|Conspires with| C4\nC4 -->|Abuses| C2\nC5 -->|Manipulates| C2\nC6 -->|Resembles| C2\nC6 -->|Knows secret of| C4\nC7 -->|Uncle of| C2\nC7 -->|Guardian of| C2\nC8 -->|Solicitor of| C2\nC5 -->|Kills| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 239,
+        "total_tokens": 1797,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:21.940Z",
+      "finishedAt": "2026-09-10T18:13:21.940Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Walter Hartright\"]\nC2[\"Laura Fairlie\"]\nC3[\"Marian Halcombe\"]\nC4[\"Sir Percival Glyde\"]\nC5[\"Count Fosco\"]\nC6[\"Anne Catherick\"]\nC7[\"Mr. Fairlie\"]\nC8[\"Vincent Gilmore\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Married to| C4\nC3 -->|Half-sister of| C2\nC3 -->|Friend of| C1\nC4 -->|Enemy of| C1\nC4 -->|Conspires with| C5\nC5 -->|Conspires with| C4\nC4 -->|Abuses| C2\nC5 -->|Manipulates| C2\nC6 -->|Resembles| C2\nC6 -->|Knows secret of| C4\nC7 -->|Uncle of| C2\nC7 -->|Guardian of| C2\nC8 -->|Solicitor of| C2\nC5 -->|Kills| C6",
+  "mermaidHash": "a67cd442c862d28a9583121cd29d4f942d2f617107dd43761e3568e9f6aabc39",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a67cd442c862d28a9583121cd29d4f942d2f617107dd43761e3568e9f6aabc39",
+    "svgHash": "5576a55bfdce0bcdcb33a369b4bf2553cdbddb044a6657738b15d98d10f4e238",
+    "validatedAt": "2026-09-10T18:13:23.354Z",
+    "width": 1576.5491943359375,
+    "height": 350.5
+  },
+  "generatedAt": "2026-09-10T18:13:21.940Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 239,
+    "total_tokens": 1797,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/the-prime-minister",
+  "metadata": {
+    "title": "The Prime Minister",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1876"
+  },
+  "inputHash": "142926faff0c83e664879523182613814dc1a2a350d67c6ca1a7e8779b2d9952",
+  "promptHash": "36de5d4d88b50009be73fc93b6310d769671078391a0fc03f48e7417931c2498",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:04.755Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:04.755Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Plantagenet Palliser\"]\nC2[\"Glencora Palliser\"]\nC3[\"Ferdinand Lopez\"]\nC4[\"Emily Wharton\"]\nC5[\"Everett Wharton\"]\nC6[\"Abel Wharton\"]\nC7[\"Arthur Fletcher\"]\nC8[\"John Grey\"]\nC1 -->|Married to| C2\nC3 -->|Married to| C4\nC3 -->|Betrays| C4\nC4 -->|Daughter of| C6\nC5 -->|Son of| C6\nC5 -->|Friend of| C3\nC7 -->|Loves| C4\nC7 -->|Rival of| C3\nC8 -->|Friend of| C2\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 167,
+        "total_tokens": 1724,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:05.999Z",
+      "finishedAt": "2026-09-10T17:27:05.999Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Plantagenet Palliser\"]\nC2[\"Glencora Palliser\"]\nC3[\"Ferdinand Lopez\"]\nC4[\"Emily Wharton\"]\nC5[\"Everett Wharton\"]\nC6[\"Abel Wharton\"]\nC7[\"Arthur Fletcher\"]\nC8[\"John Grey\"]\nC1 -->|Married to| C2\nC3 -->|Married to| C4\nC3 -->|Betrays| C4\nC4 -->|Daughter of| C6\nC5 -->|Son of| C6\nC5 -->|Friend of| C3\nC7 -->|Loves| C4\nC7 -->|Rival of| C3\nC8 -->|Friend of| C2\nC8 -->|Friend of| C1",
+  "mermaidHash": "c07c4a6fe5d1f69c25b05533322437f12608786df86da93a05971ec719dc6e8a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c07c4a6fe5d1f69c25b05533322437f12608786df86da93a05971ec719dc6e8a",
+    "svgHash": "944661d7202f1bfbcb092a6f63013596c8301a25088b46276d044613c670706d",
+    "validatedAt": "2026-09-10T17:27:07.754Z",
+    "width": 1067.1485595703125,
+    "height": 346.5
+  },
+  "generatedAt": "2026-09-10T17:27:05.999Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 167,
+    "total_tokens": 1724,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

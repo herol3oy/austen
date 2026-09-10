@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-milton/paradise-lost",
+  "metadata": {
+    "title": "Paradise Lost",
+    "authors": [
+      "John Milton"
+    ],
+    "year": "1658"
+  },
+  "inputHash": "ee68d1be7790c26325f79f0da33208e625a1b141a0cd050df013c89af7de1031",
+  "promptHash": "c522bc4cecb09ee5d9b0a959379d6406ea44351f05c7b8d47722a5f4c1962ac4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:28.633Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:28.633Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Satan\"]\nC2[\"God\"]\nC3[\"Jesus\"]\nC4[\"Adam\"]\nC5[\"Eve\"]\nC6[\"Raphael\"]\nC7[\"Michael\"]\nC8[\"Beelzebub\"]\nC1 -->|Rebels against| C2\nC1 -->|Enemy of| C3\nC1 -->|Ruler of| C8\nC2 -->|Father of| C3\nC2 -->|Creates| C4\nC2 -->|Creates| C5\nC3 -->|Creates| C4\nC3 -->|Creates| C5\nC4 -->|Husband of| C5\nC1 -->|Tempts| C5\nC5 -->|Tempts| C4\nC2 -->|Sends| C6\nC2 -->|Sends| C7\nC6 -->|Mentor of| C4\nC7 -->|Mentor of| C4\nC7 -->|Expels| C4\nC7 -->|Expels| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 231,
+        "total_tokens": 1788,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:30.062Z",
+      "finishedAt": "2026-09-10T17:47:30.062Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Satan\"]\nC2[\"God\"]\nC3[\"Jesus\"]\nC4[\"Adam\"]\nC5[\"Eve\"]\nC6[\"Raphael\"]\nC7[\"Michael\"]\nC8[\"Beelzebub\"]\nC1 -->|Rebels against| C2\nC1 -->|Enemy of| C3\nC1 -->|Ruler of| C8\nC2 -->|Father of| C3\nC2 -->|Creates| C4\nC2 -->|Creates| C5\nC3 -->|Creates| C4\nC3 -->|Creates| C5\nC4 -->|Husband of| C5\nC1 -->|Tempts| C5\nC5 -->|Tempts| C4\nC2 -->|Sends| C6\nC2 -->|Sends| C7\nC6 -->|Mentor of| C4\nC7 -->|Mentor of| C4\nC7 -->|Expels| C4\nC7 -->|Expels| C5",
+  "mermaidHash": "581ae9c26125c9b5fd87d21ec7980d3c595189f0d43ab54374bded259516eb7b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "581ae9c26125c9b5fd87d21ec7980d3c595189f0d43ab54374bded259516eb7b",
+    "svgHash": "0e8896129fdb05015a725ff1d578b43851470ba0bd57d60b50187dc5389f0e53",
+    "validatedAt": "2026-09-10T17:47:31.390Z",
+    "width": 1052.850830078125,
+    "height": 549.25
+  },
+  "generatedAt": "2026-09-10T17:47:30.062Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 231,
+    "total_tokens": 1788,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

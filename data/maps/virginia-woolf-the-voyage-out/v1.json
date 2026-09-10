@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "virginia-woolf/the-voyage-out",
+  "metadata": {
+    "title": "The Voyage Out",
+    "authors": [
+      "Virginia Woolf"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "ae5f0b8cf55987face1f736fdd382ff6271c736ebcd6785ee37f89212cc5be75",
+  "promptHash": "1404952179fe7f9834c0e5dab502b03d0dadc06d9f9061b58f1ad1c0013b208b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:12.290Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:12.290Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Rachel Vinrace\"]\nC2[\"Helen Ambrose\"]\nC3[\"Ridley Ambrose\"]\nC4[\"Terrance Hewet\"]\nC5[\"St John Hirst\"]\nC6[\"Clarissa Dalloway\"]\nC7[\"Richard Dalloway\"]\nC8[\"Evelyn Murgatroyd\"]\nC1 -->|Niece of| C2\nC2 -->|Married to| C3\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC4 -->|Friend of| C5\nC1 -->|Friend of| C5\nC6 -->|Married to| C7\nC6 -->|Kisses| C1\nC7 -->|Kisses| C1\nC8 -->|Friend of| C1\nC8 -->|Loves| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 182,
+        "total_tokens": 1739,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:13.678Z",
+      "finishedAt": "2026-09-10T18:12:13.678Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Rachel Vinrace\"]\nC2[\"Helen Ambrose\"]\nC3[\"Ridley Ambrose\"]\nC4[\"Terrance Hewet\"]\nC5[\"St John Hirst\"]\nC6[\"Clarissa Dalloway\"]\nC7[\"Richard Dalloway\"]\nC8[\"Evelyn Murgatroyd\"]\nC1 -->|Niece of| C2\nC2 -->|Married to| C3\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC4 -->|Friend of| C5\nC1 -->|Friend of| C5\nC6 -->|Married to| C7\nC6 -->|Kisses| C1\nC7 -->|Kisses| C1\nC8 -->|Friend of| C1\nC8 -->|Loves| C4",
+  "mermaidHash": "d3846be458552964002d052a086266a3586ad4bb2a9bad557e94dea604a2f603",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d3846be458552964002d052a086266a3586ad4bb2a9bad557e94dea604a2f603",
+    "svgHash": "e7bd334d5adead0a15dcc4acbee771f38f99d5165d0a7e3066954d4faeaef89d",
+    "validatedAt": "2026-09-10T18:12:15.054Z",
+    "width": 1325.20556640625,
+    "height": 295.75
+  },
+  "generatedAt": "2026-09-10T18:12:13.678Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 182,
+    "total_tokens": 1739,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

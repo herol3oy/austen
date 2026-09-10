@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arnold-bennett/anna-of-the-five-towns",
+  "metadata": {
+    "title": "Anna of the Five Towns",
+    "authors": [
+      "Arnold Bennett"
+    ],
+    "year": "1902"
+  },
+  "inputHash": "3de114fecead6b27befffa10d9cc80abc94f9e71ad718184d6d1f1b5848ffbd0",
+  "promptHash": "48880f16f7620536ca487008f3ec5b0d0bcfaeaff6d98c9983d0a324fb006aaa",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:35.796Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:35.796Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Anna Tellwright\"]\nC2[\"Ephraim Tellwright\"]\nC3[\"Agnes Tellwright\"]\nC4[\"Henry Mynors\"]\nC5[\"Willie Price\"]\nC6[\"Titus Price\"]\nC7[\"Beatrice Sutton\"]\nC1 -->|Daughter of| C2\nC1 -->|Sister of| C3\nC2 -->|Father of| C3\nC1 -->|Engaged to| C4\nC1 -->|Loves| C5\nC5 -->|Friend of| C1\nC6 -->|Father of| C5\nC1 -->|Friend of| C7\nC4 -->|Friend of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 149,
+        "total_tokens": 1708,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:36.924Z",
+      "finishedAt": "2026-09-10T17:27:36.924Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Anna Tellwright\"]\nC2[\"Ephraim Tellwright\"]\nC3[\"Agnes Tellwright\"]\nC4[\"Henry Mynors\"]\nC5[\"Willie Price\"]\nC6[\"Titus Price\"]\nC7[\"Beatrice Sutton\"]\nC1 -->|Daughter of| C2\nC1 -->|Sister of| C3\nC2 -->|Father of| C3\nC1 -->|Engaged to| C4\nC1 -->|Loves| C5\nC5 -->|Friend of| C1\nC6 -->|Father of| C5\nC1 -->|Friend of| C7\nC4 -->|Friend of| C7",
+  "mermaidHash": "4fc9eb94e0dc0fc7493158134d90640a0ccabe90b2f3b46f678e14acb15a1127",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4fc9eb94e0dc0fc7493158134d90640a0ccabe90b2f3b46f678e14acb15a1127",
+    "svgHash": "fb49cc84feae7a5cc531cf4640391833aa586f631a104b549fca553c7b682684",
+    "validatedAt": "2026-09-10T17:27:38.370Z",
+    "width": 780.3449096679688,
+    "height": 375.75
+  },
+  "generatedAt": "2026-09-10T17:27:36.924Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 149,
+    "total_tokens": 1708,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

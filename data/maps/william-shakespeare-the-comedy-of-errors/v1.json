@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/the-comedy-of-errors",
+  "metadata": {
+    "title": "The Comedy of Errors",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1623"
+  },
+  "inputHash": "590282bf2ea4a7c372a573353ba60d0c07077ea89a51aa5dd5a8c750b511ec64",
+  "promptHash": "dd9e88d2b08c288dc755ae562b94e50e3b2eb0a0beec1932baf30404662f8f55",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:49.202Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:49.203Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Antipholus of Syracuse\"]\nC2[\"Antipholus of Ephesus\"]\nC3[\"Dromio of Syracuse\"]\nC4[\"Dromio of Ephesus\"]\nC5[\"Adriana\"]\nC6[\"Luciana\"]\nC7[\"Egeon\"]\nC8[\"Emilia\"]\nC1 -->|Twin brother of| C2\nC3 -->|Twin brother of| C4\nC1 -->|Serves| C3\nC2 -->|Serves| C4\nC5 -->|Married to| C2\nC6 -->|Sister of| C5\nC1 -->|Loves| C6\nC7 -->|Father of| C1\nC7 -->|Father of| C2\nC8 -->|Mother of| C1\nC8 -->|Mother of| C2\nC7 -->|Husband of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 196,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:50.348Z",
+      "finishedAt": "2026-09-10T18:15:50.348Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Antipholus of Syracuse\"]\nC2[\"Antipholus of Ephesus\"]\nC3[\"Dromio of Syracuse\"]\nC4[\"Dromio of Ephesus\"]\nC5[\"Adriana\"]\nC6[\"Luciana\"]\nC7[\"Egeon\"]\nC8[\"Emilia\"]\nC1 -->|Twin brother of| C2\nC3 -->|Twin brother of| C4\nC1 -->|Serves| C3\nC2 -->|Serves| C4\nC5 -->|Married to| C2\nC6 -->|Sister of| C5\nC1 -->|Loves| C6\nC7 -->|Father of| C1\nC7 -->|Father of| C2\nC8 -->|Mother of| C1\nC8 -->|Mother of| C2\nC7 -->|Husband of| C8",
+  "mermaidHash": "b438850b36cfc82600811f4908400f8986fcdf4f4dae0d068a35f4e78572639b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b438850b36cfc82600811f4908400f8986fcdf4f4dae0d068a35f4e78572639b",
+    "svgHash": "86c6006ab8b4e9070cd8089317b77618370ca2264311f2279745a6937583f020",
+    "validatedAt": "2026-09-10T18:15:51.767Z",
+    "width": 1844.188720703125,
+    "height": 245.5
+  },
+  "generatedAt": "2026-09-10T18:15:50.348Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 196,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

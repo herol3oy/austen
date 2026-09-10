@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-love-peacock/nightmare-abbey",
+  "metadata": {
+    "title": "Nightmare Abbey",
+    "authors": [
+      "Thomas Love Peacock"
+    ],
+    "year": "1818"
+  },
+  "inputHash": "9f8b33746a841a544909b6c1ef6f78edbbcc26f93867e71c2e3e36d78676bc09",
+  "promptHash": "510d186e2dc7c993bfe4dd06605a0da14fd52d1529185063ea88c2a16d5faa2e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:07.744Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:07.744Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mr. Christopher Scythrop Glowry\"]\nC2[\"Mr. Hilary Glowry\"]\nC3[\"Marionetta Celinda O'Carroll\"]\nC4[\"Emily Girouette\"]\nC5[\"Mr. Flosky\"]\nC6[\"Mr. Cypress\"]\nC7[\"Mr. Toobad\"]\nC8[\"Mr. Asterias\"]\nC1 -->|Son of| C2\nC2 -->|Father of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Loves| C4\nC4 -->|Rejects| C1\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC7 -->|Father of| C3\nC7 -->|Friend of| C2\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 191,
+        "total_tokens": 1749,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:09.879Z",
+      "finishedAt": "2026-09-10T18:11:09.879Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mr. Christopher Scythrop Glowry\"]\nC2[\"Mr. Hilary Glowry\"]\nC3[\"Marionetta Celinda O'Carroll\"]\nC4[\"Emily Girouette\"]\nC5[\"Mr. Flosky\"]\nC6[\"Mr. Cypress\"]\nC7[\"Mr. Toobad\"]\nC8[\"Mr. Asterias\"]\nC1 -->|Son of| C2\nC2 -->|Father of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Loves| C4\nC4 -->|Rejects| C1\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC7 -->|Father of| C3\nC7 -->|Friend of| C2\nC8 -->|Friend of| C2",
+  "mermaidHash": "c7d83f0c13b9ade65a05f542368c29a3c3f337f207a80fc4209a0c6afbebb709",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c7d83f0c13b9ade65a05f542368c29a3c3f337f207a80fc4209a0c6afbebb709",
+    "svgHash": "741645df98e38aa1a7152e426ffc0e7d073bd7ce587fdb83b397117398876ae6",
+    "validatedAt": "2026-09-10T18:11:11.211Z",
+    "width": 600.9068603515625,
+    "height": 585.5
+  },
+  "generatedAt": "2026-09-10T18:11:09.879Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 191,
+    "total_tokens": 1749,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

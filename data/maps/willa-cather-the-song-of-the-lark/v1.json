@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "willa-cather/the-song-of-the-lark",
+  "metadata": {
+    "title": "The Song of the Lark",
+    "authors": [
+      "Willa Cather"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "d1da4343eae8f660c2ae95a6f45f87b7e694b68ce4c17f283d86052916d00a67",
+  "promptHash": "8881b83f2fe90887d19b7c40a3a68f10a9f4709f3433b2e63259612aebd12607",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:37.888Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:37.888Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Thea Kronborg\"]\nC2[\"Dr. Archie\"]\nC3[\"Professor Wunsch\"]\nC4[\"Ray Kennedy\"]\nC5[\"Fred Ottenburg\"]\nC6[\"Madison Bowers\"]\nC7[\"Anna Kronborg\"]\nC8[\"Harsanyi\"]\nC1 -->|Student of| C3\nC1 -->|Student of| C8\nC1 -->|Friend of| C2\nC1 -->|Loves| C5\nC1 -->|Sibling of| C7\nC4 -->|Loves| C1\nC4 -->|Friend of| C2\nC2 -->|Protects| C1\nC6 -->|Mentor of| C1\nC5 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 164,
+        "total_tokens": 1724,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:39.692Z",
+      "finishedAt": "2026-09-10T18:13:39.693Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Thea Kronborg\"]\nC2[\"Dr. Archie\"]\nC3[\"Professor Wunsch\"]\nC4[\"Ray Kennedy\"]\nC5[\"Fred Ottenburg\"]\nC6[\"Madison Bowers\"]\nC7[\"Anna Kronborg\"]\nC8[\"Harsanyi\"]\nC1 -->|Student of| C3\nC1 -->|Student of| C8\nC1 -->|Friend of| C2\nC1 -->|Loves| C5\nC1 -->|Sibling of| C7\nC4 -->|Loves| C1\nC4 -->|Friend of| C2\nC2 -->|Protects| C1\nC6 -->|Mentor of| C1\nC5 -->|Loves| C1",
+  "mermaidHash": "77f83fc06887dfc4eafbb550dc6e2867b26a8deb7e21604b492b637662540057",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "77f83fc06887dfc4eafbb550dc6e2867b26a8deb7e21604b492b637662540057",
+    "svgHash": "b8ebdc9f6058e6ea702dd1216af00e7d3b5a398f3edf0bf17ba821e4c8f3eea9",
+    "validatedAt": "2026-09-10T18:13:41.051Z",
+    "width": 766.800537109375,
+    "height": 464.5
+  },
+  "generatedAt": "2026-09-10T18:13:39.692Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 164,
+    "total_tokens": 1724,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

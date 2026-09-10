@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "l-m-montgomery/anne-of-green-gables",
+  "metadata": {
+    "title": "Anne of Green Gables",
+    "authors": [
+      "L. M. Montgomery"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "5a5197c0eff4fdbb2bae608ca52a54c5e2ebd704049f0510a9d18d4ee4f5d89c",
+  "promptHash": "6564cedcb0103319c798b16c31293c6deac3b3547db237ba01405313ab0975c1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:54.408Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:54.408Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Anne Shirley\"]\nC2[\"Marilla Cuthbert\"]\nC3[\"Matthew Cuthbert\"]\nC4[\"Diana Barry\"]\nC5[\"Gilbert Blythe\"]\nC6[\"Rachel Lynde\"]\nC7[\"Josie Pye\"]\nC1 -->|Adopted by| C2\nC1 -->|Adopted by| C3\nC2 -->|Sibling of| C3\nC1 -->|Best friend of| C4\nC1 -->|Rival of| C5\nC5 -->|Loves| C1\nC6 -->|Friend of| C2\nC6 -->|Friend of| C1\nC7 -->|Rival of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 151,
+        "total_tokens": 1712,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:55.884Z",
+      "finishedAt": "2026-09-10T17:49:55.884Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Anne Shirley\"]\nC2[\"Marilla Cuthbert\"]\nC3[\"Matthew Cuthbert\"]\nC4[\"Diana Barry\"]\nC5[\"Gilbert Blythe\"]\nC6[\"Rachel Lynde\"]\nC7[\"Josie Pye\"]\nC1 -->|Adopted by| C2\nC1 -->|Adopted by| C3\nC2 -->|Sibling of| C3\nC1 -->|Best friend of| C4\nC1 -->|Rival of| C5\nC5 -->|Loves| C1\nC6 -->|Friend of| C2\nC6 -->|Friend of| C1\nC7 -->|Rival of| C1",
+  "mermaidHash": "b44a79f1ceaba4799faca8047e334e70a8ee5ab990b01faeb002e53b718bc812",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b44a79f1ceaba4799faca8047e334e70a8ee5ab990b01faeb002e53b718bc812",
+    "svgHash": "1bc3130b033754792c0c171ed53abecf2a949a8984299c24c6eded9ce9471ee4",
+    "validatedAt": "2026-09-10T17:49:57.188Z",
+    "width": 1027.3075561523438,
+    "height": 324.5
+  },
+  "generatedAt": "2026-09-10T17:49:55.884Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 151,
+    "total_tokens": 1712,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

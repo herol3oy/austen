@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/henry-vi-part-i",
+  "metadata": {
+    "title": "Henry VI, Part I",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1591"
+  },
+  "inputHash": "73f4f5aea608302ab95a1c97e0a844502e34248c186451c98412f02c3f2cdff6",
+  "promptHash": "a4ee31cce25ff7dc69b75b9285fc5bca64e65cd60353dd0d32710a29acacd5c1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:04.327Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:04.327Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Henry VI\"]\nC2[\"Humphrey, Duke of Gloucester\"]\nC3[\"Henry Beaufort, Bishop of Winchester\"]\nC4[\"Richard Plantagenet, Duke of York\"]\nC5[\"John Talbot\"]\nC6[\"Joan la Pucelle\"]\nC7[\"Charles, Dauphin of France\"]\nC8[\"Margaret of Anjou\"]\nC1 -->|Nephew of| C2\nC1 -->|Nephew of| C3\nC2 -->|Rival of| C3\nC4 -->|Claims throne from| C1\nC5 -->|Commands| C1\nC5 -->|Enemy of| C6\nC6 -->|Allied with| C7\nC6 -->|Enemy of| C5\nC7 -->|Enemy of| C1\nC8 -->|Captured by| C4\nC8 -->|Loves| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 197,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:06.017Z",
+      "finishedAt": "2026-09-10T18:15:06.017Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Henry VI\"]\nC2[\"Humphrey, Duke of Gloucester\"]\nC3[\"Henry Beaufort, Bishop of Winchester\"]\nC4[\"Richard Plantagenet, Duke of York\"]\nC5[\"John Talbot\"]\nC6[\"Joan la Pucelle\"]\nC7[\"Charles, Dauphin of France\"]\nC8[\"Margaret of Anjou\"]\nC1 -->|Nephew of| C2\nC1 -->|Nephew of| C3\nC2 -->|Rival of| C3\nC4 -->|Claims throne from| C1\nC5 -->|Commands| C1\nC5 -->|Enemy of| C6\nC6 -->|Allied with| C7\nC6 -->|Enemy of| C5\nC7 -->|Enemy of| C1\nC8 -->|Captured by| C4\nC8 -->|Loves| C4",
+  "mermaidHash": "183d2a7c54cad09be720c6fe8938d6ddc4966b89ff0ecefa533c1488bb447f4c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "183d2a7c54cad09be720c6fe8938d6ddc4966b89ff0ecefa533c1488bb447f4c",
+    "svgHash": "7d82b618fccd690bbd5c1ba340c54e424ddb8888f17be0c591e492105f8b052f",
+    "validatedAt": "2026-09-10T18:15:07.357Z",
+    "width": 1817.294677734375,
+    "height": 224.92628479003906
+  },
+  "generatedAt": "2026-09-10T18:15:06.017Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 197,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

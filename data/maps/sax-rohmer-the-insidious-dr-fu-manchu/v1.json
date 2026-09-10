@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sax-rohmer/the-insidious-dr-fu-manchu",
+  "metadata": {
+    "title": "The Insidious Dr. Fu-Manchu",
+    "authors": [
+      "Sax Rohmer"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "a28ddec4b672405c697fcad2775cd6d1c9d3e06e3507f5b7bfb02effdd4f8aff",
+  "promptHash": "c59be6229a4aa27983c3dc0d9e2ffd4165277545588aa8a597a6582b93b82d2e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:59.727Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:59.727Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Denis Nayland Smith\"]\nC2[\"Dr. Petrie\"]\nC3[\"Dr. Fu-Manchu\"]\nC4[\"Karamaneh\"]\nC5[\"Kâramanèh\"]\nC6[\"Inspector Weymouth\"]\nC7[\"Sir Gregory Hale\"]\nC8[\"Aziz\"]\nC1 -->|Friend of| C2\nC1 -->|Enemy of| C3\nC2 -->|Enemy of| C3\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC3 -->|Commands| C4\nC1 -->|Allied with| C6\nC2 -->|Allied with| C6\nC3 -->|Kills| C7\nC3 -->|Commands| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 169,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:01.057Z",
+      "finishedAt": "2026-09-10T18:09:01.057Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Denis Nayland Smith\"]\nC2[\"Dr. Petrie\"]\nC3[\"Dr. Fu-Manchu\"]\nC4[\"Karamaneh\"]\nC5[\"Kâramanèh\"]\nC6[\"Inspector Weymouth\"]\nC7[\"Sir Gregory Hale\"]\nC8[\"Aziz\"]\nC1 -->|Friend of| C2\nC1 -->|Enemy of| C3\nC2 -->|Enemy of| C3\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC3 -->|Commands| C4\nC1 -->|Allied with| C6\nC2 -->|Allied with| C6\nC3 -->|Kills| C7\nC3 -->|Commands| C8",
+  "mermaidHash": "36a55d2f392299089e963bf75766c13e3035e634bfe68169c8c29ebaa9f0e358",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "36a55d2f392299089e963bf75766c13e3035e634bfe68169c8c29ebaa9f0e358",
+    "svgHash": "b14e387a65ec55eabd2c5de4d5dae3ee359dce4684cac4be4068d9013c7be75a",
+    "validatedAt": "2026-09-10T18:09:02.392Z",
+    "width": 1064.141845703125,
+    "height": 379.75
+  },
+  "generatedAt": "2026-09-10T18:09:01.057Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 169,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

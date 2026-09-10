@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frances-hodgson-burnett/a-little-princess",
+  "metadata": {
+    "title": "A Little Princess",
+    "authors": [
+      "Frances Hodgson Burnett"
+    ],
+    "year": "1905"
+  },
+  "inputHash": "83491bad15981cf72da0c96db437a523bfbf1128f71a0ca257411c695f51bb75",
+  "promptHash": "a9c3b107eb358f20d8451478231593ccb48a218ba183efa41ed01b94bd5b77aa",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:31.727Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:31.727Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sara Crewe\"]\nC2[\"Captain Crewe\"]\nC3[\"Miss Minchin\"]\nC4[\"Becky\"]\nC5[\"Ermengarde St. John\"]\nC6[\"Carrisford\"]\nC7[\"Ram Dass\"]\nC8[\"Miss Amelia\"]\nC1 -->|Daughter of| C2\nC3 -->|Headmistress of| C1\nC3 -->|Exploits| C4\nC3 -->|Sister of| C8\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC6 -->|Friend of| C2\nC6 -->|Guardian of| C1\nC7 -->|Serves| C6\nC7 -->|Secretly aids| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 168,
+        "total_tokens": 1727,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:33.160Z",
+      "finishedAt": "2026-09-10T17:37:33.160Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sara Crewe\"]\nC2[\"Captain Crewe\"]\nC3[\"Miss Minchin\"]\nC4[\"Becky\"]\nC5[\"Ermengarde St. John\"]\nC6[\"Carrisford\"]\nC7[\"Ram Dass\"]\nC8[\"Miss Amelia\"]\nC1 -->|Daughter of| C2\nC3 -->|Headmistress of| C1\nC3 -->|Exploits| C4\nC3 -->|Sister of| C8\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC6 -->|Friend of| C2\nC6 -->|Guardian of| C1\nC7 -->|Serves| C6\nC7 -->|Secretly aids| C1",
+  "mermaidHash": "84bfe8d584650055776713c17081bc193579bc9514c28bffd311fd89f31b10eb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "84bfe8d584650055776713c17081bc193579bc9514c28bffd311fd89f31b10eb",
+    "svgHash": "f9ab5199ebd5cad3985ba5b31bcd0f233512c2538a5074111828564307c7f266",
+    "validatedAt": "2026-09-10T17:37:34.519Z",
+    "width": 1014.8710327148438,
+    "height": 369
+  },
+  "generatedAt": "2026-09-10T17:37:33.160Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 168,
+    "total_tokens": 1727,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

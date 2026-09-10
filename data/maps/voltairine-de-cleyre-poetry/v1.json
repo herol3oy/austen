@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "voltairine-de-cleyre/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Voltairine de Cleyre"
+    ],
+    "year": "1914"
+  },
+  "inputHash": "dea98a93cd2ba35534525e9fad9a2d657142f0f6f545e7d00a383e1e4a567de3",
+  "promptHash": "e98a8efc3d3aba7347c15a85091994b13f54c94757f3b52aa925d392bbae0f08",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:21.454Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:21.454Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 153
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:22.009Z",
+      "finishedAt": "2026-09-10T18:12:22.009Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:12:22.009Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 153
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "f-scott-fitzgerald/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "year": "1917–1928"
+  },
+  "inputHash": "6b648cf77ce08d319467a235bc588c3c19de7eee58c04b20dbba38240f114a0c",
+  "promptHash": "c7183eb4c5563c1edaa4ed5f30c4ff1a0c8273f7a1de8cc71f2f6f4426e6f021",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:00.913Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:00.913Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 152
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:01.555Z",
+      "finishedAt": "2026-09-10T17:37:01.556Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:37:01.555Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 152
+  }
+}

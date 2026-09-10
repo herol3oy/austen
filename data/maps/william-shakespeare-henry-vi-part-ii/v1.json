@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/henry-vi-part-ii",
+  "metadata": {
+    "title": "Henry VI, Part II",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1590"
+  },
+  "inputHash": "e0510db57d7f6b84df9bf4e53a4418d7636b2df3b3ef83596753179300daef52",
+  "promptHash": "135a0c5e99ac5a82fc01e388528224f231db12b63e2d3939b3772171d01be902",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:07.375Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:07.375Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Henry VI\"]\nC2[\"Queen Margaret\"]\nC3[\"Duke of Gloucester\"]\nC4[\"Duchess of Gloucester\"]\nC5[\"Cardinal Beaufort\"]\nC6[\"Duke of York\"]\nC7[\"Earl of Suffolk\"]\nC8[\"Jack Cade\"]\nC1 -->|Married to| C2\nC3 -->|Protects| C1\nC3 -->|Uncle of| C1\nC4 -->|Married to| C3\nC5 -->|Uncle of| C1\nC5 -->|Enemy of| C3\nC6 -->|Rival of| C1\nC6 -->|Plots against| C3\nC7 -->|Loves| C2\nC7 -->|Serves| C1\nC7 -->|Enemy of| C3\nC8 -->|Rebels against| C1\nC8 -->|Claims descent from| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 202,
+        "total_tokens": 1760,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:08.782Z",
+      "finishedAt": "2026-09-10T18:15:08.782Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Henry VI\"]\nC2[\"Queen Margaret\"]\nC3[\"Duke of Gloucester\"]\nC4[\"Duchess of Gloucester\"]\nC5[\"Cardinal Beaufort\"]\nC6[\"Duke of York\"]\nC7[\"Earl of Suffolk\"]\nC8[\"Jack Cade\"]\nC1 -->|Married to| C2\nC3 -->|Protects| C1\nC3 -->|Uncle of| C1\nC4 -->|Married to| C3\nC5 -->|Uncle of| C1\nC5 -->|Enemy of| C3\nC6 -->|Rival of| C1\nC6 -->|Plots against| C3\nC7 -->|Loves| C2\nC7 -->|Serves| C1\nC7 -->|Enemy of| C3\nC8 -->|Rebels against| C1\nC8 -->|Claims descent from| C6",
+  "mermaidHash": "f0c2ad056982dc4b8c09ad082aac9c7cd94550b06b2181a593480164b1d0729b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f0c2ad056982dc4b8c09ad082aac9c7cd94550b06b2181a593480164b1d0729b",
+    "svgHash": "ef8c456f7cc476380a89d0a1cfc1f68ae4fb0854056a907ec8c259cf729e954a",
+    "validatedAt": "2026-09-10T18:15:10.186Z",
+    "width": 1423.5584716796875,
+    "height": 501.5
+  },
+  "generatedAt": "2026-09-10T18:15:08.782Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 202,
+    "total_tokens": 1760,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-makepeace-thackeray/vanity-fair",
+  "metadata": {
+    "title": "Vanity Fair",
+    "authors": [
+      "William Makepeace Thackeray"
+    ],
+    "year": "1848"
+  },
+  "inputHash": "8462c258b31d3a9fe71122ca20229364fe25534abd2955ac85baf307d45c9bcd",
+  "promptHash": "d988c7eb34eb1e28a7638666b9f989e0cd58f5f2c088a0b9000cc1cc29778507",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:19.095Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:19.095Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Becky Sharp\"]\nC2[\"Amelia Sedley\"]\nC3[\"Rawdon Crawley\"]\nC4[\"George Osborne\"]\nC5[\"William Dobbin\"]\nC6[\"Miss Crawley\"]\nC7[\"Jos Sedley\"]\nC8[\"Lord Steyne\"]\nC1 -->|Married to| C3\nC1 -->|Friend of| C2\nC1 -->|Flirts with| C8\nC1 -->|Sister-in-law of| C6\nC2 -->|Married to| C4\nC2 -->|Friend of| C5\nC2 -->|Sister of| C7\nC3 -->|Nephew of| C6\nC3 -->|Friend of| C4\nC4 -->|Friend of| C5\nC5 -->|Loves| C2\nC6 -->|Patron of| C1\nC8 -->|Enemy of| C3\nC8 -->|Pursues| C1\nC7 -->|Brother of| C2\nC7 -->|Attracted to| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 233,
+        "total_tokens": 1793,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:20.960Z",
+      "finishedAt": "2026-09-10T18:14:20.960Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Becky Sharp\"]\nC2[\"Amelia Sedley\"]\nC3[\"Rawdon Crawley\"]\nC4[\"George Osborne\"]\nC5[\"William Dobbin\"]\nC6[\"Miss Crawley\"]\nC7[\"Jos Sedley\"]\nC8[\"Lord Steyne\"]\nC1 -->|Married to| C3\nC1 -->|Friend of| C2\nC1 -->|Flirts with| C8\nC1 -->|Sister-in-law of| C6\nC2 -->|Married to| C4\nC2 -->|Friend of| C5\nC2 -->|Sister of| C7\nC3 -->|Nephew of| C6\nC3 -->|Friend of| C4\nC4 -->|Friend of| C5\nC5 -->|Loves| C2\nC6 -->|Patron of| C1\nC8 -->|Enemy of| C3\nC8 -->|Pursues| C1\nC7 -->|Brother of| C2\nC7 -->|Attracted to| C1",
+  "mermaidHash": "83c31c8b16c2c0d18d5553b97ec09fd279605b479e9b44e513a493b384f0c2e5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "83c31c8b16c2c0d18d5553b97ec09fd279605b479e9b44e513a493b384f0c2e5",
+    "svgHash": "d78a70ded71c15d282349e8a27b635eb80c0dbc10e853b709a3137cad28df69a",
+    "validatedAt": "2026-09-10T18:14:22.409Z",
+    "width": 1821.186279296875,
+    "height": 393.75
+  },
+  "generatedAt": "2026-09-10T18:14:20.960Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 233,
+    "total_tokens": 1793,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

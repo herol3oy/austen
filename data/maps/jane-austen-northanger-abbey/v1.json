@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jane-austen/northanger-abbey",
+  "metadata": {
+    "title": "Northanger Abbey",
+    "authors": [
+      "Jane Austen"
+    ],
+    "year": "1817"
+  },
+  "inputHash": "5380957e17d9cc4d40001b7e980e526def71275ca6e3e3202bb094e42dcafa20",
+  "promptHash": "e289013d2bf826df27b1799b877ee7a41c18c5a1edaf2a618fdac725e9c82561",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:24.769Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:24.769Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Catherine Morland\"]\nC2[\"Henry Tilney\"]\nC3[\"Eleanor Tilney\"]\nC4[\"General Tilney\"]\nC5[\"Isabella Thorpe\"]\nC6[\"John Thorpe\"]\nC7[\"James Morland\"]\nC8[\"Mrs. Morland\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Sister of| C2\nC4 -->|Father of| C2\nC4 -->|Father of| C3\nC4 -->|Commands| C2\nC4 -->|Commands| C3\nC1 -->|Friend of| C5\nC5 -->|Betrays| C1\nC5 -->|Engaged to| C7\nC6 -->|Friend of| C1\nC6 -->|Rival of| C2\nC7 -->|Brother of| C1\nC8 -->|Mother of| C1\nC8 -->|Mother of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 224,
+        "total_tokens": 1780,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:26.879Z",
+      "finishedAt": "2026-09-10T17:46:26.879Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Catherine Morland\"]\nC2[\"Henry Tilney\"]\nC3[\"Eleanor Tilney\"]\nC4[\"General Tilney\"]\nC5[\"Isabella Thorpe\"]\nC6[\"John Thorpe\"]\nC7[\"James Morland\"]\nC8[\"Mrs. Morland\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Sister of| C2\nC4 -->|Father of| C2\nC4 -->|Father of| C3\nC4 -->|Commands| C2\nC4 -->|Commands| C3\nC1 -->|Friend of| C5\nC5 -->|Betrays| C1\nC5 -->|Engaged to| C7\nC6 -->|Friend of| C1\nC6 -->|Rival of| C2\nC7 -->|Brother of| C1\nC8 -->|Mother of| C1\nC8 -->|Mother of| C7",
+  "mermaidHash": "c05b7a2903ef1f39917aa1a1516a14d437613c3121db73cac746c2b52917a094",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c05b7a2903ef1f39917aa1a1516a14d437613c3121db73cac746c2b52917a094",
+    "svgHash": "eb8e7190a73080d1ff7e53ad2a770f0f47daa26de15abc079b581d2344c0051e",
+    "validatedAt": "2026-09-10T17:46:28.165Z",
+    "width": 1049.8802490234375,
+    "height": 507.75
+  },
+  "generatedAt": "2026-09-10T17:46:26.879Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 224,
+    "total_tokens": 1780,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

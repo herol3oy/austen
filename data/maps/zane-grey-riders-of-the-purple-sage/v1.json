@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "zane-grey/riders-of-the-purple-sage",
+  "metadata": {
+    "title": "Riders of the Purple Sage",
+    "authors": [
+      "Zane Grey"
+    ],
+    "year": "1912"
+  },
+  "inputHash": "8d82f16feea641f30d52ba3f9fc09c4e7759126cdaa5a8e2ea250f34f1e8d547",
+  "promptHash": "b9790c4e702dc4b1a29c2a06371b306de7287258c8bd002d39ced643924773be",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:34.672Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:34.672Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jane Withersteen\"]\nC2[\"Lassiter\"]\nC3[\"Bern Venters\"]\nC4[\"Elizabeth Erne\"]\nC5[\"Bess\"]\nC6[\"Judge Froll\"]\nC7[\"Tull\"]\nC8[\"Oldring\"]\nC1 -->|Protects| C5\nC1 -->|Friend of| C3\nC1 -->|Enemy of| C7\nC2 -->|Loves| C1\nC2 -->|Brother of| C4\nC2 -->|Enemy of| C8\nC3 -->|Loves| C5\nC3 -->|Enemy of| C8\nC4 -->|Sister of| C2\nC5 -->|Loves| C3\nC6 -->|Mormon leader of| C7\nC7 -->|Persecutes| C1\nC8 -->|Rustler leader of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 198,
+        "total_tokens": 1758,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:36.413Z",
+      "finishedAt": "2026-09-10T18:16:36.414Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jane Withersteen\"]\nC2[\"Lassiter\"]\nC3[\"Bern Venters\"]\nC4[\"Elizabeth Erne\"]\nC5[\"Bess\"]\nC6[\"Judge Froll\"]\nC7[\"Tull\"]\nC8[\"Oldring\"]\nC1 -->|Protects| C5\nC1 -->|Friend of| C3\nC1 -->|Enemy of| C7\nC2 -->|Loves| C1\nC2 -->|Brother of| C4\nC2 -->|Enemy of| C8\nC3 -->|Loves| C5\nC3 -->|Enemy of| C8\nC4 -->|Sister of| C2\nC5 -->|Loves| C3\nC6 -->|Mormon leader of| C7\nC7 -->|Persecutes| C1\nC8 -->|Rustler leader of| C3",
+  "mermaidHash": "b69954d87a7fe7e925f3efbb2dbc2e61277f946720c6bb66092d0d69c5f598f0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b69954d87a7fe7e925f3efbb2dbc2e61277f946720c6bb66092d0d69c5f598f0",
+    "svgHash": "9a6096174f2d2895e6392c7d6de62bfbfe580b8dc1d3616d5198cf83d3aedcbe",
+    "validatedAt": "2026-09-10T18:16:37.772Z",
+    "width": 1199.784912109375,
+    "height": 395.69134521484375
+  },
+  "generatedAt": "2026-09-10T18:16:36.413Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 198,
+    "total_tokens": 1758,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

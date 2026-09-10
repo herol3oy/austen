@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-history-of-mr-polly",
+  "metadata": {
+    "title": "The History of Mr. Polly",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1910"
+  },
+  "inputHash": "4845b863da79878ffd6290c0a4cd98c02af6cef8e0e71aad8a4f2b663a5c3649",
+  "promptHash": "e76b08cd8c6bd1b31344ae21ea9ada00a72e7ce796b68f647b489654b7af4bc9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:59.778Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:59.778Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Alfred Polly\"]\nC2[\"Miriam Larkins\"]\nC3[\"Johnson\"]\nC4[\"Annie Larkins\"]\nC5[\"Mr. Polly Sr.\"]\nC6[\"Aunt Larkins\"]\nC7[\"Uncle Jim\"]\nC8[\"Platt\"]\nC1 -->|Married to| C2\nC1 -->|Works for| C3\nC1 -->|Loves| C4\nC2 -->|Sister of| C4\nC1 -->|Son of| C5\nC1 -->|Nephew of| C6\nC1 -->|Nephew of| C7\nC1 -->|Friend of| C8\nC1 -->|Betrays| C2\nC1 -->|Leaves| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 166,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:01.215Z",
+      "finishedAt": "2026-09-10T17:42:01.216Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Alfred Polly\"]\nC2[\"Miriam Larkins\"]\nC3[\"Johnson\"]\nC4[\"Annie Larkins\"]\nC5[\"Mr. Polly Sr.\"]\nC6[\"Aunt Larkins\"]\nC7[\"Uncle Jim\"]\nC8[\"Platt\"]\nC1 -->|Married to| C2\nC1 -->|Works for| C3\nC1 -->|Loves| C4\nC2 -->|Sister of| C4\nC1 -->|Son of| C5\nC1 -->|Nephew of| C6\nC1 -->|Nephew of| C7\nC1 -->|Friend of| C8\nC1 -->|Betrays| C2\nC1 -->|Leaves| C3",
+  "mermaidHash": "9f44a35de080858c0b7df0d7da78d8badaa408ebbe7ce45158b042bcaa072d37",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9f44a35de080858c0b7df0d7da78d8badaa408ebbe7ce45158b042bcaa072d37",
+    "svgHash": "9439143fdcdfe35a999fdafe4f290d7ac9fd0d9f5f48719ab564b30be1c1077d",
+    "validatedAt": "2026-09-10T17:42:02.568Z",
+    "width": 693.7117919921875,
+    "height": 619.75
+  },
+  "generatedAt": "2026-09-10T17:42:01.215Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 166,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/a-tale-of-two-cities",
+  "metadata": {
+    "title": "A Tale of Two Cities",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1859"
+  },
+  "inputHash": "21650e2cb31ef591c2d3a36d6633d04b0b145d25eb1ecd4bc2491d406a090043",
+  "promptHash": "a0369e3dbe152246f3800bbc4435b55c8d6f84988db71942ab6e80b564d618e5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:49.664Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:49.664Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sydney Carton\"]\nC2[\"Charles Darnay\"]\nC3[\"Lucie Manette\"]\nC4[\"Dr. Alexandre Manette\"]\nC5[\"Madame Defarge\"]\nC6[\"Monsieur Defarge\"]\nC7[\"Jarvis Lorry\"]\nC8[\"Miss Pross\"]\nC1 -->|Loves| C3\nC1 -->|Resembles| C2\nC1 -->|Sacrifices himself for| C2\nC2 -->|Married to| C3\nC2 -->|Nephew of| C5\nC3 -->|Daughter of| C4\nC3 -->|Cares for| C4\nC4 -->|Father of| C3\nC5 -->|Wife of| C6\nC5 -->|Enemy of| C2\nC5 -->|Enemy of| C4\nC6 -->|Husband of| C5\nC6 -->|Friend of| C4\nC7 -->|Friend of| C4\nC7 -->|Friend of| C3\nC8 -->|Protects| C3\nC8 -->|Servant of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 251,
+        "total_tokens": 1809,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:51.540Z",
+      "finishedAt": "2026-09-10T17:29:51.540Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sydney Carton\"]\nC2[\"Charles Darnay\"]\nC3[\"Lucie Manette\"]\nC4[\"Dr. Alexandre Manette\"]\nC5[\"Madame Defarge\"]\nC6[\"Monsieur Defarge\"]\nC7[\"Jarvis Lorry\"]\nC8[\"Miss Pross\"]\nC1 -->|Loves| C3\nC1 -->|Resembles| C2\nC1 -->|Sacrifices himself for| C2\nC2 -->|Married to| C3\nC2 -->|Nephew of| C5\nC3 -->|Daughter of| C4\nC3 -->|Cares for| C4\nC4 -->|Father of| C3\nC5 -->|Wife of| C6\nC5 -->|Enemy of| C2\nC5 -->|Enemy of| C4\nC6 -->|Husband of| C5\nC6 -->|Friend of| C4\nC7 -->|Friend of| C4\nC7 -->|Friend of| C3\nC8 -->|Protects| C3\nC8 -->|Servant of| C3",
+  "mermaidHash": "97d8d10f2c753e8dffecf4d6d67fd0c63661a796257fb7a39f0a075704cec9cb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "97d8d10f2c753e8dffecf4d6d67fd0c63661a796257fb7a39f0a075704cec9cb",
+    "svgHash": "b7951e79548bc966dbd407efb40d7d7160add834a5a536ad2d5885f1278f1d24",
+    "validatedAt": "2026-09-10T17:29:52.908Z",
+    "width": 1475.7890625,
+    "height": 415.6431579589844
+  },
+  "generatedAt": "2026-09-10T17:29:51.540Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 251,
+    "total_tokens": 1809,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

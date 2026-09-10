@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DiagramWorkspace from '../../components/DiagramWorkspace.astro';
+import { loadLibrary } from '../../lib/library';
+export async function getStaticPaths() {
+  const { maps } = await loadLibrary();
+  return maps.map(map => ({ params: { slug: map.book.slug }, props: { map } }));
+}
+const { map } = Astro.props;
+const { book, revision, svg, review } = map;
+const automatic = review.mode === 'automatic';
+const canonicalUrl = new URL(`${import.meta.env.BASE_URL}books/${book.slug}/`, Astro.site).href;
+---
+<BaseLayout title={`${book.title} — Austen`} canonicalUrl={canonicalUrl}>
+  <section class="library-intro"><p class="section-kicker">{automatic ? 'An AI-generated relationship map' : 'A reviewed relationship map'}</p><h1>{book.title}</h1><p>{book.authors.join(', ')} · Year: {book.year || 'unknown'}</p><p class="metadata-note">Metadata: <a href={`${book.sourceUrl}${book.sourceAnchor ? `#${book.sourceAnchor}` : ''}`}>Sudalyph</a> · <a href={book.ebookUrl}>Standard Ebooks edition</a></p><p class="metadata-note">Map generated {revision.generatedAt.slice(0, 10)} · {automatic ? `Published ${review.publishedAt.slice(0, 10)}` : `Reviewed ${review.reviewedAt.slice(0, 10)} · ${review.reviewer}`}</p></section>
+  <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
+  <DiagramWorkspace svg={svg} initial={{ book, mermaid: revision.mermaid, generatedAt: revision.generatedAt, canonicalUrl }} />
+</BaseLayout>

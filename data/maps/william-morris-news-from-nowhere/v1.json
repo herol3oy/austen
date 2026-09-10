@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-morris/news-from-nowhere",
+  "metadata": {
+    "title": "News from Nowhere",
+    "authors": [
+      "William Morris"
+    ],
+    "year": "1890"
+  },
+  "inputHash": "367c0d00d5763c0c2d5f80ad04d822cf7fd9aedef69dd867af708c9d79c56fdf",
+  "promptHash": "b6f2be8b75b6b99293ed538645c0e39731cf027e14a8075ed4a057d694979ebc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:22.417Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:22.417Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"William Guest\"]\nC2[\"Ellen\"]\nC3[\"Old Hammond\"]\nC4[\"Dick Hammond\"]\nC5[\"Clara\"]\nC6[\"Annie\"]\nC7[\"Boffin\"]\nC1 -->|Guest of| C4\nC1 -->|Meets| C2\nC1 -->|Discusses with| C3\nC4 -->|Friend of| C1\nC4 -->|Loves| C5\nC4 -->|Serves as guide to| C1\nC5 -->|Friend of| C4\nC6 -->|Friend of| C4\nC7 -->|Friend of| C4\nC2 -->|Granddaughter of| C3\nC3 -->|Grandfather of| C2\nC3 -->|Great-grandfather of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 173,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:23.929Z",
+      "finishedAt": "2026-09-10T18:14:23.929Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"William Guest\"]\nC2[\"Ellen\"]\nC3[\"Old Hammond\"]\nC4[\"Dick Hammond\"]\nC5[\"Clara\"]\nC6[\"Annie\"]\nC7[\"Boffin\"]\nC1 -->|Guest of| C4\nC1 -->|Meets| C2\nC1 -->|Discusses with| C3\nC4 -->|Friend of| C1\nC4 -->|Loves| C5\nC4 -->|Serves as guide to| C1\nC5 -->|Friend of| C4\nC6 -->|Friend of| C4\nC7 -->|Friend of| C4\nC2 -->|Granddaughter of| C3\nC3 -->|Grandfather of| C2\nC3 -->|Great-grandfather of| C4",
+  "mermaidHash": "f3c8d2c20381f469f644b33ecb0f3edad239a51596a7aea98f2f5b3e70a384b0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f3c8d2c20381f469f644b33ecb0f3edad239a51596a7aea98f2f5b3e70a384b0",
+    "svgHash": "23ebffe206ac65eb2896abc65d7ddf0b9057e6e1afe472962d71ff7b9f82524c",
+    "validatedAt": "2026-09-10T18:14:25.254Z",
+    "width": 1253.811279296875,
+    "height": 412.25
+  },
+  "generatedAt": "2026-09-10T18:14:23.929Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 173,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

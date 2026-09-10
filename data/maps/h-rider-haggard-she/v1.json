@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-rider-haggard/she",
+  "metadata": {
+    "title": "She",
+    "authors": [
+      "H. Rider Haggard"
+    ],
+    "year": "1886"
+  },
+  "inputHash": "fdce59d7925449e3c1e8212989f5901f31dd27812303f1fc26383e43f41eb7f4",
+  "promptHash": "f2c30859ee562c2b49bc32ee3927b2294cc13fb452986d57fbf97d2667474852",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:33.658Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:33.659Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Leo Vincey\"]\nC2[\"Holly\"]\nC3[\"Ayesha\"]\nC4[\"Ustane\"]\nC5[\"Billali\"]\nC6[\"Job\"]\nC7[\"Kallikrates\"]\nC1 -->|Descendant of| C7\nC3 -->|Loves| C7\nC3 -->|Believes reincarnation of| C7\nC4 -->|Loves| C1\nC3 -->|Kills| C4\nC5 -->|Serves| C3\nC2 -->|Friend of| C1\nC6 -->|Servant of| C1\nC3 -->|Tests| C1\nC1 -->|Rejects| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 152,
+        "total_tokens": 1710,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:34.943Z",
+      "finishedAt": "2026-09-10T17:42:34.943Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Leo Vincey\"]\nC2[\"Holly\"]\nC3[\"Ayesha\"]\nC4[\"Ustane\"]\nC5[\"Billali\"]\nC6[\"Job\"]\nC7[\"Kallikrates\"]\nC1 -->|Descendant of| C7\nC3 -->|Loves| C7\nC3 -->|Believes reincarnation of| C7\nC4 -->|Loves| C1\nC3 -->|Kills| C4\nC5 -->|Serves| C3\nC2 -->|Friend of| C1\nC6 -->|Servant of| C1\nC3 -->|Tests| C1\nC1 -->|Rejects| C3",
+  "mermaidHash": "89f1ff2cf93ac086359dc1f242314dea1b13d9bfbbc7c8dd96a8ef404116e2d8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "89f1ff2cf93ac086359dc1f242314dea1b13d9bfbbc7c8dd96a8ef404116e2d8",
+    "svgHash": "a9c06ce2c0fd3313f4955587cf405e142dbd2142fa6bbafda6ea8e87201c3cba",
+    "validatedAt": "2026-09-10T17:42:36.228Z",
+    "width": 916.4199829101562,
+    "height": 259
+  },
+  "generatedAt": "2026-09-10T17:42:34.943Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 152,
+    "total_tokens": 1710,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "christopher-morley/parnassus-on-wheels",
+  "metadata": {
+    "title": "Parnassus on Wheels",
+    "authors": [
+      "Christopher Morley"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "c6f6d3b45cdee034659c524c940babe55068b894905c0e132d350220f6a01c97",
+  "promptHash": "b1b828d534bef11a997c9ef81fa548b25d5f0929961692de3f51001d20bf656c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:09.858Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:09.858Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Helen McGill\"]\nC2[\"Andrew McGill\"]\nC3[\"Roger Mifflin\"]\nC4[\"Peg\"]\nC5[\"Sabine\"]\nC6[\"Mr. Bock\"]\nC1 -->|Sister of| C2\nC1 -->|Marries| C3\nC2 -->|Brother of| C1\nC3 -->|Marries| C1\nC3 -->|Owns| C4\nC3 -->|Owns| C5\nC6 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 112,
+        "total_tokens": 1673,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:11.814Z",
+      "finishedAt": "2026-09-10T17:31:11.814Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Helen McGill\"]\nC2[\"Andrew McGill\"]\nC3[\"Roger Mifflin\"]\nC4[\"Peg\"]\nC5[\"Sabine\"]\nC6[\"Mr. Bock\"]\nC1 -->|Sister of| C2\nC1 -->|Marries| C3\nC2 -->|Brother of| C1\nC3 -->|Marries| C1\nC3 -->|Owns| C4\nC3 -->|Owns| C5\nC6 -->|Friend of| C2",
+  "mermaidHash": "f896446ebbd0ff482eb67a2ac6e7ab4faab16f3dbe3174648283c541264f76b9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f896446ebbd0ff482eb67a2ac6e7ab4faab16f3dbe3174648283c541264f76b9",
+    "svgHash": "8302a9bb05c671e39066bedabbcbcd175aea54ce91130f054ea1b8de16283e9d",
+    "validatedAt": "2026-09-10T17:31:13.118Z",
+    "width": 631.5512084960938,
+    "height": 280
+  },
+  "generatedAt": "2026-09-10T17:31:11.814Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 112,
+    "total_tokens": 1673,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-island-of-doctor-moreau",
+  "metadata": {
+    "title": "The Island of Doctor Moreau",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1896"
+  },
+  "inputHash": "e8a21eb135c51e67eaa202e09d2a5cea878ea23fbe9b1a58cb4e3d967b1d6879",
+  "promptHash": "74766c2ed59c76c90d8c493b747a4226d41f4c42abe0c1bedf246efaea00a468",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:05.888Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:05.888Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Edward Prendick\"]\nC2[\"Doctor Moreau\"]\nC3[\"Montgomery\"]\nC4[\"M'ling\"]\nC5[\"The Sayer of the Law\"]\nC6[\"The Hyena-Swine\"]\nC7[\"The Leopard-Man\"]\nC8[\"The Ape-Man\"]\nC1 -->|Narrator of| C2\nC2 -->|Creates Beast Folk| C3\nC3 -->|Assistant of| C2\nC3 -->|Protects| C1\nC4 -->|Serves| C2\nC5 -->|Enforces Law among| C8\nC6 -->|Enemy of| C1\nC7 -->|Hunted by| C2\nC8 -->|Follower of| C5\nC2 -->|Ruler of| C5\nC1 -->|Fears| C6\nC2 -->|Kills| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 196,
+        "total_tokens": 1758,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:07.807Z",
+      "finishedAt": "2026-09-10T17:42:07.807Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Edward Prendick\"]\nC2[\"Doctor Moreau\"]\nC3[\"Montgomery\"]\nC4[\"M'ling\"]\nC5[\"The Sayer of the Law\"]\nC6[\"The Hyena-Swine\"]\nC7[\"The Leopard-Man\"]\nC8[\"The Ape-Man\"]\nC1 -->|Narrator of| C2\nC2 -->|Creates Beast Folk| C3\nC3 -->|Assistant of| C2\nC3 -->|Protects| C1\nC4 -->|Serves| C2\nC5 -->|Enforces Law among| C8\nC6 -->|Enemy of| C1\nC7 -->|Hunted by| C2\nC8 -->|Follower of| C5\nC2 -->|Ruler of| C5\nC1 -->|Fears| C6\nC2 -->|Kills| C7",
+  "mermaidHash": "46366a4703bf2302390be12924c8db1382114ade4feff4cc46448dd6778ca7da",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "46366a4703bf2302390be12924c8db1382114ade4feff4cc46448dd6778ca7da",
+    "svgHash": "42a207582c73ca7b543aff322285df1c738c53cc141275837307ae1f5f883bc9",
+    "validatedAt": "2026-09-10T17:42:09.202Z",
+    "width": 1198.15478515625,
+    "height": 344.25
+  },
+  "generatedAt": "2026-09-10T17:42:07.807Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 196,
+    "total_tokens": 1758,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "selma-lagerlof/the-story-of-gosta-berling/pauline-bancroft-flach",
+  "metadata": {
+    "title": "The Story of Gösta Berling",
+    "authors": [
+      "Selma Lagerlöf"
+    ],
+    "year": "1898"
+  },
+  "inputHash": "2bfeb3316f2a3eb8cd79683d0c7424a3028e4731cc6e8f97302dd01f7ff5e881",
+  "promptHash": "4e1ad23d301664f7d03439840d1a6126866e1510edabbd66fb71567b9387bde4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:04.136Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:04.137Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Gösta Berling\"]\nC2[\"Margareta Celsing\"]\nC3[\"Marianne Sinclaire\"]\nC4[\"Anna Stjärnhök\"]\nC5[\"Elisabeth Dohna\"]\nC6[\"Henrik Dohna\"]\nC7[\"Sintram\"]\nC8[\"Major Samzelius\"]\nC1 -->|Loves| C2\nC1 -->|Loves| C3\nC1 -->|Loves| C4\nC1 -->|Married to| C5\nC5 -->|Married to| C6\nC6 -->|Serves| C7\nC7 -->|Enemy of| C1\nC8 -->|Married to| C2\nC2 -->|Betrays| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 168,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:06.794Z",
+      "finishedAt": "2026-09-10T18:09:06.794Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Gösta Berling\"]\nC2[\"Margareta Celsing\"]\nC3[\"Marianne Sinclaire\"]\nC4[\"Anna Stjärnhök\"]\nC5[\"Elisabeth Dohna\"]\nC6[\"Henrik Dohna\"]\nC7[\"Sintram\"]\nC8[\"Major Samzelius\"]\nC1 -->|Loves| C2\nC1 -->|Loves| C3\nC1 -->|Loves| C4\nC1 -->|Married to| C5\nC5 -->|Married to| C6\nC6 -->|Serves| C7\nC7 -->|Enemy of| C1\nC8 -->|Married to| C2\nC2 -->|Betrays| C8",
+  "mermaidHash": "b1738f69104451cb376a4a6e96f4c93817cd1e3b77beaa487aa9c0a71b86ed10",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b1738f69104451cb376a4a6e96f4c93817cd1e3b77beaa487aa9c0a71b86ed10",
+    "svgHash": "37d18df97fec7e57d60e2ee43428de1aaaebdb9df37c0bf78b566a350829bf5e",
+    "validatedAt": "2026-09-10T18:09:08.097Z",
+    "width": 970.7584228515625,
+    "height": 421.75
+  },
+  "generatedAt": "2026-09-10T18:09:06.794Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 168,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/macbeth",
+  "metadata": {
+    "title": "Macbeth",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1606"
+  },
+  "inputHash": "2bb298f53e18b091115ef6597edd3456535432dc6ca5370113666f0bbe6253da",
+  "promptHash": "fd61b660dee4d1f06da2a046dc44d29feeb68ff29aca700675e732a1071022ec",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:26.408Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:26.408Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Macbeth\"]\nC2[\"Lady Macbeth\"]\nC3[\"Duncan\"]\nC4[\"Banquo\"]\nC5[\"Macduff\"]\nC6[\"Malcolm\"]\nC7[\"The Three Witches\"]\nC1 -->|Married to| C2\nC1 -->|Serves| C3\nC1 -->|Kills| C3\nC1 -->|Friend of| C4\nC1 -->|Kills| C4\nC1 -->|Enemy of| C5\nC1 -->|Kills| C5\nC1 -->|Enemy of| C6\nC2 -->|Manipulates| C1\nC7 -->|Prophecies to| C1\nC7 -->|Prophecies to| C4\nC5 -->|Kills| C1\nC6 -->|Defeats| C1\nC3 -->|Father of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 196,
+        "total_tokens": 1751,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:27.828Z",
+      "finishedAt": "2026-09-10T18:15:27.829Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Macbeth\"]\nC2[\"Lady Macbeth\"]\nC3[\"Duncan\"]\nC4[\"Banquo\"]\nC5[\"Macduff\"]\nC6[\"Malcolm\"]\nC7[\"The Three Witches\"]\nC1 -->|Married to| C2\nC1 -->|Serves| C3\nC1 -->|Kills| C3\nC1 -->|Friend of| C4\nC1 -->|Kills| C4\nC1 -->|Enemy of| C5\nC1 -->|Kills| C5\nC1 -->|Enemy of| C6\nC2 -->|Manipulates| C1\nC7 -->|Prophecies to| C1\nC7 -->|Prophecies to| C4\nC5 -->|Kills| C1\nC6 -->|Defeats| C1\nC3 -->|Father of| C6",
+  "mermaidHash": "249098e50fa338d2d22fdbefa58e39c653f536ee24c63bf0d6d1dec91e2664e2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "249098e50fa338d2d22fdbefa58e39c653f536ee24c63bf0d6d1dec91e2664e2",
+    "svgHash": "19539173d9ed0efbda4fcedcfc81725d8a5997a4f507246bbb7e4cc059a38092",
+    "validatedAt": "2026-09-10T18:15:29.210Z",
+    "width": 976.775634765625,
+    "height": 518.5
+  },
+  "generatedAt": "2026-09-10T18:15:27.828Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 196,
+    "total_tokens": 1751,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

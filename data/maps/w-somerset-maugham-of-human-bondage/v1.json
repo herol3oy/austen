@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "w-somerset-maugham/of-human-bondage",
+  "metadata": {
+    "title": "Of Human Bondage",
+    "authors": [
+      "W. Somerset Maugham"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "8626e20709b5b5ca037e6e3010ec2e6c713298b7ab8eba528b86f90c014324b8",
+  "promptHash": "7283222a48f58b3f65aa31d448d455a25e949b098f21613a70c261c3563636e6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:35.875Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:35.875Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Philip Carey\"]\nC2[\"Mildred Rogers\"]\nC3[\"Sally Athelny\"]\nC4[\"Norah Nesbit\"]\nC5[\"Griffiths\"]\nC6[\"Thorpe Athelny\"]\nC7[\"Fanny Price\"]\nC1 -->|Loves| C2\nC2 -->|Betrays| C1\nC1 -->|Loves| C3\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Friend of| C1\nC5 -->|Seduces| C2\nC6 -->|Friend of| C1\nC7 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 147,
+        "total_tokens": 1708,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:37.306Z",
+      "finishedAt": "2026-09-10T18:12:37.306Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Philip Carey\"]\nC2[\"Mildred Rogers\"]\nC3[\"Sally Athelny\"]\nC4[\"Norah Nesbit\"]\nC5[\"Griffiths\"]\nC6[\"Thorpe Athelny\"]\nC7[\"Fanny Price\"]\nC1 -->|Loves| C2\nC2 -->|Betrays| C1\nC1 -->|Loves| C3\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Friend of| C1\nC5 -->|Seduces| C2\nC6 -->|Friend of| C1\nC7 -->|Loves| C1",
+  "mermaidHash": "5a6e8b6b9acb613e838d3b611b1a9d1a8f014192fa033dc7972d6675f9187d03",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5a6e8b6b9acb613e838d3b611b1a9d1a8f014192fa033dc7972d6675f9187d03",
+    "svgHash": "1fcfd84e421e52409ff2a707d4ff3c9ca295a26102d53a43bc6526ba040ab1d5",
+    "validatedAt": "2026-09-10T18:12:38.651Z",
+    "width": 693.8295288085938,
+    "height": 328.25
+  },
+  "generatedAt": "2026-09-10T18:12:37.306Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 147,
+    "total_tokens": 1708,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

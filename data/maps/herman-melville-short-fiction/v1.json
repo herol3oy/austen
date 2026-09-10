@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "herman-melville/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Herman Melville"
+    ],
+    "year": "1853–1856"
+  },
+  "inputHash": "c26dab3995069417abddb41836578042a72d6572ddfb3b529dcba0a82b66c464",
+  "promptHash": "61ae1e552aee7e3d7cb1f6ff112eed50c2650f6f02f75673e2d0792fafe78f5b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:39.920Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:39.921Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 151
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:40.991Z",
+      "finishedAt": "2026-09-10T17:43:40.991Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:43:40.991Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 151
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "alexandre-dumas/the-black-tulip/p-f-collier-and-son",
+  "metadata": {
+    "title": "The Black Tulip",
+    "authors": [
+      "Alexandre Dumas"
+    ],
+    "year": "1850"
+  },
+  "inputHash": "11208f0ded7c9c509a7d56cb84e1741d1034ec4a4305e1da6fb9ea8b98b1e6c1",
+  "promptHash": "dc6173fb7f5cf5edf38ba2f2756a8384d2c15c4a9fa5f0b0651f65a96f784258",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:50.559Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:50.559Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Cornelius van Baerle\"]\nC2[\"Rosa Gryphus\"]\nC3[\"Isaac Gryphus\"]\nC4[\"William of Orange\"]\nC5[\"Cornelius de Witt\"]\nC6[\"Johan de Witt\"]\nC7[\"Boextel\"]\nC8[\"Van Systens\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Father of| C2\nC3 -->|Jailer of| C1\nC4 -->|Orders arrest of| C1\nC4 -->|Enemy of| C5\nC4 -->|Enemy of| C6\nC5 -->|Brother of| C6\nC5 -->|Godfather of| C1\nC7 -->|Rival of| C1\nC7 -->|Steals from| C1\nC8 -->|President of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 196,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:52.058Z",
+      "finishedAt": "2026-09-10T17:24:52.058Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Cornelius van Baerle\"]\nC2[\"Rosa Gryphus\"]\nC3[\"Isaac Gryphus\"]\nC4[\"William of Orange\"]\nC5[\"Cornelius de Witt\"]\nC6[\"Johan de Witt\"]\nC7[\"Boextel\"]\nC8[\"Van Systens\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Father of| C2\nC3 -->|Jailer of| C1\nC4 -->|Orders arrest of| C1\nC4 -->|Enemy of| C5\nC4 -->|Enemy of| C6\nC5 -->|Brother of| C6\nC5 -->|Godfather of| C1\nC7 -->|Rival of| C1\nC7 -->|Steals from| C1\nC8 -->|President of| C4",
+  "mermaidHash": "778caf595eb7c26ea763e518b74e931cc2a2bff9595eb4d7422d431ca52438d2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "778caf595eb7c26ea763e518b74e931cc2a2bff9595eb4d7422d431ca52438d2",
+    "svgHash": "c7941b1c795054e24300fb326a5f3ccd08d13d11c9fab1258edcdfec29c10ddc",
+    "validatedAt": "2026-09-10T17:24:53.426Z",
+    "width": 1334.709228515625,
+    "height": 370.25
+  },
+  "generatedAt": "2026-09-10T17:24:52.058Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 196,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

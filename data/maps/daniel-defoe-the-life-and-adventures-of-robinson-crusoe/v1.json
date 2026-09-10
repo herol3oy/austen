@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "daniel-defoe/the-life-and-adventures-of-robinson-crusoe",
+  "metadata": {
+    "title": "The Life and Adventures of Robinson Crusoe",
+    "authors": [
+      "Daniel Defoe"
+    ],
+    "year": "1719"
+  },
+  "inputHash": "a5209732af07c83a80a0821fa3d62beb18ac2929d62492ca8aa8e53bf02328c1",
+  "promptHash": "a269dddbeb68c9a442d59837dc680c8e4f18bff919faa23702b820b5840db13f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:44.343Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:44.343Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Robinson Crusoe\"]\nC2[\"Friday\"]\nC3[\"Xury\"]\nC4[\"The Portuguese Captain\"]\nC5[\"Crusoe's Father\"]\nC6[\"Crusoe's Mother\"]\nC7[\"The English Captain\"]\nC8[\"Will Atkins\"]\nC1 -->|Parent of| C5\nC6 -->|Parent of| C1\nC5 -->|Married to| C6\nC1 -->|Saves| C2\nC2 -->|Serves| C1\nC1 -->|Friend of| C2\nC1 -->|Escapes with| C3\nC3 -->|Serves| C1\nC4 -->|Rescues| C1\nC4 -->|Helps| C1\nC1 -->|Commands| C7\nC7 -->|Serves| C1\nC1 -->|Commands| C8\nC8 -->|Serves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 200,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:45.654Z",
+      "finishedAt": "2026-09-10T17:31:45.654Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Robinson Crusoe\"]\nC2[\"Friday\"]\nC3[\"Xury\"]\nC4[\"The Portuguese Captain\"]\nC5[\"Crusoe's Father\"]\nC6[\"Crusoe's Mother\"]\nC7[\"The English Captain\"]\nC8[\"Will Atkins\"]\nC1 -->|Parent of| C5\nC6 -->|Parent of| C1\nC5 -->|Married to| C6\nC1 -->|Saves| C2\nC2 -->|Serves| C1\nC1 -->|Friend of| C2\nC1 -->|Escapes with| C3\nC3 -->|Serves| C1\nC4 -->|Rescues| C1\nC4 -->|Helps| C1\nC1 -->|Commands| C7\nC7 -->|Serves| C1\nC1 -->|Commands| C8\nC8 -->|Serves| C1",
+  "mermaidHash": "c65cc2cd0fffb8660292d8fc162c0c4aab56c71d1ba7f8ea090ebd36f602cdb2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c65cc2cd0fffb8660292d8fc162c0c4aab56c71d1ba7f8ea090ebd36f602cdb2",
+    "svgHash": "39bceca2ac3ed9be662764bba8879b9d2a7ad25310b8ff893a8fadd6c66cbbed",
+    "validatedAt": "2026-09-10T17:31:47.004Z",
+    "width": 1133.3355712890625,
+    "height": 559.25
+  },
+  "generatedAt": "2026-09-10T17:31:45.654Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 200,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

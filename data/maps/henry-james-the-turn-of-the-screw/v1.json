@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-james/the-turn-of-the-screw",
+  "metadata": {
+    "title": "The Turn of the Screw",
+    "authors": [
+      "Henry James"
+    ],
+    "year": "1898"
+  },
+  "inputHash": "75a7a4bc88854839612e18d85f4d09f60ee6ed44cacbea30c22fae70edce9e4e",
+  "promptHash": "5cb08c9db98e66edd5aeda9da85e1f9b5187acb43e9c011288e822cfd74e4fe4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:16.107Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:16.107Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"The Governess\"]\nC2[\"Miles\"]\nC3[\"Flora\"]\nC4[\"Mrs. Grose\"]\nC5[\"Peter Quint\"]\nC6[\"Miss Jessel\"]\nC7[\"The Uncle\"]\nC1 -->|Cares for| C2\nC1 -->|Cares for| C3\nC1 -->|Confides in| C4\nC4 -->|Serves| C7\nC7 -->|Guardian of| C2\nC7 -->|Guardian of| C3\nC7 -->|Employs| C1\nC5 -->|Haunts| C1\nC6 -->|Haunts| C1\nC5 -->|Corrupts| C2\nC6 -->|Corrupts| C3\nC5 -->|Former lover of| C6\nC4 -->|Witnessed| C5\nC4 -->|Witnessed| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 200,
+        "total_tokens": 1759,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:17.847Z",
+      "finishedAt": "2026-09-10T17:43:17.847Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"The Governess\"]\nC2[\"Miles\"]\nC3[\"Flora\"]\nC4[\"Mrs. Grose\"]\nC5[\"Peter Quint\"]\nC6[\"Miss Jessel\"]\nC7[\"The Uncle\"]\nC1 -->|Cares for| C2\nC1 -->|Cares for| C3\nC1 -->|Confides in| C4\nC4 -->|Serves| C7\nC7 -->|Guardian of| C2\nC7 -->|Guardian of| C3\nC7 -->|Employs| C1\nC5 -->|Haunts| C1\nC6 -->|Haunts| C1\nC5 -->|Corrupts| C2\nC6 -->|Corrupts| C3\nC5 -->|Former lover of| C6\nC4 -->|Witnessed| C5\nC4 -->|Witnessed| C6",
+  "mermaidHash": "1cccea1af28ff6f3fb754941dc929b0aec3e240afeeb1b709e70e3aea3072cc7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "1cccea1af28ff6f3fb754941dc929b0aec3e240afeeb1b709e70e3aea3072cc7",
+    "svgHash": "8558448014afced1658257099e02865b8f1c197d38103f85370d7e9c9de08bfc",
+    "validatedAt": "2026-09-10T17:43:19.174Z",
+    "width": 1181.7896728515625,
+    "height": 393.75
+  },
+  "generatedAt": "2026-09-10T17:43:17.847Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 200,
+    "total_tokens": 1759,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

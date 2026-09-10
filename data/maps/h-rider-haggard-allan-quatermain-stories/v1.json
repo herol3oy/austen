@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-rider-haggard/allan-quatermain-stories",
+  "metadata": {
+    "title": "Allan Quatermain Stories",
+    "authors": [
+      "H. Rider Haggard"
+    ],
+    "year": "1885–1912"
+  },
+  "inputHash": "aa8295842ea9e870ecfba634df922b133f2cdd30b4da6794c6a3297f44edc08f",
+  "promptHash": "21cea73ecc719a156bd46819ed54690a818c44b1daf6b537c538bce06dd56ae4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:27.827Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:27.827Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 2,
+        "total_tokens": 1568,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 158
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:28.689Z",
+      "finishedAt": "2026-09-10T17:42:28.689Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:42:28.689Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1566,
+    "completion_tokens": 2,
+    "total_tokens": 1568,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 158
+  }
+}

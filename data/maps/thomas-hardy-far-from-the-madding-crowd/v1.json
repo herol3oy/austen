@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hardy/far-from-the-madding-crowd",
+  "metadata": {
+    "title": "Far from the Madding Crowd",
+    "authors": [
+      "Thomas Hardy"
+    ],
+    "year": "1874"
+  },
+  "inputHash": "ba30d5c9b137e60e3fc2837aaacd45275fa7c82245420c1e5e3197865b41d1c8",
+  "promptHash": "dc60768793515d1ac22c2d62db0aff8d21674ef8f045d8d1cbb84f6736134e2c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:44.070Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:44.070Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Bathsheba Everdene\"]\nC2[\"Gabriel Oak\"]\nC3[\"William Boldwood\"]\nC4[\"Frank Troy\"]\nC5[\"Fanny Robin\"]\nC6[\"Joseph Poorgrass\"]\nC7[\"Liddy Smallbury\"]\nC1 -->|Marries| C2\nC1 -->|Loves| C4\nC1 -->|Rejects| C3\nC2 -->|Loves| C1\nC2 -->|Protects| C1\nC3 -->|Loves| C1\nC3 -->|Kills| C4\nC4 -->|Marries| C1\nC4 -->|Seduces| C5\nC4 -->|Abandons| C5\nC5 -->|Loves| C4\nC6 -->|Serves| C1\nC7 -->|Confidante of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 189,
+        "total_tokens": 1749,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:45.818Z",
+      "finishedAt": "2026-09-10T18:10:45.818Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Bathsheba Everdene\"]\nC2[\"Gabriel Oak\"]\nC3[\"William Boldwood\"]\nC4[\"Frank Troy\"]\nC5[\"Fanny Robin\"]\nC6[\"Joseph Poorgrass\"]\nC7[\"Liddy Smallbury\"]\nC1 -->|Marries| C2\nC1 -->|Loves| C4\nC1 -->|Rejects| C3\nC2 -->|Loves| C1\nC2 -->|Protects| C1\nC3 -->|Loves| C1\nC3 -->|Kills| C4\nC4 -->|Marries| C1\nC4 -->|Seduces| C5\nC4 -->|Abandons| C5\nC5 -->|Loves| C4\nC6 -->|Serves| C1\nC7 -->|Confidante of| C1",
+  "mermaidHash": "9322c744231448a3166af5a400b130d1f00d273710bd5259e580e8b67106f812",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9322c744231448a3166af5a400b130d1f00d273710bd5259e580e8b67106f812",
+    "svgHash": "90347ac94b87293f330a3e54f888b505eba407c8e4414d5ce514fbcad49848f8",
+    "validatedAt": "2026-09-10T18:10:47.131Z",
+    "width": 1290.9117431640625,
+    "height": 291.75
+  },
+  "generatedAt": "2026-09-10T18:10:45.818Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 189,
+    "total_tokens": 1749,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

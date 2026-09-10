@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "josiah-henson/father-hensons-story-of-his-own-life",
+  "metadata": {
+    "title": "Father Henson’s Story of His Own Life",
+    "authors": [
+      "Josiah Henson"
+    ],
+    "year": "1858"
+  },
+  "inputHash": "3921df79a6ca2d6404570eff0f9ded161f1b21f9b95ffa57e63c39037c761906",
+  "promptHash": "ea17c4d57441a8778677ca524198bcfcd7c202429ad63b9f2087e46babbc6f77",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:41.743Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:41.743Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1565,
+        "completion_tokens": 2,
+        "total_tokens": 1567,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 285
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:42.564Z",
+      "finishedAt": "2026-09-10T17:48:42.564Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:48:42.564Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2,
+    "total_tokens": 1567,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 285
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "booth-tarkington/the-magnificent-ambersons",
+  "metadata": {
+    "title": "The Magnificent Ambersons",
+    "authors": [
+      "Booth Tarkington"
+    ],
+    "year": "1918"
+  },
+  "inputHash": "f2a0788e8038fc84ab51635f2d64b40392cd3f0711264dc09ea7eb6adea3663f",
+  "promptHash": "00903045e349c26b42c7e4121d0d0e8c7ee5633e653a268e6a5b537db68a640e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:08.674Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:08.674Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"George Amberson Minafer\"]\nC2[\"Isabel Amberson Minafer\"]\nC3[\"Eugene Morgan\"]\nC4[\"Lucy Morgan\"]\nC5[\"Fanny Minafer\"]\nC6[\"Wilbur Minafer\"]\nC7[\"Major Amberson\"]\nC8[\"Aunt Amelia\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C6\nC2 -->|Married to| C6\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC3 -->|Father of| C4\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Sister of| C6\nC5 -->|Loves| C3\nC7 -->|Father of| C2\nC7 -->|Father of| C5\nC8 -->|Sister of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 201,
+        "total_tokens": 1764,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:10.220Z",
+      "finishedAt": "2026-09-10T17:29:10.220Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"George Amberson Minafer\"]\nC2[\"Isabel Amberson Minafer\"]\nC3[\"Eugene Morgan\"]\nC4[\"Lucy Morgan\"]\nC5[\"Fanny Minafer\"]\nC6[\"Wilbur Minafer\"]\nC7[\"Major Amberson\"]\nC8[\"Aunt Amelia\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C6\nC2 -->|Married to| C6\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC3 -->|Father of| C4\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Sister of| C6\nC5 -->|Loves| C3\nC7 -->|Father of| C2\nC7 -->|Father of| C5\nC8 -->|Sister of| C7",
+  "mermaidHash": "fc7fa9567c720dc1f52a6c1e647c4fc557557607ec02b001458272a3e39dc5c6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fc7fa9567c720dc1f52a6c1e647c4fc557557607ec02b001458272a3e39dc5c6",
+    "svgHash": "f8204e744f1a165e0b8f914be92d256258188ec941190c2ccea26d79b6bfef6a",
+    "validatedAt": "2026-09-10T17:29:11.631Z",
+    "width": 1390.08740234375,
+    "height": 368.9716796875
+  },
+  "generatedAt": "2026-09-10T17:29:10.220Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 201,
+    "total_tokens": 1764,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

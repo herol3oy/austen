@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-louis-stevenson/the-strange-case-of-dr-jekyll-and-mr-hyde",
+  "metadata": {
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "authors": [
+      "Robert Louis Stevenson"
+    ],
+    "year": "1886"
+  },
+  "inputHash": "a20576ff7e8bfdec5de3d14b9e762d005d9a9127e79463bb6d8316d26011b9b1",
+  "promptHash": "fa05ede51c8470d54fe0434a3e659cd6e5845c1f8fb5148344d8c978ab085b4f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:51.865Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:51.865Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dr. Henry Jekyll\"]\nC2[\"Mr. Edward Hyde\"]\nC3[\"Gabriel John Utterson\"]\nC4[\"Richard Enfield\"]\nC5[\"Dr. Hastie Lanyon\"]\nC6[\"Poole\"]\nC1 -->|Created| C2\nC1 -->|Transforms into| C2\nC3 -->|Friend of| C1\nC3 -->|Lawyer of| C1\nC3 -->|Investigates| C2\nC4 -->|Friend of| C3\nC4 -->|Relative of| C3\nC5 -->|Friend of| C1\nC5 -->|Rejects| C1\nC6 -->|Serves| C1\nC6 -->|Seeks help from| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1567,
+        "completion_tokens": 165,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 287
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:53.577Z",
+      "finishedAt": "2026-09-10T18:07:53.577Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dr. Henry Jekyll\"]\nC2[\"Mr. Edward Hyde\"]\nC3[\"Gabriel John Utterson\"]\nC4[\"Richard Enfield\"]\nC5[\"Dr. Hastie Lanyon\"]\nC6[\"Poole\"]\nC1 -->|Created| C2\nC1 -->|Transforms into| C2\nC3 -->|Friend of| C1\nC3 -->|Lawyer of| C1\nC3 -->|Investigates| C2\nC4 -->|Friend of| C3\nC4 -->|Relative of| C3\nC5 -->|Friend of| C1\nC5 -->|Rejects| C1\nC6 -->|Serves| C1\nC6 -->|Seeks help from| C3",
+  "mermaidHash": "c307e93328b80854cdc11917d3061d0ba0b9240b567a47f31e26b6dedcc009f6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c307e93328b80854cdc11917d3061d0ba0b9240b567a47f31e26b6dedcc009f6",
+    "svgHash": "1dbe4ee7a196018568798b3c12d87e14a5aadca3f9e1186d13d048ae522c0a9b",
+    "validatedAt": "2026-09-10T18:07:54.986Z",
+    "width": 1142.4520263671875,
+    "height": 273.75
+  },
+  "generatedAt": "2026-09-10T18:07:53.577Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 165,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 287
+  }
+}

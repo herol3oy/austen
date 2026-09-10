@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fernando-pessoa/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Fernando Pessoa"
+    ],
+    "year": "1918–1923"
+  },
+  "inputHash": "97bd4303afee47a3aae6553455e5d7c30eb986a5c81c297fcbdde6f1be3cbb6d",
+  "promptHash": "22f7f7da3f34a2e56551aa99eff21f5b40e90909ac7d3b77bd90c4de2ef4ebf1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:13.749Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:13.749Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 2,
+        "total_tokens": 1562,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 152
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:14.665Z",
+      "finishedAt": "2026-09-10T17:37:14.666Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:37:14.665Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 2,
+    "total_tokens": 1562,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 152
+  }
+}

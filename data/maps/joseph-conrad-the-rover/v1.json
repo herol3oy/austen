@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/the-rover",
+  "metadata": {
+    "title": "The Rover",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1923"
+  },
+  "inputHash": "6db5b8a63148c434383ea88b2a59ec10a0365044d901828d051c4f410c34c736",
+  "promptHash": "cffc63b14da0e8db141293621f14e371cb34fe85811544968ef4b604c58d0db5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:25.057Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:25.057Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 2,
+        "total_tokens": 1557,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:25.557Z",
+      "finishedAt": "2026-09-10T17:48:25.557Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:48:25.557Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2,
+    "total_tokens": 1557,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

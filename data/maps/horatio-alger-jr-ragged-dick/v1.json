@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "horatio-alger-jr/ragged-dick",
+  "metadata": {
+    "title": "Ragged Dick",
+    "authors": [
+      "Horatio Alger Jr."
+    ],
+    "year": "1868"
+  },
+  "inputHash": "e5df638fbfffe272914f7496ce746900d15b688138c1846c7ff6ad1e3175b704",
+  "promptHash": "44825e6afd58f7e27cb18adb3d4d693da415065b9d4f02a2e4c5c108d594289e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:36.489Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:36.489Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ragged Dick\"]\nC2[\"Frank Whitney\"]\nC3[\"Mr. Whitney\"]\nC4[\"Henry Fosdick\"]\nC5[\"Johnny Nolan\"]\nC6[\"Mr. Rockwell\"]\nC7[\"Mickey Maguire\"]\nC1 -->|Friend of| C2\nC3 -->|Father of| C2\nC3 -->|Mentor of| C1\nC1 -->|Friend of| C4\nC1 -->|Protects| C5\nC1 -->|Works for| C6\nC7 -->|Rival of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 127,
+        "total_tokens": 1685,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:37.620Z",
+      "finishedAt": "2026-09-10T17:44:37.620Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ragged Dick\"]\nC2[\"Frank Whitney\"]\nC3[\"Mr. Whitney\"]\nC4[\"Henry Fosdick\"]\nC5[\"Johnny Nolan\"]\nC6[\"Mr. Rockwell\"]\nC7[\"Mickey Maguire\"]\nC1 -->|Friend of| C2\nC3 -->|Father of| C2\nC3 -->|Mentor of| C1\nC1 -->|Friend of| C4\nC1 -->|Protects| C5\nC1 -->|Works for| C6\nC7 -->|Rival of| C1",
+  "mermaidHash": "557f874ef3c787b8218f6aec520076d575b502faa0ba0469b4c943a4c298b33f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "557f874ef3c787b8218f6aec520076d575b502faa0ba0469b4c943a4c298b33f",
+    "svgHash": "fa371899729eee6e3b5922dd874261dca954d94166ab418f660640541c658d97",
+    "validatedAt": "2026-09-10T17:44:38.889Z",
+    "width": 716.1038208007812,
+    "height": 364.75
+  },
+  "generatedAt": "2026-09-10T17:44:37.620Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 127,
+    "total_tokens": 1685,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "harry-harrison/the-stainless-steel-rat",
+  "metadata": {
+    "title": "The Stainless Steel Rat",
+    "authors": [
+      "Harry Harrison"
+    ],
+    "year": "1961"
+  },
+  "inputHash": "4c7be2d8025b9ace32309df6157c189fa988c1ecd0f34fa2b782c3c1b03f8060",
+  "promptHash": "6a9192f4b85519a84b2e1c8a654045fdaa52d47c9a37335a1bc5f1bbc4cb7fd2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:46.620Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:46.620Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"James Bolivar diGriz\"]\nC2[\"Angelina diGriz\"]\nC3[\"Harold P. Inskipp\"]\nC4[\"Professor Geist\"]\nC5[\"Bennet\"]\nC6[\"Zekial\"]\nC1 -->|Married to| C2\nC1 -->|Serves| C3\nC2 -->|Serves| C3\nC1 -->|Enemy of| C4\nC2 -->|Enemy of| C4\nC4 -->|Created| C5\nC4 -->|Created| C6\nC1 -->|Fights| C5\nC1 -->|Fights| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 144,
+        "total_tokens": 1702,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:48.050Z",
+      "finishedAt": "2026-09-10T17:42:48.050Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"James Bolivar diGriz\"]\nC2[\"Angelina diGriz\"]\nC3[\"Harold P. Inskipp\"]\nC4[\"Professor Geist\"]\nC5[\"Bennet\"]\nC6[\"Zekial\"]\nC1 -->|Married to| C2\nC1 -->|Serves| C3\nC2 -->|Serves| C3\nC1 -->|Enemy of| C4\nC2 -->|Enemy of| C4\nC4 -->|Created| C5\nC4 -->|Created| C6\nC1 -->|Fights| C5\nC1 -->|Fights| C6",
+  "mermaidHash": "b2bd0093ac4b6a37f530f25578a7bf4690628f51cb32612989ed7b99b70cbe22",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b2bd0093ac4b6a37f530f25578a7bf4690628f51cb32612989ed7b99b70cbe22",
+    "svgHash": "041b9ff55b24f352cc74ca2487b8682646554ea7dcac388d8073af2dab553d1e",
+    "validatedAt": "2026-09-10T17:42:49.366Z",
+    "width": 992.8338012695312,
+    "height": 344.75
+  },
+  "generatedAt": "2026-09-10T17:42:48.050Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 144,
+    "total_tokens": 1702,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

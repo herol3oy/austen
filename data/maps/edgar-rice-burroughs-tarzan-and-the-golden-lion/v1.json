@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/tarzan-and-the-golden-lion",
+  "metadata": {
+    "title": "Tarzan and the Golden Lion",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1923"
+  },
+  "inputHash": "7976498d1f7c82575a2e71ad099c397fc5727a5169824a7ffe2e0ea816412545",
+  "promptHash": "b207be0602f78bd037705ff7c413f81448a04a12d3897bd8abd5a3e383f129d3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:17.167Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:17.167Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jad-bal-ja\"]\nC3[\"La\"]\nC4[\"Esteban Miranda\"]\nC5[\"Flora Hawkes\"]\nC6[\"Stanley Obroski\"]\nC7[\"Jane Clayton\"]\nC8[\"Korak\"]\nC1 -->|Raised by| C2\nC1 -->|Loves| C3\nC1 -->|Married to| C7\nC1 -->|Father of| C8\nC4 -->|Impersonates| C1\nC4 -->|Allied with| C5\nC4 -->|Enemy of| C6\nC5 -->|Allied with| C4\nC6 -->|Rival of| C4\nC2 -->|Protects| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 166,
+        "total_tokens": 1729,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:18.948Z",
+      "finishedAt": "2026-09-10T17:34:18.948Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jad-bal-ja\"]\nC3[\"La\"]\nC4[\"Esteban Miranda\"]\nC5[\"Flora Hawkes\"]\nC6[\"Stanley Obroski\"]\nC7[\"Jane Clayton\"]\nC8[\"Korak\"]\nC1 -->|Raised by| C2\nC1 -->|Loves| C3\nC1 -->|Married to| C7\nC1 -->|Father of| C8\nC4 -->|Impersonates| C1\nC4 -->|Allied with| C5\nC4 -->|Enemy of| C6\nC5 -->|Allied with| C4\nC6 -->|Rival of| C4\nC2 -->|Protects| C1",
+  "mermaidHash": "39428812db23514d791a26fc1ac44b7ff319d404fcf1f9d0038bf6f0a1ad62f7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "39428812db23514d791a26fc1ac44b7ff319d404fcf1f9d0038bf6f0a1ad62f7",
+    "svgHash": "3e1ebc51869e06be61037ab4911b1a9134c8e181d2a4a4a9ae2c2e7aaf817e88",
+    "validatedAt": "2026-09-10T17:34:20.305Z",
+    "width": 762.2400512695312,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:34:18.948Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 166,
+    "total_tokens": 1729,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

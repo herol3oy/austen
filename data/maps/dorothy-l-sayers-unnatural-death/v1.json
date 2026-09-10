@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dorothy-l-sayers/unnatural-death",
+  "metadata": {
+    "title": "Unnatural Death",
+    "authors": [
+      "Dorothy L. Sayers"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "9af7eaffc0ed68d659b55de47ca6e5fd016252652ba5967591c77779bdcfbf4b",
+  "promptHash": "65bc44020c0c3119e0b20853e27095722f8f7d90dd8e08aa7e44ccad66adbbe8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:26.641Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:26.641Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Charles Parker\"]\nC3[\"Mervyn Bunter\"]\nC4[\"Agatha Dawson\"]\nC5[\"Mary Whittaker\"]\nC6[\"Vera Findlater\"]\nC7[\"Dr. Carr\"]\nC8[\"Miss Climpson\"]\nC1 -->|Friend of| C2\nC1 -->|Employed by| C3\nC1 -->|Investigates death of| C4\nC1 -->|Employs| C8\nC2 -->|Friend of| C1\nC3 -->|Serves| C1\nC4 -->|Aunt of| C5\nC4 -->|Patient of| C7\nC5 -->|Niece of| C4\nC5 -->|Cousin of| C6\nC5 -->|Murders| C4\nC5 -->|Attempts to kill| C6\nC6 -->|Cousin of| C5\nC7 -->|Doctor of| C4\nC8 -->|Assists| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 224,
+        "total_tokens": 1784,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:28.663Z",
+      "finishedAt": "2026-09-10T17:32:28.663Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Charles Parker\"]\nC3[\"Mervyn Bunter\"]\nC4[\"Agatha Dawson\"]\nC5[\"Mary Whittaker\"]\nC6[\"Vera Findlater\"]\nC7[\"Dr. Carr\"]\nC8[\"Miss Climpson\"]\nC1 -->|Friend of| C2\nC1 -->|Employed by| C3\nC1 -->|Investigates death of| C4\nC1 -->|Employs| C8\nC2 -->|Friend of| C1\nC3 -->|Serves| C1\nC4 -->|Aunt of| C5\nC4 -->|Patient of| C7\nC5 -->|Niece of| C4\nC5 -->|Cousin of| C6\nC5 -->|Murders| C4\nC5 -->|Attempts to kill| C6\nC6 -->|Cousin of| C5\nC7 -->|Doctor of| C4\nC8 -->|Assists| C1",
+  "mermaidHash": "224ece71cce0bee350336d32454ee1828c6bc20cb1d93f7b987827e51e7b988f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "224ece71cce0bee350336d32454ee1828c6bc20cb1d93f7b987827e51e7b988f",
+    "svgHash": "156332217d96a389daafde5e0ece5557730c57916d2004661b0b9d88f3f12b5e",
+    "validatedAt": "2026-09-10T17:32:30.037Z",
+    "width": 1143.1854248046875,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:32:28.663Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 224,
+    "total_tokens": 1784,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

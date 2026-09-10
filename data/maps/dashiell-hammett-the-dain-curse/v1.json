@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dashiell-hammett/the-dain-curse",
+  "metadata": {
+    "title": "The Dain Curse",
+    "authors": [
+      "Dashiell Hammett"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "a68bb6c478ece134d8de951245d2318f6988c675e5c7c4399fe2d63b1d06a222",
+  "promptHash": "f71ca2f157e47cb759cceba73c2a49f250f98376f092a9977c784e1d3a91dc9d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:54.725Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:54.725Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Continental Op\"]\nC2[\"Gabrielle Leggett\"]\nC3[\"Edgar Leggett\"]\nC4[\"Alice Dain Leggett\"]\nC5[\"Joseph Haldorn\"]\nC6[\"Owen Fitzstephan\"]\nC7[\"Eric Collinson\"]\nC8[\"Mickey Linehan\"]\nC1 -->|Investigates| C2\nC1 -->|Hired by| C3\nC3 -->|Father of| C2\nC4 -->|Mother of| C2\nC3 -->|Married to| C4\nC5 -->|Husband of| C4\nC5 -->|Cult leader of| C2\nC6 -->|Friend of| C1\nC6 -->|Betrays| C1\nC7 -->|Loves| C2\nC8 -->|Aids| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 184,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:56.921Z",
+      "finishedAt": "2026-09-10T17:31:56.921Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Continental Op\"]\nC2[\"Gabrielle Leggett\"]\nC3[\"Edgar Leggett\"]\nC4[\"Alice Dain Leggett\"]\nC5[\"Joseph Haldorn\"]\nC6[\"Owen Fitzstephan\"]\nC7[\"Eric Collinson\"]\nC8[\"Mickey Linehan\"]\nC1 -->|Investigates| C2\nC1 -->|Hired by| C3\nC3 -->|Father of| C2\nC4 -->|Mother of| C2\nC3 -->|Married to| C4\nC5 -->|Husband of| C4\nC5 -->|Cult leader of| C2\nC6 -->|Friend of| C1\nC6 -->|Betrays| C1\nC7 -->|Loves| C2\nC8 -->|Aids| C1",
+  "mermaidHash": "8ef0d8c323268dbdcf01000d7cc3ce2c62a7693532670d56ebd9dec066cbc344",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8ef0d8c323268dbdcf01000d7cc3ce2c62a7693532670d56ebd9dec066cbc344",
+    "svgHash": "49671660a8517302cc11ca9bef4da5ecb4bef544bbe72aa5e1de23b25a63db18",
+    "validatedAt": "2026-09-10T17:31:58.218Z",
+    "width": 1347.631591796875,
+    "height": 327
+  },
+  "generatedAt": "2026-09-10T17:31:56.921Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 184,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

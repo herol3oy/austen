@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "leo-tolstoy/short-fiction/various-translators",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Leo Tolstoy"
+    ],
+    "year": "1852–1911"
+  },
+  "inputHash": "a2ec8aa77f71da4a573a3686a3f222c0a5ef01056c24aaa6f429b5857e048143",
+  "promptHash": "468a7dbd682d6e580462d14a4747d19b7908f6af5b2dd1049f23855652aa43cf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:22.261Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:22.261Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 151
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:22.812Z",
+      "finishedAt": "2026-09-10T17:50:22.812Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:50:22.812Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 151
+  }
+}

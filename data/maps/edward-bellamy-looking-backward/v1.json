@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edward-bellamy/looking-backward",
+  "metadata": {
+    "title": "Looking Backward",
+    "authors": [
+      "Edward Bellamy"
+    ],
+    "year": "1888"
+  },
+  "inputHash": "fa91ce4a5a259186dc3080d4fc55e13ce81ec45aa19cffc022c70b1f4f837c36",
+  "promptHash": "f29e3b417a18c852ce641091276069b2aa9429d41aba8f29eec1d7cb345671c2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:40.878Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:40.878Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Julian West\"]\nC2[\"Dr. Leete\"]\nC3[\"Edith Leete\"]\nC4[\"Edith Bartlett\"]\nC5[\"Mr. Bartlett\"]\nC6[\"Mrs. Bartlett\"]\nC7[\"Sawyer\"]\nC1 -->|Loves| C3\nC1 -->|Guest of| C2\nC2 -->|Father of| C3\nC3 -->|Daughter of| C2\nC1 -->|Former fiance of| C4\nC4 -->|Sister of| C3\nC5 -->|Father of| C4\nC6 -->|Mother of| C4\nC1 -->|Friend of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 147,
+        "total_tokens": 1704,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:42.030Z",
+      "finishedAt": "2026-09-10T17:35:42.030Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Julian West\"]\nC2[\"Dr. Leete\"]\nC3[\"Edith Leete\"]\nC4[\"Edith Bartlett\"]\nC5[\"Mr. Bartlett\"]\nC6[\"Mrs. Bartlett\"]\nC7[\"Sawyer\"]\nC1 -->|Loves| C3\nC1 -->|Guest of| C2\nC2 -->|Father of| C3\nC3 -->|Daughter of| C2\nC1 -->|Former fiance of| C4\nC4 -->|Sister of| C3\nC5 -->|Father of| C4\nC6 -->|Mother of| C4\nC1 -->|Friend of| C7",
+  "mermaidHash": "4c98f42fbf74cbb44433b8988367c1d9a0ca7a64a1ebcc814f0f87637b428244",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4c98f42fbf74cbb44433b8988367c1d9a0ca7a64a1ebcc814f0f87637b428244",
+    "svgHash": "b0b6080e9a24a14b608598ef18bb3274daf9a9aeb0153c1f177ddf7500b1644b",
+    "validatedAt": "2026-09-10T17:35:43.348Z",
+    "width": 964.7080078125,
+    "height": 368.25
+  },
+  "generatedAt": "2026-09-10T17:35:42.030Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 147,
+    "total_tokens": 1704,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

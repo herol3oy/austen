@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "laurence-sterne/the-life-and-opinions-of-tristram-shandy-gentleman",
+  "metadata": {
+    "title": "The Life and Opinions of Tristram Shandy, Gentleman",
+    "authors": [
+      "Laurence Sterne"
+    ],
+    "year": "1759"
+  },
+  "inputHash": "80f2b41d03b8b7f87eb56a0c902edebe943cf93e7964872e78ebb22bece00e55",
+  "promptHash": "c32907eb4d7d350d7de8e38dfe44c0f61d4fda2a05ee09fc360d57e69f1f016d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:12.066Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:12.066Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tristram Shandy\"]\nC2[\"Walter Shandy\"]\nC3[\"Toby Shandy\"]\nC4[\"Mrs Shandy\"]\nC5[\"Yorick\"]\nC6[\"Trim\"]\nC7[\"Dr Slop\"]\nC8[\"Susannah\"]\nC2 -->|Parent of| C1\nC4 -->|Parent of| C1\nC2 -->|Married to| C4\nC2 -->|Sibling of| C3\nC3 -->|Uncle of| C1\nC6 -->|Serves| C3\nC5 -->|Friend of| C3\nC7 -->|Attends| C1\nC8 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1569,
+        "completion_tokens": 151,
+        "total_tokens": 1720,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 289
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:13.495Z",
+      "finishedAt": "2026-09-10T17:50:13.495Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tristram Shandy\"]\nC2[\"Walter Shandy\"]\nC3[\"Toby Shandy\"]\nC4[\"Mrs Shandy\"]\nC5[\"Yorick\"]\nC6[\"Trim\"]\nC7[\"Dr Slop\"]\nC8[\"Susannah\"]\nC2 -->|Parent of| C1\nC4 -->|Parent of| C1\nC2 -->|Married to| C4\nC2 -->|Sibling of| C3\nC3 -->|Uncle of| C1\nC6 -->|Serves| C3\nC5 -->|Friend of| C3\nC7 -->|Attends| C1\nC8 -->|Serves| C2",
+  "mermaidHash": "c66aa04796872475ff9787b6344f011ebb64acdc8179a6372824aea20c308ad6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c66aa04796872475ff9787b6344f011ebb64acdc8179a6372824aea20c308ad6",
+    "svgHash": "5a282b9c3ad8a7a713d01e178d97a556ada2b2cfc6f82ed1f4a5a4c3d2645068",
+    "validatedAt": "2026-09-10T17:50:14.803Z",
+    "width": 944.7164306640625,
+    "height": 342.5
+  },
+  "generatedAt": "2026-09-10T17:50:13.495Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1569,
+    "completion_tokens": 151,
+    "total_tokens": 1720,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 289
+  }
+}

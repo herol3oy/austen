@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "wilkie-collins/the-law-and-the-lady",
+  "metadata": {
+    "title": "The Law and the Lady",
+    "authors": [
+      "Wilkie Collins"
+    ],
+    "year": "1875"
+  },
+  "inputHash": "14552596e92a6462d4e16bec43569394012937aba3e477ef7ca7841dc93543e6",
+  "promptHash": "f94bb6c1598e0c1fdb0a9d3e4bb54a96241c18bc8d1be869287b2f6ff2f3a464",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:14.379Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:14.379Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Valeria Brinton\"]\nC2[\"Eustace Woodville\"]\nC3[\"Miserrimus Dexter\"]\nC4[\"Sara Macallan\"]\nC5[\"Benjamin\"]\nC6[\"Major Fitz-David\"]\nC7[\"Ariel\"]\nC8[\"Mr. Playmore\"]\nC1 -->|Married to| C2\nC1 -->|Investigates for| C2\nC2 -->|Previously married to| C4\nC2 -->|Accused of murdering| C4\nC3 -->|Obsessed with| C4\nC3 -->|Helps| C1\nC5 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Friend of| C2\nC6 -->|Aids| C1\nC7 -->|Cares for| C3\nC8 -->|Lawyer of| C1\nC8 -->|Advises| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 205,
+        "total_tokens": 1764,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:15.808Z",
+      "finishedAt": "2026-09-10T18:13:15.808Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Valeria Brinton\"]\nC2[\"Eustace Woodville\"]\nC3[\"Miserrimus Dexter\"]\nC4[\"Sara Macallan\"]\nC5[\"Benjamin\"]\nC6[\"Major Fitz-David\"]\nC7[\"Ariel\"]\nC8[\"Mr. Playmore\"]\nC1 -->|Married to| C2\nC1 -->|Investigates for| C2\nC2 -->|Previously married to| C4\nC2 -->|Accused of murdering| C4\nC3 -->|Obsessed with| C4\nC3 -->|Helps| C1\nC5 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Friend of| C2\nC6 -->|Aids| C1\nC7 -->|Cares for| C3\nC8 -->|Lawyer of| C1\nC8 -->|Advises| C1",
+  "mermaidHash": "c26c6b0e4e3f36545cebeef0eefe1def8a49444d8c01bf1293790efcdb2be6fa",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c26c6b0e4e3f36545cebeef0eefe1def8a49444d8c01bf1293790efcdb2be6fa",
+    "svgHash": "b891d99728d723e1e64a978132227e64da1e1b16a6419f2dc6fc7941ea542aa9",
+    "validatedAt": "2026-09-10T18:13:17.162Z",
+    "width": 1366.37451171875,
+    "height": 375.75
+  },
+  "generatedAt": "2026-09-10T18:13:15.808Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 205,
+    "total_tokens": 1764,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

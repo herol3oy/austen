@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/the-dukes-children",
+  "metadata": {
+    "title": "The Duke’s Children",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1880"
+  },
+  "inputHash": "cb14a3dfbec00ad829913b5f617de4e3b20a7af2a48e3db3b2229c4c57ecf5d5",
+  "promptHash": "bae8a9cf1be4d6c451d0c7b0ca00d2c5442b85d22cd2e336aeeaeddfb03e762f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:55.571Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:55.571Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Plantagenet Palliser\"]\nC2[\"Lady Glencora Palliser\"]\nC3[\"Lord Silverbridge\"]\nC4[\"Lady Mary Palliser\"]\nC5[\"Lord Gerald Palliser\"]\nC6[\"Isabel Boncassen\"]\nC7[\"Francis Tregear\"]\nC8[\"Mabel Grex\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC3 -->|Sibling of| C4\nC3 -->|Sibling of| C5\nC4 -->|Sibling of| C5\nC3 -->|Loves| C6\nC6 -->|Loves| C3\nC4 -->|Loves| C7\nC7 -->|Loves| C4\nC3 -->|Friend of| C7\nC8 -->|Loves| C3\nC1 -->|Opposes marriage of| C4\nC2 -->|Opposes marriage of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 257,
+        "total_tokens": 1816,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:57.192Z",
+      "finishedAt": "2026-09-10T17:26:57.192Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Plantagenet Palliser\"]\nC2[\"Lady Glencora Palliser\"]\nC3[\"Lord Silverbridge\"]\nC4[\"Lady Mary Palliser\"]\nC5[\"Lord Gerald Palliser\"]\nC6[\"Isabel Boncassen\"]\nC7[\"Francis Tregear\"]\nC8[\"Mabel Grex\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC3 -->|Sibling of| C4\nC3 -->|Sibling of| C5\nC4 -->|Sibling of| C5\nC3 -->|Loves| C6\nC6 -->|Loves| C3\nC4 -->|Loves| C7\nC7 -->|Loves| C4\nC3 -->|Friend of| C7\nC8 -->|Loves| C3\nC1 -->|Opposes marriage of| C4\nC2 -->|Opposes marriage of| C4",
+  "mermaidHash": "ed884a0ac8c058ce125db7a236ef6bdc0af901c0227c521133740d14465f37ae",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ed884a0ac8c058ce125db7a236ef6bdc0af901c0227c521133740d14465f37ae",
+    "svgHash": "b7b1a252f60c5e98f8d24bbd19dc509c3ac9eabf775616f3207ac4ae5ba44f84",
+    "validatedAt": "2026-09-10T17:26:58.712Z",
+    "width": 1503.1258544921875,
+    "height": 606.25
+  },
+  "generatedAt": "2026-09-10T17:26:57.192Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 257,
+    "total_tokens": 1816,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

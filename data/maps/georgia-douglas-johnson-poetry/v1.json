@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "georgia-douglas-johnson/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Georgia Douglas Johnson"
+    ],
+    "year": "1905–1928"
+  },
+  "inputHash": "b4710dcd671ffde1711d0fe0674dbf38c8efcc51be60fe1cb1040c17f58d046a",
+  "promptHash": "9a48d49a83694c71dd99576bc8350986d07cdb46aafcd7dba4145efea39ace7f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:07.574Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:07.574Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 2,
+        "total_tokens": 1561,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 151
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:08.194Z",
+      "finishedAt": "2026-09-10T17:41:08.194Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:41:08.194Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 2,
+    "total_tokens": 1561,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 151
+  }
+}

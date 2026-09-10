@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "walter-pater/marius-the-epicurean",
+  "metadata": {
+    "title": "Marius the Epicurean",
+    "authors": [
+      "Walter Pater"
+    ],
+    "year": "1885"
+  },
+  "inputHash": "220c076077d84767ab2f364c2d5522a764dd1e2174456a1d6347033d863d385a",
+  "promptHash": "df838d19d59cf9298d3272fda3ab3005d8cc8e949513ddf0e52f89c0afd0b159",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:52.745Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:52.745Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Marius\"]\nC2[\"Flavian\"]\nC3[\"Marcus Aurelius\"]\nC4[\"Cornelius Fronto\"]\nC5[\"Lucius Verus\"]\nC6[\"Cecilia\"]\nC7[\"Apuleius\"]\nC8[\"Commodus\"]\nC1 -->|Friend of| C2\nC2 -->|Mentor of| C1\nC1 -->|Serves| C3\nC3 -->|Adoptive father of| C8\nC3 -->|Co-emperor with| C5\nC4 -->|Mentor of| C3\nC1 -->|Friend of| C6\nC1 -->|Enemy of| C7\nC7 -->|Enemy of| C1\nC1 -->|Witnesses death of| C2\nC3 -->|Commands| C1\nC6 -->|Protects| C1\nC5 -->|Rival of| C3\nC8 -->|Succeeds| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 214,
+        "total_tokens": 1774,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:54.806Z",
+      "finishedAt": "2026-09-10T18:12:54.806Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Marius\"]\nC2[\"Flavian\"]\nC3[\"Marcus Aurelius\"]\nC4[\"Cornelius Fronto\"]\nC5[\"Lucius Verus\"]\nC6[\"Cecilia\"]\nC7[\"Apuleius\"]\nC8[\"Commodus\"]\nC1 -->|Friend of| C2\nC2 -->|Mentor of| C1\nC1 -->|Serves| C3\nC3 -->|Adoptive father of| C8\nC3 -->|Co-emperor with| C5\nC4 -->|Mentor of| C3\nC1 -->|Friend of| C6\nC1 -->|Enemy of| C7\nC7 -->|Enemy of| C1\nC1 -->|Witnesses death of| C2\nC3 -->|Commands| C1\nC6 -->|Protects| C1\nC5 -->|Rival of| C3\nC8 -->|Succeeds| C3",
+  "mermaidHash": "43dbddf6279454a2b17df310bb9d688043f4d14e965e9e96fad479d1b04685b0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "43dbddf6279454a2b17df310bb9d688043f4d14e965e9e96fad479d1b04685b0",
+    "svgHash": "fbe36b9d29c7867b091208b4c937897d0059186f9e01152258cef96793949637",
+    "validatedAt": "2026-09-10T18:12:56.141Z",
+    "width": 847.930908203125,
+    "height": 441.5
+  },
+  "generatedAt": "2026-09-10T18:12:54.806Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 214,
+    "total_tokens": 1774,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

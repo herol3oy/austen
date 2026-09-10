@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "willa-cather/the-professors-house",
+  "metadata": {
+    "title": "The Professor’s House",
+    "authors": [
+      "Willa Cather"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "d4134e75e97b6a925e4b490a2f05090dfc55b72e085a70a9949cfeeaddcb8fe6",
+  "promptHash": "dee382a2fcff5915de342858b58cc7edf2d88f112ba26721a025dd277125cc6c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:35.214Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:35.214Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Godfrey St. Peter\"]\nC2[\"Lillian St. Peter\"]\nC3[\"Rosamond St. Peter\"]\nC4[\"Louie Marsellus\"]\nC5[\"Kathleen St. Peter\"]\nC6[\"Tom Outland\"]\nC7[\"Roddy Blake\"]\nC8[\"Augusta\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C5\nC3 -->|Married to| C4\nC1 -->|Mentor of| C6\nC6 -->|Loves| C3\nC6 -->|Friend of| C7\nC7 -->|Betrays| C6\nC8 -->|Serves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 181,
+        "total_tokens": 1741,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:36.499Z",
+      "finishedAt": "2026-09-10T18:13:36.500Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Godfrey St. Peter\"]\nC2[\"Lillian St. Peter\"]\nC3[\"Rosamond St. Peter\"]\nC4[\"Louie Marsellus\"]\nC5[\"Kathleen St. Peter\"]\nC6[\"Tom Outland\"]\nC7[\"Roddy Blake\"]\nC8[\"Augusta\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C5\nC3 -->|Married to| C4\nC1 -->|Mentor of| C6\nC6 -->|Loves| C3\nC6 -->|Friend of| C7\nC7 -->|Betrays| C6\nC8 -->|Serves| C1",
+  "mermaidHash": "f27d6d5ea5118ce2f6221ee9b792adea0523fe91663e2017698f6dfeb4728f34",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f27d6d5ea5118ce2f6221ee9b792adea0523fe91663e2017698f6dfeb4728f34",
+    "svgHash": "5016a3cea602f94d5bc9938afc0b985c213ac201986674f8e77de80f8c80e85b",
+    "validatedAt": "2026-09-10T18:13:37.880Z",
+    "width": 1272.14501953125,
+    "height": 324.5
+  },
+  "generatedAt": "2026-09-10T18:13:36.499Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 181,
+    "total_tokens": 1741,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

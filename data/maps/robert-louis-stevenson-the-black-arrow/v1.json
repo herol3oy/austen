@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-louis-stevenson/the-black-arrow",
+  "metadata": {
+    "title": "The Black Arrow",
+    "authors": [
+      "Robert Louis Stevenson"
+    ],
+    "year": "1883"
+  },
+  "inputHash": "6d625a23a12f4c4b6d90658760f44d23552271cff4f07fb8e012b30eca93d1ae",
+  "promptHash": "ded21188fadf22080ea7fc4758f458541e95120ed10bdd306251dbfbafb6a04f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:46.062Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:46.062Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dick Shelton\"]\nC2[\"Joanna Sedley\"]\nC3[\"Sir Daniel Brackley\"]\nC4[\"John Matcham\"]\nC5[\"Sir Oliver Oates\"]\nC6[\"Elias Carter\"]\nC7[\"Lord Shoreby\"]\nC8[\"Alicia Risingham\"]\nC1 -->|Ward of| C3\nC3 -->|Guardian of| C1\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C4\nC4 -->|Ally of| C1\nC3 -->|Enemy of| C1\nC1 -->|Enemy of| C3\nC5 -->|Conspires with| C3\nC3 -->|Commands| C5\nC6 -->|Kills| C3\nC7 -->|Rival of| C1\nC8 -->|Loves| C1\nC3 -->|Betrays| C1\nC1 -->|Kills| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 220,
+        "total_tokens": 1777,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:48.047Z",
+      "finishedAt": "2026-09-10T18:07:48.047Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dick Shelton\"]\nC2[\"Joanna Sedley\"]\nC3[\"Sir Daniel Brackley\"]\nC4[\"John Matcham\"]\nC5[\"Sir Oliver Oates\"]\nC6[\"Elias Carter\"]\nC7[\"Lord Shoreby\"]\nC8[\"Alicia Risingham\"]\nC1 -->|Ward of| C3\nC3 -->|Guardian of| C1\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C4\nC4 -->|Ally of| C1\nC3 -->|Enemy of| C1\nC1 -->|Enemy of| C3\nC5 -->|Conspires with| C3\nC3 -->|Commands| C5\nC6 -->|Kills| C3\nC7 -->|Rival of| C1\nC8 -->|Loves| C1\nC3 -->|Betrays| C1\nC1 -->|Kills| C3",
+  "mermaidHash": "7e55ff44a3e2a648218d0663637b619ab54576f703062e2defe6d17f07bfa845",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7e55ff44a3e2a648218d0663637b619ab54576f703062e2defe6d17f07bfa845",
+    "svgHash": "6534ac247b670663a9fc6b7aa0bf26233a21c5fb2ea5ffe2a46d1e2e9c823266",
+    "validatedAt": "2026-09-10T18:07:49.455Z",
+    "width": 1056.43017578125,
+    "height": 495
+  },
+  "generatedAt": "2026-09-10T18:07:48.047Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 220,
+    "total_tokens": 1777,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "agatha-christie/the-big-four",
+  "metadata": {
+    "title": "The Big Four",
+    "authors": [
+      "Agatha Christie"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "44aef9b592ba08a1f926350fc41eb478a7286d9e0ed6a2b2a20add03a59ea286",
+  "promptHash": "0ca281b9953d9c445f42ce1a77cecc30e1c5b2a5a8ba9da31fe2e65fadaa8ed5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:00.959Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:00.959Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Hercule Poirot\"]\nC2[\"Arthur Hastings\"]\nC3[\"Inspector Japp\"]\nC4[\"Achille Poirot\"]\nC5[\"Li Chang Yen\"]\nC6[\"Madame Olivier\"]\nC7[\"Number Four\"]\nC1 -->|Friend of| C2\nC1 -->|Assists| C3\nC1 -->|Brother of| C4\nC1 -->|Enemy of| C5\nC1 -->|Enemy of| C7\nC5 -->|Leader of| C7\nC6 -->|Secretary of| C1\nC7 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 141,
+        "total_tokens": 1698,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:02.331Z",
+      "finishedAt": "2026-09-10T17:24:02.331Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Hercule Poirot\"]\nC2[\"Arthur Hastings\"]\nC3[\"Inspector Japp\"]\nC4[\"Achille Poirot\"]\nC5[\"Li Chang Yen\"]\nC6[\"Madame Olivier\"]\nC7[\"Number Four\"]\nC1 -->|Friend of| C2\nC1 -->|Assists| C3\nC1 -->|Brother of| C4\nC1 -->|Enemy of| C5\nC1 -->|Enemy of| C7\nC5 -->|Leader of| C7\nC6 -->|Secretary of| C1\nC7 -->|Enemy of| C1",
+  "mermaidHash": "5b5f828a194092819a59b5769fc1cd0931ef6155cdf95cef4309382ebefd344a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5b5f828a194092819a59b5769fc1cd0931ef6155cdf95cef4309382ebefd344a",
+    "svgHash": "1eea97dca956d2d07c67459cf2947e25f53702f2a1cfcf194afbad430ef38548",
+    "validatedAt": "2026-09-10T17:24:03.642Z",
+    "width": 1021.0899047851562,
+    "height": 463
+  },
+  "generatedAt": "2026-09-10T17:24:02.331Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 141,
+    "total_tokens": 1698,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

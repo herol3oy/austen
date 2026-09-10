@@ -1,0 +1,122 @@
+body.error-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  padding: clamp(1.25rem, 5vw, 4rem);
+  background:
+    radial-gradient(circle at 85% 10%, rgba(64, 88, 75, 0.09), transparent 28rem),
+    var(--color-paper);
+  text-align: left;
+}
+
+.error-shell {
+  position: relative;
+  width: min(100%, 940px);
+  padding: clamp(2rem, 7vw, 5.5rem);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  background: rgba(251, 249, 244, 0.72);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.error-portrait {
+  position: absolute;
+  right: clamp(-3rem, 0vw, 1rem);
+  bottom: -5.5rem;
+  width: clamp(190px, 32vw, 330px);
+  height: auto;
+  opacity: 0.075;
+  pointer-events: none;
+}
+
+.error-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-green);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.error-kicker::before {
+  width: 2.5rem;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.error-code {
+  margin-bottom: 0.6rem;
+  color: var(--color-ink-faint);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.error-title {
+  max-width: 7ch;
+  margin-bottom: 1.2rem;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 9vw, 7rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.88;
+}
+
+.error-copy {
+  max-width: 42ch;
+  margin-bottom: 2.25rem;
+  color: var(--color-ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.error-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid var(--color-green);
+  border-radius: var(--radius);
+  background: var(--color-green);
+  color: var(--color-surface);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.error-link:hover {
+  background: var(--color-green-dark);
+  transform: translateY(-1px);
+}
+
+.error-link span {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .error-shell {
+    min-height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .error-portrait {
+    right: -4rem;
+    bottom: -2rem;
+  }
+}

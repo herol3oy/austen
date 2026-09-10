@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-nesbit/the-phoenix-and-the-carpet",
+  "metadata": {
+    "title": "The Phoenix and the Carpet",
+    "authors": [
+      "E. Nesbit"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "61a606f34463de7e1610a42456e52ce496ae21e70c74c4d04e732be2664e1ddd",
+  "promptHash": "b033b9d81f56819c4a27c47e979dabae4dd9e6a0a1a71c65b8606c8e97acda92",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:17.818Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:17.818Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Cyril\"]\nC2[\"Anthea\"]\nC3[\"Robert\"]\nC4[\"Jane\"]\nC5[\"Lamb\"]\nC6[\"Phoenix\"]\nC7[\"Carpet\"]\nC8[\"Mrs. May\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC1 -->|Sibling of| C4\nC1 -->|Sibling of| C5\nC2 -->|Sibling of| C3\nC2 -->|Sibling of| C4\nC2 -->|Sibling of| C5\nC3 -->|Sibling of| C4\nC3 -->|Sibling of| C5\nC4 -->|Sibling of| C5\nC6 -->|Friend of| C1\nC6 -->|Friend of| C2\nC6 -->|Friend of| C3\nC6 -->|Friend of| C4\nC6 -->|Friend of| C5\nC7 -->|Serves| C1\nC7 -->|Serves| C2\nC7 -->|Serves| C3\nC7 -->|Serves| C4\nC7 -->|Serves| C5\nC8 -->|Cares for| C1\nC8 -->|Cares for| C2\nC8 -->|Cares for| C3\nC8 -->|Cares for| C4\nC8 -->|Cares for| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 316,
+        "total_tokens": 1877,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:19.659Z",
+      "finishedAt": "2026-09-10T17:33:19.659Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Cyril\"]\nC2[\"Anthea\"]\nC3[\"Robert\"]\nC4[\"Jane\"]\nC5[\"Lamb\"]\nC6[\"Phoenix\"]\nC7[\"Carpet\"]\nC8[\"Mrs. May\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC1 -->|Sibling of| C4\nC1 -->|Sibling of| C5\nC2 -->|Sibling of| C3\nC2 -->|Sibling of| C4\nC2 -->|Sibling of| C5\nC3 -->|Sibling of| C4\nC3 -->|Sibling of| C5\nC4 -->|Sibling of| C5\nC6 -->|Friend of| C1\nC6 -->|Friend of| C2\nC6 -->|Friend of| C3\nC6 -->|Friend of| C4\nC6 -->|Friend of| C5\nC7 -->|Serves| C1\nC7 -->|Serves| C2\nC7 -->|Serves| C3\nC7 -->|Serves| C4\nC7 -->|Serves| C5\nC8 -->|Cares for| C1\nC8 -->|Cares for| C2\nC8 -->|Cares for| C3\nC8 -->|Cares for| C4\nC8 -->|Cares for| C5",
+  "mermaidHash": "020d11bab14607d2ba3b6b169a5fe70453b743f3872fd31a0a35abf18798cb45",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "020d11bab14607d2ba3b6b169a5fe70453b743f3872fd31a0a35abf18798cb45",
+    "svgHash": "50bbf881e3bccdc521c3efefe213f874104339cfa20729b819844dc010a4eac7",
+    "validatedAt": "2026-09-10T17:33:21.061Z",
+    "width": 1204.960205078125,
+    "height": 837.5
+  },
+  "generatedAt": "2026-09-10T17:33:19.659Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 316,
+    "total_tokens": 1877,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

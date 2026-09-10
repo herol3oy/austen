@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "harriet-beecher-stowe/uncle-toms-cabin",
+  "metadata": {
+    "title": "Uncle Tom’s Cabin",
+    "authors": [
+      "Harriet Beecher Stowe"
+    ],
+    "year": "1852"
+  },
+  "inputHash": "09a39d7c2331958a5e895635a5903736617974900361e00dad416945b6e5e4ec",
+  "promptHash": "b0840ce966a6115d0dd2b5019f685d8acf4b23d03cd62881393a45905b0f8d1a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:40.785Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:40.785Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Uncle Tom\"]\nC2[\"Eliza\"]\nC3[\"George Harris\"]\nC4[\"Simon Legree\"]\nC5[\"Eva St. Clare\"]\nC6[\"Augustine St. Clare\"]\nC7[\"Topsy\"]\nC8[\"Cassie\"]\nC1 -->|Enslaved by| C4\nC1 -->|Friend of| C5\nC1 -->|Owned by| C6\nC2 -->|Married to| C3\nC2 -->|Friend of| C1\nC3 -->|Married to| C2\nC3 -->|Enemy of| C4\nC4 -->|Enslaves| C1\nC4 -->|Enslaves| C8\nC5 -->|Daughter of| C6\nC5 -->|Loves| C1\nC6 -->|Father of| C5\nC6 -->|Owns| C1\nC7 -->|Raised by| C6\nC8 -->|Enslaved by| C4\nC8 -->|Protects| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 230,
+        "total_tokens": 1794,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:42.521Z",
+      "finishedAt": "2026-09-10T17:42:42.521Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Uncle Tom\"]\nC2[\"Eliza\"]\nC3[\"George Harris\"]\nC4[\"Simon Legree\"]\nC5[\"Eva St. Clare\"]\nC6[\"Augustine St. Clare\"]\nC7[\"Topsy\"]\nC8[\"Cassie\"]\nC1 -->|Enslaved by| C4\nC1 -->|Friend of| C5\nC1 -->|Owned by| C6\nC2 -->|Married to| C3\nC2 -->|Friend of| C1\nC3 -->|Married to| C2\nC3 -->|Enemy of| C4\nC4 -->|Enslaves| C1\nC4 -->|Enslaves| C8\nC5 -->|Daughter of| C6\nC5 -->|Loves| C1\nC6 -->|Father of| C5\nC6 -->|Owns| C1\nC7 -->|Raised by| C6\nC8 -->|Enslaved by| C4\nC8 -->|Protects| C1",
+  "mermaidHash": "0dbbd0fa81ba3c96c44b2f3443c4636cd6f33b2a33f976e5999d89d8164d10ac",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0dbbd0fa81ba3c96c44b2f3443c4636cd6f33b2a33f976e5999d89d8164d10ac",
+    "svgHash": "35e338d62ae752e6317f8ed5bafb4a1cb6fac890d944a67c142847bed0ea5e77",
+    "validatedAt": "2026-09-10T17:42:43.874Z",
+    "width": 983.44384765625,
+    "height": 465.5
+  },
+  "generatedAt": "2026-09-10T17:42:42.521Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 230,
+    "total_tokens": 1794,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-invisible-man",
+  "metadata": {
+    "title": "The Invisible Man",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1897"
+  },
+  "inputHash": "97e88c2d92e02df4090560bdbc3e11b5fe79839e48b817e73ee2e5c5760fbeb3",
+  "promptHash": "76c8e9c0c7d8c1d36ffaa498a10aa8c36233844aa48ba39ae5188b2e271b799b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:02.575Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:02.575Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Griffin\"]\nC2[\"Kemp\"]\nC3[\"Mrs Hall\"]\nC4[\"Mr Hall\"]\nC5[\"Thomas Marvel\"]\nC6[\"Dr Cuss\"]\nC7[\"Reverend Bunting\"]\nC8[\"Colonel Adye\"]\nC1 -->|Lodger of| C3\nC1 -->|Attacks| C4\nC1 -->|Forces into service| C5\nC1 -->|Attacks| C7\nC1 -->|Reveals identity to| C6\nC1 -->|Former schoolmate of| C2\nC1 -->|Tells story to| C2\nC2 -->|Betrays| C1\nC2 -->|Alerts| C8\nC8 -->|Pursues| C1\nC1 -->|Threatens to kill| C2\nC1 -->|Kills| C8\nC5 -->|Steals from| C1\nC5 -->|Betrays| C1\nC6 -->|Witnesses| C1\nC3 -->|Suspects| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 235,
+        "total_tokens": 1795,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:04.530Z",
+      "finishedAt": "2026-09-10T17:42:04.530Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Griffin\"]\nC2[\"Kemp\"]\nC3[\"Mrs Hall\"]\nC4[\"Mr Hall\"]\nC5[\"Thomas Marvel\"]\nC6[\"Dr Cuss\"]\nC7[\"Reverend Bunting\"]\nC8[\"Colonel Adye\"]\nC1 -->|Lodger of| C3\nC1 -->|Attacks| C4\nC1 -->|Forces into service| C5\nC1 -->|Attacks| C7\nC1 -->|Reveals identity to| C6\nC1 -->|Former schoolmate of| C2\nC1 -->|Tells story to| C2\nC2 -->|Betrays| C1\nC2 -->|Alerts| C8\nC8 -->|Pursues| C1\nC1 -->|Threatens to kill| C2\nC1 -->|Kills| C8\nC5 -->|Steals from| C1\nC5 -->|Betrays| C1\nC6 -->|Witnesses| C1\nC3 -->|Suspects| C1",
+  "mermaidHash": "d67b39a3b07483084db43c9f2020d694876640e72ca4d3068f9be5a006779937",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d67b39a3b07483084db43c9f2020d694876640e72ca4d3068f9be5a006779937",
+    "svgHash": "9b0a13013ea947cfe0baec7aa63bec9e14ef8fea9025125d7619ff52868edc3b",
+    "validatedAt": "2026-09-10T17:42:05.881Z",
+    "width": 734.2357177734375,
+    "height": 757.5
+  },
+  "generatedAt": "2026-09-10T17:42:04.530Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 235,
+    "total_tokens": 1795,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

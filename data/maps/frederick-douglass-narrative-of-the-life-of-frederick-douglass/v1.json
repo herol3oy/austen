@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frederick-douglass/narrative-of-the-life-of-frederick-douglass",
+  "metadata": {
+    "title": "Narrative of the Life of Frederick Douglass",
+    "authors": [
+      "Frederick Douglass"
+    ],
+    "year": "1845"
+  },
+  "inputHash": "66451438e1f3c28cdde860254fb9834f7f463bac17f23d394184bb841e377291",
+  "promptHash": "aa7caef3fad3f3e5cafc095c83296d0d1fd46d0fe2a462bcaa9834b307ce50ab",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:12.227Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:12.227Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frederick Douglass\"]\nC2[\"Captain Anthony\"]\nC3[\"Lucretia Auld\"]\nC4[\"Thomas Auld\"]\nC5[\"Hugh Auld\"]\nC6[\"Sophia Auld\"]\nC7[\"Edward Covey\"]\nC8[\"William Freeland\"]\nC1 -->|Enslaved by| C2\nC2 -->|Parent of| C1\nC3 -->|Owns| C1\nC4 -->|Owns| C1\nC5 -->|Owns| C1\nC6 -->|Wife of| C5\nC6 -->|Teaches| C1\nC7 -->|Enslaves| C1\nC7 -->|Rival of| C1\nC8 -->|Enslaves| C1\nC1 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 177,
+        "total_tokens": 1739,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:13.658Z",
+      "finishedAt": "2026-09-10T17:38:13.658Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frederick Douglass\"]\nC2[\"Captain Anthony\"]\nC3[\"Lucretia Auld\"]\nC4[\"Thomas Auld\"]\nC5[\"Hugh Auld\"]\nC6[\"Sophia Auld\"]\nC7[\"Edward Covey\"]\nC8[\"William Freeland\"]\nC1 -->|Enslaved by| C2\nC2 -->|Parent of| C1\nC3 -->|Owns| C1\nC4 -->|Owns| C1\nC5 -->|Owns| C1\nC6 -->|Wife of| C5\nC6 -->|Teaches| C1\nC7 -->|Enslaves| C1\nC7 -->|Rival of| C1\nC8 -->|Enslaves| C1\nC1 -->|Friend of| C8",
+  "mermaidHash": "7802260dadbd531f316e7f1948a8903db55506929041289de88e61a36e80446f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7802260dadbd531f316e7f1948a8903db55506929041289de88e61a36e80446f",
+    "svgHash": "6f8bc5898ddf05e4f93f8567cd4620829eb724d3312e08e4b33e41c939dffb1b",
+    "validatedAt": "2026-09-10T17:38:14.989Z",
+    "width": 1007.50927734375,
+    "height": 406.75
+  },
+  "generatedAt": "2026-09-10T17:38:13.658Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 177,
+    "total_tokens": 1739,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dorothy-l-sayers/whose-body",
+  "metadata": {
+    "title": "Whose Body?",
+    "authors": [
+      "Dorothy L. Sayers"
+    ],
+    "year": "1923"
+  },
+  "inputHash": "fef96227385f10df8edc909ce0d3d9d93de9c6ec6495d0947f02431d472b9d0a",
+  "promptHash": "fee3522a26acc5d3890aa607cfcdc0d0a10e0c07de5de7b4a530b4fd963b31f1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:30.049Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:30.049Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Inspector Charles Parker\"]\nC3[\"Mervyn Bunter\"]\nC4[\"Mr. Thipps\"]\nC5[\"Alfred Thipps\"]\nC6[\"Sir Julian Freke\"]\nC7[\"Lady Levy\"]\nC8[\"Mr. Levy\"]\nC1 -->|Friend of| C2\nC1 -->|Employed by| C3\nC2 -->|Investigates| C4\nC4 -->|Mother of| C5\nC1 -->|Investigates| C6\nC6 -->|Kills| C8\nC6 -->|Dismembers| C8\nC7 -->|Wife of| C8\nC1 -->|Protects| C4\nC2 -->|Protects| C4\nC6 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 179,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:31.426Z",
+      "finishedAt": "2026-09-10T17:32:31.426Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lord Peter Wimsey\"]\nC2[\"Inspector Charles Parker\"]\nC3[\"Mervyn Bunter\"]\nC4[\"Mr. Thipps\"]\nC5[\"Alfred Thipps\"]\nC6[\"Sir Julian Freke\"]\nC7[\"Lady Levy\"]\nC8[\"Mr. Levy\"]\nC1 -->|Friend of| C2\nC1 -->|Employed by| C3\nC2 -->|Investigates| C4\nC4 -->|Mother of| C5\nC1 -->|Investigates| C6\nC6 -->|Kills| C8\nC6 -->|Dismembers| C8\nC7 -->|Wife of| C8\nC1 -->|Protects| C4\nC2 -->|Protects| C4\nC6 -->|Enemy of| C1",
+  "mermaidHash": "72010758e434092c1122d7903c0b18624427bdddfc60dd85a40c35ffa3b9aa02",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "72010758e434092c1122d7903c0b18624427bdddfc60dd85a40c35ffa3b9aa02",
+    "svgHash": "e5a1ccddb6f4c9404b6023d927883de0ec4a2da1fa0b7f8a998100d9080336f5",
+    "validatedAt": "2026-09-10T17:32:32.764Z",
+    "width": 1095.802001953125,
+    "height": 430
+  },
+  "generatedAt": "2026-09-10T17:32:31.426Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 179,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/framley-parsonage",
+  "metadata": {
+    "title": "Framley Parsonage",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1861"
+  },
+  "inputHash": "46e3c3cd2bd95ec0504c8f32d52b2d29f89f4998e6357e330dfc88b47eca8d36",
+  "promptHash": "c87b18eb3af30e2a4bfdde341f314f1b068266a5cf5ad0e79e7d6ad2b055b5b3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:34.766Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:34.766Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mark Robarts\"]\nC2[\"Fanny Robarts\"]\nC3[\"Lord Lufton\"]\nC4[\"Lucy Robarts\"]\nC5[\"Lady Lufton\"]\nC6[\"Mr. Crawley\"]\nC7[\"Mrs. Proudie\"]\nC8[\"Mr. Sowerby\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C3\nC1 -->|Serves| C8\nC3 -->|Loves| C4\nC3 -->|Son of| C5\nC4 -->|Sister of| C1\nC5 -->|Opposes marriage of| C3\nC5 -->|Patron of| C1\nC6 -->|Friend of| C1\nC7 -->|Enemy of| C6\nC8 -->|Betrays| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 180,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:36.202Z",
+      "finishedAt": "2026-09-10T17:26:36.202Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mark Robarts\"]\nC2[\"Fanny Robarts\"]\nC3[\"Lord Lufton\"]\nC4[\"Lucy Robarts\"]\nC5[\"Lady Lufton\"]\nC6[\"Mr. Crawley\"]\nC7[\"Mrs. Proudie\"]\nC8[\"Mr. Sowerby\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C3\nC1 -->|Serves| C8\nC3 -->|Loves| C4\nC3 -->|Son of| C5\nC4 -->|Sister of| C1\nC5 -->|Opposes marriage of| C3\nC5 -->|Patron of| C1\nC6 -->|Friend of| C1\nC7 -->|Enemy of| C6\nC8 -->|Betrays| C1",
+  "mermaidHash": "df809776666848a54b62d5702e619b1b322ab4f9836e4a546bb1acc49e86b0ce",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "df809776666848a54b62d5702e619b1b322ab4f9836e4a546bb1acc49e86b0ce",
+    "svgHash": "8f238297e415752743d3664dc60d0beb66a5bbbe7e9ee196e9c4de12f735b43e",
+    "validatedAt": "2026-09-10T17:26:37.607Z",
+    "width": 1292.77734375,
+    "height": 367.5
+  },
+  "generatedAt": "2026-09-10T17:26:36.202Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 180,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

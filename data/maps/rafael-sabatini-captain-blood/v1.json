@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "rafael-sabatini/captain-blood",
+  "metadata": {
+    "title": "Captain Blood",
+    "authors": [
+      "Rafael Sabatini"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "baa2629a28b6adc2d8733460ccdb1608191ff20a82d386b87cd68376722e37b9",
+  "promptHash": "8f74b6214b0c747e20ce4eea5cf1571047fbaca2be05c1e5884debed5e30cfa0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:04.221Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:04.221Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Peter Blood\"]\nC2[\"Arabella Bishop\"]\nC3[\"Colonel Bishop\"]\nC4[\"Jeremy Pitt\"]\nC5[\"Hagthorpe\"]\nC6[\"Levasseur\"]\nC7[\"Lord Julian Wade\"]\nC8[\"Don Diego de Espinosa\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Uncle of| C2\nC3 -->|Enemy of| C1\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Rival of| C6\nC1 -->|Kills| C6\nC1 -->|Enemy of| C7\nC7 -->|Rival of| C1\nC8 -->|Commands| C1\nC1 -->|Betrays| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 186,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:05.856Z",
+      "finishedAt": "2026-09-10T18:07:05.856Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Peter Blood\"]\nC2[\"Arabella Bishop\"]\nC3[\"Colonel Bishop\"]\nC4[\"Jeremy Pitt\"]\nC5[\"Hagthorpe\"]\nC6[\"Levasseur\"]\nC7[\"Lord Julian Wade\"]\nC8[\"Don Diego de Espinosa\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Uncle of| C2\nC3 -->|Enemy of| C1\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Rival of| C6\nC1 -->|Kills| C6\nC1 -->|Enemy of| C7\nC7 -->|Rival of| C1\nC8 -->|Commands| C1\nC1 -->|Betrays| C8",
+  "mermaidHash": "16f56a66dafd4348934d38b0ca0ccde3fc63d463de1986705b81e74107fae2e7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "16f56a66dafd4348934d38b0ca0ccde3fc63d463de1986705b81e74107fae2e7",
+    "svgHash": "b4f9e2d545b4e10073b02d716414d0d4266a7bd4954ff2a98db9fcf77f54ee44",
+    "validatedAt": "2026-09-10T18:07:07.195Z",
+    "width": 769.6611938476562,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T18:07:05.856Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 186,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

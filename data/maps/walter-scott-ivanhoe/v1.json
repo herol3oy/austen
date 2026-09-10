@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "walter-scott/ivanhoe",
+  "metadata": {
+    "title": "Ivanhoe",
+    "authors": [
+      "Walter Scott"
+    ],
+    "year": "1820"
+  },
+  "inputHash": "f8fcd10ebb49f4ba67fd290433e49df151457e405a9021cd66c79ce11264f5e0",
+  "promptHash": "5784c0e5e2d73884fe065bdb115d293fe9794b9cb78a24be573d4a4ae7f3a1f3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:57.172Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:57.172Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Wilfred of Ivanhoe\"]\nC2[\"Cedric\"]\nC3[\"Rowena\"]\nC4[\"Rebecca\"]\nC5[\"Brian de Bois-Guilbert\"]\nC6[\"King Richard\"]\nC7[\"Prince John\"]\nC8[\"Isaac of York\"]\nC1 -->|Son of| C2\nC2 -->|Ward of| C3\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC4 -->|Loves| C1\nC5 -->|Loves| C4\nC5 -->|Enemy of| C1\nC6 -->|Ally of| C1\nC7 -->|Enemy of| C6\nC7 -->|Rival of| C6\nC8 -->|Father of| C4\nC2 -->|Serves| C6\nC7 -->|Commands| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 195,
+        "total_tokens": 1751,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:58.910Z",
+      "finishedAt": "2026-09-10T18:12:58.910Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Wilfred of Ivanhoe\"]\nC2[\"Cedric\"]\nC3[\"Rowena\"]\nC4[\"Rebecca\"]\nC5[\"Brian de Bois-Guilbert\"]\nC6[\"King Richard\"]\nC7[\"Prince John\"]\nC8[\"Isaac of York\"]\nC1 -->|Son of| C2\nC2 -->|Ward of| C3\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC4 -->|Loves| C1\nC5 -->|Loves| C4\nC5 -->|Enemy of| C1\nC6 -->|Ally of| C1\nC7 -->|Enemy of| C6\nC7 -->|Rival of| C6\nC8 -->|Father of| C4\nC2 -->|Serves| C6\nC7 -->|Commands| C5",
+  "mermaidHash": "02c384bef941079b25069ee3c375d99d5e863f626bd9a32c5e082a6f4d1d1c25",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "02c384bef941079b25069ee3c375d99d5e863f626bd9a32c5e082a6f4d1d1c25",
+    "svgHash": "54927fec20339f786a1eeb5f9aac0a9f59f5d46e03d61ca62c768fe869ae140f",
+    "validatedAt": "2026-09-10T18:13:00.258Z",
+    "width": 1459.81787109375,
+    "height": 336.5
+  },
+  "generatedAt": "2026-09-10T18:12:58.910Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 195,
+    "total_tokens": 1751,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

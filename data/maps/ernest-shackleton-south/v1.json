@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ernest-shackleton/south",
+  "metadata": {
+    "title": "South!",
+    "authors": [
+      "Ernest Shackleton"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "70b7b74db4847f3e3f42ecbeea2ac6e41d99332441d24f9b1f7db7cf64ef5ce8",
+  "promptHash": "c1da170414f3f8b5352974ad4575a1575153b17d91397de5ce5d4b193600b79e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:42.261Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:42.261Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ernest Shackleton\"]\nC2[\"Frank Wild\"]\nC3[\"Frank Worsley\"]\nC4[\"Tom Crean\"]\nC5[\"Henry McNish\"]\nC6[\"Edward Clark\"]\nC7[\"James Wordie\"]\nC1 -->|Commands| C2\nC1 -->|Commands| C3\nC1 -->|Commands| C4\nC1 -->|Commands| C5\nC1 -->|Commands| C6\nC1 -->|Commands| C7\nC2 -->|Second in command to| C1\nC3 -->|Navigates for| C1\nC4 -->|Serves under| C1\nC5 -->|Serves under| C1\nC6 -->|Serves under| C1\nC7 -->|Serves under| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 172,
+        "total_tokens": 1729,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:43.729Z",
+      "finishedAt": "2026-09-10T17:36:43.729Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ernest Shackleton\"]\nC2[\"Frank Wild\"]\nC3[\"Frank Worsley\"]\nC4[\"Tom Crean\"]\nC5[\"Henry McNish\"]\nC6[\"Edward Clark\"]\nC7[\"James Wordie\"]\nC1 -->|Commands| C2\nC1 -->|Commands| C3\nC1 -->|Commands| C4\nC1 -->|Commands| C5\nC1 -->|Commands| C6\nC1 -->|Commands| C7\nC2 -->|Second in command to| C1\nC3 -->|Navigates for| C1\nC4 -->|Serves under| C1\nC5 -->|Serves under| C1\nC6 -->|Serves under| C1\nC7 -->|Serves under| C1",
+  "mermaidHash": "adaf29c75b3d91c793444c811879408d72a8c0bffb03287ab2ea86a3eb217ec8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "adaf29c75b3d91c793444c811879408d72a8c0bffb03287ab2ea86a3eb217ec8",
+    "svgHash": "bb7c87edd5d014edec86227ab51c788679cc9b101e8fb379c4421c17afb489d8",
+    "validatedAt": "2026-09-10T17:36:45.140Z",
+    "width": 552.1751708984375,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T17:36:43.729Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 172,
+    "total_tokens": 1729,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

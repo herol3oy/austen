@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jane-austen/mansfield-park",
+  "metadata": {
+    "title": "Mansfield Park",
+    "authors": [
+      "Jane Austen"
+    ],
+    "year": "1814"
+  },
+  "inputHash": "0e8dc6605deb6be663f272ff6da62600c3ed1c9f5d641fbbf3df72b3afd1fdbe",
+  "promptHash": "a7f24df854464f9584cb9f9a1093ae906755c1152d8a47e189a2a9a2fe277244",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:21.636Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:21.636Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Fanny Price\"]\nC2[\"Edmund Bertram\"]\nC3[\"Sir Thomas Bertram\"]\nC4[\"Lady Bertram\"]\nC5[\"Mrs Norris\"]\nC6[\"Maria Bertram\"]\nC7[\"Julia Bertram\"]\nC8[\"Henry Crawford\"]\nC9[\"Mary Crawford\"]\nC10[\"William Price\"]\nC1 -->|Raised by| C3\nC1 -->|Raised by| C4\nC1 -->|Sibling of| C10\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Parent of| C2\nC3 -->|Parent of| C6\nC3 -->|Parent of| C7\nC4 -->|Parent of| C2\nC4 -->|Parent of| C6\nC4 -->|Parent of| C7\nC5 -->|Sibling of| C4\nC5 -->|Sibling of| C3\nC5 -->|Aunt of| C1\nC6 -->|Sibling of| C7\nC6 -->|Engaged to| C8\nC7 -->|Sibling of| C6\nC8 -->|Sibling of| C9\nC8 -->|Courts| C1\nC9 -->|Sibling of| C8\nC9 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 291,
+        "total_tokens": 1848,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:23.401Z",
+      "finishedAt": "2026-09-10T17:46:23.402Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Fanny Price\"]\nC2[\"Edmund Bertram\"]\nC3[\"Sir Thomas Bertram\"]\nC4[\"Lady Bertram\"]\nC5[\"Mrs Norris\"]\nC6[\"Maria Bertram\"]\nC7[\"Julia Bertram\"]\nC8[\"Henry Crawford\"]\nC9[\"Mary Crawford\"]\nC10[\"William Price\"]\nC1 -->|Raised by| C3\nC1 -->|Raised by| C4\nC1 -->|Sibling of| C10\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Parent of| C2\nC3 -->|Parent of| C6\nC3 -->|Parent of| C7\nC4 -->|Parent of| C2\nC4 -->|Parent of| C6\nC4 -->|Parent of| C7\nC5 -->|Sibling of| C4\nC5 -->|Sibling of| C3\nC5 -->|Aunt of| C1\nC6 -->|Sibling of| C7\nC6 -->|Engaged to| C8\nC7 -->|Sibling of| C6\nC8 -->|Sibling of| C9\nC8 -->|Courts| C1\nC9 -->|Sibling of| C8\nC9 -->|Friend of| C2",
+  "mermaidHash": "f4c8f70c3e7ed73f0ca3be97c830af5c36290d1b4f6f531333248e5756ec2ae6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f4c8f70c3e7ed73f0ca3be97c830af5c36290d1b4f6f531333248e5756ec2ae6",
+    "svgHash": "cec1a37f5754c93fa33370fa918832de3e40cb95a89e506bfe28227fdf308a68",
+    "validatedAt": "2026-09-10T17:46:24.758Z",
+    "width": 1820.0283203125,
+    "height": 582.25
+  },
+  "generatedAt": "2026-09-10T17:46:23.401Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 291,
+    "total_tokens": 1848,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-congreve/the-way-of-the-world",
+  "metadata": {
+    "title": "The Way of the World",
+    "authors": [
+      "William Congreve"
+    ],
+    "year": "1700"
+  },
+  "inputHash": "5a877f43f6eddd818342bde507c4bef61fd9e1ea3dfb0281fde9bf284c81d218",
+  "promptHash": "3dfdb10f5db364731a1a1d4f86dc5d4f5707d0357ac1c8a0667b5d55fb028660",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:43.178Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:43.179Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mirabell\"]\nC2[\"Millamant\"]\nC3[\"Lady Wishfort\"]\nC4[\"Mrs. Marwood\"]\nC5[\"Fainall\"]\nC6[\"Mrs. Fainall\"]\nC7[\"Witwoud\"]\nC8[\"Petulant\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Aunt of| C2\nC3 -->|Mother of| C6\nC5 -->|Married to| C6\nC4 -->|Mistress of| C5\nC4 -->|Enemy of| C1\nC4 -->|Enemy of| C2\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC7 -->|Friend of| C8\nC3 -->|Guardian of| C2\nC5 -->|Blackmails| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 221,
+        "total_tokens": 1780,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:44.915Z",
+      "finishedAt": "2026-09-10T18:13:44.915Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mirabell\"]\nC2[\"Millamant\"]\nC3[\"Lady Wishfort\"]\nC4[\"Mrs. Marwood\"]\nC5[\"Fainall\"]\nC6[\"Mrs. Fainall\"]\nC7[\"Witwoud\"]\nC8[\"Petulant\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Aunt of| C2\nC3 -->|Mother of| C6\nC5 -->|Married to| C6\nC4 -->|Mistress of| C5\nC4 -->|Enemy of| C1\nC4 -->|Enemy of| C2\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC7 -->|Friend of| C8\nC3 -->|Guardian of| C2\nC5 -->|Blackmails| C3",
+  "mermaidHash": "d074a10f998ffd45a71af08d0480a3035d4514656caa0df00541897f1ea47e79",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d074a10f998ffd45a71af08d0480a3035d4514656caa0df00541897f1ea47e79",
+    "svgHash": "48641e84f86eb0c1aeaee27c7e201e156f6f07cb446a68426333ba3a80dd9c7c",
+    "validatedAt": "2026-09-10T18:13:46.279Z",
+    "width": 1172.9002685546875,
+    "height": 499.75
+  },
+  "generatedAt": "2026-09-10T18:13:44.915Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 221,
+    "total_tokens": 1780,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

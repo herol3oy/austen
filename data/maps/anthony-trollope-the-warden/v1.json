@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/the-warden",
+  "metadata": {
+    "title": "The Warden",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1855"
+  },
+  "inputHash": "da583f5b33ab2fca051089a1437655f3a35f387d0f3271849aae6671d5d372de",
+  "promptHash": "3a323b256bf6d1b641fa11dfe5f5edea4e3c29d28e73e033f15dbbb03fb8b580",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:12.125Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:12.125Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Septimus Harding\"]\nC2[\"Archdeacon Grantly\"]\nC3[\"John Bold\"]\nC4[\"Eleanor Harding\"]\nC5[\"Susan Grantly\"]\nC6[\"Sir Abraham Haphazard\"]\nC7[\"Mr. Finney\"]\nC8[\"Bishop Grantly\"]\nC1 -->|Father of| C4\nC1 -->|Warden of| C7\nC2 -->|Son of| C8\nC2 -->|Married to| C5\nC2 -->|Brother-in-law of| C1\nC3 -->|Loves| C4\nC3 -->|Opposes| C1\nC6 -->|Advises| C1\nC8 -->|Supervises| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 159,
+        "total_tokens": 1716,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:13.471Z",
+      "finishedAt": "2026-09-10T17:27:13.471Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Septimus Harding\"]\nC2[\"Archdeacon Grantly\"]\nC3[\"John Bold\"]\nC4[\"Eleanor Harding\"]\nC5[\"Susan Grantly\"]\nC6[\"Sir Abraham Haphazard\"]\nC7[\"Mr. Finney\"]\nC8[\"Bishop Grantly\"]\nC1 -->|Father of| C4\nC1 -->|Warden of| C7\nC2 -->|Son of| C8\nC2 -->|Married to| C5\nC2 -->|Brother-in-law of| C1\nC3 -->|Loves| C4\nC3 -->|Opposes| C1\nC6 -->|Advises| C1\nC8 -->|Supervises| C1",
+  "mermaidHash": "c5a2aea981f1becadb46c0f6c9f0d77fde204996860ae52f70406cb950a9f2aa",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c5a2aea981f1becadb46c0f6c9f0d77fde204996860ae52f70406cb950a9f2aa",
+    "svgHash": "3006592ea5373a7c588429c4c0bcce02eff0f408f19098f474ea27381f36e7a7",
+    "validatedAt": "2026-09-10T17:27:14.796Z",
+    "width": 1140.1456298828125,
+    "height": 422.75
+  },
+  "generatedAt": "2026-09-10T17:27:13.471Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 159,
+    "total_tokens": 1716,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

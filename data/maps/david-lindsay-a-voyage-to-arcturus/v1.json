@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "david-lindsay/a-voyage-to-arcturus",
+  "metadata": {
+    "title": "A Voyage to Arcturus",
+    "authors": [
+      "David Lindsay"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "2041b516d0c18da85cfda17492e4eb876b12075d9c8de4063248f5efe6682473",
+  "promptHash": "1bdcbe68db42434acf11772cfcc9074f404721a228842f098c5d862452dbe60f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:03.678Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:03.678Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Maskull\"]\nC2[\"Krag\"]\nC3[\"Nightspore\"]\nC4[\"Joiwind\"]\nC5[\"Panawe\"]\nC6[\"Tydomin\"]\nC7[\"Crystalman\"]\nC8[\"Surtur\"]\nC1 -->|Travels with| C2\nC1 -->|Friend of| C3\nC1 -->|Loves| C4\nC4 -->|Married to| C5\nC1 -->|Enemy of| C6\nC1 -->|Serves| C7\nC2 -->|Serves| C8\nC3 -->|Serves| C8\nC7 -->|Enemy of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 150,
+        "total_tokens": 1710,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:05.418Z",
+      "finishedAt": "2026-09-10T17:32:05.418Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Maskull\"]\nC2[\"Krag\"]\nC3[\"Nightspore\"]\nC4[\"Joiwind\"]\nC5[\"Panawe\"]\nC6[\"Tydomin\"]\nC7[\"Crystalman\"]\nC8[\"Surtur\"]\nC1 -->|Travels with| C2\nC1 -->|Friend of| C3\nC1 -->|Loves| C4\nC4 -->|Married to| C5\nC1 -->|Enemy of| C6\nC1 -->|Serves| C7\nC2 -->|Serves| C8\nC3 -->|Serves| C8\nC7 -->|Enemy of| C8",
+  "mermaidHash": "dc82d6d69b3fc1d3e180b5845a7dbbfa6f0f51375a6e3e8ab4825a210b51a547",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "dc82d6d69b3fc1d3e180b5845a7dbbfa6f0f51375a6e3e8ab4825a210b51a547",
+    "svgHash": "9132e2c3aa0100530640989922e1583343939273cd2c62a4aff4db640f7dd4f8",
+    "validatedAt": "2026-09-10T17:32:06.706Z",
+    "width": 628.2088623046875,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T17:32:05.418Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 150,
+    "total_tokens": 1710,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

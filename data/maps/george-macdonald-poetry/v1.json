@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-macdonald/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "George MacDonald"
+    ],
+    "year": "1857–1893"
+  },
+  "inputHash": "74307661dff3aa59b7273fca53807e37f5d9e7624195628652673df35976206f",
+  "promptHash": "3b9c5b301f81356028763f9fba82e8fd0d4f097ed639059eb5260fd0895c5b11",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:35.658Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:35.658Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 2,
+        "total_tokens": 1560,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 150
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:36.558Z",
+      "finishedAt": "2026-09-10T17:40:36.558Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:40:36.558Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 2,
+    "total_tokens": 1560,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 150
+  }
+}

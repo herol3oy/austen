@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "honore-de-balzac/lost-illusions/ellen-marriage",
+  "metadata": {
+    "title": "Lost Illusions",
+    "authors": [
+      "Honoré de Balzac"
+    ],
+    "year": "1837"
+  },
+  "inputHash": "ba210a3a85f5cc5a9c3b0b9b8a82be0bbd01542f7891647dd00a2b201d220bec",
+  "promptHash": "b818a179ab070736b75dd0a76bfa6650eb0da1dd57eeacdc20f40ab74045f986",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:18.163Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:18.163Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lucien Chardon de Rubempré\"]\nC2[\"David Séchard\"]\nC3[\"Ève Chardon\"]\nC4[\"Madame de Bargeton\"]\nC5[\"Louise de Bargeton\"]\nC6[\"Étienne Lousteau\"]\nC7[\"Daniel d'Arthez\"]\nC8[\"Coralie\"]\nC1 -->|Sibling of| C3\nC1 -->|Friend of| C2\nC2 -->|Married to| C3\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Loves| C8\nC8 -->|Loves| C1\nC6 -->|Mentor of| C1\nC7 -->|Mentor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 193,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:19.493Z",
+      "finishedAt": "2026-09-10T17:44:19.493Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lucien Chardon de Rubempré\"]\nC2[\"David Séchard\"]\nC3[\"Ève Chardon\"]\nC4[\"Madame de Bargeton\"]\nC5[\"Louise de Bargeton\"]\nC6[\"Étienne Lousteau\"]\nC7[\"Daniel d'Arthez\"]\nC8[\"Coralie\"]\nC1 -->|Sibling of| C3\nC1 -->|Friend of| C2\nC2 -->|Married to| C3\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Loves| C8\nC8 -->|Loves| C1\nC6 -->|Mentor of| C1\nC7 -->|Mentor of| C1",
+  "mermaidHash": "508fa75e5a5358ffe4e681d7af0d18e47631bdea0e060ff85e45bd743e4c90d7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "508fa75e5a5358ffe4e681d7af0d18e47631bdea0e060ff85e45bd743e4c90d7",
+    "svgHash": "70b6646790ac9944cbbb0bf6ed1c478da072590958b37d21935e57ad80506877",
+    "validatedAt": "2026-09-10T17:44:20.813Z",
+    "width": 862.1770629882812,
+    "height": 519
+  },
+  "generatedAt": "2026-09-10T17:44:19.493Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 193,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

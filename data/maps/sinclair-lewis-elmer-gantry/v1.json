@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sinclair-lewis/elmer-gantry",
+  "metadata": {
+    "title": "Elmer Gantry",
+    "authors": [
+      "Sinclair Lewis"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "3eed547c736c4e119002e45fd383dae84a382b6a19489e90abd6218581912784",
+  "promptHash": "e9bcc788123fc70b8821aaa2d279e6bd689d9fc29755f4dd4dda5ad244a95af0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:30.501Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:30.501Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Elmer Gantry\"]\nC2[\"Sister Sharon Falconer\"]\nC3[\"Frank Shallard\"]\nC4[\"Cleo Benham\"]\nC5[\"Jim Lefferts\"]\nC6[\"Lulu Bains\"]\nC7[\"Hettie Dowler\"]\nC8[\"Bishop Wesley R. Toomis\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Married to| C4\nC1 -->|Seduces| C6\nC6 -->|Blackmails| C1\nC1 -->|Seduces| C7\nC7 -->|Blackmails| C1\nC1 -->|Friend of| C5\nC1 -->|Rival of| C3\nC3 -->|Opposes| C1\nC1 -->|Serves| C8\nC8 -->|Mentor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 197,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:32.394Z",
+      "finishedAt": "2026-09-10T18:09:32.394Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Elmer Gantry\"]\nC2[\"Sister Sharon Falconer\"]\nC3[\"Frank Shallard\"]\nC4[\"Cleo Benham\"]\nC5[\"Jim Lefferts\"]\nC6[\"Lulu Bains\"]\nC7[\"Hettie Dowler\"]\nC8[\"Bishop Wesley R. Toomis\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Married to| C4\nC1 -->|Seduces| C6\nC6 -->|Blackmails| C1\nC1 -->|Seduces| C7\nC7 -->|Blackmails| C1\nC1 -->|Friend of| C5\nC1 -->|Rival of| C3\nC3 -->|Opposes| C1\nC1 -->|Serves| C8\nC8 -->|Mentor of| C1",
+  "mermaidHash": "e339040ec2494881eb45d2f584b95caa6ccb67f12ce6a26187526513806ea4ed",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e339040ec2494881eb45d2f584b95caa6ccb67f12ce6a26187526513806ea4ed",
+    "svgHash": "b520e5054cc3ab30a0a92ec5994129fb346a4efc9dc8897f2bc5a6269d5cc19f",
+    "validatedAt": "2026-09-10T18:09:33.732Z",
+    "width": 508.986328125,
+    "height": 667.5
+  },
+  "generatedAt": "2026-09-10T18:09:32.394Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 197,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

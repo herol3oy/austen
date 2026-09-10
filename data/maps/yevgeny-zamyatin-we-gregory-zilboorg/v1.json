@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "yevgeny-zamyatin/we/gregory-zilboorg",
+  "metadata": {
+    "title": "We",
+    "authors": [
+      "Yevgeny Zamyatin"
+    ],
+    "year": "1924"
+  },
+  "inputHash": "165740c52c970ef7f23f9190217e135218279e9eb9b4aa328ebdc26757bf7f48",
+  "promptHash": "8b0900b08f5a206f6f4d39a56b5655b759e27400db07939083b369205ab44f01",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:30.395Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:30.395Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"D-503\"]\nC2[\"I-330\"]\nC3[\"O-90\"]\nC4[\"R-13\"]\nC5[\"The Benefactor\"]\nC6[\"S-4711\"]\nC7[\"U\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC4 -->|Friend of| C1\nC2 -->|Conspires with| C4\nC2 -->|Rebels against| C5\nC1 -->|Rebels against| C5\nC5 -->|Rules| C1\nC5 -->|Rules| C2\nC5 -->|Rules| C3\nC5 -->|Rules| C4\nC6 -->|Spies on| C1\nC6 -->|Serves| C5\nC7 -->|Loves| C1\nC1 -->|Rejects| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 231,
+        "total_tokens": 1790,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:31.885Z",
+      "finishedAt": "2026-09-10T18:16:31.885Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"D-503\"]\nC2[\"I-330\"]\nC3[\"O-90\"]\nC4[\"R-13\"]\nC5[\"The Benefactor\"]\nC6[\"S-4711\"]\nC7[\"U\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC4 -->|Friend of| C1\nC2 -->|Conspires with| C4\nC2 -->|Rebels against| C5\nC1 -->|Rebels against| C5\nC5 -->|Rules| C1\nC5 -->|Rules| C2\nC5 -->|Rules| C3\nC5 -->|Rules| C4\nC6 -->|Spies on| C1\nC6 -->|Serves| C5\nC7 -->|Loves| C1\nC1 -->|Rejects| C7",
+  "mermaidHash": "700d934a54bb8491e53b2746defd5109302a17a9db4c604c84f1e09eba303545",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "700d934a54bb8491e53b2746defd5109302a17a9db4c604c84f1e09eba303545",
+    "svgHash": "9f81316549653fcd491e4228279e09dbdeb066d6e474a197489d7b0daeeeae8d",
+    "validatedAt": "2026-09-10T18:16:33.269Z",
+    "width": 1200.55712890625,
+    "height": 539
+  },
+  "generatedAt": "2026-09-10T18:16:31.885Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 231,
+    "total_tokens": 1790,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v3",
+  "bookId": "charles-w-chesnutt/the-conjure-woman",
+  "metadata": {
+    "title": "The Conjure Woman",
+    "authors": [
+      "Charles W. Chesnutt"
+    ],
+    "year": "1899"
+  },
+  "inputHash": "d0ba3f976202c6492c3ff64040fa2014b438a3f06b5564c39f1e82c578a90ab9",
+  "promptHash": "8db004d3155b11fec9e6efb3b948f38efd0816f1a2b8f094125bfb92ad2e8639",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:41.434Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:41.434Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Uncle Julius\"]\nC2[\"John\"]\nC3[\"Annie\"]\nC4[\"Aunt Peggy\"]\nC5[\"Sandy\"]\nC6[\"Tenie\"]\nC7[\"Marse Dugal\"]\nC8[\"Marse Jeems\"]\nC1 -->|Serves| C2\nC1 -->|Serves| C3\nC2 -->|Married to| C3\nC4 -->|Conjures for| C1\nC4 -->|Transforms| C5\nC5 -->|Husband of| C6\nC6 -->|Sister of| C8\nC7 -->|Owner of| C5\nC7 -->|Owner of| C6\nC8 -->|Owner of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 161,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:42.760Z",
+      "finishedAt": "2026-09-10T18:16:42.760Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Uncle Julius\"]\nC2[\"John\"]\nC3[\"Annie\"]\nC4[\"Aunt Peggy\"]\nC5[\"Sandy\"]\nC6[\"Tenie\"]\nC7[\"Marse Dugal\"]\nC8[\"Marse Jeems\"]\nC1 -->|Serves| C2\nC1 -->|Serves| C3\nC2 -->|Married to| C3\nC4 -->|Conjures for| C1\nC4 -->|Transforms| C5\nC5 -->|Husband of| C6\nC6 -->|Sister of| C8\nC7 -->|Owner of| C5\nC7 -->|Owner of| C6\nC8 -->|Owner of| C6",
+  "mermaidHash": "f8a10ca123d5044815cd77f58d7eff525e09d5da22eb5cd1c86f2d5d8914a02b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f8a10ca123d5044815cd77f58d7eff525e09d5da22eb5cd1c86f2d5d8914a02b",
+    "svgHash": "09d717bc7ce10d1c0c95ee0a331bfaeaf2f88cff527d9c2cc4a95b8220a05b11",
+    "validatedAt": "2026-09-10T18:16:44.194Z",
+    "width": 925.14599609375,
+    "height": 281.75
+  },
+  "generatedAt": "2026-09-10T18:16:42.760Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 161,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

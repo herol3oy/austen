@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-de-vere-stacpoole/the-blue-lagoon",
+  "metadata": {
+    "title": "The Blue Lagoon",
+    "authors": [
+      "H. de Vere Stacpoole"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "d24f8346b68351929be115b1de3a53e8d93113ee868d5f970e6cf3a6b7d01c58",
+  "promptHash": "29da1b7b58a1be6f4e64720a307e2ac1d11c0f0adf5f1d0e450e1952e08aa6e7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:43.234Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:43.234Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Emmeline Lestrange\"]\nC2[\"Richard Lestrange\"]\nC3[\"Paddy Button\"]\nC4[\"Arthur Lestrange\"]\nC5[\"Dick Lestrange\"]\nC6[\"Old Sailor\"]\nC1 -->|Sister of| C2\nC2 -->|Brother of| C1\nC3 -->|Mentor of| C1\nC3 -->|Mentor of| C2\nC4 -->|Father of| C1\nC4 -->|Father of| C2\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Parent of| C5\nC2 -->|Parent of| C5\nC6 -->|Rescues| C1\nC6 -->|Rescues| C2\nC6 -->|Rescues| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 189,
+        "total_tokens": 1752,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:44.866Z",
+      "finishedAt": "2026-09-10T17:41:44.867Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Emmeline Lestrange\"]\nC2[\"Richard Lestrange\"]\nC3[\"Paddy Button\"]\nC4[\"Arthur Lestrange\"]\nC5[\"Dick Lestrange\"]\nC6[\"Old Sailor\"]\nC1 -->|Sister of| C2\nC2 -->|Brother of| C1\nC3 -->|Mentor of| C1\nC3 -->|Mentor of| C2\nC4 -->|Father of| C1\nC4 -->|Father of| C2\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Parent of| C5\nC2 -->|Parent of| C5\nC6 -->|Rescues| C1\nC6 -->|Rescues| C2\nC6 -->|Rescues| C5",
+  "mermaidHash": "fea494a6932076e680ae129da747747d40413c288e5435b43a472c284a234c98",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fea494a6932076e680ae129da747747d40413c288e5435b43a472c284a234c98",
+    "svgHash": "21c73dcd24d40b149148f83868fed976fc0e559d37d7a8b86a366a087aa0ba40",
+    "validatedAt": "2026-09-10T17:41:46.243Z",
+    "width": 1078.0164794921875,
+    "height": 429.5
+  },
+  "generatedAt": "2026-09-10T17:41:44.866Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 189,
+    "total_tokens": 1752,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

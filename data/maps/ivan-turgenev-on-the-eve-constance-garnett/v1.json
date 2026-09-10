@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ivan-turgenev/on-the-eve/constance-garnett",
+  "metadata": {
+    "title": "On the Eve",
+    "authors": [
+      "Ivan Turgenev"
+    ],
+    "year": "1860"
+  },
+  "inputHash": "add21c719b4fb6ccdb3433f50dc647f86aa00f63631bcc39e9754f56401ef6fb",
+  "promptHash": "7184fb3c6d87108f1d5366c4dd4572972f7be80f84cf424c7ed5910b61dda4ba",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:53.699Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:53.699Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Elena Stakhova\"]\nC2[\"Dmitri Insarov\"]\nC3[\"Pavel Shubin\"]\nC4[\"Andrei Bersenev\"]\nC5[\"Anna Stakhova\"]\nC6[\"Nikolai Stakhov\"]\nC7[\"Zoya Nikitishna\"]\nC8[\"Kurnatovsky\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Marries| C2\nC3 -->|Loves| C1\nC4 -->|Friend of| C2\nC4 -->|Friend of| C3\nC5 -->|Mother of| C1\nC6 -->|Father of| C1\nC7 -->|Companion of| C5\nC8 -->|Suitor of| C1\nC2 -->|Enemy of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 187,
+        "total_tokens": 1746,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:55.949Z",
+      "finishedAt": "2026-09-10T17:44:55.949Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Elena Stakhova\"]\nC2[\"Dmitri Insarov\"]\nC3[\"Pavel Shubin\"]\nC4[\"Andrei Bersenev\"]\nC5[\"Anna Stakhova\"]\nC6[\"Nikolai Stakhov\"]\nC7[\"Zoya Nikitishna\"]\nC8[\"Kurnatovsky\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Marries| C2\nC3 -->|Loves| C1\nC4 -->|Friend of| C2\nC4 -->|Friend of| C3\nC5 -->|Mother of| C1\nC6 -->|Father of| C1\nC7 -->|Companion of| C5\nC8 -->|Suitor of| C1\nC2 -->|Enemy of| C8",
+  "mermaidHash": "3bcf2628b6e6b8852e847bee6c7367870e55a0defc1934830c3e75efa855b0fb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3bcf2628b6e6b8852e847bee6c7367870e55a0defc1934830c3e75efa855b0fb",
+    "svgHash": "21bd0a86a249a1e9a54e0a7f1ffd2990294cb4fd0d63c875c1a9c855b8c622f4",
+    "validatedAt": "2026-09-10T17:44:57.268Z",
+    "width": 1292.836181640625,
+    "height": 322.5
+  },
+  "generatedAt": "2026-09-10T17:44:55.949Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 187,
+    "total_tokens": 1746,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

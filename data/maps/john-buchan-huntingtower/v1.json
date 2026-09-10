@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-buchan/huntingtower",
+  "metadata": {
+    "title": "Huntingtower",
+    "authors": [
+      "John Buchan"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "418278dce0547d011714a8280bcde050aaeb4cb55fd84b09d051e5288f14d2e5",
+  "promptHash": "b32a49e17b8574d6630a8578b067eb37003d808bb675ce8b5f53e287f09234e5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:52.027Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:52.027Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dickson McCunn\"]\nC2[\"John Heritage\"]\nC3[\"Alison Westwater\"]\nC4[\"Prince Otto\"]\nC5[\"Paul Loudon\"]\nC6[\"Dougal\"]\nC7[\"Mrs. Morran\"]\nC8[\"Alexis\"]\nC1 -->|Married to| C7\nC1 -->|Friend of| C2\nC2 -->|Loves| C3\nC1 -->|Protects| C3\nC3 -->|Daughter of| C4\nC5 -->|Ally of| C1\nC6 -->|Leads| C5\nC6 -->|Serves| C3\nC8 -->|Serves| C4\nC1 -->|Enemy of| C8\nC4 -->|Enemy of| C1\nC5 -->|Rival of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 183,
+        "total_tokens": 1741,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:53.403Z",
+      "finishedAt": "2026-09-10T17:46:53.403Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dickson McCunn\"]\nC2[\"John Heritage\"]\nC3[\"Alison Westwater\"]\nC4[\"Prince Otto\"]\nC5[\"Paul Loudon\"]\nC6[\"Dougal\"]\nC7[\"Mrs. Morran\"]\nC8[\"Alexis\"]\nC1 -->|Married to| C7\nC1 -->|Friend of| C2\nC2 -->|Loves| C3\nC1 -->|Protects| C3\nC3 -->|Daughter of| C4\nC5 -->|Ally of| C1\nC6 -->|Leads| C5\nC6 -->|Serves| C3\nC8 -->|Serves| C4\nC1 -->|Enemy of| C8\nC4 -->|Enemy of| C1\nC5 -->|Rival of| C8",
+  "mermaidHash": "af233dedb859b8a75aa720b0ff8db25f373bfbc3a9b542db8561ea43de628139",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "af233dedb859b8a75aa720b0ff8db25f373bfbc3a9b542db8561ea43de628139",
+    "svgHash": "cb4ed8a38fab41ae77b505a169d386b834945867d2cd4adf81c782cf310fa300",
+    "validatedAt": "2026-09-10T17:46:54.671Z",
+    "width": 1459.20703125,
+    "height": 423.75
+  },
+  "generatedAt": "2026-09-10T17:46:53.403Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 183,
+    "total_tokens": 1741,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

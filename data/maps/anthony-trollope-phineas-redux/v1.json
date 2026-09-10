@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/phineas-redux",
+  "metadata": {
+    "title": "Phineas Redux",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1874"
+  },
+  "inputHash": "7e628324c6a06be00de981782fce633256965c4de804f8d5bca2fadac9eaf1c7",
+  "promptHash": "9cc007ad009461c8a8af9e916cbdc0b7896a4035fe25b737d2e798ba8ee6456a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:47.236Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:47.236Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Phineas Finn\"]\nC2[\"Lady Laura Kennedy\"]\nC3[\"Robert Kennedy\"]\nC4[\"Madame Max Goesler\"]\nC5[\"Adelaide Palliser\"]\nC6[\"Plantagenet Palliser\"]\nC7[\"Mr. Daubeny\"]\nC8[\"Mr. Gresham\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C3\nC3 -->|Enemy of| C1\nC1 -->|Friend of| C4\nC4 -->|Loves| C1\nC1 -->|Married to| C5\nC5 -->|Sibling of| C6\nC6 -->|Friend of| C1\nC7 -->|Rival of| C8\nC8 -->|Friend of| C1\nC1 -->|Serves| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 182,
+        "total_tokens": 1741,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:48.590Z",
+      "finishedAt": "2026-09-10T17:26:48.590Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Phineas Finn\"]\nC2[\"Lady Laura Kennedy\"]\nC3[\"Robert Kennedy\"]\nC4[\"Madame Max Goesler\"]\nC5[\"Adelaide Palliser\"]\nC6[\"Plantagenet Palliser\"]\nC7[\"Mr. Daubeny\"]\nC8[\"Mr. Gresham\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C3\nC3 -->|Enemy of| C1\nC1 -->|Friend of| C4\nC4 -->|Loves| C1\nC1 -->|Married to| C5\nC5 -->|Sibling of| C6\nC6 -->|Friend of| C1\nC7 -->|Rival of| C8\nC8 -->|Friend of| C1\nC1 -->|Serves| C8",
+  "mermaidHash": "31686ba26fbfe1b5eebf29909a07ecaa497ebda1e534a48899181f70511ba535",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "31686ba26fbfe1b5eebf29909a07ecaa497ebda1e534a48899181f70511ba535",
+    "svgHash": "a604f47483009bb45a64499fbf7b9316642d3ac7a821c5f314e403c11be25c5a",
+    "validatedAt": "2026-09-10T17:26:49.993Z",
+    "width": 801.5323486328125,
+    "height": 488
+  },
+  "generatedAt": "2026-09-10T17:26:48.590Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 182,
+    "total_tokens": 1741,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

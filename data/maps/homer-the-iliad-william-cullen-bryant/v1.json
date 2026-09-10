@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "homer/the-iliad/william-cullen-bryant",
+  "metadata": {
+    "title": "The Iliad",
+    "authors": [
+      "Homer"
+    ],
+    "year": "1870"
+  },
+  "inputHash": "1702e3e2d7a2fc3868a0256e782c961a4a44afd65a6685ca08c4feb8f7041e5f",
+  "promptHash": "a1072eeb5386374e6406f65377ec467a207e60538d0ef674fda25c4a33b61bfc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:58.604Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:58.604Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Achilles\"]\nC2[\"Agamemnon\"]\nC3[\"Hector\"]\nC4[\"Priam\"]\nC5[\"Patroclus\"]\nC6[\"Odysseus\"]\nC7[\"Helen\"]\nC8[\"Paris\"]\nC1 -->|Serves under| C2\nC2 -->|Commands| C1\nC1 -->|Friend of| C5\nC1 -->|Kills| C3\nC3 -->|Prince of Troy| C4\nC4 -->|Father of| C3\nC4 -->|Father of| C8\nC3 -->|Brother of| C8\nC8 -->|Takes| C7\nC7 -->|Wife of| C8\nC1 -->|Rival of| C2\nC6 -->|Ally of| C1\nC8 -->|Kills| C1\nC1 -->|Kills| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 198,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:00.245Z",
+      "finishedAt": "2026-09-10T17:44:00.245Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Achilles\"]\nC2[\"Agamemnon\"]\nC3[\"Hector\"]\nC4[\"Priam\"]\nC5[\"Patroclus\"]\nC6[\"Odysseus\"]\nC7[\"Helen\"]\nC8[\"Paris\"]\nC1 -->|Serves under| C2\nC2 -->|Commands| C1\nC1 -->|Friend of| C5\nC1 -->|Kills| C3\nC3 -->|Prince of Troy| C4\nC4 -->|Father of| C3\nC4 -->|Father of| C8\nC3 -->|Brother of| C8\nC8 -->|Takes| C7\nC7 -->|Wife of| C8\nC1 -->|Rival of| C2\nC6 -->|Ally of| C1\nC8 -->|Kills| C1\nC1 -->|Kills| C8",
+  "mermaidHash": "f4bac90483e4afdf5a9b5febd63fa94555f7c0a6683f798f3eaad0a83cc3f70e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f4bac90483e4afdf5a9b5febd63fa94555f7c0a6683f798f3eaad0a83cc3f70e",
+    "svgHash": "1351c14bd5d91ee2ff82a0d985cf7ab7cb1b8dab6e957d7f730cab50a8e3d9a6",
+    "validatedAt": "2026-09-10T17:44:01.600Z",
+    "width": 1281.466552734375,
+    "height": 353.7209167480469
+  },
+  "generatedAt": "2026-09-10T17:44:00.245Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 198,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

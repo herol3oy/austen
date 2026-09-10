@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frank-norris/the-octopus",
+  "metadata": {
+    "title": "The Octopus",
+    "authors": [
+      "Frank Norris"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "00d106fb61112fa6b29fe5dcd4b9f6e8b43a5f133588a7c83a2b1659c9ece51a",
+  "promptHash": "9d887db64417084d68c6ab8bdcf11937af1369314b9a51eedb5be0d00ff99500",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:47.874Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:47.874Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Presley\"]\nC2[\"Annixter\"]\nC3[\"Hilma Tree\"]\nC4[\"Magnus Derrick\"]\nC5[\"Lyman Derrick\"]\nC6[\"S. Behrman\"]\nC7[\"Vanamee\"]\nC8[\"Angèle Varian\"]\nC1 -->|Friend of| C2\nC2 -->|Married to| C3\nC3 -->|Daughter of| C4\nC4 -->|Father of| C5\nC4 -->|Allied with| C6\nC5 -->|Betrays| C4\nC6 -->|Enemy of| C2\nC6 -->|Enemy of| C4\nC7 -->|Loves| C8\nC7 -->|Friend of| C1\nC2 -->|Killed by| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 179,
+        "total_tokens": 1735,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:49.346Z",
+      "finishedAt": "2026-09-10T17:37:49.346Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Presley\"]\nC2[\"Annixter\"]\nC3[\"Hilma Tree\"]\nC4[\"Magnus Derrick\"]\nC5[\"Lyman Derrick\"]\nC6[\"S. Behrman\"]\nC7[\"Vanamee\"]\nC8[\"Angèle Varian\"]\nC1 -->|Friend of| C2\nC2 -->|Married to| C3\nC3 -->|Daughter of| C4\nC4 -->|Father of| C5\nC4 -->|Allied with| C6\nC5 -->|Betrays| C4\nC6 -->|Enemy of| C2\nC6 -->|Enemy of| C4\nC7 -->|Loves| C8\nC7 -->|Friend of| C1\nC2 -->|Killed by| C6",
+  "mermaidHash": "2785c667bb3bfdcc890a10217e4736a89ada349255361c28d9834615949f04f8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2785c667bb3bfdcc890a10217e4736a89ada349255361c28d9834615949f04f8",
+    "svgHash": "6b5cc9292f891fd4250c85ee65761e28104496aa8e66b81b8bb9ff35b5038489",
+    "validatedAt": "2026-09-10T17:37:50.732Z",
+    "width": 1464.43896484375,
+    "height": 270.5
+  },
+  "generatedAt": "2026-09-10T17:37:49.346Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 179,
+    "total_tokens": 1735,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

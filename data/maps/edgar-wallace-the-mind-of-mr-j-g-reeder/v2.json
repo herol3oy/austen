@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "edgar-wallace/the-mind-of-mr-j-g-reeder",
+  "metadata": {
+    "title": "The Mind of Mr. J. G. Reeder",
+    "authors": [
+      "Edgar Wallace"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "a231fcbeb36dd9c9506fed266662c7bb8bbb3a756198369ac73cbef8ea141522",
+  "promptHash": "f2b974bf2095bc5262aa0edc80eff10c86a05389c5bfa2278e443d934fc68b24",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:21.726Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:21.726Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1565,
+        "completion_tokens": 2,
+        "total_tokens": 1567,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 157
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:22.340Z",
+      "finishedAt": "2026-09-10T18:02:22.341Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:02:22.340Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2,
+    "total_tokens": 1567,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 157
+  }
+}

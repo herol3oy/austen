@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-sand/mauprat/stanley-young",
+  "metadata": {
+    "title": "Mauprat",
+    "authors": [
+      "George Sand"
+    ],
+    "year": "1837"
+  },
+  "inputHash": "130f8b758bf2ef3f1fbbd01315f888b17f36057b95ab9a4d065a08ee584cd865",
+  "promptHash": "1b01dd982312536648c6550901f0926abd810329a623836c178160d38cbc3a0d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:45.479Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:45.479Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Bernard de Mauprat\"]\nC2[\"Edmée de Mauprat\"]\nC3[\"Hubert de Mauprat\"]\nC4[\"Léonce de Mauprat\"]\nC5[\"Jean de Mauprat\"]\nC6[\"Antoine de Mauprat\"]\nC7[\"Patience\"]\nC8[\"Marcasse\"]\nC1 -->|Nephew of| C3\nC3 -->|Father of| C2\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Raised by| C3\nC4 -->|Cousin of| C2\nC4 -->|Rival of| C1\nC5 -->|Uncle of| C1\nC6 -->|Father of| C1\nC7 -->|Mentor of| C1\nC8 -->|Friend of| C1\nC7 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 204,
+        "total_tokens": 1761,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:46.705Z",
+      "finishedAt": "2026-09-10T17:40:46.705Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Bernard de Mauprat\"]\nC2[\"Edmée de Mauprat\"]\nC3[\"Hubert de Mauprat\"]\nC4[\"Léonce de Mauprat\"]\nC5[\"Jean de Mauprat\"]\nC6[\"Antoine de Mauprat\"]\nC7[\"Patience\"]\nC8[\"Marcasse\"]\nC1 -->|Nephew of| C3\nC3 -->|Father of| C2\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Raised by| C3\nC4 -->|Cousin of| C2\nC4 -->|Rival of| C1\nC5 -->|Uncle of| C1\nC6 -->|Father of| C1\nC7 -->|Mentor of| C1\nC8 -->|Friend of| C1\nC7 -->|Friend of| C8",
+  "mermaidHash": "4000c9b40c01c0289c6b1030a794f7042e8da6baeff795cb057b8f3398a85f41",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4000c9b40c01c0289c6b1030a794f7042e8da6baeff795cb057b8f3398a85f41",
+    "svgHash": "e23b4558bdfb4022e1c78d91a06aeb713e45182332c63ed04579db3a2c0dc528",
+    "validatedAt": "2026-09-10T17:40:48.095Z",
+    "width": 1358.4632568359375,
+    "height": 407.75
+  },
+  "generatedAt": "2026-09-10T17:40:46.705Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 204,
+    "total_tokens": 1761,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

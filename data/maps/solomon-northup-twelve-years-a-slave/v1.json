@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "solomon-northup/twelve-years-a-slave",
+  "metadata": {
+    "title": "Twelve Years a Slave",
+    "authors": [
+      "Solomon Northup"
+    ],
+    "year": "1853"
+  },
+  "inputHash": "629790f647658b14a1336db3835f43e71bd50ca72bc1d5af13b158e30104b2b5",
+  "promptHash": "032800b3a411394f3876d07f70b4fa550f90ef7bdb72fb52460a4e9a26b3b70e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:37.661Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:37.661Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Solomon Northup\"]\nC2[\"William Ford\"]\nC3[\"John Tibeats\"]\nC4[\"Edwin Epps\"]\nC5[\"Patsey\"]\nC6[\"Eliza\"]\nC7[\"Bass\"]\nC8[\"Anne Hampton\"]\nC1 -->|Enslaved by| C2\nC1 -->|Enslaved by| C4\nC1 -->|Abused by| C3\nC1 -->|Friend of| C7\nC1 -->|Married to| C8\nC2 -->|Protects| C1\nC3 -->|Enemy of| C1\nC4 -->|Owns| C1\nC4 -->|Owns| C5\nC4 -->|Abuses| C5\nC5 -->|Friend of| C1\nC6 -->|Friend of| C1\nC7 -->|Helps| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 193,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:39.460Z",
+      "finishedAt": "2026-09-10T18:09:39.460Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Solomon Northup\"]\nC2[\"William Ford\"]\nC3[\"John Tibeats\"]\nC4[\"Edwin Epps\"]\nC5[\"Patsey\"]\nC6[\"Eliza\"]\nC7[\"Bass\"]\nC8[\"Anne Hampton\"]\nC1 -->|Enslaved by| C2\nC1 -->|Enslaved by| C4\nC1 -->|Abused by| C3\nC1 -->|Friend of| C7\nC1 -->|Married to| C8\nC2 -->|Protects| C1\nC3 -->|Enemy of| C1\nC4 -->|Owns| C1\nC4 -->|Owns| C5\nC4 -->|Abuses| C5\nC5 -->|Friend of| C1\nC6 -->|Friend of| C1\nC7 -->|Helps| C1",
+  "mermaidHash": "c0291358cbead926bf1bc75897f32e28c076d328647796bd69d0f1ca2267bf8a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c0291358cbead926bf1bc75897f32e28c076d328647796bd69d0f1ca2267bf8a",
+    "svgHash": "54743401c118be87155bf9b86a9685a1f4f20779715a8653380aa84573d32257",
+    "validatedAt": "2026-09-10T18:09:40.797Z",
+    "width": 894.9647216796875,
+    "height": 519
+  },
+  "generatedAt": "2026-09-10T18:09:39.460Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 193,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

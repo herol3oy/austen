@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anna-katharine-green/the-leavenworth-case",
+  "metadata": {
+    "title": "The Leavenworth Case",
+    "authors": [
+      "Anna Katharine Green"
+    ],
+    "year": "1878"
+  },
+  "inputHash": "8e859d9b87a23d6dc106bbeeeb871689d78e9223513ece2a4b4d2dc9e884b7ad",
+  "promptHash": "1a8b757102bbaa1af188cb48a967a722fca4cd6cbcf96a85241312b963d2970e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:46.224Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:46.224Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ebenezer Gryce\"]\nC2[\"Everett Raymond\"]\nC3[\"Eleanor Leavenworth\"]\nC4[\"Mary Leavenworth\"]\nC5[\"Horatio Leavenworth\"]\nC6[\"Henry Clavering\"]\nC7[\"Hannah Chester\"]\nC8[\"Thomas Fobes\"]\nC1 -->|Investigates| C5\nC2 -->|Narrator and ally of| C1\nC3 -->|Niece of| C5\nC4 -->|Niece of| C5\nC3 -->|Sister of| C4\nC6 -->|Engaged to| C4\nC6 -->|Former lover of| C3\nC7 -->|Servant of| C5\nC7 -->|Witness against| C3\nC8 -->|Clerk of| C5\nC4 -->|Inherits from| C5\nC3 -->|Inherits from| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 204,
+        "total_tokens": 1764,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:48.175Z",
+      "finishedAt": "2026-09-10T17:25:48.175Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ebenezer Gryce\"]\nC2[\"Everett Raymond\"]\nC3[\"Eleanor Leavenworth\"]\nC4[\"Mary Leavenworth\"]\nC5[\"Horatio Leavenworth\"]\nC6[\"Henry Clavering\"]\nC7[\"Hannah Chester\"]\nC8[\"Thomas Fobes\"]\nC1 -->|Investigates| C5\nC2 -->|Narrator and ally of| C1\nC3 -->|Niece of| C5\nC4 -->|Niece of| C5\nC3 -->|Sister of| C4\nC6 -->|Engaged to| C4\nC6 -->|Former lover of| C3\nC7 -->|Servant of| C5\nC7 -->|Witness against| C3\nC8 -->|Clerk of| C5\nC4 -->|Inherits from| C5\nC3 -->|Inherits from| C5",
+  "mermaidHash": "e433efe9aab3af71a1ea4e9499bb5407313331eadd6ea7df0036593a483a3f9f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e433efe9aab3af71a1ea4e9499bb5407313331eadd6ea7df0036593a483a3f9f",
+    "svgHash": "60de48a1470ee41abdcfcd50e7986f36d66ed38ec551b9c1e211ce76d0d42f25",
+    "validatedAt": "2026-09-10T17:25:49.595Z",
+    "width": 1245.6767578125,
+    "height": 436.25
+  },
+  "generatedAt": "2026-09-10T17:25:48.175Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 204,
+    "total_tokens": 1764,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

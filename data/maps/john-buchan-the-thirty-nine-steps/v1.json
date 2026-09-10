@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-buchan/the-thirty-nine-steps",
+  "metadata": {
+    "title": "The Thirty-Nine Steps",
+    "authors": [
+      "John Buchan"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "859a21b2202ebdf6ebe1de026caa07f8ed262c7af06cc2e7edf3c1a43d518c26",
+  "promptHash": "c1a7de1b234d0c3e51cb874b609928a15eb0022ddd404552325df9b41e29531d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:00.986Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:00.986Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Richard Hannay\"]\nC2[\"Franklin P. Scudder\"]\nC3[\"The Black Stone\"]\nC4[\"Sir Harry Robertson\"]\nC5[\"Alexander Turnbull\"]\nC6[\"The Bald Archeologist\"]\nC7[\"The First Sea Lord\"]\nC8[\"Sir Walter Bullivant\"]\nC1 -->|Protects| C2\nC2 -->|Tells of plot to| C1\nC3 -->|Enemy of| C1\nC3 -->|Kills| C2\nC1 -->|Flees to| C4\nC4 -->|Helps| C1\nC1 -->|Impersonates| C5\nC6 -->|Enemy of| C1\nC1 -->|Warns| C7\nC8 -->|Recruits| C1\nC8 -->|Mentor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 184,
+        "total_tokens": 1742,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:02.518Z",
+      "finishedAt": "2026-09-10T17:47:02.518Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard Hannay\"]\nC2[\"Franklin P. Scudder\"]\nC3[\"The Black Stone\"]\nC4[\"Sir Harry Robertson\"]\nC5[\"Alexander Turnbull\"]\nC6[\"The Bald Archeologist\"]\nC7[\"The First Sea Lord\"]\nC8[\"Sir Walter Bullivant\"]\nC1 -->|Protects| C2\nC2 -->|Tells of plot to| C1\nC3 -->|Enemy of| C1\nC3 -->|Kills| C2\nC1 -->|Flees to| C4\nC4 -->|Helps| C1\nC1 -->|Impersonates| C5\nC6 -->|Enemy of| C1\nC1 -->|Warns| C7\nC8 -->|Recruits| C1\nC8 -->|Mentor of| C1",
+  "mermaidHash": "9756e889ee43b7c005b6575d93b795eeb5db397c5d00bf893e5636440357b184",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9756e889ee43b7c005b6575d93b795eeb5db397c5d00bf893e5636440357b184",
+    "svgHash": "d64211a1107bb035f77c28261db5ef97730b8ba19cfa77910a2a52acdb58fc8f",
+    "validatedAt": "2026-09-10T17:47:03.872Z",
+    "width": 840.2451782226562,
+    "height": 396.25
+  },
+  "generatedAt": "2026-09-10T17:47:02.518Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 184,
+    "total_tokens": 1742,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

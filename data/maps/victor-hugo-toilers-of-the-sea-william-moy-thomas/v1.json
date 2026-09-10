@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "victor-hugo/toilers-of-the-sea/william-moy-thomas",
+  "metadata": {
+    "title": "Toilers of the Sea",
+    "authors": [
+      "Victor Hugo"
+    ],
+    "year": "1866"
+  },
+  "inputHash": "9d13bcec07b40da6a6e51d61180b319297be60e3aa8dbb2c7e53a7cb78234752",
+  "promptHash": "9fdb2057155da195683c3ae44546b3629a1cb871a14aaeffd8aea69ce3d3d973",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:55.381Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:55.381Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Gilliatt\"]\nC2[\"Mess Lethierry\"]\nC3[\"Déruchette\"]\nC4[\"Sieur Clubin\"]\nC5[\"Rantaine\"]\nC6[\"Ebenezer Caudray\"]\nC7[\"La Jacressarde\"]\nC1 -->|Loves| C3\nC2 -->|Uncle of| C3\nC2 -->|Owner of boat| C1\nC2 -->|Employer of| C4\nC4 -->|Betrays| C2\nC4 -->|Steals from| C2\nC5 -->|Swindles| C2\nC6 -->|Loves| C3\nC3 -->|Loves| C6\nC7 -->|Aids| C4\nC1 -->|Rival of| C4\nC1 -->|Kills| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 186,
+        "total_tokens": 1744,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:56.883Z",
+      "finishedAt": "2026-09-10T18:11:56.883Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Gilliatt\"]\nC2[\"Mess Lethierry\"]\nC3[\"Déruchette\"]\nC4[\"Sieur Clubin\"]\nC5[\"Rantaine\"]\nC6[\"Ebenezer Caudray\"]\nC7[\"La Jacressarde\"]\nC1 -->|Loves| C3\nC2 -->|Uncle of| C3\nC2 -->|Owner of boat| C1\nC2 -->|Employer of| C4\nC4 -->|Betrays| C2\nC4 -->|Steals from| C2\nC5 -->|Swindles| C2\nC6 -->|Loves| C3\nC3 -->|Loves| C6\nC7 -->|Aids| C4\nC1 -->|Rival of| C4\nC1 -->|Kills| C4",
+  "mermaidHash": "abfff9651bc565de7f11c47fcfd2f8dc639bdee7387439b1fd37a92a5d1e54a7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "abfff9651bc565de7f11c47fcfd2f8dc639bdee7387439b1fd37a92a5d1e54a7",
+    "svgHash": "9707eeac9ad678aa0606da94399b0c7989a50232d1514498ebd0606d490c2aa6",
+    "validatedAt": "2026-09-10T18:11:58.376Z",
+    "width": 1218.8203125,
+    "height": 316.5
+  },
+  "generatedAt": "2026-09-10T18:11:56.883Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 186,
+    "total_tokens": 1744,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

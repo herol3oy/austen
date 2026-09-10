@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-morris/the-house-of-the-wolfings",
+  "metadata": {
+    "title": "The House of the Wolfings",
+    "authors": [
+      "William Morris"
+    ],
+    "year": "1888"
+  },
+  "inputHash": "4eb23e7a8dbb797e40ee33f3df706e3f31f8c9828493a2a415123fca6a8062d8",
+  "promptHash": "b7168270c54a11ecd32baad37a736d6ced73cedff5cc20a45a5fd52a274e9710",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:25.263Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:25.263Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Thiodolf\"]\nC2[\"Wood-Sun\"]\nC3[\"Otter\"]\nC4[\"Hall-Sun\"]\nC5[\"Thorbiorn\"]\nC6[\"Gandulf\"]\nC7[\"Hiarandi\"]\nC8[\"Wolfings\"]\nC1 -->|Loves| C2\nC2 -->|Protects| C1\nC1 -->|Leads| C8\nC3 -->|Foster father of| C1\nC4 -->|Counsels| C1\nC5 -->|Enemy of| C1\nC6 -->|Serves| C5\nC7 -->|Killed by| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 142,
+        "total_tokens": 1701,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:26.797Z",
+      "finishedAt": "2026-09-10T18:14:26.797Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Thiodolf\"]\nC2[\"Wood-Sun\"]\nC3[\"Otter\"]\nC4[\"Hall-Sun\"]\nC5[\"Thorbiorn\"]\nC6[\"Gandulf\"]\nC7[\"Hiarandi\"]\nC8[\"Wolfings\"]\nC1 -->|Loves| C2\nC2 -->|Protects| C1\nC1 -->|Leads| C8\nC3 -->|Foster father of| C1\nC4 -->|Counsels| C1\nC5 -->|Enemy of| C1\nC6 -->|Serves| C5\nC7 -->|Killed by| C1",
+  "mermaidHash": "0607049343e8bf5797c7be9506e2592a52bc5732f24693612f7b917db2b07df9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0607049343e8bf5797c7be9506e2592a52bc5732f24693612f7b917db2b07df9",
+    "svgHash": "f23f0e4ef9449f2f1e87c60f9508a00aa3695d62d03103d8ebac74805b7b028d",
+    "validatedAt": "2026-09-10T18:14:28.160Z",
+    "width": 860.9448852539062,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T18:14:26.797Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 142,
+    "total_tokens": 1701,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

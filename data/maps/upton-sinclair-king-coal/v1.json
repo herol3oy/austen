@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "upton-sinclair/king-coal",
+  "metadata": {
+    "title": "King Coal",
+    "authors": [
+      "Upton Sinclair"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "9c4e1494388561b9b530ef52d3e60ae520fbe5480da58119cab512ae5e4d78ae",
+  "promptHash": "c2387768b7b351c149f05f71c9def4fc9a915a6fe73e5a6be6f76b0071d9f392",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:37.738Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:37.738Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Hal Warner\"]\nC2[\"Mary Burke\"]\nC3[\"Joe Smith\"]\nC4[\"Alec Stone\"]\nC5[\"Mrs. Burke\"]\nC6[\"Mike Sikoria\"]\nC7[\"Tom Olson\"]\nC8[\"David Ross\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC1 -->|Friend of| C6\nC1 -->|Ally of| C7\nC4 -->|Enemy of| C1\nC4 -->|Oppresses| C2\nC4 -->|Commands| C3\nC5 -->|Parent of| C2\nC3 -->|Betrays| C1\nC7 -->|Mentor of| C1\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 176,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:39.169Z",
+      "finishedAt": "2026-09-10T18:11:39.169Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Hal Warner\"]\nC2[\"Mary Burke\"]\nC3[\"Joe Smith\"]\nC4[\"Alec Stone\"]\nC5[\"Mrs. Burke\"]\nC6[\"Mike Sikoria\"]\nC7[\"Tom Olson\"]\nC8[\"David Ross\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC1 -->|Friend of| C6\nC1 -->|Ally of| C7\nC4 -->|Enemy of| C1\nC4 -->|Oppresses| C2\nC4 -->|Commands| C3\nC5 -->|Parent of| C2\nC3 -->|Betrays| C1\nC7 -->|Mentor of| C1\nC8 -->|Friend of| C1",
+  "mermaidHash": "684874b039aae23da7c276298cabdaac305e0b0a87dac26bf48c3222aac8e525",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "684874b039aae23da7c276298cabdaac305e0b0a87dac26bf48c3222aac8e525",
+    "svgHash": "470466adb6f148c4e25db31f6f54116d52ba5635cef6a93fd312fbfd9cb40c06",
+    "validatedAt": "2026-09-10T18:11:40.524Z",
+    "width": 659.5263671875,
+    "height": 453.49169921875
+  },
+  "generatedAt": "2026-09-10T18:11:39.169Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 176,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

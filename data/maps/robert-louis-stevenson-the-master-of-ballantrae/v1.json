@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-louis-stevenson/the-master-of-ballantrae",
+  "metadata": {
+    "title": "The Master of Ballantrae",
+    "authors": [
+      "Robert Louis Stevenson"
+    ],
+    "year": "1889"
+  },
+  "inputHash": "b45c67ac723772b7e12e61a714859f2fb61963683ceacee5186b841050f992f4",
+  "promptHash": "7257b5d277f1fbad48fd3c154b3344b53f3266ac3b5f5f64415d0035f9f2eedc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:49.465Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:49.465Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"James Durie\"]\nC2[\"Henry Durie\"]\nC3[\"Alison Graeme\"]\nC4[\"Adam Weir\"]\nC5[\"John Paul\"]\nC6[\"Ephraim Mackellar\"]\nC7[\"Francis Burke\"]\nC1 -->|Brother of| C2\nC1 -->|Rival of| C2\nC1 -->|Loves| C3\nC2 -->|Brother of| C1\nC2 -->|Married to| C3\nC3 -->|Loves| C1\nC4 -->|Serves| C1\nC4 -->|Serves| C2\nC5 -->|Friend of| C1\nC6 -->|Steward of| C2\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 168,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:50.532Z",
+      "finishedAt": "2026-09-10T18:07:50.532Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"James Durie\"]\nC2[\"Henry Durie\"]\nC3[\"Alison Graeme\"]\nC4[\"Adam Weir\"]\nC5[\"John Paul\"]\nC6[\"Ephraim Mackellar\"]\nC7[\"Francis Burke\"]\nC1 -->|Brother of| C2\nC1 -->|Rival of| C2\nC1 -->|Loves| C3\nC2 -->|Brother of| C1\nC2 -->|Married to| C3\nC3 -->|Loves| C1\nC4 -->|Serves| C1\nC4 -->|Serves| C2\nC5 -->|Friend of| C1\nC6 -->|Steward of| C2\nC7 -->|Friend of| C1",
+  "mermaidHash": "964ef27d1c1da4d7fe0c935a865867f884320a836269b3daabe22541609faeda",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "964ef27d1c1da4d7fe0c935a865867f884320a836269b3daabe22541609faeda",
+    "svgHash": "b7f25f82f970ad5cd55045b30bcae934dfe5e5d4b19695f96b595393f874e8ba",
+    "validatedAt": "2026-09-10T18:07:51.857Z",
+    "width": 1006.1549682617188,
+    "height": 430.6396484375
+  },
+  "generatedAt": "2026-09-10T18:07:50.532Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 168,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

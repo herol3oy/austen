@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-louis-stevenson/kidnapped",
+  "metadata": {
+    "title": "Kidnapped",
+    "authors": [
+      "Robert Louis Stevenson"
+    ],
+    "year": "1886"
+  },
+  "inputHash": "c193346db1ebb2de32fb01344a4bfa381c15768e84fdf73f4d6d591bd103f1d2",
+  "promptHash": "4f0802497765ca76f72add6f811aaa6a2e0f67cd23c491c2de9babcd6f0d25ab",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:42.112Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:42.112Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"David Balfour\"]\nC2[\"Ebenezer Balfour\"]\nC3[\"Alan Breck Stewart\"]\nC4[\"James Stewart\"]\nC5[\"Colin Campbell\"]\nC6[\"Captain Hoseason\"]\nC7[\"Mr. Rankeillor\"]\nC1 -->|Nephew of| C2\nC2 -->|Uncle of| C1\nC2 -->|Betrays| C1\nC1 -->|Friend of| C3\nC3 -->|Protects| C1\nC4 -->|Clan chief of| C3\nC5 -->|Murdered by| C3\nC6 -->|Kidnaps| C1\nC7 -->|Lawyer of| C1\nC7 -->|Aids| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 166,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:43.442Z",
+      "finishedAt": "2026-09-10T18:07:43.442Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"David Balfour\"]\nC2[\"Ebenezer Balfour\"]\nC3[\"Alan Breck Stewart\"]\nC4[\"James Stewart\"]\nC5[\"Colin Campbell\"]\nC6[\"Captain Hoseason\"]\nC7[\"Mr. Rankeillor\"]\nC1 -->|Nephew of| C2\nC2 -->|Uncle of| C1\nC2 -->|Betrays| C1\nC1 -->|Friend of| C3\nC3 -->|Protects| C1\nC4 -->|Clan chief of| C3\nC5 -->|Murdered by| C3\nC6 -->|Kidnaps| C1\nC7 -->|Lawyer of| C1\nC7 -->|Aids| C1",
+  "mermaidHash": "b71762b168fb09ff37767b3b91513b924891ac405017de9a29339a5b2c262449",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b71762b168fb09ff37767b3b91513b924891ac405017de9a29339a5b2c262449",
+    "svgHash": "1296fc44cd96073a153ede1dc65b83987f608e5534bfb861f01595497154d06d",
+    "validatedAt": "2026-09-10T18:07:44.883Z",
+    "width": 795.8455200195312,
+    "height": 352.3661193847656
+  },
+  "generatedAt": "2026-09-10T18:07:43.442Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 166,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

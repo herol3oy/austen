@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "rafael-sabatini/scaramouche",
+  "metadata": {
+    "title": "Scaramouche",
+    "authors": [
+      "Rafael Sabatini"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "87deb8bf976fa00f26b90215a3713310989c37186447dd2dca5ce639f79bde1b",
+  "promptHash": "133e68bd7eacbb52bcab719b9000e5ee34cfd1de0dc7c8e1c4fc8d012daae498",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:07.202Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:07.202Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"André-Louis Moreau\"]\nC2[\"Aliné de Kercadiou\"]\nC3[\"Quintin de Kercadiou\"]\nC4[\"Marquis de La Tour d'Azyr\"]\nC5[\"Philippe de Vilmorin\"]\nC6[\"Binet\"]\nC7[\"M. de Lesdiguières\"]\nC8[\"Madame de Plougastel\"]\nC1 -->|Nephew of| C3\nC1 -->|In love with| C2\nC1 -->|Friend of| C5\nC1 -->|Enemy of| C4\nC1 -->|Apprentice of| C6\nC1 -->|Serves| C7\nC4 -->|Kills| C5\nC4 -->|Rival of| C1\nC4 -->|Suitor of| C2\nC3 -->|Father of| C2\nC8 -->|Mother of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 202,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:09.655Z",
+      "finishedAt": "2026-09-10T18:07:09.655Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"André-Louis Moreau\"]\nC2[\"Aliné de Kercadiou\"]\nC3[\"Quintin de Kercadiou\"]\nC4[\"Marquis de La Tour d'Azyr\"]\nC5[\"Philippe de Vilmorin\"]\nC6[\"Binet\"]\nC7[\"M. de Lesdiguières\"]\nC8[\"Madame de Plougastel\"]\nC1 -->|Nephew of| C3\nC1 -->|In love with| C2\nC1 -->|Friend of| C5\nC1 -->|Enemy of| C4\nC1 -->|Apprentice of| C6\nC1 -->|Serves| C7\nC4 -->|Kills| C5\nC4 -->|Rival of| C1\nC4 -->|Suitor of| C2\nC3 -->|Father of| C2\nC8 -->|Mother of| C1",
+  "mermaidHash": "4c1532557dd925dbacebde86cd4e3bd9c577f02bd47f83124a37463b3835ddda",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4c1532557dd925dbacebde86cd4e3bd9c577f02bd47f83124a37463b3835ddda",
+    "svgHash": "6d65e2e85f093fc55f939be1e3b061fb26a8b4a8a24c2027790659814acb1540",
+    "validatedAt": "2026-09-10T18:07:11.096Z",
+    "width": 1220.462646484375,
+    "height": 468.25
+  },
+  "generatedAt": "2026-09-10T18:07:09.655Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 202,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

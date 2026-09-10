@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nathaniel-hawthorne/the-house-of-the-seven-gables",
+  "metadata": {
+    "title": "The House of the Seven Gables",
+    "authors": [
+      "Nathaniel Hawthorne"
+    ],
+    "year": "1851"
+  },
+  "inputHash": "0191adb198e24290670d15504919e45f058fd53895676c6aeb751a18107ff2d4",
+  "promptHash": "5604efabe54a59741b0578b6b8396ba0f95ae79b4d8cddb09a4ded2445705d20",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:27.848Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:27.848Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Hepzibah Pyncheon\"]\nC2[\"Clifford Pyncheon\"]\nC3[\"Phoebe Pyncheon\"]\nC4[\"Judge Jaffrey Pyncheon\"]\nC5[\"Holgrave\"]\nC6[\"Matthew Maule\"]\nC7[\"Colonel Pyncheon\"]\nC1 -->|Sibling of| C2\nC1 -->|Cousin of| C3\nC1 -->|Loves| C2\nC4 -->|Cousin of| C3\nC4 -->|Enemy of| C1\nC4 -->|Enemy of| C2\nC4 -->|Persecutes| C2\nC5 -->|Loves| C3\nC5 -->|Descendant of| C6\nC5 -->|Protects| C2\nC7 -->|Ancestor of| C1\nC7 -->|Ancestor of| C2\nC7 -->|Ancestor of| C3\nC7 -->|Ancestor of| C4\nC7 -->|Wronged| C6\nC6 -->|Curses| C7\nC6 -->|Ancestor of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 256,
+        "total_tokens": 1817,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:29.693Z",
+      "finishedAt": "2026-09-10T18:04:29.693Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Hepzibah Pyncheon\"]\nC2[\"Clifford Pyncheon\"]\nC3[\"Phoebe Pyncheon\"]\nC4[\"Judge Jaffrey Pyncheon\"]\nC5[\"Holgrave\"]\nC6[\"Matthew Maule\"]\nC7[\"Colonel Pyncheon\"]\nC1 -->|Sibling of| C2\nC1 -->|Cousin of| C3\nC1 -->|Loves| C2\nC4 -->|Cousin of| C3\nC4 -->|Enemy of| C1\nC4 -->|Enemy of| C2\nC4 -->|Persecutes| C2\nC5 -->|Loves| C3\nC5 -->|Descendant of| C6\nC5 -->|Protects| C2\nC7 -->|Ancestor of| C1\nC7 -->|Ancestor of| C2\nC7 -->|Ancestor of| C3\nC7 -->|Ancestor of| C4\nC7 -->|Wronged| C6\nC6 -->|Curses| C7\nC6 -->|Ancestor of| C5",
+  "mermaidHash": "cb016999c26e23ecc9d32dd66cd17a4970c8d618ba5a8961837e57b56cd22426",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cb016999c26e23ecc9d32dd66cd17a4970c8d618ba5a8961837e57b56cd22426",
+    "svgHash": "808e014c9bb751e5fbce53c61a5bff8990121ebcb5991ad1f33bc10f434d91d8",
+    "validatedAt": "2026-09-10T18:04:31.293Z",
+    "width": 1700.304443359375,
+    "height": 497.2836608886719
+  },
+  "generatedAt": "2026-09-10T18:04:29.693Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 256,
+    "total_tokens": 1817,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

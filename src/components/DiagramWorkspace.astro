@@ -1,0 +1,162 @@
+---
+const { svg = "", initial = null } = Astro.props;
+---
+<div id="diagram-workspace" class="diagram-workspace" hidden={!svg}>
+  <section id="mermaid-section" hidden={!svg}>
+    <div class="section-heading">
+      <h2>Relationship diagram</h2>
+      <p class="workspace-note">
+        A visual reading of the book’s central characters and connections.
+      </p>
+    </div>
+    <p class="spoiler-notice">Spoilers: this map covers the whole book.</p>
+    <div class="mermaid-frame">
+      <div
+        id="diagram-controls"
+        class="diagram-controls"
+        role="group"
+        aria-label="Diagram view controls"
+        hidden
+      >
+        <button
+          id="zoom-out-btn"
+          class="diagram-control"
+          type="button"
+          aria-label="Zoom out"
+          title="Zoom out"
+        >
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+            <path d="M4 10h12" fill="none" stroke="currentColor" stroke-width="1.7" />
+          </svg>
+        </button>
+        <button
+          id="zoom-reset-btn"
+          class="diagram-control diagram-zoom-level"
+          type="button"
+          aria-label="Reset diagram view"
+          title="Fit diagram"
+        >
+          <span id="diagram-zoom-level">100%</span>
+        </button>
+        <button
+          id="zoom-in-btn"
+          class="diagram-control"
+          type="button"
+          aria-label="Zoom in"
+          title="Zoom in"
+        >
+          <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+            <path d="M4 10h12M10 4v12" fill="none" stroke="currentColor" stroke-width="1.7" />
+          </svg>
+        </button>
+      </div>
+      <p id="diagram-instructions" class="sr-only">
+        Interactive diagram. Drag to pan, use the mouse wheel or pinch to zoom, and use plus,
+        minus, zero, Home, or the arrow keys when focused.
+      </p>
+      <div
+        id="mermaid-container"
+        class="mermaid-scroll"
+        role="region"
+        aria-label="Interactive relationship diagram"
+        aria-describedby="diagram-instructions"
+        tabindex="-1"
+      set:html={svg}></div>
+    </div>
+  </section>
+
+  <section id="actions-section" hidden>
+    <div class="section-heading">
+      <h2>Keep &amp; share</h2>
+      <span class="section-number" aria-hidden="true">02</span>
+    </div>
+    <p id="actions-intro" class="actions-intro">
+      Take the map with you, or use its Mermaid source in your own notes.
+    </p>
+    <div class="actions-row">
+      <div class="action-block">
+        <label for="mermaid-source">Mermaid source</label>
+        <div class="source-group">
+          <textarea id="mermaid-source" class="source-textarea" readonly></textarea>
+          <div class="source-actions">
+            <button id="copy-btn" class="secondary" type="button">Copy source</button>
+            <button id="edit-btn" class="secondary" type="button">Edit diagram</button>
+          </div>
+        </div>
+        <p id="copy-status" class="status-line" role="status" aria-live="polite"></p>
+      </div>
+      <div class="action-block">
+        <label for="share-url-input">Shareable link</label>
+        <div class="share-link-group">
+          <input type="text" id="share-url-input" class="share-url-input" readonly>
+          <button id="share-btn" class="secondary" type="button">Copy link</button>
+        </div>
+        <p id="share-status" class="status-line" role="status" aria-live="polite"></p>
+      </div>
+      <div class="action-block download-block">
+        <p id="download-label" class="action-label">Download diagram</p>
+        <div
+          id="download-actions"
+          class="download-actions"
+          role="group"
+          aria-labelledby="download-label"
+          aria-busy="false"
+        >
+          <button id="download-png-btn" class="secondary" type="button" disabled>
+            Download PNG
+          </button>
+          <button id="download-svg-btn" class="secondary" type="button" disabled>
+            Download SVG
+          </button>
+        </div>
+        <p id="download-status" class="status-line" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="editor-section"
+    class="diagram-editor"
+    aria-labelledby="editor-heading"
+    aria-busy="false"
+    hidden
+  >
+    <div class="editor-heading">
+      <div>
+        <p class="editor-kicker">Refine the map</p>
+        <h2 id="editor-heading">Edit relationship diagram</h2>
+      </div>
+      <p>
+        Adjust the Mermaid source below. The diagram keeps its last valid preview while you
+        work.
+      </p>
+    </div>
+
+    <div class="editor-field">
+      <label for="editor-input">Mermaid source</label>
+      <textarea
+        id="editor-input"
+        class="editor-input"
+        aria-describedby="editor-help editor-status"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+      ></textarea>
+      <p id="editor-help" class="editor-help">
+        Example:
+        <code>A[Elizabeth Bennet] --&gt;|Sisters| B[Jane Bennet]</code>
+      </p>
+    </div>
+
+    <div class="editor-footer">
+      <p id="editor-status" class="status-line" role="status" aria-live="polite"></p>
+      <div class="editor-actions">
+        <button id="editor-revert-btn" class="secondary" type="button">Revert draft</button>
+        <button id="editor-cancel-btn" class="secondary" type="button">Cancel</button>
+        <button id="editor-save-btn" type="button">Save changes</button>
+      </div>
+    </div>
+  </section>
+</div>
+<script is:inline id="workspace-data" type="application/json" set:html={JSON.stringify(initial).replace(/</g, "\\u003c")} />
+<script>import "../scripts/diagram-workspace.js";</script>

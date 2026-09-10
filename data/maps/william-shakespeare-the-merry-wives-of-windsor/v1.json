@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/the-merry-wives-of-windsor",
+  "metadata": {
+    "title": "The Merry Wives of Windsor",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1602"
+  },
+  "inputHash": "5142639b96588ddeb810cc267014b2979420f02ad830f99c8404a83b4f98b503",
+  "promptHash": "512ba85c0a0169e74f79420e0843304452f23dd86082b36fcf4f405eb93024ed",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:55.014Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:55.014Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sir John Falstaff\"]\nC2[\"Mistress Ford\"]\nC3[\"Mistress Page\"]\nC4[\"Master Ford\"]\nC5[\"Master Page\"]\nC6[\"Anne Page\"]\nC7[\"Fenton\"]\nC8[\"Doctor Caius\"]\nC1 -->|Courts| C2\nC1 -->|Courts| C3\nC2 -->|Wife of| C4\nC3 -->|Wife of| C5\nC4 -->|Jealous of| C2\nC6 -->|Daughter of| C4\nC6 -->|Daughter of| C5\nC7 -->|Loves| C6\nC8 -->|Rival of| C7\nC8 -->|Suitor of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 164,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:56.192Z",
+      "finishedAt": "2026-09-10T18:15:56.192Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sir John Falstaff\"]\nC2[\"Mistress Ford\"]\nC3[\"Mistress Page\"]\nC4[\"Master Ford\"]\nC5[\"Master Page\"]\nC6[\"Anne Page\"]\nC7[\"Fenton\"]\nC8[\"Doctor Caius\"]\nC1 -->|Courts| C2\nC1 -->|Courts| C3\nC2 -->|Wife of| C4\nC3 -->|Wife of| C5\nC4 -->|Jealous of| C2\nC6 -->|Daughter of| C4\nC6 -->|Daughter of| C5\nC7 -->|Loves| C6\nC8 -->|Rival of| C7\nC8 -->|Suitor of| C6",
+  "mermaidHash": "290d35fc449464f3a6feaa4679b9b3bcf652888ed2261ada84d8dc1e7009203b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "290d35fc449464f3a6feaa4679b9b3bcf652888ed2261ada84d8dc1e7009203b",
+    "svgHash": "d5481a81d0a3992ad491d5b4754a5ce9c29fab4593b5dc897d6e7ff398f6e625",
+    "validatedAt": "2026-09-10T18:15:57.633Z",
+    "width": 953.3590698242188,
+    "height": 329.5
+  },
+  "generatedAt": "2026-09-10T18:15:56.192Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 164,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

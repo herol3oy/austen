@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/psmith-journalist",
+  "metadata": {
+    "title": "Psmith, Journalist",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1923"
+  },
+  "inputHash": "f72df53024c6b274c967029bae6ec4a17932df5c8395e31fcabcc213e4b5b6a6",
+  "promptHash": "ee134360e61e92befbd80ee31fd10a20687f3a6bea09ffcc9a78575cfe6ea477",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:52.286Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:52.286Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Psmith\"]\nC2[\"Billy Windsor\"]\nC3[\"Bat Jarvis\"]\nC4[\"Kid Brady\"]\nC5[\"Wilberfloss\"]\nC6[\"John\"]\nC7[\"Mr. B. Henderson\"]\nC8[\"Constable\"]\nC1 -->|Friend of| C2\nC1 -->|Employed by| C5\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC3 -->|Protects| C2\nC4 -->|Friend of| C2\nC1 -->|Allied with| C3\nC1 -->|Allied with| C4\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2\nC8 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 193,
+        "total_tokens": 1756,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:54.095Z",
+      "finishedAt": "2026-09-10T18:05:54.095Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Psmith\"]\nC2[\"Billy Windsor\"]\nC3[\"Bat Jarvis\"]\nC4[\"Kid Brady\"]\nC5[\"Wilberfloss\"]\nC6[\"John\"]\nC7[\"Mr. B. Henderson\"]\nC8[\"Constable\"]\nC1 -->|Friend of| C2\nC1 -->|Employed by| C5\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC3 -->|Protects| C2\nC4 -->|Friend of| C2\nC1 -->|Allied with| C3\nC1 -->|Allied with| C4\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2\nC8 -->|Enemy of| C1",
+  "mermaidHash": "48324cdb1636a1b220169733a50bcc3dd36e6d534165fd74ea01af0df29b0d2e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "48324cdb1636a1b220169733a50bcc3dd36e6d534165fd74ea01af0df29b0d2e",
+    "svgHash": "357998c4fbfb4db94fa5a28351068dd66ae0bd3d2f2ccf167c6ea9c1efb422db",
+    "validatedAt": "2026-09-10T18:05:55.440Z",
+    "width": 933.5430908203125,
+    "height": 393.25
+  },
+  "generatedAt": "2026-09-10T18:05:54.095Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 193,
+    "total_tokens": 1756,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

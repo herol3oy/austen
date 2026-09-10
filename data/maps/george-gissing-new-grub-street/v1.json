@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-gissing/new-grub-street",
+  "metadata": {
+    "title": "New Grub Street",
+    "authors": [
+      "George Gissing"
+    ],
+    "year": "1891"
+  },
+  "inputHash": "269c9d260520c6ef20a00b8921de1cf4a2519c70a36863a0b7cc4cfc9126ce6a",
+  "promptHash": "f32517407458ae32bc63f81d9bb5c97d0825153323eb1771801aea2199283d06",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:24.605Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:24.605Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Edwin Reardon\"]\nC2[\"Amy Reardon\"]\nC3[\"Jasper Milvain\"]\nC4[\"Marian Yule\"]\nC5[\"Alfred Yule\"]\nC6[\"Harold Biffen\"]\nC7[\"Dora Milvain\"]\nC8[\"John Yule\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C6\nC2 -->|Sister of| C7\nC3 -->|Brother of| C7\nC3 -->|Loves| C4\nC3 -->|Friend of| C1\nC4 -->|Daughter of| C5\nC4 -->|Cousin of| C3\nC5 -->|Father of| C4\nC5 -->|Brother of| C8\nC6 -->|Friend of| C1\nC7 -->|Sister of| C3\nC7 -->|Friend of| C4\nC8 -->|Uncle of| C3\nC8 -->|Uncle of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 227,
+        "total_tokens": 1785,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:26.122Z",
+      "finishedAt": "2026-09-10T17:40:26.122Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Edwin Reardon\"]\nC2[\"Amy Reardon\"]\nC3[\"Jasper Milvain\"]\nC4[\"Marian Yule\"]\nC5[\"Alfred Yule\"]\nC6[\"Harold Biffen\"]\nC7[\"Dora Milvain\"]\nC8[\"John Yule\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C6\nC2 -->|Sister of| C7\nC3 -->|Brother of| C7\nC3 -->|Loves| C4\nC3 -->|Friend of| C1\nC4 -->|Daughter of| C5\nC4 -->|Cousin of| C3\nC5 -->|Father of| C4\nC5 -->|Brother of| C8\nC6 -->|Friend of| C1\nC7 -->|Sister of| C3\nC7 -->|Friend of| C4\nC8 -->|Uncle of| C3\nC8 -->|Uncle of| C4",
+  "mermaidHash": "31d5f45a82e859e38d0ef348db1b870b788a06925101084cc053cae92a02a18b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "31d5f45a82e859e38d0ef348db1b870b788a06925101084cc053cae92a02a18b",
+    "svgHash": "243a8a85e6f4730704dc8a3538fa7bc97542801837033c5795685b8ade306445",
+    "validatedAt": "2026-09-10T17:40:27.505Z",
+    "width": 1745.9453125,
+    "height": 248.94158935546875
+  },
+  "generatedAt": "2026-09-10T17:40:26.122Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 227,
+    "total_tokens": 1785,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "richard-henry-dana-jr/two-years-before-the-mast",
+  "metadata": {
+    "title": "Two Years Before the Mast",
+    "authors": [
+      "Richard Henry Dana Jr."
+    ],
+    "year": "1916"
+  },
+  "inputHash": "baeee4a2433c18431bac54e8242a08aa1cc88609d32445b4d3f8f7da34aa6c1a",
+  "promptHash": "7261bc1aa5449c333c7856b23cdb473f9c0c407e9aeb86da87b7d7d2dabacf8b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:49.649Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:49.649Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Richard Henry Dana Jr.\"]\nC2[\"Captain Frank Thompson\"]\nC3[\"Mr. Stimson\"]\nC4[\"Sam\"]\nC5[\"George\"]\nC6[\"Ben\"]\nC7[\"Mr. Mann\"]\nC8[\"Tom Harris\"]\nC1 -->|Serves| C2\nC2 -->|Commands| C1\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC3 -->|Mentor of| C1\nC2 -->|Abuses| C1\nC2 -->|Abuses| C4\nC2 -->|Abuses| C5\nC2 -->|Abuses| C6\nC2 -->|Abuses| C7\nC2 -->|Abuses| C8\nC4 -->|Friend of| C5\nC4 -->|Friend of| C6\nC4 -->|Friend of| C7\nC4 -->|Friend of| C8\nC5 -->|Friend of| C6\nC5 -->|Friend of| C7\nC5 -->|Friend of| C8\nC6 -->|Friend of| C7\nC6 -->|Friend of| C8\nC7 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 305,
+        "total_tokens": 1865,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 152
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:51.364Z",
+      "finishedAt": "2026-09-10T18:16:51.364Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard Henry Dana Jr.\"]\nC2[\"Captain Frank Thompson\"]\nC3[\"Mr. Stimson\"]\nC4[\"Sam\"]\nC5[\"George\"]\nC6[\"Ben\"]\nC7[\"Mr. Mann\"]\nC8[\"Tom Harris\"]\nC1 -->|Serves| C2\nC2 -->|Commands| C1\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC3 -->|Mentor of| C1\nC2 -->|Abuses| C1\nC2 -->|Abuses| C4\nC2 -->|Abuses| C5\nC2 -->|Abuses| C6\nC2 -->|Abuses| C7\nC2 -->|Abuses| C8\nC4 -->|Friend of| C5\nC4 -->|Friend of| C6\nC4 -->|Friend of| C7\nC4 -->|Friend of| C8\nC5 -->|Friend of| C6\nC5 -->|Friend of| C7\nC5 -->|Friend of| C8\nC6 -->|Friend of| C7\nC6 -->|Friend of| C8\nC7 -->|Friend of| C8",
+  "mermaidHash": "cb0e0a3206f7c080f0a0b019fa6a3d1a53780d51c0053a832710d95b6cf704f3",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cb0e0a3206f7c080f0a0b019fa6a3d1a53780d51c0053a832710d95b6cf704f3",
+    "svgHash": "d90bfcdd1b9f700ec2c0bd2c9f6646e71216bdb431206ff30b09c065c7b81de8",
+    "validatedAt": "2026-09-10T18:16:52.768Z",
+    "width": 1683.43896484375,
+    "height": 708
+  },
+  "generatedAt": "2026-09-10T18:16:51.364Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 305,
+    "total_tokens": 1865,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 152
+  }
+}

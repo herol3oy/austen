@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fyodor-dostoevsky/poor-folk/c-j-hogarth",
+  "metadata": {
+    "title": "Poor Folk",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "year": "1846"
+  },
+  "inputHash": "194de83db9fe66ee8f6c60b49f997e5278d562d95c96a44c25bb54ab219fd18f",
+  "promptHash": "5633b9cc34f158d3a7864082be49df87954faf8b2cdef32e17c00ecae4183586",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:41.730Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:41.730Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Makar Devushkin\"]\nC2[\"Varvara Dobroselova\"]\nC3[\"Bykov\"]\nC4[\"Anna Fyodorovna\"]\nC5[\"Pokrovsky\"]\nC6[\"Gorshkov\"]\nC7[\"Ratazyayev\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Distant relative of| C2\nC3 -->|Pursues| C2\nC3 -->|Marries| C2\nC4 -->|Friend of| C2\nC5 -->|Tutor of| C2\nC6 -->|Neighbor of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 157,
+        "total_tokens": 1717,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:42.901Z",
+      "finishedAt": "2026-09-10T17:38:42.901Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Makar Devushkin\"]\nC2[\"Varvara Dobroselova\"]\nC3[\"Bykov\"]\nC4[\"Anna Fyodorovna\"]\nC5[\"Pokrovsky\"]\nC6[\"Gorshkov\"]\nC7[\"Ratazyayev\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Distant relative of| C2\nC3 -->|Pursues| C2\nC3 -->|Marries| C2\nC4 -->|Friend of| C2\nC5 -->|Tutor of| C2\nC6 -->|Neighbor of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "a0b264d6f7923aef561d927d897da93b5356686bb9b71b6b10413fe0bc4a1820",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a0b264d6f7923aef561d927d897da93b5356686bb9b71b6b10413fe0bc4a1820",
+    "svgHash": "96254f63093db26ed1d365840c8e0b11aee61f3de9fafbad771f77e16d8d04fd",
+    "validatedAt": "2026-09-10T17:38:44.236Z",
+    "width": 827.0352783203125,
+    "height": 426.5
+  },
+  "generatedAt": "2026-09-10T17:38:42.901Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 157,
+    "total_tokens": 1717,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "fyodor-dostoevsky/crime-and-punishment/constance-garnett",
+  "metadata": {
+    "title": "Crime and Punishment",
+    "authors": [
+      "Fyodor Dostoevsky"
+    ],
+    "year": "1866"
+  },
+  "inputHash": "44a929f6f515bae8ea56be2c8a9841b3d4b50c4c85bcc019bd89dada485f2f58",
+  "promptHash": "59bcfce4235b8e97d428037afb08beab4b1c4c433f1b029a49bdf284d22ea592",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:32.912Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:32.912Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Raskolnikov\"]\nC2[\"Sonya Marmeladova\"]\nC3[\"Dunya Raskolnikova\"]\nC4[\"Pulcheria Alexandrovna\"]\nC5[\"Razumikhin\"]\nC6[\"Svidrigailov\"]\nC7[\"Luzhin\"]\nC8[\"Porfiry Petrovich\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Sibling of| C3\nC4 -->|Parent of| C1\nC4 -->|Parent of| C3\nC5 -->|Friend of| C1\nC5 -->|Loves| C3\nC6 -->|Pursues| C3\nC7 -->|Engaged to| C3\nC8 -->|Investigates| C1\nC1 -->|Kills| C6\nC6 -->|Manipulates| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 202,
+        "total_tokens": 1765,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:34.608Z",
+      "finishedAt": "2026-09-10T17:38:34.608Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Raskolnikov\"]\nC2[\"Sonya Marmeladova\"]\nC3[\"Dunya Raskolnikova\"]\nC4[\"Pulcheria Alexandrovna\"]\nC5[\"Razumikhin\"]\nC6[\"Svidrigailov\"]\nC7[\"Luzhin\"]\nC8[\"Porfiry Petrovich\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Sibling of| C3\nC4 -->|Parent of| C1\nC4 -->|Parent of| C3\nC5 -->|Friend of| C1\nC5 -->|Loves| C3\nC6 -->|Pursues| C3\nC7 -->|Engaged to| C3\nC8 -->|Investigates| C1\nC1 -->|Kills| C6\nC6 -->|Manipulates| C2",
+  "mermaidHash": "43f968c07ce09cc6d5b212f95bea36b0cc6bd2faa2f0d017f3f7cc897587c739",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "43f968c07ce09cc6d5b212f95bea36b0cc6bd2faa2f0d017f3f7cc897587c739",
+    "svgHash": "b7a8b339807fec5d21306cfeed9664938656e00de49ffb31fe913761fd079d5a",
+    "validatedAt": "2026-09-10T17:38:35.972Z",
+    "width": 1085.2022705078125,
+    "height": 439.75
+  },
+  "generatedAt": "2026-09-10T17:38:34.608Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 202,
+    "total_tokens": 1765,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

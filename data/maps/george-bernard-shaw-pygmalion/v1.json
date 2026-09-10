@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-bernard-shaw/pygmalion",
+  "metadata": {
+    "title": "Pygmalion",
+    "authors": [
+      "George Bernard Shaw"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "445fe8523ad7797885da7bc2bad0b05f59b9fb8194fb577ea5c09f87c94d29e6",
+  "promptHash": "3fe7e3074bcae73786edd40c252518af1154cbba63b04e1d9ce901805f9e5cb4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:55.418Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:55.418Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Eliza Doolittle\"]\nC2[\"Henry Higgins\"]\nC3[\"Alfred Doolittle\"]\nC4[\"Colonel Pickering\"]\nC5[\"Mrs. Higgins\"]\nC6[\"Freddy Eynsford-Hill\"]\nC7[\"Mrs. Pearce\"]\nC1 -->|Daughter of| C3\nC2 -->|Teaches| C1\nC4 -->|Friend of| C2\nC5 -->|Mother of| C2\nC1 -->|Loves| C6\nC2 -->|Loves| C1\nC7 -->|Housekeeper of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 131,
+        "total_tokens": 1689,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:56.528Z",
+      "finishedAt": "2026-09-10T17:39:56.529Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Eliza Doolittle\"]\nC2[\"Henry Higgins\"]\nC3[\"Alfred Doolittle\"]\nC4[\"Colonel Pickering\"]\nC5[\"Mrs. Higgins\"]\nC6[\"Freddy Eynsford-Hill\"]\nC7[\"Mrs. Pearce\"]\nC1 -->|Daughter of| C3\nC2 -->|Teaches| C1\nC4 -->|Friend of| C2\nC5 -->|Mother of| C2\nC1 -->|Loves| C6\nC2 -->|Loves| C1\nC7 -->|Housekeeper of| C2",
+  "mermaidHash": "e020524a0deece3f9bf30ec90ae2111f575d74f156c34ffffbf935dfbbf18180",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e020524a0deece3f9bf30ec90ae2111f575d74f156c34ffffbf935dfbbf18180",
+    "svgHash": "9ad84a49517df8406c173720e41148aa31879fb82a1f59c825ea17fb84560e1f",
+    "validatedAt": "2026-09-10T17:39:57.877Z",
+    "width": 1086.723388671875,
+    "height": 263
+  },
+  "generatedAt": "2026-09-10T17:39:56.528Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 131,
+    "total_tokens": 1689,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

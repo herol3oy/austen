@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jack-london/before-adam",
+  "metadata": {
+    "title": "Before Adam",
+    "authors": [
+      "Jack London"
+    ],
+    "year": "1907"
+  },
+  "inputHash": "0756c6d00295097004fb6c6ddd9ce99e563806069af57a2d8ec3732d0075660f",
+  "promptHash": "ceb8bb65fe384a3f48d56295da6cd3eefe01b43b17f66d5b19251bf03d0c5c42",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:31.997Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:31.998Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Big Tooth\"]\nC2[\"Swift One\"]\nC3[\"Red-Eye\"]\nC4[\"Lop-Ear\"]\nC5[\"The Fire People\"]\nC6[\"Old Man\"]\nC7[\"The Chatterer\"]\nC1 -->|Enemy of| C3\nC1 -->|Friend of| C4\nC1 -->|Loves| C2\nC3 -->|Enemy of| C4\nC3 -->|Kills| C7\nC4 -->|Friend of| C1\nC4 -->|Rival of| C3\nC6 -->|Mentor of| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 156,
+        "total_tokens": 1711,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:33.428Z",
+      "finishedAt": "2026-09-10T17:45:33.428Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Big Tooth\"]\nC2[\"Swift One\"]\nC3[\"Red-Eye\"]\nC4[\"Lop-Ear\"]\nC5[\"The Fire People\"]\nC6[\"Old Man\"]\nC7[\"The Chatterer\"]\nC1 -->|Enemy of| C3\nC1 -->|Friend of| C4\nC1 -->|Loves| C2\nC3 -->|Enemy of| C4\nC3 -->|Kills| C7\nC4 -->|Friend of| C1\nC4 -->|Rival of| C3\nC6 -->|Mentor of| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C4",
+  "mermaidHash": "5deb8c59ebe2f9cf129988b0b504b3316b80ce7137a754cd4c24f4d891a89ee5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5deb8c59ebe2f9cf129988b0b504b3316b80ce7137a754cd4c24f4d891a89ee5",
+    "svgHash": "122d72438ef3cfe43f1cf0ed8733098beca941bd4ebd3038a2970ee964e1bb03",
+    "validatedAt": "2026-09-10T17:45:34.700Z",
+    "width": 927.5399780273438,
+    "height": 334.5
+  },
+  "generatedAt": "2026-09-10T17:45:33.428Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 156,
+    "total_tokens": 1711,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

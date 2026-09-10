@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-james/the-golden-bowl",
+  "metadata": {
+    "title": "The Golden Bowl",
+    "authors": [
+      "Henry James"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "0c38ce663734eb211f61611d2af9799d57d5621339552dbe13595a9fa4acf694",
+  "promptHash": "fd9144e75a672195b59b42f4f15ddaa46b6a5ccdafd8b88c111a5b438d808013",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:10.500Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:10.500Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Maggie Verver\"]\nC2[\"Prince Amerigo\"]\nC3[\"Adam Verver\"]\nC4[\"Charlotte Stant\"]\nC5[\"Fanny Assingham\"]\nC6[\"Bob Assingham\"]\nC7[\"Mrs. Rance\"]\nC1 -->|Daughter of| C3\nC2 -->|Married to| C1\nC3 -->|Married to| C4\nC2 -->|Former lover of| C4\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC5 -->|Confidante of| C2\nC6 -->|Married to| C5\nC7 -->|Pursues| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 153,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:12.211Z",
+      "finishedAt": "2026-09-10T17:43:12.211Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Maggie Verver\"]\nC2[\"Prince Amerigo\"]\nC3[\"Adam Verver\"]\nC4[\"Charlotte Stant\"]\nC5[\"Fanny Assingham\"]\nC6[\"Bob Assingham\"]\nC7[\"Mrs. Rance\"]\nC1 -->|Daughter of| C3\nC2 -->|Married to| C1\nC3 -->|Married to| C4\nC2 -->|Former lover of| C4\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC5 -->|Confidante of| C2\nC6 -->|Married to| C5\nC7 -->|Pursues| C3",
+  "mermaidHash": "b6ca1696490bafdce3d781dc06f9daf41b4526e853f63d7b1c13686df0061088",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b6ca1696490bafdce3d781dc06f9daf41b4526e853f63d7b1c13686df0061088",
+    "svgHash": "33d3a642b96cece3b9959b7d39a1e531bc7e7bc62ff7a6a05a2b1e4bce48eb00",
+    "validatedAt": "2026-09-10T17:43:13.472Z",
+    "width": 1647.189697265625,
+    "height": 247.75
+  },
+  "generatedAt": "2026-09-10T17:43:12.211Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 153,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

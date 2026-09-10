@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "voltairine-de-cleyre/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Voltairine de Cleyre"
+    ],
+    "year": "1891–1914"
+  },
+  "inputHash": "404993a199f6764fa71f0610ff9bff0cc3f87916be86c67b5eab2af5ecffd136",
+  "promptHash": "e736db009ef529dd1ef60774c32958facad52bb942d14cb8318dca3ea3c36f49",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:22.010Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:22.010Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 2,
+        "total_tokens": 1566,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 156
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:22.722Z",
+      "finishedAt": "2026-09-10T18:12:22.722Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:12:22.722Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 2,
+    "total_tokens": 1566,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 156
+  }
+}

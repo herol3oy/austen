@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/bleak-house",
+  "metadata": {
+    "title": "Bleak House",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1853"
+  },
+  "inputHash": "4ce888b997f450acfe8701dfa49ecb5205794149c8e612684f38c9b377d2e336",
+  "promptHash": "948275928b1373b0ab27cb248ff01840044c9e4252b5450e3e81aa39027cecbd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:56.213Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:56.213Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Esther Summerson\"]\nC2[\"John Jarndyce\"]\nC3[\"Ada Clare\"]\nC4[\"Richard Carstone\"]\nC5[\"Lady Dedlock\"]\nC6[\"Mr Tulkinghorn\"]\nC7[\"Allan Woodcourt\"]\nC8[\"Mr Guppy\"]\nC1 -->|Ward of| C2\nC3 -->|Ward of| C2\nC4 -->|Ward of| C2\nC1 -->|Companion of| C3\nC3 -->|Engaged to| C4\nC1 -->|Loves| C7\nC7 -->|Loves| C1\nC2 -->|Proposes to| C1\nC1 -->|Marries| C7\nC5 -->|Mother of| C1\nC6 -->|Blackmails| C5\nC6 -->|Investigates| C1\nC8 -->|Pursues| C1\nC5 -->|Enemy of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 213,
+        "total_tokens": 1770,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:58.869Z",
+      "finishedAt": "2026-09-10T17:29:58.870Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Esther Summerson\"]\nC2[\"John Jarndyce\"]\nC3[\"Ada Clare\"]\nC4[\"Richard Carstone\"]\nC5[\"Lady Dedlock\"]\nC6[\"Mr Tulkinghorn\"]\nC7[\"Allan Woodcourt\"]\nC8[\"Mr Guppy\"]\nC1 -->|Ward of| C2\nC3 -->|Ward of| C2\nC4 -->|Ward of| C2\nC1 -->|Companion of| C3\nC3 -->|Engaged to| C4\nC1 -->|Loves| C7\nC7 -->|Loves| C1\nC2 -->|Proposes to| C1\nC1 -->|Marries| C7\nC5 -->|Mother of| C1\nC6 -->|Blackmails| C5\nC6 -->|Investigates| C1\nC8 -->|Pursues| C1\nC5 -->|Enemy of| C6",
+  "mermaidHash": "d905463170363ee4699f305fa24f1fdc7bde893a21b6e74a64cb0989dda3df71",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d905463170363ee4699f305fa24f1fdc7bde893a21b6e74a64cb0989dda3df71",
+    "svgHash": "e29c1219b48bf09eee545059055ec97edca8270960f775d6f573a97219a17623",
+    "validatedAt": "2026-09-10T17:30:00.231Z",
+    "width": 1650.20361328125,
+    "height": 336.5
+  },
+  "generatedAt": "2026-09-10T17:29:58.869Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 213,
+    "total_tokens": 1770,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

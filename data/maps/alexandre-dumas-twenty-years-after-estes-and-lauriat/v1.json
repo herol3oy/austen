@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "alexandre-dumas/twenty-years-after/estes-and-lauriat",
+  "metadata": {
+    "title": "Twenty Years After",
+    "authors": [
+      "Alexandre Dumas"
+    ],
+    "year": "1845"
+  },
+  "inputHash": "792ed98eb4cd0196491781abfdd8d9ea42ead2dd1ff95d56ad6f4dd8f25b3f8b",
+  "promptHash": "dd078e8a008ce98c0004e320c03302a566be1aedf34263d8c06acadb6bdd59a9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:03.184Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:03.184Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"D'Artagnan\"]\nC2[\"Athos\"]\nC3[\"Porthos\"]\nC4[\"Aramis\"]\nC5[\"Cardinal Mazarin\"]\nC6[\"Anne of Austria\"]\nC7[\"Raoul de Bragelonne\"]\nC8[\"Mordaunt\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC3 -->|Friend of| C4\nC1 -->|Serves| C5\nC2 -->|Serves| C5\nC3 -->|Serves| C5\nC4 -->|Serves| C5\nC5 -->|Serves| C6\nC2 -->|Father of| C7\nC8 -->|Enemy of| C1\nC8 -->|Enemy of| C2\nC8 -->|Enemy of| C3\nC8 -->|Enemy of| C4\nC8 -->|Nephew of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 240,
+        "total_tokens": 1798,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:05.048Z",
+      "finishedAt": "2026-09-10T17:25:05.048Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"D'Artagnan\"]\nC2[\"Athos\"]\nC3[\"Porthos\"]\nC4[\"Aramis\"]\nC5[\"Cardinal Mazarin\"]\nC6[\"Anne of Austria\"]\nC7[\"Raoul de Bragelonne\"]\nC8[\"Mordaunt\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC3 -->|Friend of| C4\nC1 -->|Serves| C5\nC2 -->|Serves| C5\nC3 -->|Serves| C5\nC4 -->|Serves| C5\nC5 -->|Serves| C6\nC2 -->|Father of| C7\nC8 -->|Enemy of| C1\nC8 -->|Enemy of| C2\nC8 -->|Enemy of| C3\nC8 -->|Enemy of| C4\nC8 -->|Nephew of| C5",
+  "mermaidHash": "ed67c4d521baedcdc04504aded959442ffb4e2c250d08f60db5f07ec2d4e405f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ed67c4d521baedcdc04504aded959442ffb4e2c250d08f60db5f07ec2d4e405f",
+    "svgHash": "dad026cf1df27c0bee556d7168f046b36ee40d84e479cb17879628fd4021f729",
+    "validatedAt": "2026-09-10T17:25:06.388Z",
+    "width": 1677.9844970703125,
+    "height": 503.5
+  },
+  "generatedAt": "2026-09-10T17:25:05.048Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 240,
+    "total_tokens": 1798,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

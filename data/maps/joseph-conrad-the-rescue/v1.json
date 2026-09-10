@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/the-rescue",
+  "metadata": {
+    "title": "The Rescue",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "e7d0e1df446a7b500ea4cd0dc365ccb7f8ddb909f5d0ab7f9bf0bcc127c65301",
+  "promptHash": "563e5d434da23742f162dee4bee90b00e378a45cad6010b4996960f6b16630de",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:24.132Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:24.132Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 2,
+        "total_tokens": 1557,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:25.053Z",
+      "finishedAt": "2026-09-10T17:48:25.053Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:48:25.053Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2,
+    "total_tokens": 1557,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-nesbit/wet-magic",
+  "metadata": {
+    "title": "Wet Magic",
+    "authors": [
+      "E. Nesbit"
+    ],
+    "year": "1912"
+  },
+  "inputHash": "63cbdc6d5b9ac1adee38439b16f5012581bf163894364186aeb111c94c27dcd6",
+  "promptHash": "c1e107ab1044565730804b0e49099afd5358837ed822a3130c55cab038a49059",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:29.554Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:29.555Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Francis\"]\nC2[\"Mavis\"]\nC3[\"Kathleen\"]\nC4[\"Bernard\"]\nC5[\"Reuben\"]\nC6[\"Mermaid Princess\"]\nC7[\"Mer-king\"]\nC8[\"Mer-queen\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC1 -->|Sibling of| C4\nC2 -->|Sibling of| C3\nC2 -->|Sibling of| C4\nC3 -->|Sibling of| C4\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC3 -->|Friend of| C5\nC4 -->|Friend of| C5\nC5 -->|Loves| C6\nC6 -->|Daughter of| C7\nC6 -->|Daughter of| C8\nC7 -->|Married to| C8\nC1 -->|Helps| C6\nC2 -->|Helps| C6\nC3 -->|Helps| C6\nC4 -->|Helps| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 242,
+        "total_tokens": 1800,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:30.820Z",
+      "finishedAt": "2026-09-10T17:33:30.820Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Francis\"]\nC2[\"Mavis\"]\nC3[\"Kathleen\"]\nC4[\"Bernard\"]\nC5[\"Reuben\"]\nC6[\"Mermaid Princess\"]\nC7[\"Mer-king\"]\nC8[\"Mer-queen\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC1 -->|Sibling of| C4\nC2 -->|Sibling of| C3\nC2 -->|Sibling of| C4\nC3 -->|Sibling of| C4\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC3 -->|Friend of| C5\nC4 -->|Friend of| C5\nC5 -->|Loves| C6\nC6 -->|Daughter of| C7\nC6 -->|Daughter of| C8\nC7 -->|Married to| C8\nC1 -->|Helps| C6\nC2 -->|Helps| C6\nC3 -->|Helps| C6\nC4 -->|Helps| C6",
+  "mermaidHash": "041eed9833c8c12f46ef855c53e2b45d75936de65d96bdc5bd7d18356c073f7c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "041eed9833c8c12f46ef855c53e2b45d75936de65d96bdc5bd7d18356c073f7c",
+    "svgHash": "4804c51b064d8cc950f518cc4720972d1290e95d8818917b9046169befc72521",
+    "validatedAt": "2026-09-10T17:33:32.207Z",
+    "width": 1806.1307373046875,
+    "height": 481
+  },
+  "generatedAt": "2026-09-10T17:33:30.820Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 242,
+    "total_tokens": 1800,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/as-you-like-it",
+  "metadata": {
+    "title": "As You Like It",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1623"
+  },
+  "inputHash": "8ee7d1f7e473cf3e2dd1304772cd1f911c8a542b6964dbbfb00cad5f492e27fa",
+  "promptHash": "71792a982e04108068d0b3ea60d1d6b0b220e917ce277351df4a521fbf23b4cd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:43.577Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:43.577Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Rosalind\"]\nC2[\"Orlando\"]\nC3[\"Celia\"]\nC4[\"Duke Frederick\"]\nC5[\"Duke Senior\"]\nC6[\"Oliver\"]\nC7[\"Jaques\"]\nC8[\"Touchstone\"]\nC1 -->|Daughter of| C5\nC1 -->|Niece of| C4\nC1 -->|Cousin of| C3\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Younger brother of| C6\nC6 -->|Betrays| C2\nC3 -->|Daughter of| C4\nC3 -->|Friend of| C1\nC4 -->|Usurped| C5\nC4 -->|Exiled| C1\nC5 -->|Father of| C1\nC7 -->|Serves| C5\nC8 -->|Fool of| C5\nC8 -->|Loves| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 211,
+        "total_tokens": 1768,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:45.234Z",
+      "finishedAt": "2026-09-10T18:14:45.234Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Rosalind\"]\nC2[\"Orlando\"]\nC3[\"Celia\"]\nC4[\"Duke Frederick\"]\nC5[\"Duke Senior\"]\nC6[\"Oliver\"]\nC7[\"Jaques\"]\nC8[\"Touchstone\"]\nC1 -->|Daughter of| C5\nC1 -->|Niece of| C4\nC1 -->|Cousin of| C3\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Younger brother of| C6\nC6 -->|Betrays| C2\nC3 -->|Daughter of| C4\nC3 -->|Friend of| C1\nC4 -->|Usurped| C5\nC4 -->|Exiled| C1\nC5 -->|Father of| C1\nC7 -->|Serves| C5\nC8 -->|Fool of| C5\nC8 -->|Loves| C3",
+  "mermaidHash": "5c799eeed9a50c1be897c382d8256ce1e6e1d033c57e187bdd033d7b04be38da",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5c799eeed9a50c1be897c382d8256ce1e6e1d033c57e187bdd033d7b04be38da",
+    "svgHash": "e91b908984580044238aedc6d8b120cb912f89779910a1d4c16a4d70d4c248d0",
+    "validatedAt": "2026-09-10T18:14:46.683Z",
+    "width": 974.060546875,
+    "height": 510
+  },
+  "generatedAt": "2026-09-10T18:14:45.234Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 211,
+    "total_tokens": 1768,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

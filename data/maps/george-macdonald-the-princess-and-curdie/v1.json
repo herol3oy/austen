@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-macdonald/the-princess-and-curdie",
+  "metadata": {
+    "title": "The Princess and Curdie",
+    "authors": [
+      "George MacDonald"
+    ],
+    "year": "1883"
+  },
+  "inputHash": "f7d8043f3042da62574e9727ba213c76b3ff5a7d96c45ef702d912bc823e6fe5",
+  "promptHash": "fc2e1ca32dde571d8888fce998539c1d4896fcda4379e81af3a690d3789093b3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:37.994Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:37.994Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Princess Irene\"]\nC2[\"Curdie\"]\nC3[\"King Papa\"]\nC4[\"Queen Irene\"]\nC5[\"Great-Grandmother\"]\nC6[\"Lootie\"]\nC7[\"Dr. Kelman\"]\nC8[\"Barbara\"]\nC1 -->|Daughter of| C3\nC1 -->|Daughter of| C4\nC2 -->|Friend of| C1\nC2 -->|Son of| C7\nC2 -->|Son of| C8\nC5 -->|Guides| C2\nC5 -->|Protects| C1\nC6 -->|Cares for| C1\nC7 -->|Father of| C2\nC8 -->|Mother of| C2\nC3 -->|Father of| C1\nC4 -->|Mother of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 178,
+        "total_tokens": 1736,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:39.476Z",
+      "finishedAt": "2026-09-10T17:40:39.476Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Princess Irene\"]\nC2[\"Curdie\"]\nC3[\"King Papa\"]\nC4[\"Queen Irene\"]\nC5[\"Great-Grandmother\"]\nC6[\"Lootie\"]\nC7[\"Dr. Kelman\"]\nC8[\"Barbara\"]\nC1 -->|Daughter of| C3\nC1 -->|Daughter of| C4\nC2 -->|Friend of| C1\nC2 -->|Son of| C7\nC2 -->|Son of| C8\nC5 -->|Guides| C2\nC5 -->|Protects| C1\nC6 -->|Cares for| C1\nC7 -->|Father of| C2\nC8 -->|Mother of| C2\nC3 -->|Father of| C1\nC4 -->|Mother of| C1",
+  "mermaidHash": "4d366dd7412b1ca0d9d4a4a1db1132792258df5c15b42b884f7cd67c110b3017",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4d366dd7412b1ca0d9d4a4a1db1132792258df5c15b42b884f7cd67c110b3017",
+    "svgHash": "916b76ec31d41e6c631346af2ce7a649eb60d8b74f5b4d856b4e0b12f15a05b5",
+    "validatedAt": "2026-09-10T17:40:40.818Z",
+    "width": 961.1298828125,
+    "height": 359.25
+  },
+  "generatedAt": "2026-09-10T17:40:39.476Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 178,
+    "total_tokens": 1736,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

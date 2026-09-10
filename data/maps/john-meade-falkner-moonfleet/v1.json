@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-meade-falkner/moonfleet",
+  "metadata": {
+    "title": "Moonfleet",
+    "authors": [
+      "John Meade Falkner"
+    ],
+    "year": "1898"
+  },
+  "inputHash": "074ecce7a328e9a89d7d42ded09732f691d6ab865525da907df37b83c197a2d0",
+  "promptHash": "f711f53bec1472de35180b49c543bee5212a7cab2434e56f572ceeec0cc72567",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:24.183Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:24.183Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Trenchard\"]\nC2[\"Elzevir Block\"]\nC3[\"Mohune\"]\nC4[\"Grace Maskew\"]\nC5[\"Mr. Maskew\"]\nC6[\"Ratsey\"]\nC7[\"Aldobrand\"]\nC1 -->|Friend of| C2\nC2 -->|Protects| C1\nC1 -->|Loves| C4\nC5 -->|Parent of| C4\nC5 -->|Enemy of| C2\nC2 -->|Kills| C5\nC1 -->|Friend of| C6\nC2 -->|Serves| C3\nC1 -->|Enemy of| C7\nC7 -->|Betrays| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 154,
+        "total_tokens": 1713,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:25.760Z",
+      "finishedAt": "2026-09-10T17:47:25.761Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Trenchard\"]\nC2[\"Elzevir Block\"]\nC3[\"Mohune\"]\nC4[\"Grace Maskew\"]\nC5[\"Mr. Maskew\"]\nC6[\"Ratsey\"]\nC7[\"Aldobrand\"]\nC1 -->|Friend of| C2\nC2 -->|Protects| C1\nC1 -->|Loves| C4\nC5 -->|Parent of| C4\nC5 -->|Enemy of| C2\nC2 -->|Kills| C5\nC1 -->|Friend of| C6\nC2 -->|Serves| C3\nC1 -->|Enemy of| C7\nC7 -->|Betrays| C1",
+  "mermaidHash": "24b9f289442d50d6594084e0bc692550cd7ea951a35ff878a75335f0f64f941d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "24b9f289442d50d6594084e0bc692550cd7ea951a35ff878a75335f0f64f941d",
+    "svgHash": "1ea4131d12fb6319e14e94f0ab67b9c645f5b35bafde8ddcb0914eca579a9776",
+    "validatedAt": "2026-09-10T17:47:27.066Z",
+    "width": 960.4498901367188,
+    "height": 338.5
+  },
+  "generatedAt": "2026-09-10T17:47:25.760Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 154,
+    "total_tokens": 1713,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

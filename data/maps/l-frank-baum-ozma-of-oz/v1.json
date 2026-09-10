@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "l-frank-baum/ozma-of-oz",
+  "metadata": {
+    "title": "Ozma of Oz",
+    "authors": [
+      "L. Frank Baum"
+    ],
+    "year": "1907"
+  },
+  "inputHash": "f5f44cde8303958a301153a298c816c099e029154b3970a5d5a673bef26cf938",
+  "promptHash": "b96a69bb248e722c8d9e279524c4cf1803902f380ca16b2e9edbe3d4e197fcf1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:40.188Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:40.188Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dorothy Gale\"]\nC2[\"Ozma\"]\nC3[\"Billina\"]\nC4[\"Tik-Tok\"]\nC5[\"Princess Langwidere\"]\nC6[\"Nome King\"]\nC7[\"Scarecrow\"]\nC8[\"Tin Woodman\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Ruler of| C1\nC2 -->|Commands| C4\nC5 -->|Serves| C6\nC6 -->|Enemy of| C2\nC6 -->|Imprisons| C1\nC6 -->|Imprisons| C3\nC6 -->|Imprisons| C4\nC7 -->|Friend of| C1\nC8 -->|Friend of| C1\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 202,
+        "total_tokens": 1761,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:41.854Z",
+      "finishedAt": "2026-09-10T17:49:41.854Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dorothy Gale\"]\nC2[\"Ozma\"]\nC3[\"Billina\"]\nC4[\"Tik-Tok\"]\nC5[\"Princess Langwidere\"]\nC6[\"Nome King\"]\nC7[\"Scarecrow\"]\nC8[\"Tin Woodman\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Ruler of| C1\nC2 -->|Commands| C4\nC5 -->|Serves| C6\nC6 -->|Enemy of| C2\nC6 -->|Imprisons| C1\nC6 -->|Imprisons| C3\nC6 -->|Imprisons| C4\nC7 -->|Friend of| C1\nC8 -->|Friend of| C1\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8",
+  "mermaidHash": "c8054d3b62b211e9c257f339fd3a18e165a5d9c64749394f9a09da0ca8b930fc",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c8054d3b62b211e9c257f339fd3a18e165a5d9c64749394f9a09da0ca8b930fc",
+    "svgHash": "1071ce95c87c257177f23449fa985cd29a8e9af7f1d485c70c6b9202eb76152f",
+    "validatedAt": "2026-09-10T17:49:43.176Z",
+    "width": 1211.3504638671875,
+    "height": 453.75
+  },
+  "generatedAt": "2026-09-10T17:49:41.854Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 202,
+    "total_tokens": 1761,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "rudyard-kipling/captains-courageous",
+  "metadata": {
+    "title": "Captains Courageous",
+    "authors": [
+      "Rudyard Kipling"
+    ],
+    "year": "1897"
+  },
+  "inputHash": "07f9dd8d34438262a6be06ca2bf010954b5886c4c7f49a07df2a8bc53c8ffaa5",
+  "promptHash": "1d74211ee336d6027be6303a1290c076909880118a5696124afa5dbfbbc224da",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:17.441Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:17.441Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Harvey Cheyne\"]\nC2[\"Disko Troop\"]\nC3[\"Dan Troop\"]\nC4[\"Manuel\"]\nC5[\"Tom Platt\"]\nC6[\"Long Jack\"]\nC7[\"Uncle Salters\"]\nC8[\"Mr. Cheyne\"]\nC1 -->|Serves under| C2\nC2 -->|Father of| C3\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1\nC8 -->|Father of| C1\nC1 -->|Son of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 152,
+        "total_tokens": 1712,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:18.767Z",
+      "finishedAt": "2026-09-10T18:08:18.767Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Harvey Cheyne\"]\nC2[\"Disko Troop\"]\nC3[\"Dan Troop\"]\nC4[\"Manuel\"]\nC5[\"Tom Platt\"]\nC6[\"Long Jack\"]\nC7[\"Uncle Salters\"]\nC8[\"Mr. Cheyne\"]\nC1 -->|Serves under| C2\nC2 -->|Father of| C3\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Mentor of| C1\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1\nC8 -->|Father of| C1\nC1 -->|Son of| C8",
+  "mermaidHash": "2360c8262eb2e97002d99bfa28532852db7b18c7cb382bd3e3356831c82a422c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2360c8262eb2e97002d99bfa28532852db7b18c7cb382bd3e3356831c82a422c",
+    "svgHash": "4e247e8b046b7484d55dee260335e2661eccb7a1882ffb385aaff8ccbb12a30b",
+    "validatedAt": "2026-09-10T18:08:20.137Z",
+    "width": 962.694580078125,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T18:08:18.767Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 152,
+    "total_tokens": 1712,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

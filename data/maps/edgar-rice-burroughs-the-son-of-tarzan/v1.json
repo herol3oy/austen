@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/the-son-of-tarzan",
+  "metadata": {
+    "title": "The Son of Tarzan",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "0a463377198060f2463c4b27d08becf7c2b3bc7cb02477968f5bdf92f141b3e0",
+  "promptHash": "c96bc88439578a31fa237768769b6676fd7bc0cbe2e74487d9e837db3fa82e5c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:52.454Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:52.454Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jane Clayton\"]\nC3[\"Jack Clayton\"]\nC4[\"Meriem\"]\nC5[\"Paulvitch\"]\nC6[\"Akut\"]\nC7[\"Korak\"]\nC1 -->|Husband of| C2\nC1 -->|Father of| C3\nC2 -->|Mother of| C3\nC3 -->|Son of| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C3\nC6 -->|Friend of| C1\nC6 -->|Protects| C3\nC7 -->|Father of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 160,
+        "total_tokens": 1722,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:54.104Z",
+      "finishedAt": "2026-09-10T17:34:54.104Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jane Clayton\"]\nC3[\"Jack Clayton\"]\nC4[\"Meriem\"]\nC5[\"Paulvitch\"]\nC6[\"Akut\"]\nC7[\"Korak\"]\nC1 -->|Husband of| C2\nC1 -->|Father of| C3\nC2 -->|Mother of| C3\nC3 -->|Son of| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C3\nC6 -->|Friend of| C1\nC6 -->|Protects| C3\nC7 -->|Father of| C3",
+  "mermaidHash": "9a89fa076ef6d369943ea48e07d83974640dccf1ebb63860e403d4d86a6c8682",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9a89fa076ef6d369943ea48e07d83974640dccf1ebb63860e403d4d86a6c8682",
+    "svgHash": "bc5c3038aa5d358c37508dda26520f5b1f2922767bd705b2ce1f29e7857bbc55",
+    "validatedAt": "2026-09-10T17:34:55.598Z",
+    "width": 1095.25439453125,
+    "height": 377.5
+  },
+  "generatedAt": "2026-09-10T17:34:54.104Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 160,
+    "total_tokens": 1722,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

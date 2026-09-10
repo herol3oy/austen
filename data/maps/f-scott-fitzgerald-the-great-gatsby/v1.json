@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "f-scott-fitzgerald/the-great-gatsby",
+  "metadata": {
+    "title": "The Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "f9c418d4447b50c45cda91f474c1df0af9248eafe92b15d782f185724f51d699",
+  "promptHash": "13ba15f3326a49ee7c5b25bb05aa289fd86d80a178bc2038c3c3c3ece9968daf",
+  "promptVersion": "1",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T12:34:51.068Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T12:34:51.068Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nNick[\"Nick Carraway\"]\nGatsby[\"Jay Gatsby\"]\nDaisy[\"Daisy Buchanan\"]\nTom[\"Tom Buchanan\"]\nJordan[\"Jordan Baker\"]\nMyrtle[\"Myrtle Wilson\"]\nGeorge[\"George Wilson\"]\nNick -->|Cousin of| Daisy\nNick -->|Neighbor of| Gatsby\nNick -->|Friend of| Jordan\nGatsby -->|Loves| Daisy\nDaisy -->|Married to| Tom\nTom -->|Affair with| Myrtle\nMyrtle -->|Married to| George\nGeorge -->|Kills| Gatsby\nGeorge -->|Kills| Myrtle\nTom -->|Tells| George\nDaisy -->|Kills| Myrtle\nGatsby -->|Takes blame for| Daisy\nNick -->|Admires| Gatsby\nJordan -->|Dating| Nick\nTom -->|Mistress of| Myrtle\nGatsby -->|Obsessed with| Daisy\nDaisy -->|Reunites with| Gatsby\nTom -->|Exposes| Gatsby\nGeorge -->|Suicides after killing| Gatsby",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 223,
+        "total_tokens": 422,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 199
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:52.695Z",
+      "finishedAt": "2026-09-10T12:34:52.695Z"
+    }
+  ],
+  "mermaid": "graph LR\nNick[\"Nick Carraway\"]\nGatsby[\"Jay Gatsby\"]\nDaisy[\"Daisy Buchanan\"]\nTom[\"Tom Buchanan\"]\nJordan[\"Jordan Baker\"]\nMyrtle[\"Myrtle Wilson\"]\nGeorge[\"George Wilson\"]\nNick -->|Cousin of| Daisy\nNick -->|Neighbor of| Gatsby\nNick -->|Friend of| Jordan\nGatsby -->|Loves| Daisy\nDaisy -->|Married to| Tom\nTom -->|Affair with| Myrtle\nMyrtle -->|Married to| George\nGeorge -->|Kills| Gatsby\nGeorge -->|Kills| Myrtle\nTom -->|Tells| George\nDaisy -->|Kills| Myrtle\nGatsby -->|Takes blame for| Daisy\nNick -->|Admires| Gatsby\nJordan -->|Dating| Nick\nTom -->|Mistress of| Myrtle\nGatsby -->|Obsessed with| Daisy\nDaisy -->|Reunites with| Gatsby\nTom -->|Exposes| Gatsby\nGeorge -->|Suicides after killing| Gatsby",
+  "mermaidHash": "136b35c5db81dc470211d8027d3df1a7e5dabaf016eb2b01f09fed5315df81b0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "136b35c5db81dc470211d8027d3df1a7e5dabaf016eb2b01f09fed5315df81b0",
+    "svgHash": "83e9585e5a263573e229d59fd1dc853d99bb2eb9112057d20c8fed97f612a6d5",
+    "validatedAt": "2026-09-10T17:23:27.524Z",
+    "width": 1614.86474609375,
+    "height": 565.5996704101562
+  },
+  "generatedAt": "2026-09-10T12:34:52.695Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 199,
+    "completion_tokens": 223,
+    "total_tokens": 422,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 199
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "guy-de-maupassant/short-fiction/various-translators",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Guy de Maupassant"
+    ],
+    "year": "1876–1921"
+  },
+  "inputHash": "2fbae8f0a3f4e7b454b3d1bbabb2fc165786205ce27d98b4ac6e8bf8adf4b793",
+  "promptHash": "477f2ee3cd3034ad14df90889b5cf7173e2990342f3cd23ed25e26bb5103a430",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:26.970Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:26.970Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 155
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:27.870Z",
+      "finishedAt": "2026-09-10T17:41:27.870Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:41:27.870Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 155
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "samuel-johnson/the-history-of-rasselas-prince-of-abyssinia",
+  "metadata": {
+    "title": "The History of Rasselas, Prince of Abyssinia",
+    "authors": [
+      "Samuel Johnson"
+    ],
+    "year": "1759"
+  },
+  "inputHash": "fdadf1def661ec3048ba29cad5cee6e7d72c9d4118bb140157e8c90088fb7a4f",
+  "promptHash": "3968bab1d4c3ba7e58180610142f7eaf6fb2b53c5f3b373f673c4f6e375449df",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:52.778Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:52.778Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Rasselas\"]\nC2[\"Imlac\"]\nC3[\"Nekayah\"]\nC4[\"Pekuah\"]\nC5[\"The Abyssinian Prince\"]\nC6[\"The Astronomer\"]\nC7[\"The Bassa\"]\nC1 -->|Brother of| C3\nC1 -->|Friend of| C2\nC2 -->|Mentor of| C1\nC2 -->|Mentor of| C3\nC3 -->|Sister of| C1\nC3 -->|Friend of| C4\nC4 -->|Friend of| C3\nC1 -->|Son of| C5\nC3 -->|Daughter of| C5\nC1 -->|Seeks wisdom from| C6\nC2 -->|Knows| C6\nC7 -->|Commands| C1\nC7 -->|Commands| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 192,
+        "total_tokens": 1758,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 158
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:54.536Z",
+      "finishedAt": "2026-09-10T18:16:54.536Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Rasselas\"]\nC2[\"Imlac\"]\nC3[\"Nekayah\"]\nC4[\"Pekuah\"]\nC5[\"The Abyssinian Prince\"]\nC6[\"The Astronomer\"]\nC7[\"The Bassa\"]\nC1 -->|Brother of| C3\nC1 -->|Friend of| C2\nC2 -->|Mentor of| C1\nC2 -->|Mentor of| C3\nC3 -->|Sister of| C1\nC3 -->|Friend of| C4\nC4 -->|Friend of| C3\nC1 -->|Son of| C5\nC3 -->|Daughter of| C5\nC1 -->|Seeks wisdom from| C6\nC2 -->|Knows| C6\nC7 -->|Commands| C1\nC7 -->|Commands| C3",
+  "mermaidHash": "3f4dd2f6c14008f0cc7467c2a14bb765174bf0edc4325ba92b1c550db5dc5c63",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3f4dd2f6c14008f0cc7467c2a14bb765174bf0edc4325ba92b1c550db5dc5c63",
+    "svgHash": "08407c5a2e5dbb6b620fa0cd26e2432c8d4d6c726a4e72e781204c6db86f5105",
+    "validatedAt": "2026-09-10T18:16:55.833Z",
+    "width": 1275.4910888671875,
+    "height": 417.75
+  },
+  "generatedAt": "2026-09-10T18:16:54.536Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1566,
+    "completion_tokens": 192,
+    "total_tokens": 1758,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 158
+  }
+}

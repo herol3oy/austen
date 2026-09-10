@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "edgar-rice-burroughs/tarzan-the-untamed",
+  "metadata": {
+    "title": "Tarzan the Untamed",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "0889348af7b0f1f78fba26da44f3f16c65d5011b6fe809d55cde6d292e7b4d99",
+  "promptHash": "c410ce31d6436c074a2a9c20f5c43504271286cbe664a5a7e86e400d57b93d6d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:21.053Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:21.053Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 2,
+        "total_tokens": 1564,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:21.725Z",
+      "finishedAt": "2026-09-10T18:02:21.725Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:02:21.725Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 2,
+    "total_tokens": 1564,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

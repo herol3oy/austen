@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-bernard-shaw/man-and-superman",
+  "metadata": {
+    "title": "Man and Superman",
+    "authors": [
+      "George Bernard Shaw"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "75c003aec02fd119b73a617830068353cfbb3a4cbaf60244e5050f29f9224e00",
+  "promptHash": "e4463e0f20e874e58c8b8f6bcaf4054fd5d3ddf17f5aebba81ba73c7b19e9e89",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:48.810Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:48.810Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Tanner\"]\nC2[\"Ann Whitefield\"]\nC3[\"Roebuck Ramsden\"]\nC4[\"Octavius Robinson\"]\nC5[\"Violet Robinson\"]\nC6[\"Hector Malone\"]\nC7[\"Mendoza\"]\nC8[\"Don Juan\"]\nC1 -->|Ward of| C3\nC2 -->|Ward of| C3\nC2 -->|Pursues| C1\nC1 -->|Resists| C2\nC4 -->|Loves| C2\nC2 -->|Sister of| C4\nC5 -->|Sister of| C4\nC5 -->|Married to| C6\nC1 -->|Friend of| C4\nC1 -->|Ally of| C5\nC7 -->|Commands| C1\nC8 -->|Alter ego of| C1\nC8 -->|Pursued by| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 198,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:50.589Z",
+      "finishedAt": "2026-09-10T17:39:50.589Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Tanner\"]\nC2[\"Ann Whitefield\"]\nC3[\"Roebuck Ramsden\"]\nC4[\"Octavius Robinson\"]\nC5[\"Violet Robinson\"]\nC6[\"Hector Malone\"]\nC7[\"Mendoza\"]\nC8[\"Don Juan\"]\nC1 -->|Ward of| C3\nC2 -->|Ward of| C3\nC2 -->|Pursues| C1\nC1 -->|Resists| C2\nC4 -->|Loves| C2\nC2 -->|Sister of| C4\nC5 -->|Sister of| C4\nC5 -->|Married to| C6\nC1 -->|Friend of| C4\nC1 -->|Ally of| C5\nC7 -->|Commands| C1\nC8 -->|Alter ego of| C1\nC8 -->|Pursued by| C2",
+  "mermaidHash": "9272ae2992985347de7100f63b6d9852b87ee5f9f972a2a7333bd849d39650b9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9272ae2992985347de7100f63b6d9852b87ee5f9f972a2a7333bd849d39650b9",
+    "svgHash": "cc54812cbf5f5a07f94b30cb024c2fd4eab3124b895058e1b3805e41aa402403",
+    "validatedAt": "2026-09-10T17:39:51.952Z",
+    "width": 984.9537353515625,
+    "height": 321.5
+  },
+  "generatedAt": "2026-09-10T17:39:50.589Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 198,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

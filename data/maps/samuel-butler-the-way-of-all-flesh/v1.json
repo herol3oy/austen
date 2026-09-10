@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "samuel-butler/the-way-of-all-flesh",
+  "metadata": {
+    "title": "The Way of All Flesh",
+    "authors": [
+      "Samuel Butler"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "981b93f6f47dfcb974c300590d6de23385fdd62dbfb39ba046fc934d7d1a8b2e",
+  "promptHash": "497bab770363affe22b1c701ada73f0463effd21a255b2c76261868255301d2f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:49.219Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:49.219Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ernest Pontifex\"]\nC2[\"Theobald Pontifex\"]\nC3[\"Christina Pontifex\"]\nC4[\"George Pontifex\"]\nC5[\"Alethea Pontifex\"]\nC6[\"Overton\"]\nC7[\"Ellen\"]\nC8[\"John Pontifex\"]\nC2 -->|Father of| C1\nC3 -->|Mother of| C1\nC4 -->|Father of| C2\nC4 -->|Father of| C5\nC5 -->|Aunt of| C1\nC5 -->|Friend of| C6\nC6 -->|Godfather of| C1\nC6 -->|Guardian of| C1\nC1 -->|Married to| C7\nC2 -->|Sibling of| C5\nC1 -->|Grandson of| C4\nC8 -->|Father of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 194,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:50.511Z",
+      "finishedAt": "2026-09-10T18:08:50.511Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ernest Pontifex\"]\nC2[\"Theobald Pontifex\"]\nC3[\"Christina Pontifex\"]\nC4[\"George Pontifex\"]\nC5[\"Alethea Pontifex\"]\nC6[\"Overton\"]\nC7[\"Ellen\"]\nC8[\"John Pontifex\"]\nC2 -->|Father of| C1\nC3 -->|Mother of| C1\nC4 -->|Father of| C2\nC4 -->|Father of| C5\nC5 -->|Aunt of| C1\nC5 -->|Friend of| C6\nC6 -->|Godfather of| C1\nC6 -->|Guardian of| C1\nC1 -->|Married to| C7\nC2 -->|Sibling of| C5\nC1 -->|Grandson of| C4\nC8 -->|Father of| C4",
+  "mermaidHash": "da6a0f1b691bc1e4f6248d0570c994b409076d70e25e656aad7ed36d46a8cc61",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "da6a0f1b691bc1e4f6248d0570c994b409076d70e25e656aad7ed36d46a8cc61",
+    "svgHash": "58b8afd9f21e9b34cdf1813386bf2964960d1fbb6712828f3b59060b4dcf4d4d",
+    "validatedAt": "2026-09-10T18:08:51.906Z",
+    "width": 1584.85498046875,
+    "height": 350.5
+  },
+  "generatedAt": "2026-09-10T18:08:50.511Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 194,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

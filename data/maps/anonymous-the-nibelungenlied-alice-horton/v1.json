@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anonymous/the-nibelungenlied/alice-horton",
+  "metadata": {
+    "title": "The Nibelungenlied",
+    "authors": [
+      "Anonymous"
+    ],
+    "year": "1200"
+  },
+  "inputHash": "3c2c82c01e7c1c81c944b84ad4041c143034d0134a08238971ef4ce5ef35b666",
+  "promptHash": "17ff1c23ea6caf943368aa6a9c0295d80d5fbae45af39ea0ac9c7d8e93a546fc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:07.532Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:07.532Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Kriemhild\"]\nC2[\"Siegfried\"]\nC3[\"Gunther\"]\nC4[\"Brunhild\"]\nC5[\"Hagen\"]\nC6[\"Gernot\"]\nC7[\"Giselher\"]\nC8[\"Etzel\"]\nC1 -->|Married to| C2\nC2 -->|Married to| C1\nC1 -->|Sibling of| C3\nC3 -->|Sibling of| C1\nC1 -->|Sibling of| C6\nC6 -->|Sibling of| C1\nC1 -->|Sibling of| C7\nC7 -->|Sibling of| C1\nC3 -->|Married to| C4\nC4 -->|Married to| C3\nC2 -->|Serves| C3\nC5 -->|Serves| C3\nC5 -->|Kills| C2\nC1 -->|Marries| C8\nC8 -->|Marries| C1\nC1 -->|Kills| C5\nC5 -->|Kills| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 239,
+        "total_tokens": 1796,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:09.369Z",
+      "finishedAt": "2026-09-10T17:26:09.369Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Kriemhild\"]\nC2[\"Siegfried\"]\nC3[\"Gunther\"]\nC4[\"Brunhild\"]\nC5[\"Hagen\"]\nC6[\"Gernot\"]\nC7[\"Giselher\"]\nC8[\"Etzel\"]\nC1 -->|Married to| C2\nC2 -->|Married to| C1\nC1 -->|Sibling of| C3\nC3 -->|Sibling of| C1\nC1 -->|Sibling of| C6\nC6 -->|Sibling of| C1\nC1 -->|Sibling of| C7\nC7 -->|Sibling of| C1\nC3 -->|Married to| C4\nC4 -->|Married to| C3\nC2 -->|Serves| C3\nC5 -->|Serves| C3\nC5 -->|Kills| C2\nC1 -->|Marries| C8\nC8 -->|Marries| C1\nC1 -->|Kills| C5\nC5 -->|Kills| C1",
+  "mermaidHash": "e8f75b48ec2f5cf9052edc5246707e57e9bbd23b0b99e798ad5923396f5a353d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e8f75b48ec2f5cf9052edc5246707e57e9bbd23b0b99e798ad5923396f5a353d",
+    "svgHash": "b5d95032088a6ec6fdb4c7b95524e5ccc74d211276dde78a454df280fcd01812",
+    "validatedAt": "2026-09-10T17:26:10.784Z",
+    "width": 1058.22412109375,
+    "height": 573.75
+  },
+  "generatedAt": "2026-09-10T17:26:09.369Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 239,
+    "total_tokens": 1796,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

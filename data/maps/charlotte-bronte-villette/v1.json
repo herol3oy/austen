@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charlotte-bronte/villette",
+  "metadata": {
+    "title": "Villette",
+    "authors": [
+      "Charlotte Brontë"
+    ],
+    "year": "1853"
+  },
+  "inputHash": "d925ec8dde97060a6b447384d429d8994c4d955c15801b78a52b2752bd5d730a",
+  "promptHash": "bc002a8112f8e37b48a20ee60e7865c81689c5e42f6ea991c4fa84317cc50d7c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:50.880Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:50.880Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lucy Snowe\"]\nC2[\"M. Paul Emanuel\"]\nC3[\"Dr. John Graham Bretton\"]\nC4[\"Ginevra Fanshawe\"]\nC5[\"Paulina Home\"]\nC6[\"Madame Beck\"]\nC7[\"Mrs. Bretton\"]\nC8[\"M. Home\"]\nC1 -->|Narrator and employee of| C6\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Mentor of| C1\nC1 -->|Friend of| C3\nC3 -->|Childhood friend of| C1\nC3 -->|Loves| C5\nC5 -->|Loves| C3\nC3 -->|Son of| C7\nC4 -->|Student at| C6\nC4 -->|Cousin of| C5\nC4 -->|Friend of| C3\nC8 -->|Father of| C5\nC8 -->|Uncle of| C4\nC6 -->|Rival of| C2\nC6 -->|Employer of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 241,
+        "total_tokens": 1799,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:52.473Z",
+      "finishedAt": "2026-09-10T17:30:52.473Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lucy Snowe\"]\nC2[\"M. Paul Emanuel\"]\nC3[\"Dr. John Graham Bretton\"]\nC4[\"Ginevra Fanshawe\"]\nC5[\"Paulina Home\"]\nC6[\"Madame Beck\"]\nC7[\"Mrs. Bretton\"]\nC8[\"M. Home\"]\nC1 -->|Narrator and employee of| C6\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Mentor of| C1\nC1 -->|Friend of| C3\nC3 -->|Childhood friend of| C1\nC3 -->|Loves| C5\nC5 -->|Loves| C3\nC3 -->|Son of| C7\nC4 -->|Student at| C6\nC4 -->|Cousin of| C5\nC4 -->|Friend of| C3\nC8 -->|Father of| C5\nC8 -->|Uncle of| C4\nC6 -->|Rival of| C2\nC6 -->|Employer of| C1",
+  "mermaidHash": "d40b290c038e23eec2bb3e4c7e0e5b0c42c734ee6b1bf185b30eb5b1d65d7286",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d40b290c038e23eec2bb3e4c7e0e5b0c42c734ee6b1bf185b30eb5b1d65d7286",
+    "svgHash": "b5d0ef8fcdf136e9360ff1ae59df440ff2cf74e71b8e5ae18008491c2ef6f300",
+    "validatedAt": "2026-09-10T17:30:53.858Z",
+    "width": 1145.078369140625,
+    "height": 476.5916748046875
+  },
+  "generatedAt": "2026-09-10T17:30:52.473Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 241,
+    "total_tokens": 1799,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

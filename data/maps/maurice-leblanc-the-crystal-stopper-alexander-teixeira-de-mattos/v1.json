@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maurice-leblanc/the-crystal-stopper/alexander-teixeira-de-mattos",
+  "metadata": {
+    "title": "The Crystal Stopper",
+    "authors": [
+      "Maurice Leblanc"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "1b9abf8948f1d455c78927404a3fffb57988a30e1e588287e96e5d9d1ce4cdfe",
+  "promptHash": "f4d3dceb2cc0c884e3fc18efa993f682936f4d55f6760f94d17d755420e64174",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:40.170Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:40.170Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Alexis Daubrecq\"]\nC3[\"Gilbert\"]\nC4[\"Vaucheray\"]\nC5[\"Clarisse Mergy\"]\nC6[\"Pierre Mergy\"]\nC7[\"Prévailles\"]\nC8[\"Nicole\"]\nC1 -->|Enemy of| C2\nC1 -->|Protects| C3\nC1 -->|Protects| C4\nC2 -->|Blackmails| C5\nC5 -->|Loves| C6\nC6 -->|Husband of| C5\nC2 -->|Enemy of| C6\nC7 -->|Father of| C6\nC7 -->|Father of| C8\nC8 -->|Sister of| C6\nC1 -->|Allied with| C5\nC2 -->|Enemy of| C1\nC3 -->|Friend of| C4\nC1 -->|Commands| C3\nC1 -->|Commands| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 221,
+        "total_tokens": 1782,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:42.032Z",
+      "finishedAt": "2026-09-10T18:03:42.032Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Alexis Daubrecq\"]\nC3[\"Gilbert\"]\nC4[\"Vaucheray\"]\nC5[\"Clarisse Mergy\"]\nC6[\"Pierre Mergy\"]\nC7[\"Prévailles\"]\nC8[\"Nicole\"]\nC1 -->|Enemy of| C2\nC1 -->|Protects| C3\nC1 -->|Protects| C4\nC2 -->|Blackmails| C5\nC5 -->|Loves| C6\nC6 -->|Husband of| C5\nC2 -->|Enemy of| C6\nC7 -->|Father of| C6\nC7 -->|Father of| C8\nC8 -->|Sister of| C6\nC1 -->|Allied with| C5\nC2 -->|Enemy of| C1\nC3 -->|Friend of| C4\nC1 -->|Commands| C3\nC1 -->|Commands| C4",
+  "mermaidHash": "e4b1934ddcfe5cbc6359c02bfca6339220af6c82a74600144457554f6a5a1bef",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e4b1934ddcfe5cbc6359c02bfca6339220af6c82a74600144457554f6a5a1bef",
+    "svgHash": "28227a831e88a9eb413bf3ec56830781842159fce6d648007537a343fde7a9f0",
+    "validatedAt": "2026-09-10T18:03:43.357Z",
+    "width": 1016.3282470703125,
+    "height": 499
+  },
+  "generatedAt": "2026-09-10T18:03:42.032Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 221,
+    "total_tokens": 1782,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maurice-leblanc/the-eight-strokes-of-the-clock/alexander-teixeira-de-mattos",
+  "metadata": {
+    "title": "The Eight Strokes of the Clock",
+    "authors": [
+      "Maurice Leblanc"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "56a232f3a4a751832a203d3ff74655ad077fd9202a33a9159981d9a79754ad95",
+  "promptHash": "5ad5d19d4cb98945bc90c40e14784894e0d1d3315dc0043fd1262a9f0dd10cf0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:43.365Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:43.365Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Renine\"]\nC3[\"Hortense Daniel\"]\nC4[\"Prince Rénine\"]\nC5[\"Jacques d'Emboise\"]\nC6[\"Baron d'Emboise\"]\nC7[\"Florence\"]\nC8[\"Gaston Dutreuil\"]\nC1 -->|Alias of| C2\nC2 -->|Alias of| C4\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC2 -->|Protects| C3\nC5 -->|Sibling of| C6\nC6 -->|Enemy of| C5\nC5 -->|Husband of| C7\nC7 -->|Wife of| C5\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 179,
+        "total_tokens": 1743,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:45.081Z",
+      "finishedAt": "2026-09-10T18:03:45.081Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Renine\"]\nC3[\"Hortense Daniel\"]\nC4[\"Prince Rénine\"]\nC5[\"Jacques d'Emboise\"]\nC6[\"Baron d'Emboise\"]\nC7[\"Florence\"]\nC8[\"Gaston Dutreuil\"]\nC1 -->|Alias of| C2\nC2 -->|Alias of| C4\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC2 -->|Protects| C3\nC5 -->|Sibling of| C6\nC6 -->|Enemy of| C5\nC5 -->|Husband of| C7\nC7 -->|Wife of| C5\nC8 -->|Friend of| C2",
+  "mermaidHash": "af948b93347de1638bbc5e911c9ff1e65bae4d3ea9096e1fa523556ee7287549",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "af948b93347de1638bbc5e911c9ff1e65bae4d3ea9096e1fa523556ee7287549",
+    "svgHash": "5b21ce2cbd2b1116589b7d97a68316c9522d0e471b07f56a597077e156348c17",
+    "validatedAt": "2026-09-10T18:03:46.455Z",
+    "width": 777.2755737304688,
+    "height": 370.5
+  },
+  "generatedAt": "2026-09-10T18:03:45.081Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 179,
+    "total_tokens": 1743,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

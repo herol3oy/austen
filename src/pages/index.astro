@@ -1,17 +1,23 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookCard from '../components/BookCard.astro';
+import { loadLibrary } from '../lib/library';
+const { entries } = await loadLibrary();
+const published = entries.filter(b => b.publishedUrl);
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section class="library-intro">
+    <p class="section-kicker">The relationship library</p>
+    <h1>See the story between the lines.</h1>
+    <p>Explore the characters and connections in classic literature. AI-generated maps cover the whole book, including spoilers.</p>
+  </section>
+  <section aria-labelledby="library-heading">
+    <div class="section-heading"><h2 id="library-heading">Published maps</h2><span>{published.length} maps</span></div>
+    {published.length > 0 ? <><label for="library-search">Find a map</label><input id="library-search" type="search" placeholder="Title, author, or year" /><p id="library-count" role="status"></p><ul class="library-list">{published.map(book => <BookCard book={book} />)}</ul></> : <div class="empty-library"><h3>The first maps are still to come.</h3><p>Browse the catalog or create a map in your own workspace.</p><a href={`${import.meta.env.BASE_URL}catalog/`}>Explore the catalog →</a></div>}
+  </section>
+  <script>
+    import '../scripts/library-search.js';
+    const params = new URLSearchParams(location.search);
+    if (params.has('graph')) location.replace(`${import.meta.env.BASE_URL}generate/${location.search}${location.hash}`);
+  </script>
+</BaseLayout>

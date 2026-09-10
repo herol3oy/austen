@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "jorge-isaacs/maria/rollo-ogden",
+  "metadata": {
+    "title": "María",
+    "authors": [
+      "Jorge Isaacs"
+    ],
+    "year": "1867"
+  },
+  "inputHash": "8fb742e2dafc07690b5a7b49ae4124c09146012ed5ffd248c8b69c73aafdd5fc",
+  "promptHash": "1a2340ccd44e327094915499e46394ac40a7a78a09159f9730f7983796ca5d4b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:43.890Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:43.890Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"María\"]\nC2[\"Efraín\"]\nC3[\"Emma\"]\nC4[\"Carlos\"]\nC5[\"Salomón\"]\nC6[\"Don Jerónimo\"]\nC7[\"Tránsito\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 50,
+        "total_tokens": 1607,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 149
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:45.073Z",
+      "finishedAt": "2026-09-10T18:02:45.073Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"María\"]\nC2[\"Efraín\"]\nC3[\"Emma\"]\nC4[\"Carlos\"]\nC5[\"Salomón\"]\nC6[\"Don Jerónimo\"]\nC7[\"Tránsito\"]",
+  "mermaidHash": "1c1521f0df2000b366989cd1322035e93c12a1c2c2c63277ad2ec3e6c0d6d37b",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:02:45.073Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 50,
+    "total_tokens": 1607,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 149
+  }
+}

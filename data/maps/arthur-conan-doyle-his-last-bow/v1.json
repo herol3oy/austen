@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-conan-doyle/his-last-bow",
+  "metadata": {
+    "title": "His Last Bow",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "54631e236101eb27170086d5c70a3bff67d3e3bbf86012d2407d21bdec1ad352",
+  "promptHash": "76902e69e1aa41472a0c3ab9a0779d919b705c770da9a847b3d311efb489f3ac",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:48.175Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:48.175Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"Dr. John Watson\"]\nC3[\"Mycroft Holmes\"]\nC4[\"Professor Moriarty\"]\nC5[\"Irene Adler\"]\nC6[\"Inspector Lestrade\"]\nC7[\"Mary Morstan\"]\nC8[\"Von Bork\"]\nC1 -->|Friend of| C2\nC1 -->|Brother of| C3\nC1 -->|Enemy of| C4\nC1 -->|Admires| C5\nC1 -->|Assists| C6\nC2 -->|Married to| C7\nC1 -->|Outwits| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 136,
+        "total_tokens": 1694,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:49.776Z",
+      "finishedAt": "2026-09-10T17:27:49.776Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"Dr. John Watson\"]\nC3[\"Mycroft Holmes\"]\nC4[\"Professor Moriarty\"]\nC5[\"Irene Adler\"]\nC6[\"Inspector Lestrade\"]\nC7[\"Mary Morstan\"]\nC8[\"Von Bork\"]\nC1 -->|Friend of| C2\nC1 -->|Brother of| C3\nC1 -->|Enemy of| C4\nC1 -->|Admires| C5\nC1 -->|Assists| C6\nC2 -->|Married to| C7\nC1 -->|Outwits| C8",
+  "mermaidHash": "1f3d26bc4a22131bc0209b0ec43d1902ef7bc2023dd4628aff46e1fba27bdcf2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "1f3d26bc4a22131bc0209b0ec43d1902ef7bc2023dd4628aff46e1fba27bdcf2",
+    "svgHash": "ba3404d88babfa856ccb2dddfbe1adedea0a8489ec3c86fc0307a0b1792e6009",
+    "validatedAt": "2026-09-10T17:27:51.507Z",
+    "width": 768.4273071289062,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T17:27:49.776Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 136,
+    "total_tokens": 1694,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

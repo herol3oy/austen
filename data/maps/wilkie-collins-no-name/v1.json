@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "wilkie-collins/no-name",
+  "metadata": {
+    "title": "No Name",
+    "authors": [
+      "Wilkie Collins"
+    ],
+    "year": "1862"
+  },
+  "inputHash": "a46692edc046183c8aa536b5f92cb43a30b07bedc59c8807ce2c84547aab2764",
+  "promptHash": "c7ba6dc72b2875f09cb0ea041efc87a9be54f50bf509c135a81e8ad9870ae93f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:09.362Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:09.362Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Magdalen Vanstone\"]\nC2[\"Norah Vanstone\"]\nC3[\"Captain Wragge\"]\nC4[\"Mrs. Wragge\"]\nC5[\"Noel Vanstone\"]\nC6[\"Michael Vanstone\"]\nC7[\"Andrew Vanstone\"]\nC8[\"Admiral Bartram\"]\nC1 -->|Sibling of| C2\nC1 -->|Daughter of| C7\nC2 -->|Daughter of| C7\nC7 -->|Brother of| C6\nC6 -->|Father of| C5\nC1 -->|Enemy of| C5\nC1 -->|Enemy of| C6\nC3 -->|Mentor of| C1\nC3 -->|Married to| C4\nC1 -->|Allied with| C3\nC8 -->|Friend of| C5\nC1 -->|Impersonates| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 198,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:11.097Z",
+      "finishedAt": "2026-09-10T18:13:11.097Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Magdalen Vanstone\"]\nC2[\"Norah Vanstone\"]\nC3[\"Captain Wragge\"]\nC4[\"Mrs. Wragge\"]\nC5[\"Noel Vanstone\"]\nC6[\"Michael Vanstone\"]\nC7[\"Andrew Vanstone\"]\nC8[\"Admiral Bartram\"]\nC1 -->|Sibling of| C2\nC1 -->|Daughter of| C7\nC2 -->|Daughter of| C7\nC7 -->|Brother of| C6\nC6 -->|Father of| C5\nC1 -->|Enemy of| C5\nC1 -->|Enemy of| C6\nC3 -->|Mentor of| C1\nC3 -->|Married to| C4\nC1 -->|Allied with| C3\nC8 -->|Friend of| C5\nC1 -->|Impersonates| C5",
+  "mermaidHash": "8d7580d0903cc38467b4114620b170164c2bb5d3debf6567dcdc4ef6a43db55b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8d7580d0903cc38467b4114620b170164c2bb5d3debf6567dcdc4ef6a43db55b",
+    "svgHash": "e63b0d8ae3e753e2b23cbcb11e5b19ef7f890706d471a181d79ff5fe0460a7b1",
+    "validatedAt": "2026-09-10T18:13:12.531Z",
+    "width": 1374.99072265625,
+    "height": 432
+  },
+  "generatedAt": "2026-09-10T18:13:11.097Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 198,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

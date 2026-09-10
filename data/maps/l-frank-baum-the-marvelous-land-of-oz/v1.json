@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "l-frank-baum/the-marvelous-land-of-oz",
+  "metadata": {
+    "title": "The Marvelous Land of Oz",
+    "authors": [
+      "L. Frank Baum"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "6df31b504b0ece0e9cea3a35a8db81c417f0293740d23991bfefa4ecf9fd447c",
+  "promptHash": "b0e71b648c3810e18afa5d64bef89d8c82139afe81e955a94682e53fbffd8eef",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:43.191Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:43.191Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tip\"]\nC2[\"Mombi\"]\nC3[\"Jack Pumpkinhead\"]\nC4[\"Scarecrow\"]\nC5[\"Tin Woodman\"]\nC6[\"Glinda\"]\nC7[\"Jinjur\"]\nC8[\"Ozma\"]\nC1 -->|Raised by| C2\nC1 -->|Created| C3\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC2 -->|Enemy of| C1\nC2 -->|Enemy of| C6\nC3 -->|Friend of| C4\nC3 -->|Friend of| C5\nC4 -->|Friend of| C5\nC4 -->|Serves| C6\nC5 -->|Friend of| C4\nC6 -->|Enemy of| C7\nC6 -->|Protects| C8\nC7 -->|Enemy of| C6\nC7 -->|Rival of| C1\nC8 -->|Alter ego of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 231,
+        "total_tokens": 1792,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:44.721Z",
+      "finishedAt": "2026-09-10T17:49:44.721Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tip\"]\nC2[\"Mombi\"]\nC3[\"Jack Pumpkinhead\"]\nC4[\"Scarecrow\"]\nC5[\"Tin Woodman\"]\nC6[\"Glinda\"]\nC7[\"Jinjur\"]\nC8[\"Ozma\"]\nC1 -->|Raised by| C2\nC1 -->|Created| C3\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC2 -->|Enemy of| C1\nC2 -->|Enemy of| C6\nC3 -->|Friend of| C4\nC3 -->|Friend of| C5\nC4 -->|Friend of| C5\nC4 -->|Serves| C6\nC5 -->|Friend of| C4\nC6 -->|Enemy of| C7\nC6 -->|Protects| C8\nC7 -->|Enemy of| C6\nC7 -->|Rival of| C1\nC8 -->|Alter ego of| C1",
+  "mermaidHash": "5f8d4aef55b77546e7b1ded55ff92233acf966020dca6d5e77b61eb0bcc2e5f4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5f8d4aef55b77546e7b1ded55ff92233acf966020dca6d5e77b61eb0bcc2e5f4",
+    "svgHash": "3e3c410b2f8e5770c495cf4094de54df81daef0aa8c4090bed7fc3b64be23071",
+    "validatedAt": "2026-09-10T17:49:46.013Z",
+    "width": 1118.1591796875,
+    "height": 424.25
+  },
+  "generatedAt": "2026-09-10T17:49:44.721Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 231,
+    "total_tokens": 1792,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

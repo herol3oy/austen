@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-allan-poe/the-narrative-of-arthur-gordon-pym-of-nantucket",
+  "metadata": {
+    "title": "The Narrative of Arthur Gordon Pym of Nantucket",
+    "authors": [
+      "Edgar Allan Poe"
+    ],
+    "year": "1838"
+  },
+  "inputHash": "e088c06feb57e42ba1ab6889a1de4f9b722d7251c9a8582dac52c5ac90a2f175",
+  "promptHash": "775c61a26df6d5e8bfc2e1cf8278e5c47f2f11a27a06c061ccaf94dfe8bb8ae1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:56.833Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:56.833Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arthur Gordon Pym\"]\nC2[\"Augustus Barnard\"]\nC3[\"Mr. Barnard\"]\nC4[\"Dirk Peters\"]\nC5[\"Captain Guy\"]\nC6[\"Tiger\"]\nC7[\"Parker\"]\nC8[\"Too-wit\"]\nC1 -->|Friend of| C2\nC2 -->|Son of| C3\nC3 -->|Commands| C5\nC1 -->|Stows away on| C5\nC2 -->|Protects| C1\nC4 -->|Mutineer against| C5\nC4 -->|Friend of| C1\nC7 -->|Kills| C6\nC7 -->|Cannibalizes| C1\nC8 -->|Betrays| C1\nC8 -->|Enemy of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 174,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 286
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:58.155Z",
+      "finishedAt": "2026-09-10T17:33:58.155Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arthur Gordon Pym\"]\nC2[\"Augustus Barnard\"]\nC3[\"Mr. Barnard\"]\nC4[\"Dirk Peters\"]\nC5[\"Captain Guy\"]\nC6[\"Tiger\"]\nC7[\"Parker\"]\nC8[\"Too-wit\"]\nC1 -->|Friend of| C2\nC2 -->|Son of| C3\nC3 -->|Commands| C5\nC1 -->|Stows away on| C5\nC2 -->|Protects| C1\nC4 -->|Mutineer against| C5\nC4 -->|Friend of| C1\nC7 -->|Kills| C6\nC7 -->|Cannibalizes| C1\nC8 -->|Betrays| C1\nC8 -->|Enemy of| C5",
+  "mermaidHash": "b061faa34ad728970650b2ea4d81601c88bfd482b0a1e457f6157caf296ff349",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b061faa34ad728970650b2ea4d81601c88bfd482b0a1e457f6157caf296ff349",
+    "svgHash": "d46ece69036d37f344aeb2e5c912eb100c05f214de08478329549496744e6ba0",
+    "validatedAt": "2026-09-10T17:33:59.549Z",
+    "width": 1325.7896728515625,
+    "height": 330.5
+  },
+  "generatedAt": "2026-09-10T17:33:58.155Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1566,
+    "completion_tokens": 174,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 286
+  }
+}

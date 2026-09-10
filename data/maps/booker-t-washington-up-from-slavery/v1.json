@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "booker-t-washington/up-from-slavery",
+  "metadata": {
+    "title": "Up from Slavery",
+    "authors": [
+      "Booker T. Washington"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "189534dd23bd7182867135754cf7a0dc95ab0b2adf34e54173729f80714a32be",
+  "promptHash": "f80f48a3d6390faea2c257e4e7f8a19a1df7a7149087cafbfdec7c51912e3438",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:01.715Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:01.716Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Booker T. Washington\"]\nC2[\"Fanny N. Smith\"]\nC3[\"Olivia A. Davidson\"]\nC4[\"Margaret James Murray\"]\nC5[\"Lewis Adams\"]\nC6[\"Samuel C. Armstrong\"]\nC7[\"General J. F. B. Marshall\"]\nC8[\"Mrs. Ruffner\"]\nC1 -->|Married to| C2\nC1 -->|Married to| C3\nC1 -->|Married to| C4\nC1 -->|Raised by| C8\nC1 -->|Mentored by| C6\nC1 -->|Worked for| C7\nC1 -->|Founded with| C5\nC1 -->|Brother of| C9\nC9[\"John Washington\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 165,
+        "total_tokens": 1724,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:03.416Z",
+      "finishedAt": "2026-09-10T17:29:03.416Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Booker T. Washington\"]\nC2[\"Fanny N. Smith\"]\nC3[\"Olivia A. Davidson\"]\nC4[\"Margaret James Murray\"]\nC5[\"Lewis Adams\"]\nC6[\"Samuel C. Armstrong\"]\nC7[\"General J. F. B. Marshall\"]\nC8[\"Mrs. Ruffner\"]\nC1 -->|Married to| C2\nC1 -->|Married to| C3\nC1 -->|Married to| C4\nC1 -->|Raised by| C8\nC1 -->|Mentored by| C6\nC1 -->|Worked for| C7\nC1 -->|Founded with| C5\nC1 -->|Brother of| C9\nC9[\"John Washington\"]",
+  "mermaidHash": "e061ef11cb564cd7e34e3c25509261f1577a503ce5693ed12c9f8b7d149dbc3b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e061ef11cb564cd7e34e3c25509261f1577a503ce5693ed12c9f8b7d149dbc3b",
+    "svgHash": "5911547151e84c66ff27ec9d5e07afe015f2d7bd9dbfa4c6e57f3363af3d8c62",
+    "validatedAt": "2026-09-10T17:29:04.842Z",
+    "width": 580.5965576171875,
+    "height": 758
+  },
+  "generatedAt": "2026-09-10T17:29:03.416Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 165,
+    "total_tokens": 1724,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

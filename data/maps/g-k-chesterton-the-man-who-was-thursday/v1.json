@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "g-k-chesterton/the-man-who-was-thursday",
+  "metadata": {
+    "title": "The Man Who Was Thursday",
+    "authors": [
+      "G. K. Chesterton"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "2e82f7fb8c238b405d9a119251d27cd763e929c54b7b6a29969869f7b6f0cd13",
+  "promptHash": "9a4ef1757193171d7c8c8e82f89670c3679861edcc91b269f43aa93d4f41aee4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:12.885Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:12.885Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Gabriel Syme\"]\nC2[\"Gregory\"]\nC3[\"President Sunday\"]\nC4[\"Lucian Gregory\"]\nC5[\"Gogol\"]\nC6[\"Dr. Bull\"]\nC7[\"Rosamond Gregory\"]\nC1 -->|Recruited by| C2\nC1 -->|Enemy of| C3\nC1 -->|Fellow policeman| C4\nC1 -->|Fellow policeman| C5\nC1 -->|Fellow policeman| C6\nC1 -->|Loves| C7\nC2 -->|Recruits| C1\nC3 -->|Commands| C1\nC4 -->|Sibling of| C7\nC4 -->|Fellow policeman| C1\nC5 -->|Fellow policeman| C1\nC6 -->|Fellow policeman| C1\nC7 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 191,
+        "total_tokens": 1753,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:14.134Z",
+      "finishedAt": "2026-09-10T17:39:14.134Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Gabriel Syme\"]\nC2[\"Gregory\"]\nC3[\"President Sunday\"]\nC4[\"Lucian Gregory\"]\nC5[\"Gogol\"]\nC6[\"Dr. Bull\"]\nC7[\"Rosamond Gregory\"]\nC1 -->|Recruited by| C2\nC1 -->|Enemy of| C3\nC1 -->|Fellow policeman| C4\nC1 -->|Fellow policeman| C5\nC1 -->|Fellow policeman| C6\nC1 -->|Loves| C7\nC2 -->|Recruits| C1\nC3 -->|Commands| C1\nC4 -->|Sibling of| C7\nC4 -->|Fellow policeman| C1\nC5 -->|Fellow policeman| C1\nC6 -->|Fellow policeman| C1\nC7 -->|Loves| C1",
+  "mermaidHash": "c3dd47c49e6b20732a385df1cd538c8b2923f159fa3a717ae11e1d044c8ae85c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c3dd47c49e6b20732a385df1cd538c8b2923f159fa3a717ae11e1d044c8ae85c",
+    "svgHash": "93a1d466022e8c1c474b4eafdccae0c7a878332bbb9ee01eb103316a74796510",
+    "validatedAt": "2026-09-10T17:39:15.562Z",
+    "width": 811.5389404296875,
+    "height": 575.75
+  },
+  "generatedAt": "2026-09-10T17:39:14.134Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 191,
+    "total_tokens": 1753,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

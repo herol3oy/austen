@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-gray/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Thomas Gray"
+    ],
+    "year": "1747"
+  },
+  "inputHash": "28184da0e4dcdc52d68c2ba185202d3db9a6102b1c7afc5b6fe484543e9a4f11",
+  "promptHash": "1c8d8834faf44666f325daebe52ae90f4e8de01017a20a88726f9bb83f1a9bc7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:38.545Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:38.545Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 2,
+        "total_tokens": 1557,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 147
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:40.594Z",
+      "finishedAt": "2026-09-10T18:10:40.594Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:10:40.594Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2,
+    "total_tokens": 1557,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 147
+  }
+}

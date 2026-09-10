@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "hermann-hesse/steppenwolf/basil-creighton",
+  "metadata": {
+    "title": "Steppenwolf",
+    "authors": [
+      "Hermann Hesse"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "8c2b34a8788e51e3dcd875dcde1712c92d226314efd48e346d5f46f00b8cfdb4",
+  "promptHash": "f383edcd8893501cfec67857aa42e9d442ff6a963173fb923e2fc90a73a34ec7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:49.363Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:49.363Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Harry Haller\"]\nC2[\"Hermine\"]\nC3[\"Maria\"]\nC4[\"Pablo\"]\nC5[\"Erica\"]\nC6[\"Hermann\"]\nC7[\"Mozart\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 46,
+        "total_tokens": 1604,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:50.618Z",
+      "finishedAt": "2026-09-10T17:43:50.618Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Harry Haller\"]\nC2[\"Hermine\"]\nC3[\"Maria\"]\nC4[\"Pablo\"]\nC5[\"Erica\"]\nC6[\"Hermann\"]\nC7[\"Mozart\"]",
+  "mermaidHash": "d9740a3a7d85ceeb09a676d797c9588790337932d88436d68cdb773a8c42cb84",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:43:50.618Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 46,
+    "total_tokens": 1604,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

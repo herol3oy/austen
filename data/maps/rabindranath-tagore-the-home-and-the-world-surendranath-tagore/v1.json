@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "rabindranath-tagore/the-home-and-the-world/surendranath-tagore",
+  "metadata": {
+    "title": "The Home and the World",
+    "authors": [
+      "Rabindranath Tagore"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "83c51153878f076b8fa4e2b53e264cb298538ac681fed4404caa7a17b193e660",
+  "promptHash": "219857c504db68e9a4cad4726fb99925a16c6573f0f451bd6b1e1c23914cbecf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:56.649Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:56.649Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nikhil\"]\nC2[\"Bimala\"]\nC3[\"Sandip\"]\nC4[\"Bara Rani\"]\nC5[\"Amulya\"]\nC6[\"Chandranath\"]\nC7[\"Miss Gilby\"]\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC3 -->|Manipulates| C2\nC1 -->|Friend of| C3\nC3 -->|Rival of| C1\nC4 -->|Sister-in-law of| C1\nC4 -->|Rival of| C2\nC5 -->|Disciple of| C3\nC5 -->|Protects| C2\nC6 -->|Mentor of| C1\nC7 -->|Mentor of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 174,
+        "total_tokens": 1736,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:58.279Z",
+      "finishedAt": "2026-09-10T18:06:58.279Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nikhil\"]\nC2[\"Bimala\"]\nC3[\"Sandip\"]\nC4[\"Bara Rani\"]\nC5[\"Amulya\"]\nC6[\"Chandranath\"]\nC7[\"Miss Gilby\"]\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC3 -->|Manipulates| C2\nC1 -->|Friend of| C3\nC3 -->|Rival of| C1\nC4 -->|Sister-in-law of| C1\nC4 -->|Rival of| C2\nC5 -->|Disciple of| C3\nC5 -->|Protects| C2\nC6 -->|Mentor of| C1\nC7 -->|Mentor of| C2",
+  "mermaidHash": "a612994b2d081675589abdadffe3eec546a69a4246baccdbfb26170a55647d22",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a612994b2d081675589abdadffe3eec546a69a4246baccdbfb26170a55647d22",
+    "svgHash": "e8ee5ce485a7c13e1a9f52f964ab8c32ba095bef01e6a9fc9ecb2a0f314bb9bc",
+    "validatedAt": "2026-09-10T18:06:59.630Z",
+    "width": 910.9739990234375,
+    "height": 416
+  },
+  "generatedAt": "2026-09-10T18:06:58.279Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 174,
+    "total_tokens": 1736,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

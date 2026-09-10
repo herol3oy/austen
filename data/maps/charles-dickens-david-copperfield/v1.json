@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/david-copperfield",
+  "metadata": {
+    "title": "David Copperfield",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1850"
+  },
+  "inputHash": "f7c992ebc1379fa565ad6503d1fda3b70d175ca613f3a6832bf83a4593752e72",
+  "promptHash": "631073f088634067a3fa3254b3bb58a5b82384822eae115b5e2f15cd50107804",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:00.241Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:00.241Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"David Copperfield\"]\nC2[\"Clara Copperfield\"]\nC3[\"Mr. Murdstone\"]\nC4[\"Clara Peggotty\"]\nC5[\"Peggotty\"]\nC6[\"Betsey Trotwood\"]\nC7[\"Uriah Heep\"]\nC8[\"Agnes Wickfield\"]\nC1 -->|Son of| C2\nC2 -->|Married to| C3\nC3 -->|Abuses| C1\nC4 -->|Mother of| C5\nC4 -->|Nurse of| C1\nC1 -->|Raised by| C6\nC6 -->|Aunt of| C1\nC7 -->|Betrays| C8\nC7 -->|Enemy of| C1\nC1 -->|Loves| C8\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 182,
+        "total_tokens": 1738,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:01.779Z",
+      "finishedAt": "2026-09-10T17:30:01.779Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"David Copperfield\"]\nC2[\"Clara Copperfield\"]\nC3[\"Mr. Murdstone\"]\nC4[\"Clara Peggotty\"]\nC5[\"Peggotty\"]\nC6[\"Betsey Trotwood\"]\nC7[\"Uriah Heep\"]\nC8[\"Agnes Wickfield\"]\nC1 -->|Son of| C2\nC2 -->|Married to| C3\nC3 -->|Abuses| C1\nC4 -->|Mother of| C5\nC4 -->|Nurse of| C1\nC1 -->|Raised by| C6\nC6 -->|Aunt of| C1\nC7 -->|Betrays| C8\nC7 -->|Enemy of| C1\nC1 -->|Loves| C8\nC8 -->|Friend of| C1",
+  "mermaidHash": "f382aa5b8d21a6dd789d61cabd8b520df78f8fe81d270ac1f65bb84521884604",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f382aa5b8d21a6dd789d61cabd8b520df78f8fe81d270ac1f65bb84521884604",
+    "svgHash": "0c28aebf606a20bc67f44651764647b447b0cc67acf2fade9dddee0d5be4d091",
+    "validatedAt": "2026-09-10T17:30:03.147Z",
+    "width": 1042.804931640625,
+    "height": 394.75
+  },
+  "generatedAt": "2026-09-10T17:30:01.779Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 182,
+    "total_tokens": 1738,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

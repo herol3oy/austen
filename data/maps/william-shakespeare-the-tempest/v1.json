@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/the-tempest",
+  "metadata": {
+    "title": "The Tempest",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1623"
+  },
+  "inputHash": "6a09cc8c34eb304e5f5e0027b7230b5861647e4adb12418836a95ae517b98afc",
+  "promptHash": "43c5da75c7b84f0e343e5ca3a11c7e47623f6b289779d476f77a428603ad0362",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:00.229Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:00.229Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Prospero\"]\nC2[\"Miranda\"]\nC3[\"Caliban\"]\nC4[\"Ariel\"]\nC5[\"Ferdinand\"]\nC6[\"Antonio\"]\nC7[\"Alonso\"]\nC8[\"Sebastian\"]\nC1 -->|Parent of| C2\nC1 -->|Master of| C3\nC1 -->|Master of| C4\nC1 -->|Brother of| C6\nC1 -->|Duke of Milan| C6\nC6 -->|Usurps| C1\nC5 -->|Loves| C2\nC2 -->|Loves| C5\nC7 -->|Father of| C5\nC7 -->|Serves| C1\nC8 -->|Brother of| C7\nC6 -->|Manipulates| C8\nC3 -->|Enemy of| C1\nC4 -->|Serves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 200,
+        "total_tokens": 1756,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:01.681Z",
+      "finishedAt": "2026-09-10T18:16:01.682Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Prospero\"]\nC2[\"Miranda\"]\nC3[\"Caliban\"]\nC4[\"Ariel\"]\nC5[\"Ferdinand\"]\nC6[\"Antonio\"]\nC7[\"Alonso\"]\nC8[\"Sebastian\"]\nC1 -->|Parent of| C2\nC1 -->|Master of| C3\nC1 -->|Master of| C4\nC1 -->|Brother of| C6\nC1 -->|Duke of Milan| C6\nC6 -->|Usurps| C1\nC5 -->|Loves| C2\nC2 -->|Loves| C5\nC7 -->|Father of| C5\nC7 -->|Serves| C1\nC8 -->|Brother of| C7\nC6 -->|Manipulates| C8\nC3 -->|Enemy of| C1\nC4 -->|Serves| C1",
+  "mermaidHash": "cb8500079d60a0b466c1570ec0792f34e088e0e43bc2d007cf2cf19d59da0aab",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cb8500079d60a0b466c1570ec0792f34e088e0e43bc2d007cf2cf19d59da0aab",
+    "svgHash": "08b7eabd9522a35ebcc31c813a0bfb27e87fee4a639d63d014fe13d88288ab54",
+    "validatedAt": "2026-09-10T18:16:03.061Z",
+    "width": 1130.854248046875,
+    "height": 399
+  },
+  "generatedAt": "2026-09-10T18:16:01.681Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 200,
+    "total_tokens": 1756,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "james-hogg/the-private-memoirs-and-confessions-of-a-justified-sinner",
+  "metadata": {
+    "title": "The Private Memoirs and Confessions of a Justified Sinner",
+    "authors": [
+      "James Hogg"
+    ],
+    "year": "1824"
+  },
+  "inputHash": "1bfdda0bc6f0b33f57c73d6c9a58b525148e49aa3573c9f16c447fa6d9ae5426",
+  "promptHash": "bbce2582407d3f391277df2216166f5b9c0c304d7e6bb086b2161385bd2b3f26",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:37.939Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:37.939Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Robert Wringhim\"]\nC2[\"Gil-Martin\"]\nC3[\"George Colwan\"]\nC4[\"Rev. Robert Wringhim\"]\nC5[\"Lady Dalcastle\"]\nC6[\"Arabella Colwan\"]\nC7[\"Bell Calvert\"]\nC1 -->|Son of| C4\nC1 -->|Son of| C5\nC4 -->|Husband of| C5\nC5 -->|Mother of| C3\nC4 -->|Stepfather of| C3\nC3 -->|Sibling of| C1\nC2 -->|Companion of| C1\nC2 -->|Manipulates| C1\nC1 -->|Kills| C3\nC6 -->|Sister of| C3\nC7 -->|Witness against| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1567,
+        "completion_tokens": 174,
+        "total_tokens": 1741,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 159
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:39.955Z",
+      "finishedAt": "2026-09-10T18:02:39.955Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Robert Wringhim\"]\nC2[\"Gil-Martin\"]\nC3[\"George Colwan\"]\nC4[\"Rev. Robert Wringhim\"]\nC5[\"Lady Dalcastle\"]\nC6[\"Arabella Colwan\"]\nC7[\"Bell Calvert\"]\nC1 -->|Son of| C4\nC1 -->|Son of| C5\nC4 -->|Husband of| C5\nC5 -->|Mother of| C3\nC4 -->|Stepfather of| C3\nC3 -->|Sibling of| C1\nC2 -->|Companion of| C1\nC2 -->|Manipulates| C1\nC1 -->|Kills| C3\nC6 -->|Sister of| C3\nC7 -->|Witness against| C1",
+  "mermaidHash": "4409f671f8e21e9b0f878e7574635bb8431a2bd8f99d0632ccd9cf370efec0b1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4409f671f8e21e9b0f878e7574635bb8431a2bd8f99d0632ccd9cf370efec0b1",
+    "svgHash": "0936f8f91bfb5a7745d850e01ed8084b8a3d202261788160fd00adde07fa79d6",
+    "validatedAt": "2026-09-10T18:02:41.268Z",
+    "width": 1360.064208984375,
+    "height": 306
+  },
+  "generatedAt": "2026-09-10T18:02:39.955Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 174,
+    "total_tokens": 1741,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 159
+  }
+}

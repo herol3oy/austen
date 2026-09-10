@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/henry-vi-part-iii",
+  "metadata": {
+    "title": "Henry VI, Part III",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1590"
+  },
+  "inputHash": "fa78e974a5243583e4f07b23b8ccf4b1c929f20ba1349554bacdc64463b3f881",
+  "promptHash": "68e7b3d70b4025b700357c5404e995d9c030e38f66d40f33e903b85cce43a919",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:10.196Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:10.196Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Henry VI\"]\nC2[\"Queen Margaret\"]\nC3[\"Richard, Duke of York\"]\nC4[\"Edward, Earl of March\"]\nC5[\"Richard, Duke of Gloucester\"]\nC6[\"George, Duke of Clarence\"]\nC7[\"Warwick\"]\nC8[\"Henry, Earl of Richmond\"]\nC1 -->|Married to| C2\nC2 -->|Commands| C7\nC3 -->|Claims throne from| C1\nC3 -->|Parent of| C4\nC3 -->|Parent of| C5\nC3 -->|Parent of| C6\nC4 -->|Sibling of| C5\nC4 -->|Sibling of| C6\nC5 -->|Sibling of| C6\nC7 -->|Supports| C3\nC7 -->|Betrays| C3\nC7 -->|Supports| C1\nC4 -->|Kills| C7\nC5 -->|Kills| C1\nC5 -->|Kills| C8\nC8 -->|Defeats| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 231,
+        "total_tokens": 1789,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:11.944Z",
+      "finishedAt": "2026-09-10T18:15:11.944Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Henry VI\"]\nC2[\"Queen Margaret\"]\nC3[\"Richard, Duke of York\"]\nC4[\"Edward, Earl of March\"]\nC5[\"Richard, Duke of Gloucester\"]\nC6[\"George, Duke of Clarence\"]\nC7[\"Warwick\"]\nC8[\"Henry, Earl of Richmond\"]\nC1 -->|Married to| C2\nC2 -->|Commands| C7\nC3 -->|Claims throne from| C1\nC3 -->|Parent of| C4\nC3 -->|Parent of| C5\nC3 -->|Parent of| C6\nC4 -->|Sibling of| C5\nC4 -->|Sibling of| C6\nC5 -->|Sibling of| C6\nC7 -->|Supports| C3\nC7 -->|Betrays| C3\nC7 -->|Supports| C1\nC4 -->|Kills| C7\nC5 -->|Kills| C1\nC5 -->|Kills| C8\nC8 -->|Defeats| C5",
+  "mermaidHash": "a3e50092192a03d33bf7e07a52a1b5243fcd89371eebc053e95d7e649c9abe8a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a3e50092192a03d33bf7e07a52a1b5243fcd89371eebc053e95d7e649c9abe8a",
+    "svgHash": "388ba1e9064be234e9fcb1302a402a6d1f334a90b22aaee40b34f73d9f8eb620",
+    "validatedAt": "2026-09-10T18:15:13.312Z",
+    "width": 2093.857177734375,
+    "height": 343.9654846191406
+  },
+  "generatedAt": "2026-09-10T18:15:11.944Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 231,
+    "total_tokens": 1789,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

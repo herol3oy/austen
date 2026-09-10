@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/piccadilly-jim",
+  "metadata": {
+    "title": "Piccadilly Jim",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "abc18aa9448e3bc3623154d9d011b4434a704af4b9eb3ad36c74ac6f1667f2e5",
+  "promptHash": "75fc66a04328356c631a70ee8202d12d9d0f24d66aea6501effb7c9fc329acf2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:46.263Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:46.263Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jimmy Crocker\"]\nC2[\"Ann Chester\"]\nC3[\"Mrs. Nesta Pett\"]\nC4[\"Peter Pett\"]\nC5[\"Ogden Ford\"]\nC6[\"Bayliss\"]\nC7[\"Lord Wisbeach\"]\nC8[\"Eugenia Crocker\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Aunt of| C2\nC3 -->|Sister of| C8\nC4 -->|Husband of| C3\nC5 -->|Son of| C3\nC6 -->|Butler of| C3\nC7 -->|Enemy of| C1\nC8 -->|Mother of| C1\nC8 -->|Sister of| C3\nC1 -->|Impersonates| C4\nC2 -->|Disguised as| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 192,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:48.064Z",
+      "finishedAt": "2026-09-10T18:05:48.064Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jimmy Crocker\"]\nC2[\"Ann Chester\"]\nC3[\"Mrs. Nesta Pett\"]\nC4[\"Peter Pett\"]\nC5[\"Ogden Ford\"]\nC6[\"Bayliss\"]\nC7[\"Lord Wisbeach\"]\nC8[\"Eugenia Crocker\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Aunt of| C2\nC3 -->|Sister of| C8\nC4 -->|Husband of| C3\nC5 -->|Son of| C3\nC6 -->|Butler of| C3\nC7 -->|Enemy of| C1\nC8 -->|Mother of| C1\nC8 -->|Sister of| C3\nC1 -->|Impersonates| C4\nC2 -->|Disguised as| C6",
+  "mermaidHash": "4e3935c3943a18611f0732173d3d9dc0ce821d596938ad55a95ecece0ddb4cda",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4e3935c3943a18611f0732173d3d9dc0ce821d596938ad55a95ecece0ddb4cda",
+    "svgHash": "3af59c5ac6802d6fb3eb1b38220eeac63017b6a2ad765a3ea858d73d7a2628ac",
+    "validatedAt": "2026-09-10T18:05:49.515Z",
+    "width": 1523.356201171875,
+    "height": 385.25
+  },
+  "generatedAt": "2026-09-10T18:05:48.064Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 192,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

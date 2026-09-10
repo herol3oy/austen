@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henryk-sienkiewicz/quo-vadis/jeremiah-curtin",
+  "metadata": {
+    "title": "Quo Vadis",
+    "authors": [
+      "Henryk Sienkiewicz"
+    ],
+    "year": "1895"
+  },
+  "inputHash": "5bc63d9229e35b5d865b6157efbc01e68f58344b85f11813d3d37baf2e60f725",
+  "promptHash": "8b19ea64114e9bbf3da2ae3ef15a8bdba6d119ceef32bd5f2868f9d2fcb9ef72",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:29.731Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:29.731Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Marcus Vinicius\"]\nC2[\"Lygia\"]\nC3[\"Petronius\"]\nC4[\"Nero\"]\nC5[\"Chilo Chilonides\"]\nC6[\"Ursus\"]\nC7[\"Poppaea Sabina\"]\nC8[\"Aulus Plautius\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Nephew of| C3\nC3 -->|Advisor to| C4\nC4 -->|Emperor of Rome| C1\nC4 -->|Emperor of Rome| C3\nC4 -->|Emperor of Rome| C5\nC4 -->|Emperor of Rome| C7\nC4 -->|Persecutes| C2\nC4 -->|Persecutes| C6\nC7 -->|Married to| C4\nC7 -->|Manipulates| C4\nC5 -->|Betrays| C1\nC5 -->|Betrays| C2\nC6 -->|Protects| C2\nC6 -->|Serves| C2\nC8 -->|Foster father of| C2\nC8 -->|Husband of| C2\nC2 -->|Daughter of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 274,
+        "total_tokens": 1835,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:31.478Z",
+      "finishedAt": "2026-09-10T17:43:31.478Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Marcus Vinicius\"]\nC2[\"Lygia\"]\nC3[\"Petronius\"]\nC4[\"Nero\"]\nC5[\"Chilo Chilonides\"]\nC6[\"Ursus\"]\nC7[\"Poppaea Sabina\"]\nC8[\"Aulus Plautius\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Nephew of| C3\nC3 -->|Advisor to| C4\nC4 -->|Emperor of Rome| C1\nC4 -->|Emperor of Rome| C3\nC4 -->|Emperor of Rome| C5\nC4 -->|Emperor of Rome| C7\nC4 -->|Persecutes| C2\nC4 -->|Persecutes| C6\nC7 -->|Married to| C4\nC7 -->|Manipulates| C4\nC5 -->|Betrays| C1\nC5 -->|Betrays| C2\nC6 -->|Protects| C2\nC6 -->|Serves| C2\nC8 -->|Foster father of| C2\nC8 -->|Husband of| C2\nC2 -->|Daughter of| C8",
+  "mermaidHash": "117440fe9cc38773a09e5d24bcc6926921f4d221a1f67dd257dd685ed88f6091",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "117440fe9cc38773a09e5d24bcc6926921f4d221a1f67dd257dd685ed88f6091",
+    "svgHash": "a0260c660e247307e07105d8b770083a0b8b5818f617ffb477b3b6e2f4c06c38",
+    "validatedAt": "2026-09-10T17:43:32.828Z",
+    "width": 1539.0272216796875,
+    "height": 475.5
+  },
+  "generatedAt": "2026-09-10T17:43:31.478Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 274,
+    "total_tokens": 1835,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

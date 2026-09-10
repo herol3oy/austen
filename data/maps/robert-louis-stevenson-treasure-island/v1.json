@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "robert-louis-stevenson/treasure-island",
+  "metadata": {
+    "title": "Treasure Island",
+    "authors": [
+      "Robert Louis Stevenson"
+    ],
+    "year": "1881"
+  },
+  "inputHash": "a9e3a7b73b81676eb3e102daff18ebd34d708437e35e11902165fe7392efce1d",
+  "promptHash": "99dd1cc17c2d1119f6a92f3480ade698d7621d60490a9470dbf1e7e7be8dfd21",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:55.726Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:55.726Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jim Hawkins\"]\nC2[\"Long John Silver\"]\nC3[\"Billy Bones\"]\nC4[\"Captain Smollett\"]\nC5[\"Dr. Livesey\"]\nC6[\"Squire Trelawney\"]\nC7[\"Ben Gunn\"]\nC8[\"Black Dog\"]\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Serves| C4\nC1 -->|Finds map of| C3\nC3 -->|Frightened of| C8\nC3 -->|Former shipmate of| C2\nC2 -->|Mutinies against| C4\nC2 -->|Betrays| C6\nC2 -->|Befriends| C1\nC2 -->|Kills| C3\nC5 -->|Friend of| C6\nC5 -->|Serves| C4\nC6 -->|Friend of| C5\nC6 -->|Hires| C4\nC6 -->|Hires| C2\nC7 -->|Helps| C1\nC7 -->|Marooned by| C2\nC8 -->|Shipmate of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 251,
+        "total_tokens": 1808,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:57.672Z",
+      "finishedAt": "2026-09-10T18:07:57.672Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jim Hawkins\"]\nC2[\"Long John Silver\"]\nC3[\"Billy Bones\"]\nC4[\"Captain Smollett\"]\nC5[\"Dr. Livesey\"]\nC6[\"Squire Trelawney\"]\nC7[\"Ben Gunn\"]\nC8[\"Black Dog\"]\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Serves| C4\nC1 -->|Finds map of| C3\nC3 -->|Frightened of| C8\nC3 -->|Former shipmate of| C2\nC2 -->|Mutinies against| C4\nC2 -->|Betrays| C6\nC2 -->|Befriends| C1\nC2 -->|Kills| C3\nC5 -->|Friend of| C6\nC5 -->|Serves| C4\nC6 -->|Friend of| C5\nC6 -->|Hires| C4\nC6 -->|Hires| C2\nC7 -->|Helps| C1\nC7 -->|Marooned by| C2\nC8 -->|Shipmate of| C2",
+  "mermaidHash": "06d747c58eae510006cb67251cfaa5e22254526f254ca4fbde9ff35ce23bd851",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "06d747c58eae510006cb67251cfaa5e22254526f254ca4fbde9ff35ce23bd851",
+    "svgHash": "8d175ae7e0ff35e73a7ab6a2f298e9e6074b9f18b7f906866768e42cd6e80069",
+    "validatedAt": "2026-09-10T18:07:59.040Z",
+    "width": 1802.0848388671875,
+    "height": 467.75
+  },
+  "generatedAt": "2026-09-10T18:07:57.672Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 251,
+    "total_tokens": 1808,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

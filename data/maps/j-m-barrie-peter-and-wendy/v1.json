@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "j-m-barrie/peter-and-wendy",
+  "metadata": {
+    "title": "Peter and Wendy",
+    "authors": [
+      "J. M. Barrie"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "f7692b5e341ed77c82f48d853d740f6aa80dffd2975d7ab757ca76082d713138",
+  "promptHash": "4503092083f05c76357c5e02c296e76be642c850ee2ae93623b75ad8a1bafea6",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:05.477Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:05.477Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Peter Pan\"]\nC2[\"Wendy Darling\"]\nC3[\"Captain Hook\"]\nC4[\"Tinker Bell\"]\nC5[\"Mr. Smee\"]\nC6[\"John Darling\"]\nC7[\"Michael Darling\"]\nC8[\"George Darling\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Rival of| C3\nC3 -->|Enemy of| C1\nC3 -->|Commands| C5\nC5 -->|Serves| C3\nC1 -->|Friend of| C4\nC4 -->|Jealous of| C2\nC2 -->|Sibling of| C6\nC2 -->|Sibling of| C7\nC8 -->|Parent of| C2\nC8 -->|Parent of| C6\nC8 -->|Parent of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 189,
+        "total_tokens": 1749,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:07.111Z",
+      "finishedAt": "2026-09-10T17:45:07.111Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Peter Pan\"]\nC2[\"Wendy Darling\"]\nC3[\"Captain Hook\"]\nC4[\"Tinker Bell\"]\nC5[\"Mr. Smee\"]\nC6[\"John Darling\"]\nC7[\"Michael Darling\"]\nC8[\"George Darling\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Rival of| C3\nC3 -->|Enemy of| C1\nC3 -->|Commands| C5\nC5 -->|Serves| C3\nC1 -->|Friend of| C4\nC4 -->|Jealous of| C2\nC2 -->|Sibling of| C6\nC2 -->|Sibling of| C7\nC8 -->|Parent of| C2\nC8 -->|Parent of| C6\nC8 -->|Parent of| C7",
+  "mermaidHash": "dba095e00c58a8d91b2a2237c7401d9f823932fd99f3c9d131a078e0451e700e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "dba095e00c58a8d91b2a2237c7401d9f823932fd99f3c9d131a078e0451e700e",
+    "svgHash": "9d5febaf63b855fb14864ff344463f69a96b45b079a241eabada4e0f02c785d9",
+    "validatedAt": "2026-09-10T17:45:08.411Z",
+    "width": 983.3023681640625,
+    "height": 423.25
+  },
+  "generatedAt": "2026-09-10T17:45:07.111Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 189,
+    "total_tokens": 1749,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

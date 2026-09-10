@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/the-mucker",
+  "metadata": {
+    "title": "The Mucker",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "faf6756c2f562e01fcac875305b2cfbf45d2d13397dc6d92a860991a4af44d8d",
+  "promptHash": "46c1ae8a0682667b90b3e5759ebc4de3314f9bd505fa87805d162f6a78231f8e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:44.752Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:44.752Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Billy Byrne\"]\nC2[\"Barbara Harding\"]\nC3[\"Theriere\"]\nC4[\"Divine\"]\nC5[\"Mallory\"]\nC6[\"Bony\"]\nC7[\"Larry Divine\"]\nC8[\"Peggy\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Protects| C2\nC3 -->|Rival of| C1\nC4 -->|Enemy of| C1\nC4 -->|Kidnaps| C2\nC5 -->|Enemy of| C1\nC5 -->|Allied with| C4\nC6 -->|Serves| C1\nC7 -->|Father of| C4\nC7 -->|Father of| C8\nC8 -->|Sister of| C4\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 189,
+        "total_tokens": 1749,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:46.904Z",
+      "finishedAt": "2026-09-10T17:34:46.904Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Billy Byrne\"]\nC2[\"Barbara Harding\"]\nC3[\"Theriere\"]\nC4[\"Divine\"]\nC5[\"Mallory\"]\nC6[\"Bony\"]\nC7[\"Larry Divine\"]\nC8[\"Peggy\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Protects| C2\nC3 -->|Rival of| C1\nC4 -->|Enemy of| C1\nC4 -->|Kidnaps| C2\nC5 -->|Enemy of| C1\nC5 -->|Allied with| C4\nC6 -->|Serves| C1\nC7 -->|Father of| C4\nC7 -->|Father of| C8\nC8 -->|Sister of| C4\nC8 -->|Friend of| C2",
+  "mermaidHash": "a57c63534832bc504fc73572d8ad57e36d2430137b311f8eec2b605e2f000bd5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a57c63534832bc504fc73572d8ad57e36d2430137b311f8eec2b605e2f000bd5",
+    "svgHash": "a864e2d649f6126d0a9677567f27c2af2d1c225e927331b3dbf93baefee3a36b",
+    "validatedAt": "2026-09-10T17:34:48.416Z",
+    "width": 1123.817138671875,
+    "height": 395.5
+  },
+  "generatedAt": "2026-09-10T17:34:46.904Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 189,
+    "total_tokens": 1749,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

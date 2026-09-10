@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ethel-voynich/the-gadfly",
+  "metadata": {
+    "title": "The Gadfly",
+    "authors": [
+      "Ethel Voynich"
+    ],
+    "year": "1897"
+  },
+  "inputHash": "3d6678055abacd12fad727f077820505cc901f33ff19e011528a9a4f6cce2906",
+  "promptHash": "71e5695c1f7f10d341ac8714fb0a5d5b635453e045fa4d8c0ae30c62298a5b9e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:48.728Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:48.729Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arthur Burton\"]\nC2[\"Gemma Warren\"]\nC3[\"Padre Montanelli\"]\nC4[\"Giovanni Bolla\"]\nC5[\"James Burton\"]\nC6[\"Julia Burton\"]\nC7[\"Cardinal Montanelli\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Son of| C5\nC5 -->|Father of| C1\nC6 -->|Mother of| C1\nC1 -->|Mentee of| C3\nC3 -->|Mentor of| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Betrayed by| C4\nC4 -->|Betrays| C1\nC3 -->|Betrays| C1\nC1 -->|Enemy of| C3\nC3 -->|Enemy of| C1\nC1 -->|Enemy of| C7\nC7 -->|Enemy of| C1\nC3 -->|Alias of| C7\nC7 -->|Alias of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 246,
+        "total_tokens": 1804,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:50.054Z",
+      "finishedAt": "2026-09-10T17:36:50.054Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arthur Burton\"]\nC2[\"Gemma Warren\"]\nC3[\"Padre Montanelli\"]\nC4[\"Giovanni Bolla\"]\nC5[\"James Burton\"]\nC6[\"Julia Burton\"]\nC7[\"Cardinal Montanelli\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Son of| C5\nC5 -->|Father of| C1\nC6 -->|Mother of| C1\nC1 -->|Mentee of| C3\nC3 -->|Mentor of| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Betrayed by| C4\nC4 -->|Betrays| C1\nC3 -->|Betrays| C1\nC1 -->|Enemy of| C3\nC3 -->|Enemy of| C1\nC1 -->|Enemy of| C7\nC7 -->|Enemy of| C1\nC3 -->|Alias of| C7\nC7 -->|Alias of| C3",
+  "mermaidHash": "d9cd379595d86f95ba21ec229eda435da848ad9a5103af2a1c2fe45cf2bd7675",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d9cd379595d86f95ba21ec229eda435da848ad9a5103af2a1c2fe45cf2bd7675",
+    "svgHash": "401928461661742c4623211dc24c1679f3bb2d5a1c8bb674b39050c13da46e0b",
+    "validatedAt": "2026-09-10T17:36:51.616Z",
+    "width": 1024.1273803710938,
+    "height": 634.60595703125
+  },
+  "generatedAt": "2026-09-10T17:36:50.054Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 246,
+    "total_tokens": 1804,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

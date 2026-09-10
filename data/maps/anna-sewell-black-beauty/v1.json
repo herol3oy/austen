@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anna-sewell/black-beauty",
+  "metadata": {
+    "title": "Black Beauty",
+    "authors": [
+      "Anna Sewell"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "9b8abe2910a1912c2f598f9c8a56d5f005a3b4e096b78dfe108fc5e8750da860",
+  "promptHash": "63a052e2c354a676cce7424a653dcd4c23d3db3c80857d40df15721a960c4892",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:50.532Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:50.533Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Black Beauty\"]\nC2[\"Ginger\"]\nC3[\"Merrylegs\"]\nC4[\"John Manly\"]\nC5[\"Squire Gordon\"]\nC6[\"Jerry Barker\"]\nC7[\"James Howard\"]\nC8[\"Reuben Smith\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Owned by| C5\nC5 -->|Employs| C4\nC4 -->|Grooms| C1\nC4 -->|Mentor of| C7\nC1 -->|Owned by| C6\nC6 -->|Drives| C1\nC1 -->|Owned by| C8\nC8 -->|Rides| C1\nC8 -->|Kills| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 172,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:51.881Z",
+      "finishedAt": "2026-09-10T17:25:51.882Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Black Beauty\"]\nC2[\"Ginger\"]\nC3[\"Merrylegs\"]\nC4[\"John Manly\"]\nC5[\"Squire Gordon\"]\nC6[\"Jerry Barker\"]\nC7[\"James Howard\"]\nC8[\"Reuben Smith\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Owned by| C5\nC5 -->|Employs| C4\nC4 -->|Grooms| C1\nC4 -->|Mentor of| C7\nC1 -->|Owned by| C6\nC6 -->|Drives| C1\nC1 -->|Owned by| C8\nC8 -->|Rides| C1\nC8 -->|Kills| C1",
+  "mermaidHash": "10645ee1db9a6531b7243ccb393ac2c44bd465d03f441cbd4ac0036e43a29184",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "10645ee1db9a6531b7243ccb393ac2c44bd465d03f441cbd4ac0036e43a29184",
+    "svgHash": "5062e352c7770fd17b82a97edd64b85ac12301be60ece28dab334cb2e2a71ffa",
+    "validatedAt": "2026-09-10T17:25:53.473Z",
+    "width": 960.2824096679688,
+    "height": 537.5
+  },
+  "generatedAt": "2026-09-10T17:25:51.881Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 172,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

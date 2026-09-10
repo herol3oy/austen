@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mahatma-gandhi/the-story-of-my-experiments-with-truth/mahadev-desai",
+  "metadata": {
+    "title": "The Story of My Experiments with Truth",
+    "authors": [
+      "Mahatma Gandhi"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "90d2a3b709073166417d9bfdab1aa621b2b6970b846ca51a2e5d7f23f64969fd",
+  "promptHash": "ff316cb16006c0aa4506fa1ebfe0b13d19f5401b29b72711796d4a85fcac2682",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:28.048Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:28.048Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mohandas Gandhi\"]\nC2[\"Kasturba Gandhi\"]\nC3[\"Putlibai Gandhi\"]\nC4[\"Karamchand Gandhi\"]\nC5[\"Harilal Gandhi\"]\nC6[\"Manilal Gandhi\"]\nC7[\"Gopal Krishna Gokhale\"]\nC8[\"John Ruskin\"]\nC1 -->|Married to| C2\nC3 -->|Mother of| C1\nC4 -->|Father of| C1\nC1 -->|Father of| C5\nC1 -->|Father of| C6\nC7 -->|Mentor of| C1\nC8 -->|Influenced| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 143,
+        "total_tokens": 1705,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:29.580Z",
+      "finishedAt": "2026-09-10T17:51:29.580Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mohandas Gandhi\"]\nC2[\"Kasturba Gandhi\"]\nC3[\"Putlibai Gandhi\"]\nC4[\"Karamchand Gandhi\"]\nC5[\"Harilal Gandhi\"]\nC6[\"Manilal Gandhi\"]\nC7[\"Gopal Krishna Gokhale\"]\nC8[\"John Ruskin\"]\nC1 -->|Married to| C2\nC3 -->|Mother of| C1\nC4 -->|Father of| C1\nC1 -->|Father of| C5\nC1 -->|Father of| C6\nC7 -->|Mentor of| C1\nC8 -->|Influenced| C1",
+  "mermaidHash": "07215ba7279b1b2995d36f437cd6c193b47a73e41946e41baa8f3e1da86e44ef",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "07215ba7279b1b2995d36f437cd6c193b47a73e41946e41baa8f3e1da86e44ef",
+    "svgHash": "64787e83d80d4d3d57d47d9eaea18297b68c26dc9a1ef92c61fe9c1d776e39a4",
+    "validatedAt": "2026-09-10T17:51:30.867Z",
+    "width": 825.0208129882812,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:51:29.580Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 143,
+    "total_tokens": 1705,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

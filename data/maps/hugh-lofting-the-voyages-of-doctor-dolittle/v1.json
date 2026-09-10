@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "hugh-lofting/the-voyages-of-doctor-dolittle",
+  "metadata": {
+    "title": "The Voyages of Doctor Dolittle",
+    "authors": [
+      "Hugh Lofting"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "c40e069ea1985f64f04d4efee0c5c4cd711ee0802e62e53a845767203993f0ba",
+  "promptHash": "dd966de2e789a7c808ed0157d57cc1f51c1bababd9916e767d2d1da3d2cc539c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:41.783Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:41.783Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Doctor Dolittle\"]\nC2[\"Tommy Stubbins\"]\nC3[\"Polynesia\"]\nC4[\"Bumpo\"]\nC5[\"Long Arrow\"]\nC6[\"Luke the Hermit\"]\nC7[\"Miranda\"]\nC8[\"Chee-Chee\"]\nC1 -->|Mentor of| C2\nC2 -->|Friend of| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Friend of| C5\nC5 -->|Friend of| C1\nC1 -->|Friend of| C6\nC6 -->|Friend of| C1\nC1 -->|Friend of| C7\nC7 -->|Friend of| C1\nC1 -->|Friend of| C8\nC8 -->|Friend of| C1\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 262,
+        "total_tokens": 1825,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:43.456Z",
+      "finishedAt": "2026-09-10T17:44:43.456Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Doctor Dolittle\"]\nC2[\"Tommy Stubbins\"]\nC3[\"Polynesia\"]\nC4[\"Bumpo\"]\nC5[\"Long Arrow\"]\nC6[\"Luke the Hermit\"]\nC7[\"Miranda\"]\nC8[\"Chee-Chee\"]\nC1 -->|Mentor of| C2\nC2 -->|Friend of| C1\nC1 -->|Friend of| C3\nC3 -->|Friend of| C1\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Friend of| C5\nC5 -->|Friend of| C1\nC1 -->|Friend of| C6\nC6 -->|Friend of| C1\nC1 -->|Friend of| C7\nC7 -->|Friend of| C1\nC1 -->|Friend of| C8\nC8 -->|Friend of| C1\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8",
+  "mermaidHash": "d0c268bd78b94aaf0ea6e5eb9fd17eafe442ba4630ce3f286818fa56e9f3cb93",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d0c268bd78b94aaf0ea6e5eb9fd17eafe442ba4630ce3f286818fa56e9f3cb93",
+    "svgHash": "77d93f7a8fbaf55fac98118a7f869a6febfdb2c8dd0befcfb8f848a11346e511",
+    "validatedAt": "2026-09-10T17:44:44.794Z",
+    "width": 742.806396484375,
+    "height": 734.5
+  },
+  "generatedAt": "2026-09-10T17:44:43.456Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 262,
+    "total_tokens": 1825,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

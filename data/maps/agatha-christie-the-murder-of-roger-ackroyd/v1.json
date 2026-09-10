@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "agatha-christie/the-murder-of-roger-ackroyd",
+  "metadata": {
+    "title": "The Murder of Roger Ackroyd",
+    "authors": [
+      "Agatha Christie"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "c5c139a2036eeb64a96b6ea59a0722b5ec96025c951351192c06e6f15c9b2110",
+  "promptHash": "58fd04c7d66aa2a68d8f05df928fbcf173eacb3343d30916ce9945e6199b733f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:09.518Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:09.519Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Hercule Poirot\"]\nC2[\"Dr. James Sheppard\"]\nC3[\"Roger Ackroyd\"]\nC4[\"Mrs. Ferrars\"]\nC5[\"Flora Ackroyd\"]\nC6[\"Ralph Paton\"]\nC7[\"Caroline Sheppard\"]\nC8[\"Ursula Bourne\"]\nC1 -->|Investigates murder of| C3\nC2 -->|Narrator and assistant to| C1\nC2 -->|Kills| C3\nC2 -->|Brother of| C7\nC3 -->|Uncle of| C5\nC3 -->|Stepfather of| C6\nC3 -->|Loved| C4\nC4 -->|Killed herself after poisoning| C3\nC5 -->|Engaged to| C6\nC6 -->|Secretly married to| C8\nC8 -->|Loves| C6\nC7 -->|Sister of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 207,
+        "total_tokens": 1768,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:11.262Z",
+      "finishedAt": "2026-09-10T17:24:11.262Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Hercule Poirot\"]\nC2[\"Dr. James Sheppard\"]\nC3[\"Roger Ackroyd\"]\nC4[\"Mrs. Ferrars\"]\nC5[\"Flora Ackroyd\"]\nC6[\"Ralph Paton\"]\nC7[\"Caroline Sheppard\"]\nC8[\"Ursula Bourne\"]\nC1 -->|Investigates murder of| C3\nC2 -->|Narrator and assistant to| C1\nC2 -->|Kills| C3\nC2 -->|Brother of| C7\nC3 -->|Uncle of| C5\nC3 -->|Stepfather of| C6\nC3 -->|Loved| C4\nC4 -->|Killed herself after poisoning| C3\nC5 -->|Engaged to| C6\nC6 -->|Secretly married to| C8\nC8 -->|Loves| C6\nC7 -->|Sister of| C2",
+  "mermaidHash": "2cb303c53184d69c544e84cc8554a0c5cb23ead29d3c95454f000f7c6372548a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2cb303c53184d69c544e84cc8554a0c5cb23ead29d3c95454f000f7c6372548a",
+    "svgHash": "107b961c65ac3c0d5e6342cf4f7cc866a4930cadea0a0446fa549ae0ddf540a0",
+    "validatedAt": "2026-09-10T17:24:12.578Z",
+    "width": 1959.6868896484375,
+    "height": 223.75
+  },
+  "generatedAt": "2026-09-10T17:24:11.262Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 207,
+    "total_tokens": 1768,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

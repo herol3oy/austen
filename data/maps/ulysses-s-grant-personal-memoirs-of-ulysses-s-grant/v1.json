@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ulysses-s-grant/personal-memoirs-of-ulysses-s-grant",
+  "metadata": {
+    "title": "Personal Memoirs of Ulysses S. Grant",
+    "authors": [
+      "Ulysses S. Grant"
+    ],
+    "year": "1885"
+  },
+  "inputHash": "6171950eeb480085daa89daa823e3a4a680f70d340b25fb8aae0263bc3b5241f",
+  "promptHash": "0b6f73ae49988c5c9f3c9d4a37cf57363590ad918c7d0ccb785bb08e53354869",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:36.817Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:36.817Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1565,
+        "completion_tokens": 2,
+        "total_tokens": 1567,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 285
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:37.734Z",
+      "finishedAt": "2026-09-10T18:11:37.734Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:11:37.734Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2,
+    "total_tokens": 1567,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 285
+  }
+}

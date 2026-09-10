@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/uneasy-money",
+  "metadata": {
+    "title": "Uneasy Money",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "2328e56ab1b4035852d37a84e9b0c9477a3d35604e03d05221d07c5f99f6b5d6",
+  "promptHash": "882acfa47d770c3437481dfc9833186ee42941d98fc9960cdee2c46c8e84dc40",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:10.788Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:10.788Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lord Dawlish\"]\nC2[\"Elizabeth Boyd\"]\nC3[\"William Boyd\"]\nC4[\"Claire Fenwick\"]\nC5[\"Nora Fenwick\"]\nC6[\"Dudley Pickering\"]\nC7[\"Roscoe Sherriff\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Brother of| C2\nC4 -->|Sister of| C5\nC1 -->|Engaged to| C4\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1\nC7 -->|Employed by| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 148,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:12.418Z",
+      "finishedAt": "2026-09-10T18:06:12.418Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lord Dawlish\"]\nC2[\"Elizabeth Boyd\"]\nC3[\"William Boyd\"]\nC4[\"Claire Fenwick\"]\nC5[\"Nora Fenwick\"]\nC6[\"Dudley Pickering\"]\nC7[\"Roscoe Sherriff\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Brother of| C2\nC4 -->|Sister of| C5\nC1 -->|Engaged to| C4\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1\nC7 -->|Employed by| C6",
+  "mermaidHash": "bc91a19ef1681bccc84295591abc63c82b719deba9f2b476afc3876b7e509757",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "bc91a19ef1681bccc84295591abc63c82b719deba9f2b476afc3876b7e509757",
+    "svgHash": "4c0f66ac085db8893bebaefb90278f7ddbb996878fb28cd4c3422394a3d9b123",
+    "validatedAt": "2026-09-10T18:06:13.768Z",
+    "width": 1307.701416015625,
+    "height": 265
+  },
+  "generatedAt": "2026-09-10T18:06:12.418Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 148,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

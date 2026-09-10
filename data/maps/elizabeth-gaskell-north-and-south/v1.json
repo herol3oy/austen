@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "elizabeth-gaskell/north-and-south",
+  "metadata": {
+    "title": "North and South",
+    "authors": [
+      "Elizabeth Gaskell"
+    ],
+    "year": "1855"
+  },
+  "inputHash": "df3ad9762b44008fdbc76ab5dff2577f97c1c527c323023fe7b6caca71fe6c1f",
+  "promptHash": "29d7a28619e576475236be513361666c38b61d104a6eb5f2556bcf781622e432",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:04.050Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:04.050Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Margaret Hale\"]\nC2[\"John Thornton\"]\nC3[\"Mr. Hale\"]\nC4[\"Mrs. Hale\"]\nC5[\"Frederick Hale\"]\nC6[\"Nicholas Higgins\"]\nC7[\"Bessy Higgins\"]\nC8[\"Mrs. Thornton\"]\n\nC1 -->|Daughter of| C3\nC1 -->|Daughter of| C4\nC1 -->|Sister of| C5\nC3 -->|Husband of| C4\nC3 -->|Father of| C5\nC4 -->|Mother of| C5\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Son of| C8\nC8 -->|Mother of| C2\nC1 -->|Friend of| C6\nC6 -->|Father of| C7\nC1 -->|Friend of| C7\nC2 -->|Employer of| C6\nC6 -->|Employee of| C2\nC1 -->|Protects| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 223,
+        "total_tokens": 1780,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:05.704Z",
+      "finishedAt": "2026-09-10T17:36:05.704Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Margaret Hale\"]\nC2[\"John Thornton\"]\nC3[\"Mr. Hale\"]\nC4[\"Mrs. Hale\"]\nC5[\"Frederick Hale\"]\nC6[\"Nicholas Higgins\"]\nC7[\"Bessy Higgins\"]\nC8[\"Mrs. Thornton\"]\n\nC1 -->|Daughter of| C3\nC1 -->|Daughter of| C4\nC1 -->|Sister of| C5\nC3 -->|Husband of| C4\nC3 -->|Father of| C5\nC4 -->|Mother of| C5\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Son of| C8\nC8 -->|Mother of| C2\nC1 -->|Friend of| C6\nC6 -->|Father of| C7\nC1 -->|Friend of| C7\nC2 -->|Employer of| C6\nC6 -->|Employee of| C2\nC1 -->|Protects| C7",
+  "mermaidHash": "71003b7541f7d87095de18a1796b65dd225a8f56223a8f39a241d813651abc9c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "71003b7541f7d87095de18a1796b65dd225a8f56223a8f39a241d813651abc9c",
+    "svgHash": "357d71f94f8201862b9a15ebd0f9f6740959ab209626ce5849cd68cc5f60d969",
+    "validatedAt": "2026-09-10T17:36:07.094Z",
+    "width": 1043.8526611328125,
+    "height": 542.5
+  },
+  "generatedAt": "2026-09-10T17:36:05.704Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 223,
+    "total_tokens": 1780,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

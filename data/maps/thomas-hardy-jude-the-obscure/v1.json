@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hardy/jude-the-obscure",
+  "metadata": {
+    "title": "Jude the Obscure",
+    "authors": [
+      "Thomas Hardy"
+    ],
+    "year": "1895"
+  },
+  "inputHash": "a197ded7bfebd6f8d5e1cca69491e2a9c8b2a9a415c7e56c486213cf4a1355e6",
+  "promptHash": "aeadac76a23a47ca39704b0a3d2246dd4b6d5651bc75fcbdf3b307bd88e804e3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:47.138Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:47.138Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jude Fawley\"]\nC2[\"Arabella Donn\"]\nC3[\"Sue Bridehead\"]\nC4[\"Richard Phillotson\"]\nC5[\"Little Father Time\"]\nC6[\"Aunt Drusilla\"]\nC7[\"Anny Donn\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC1 -->|Cousin of| C3\nC2 -->|Married to| C1\nC3 -->|Married to| C4\nC4 -->|Married to| C3\nC3 -->|Loves| C1\nC1 -->|Parent of| C5\nC2 -->|Parent of| C5\nC5 -->|Kills| C1\nC5 -->|Kills| C3\nC1 -->|Raised by| C6\nC2 -->|Sister of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 197,
+        "total_tokens": 1756,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:48.479Z",
+      "finishedAt": "2026-09-10T18:10:48.479Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jude Fawley\"]\nC2[\"Arabella Donn\"]\nC3[\"Sue Bridehead\"]\nC4[\"Richard Phillotson\"]\nC5[\"Little Father Time\"]\nC6[\"Aunt Drusilla\"]\nC7[\"Anny Donn\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC1 -->|Cousin of| C3\nC2 -->|Married to| C1\nC3 -->|Married to| C4\nC4 -->|Married to| C3\nC3 -->|Loves| C1\nC1 -->|Parent of| C5\nC2 -->|Parent of| C5\nC5 -->|Kills| C1\nC5 -->|Kills| C3\nC1 -->|Raised by| C6\nC2 -->|Sister of| C7",
+  "mermaidHash": "1aeb26fa0b4f378f27dcde812ad43e0f3f45b081b8fa963698c70c2c2a798da1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "1aeb26fa0b4f378f27dcde812ad43e0f3f45b081b8fa963698c70c2c2a798da1",
+    "svgHash": "45634801421a923ecd21139149a107ca7ab62703bb12ed3770a04f32cc2e7770",
+    "validatedAt": "2026-09-10T18:10:49.911Z",
+    "width": 1263.2608642578125,
+    "height": 389.5
+  },
+  "generatedAt": "2026-09-10T18:10:48.479Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 197,
+    "total_tokens": 1756,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

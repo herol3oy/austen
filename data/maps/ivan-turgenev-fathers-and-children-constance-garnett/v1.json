@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ivan-turgenev/fathers-and-children/constance-garnett",
+  "metadata": {
+    "title": "Fathers and Children",
+    "authors": [
+      "Ivan Turgenev"
+    ],
+    "year": "1862"
+  },
+  "inputHash": "57ed205cfd89d8b8972bafb2fb05d991b3386e933da635c2051f73a512da99ca",
+  "promptHash": "c5e8d379e13444644b31770eae1aa89c475399a00c3ed8fa8723da62e29bfad5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:50.833Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:50.834Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arkady Kirsanov\"]\nC2[\"Yevgeny Bazarov\"]\nC3[\"Nikolai Kirsanov\"]\nC4[\"Pavel Kirsanov\"]\nC5[\"Vasily Bazarov\"]\nC6[\"Arina Bazarova\"]\nC7[\"Anna Odintsova\"]\nC8[\"Fenichka\"]\nC3 -->|Father of| C1\nC4 -->|Brother of| C3\nC5 -->|Father of| C2\nC6 -->|Mother of| C2\nC5 -->|Married to| C6\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC2 -->|Loves| C7\nC7 -->|Attracted to| C2\nC3 -->|Loves| C8\nC2 -->|Kisses| C8\nC2 -->|Son of| C5\nC2 -->|Son of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 209,
+        "total_tokens": 1769,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:52.363Z",
+      "finishedAt": "2026-09-10T17:44:52.363Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arkady Kirsanov\"]\nC2[\"Yevgeny Bazarov\"]\nC3[\"Nikolai Kirsanov\"]\nC4[\"Pavel Kirsanov\"]\nC5[\"Vasily Bazarov\"]\nC6[\"Arina Bazarova\"]\nC7[\"Anna Odintsova\"]\nC8[\"Fenichka\"]\nC3 -->|Father of| C1\nC4 -->|Brother of| C3\nC5 -->|Father of| C2\nC6 -->|Mother of| C2\nC5 -->|Married to| C6\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC2 -->|Loves| C7\nC7 -->|Attracted to| C2\nC3 -->|Loves| C8\nC2 -->|Kisses| C8\nC2 -->|Son of| C5\nC2 -->|Son of| C6",
+  "mermaidHash": "f895bf02c86575bd16ba7186604ba1e084b6818e677aa816fbefb507ee8f0801",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f895bf02c86575bd16ba7186604ba1e084b6818e677aa816fbefb507ee8f0801",
+    "svgHash": "e1896e7133d8e3587b856405846f162e5759afdc0c8996c6603d9bc571b360e3",
+    "validatedAt": "2026-09-10T17:44:53.687Z",
+    "width": 1605.7769775390625,
+    "height": 364
+  },
+  "generatedAt": "2026-09-10T17:44:52.363Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 209,
+    "total_tokens": 1769,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

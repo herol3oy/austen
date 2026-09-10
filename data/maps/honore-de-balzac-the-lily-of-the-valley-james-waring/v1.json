@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "honore-de-balzac/the-lily-of-the-valley/james-waring",
+  "metadata": {
+    "title": "The Lily of the Valley",
+    "authors": [
+      "Honoré de Balzac"
+    ],
+    "year": "1835"
+  },
+  "inputHash": "07cd8dd24178e2e0cf7def5c98415684a110b2639fe6f99f7936dd5caf35db0d",
+  "promptHash": "ddba92129154dad9a4c10f71a6e651c5294c5aac168b56a0cf794a26c1b4f3e9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:25.048Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:25.048Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Félix de Vandenesse\"]\nC2[\"Henriette de Mortsauf\"]\nC3[\"Monsieur de Mortsauf\"]\nC4[\"Madeleine de Mortsauf\"]\nC5[\"Jacques de Mortsauf\"]\nC6[\"Lady Arabelle Dudley\"]\nC7[\"Natalie de Manerville\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Married to| C3\nC3 -->|Husband of| C2\nC2 -->|Mother of| C4\nC2 -->|Mother of| C5\nC3 -->|Father of| C4\nC3 -->|Father of| C5\nC1 -->|Mistress of| C6\nC1 -->|Marries| C7\nC2 -->|Confidante of| C1\nC1 -->|Protects| C4\nC1 -->|Protects| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 210,
+        "total_tokens": 1772,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:26.659Z",
+      "finishedAt": "2026-09-10T17:44:26.659Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Félix de Vandenesse\"]\nC2[\"Henriette de Mortsauf\"]\nC3[\"Monsieur de Mortsauf\"]\nC4[\"Madeleine de Mortsauf\"]\nC5[\"Jacques de Mortsauf\"]\nC6[\"Lady Arabelle Dudley\"]\nC7[\"Natalie de Manerville\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Married to| C3\nC3 -->|Husband of| C2\nC2 -->|Mother of| C4\nC2 -->|Mother of| C5\nC3 -->|Father of| C4\nC3 -->|Father of| C5\nC1 -->|Mistress of| C6\nC1 -->|Marries| C7\nC2 -->|Confidante of| C1\nC1 -->|Protects| C4\nC1 -->|Protects| C5",
+  "mermaidHash": "b477d9586babbe173cea1472b0c7fd8ddbf4d4123836490d478b8971167a44bf",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b477d9586babbe173cea1472b0c7fd8ddbf4d4123836490d478b8971167a44bf",
+    "svgHash": "10bec4a981b137b8db4b0e8a7bf13cff4cfa294f52a86c10f6f62e13beaad54a",
+    "validatedAt": "2026-09-10T17:44:27.978Z",
+    "width": 1227.92578125,
+    "height": 465.5
+  },
+  "generatedAt": "2026-09-10T17:44:26.659Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 210,
+    "total_tokens": 1772,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

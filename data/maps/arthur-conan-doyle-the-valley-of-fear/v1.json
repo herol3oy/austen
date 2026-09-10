@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-conan-doyle/the-valley-of-fear",
+  "metadata": {
+    "title": "The Valley of Fear",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "f49607b1ee42cb0b42cb79670b1e802214883781b43ae0a5de590892d9f62cf9",
+  "promptHash": "bc493cb6fb50d99ad174378bd43694da4d37eca9705539119ded32ef884e7442",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:12.549Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:12.550Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"Dr. John Watson\"]\nC3[\"Professor Moriarty\"]\nC4[\"John Douglas\"]\nC5[\"Boss McGinty\"]\nC6[\"Ted Baldwin\"]\nC7[\"Inspector MacDonald\"]\nC8[\"Fred Porlock\"]\nC1 -->|Friend of| C2\nC1 -->|Enemy of| C3\nC1 -->|Investigates| C4\nC2 -->|Friend of| C1\nC3 -->|Commands| C5\nC3 -->|Commands| C6\nC4 -->|Enemy of| C5\nC4 -->|Enemy of| C6\nC5 -->|Commands| C6\nC5 -->|Enemy of| C4\nC6 -->|Enemy of| C4\nC7 -->|Assists| C1\nC8 -->|Informant of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 192,
+        "total_tokens": 1751,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:14.198Z",
+      "finishedAt": "2026-09-10T17:28:14.198Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"Dr. John Watson\"]\nC3[\"Professor Moriarty\"]\nC4[\"John Douglas\"]\nC5[\"Boss McGinty\"]\nC6[\"Ted Baldwin\"]\nC7[\"Inspector MacDonald\"]\nC8[\"Fred Porlock\"]\nC1 -->|Friend of| C2\nC1 -->|Enemy of| C3\nC1 -->|Investigates| C4\nC2 -->|Friend of| C1\nC3 -->|Commands| C5\nC3 -->|Commands| C6\nC4 -->|Enemy of| C5\nC4 -->|Enemy of| C6\nC5 -->|Commands| C6\nC5 -->|Enemy of| C4\nC6 -->|Enemy of| C4\nC7 -->|Assists| C1\nC8 -->|Informant of| C1",
+  "mermaidHash": "7da077b0d6bcd64e735c3cab70d0ad83b969752775fdfea4a876803b97c83921",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7da077b0d6bcd64e735c3cab70d0ad83b969752775fdfea4a876803b97c83921",
+    "svgHash": "da511f5a3f3895868c14d6e50103bd0d0f4cf972e6dcd8e32e6767871291a59b",
+    "validatedAt": "2026-09-10T17:28:15.672Z",
+    "width": 1641.515869140625,
+    "height": 348.7490234375
+  },
+  "generatedAt": "2026-09-10T17:28:14.198Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 192,
+    "total_tokens": 1751,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

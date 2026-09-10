@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "aldous-huxley/crome-yellow",
+  "metadata": {
+    "title": "Crome Yellow",
+    "authors": [
+      "Aldous Huxley"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "925ac7d6ae1bc797acdabba3583eac6c42476b0585100d123c06def264ca766e",
+  "promptHash": "9f6127faa907018fd0e4423437be712f4186a0e64aede28398a612067a7456d7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:34.551Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:34.551Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Denis Stone\"]\nC2[\"Anne Wimbush\"]\nC3[\"Henry Wimbush\"]\nC4[\"Priscilla Wimbush\"]\nC5[\"Gombauld\"]\nC6[\"Mary Bracegirdle\"]\nC7[\"Jenny Mullion\"]\nC8[\"Mr. Scogan\"]\nC1 -->|Loves| C2\nC2 -->|Niece of| C3\nC3 -->|Married to| C4\nC4 -->|Aunt of| C2\nC5 -->|Loves| C2\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1\nC8 -->|Friend of| C1\nC8 -->|Relative of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 161,
+        "total_tokens": 1719,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:35.972Z",
+      "finishedAt": "2026-09-10T17:24:35.972Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Denis Stone\"]\nC2[\"Anne Wimbush\"]\nC3[\"Henry Wimbush\"]\nC4[\"Priscilla Wimbush\"]\nC5[\"Gombauld\"]\nC6[\"Mary Bracegirdle\"]\nC7[\"Jenny Mullion\"]\nC8[\"Mr. Scogan\"]\nC1 -->|Loves| C2\nC2 -->|Niece of| C3\nC3 -->|Married to| C4\nC4 -->|Aunt of| C2\nC5 -->|Loves| C2\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1\nC8 -->|Friend of| C1\nC8 -->|Relative of| C3",
+  "mermaidHash": "7f3db958eaedbd037ea85cc165231e73be9ac246f61bcc399a814573c3955d46",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7f3db958eaedbd037ea85cc165231e73be9ac246f61bcc399a814573c3955d46",
+    "svgHash": "aead7f13431486e1b0740de1d8fa9270c58dcbd03e9ebd4fd3f81f908057455b",
+    "validatedAt": "2026-09-10T17:24:37.384Z",
+    "width": 1298.770751953125,
+    "height": 341
+  },
+  "generatedAt": "2026-09-10T17:24:35.972Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 161,
+    "total_tokens": 1719,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

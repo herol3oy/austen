@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-mann/buddenbrooks/h-t-lowe-porter",
+  "metadata": {
+    "title": "Buddenbrooks",
+    "authors": [
+      "Thomas Mann"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "287a78d0b26c1b8e30d4b56fc138f864d05fa2ce1187bef4d0a980464fd997f0",
+  "promptHash": "c16b818e984cadb8ec390ac96aa803e88ee9ffd7ad30b0f19f55ba66ab96333a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:17.157Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:17.157Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tony Buddenbrook\"]\nC2[\"Thomas Buddenbrook\"]\nC3[\"Christian Buddenbrook\"]\nC4[\"Hanno Buddenbrook\"]\nC5[\"Gerda Buddenbrook\"]\nC6[\"Jean Buddenbrook\"]\nC7[\"Elisabeth Buddenbrook\"]\nC8[\"Bendix Grünlich\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC2 -->|Sibling of| C3\nC6 -->|Parent of| C1\nC6 -->|Parent of| C2\nC6 -->|Parent of| C3\nC7 -->|Parent of| C1\nC7 -->|Parent of| C2\nC7 -->|Parent of| C3\nC2 -->|Parent of| C4\nC5 -->|Parent of| C4\nC2 -->|Married to| C5\nC1 -->|Married to| C8\nC2 -->|Head of| C1\nC2 -->|Head of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 226,
+        "total_tokens": 1783,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:18.585Z",
+      "finishedAt": "2026-09-10T18:11:18.585Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tony Buddenbrook\"]\nC2[\"Thomas Buddenbrook\"]\nC3[\"Christian Buddenbrook\"]\nC4[\"Hanno Buddenbrook\"]\nC5[\"Gerda Buddenbrook\"]\nC6[\"Jean Buddenbrook\"]\nC7[\"Elisabeth Buddenbrook\"]\nC8[\"Bendix Grünlich\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC2 -->|Sibling of| C3\nC6 -->|Parent of| C1\nC6 -->|Parent of| C2\nC6 -->|Parent of| C3\nC7 -->|Parent of| C1\nC7 -->|Parent of| C2\nC7 -->|Parent of| C3\nC2 -->|Parent of| C4\nC5 -->|Parent of| C4\nC2 -->|Married to| C5\nC1 -->|Married to| C8\nC2 -->|Head of| C1\nC2 -->|Head of| C3",
+  "mermaidHash": "16c5fc3d080ce77e852b167bb9f44273ddd2a4e1aa35d85c28869dba0745987d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "16c5fc3d080ce77e852b167bb9f44273ddd2a4e1aa35d85c28869dba0745987d",
+    "svgHash": "dd2edc3c6d24f98d17b32638c69b3ad490bd3c158e4e8dd98a9d47e72a3973fc",
+    "validatedAt": "2026-09-10T18:11:19.961Z",
+    "width": 1511.1844482421875,
+    "height": 507.5
+  },
+  "generatedAt": "2026-09-10T18:11:18.585Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 226,
+    "total_tokens": 1783,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anton-chekhov/uncle-vanya/constance-garnett",
+  "metadata": {
+    "title": "Uncle Vanya",
+    "authors": [
+      "Anton Chekhov"
+    ],
+    "year": "1897"
+  },
+  "inputHash": "b8f602190bd7057931fc6f3a62fd1d2ceb11db4b73bb40ebcd6c04f857100de9",
+  "promptHash": "1ed73db5c0e0df4403ff9e38d8c81b3f0095c60814ad2bfbb2cefb3e88f95e23",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:25.046Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:25.046Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Serebryakov\"]\nC2[\"Yelena\"]\nC3[\"Sonya\"]\nC4[\"Vanya\"]\nC5[\"Astrov\"]\nC6[\"Telegin\"]\nC7[\"Maria\"]\nC8[\"Voynitsky\"]\nC1 -->|Married to| C2\nC1 -->|Father of| C3\nC1 -->|Brother-in-law of| C4\nC2 -->|Step-mother of| C3\nC2 -->|Attracted to| C5\nC3 -->|Daughter of| C1\nC3 -->|Loves| C5\nC4 -->|Uncle of| C3\nC4 -->|Loves| C2\nC4 -->|Rival of| C1\nC5 -->|Friend of| C4\nC5 -->|Rejects| C3\nC6 -->|Friend of| C4\nC7 -->|Mother of| C4\nC8 -->|Father of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 218,
+        "total_tokens": 1778,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:26.479Z",
+      "finishedAt": "2026-09-10T17:27:26.479Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Serebryakov\"]\nC2[\"Yelena\"]\nC3[\"Sonya\"]\nC4[\"Vanya\"]\nC5[\"Astrov\"]\nC6[\"Telegin\"]\nC7[\"Maria\"]\nC8[\"Voynitsky\"]\nC1 -->|Married to| C2\nC1 -->|Father of| C3\nC1 -->|Brother-in-law of| C4\nC2 -->|Step-mother of| C3\nC2 -->|Attracted to| C5\nC3 -->|Daughter of| C1\nC3 -->|Loves| C5\nC4 -->|Uncle of| C3\nC4 -->|Loves| C2\nC4 -->|Rival of| C1\nC5 -->|Friend of| C4\nC5 -->|Rejects| C3\nC6 -->|Friend of| C4\nC7 -->|Mother of| C4\nC8 -->|Father of| C4",
+  "mermaidHash": "68932028050134cceb46130d42dc821826188a7c0204f9a9a844deb8c54465cf",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "68932028050134cceb46130d42dc821826188a7c0204f9a9a844deb8c54465cf",
+    "svgHash": "350ae7f66b6678cf0d2903e804fc0f5f5907c7e6d01c3190407eeb57731a1011",
+    "validatedAt": "2026-09-10T17:27:28.168Z",
+    "width": 1099.853515625,
+    "height": 566.75
+  },
+  "generatedAt": "2026-09-10T17:27:26.479Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 218,
+    "total_tokens": 1778,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

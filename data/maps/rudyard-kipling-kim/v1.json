@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "rudyard-kipling/kim",
+  "metadata": {
+    "title": "Kim",
+    "authors": [
+      "Rudyard Kipling"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "2045fddde71876011c9871aaa9220aa9dfaa3b77f0360af8d1f1774a5c8f2826",
+  "promptHash": "9cf2f19e5ab89297c30dc5e2b42920db0b237e46078b6e8466572c33d7669d70",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:21.126Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:21.126Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Kimball O'Hara\"]\nC2[\"Teshoo Lama\"]\nC3[\"Mahbub Ali\"]\nC4[\"Lurgan Sahib\"]\nC5[\"Colonel Creighton\"]\nC6[\"Hurree Babu\"]\nC7[\"The Woman of Kulu\"]\nC1 -->|Disciple of| C2\nC2 -->|Mentor of| C1\nC1 -->|Agent of| C3\nC3 -->|Protects| C1\nC1 -->|Trained by| C4\nC1 -->|Serves| C5\nC5 -->|Commands| C1\nC1 -->|Friend of| C6\nC6 -->|Protects| C1\nC7 -->|Protects| C1\nC1 -->|Loves| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 174,
+        "total_tokens": 1731,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:23.067Z",
+      "finishedAt": "2026-09-10T18:08:23.067Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Kimball O'Hara\"]\nC2[\"Teshoo Lama\"]\nC3[\"Mahbub Ali\"]\nC4[\"Lurgan Sahib\"]\nC5[\"Colonel Creighton\"]\nC6[\"Hurree Babu\"]\nC7[\"The Woman of Kulu\"]\nC1 -->|Disciple of| C2\nC2 -->|Mentor of| C1\nC1 -->|Agent of| C3\nC3 -->|Protects| C1\nC1 -->|Trained by| C4\nC1 -->|Serves| C5\nC5 -->|Commands| C1\nC1 -->|Friend of| C6\nC6 -->|Protects| C1\nC7 -->|Protects| C1\nC1 -->|Loves| C7",
+  "mermaidHash": "ba9789db755b96bfc89f6b3342c1283a034a5dc14cbd8c51d8feed863d0973b2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ba9789db755b96bfc89f6b3342c1283a034a5dc14cbd8c51d8feed863d0973b2",
+    "svgHash": "a63d982f9c101b94dbd10dc2fa5ab540d8f13b73f12a6f603f7b55820d64106b",
+    "validatedAt": "2026-09-10T18:08:24.406Z",
+    "width": 492.9574890136719,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T18:08:23.067Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 174,
+    "total_tokens": 1731,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

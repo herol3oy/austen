@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-rider-haggard/king-solomons-mines",
+  "metadata": {
+    "title": "King Solomon’s Mines",
+    "authors": [
+      "H. Rider Haggard"
+    ],
+    "year": "1885"
+  },
+  "inputHash": "9abb56f3e090f930f98d574eea849b735bb2907b5664faefbfaeabe2795462fa",
+  "promptHash": "f793eef1b756721953136c898840311bac350184d38a9366e110897c51b61368",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:29.771Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:29.771Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Allan Quatermain\"]\nC2[\"Sir Henry Curtis\"]\nC3[\"Captain John Good\"]\nC4[\"Umbopa\"]\nC5[\"Ignosi\"]\nC6[\"Gagool\"]\nC7[\"Foulata\"]\nC8[\"Twala\"]\nC1 -->|Narrator and guide for| C2\nC1 -->|Friend of| C3\nC2 -->|Friend of| C3\nC2 -->|Searches for brother| C4\nC4 -->|True identity is| C5\nC5 -->|Rightful king of| C8\nC6 -->|Serves| C8\nC6 -->|Betrays| C5\nC6 -->|Kills| C7\nC7 -->|Loves| C3\nC8 -->|Enemy of| C5\nC8 -->|Enemy of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 190,
+        "total_tokens": 1752,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:31.401Z",
+      "finishedAt": "2026-09-10T17:42:31.401Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Allan Quatermain\"]\nC2[\"Sir Henry Curtis\"]\nC3[\"Captain John Good\"]\nC4[\"Umbopa\"]\nC5[\"Ignosi\"]\nC6[\"Gagool\"]\nC7[\"Foulata\"]\nC8[\"Twala\"]\nC1 -->|Narrator and guide for| C2\nC1 -->|Friend of| C3\nC2 -->|Friend of| C3\nC2 -->|Searches for brother| C4\nC4 -->|True identity is| C5\nC5 -->|Rightful king of| C8\nC6 -->|Serves| C8\nC6 -->|Betrays| C5\nC6 -->|Kills| C7\nC7 -->|Loves| C3\nC8 -->|Enemy of| C5\nC8 -->|Enemy of| C2",
+  "mermaidHash": "fd45be105f650c5917b5a08b3e6f835202b8ec657d130e28666a5664f68a4a4b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fd45be105f650c5917b5a08b3e6f835202b8ec657d130e28666a5664f68a4a4b",
+    "svgHash": "550c974a746779b881eeec0bee30643f7b70d6822d04489eb70ca9753a79dcf1",
+    "validatedAt": "2026-09-10T17:42:32.768Z",
+    "width": 1463.5745849609375,
+    "height": 392.75
+  },
+  "generatedAt": "2026-09-10T17:42:31.401Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 190,
+    "total_tokens": 1752,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

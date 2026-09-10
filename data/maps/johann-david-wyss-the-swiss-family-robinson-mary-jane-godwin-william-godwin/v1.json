@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "johann-david-wyss/the-swiss-family-robinson/mary-jane-godwin_william-godwin",
+  "metadata": {
+    "title": "The Swiss Family Robinson",
+    "authors": [
+      "Johann David Wyss"
+    ],
+    "year": "1812"
+  },
+  "inputHash": "7e8c0e735b8c9f4eb535288bd9b5807719dee9cc13f4522a71907e9c889fbee9",
+  "promptHash": "ba6007fa01241515462a56a7231306ba2fd5c89b2dd687682e3d0c1c2aec8552",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:41.634Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:41.634Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"William\"]\nC2[\"Elizabeth\"]\nC3[\"Fritz\"]\nC4[\"Ernest\"]\nC5[\"Jack\"]\nC6[\"Franz\"]\nC7[\"Emily Montrose\"]\nC1 -->|Married to| C2\nC1 -->|Father of| C3\nC1 -->|Father of| C4\nC1 -->|Father of| C5\nC1 -->|Father of| C6\nC2 -->|Mother of| C3\nC2 -->|Mother of| C4\nC2 -->|Mother of| C5\nC2 -->|Mother of| C6\nC3 -->|Brother of| C4\nC3 -->|Brother of| C5\nC3 -->|Brother of| C6\nC4 -->|Brother of| C5\nC4 -->|Brother of| C6\nC5 -->|Brother of| C6\nC3 -->|Loves| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 209,
+        "total_tokens": 1769,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:43.062Z",
+      "finishedAt": "2026-09-10T17:46:43.062Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"William\"]\nC2[\"Elizabeth\"]\nC3[\"Fritz\"]\nC4[\"Ernest\"]\nC5[\"Jack\"]\nC6[\"Franz\"]\nC7[\"Emily Montrose\"]\nC1 -->|Married to| C2\nC1 -->|Father of| C3\nC1 -->|Father of| C4\nC1 -->|Father of| C5\nC1 -->|Father of| C6\nC2 -->|Mother of| C3\nC2 -->|Mother of| C4\nC2 -->|Mother of| C5\nC2 -->|Mother of| C6\nC3 -->|Brother of| C4\nC3 -->|Brother of| C5\nC3 -->|Brother of| C6\nC4 -->|Brother of| C5\nC4 -->|Brother of| C6\nC5 -->|Brother of| C6\nC3 -->|Loves| C7",
+  "mermaidHash": "498135d240d4b4ef19321d011e0db7cbdfd6a504415a0490783841d65e64eda1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "498135d240d4b4ef19321d011e0db7cbdfd6a504415a0490783841d65e64eda1",
+    "svgHash": "85b3da6e86c6b59af2d3ccfd5c74bcd80075eee20d131cc8924438558009d15b",
+    "validatedAt": "2026-09-10T17:46:44.352Z",
+    "width": 1291.718505859375,
+    "height": 523
+  },
+  "generatedAt": "2026-09-10T17:46:43.062Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 209,
+    "total_tokens": 1769,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

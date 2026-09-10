@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jack-london/martin-eden",
+  "metadata": {
+    "title": "Martin Eden",
+    "authors": [
+      "Jack London"
+    ],
+    "year": "1909"
+  },
+  "inputHash": "6f25cce3f3918a10071ef30494bfe65e6672e6e9cad6d370bf38225e8a64b32d",
+  "promptHash": "8b70cefd29442e8b9aaa13ab0676ad59997391f7b77777d5015202c811076267",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:35.684Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:35.684Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Martin Eden\"]\nC2[\"Ruth Morse\"]\nC3[\"Lizzie Connolly\"]\nC4[\"Joe Dawson\"]\nC5[\"Brissenden\"]\nC6[\"Arthur Morse\"]\nC7[\"Norman Morse\"]\nC8[\"Gertrude Eden\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Sibling of| C8\nC6 -->|Sibling of| C2\nC7 -->|Sibling of| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Mentored by| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 163,
+        "total_tokens": 1718,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:37.013Z",
+      "finishedAt": "2026-09-10T17:45:37.013Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Martin Eden\"]\nC2[\"Ruth Morse\"]\nC3[\"Lizzie Connolly\"]\nC4[\"Joe Dawson\"]\nC5[\"Brissenden\"]\nC6[\"Arthur Morse\"]\nC7[\"Norman Morse\"]\nC8[\"Gertrude Eden\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Sibling of| C8\nC6 -->|Sibling of| C2\nC7 -->|Sibling of| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Mentored by| C5",
+  "mermaidHash": "a3f039795ec3ece7adacce8ddf55bae1cf97267e6d3aa46a45b1d2b3abac0b29",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a3f039795ec3ece7adacce8ddf55bae1cf97267e6d3aa46a45b1d2b3abac0b29",
+    "svgHash": "6887bff4077244bb543fa746b861985a6bd3f5581329c9cf32e38fb2ca23564b",
+    "validatedAt": "2026-09-10T17:45:38.295Z",
+    "width": 472.12786865234375,
+    "height": 581.5
+  },
+  "generatedAt": "2026-09-10T17:45:37.013Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 163,
+    "total_tokens": 1718,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

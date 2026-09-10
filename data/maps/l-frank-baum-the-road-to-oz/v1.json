@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "l-frank-baum/the-road-to-oz",
+  "metadata": {
+    "title": "The Road to Oz",
+    "authors": [
+      "L. Frank Baum"
+    ],
+    "year": "1909"
+  },
+  "inputHash": "80c20ef6d89d8fb0fb83f414e401decae436bec297a968543cecfea20ddabdfa",
+  "promptHash": "e121a16727f3b06f73fe114bfc3919cb5b3de39463f698df118a252298b5f254",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:46.024Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:46.024Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dorothy Gale\"]\nC2[\"Toto\"]\nC3[\"Shaggy Man\"]\nC4[\"Button-Bright\"]\nC5[\"Polychrome\"]\nC6[\"Ozma\"]\nC7[\"Santa Claus\"]\nC8[\"King Dox\"]\nC1 -->|Owns| C2\nC1 -->|Travels with| C3\nC1 -->|Travels with| C4\nC1 -->|Travels with| C5\nC3 -->|Searches for| C8\nC3 -->|Brother of| C8\nC6 -->|Rules| C1\nC6 -->|Friend of| C1\nC5 -->|Daughter of| C7\nC7 -->|Father of| C5\nC8 -->|Brother of| C3\nC4 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 183,
+        "total_tokens": 1742,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:47.384Z",
+      "finishedAt": "2026-09-10T17:49:47.384Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dorothy Gale\"]\nC2[\"Toto\"]\nC3[\"Shaggy Man\"]\nC4[\"Button-Bright\"]\nC5[\"Polychrome\"]\nC6[\"Ozma\"]\nC7[\"Santa Claus\"]\nC8[\"King Dox\"]\nC1 -->|Owns| C2\nC1 -->|Travels with| C3\nC1 -->|Travels with| C4\nC1 -->|Travels with| C5\nC3 -->|Searches for| C8\nC3 -->|Brother of| C8\nC6 -->|Rules| C1\nC6 -->|Friend of| C1\nC5 -->|Daughter of| C7\nC7 -->|Father of| C5\nC8 -->|Brother of| C3\nC4 -->|Friend of| C1",
+  "mermaidHash": "82e8e33e7607527c4f02413bf73c207bae973ae9c32a4da8ee313787e6418283",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "82e8e33e7607527c4f02413bf73c207bae973ae9c32a4da8ee313787e6418283",
+    "svgHash": "33b3dd899d3bdb6bbd6bc85969a7e4885c67b120bc29877d77a15b459ce91d0d",
+    "validatedAt": "2026-09-10T17:49:48.675Z",
+    "width": 929.845947265625,
+    "height": 370.5
+  },
+  "generatedAt": "2026-09-10T17:49:47.384Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 183,
+    "total_tokens": 1742,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

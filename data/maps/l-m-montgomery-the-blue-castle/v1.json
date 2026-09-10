@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "l-m-montgomery/the-blue-castle",
+  "metadata": {
+    "title": "The Blue Castle",
+    "authors": [
+      "L. M. Montgomery"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "3dbbbca0d136744120b9d9440866accc49df2263453d0d5dea013f98aec16eea",
+  "promptHash": "b78e6a17058143b3a2b5d0b8bfa359d19581c8e8f6917a964571a8a0dd7838d0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:02.918Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:02.918Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Valancy Stirling\"]\nC2[\"Barney Snaith\"]\nC3[\"Mrs. Frederick Stirling\"]\nC4[\"Olive Stirling\"]\nC5[\"Cecil Price\"]\nC6[\"Roaring Abel Gay\"]\nC7[\"Cissy Gay\"]\nC8[\"Dr. Trent\"]\nC1 -->|Daughter of| C3\nC1 -->|Cousin of| C4\nC1 -->|Rejects| C5\nC4 -->|Engaged to| C5\nC1 -->|Marries| C2\nC1 -->|Boards with| C6\nC6 -->|Father of| C7\nC1 -->|Cares for| C7\nC8 -->|Diagnoses| C1\nC2 -->|Friend of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 167,
+        "total_tokens": 1726,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:04.179Z",
+      "finishedAt": "2026-09-10T17:50:04.179Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Valancy Stirling\"]\nC2[\"Barney Snaith\"]\nC3[\"Mrs. Frederick Stirling\"]\nC4[\"Olive Stirling\"]\nC5[\"Cecil Price\"]\nC6[\"Roaring Abel Gay\"]\nC7[\"Cissy Gay\"]\nC8[\"Dr. Trent\"]\nC1 -->|Daughter of| C3\nC1 -->|Cousin of| C4\nC1 -->|Rejects| C5\nC4 -->|Engaged to| C5\nC1 -->|Marries| C2\nC1 -->|Boards with| C6\nC6 -->|Father of| C7\nC1 -->|Cares for| C7\nC8 -->|Diagnoses| C1\nC2 -->|Friend of| C6",
+  "mermaidHash": "603b10607d64e49d8fabcb6f34bc9501c97dc78f19372dd1c5465eb9b6e69d14",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "603b10607d64e49d8fabcb6f34bc9501c97dc78f19372dd1c5465eb9b6e69d14",
+    "svgHash": "0d61d05b200e114c11cb7e66ec620c80ba9eaac1383a79663167037053e1a001",
+    "validatedAt": "2026-09-10T17:50:05.461Z",
+    "width": 1293.6895751953125,
+    "height": 410.5
+  },
+  "generatedAt": "2026-09-10T17:50:04.179Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 167,
+    "total_tokens": 1726,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

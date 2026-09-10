@@ -1,3 +1,9 @@
+packages:
+  - .
+overrides:
+  mermaid: 11.16.0
 allowBuilds:
   esbuild: true
   sharp: true
+  workerd: true
+  puppeteer: false

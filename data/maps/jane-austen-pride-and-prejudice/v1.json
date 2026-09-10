@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jane-austen/pride-and-prejudice",
+  "metadata": {
+    "title": "Pride and Prejudice",
+    "authors": [
+      "Jane Austen"
+    ],
+    "year": "1813"
+  },
+  "inputHash": "d7441fc39399abb84f2baec3e18811b482e6191adfa71506db776642ec1ec9ce",
+  "promptHash": "08a9bcacb25423ed59c2e560e1b56e7856bce9bb693a3ff29b836749321b4578",
+  "promptVersion": "1",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T12:34:35.241Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T12:34:35.241Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nElizabeth[\"Elizabeth Bennet\"]\nDarcy[\"Fitzwilliam Darcy\"]\nJane[\"Jane Bennet\"]\nBingley[\"Charles Bingley\"]\nWickham[\"George Wickham\"]\nLydia[\"Lydia Bennet\"]\nMrBennet[\"Mr. Bennet\"]\nMrsBennet[\"Mrs. Bennet\"]\nElizabeth -->|Sister of| Jane\nElizabeth -->|Sister of| Lydia\nJane -->|Sister of| Lydia\nMrBennet -->|Father of| Elizabeth\nMrBennet -->|Father of| Jane\nMrBennet -->|Father of| Lydia\nMrsBennet -->|Mother of| Elizabeth\nMrsBennet -->|Mother of| Jane\nMrsBennet -->|Mother of| Lydia\nMrBennet -->|Husband of| MrsBennet\nMrsBennet -->|Wife of| MrBennet\nDarcy -->|Friend of| Bingley\nBingley -->|Friend of| Darcy\nDarcy -->|Loves| Elizabeth\nElizabeth -->|Loves| Darcy\nDarcy -->|Wards off| Wickham\nWickham -->|Slanders| Darcy\nWickham -->|Elopes with| Lydia\nLydia -->|Elopes with| Wickham\nBingley -->|Loves| Jane\nJane -->|Loves| Bingley\nDarcy -->|Separates| Bingley\nDarcy -->|Separates| Jane\nWickham -->|Attempts to elope with| Darcy\nElizabeth -->|Rejects| Darcy\nDarcy -->|Proposes to| Elizabeth\nElizabeth -->|Marries| Darcy\nJane -->|Marries| Bingley\nLydia -->|Marries| Wickham",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 368,
+        "total_tokens": 567,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 199
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:37.752Z",
+      "finishedAt": "2026-09-10T12:34:37.752Z"
+    }
+  ],
+  "mermaid": "graph LR\nElizabeth[\"Elizabeth Bennet\"]\nDarcy[\"Fitzwilliam Darcy\"]\nJane[\"Jane Bennet\"]\nBingley[\"Charles Bingley\"]\nWickham[\"George Wickham\"]\nLydia[\"Lydia Bennet\"]\nMrBennet[\"Mr. Bennet\"]\nMrsBennet[\"Mrs. Bennet\"]\nElizabeth -->|Sister of| Jane\nElizabeth -->|Sister of| Lydia\nJane -->|Sister of| Lydia\nMrBennet -->|Father of| Elizabeth\nMrBennet -->|Father of| Jane\nMrBennet -->|Father of| Lydia\nMrsBennet -->|Mother of| Elizabeth\nMrsBennet -->|Mother of| Jane\nMrsBennet -->|Mother of| Lydia\nMrBennet -->|Husband of| MrsBennet\nMrsBennet -->|Wife of| MrBennet\nDarcy -->|Friend of| Bingley\nBingley -->|Friend of| Darcy\nDarcy -->|Loves| Elizabeth\nElizabeth -->|Loves| Darcy\nDarcy -->|Wards off| Wickham\nWickham -->|Slanders| Darcy\nWickham -->|Elopes with| Lydia\nLydia -->|Elopes with| Wickham\nBingley -->|Loves| Jane\nJane -->|Loves| Bingley\nDarcy -->|Separates| Bingley\nDarcy -->|Separates| Jane\nWickham -->|Attempts to elope with| Darcy\nElizabeth -->|Rejects| Darcy\nDarcy -->|Proposes to| Elizabeth\nElizabeth -->|Marries| Darcy\nJane -->|Marries| Bingley\nLydia -->|Marries| Wickham",
+  "mermaidHash": "8fffb3b5a3367eaf6b4eb81f69d0d148fb75ee80d03ceb81649d930772dd433f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8fffb3b5a3367eaf6b4eb81f69d0d148fb75ee80d03ceb81649d930772dd433f",
+    "svgHash": "01108a4377171666f6708e29c169f758f3ba752b7369f809dbd90b444db10346",
+    "validatedAt": "2026-09-10T12:46:15.802Z",
+    "width": 2183.5849609375,
+    "height": 814
+  },
+  "generatedAt": "2026-09-10T12:34:37.752Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 199,
+    "completion_tokens": 368,
+    "total_tokens": 567,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 199
+  }
+}

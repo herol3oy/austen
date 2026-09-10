@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "honore-de-balzac/ursule-mirouet/clara-bell",
+  "metadata": {
+    "title": "Ursule Mirouët",
+    "authors": [
+      "Honoré de Balzac"
+    ],
+    "year": "1841"
+  },
+  "inputHash": "ec07328dd4a16528c36725536ba4c7f6ffe09e42d7990f6f9560bb1ad0fbe499",
+  "promptHash": "0db99a415648728fef62576a61982aa14f048317e9e1e43d51a7cbd0f7c62d68",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:27.985Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:27.985Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ursule Mirouët\"]\nC2[\"Dr. Denis Minoret\"]\nC3[\"Goupil\"]\nC4[\"Savinian Minoret\"]\nC5[\"Désiré Minoret\"]\nC6[\"Zélie Minoret\"]\nC7[\"Bongrand\"]\nC8[\"La Bougival\"]\nC1 -->|Ward of| C2\nC2 -->|Guardian of| C1\nC3 -->|Enemy of| C1\nC3 -->|Enemy of| C2\nC4 -->|Enemy of| C1\nC5 -->|Enemy of| C1\nC6 -->|Enemy of| C1\nC7 -->|Friend of| C2\nC7 -->|Protects| C1\nC8 -->|Servant of| C2\nC8 -->|Protects| C1\nC1 -->|Loves| C2\nC2 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 209,
+        "total_tokens": 1773,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:29.530Z",
+      "finishedAt": "2026-09-10T17:44:29.530Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ursule Mirouët\"]\nC2[\"Dr. Denis Minoret\"]\nC3[\"Goupil\"]\nC4[\"Savinian Minoret\"]\nC5[\"Désiré Minoret\"]\nC6[\"Zélie Minoret\"]\nC7[\"Bongrand\"]\nC8[\"La Bougival\"]\nC1 -->|Ward of| C2\nC2 -->|Guardian of| C1\nC3 -->|Enemy of| C1\nC3 -->|Enemy of| C2\nC4 -->|Enemy of| C1\nC5 -->|Enemy of| C1\nC6 -->|Enemy of| C1\nC7 -->|Friend of| C2\nC7 -->|Protects| C1\nC8 -->|Servant of| C2\nC8 -->|Protects| C1\nC1 -->|Loves| C2\nC2 -->|Loves| C1",
+  "mermaidHash": "95f015760943b32dddca299d673aec6aa93d5a6d4ba0120c03e8844fa98533b9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "95f015760943b32dddca299d673aec6aa93d5a6d4ba0120c03e8844fa98533b9",
+    "svgHash": "a28887b55b60802fe6047d5221a32f2a87672d612b45137ccdb966c8f13c7da8",
+    "validatedAt": "2026-09-10T17:44:30.832Z",
+    "width": 768.5011596679688,
+    "height": 573.75
+  },
+  "generatedAt": "2026-09-10T17:44:29.530Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 209,
+    "total_tokens": 1773,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

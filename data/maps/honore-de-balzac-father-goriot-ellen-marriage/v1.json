@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "honore-de-balzac/father-goriot/ellen-marriage",
+  "metadata": {
+    "title": "Father Goriot",
+    "authors": [
+      "Honoré de Balzac"
+    ],
+    "year": "1834"
+  },
+  "inputHash": "1cf72e6b1f052488ef97b72c01b11c961ab8e0bc20eb90cee7a78980954efeaa",
+  "promptHash": "686c20705f45ae7bac7507861dddf1e2841d8083fa20fb65631b90c2aa1c2120",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:14.147Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:14.147Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Eugène de Rastignac\"]\nC2[\"Jean-Joachim Goriot\"]\nC3[\"Vautrin\"]\nC4[\"Delphine de Nucingen\"]\nC5[\"Anastasie de Restaud\"]\nC6[\"Madame de Beauséant\"]\nC7[\"Victorine Taillefer\"]\nC1 -->|Loves| C4\nC1 -->|Friend of| C7\nC1 -->|Nephew of| C6\nC2 -->|Father of| C4\nC2 -->|Father of| C5\nC3 -->|Mentor of| C1\nC3 -->|Rival of| C2\nC4 -->|Sister of| C5\nC6 -->|Cousin of| C1\nC7 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 180,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:15.910Z",
+      "finishedAt": "2026-09-10T17:44:15.910Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Eugène de Rastignac\"]\nC2[\"Jean-Joachim Goriot\"]\nC3[\"Vautrin\"]\nC4[\"Delphine de Nucingen\"]\nC5[\"Anastasie de Restaud\"]\nC6[\"Madame de Beauséant\"]\nC7[\"Victorine Taillefer\"]\nC1 -->|Loves| C4\nC1 -->|Friend of| C7\nC1 -->|Nephew of| C6\nC2 -->|Father of| C4\nC2 -->|Father of| C5\nC3 -->|Mentor of| C1\nC3 -->|Rival of| C2\nC4 -->|Sister of| C5\nC6 -->|Cousin of| C1\nC7 -->|Loves| C1",
+  "mermaidHash": "49b1d2b78349456ed9f7c8d2ce4079929b825806320041eaf5432dc37c8f9852",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "49b1d2b78349456ed9f7c8d2ce4079929b825806320041eaf5432dc37c8f9852",
+    "svgHash": "4abd82b37a6dd797bb60e8f222174d88efb24ae9a29559d0417544653a0b5c5d",
+    "validatedAt": "2026-09-10T17:44:17.180Z",
+    "width": 1089.1915283203125,
+    "height": 331.24560546875
+  },
+  "generatedAt": "2026-09-10T17:44:15.910Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 180,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sinclair-lewis/arrowsmith",
+  "metadata": {
+    "title": "Arrowsmith",
+    "authors": [
+      "Sinclair Lewis"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "d66bd12130eb8ce775ce6c01f8c9ee77e760cdfef4630aab5f06d5ccc283c393",
+  "promptHash": "1dc81ac0a3b6eb2d120c8e81f514381f8a9b698731aff4a473aa000f26e076a0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:21.851Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:21.851Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Martin Arrowsmith\"]\nC2[\"Leora Tozer Arrowsmith\"]\nC3[\"Max Gottlieb\"]\nC4[\"Sondelius\"]\nC5[\"Terry Wickett\"]\nC6[\"Almus Pickerbaugh\"]\nC7[\"Angus Duer\"]\nC8[\"Joyce Lanyon\"]\nC1 -->|Married to| C2\nC1 -->|Student of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Works for| C6\nC1 -->|Rival of| C7\nC1 -->|Loves| C8\nC4 -->|Friend of| C2\nC3 -->|Mentor of| C5\nC6 -->|Employer of| C1\nC7 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 186,
+        "total_tokens": 1743,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:23.485Z",
+      "finishedAt": "2026-09-10T18:09:23.485Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Martin Arrowsmith\"]\nC2[\"Leora Tozer Arrowsmith\"]\nC3[\"Max Gottlieb\"]\nC4[\"Sondelius\"]\nC5[\"Terry Wickett\"]\nC6[\"Almus Pickerbaugh\"]\nC7[\"Angus Duer\"]\nC8[\"Joyce Lanyon\"]\nC1 -->|Married to| C2\nC1 -->|Student of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Works for| C6\nC1 -->|Rival of| C7\nC1 -->|Loves| C8\nC4 -->|Friend of| C2\nC3 -->|Mentor of| C5\nC6 -->|Employer of| C1\nC7 -->|Enemy of| C1",
+  "mermaidHash": "cd18c2b506ea8ea42b69acc6a2a6b03d1f2268d41ab67145f6d7200085b3d83a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cd18c2b506ea8ea42b69acc6a2a6b03d1f2268d41ab67145f6d7200085b3d83a",
+    "svgHash": "b52bfc3cba9aa88fdb99f91fc542565ecae7a02dfbafe16cd85950f6aabdd0f0",
+    "validatedAt": "2026-09-10T18:09:24.843Z",
+    "width": 858.0324096679688,
+    "height": 562
+  },
+  "generatedAt": "2026-09-10T18:09:23.485Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 186,
+    "total_tokens": 1743,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

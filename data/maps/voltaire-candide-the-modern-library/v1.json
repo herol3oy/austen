@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "voltaire/candide/the-modern-library",
+  "metadata": {
+    "title": "Candide",
+    "authors": [
+      "Voltaire"
+    ],
+    "year": "1759"
+  },
+  "inputHash": "4cd0e46f6102a37e1474181cbd88900909785f292db7cb12790cb45b70aff724",
+  "promptHash": "386e3df2eb7848da18f95462f0376d327441a8e0c3156d2f6c9b88540b7e3cbc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:18.699Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:18.699Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Candide\"]\nC2[\"Pangloss\"]\nC3[\"Cunegonde\"]\nC4[\"Baron Thunder-ten-tronckh\"]\nC5[\"Cacambo\"]\nC6[\"Martin\"]\nC7[\"Jacques\"]\nC8[\"Paquette\"]\nC1 -->|Raised by| C4\nC1 -->|Mentored by| C2\nC1 -->|Loves| C3\nC2 -->|Mentor of| C1\nC2 -->|Loves| C3\nC3 -->|Daughter of| C4\nC4 -->|Father of| C3\nC4 -->|Uncle of| C1\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC7 -->|Protects| C1\nC8 -->|Servant of| C4\nC2 -->|Loves| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 199,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:19.980Z",
+      "finishedAt": "2026-09-10T18:12:19.980Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Candide\"]\nC2[\"Pangloss\"]\nC3[\"Cunegonde\"]\nC4[\"Baron Thunder-ten-tronckh\"]\nC5[\"Cacambo\"]\nC6[\"Martin\"]\nC7[\"Jacques\"]\nC8[\"Paquette\"]\nC1 -->|Raised by| C4\nC1 -->|Mentored by| C2\nC1 -->|Loves| C3\nC2 -->|Mentor of| C1\nC2 -->|Loves| C3\nC3 -->|Daughter of| C4\nC4 -->|Father of| C3\nC4 -->|Uncle of| C1\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC7 -->|Protects| C1\nC8 -->|Servant of| C4\nC2 -->|Loves| C8",
+  "mermaidHash": "e6c82daa1d18369ba3c2200e8cb07581340ac35ffc04a1a57edfcbeb3469da97",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e6c82daa1d18369ba3c2200e8cb07581340ac35ffc04a1a57edfcbeb3469da97",
+    "svgHash": "e55f04df1579b0684c7378a2a7f0fb34d83cb2c2fb2180dc70c0a228e6598997",
+    "validatedAt": "2026-09-10T18:12:21.439Z",
+    "width": 1481.841796875,
+    "height": 482.5
+  },
+  "generatedAt": "2026-09-10T18:12:19.980Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 199,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

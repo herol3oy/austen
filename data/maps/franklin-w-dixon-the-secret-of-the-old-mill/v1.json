@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "franklin-w-dixon/the-secret-of-the-old-mill",
+  "metadata": {
+    "title": "The Secret of the Old Mill",
+    "authors": [
+      "Franklin W. Dixon"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "4f956357f885a5a746a152c81b944dcb201a63db803cfe9a8ac66599ecb60abe",
+  "promptHash": "1e404a1b0895b3f1a93aef0dd7d0a58e99057eedd386c04d305c51dfd9a8ee88",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:00.815Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:00.815Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Chet Morton\"]\nC6[\"Iola Morton\"]\nC7[\"Callie Shaw\"]\nC8[\"Mr. Prito\"]\nC1 -->|Brother of| C2\nC2 -->|Brother of| C1\nC3 -->|Father of| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C1\nC4 -->|Mother of| C2\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC1 -->|Friend of| C7\nC2 -->|Friend of| C6\nC5 -->|Sibling of| C6\nC3 -->|Employer of| C8\nC1 -->|Serves| C3\nC2 -->|Serves| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 200,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:02.249Z",
+      "finishedAt": "2026-09-10T17:38:02.249Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Chet Morton\"]\nC6[\"Iola Morton\"]\nC7[\"Callie Shaw\"]\nC8[\"Mr. Prito\"]\nC1 -->|Brother of| C2\nC2 -->|Brother of| C1\nC3 -->|Father of| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C1\nC4 -->|Mother of| C2\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC1 -->|Friend of| C7\nC2 -->|Friend of| C6\nC5 -->|Sibling of| C6\nC3 -->|Employer of| C8\nC1 -->|Serves| C3\nC2 -->|Serves| C3",
+  "mermaidHash": "d7bbb4006c80870f0d93c536f7265cb6806ee7db17bdf7c7210236e9ff4a4fe8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d7bbb4006c80870f0d93c536f7265cb6806ee7db17bdf7c7210236e9ff4a4fe8",
+    "svgHash": "26f97ad179e6962d6b7a757a21c77a5cb6517f757f9f287d4b09f17139e3d8f6",
+    "validatedAt": "2026-09-10T17:38:03.611Z",
+    "width": 1211.73876953125,
+    "height": 383.25
+  },
+  "generatedAt": "2026-09-10T17:38:02.249Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 200,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-food-of-the-gods",
+  "metadata": {
+    "title": "The Food of the Gods",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "d5f838da67b37fea605deaa736918e0c238ce01b30fb9813a3132b3a5216959f",
+  "promptHash": "3106179d30c98f35d5f3106ea3490737b009ccc7d761b5052864bbc7ad8c120f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:57.075Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:57.075Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mr. Bensington\"]\nC2[\"Professor Redwood\"]\nC3[\"Mr. Skinner\"]\nC4[\"Cossar\"]\nC5[\"Winkles\"]\nC6[\"Albert Edward Cossar\"]\nC7[\"Giant Children\"]\nC1 -->|Friend of| C2\nC1 -->|Colleague of| C4\nC2 -->|Colleague of| C4\nC1 -->|Creates| C7\nC2 -->|Creates| C7\nC4 -->|Creates| C7\nC1 -->|Opposes| C5\nC2 -->|Opposes| C5\nC4 -->|Opposes| C5\nC3 -->|Ally of| C1\nC3 -->|Ally of| C2\nC4 -->|Parent of| C6\nC6 -->|Friend of| C7\nC5 -->|Enemy of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 200,
+        "total_tokens": 1761,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:58.385Z",
+      "finishedAt": "2026-09-10T17:41:58.385Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mr. Bensington\"]\nC2[\"Professor Redwood\"]\nC3[\"Mr. Skinner\"]\nC4[\"Cossar\"]\nC5[\"Winkles\"]\nC6[\"Albert Edward Cossar\"]\nC7[\"Giant Children\"]\nC1 -->|Friend of| C2\nC1 -->|Colleague of| C4\nC2 -->|Colleague of| C4\nC1 -->|Creates| C7\nC2 -->|Creates| C7\nC4 -->|Creates| C7\nC1 -->|Opposes| C5\nC2 -->|Opposes| C5\nC4 -->|Opposes| C5\nC3 -->|Ally of| C1\nC3 -->|Ally of| C2\nC4 -->|Parent of| C6\nC6 -->|Friend of| C7\nC5 -->|Enemy of| C7",
+  "mermaidHash": "43ff1e18383669a5217a4ee1c4d874face1c3ec0ef97e1c4a98d34f0bd21054e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "43ff1e18383669a5217a4ee1c4d874face1c3ec0ef97e1c4a98d34f0bd21054e",
+    "svgHash": "6f9360ff6b7a8a474fdc3fad58df2ecfe5f39899d88870fe0f32a580b8891be6",
+    "validatedAt": "2026-09-10T17:41:59.766Z",
+    "width": 1536.1900634765625,
+    "height": 314.75
+  },
+  "generatedAt": "2026-09-10T17:41:58.385Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 200,
+    "total_tokens": 1761,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

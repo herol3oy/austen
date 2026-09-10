@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v3",
+  "bookId": "joseph-conrad/the-shadow-line",
+  "metadata": {
+    "title": "The Shadow Line",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "e4290459ced64522aae4eec12bafdc5cd216ec67c05f08ba16cec9a07afcf7a5",
+  "promptHash": "74c54e28af8253375a5590b7d7674b6d5e008820b6bf845a9eb5850eaf18108a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:46.790Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:46.790Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Narrator\"]\nC2[\"Captain Giles\"]\nC3[\"Hamilton\"]\nC4[\"Ransome\"]\nC5[\"Burns\"]\nC6[\"Mr. Jones\"]\nC7[\"Ricardo\"]\nC8[\"The Steward\"]\nC1 -->|Commands| C4\nC1 -->|Commands| C5\nC1 -->|Commands| C8\nC1 -->|Serves under| C2\nC2 -->|Mentor of| C1\nC3 -->|Friend of| C2\nC5 -->|Betrays| C1\nC6 -->|Enemy of| C1\nC7 -->|Serves| C6\nC8 -->|Serves| C1\nC8 -->|Betrays| C1\nC6 -->|Kills| C8\nC7 -->|Kills| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 184,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 148
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:48.280Z",
+      "finishedAt": "2026-09-10T18:16:48.280Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Narrator\"]\nC2[\"Captain Giles\"]\nC3[\"Hamilton\"]\nC4[\"Ransome\"]\nC5[\"Burns\"]\nC6[\"Mr. Jones\"]\nC7[\"Ricardo\"]\nC8[\"The Steward\"]\nC1 -->|Commands| C4\nC1 -->|Commands| C5\nC1 -->|Commands| C8\nC1 -->|Serves under| C2\nC2 -->|Mentor of| C1\nC3 -->|Friend of| C2\nC5 -->|Betrays| C1\nC6 -->|Enemy of| C1\nC7 -->|Serves| C6\nC8 -->|Serves| C1\nC8 -->|Betrays| C1\nC6 -->|Kills| C8\nC7 -->|Kills| C8",
+  "mermaidHash": "c7d52628a7530388c1fb730fe09f53e3e0c375362d493c2da5fb5f91d2ed3f17",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c7d52628a7530388c1fb730fe09f53e3e0c375362d493c2da5fb5f91d2ed3f17",
+    "svgHash": "40d899fe0fdb95ea9284c73c46e0de8bf92095aac9edf47ec805672e7850e31d",
+    "validatedAt": "2026-09-10T18:16:49.625Z",
+    "width": 866.6915283203125,
+    "height": 565
+  },
+  "generatedAt": "2026-09-10T18:16:48.280Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 184,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 148
+  }
+}

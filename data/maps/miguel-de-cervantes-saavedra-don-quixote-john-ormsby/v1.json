@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "miguel-de-cervantes-saavedra/don-quixote/john-ormsby",
+  "metadata": {
+    "title": "Don Quixote",
+    "authors": [
+      "Miguel de Cervantes Saavedra"
+    ],
+    "year": "1605"
+  },
+  "inputHash": "f55e876680c238993c04e34077bb22bf5101908eab022380b2190aabc5e0122b",
+  "promptHash": "e9fc6508420c59ead7a4deb82d54d49f82451b2f22041de0b7588cd39713958a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:10.070Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:10.070Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Don Quixote\"]\nC2[\"Sancho Panza\"]\nC3[\"Dulcinea del Toboso\"]\nC4[\"Aldonza Lorenzo\"]\nC5[\"Cide Hamete Benengeli\"]\nC6[\"Teresa Panza\"]\nC7[\"Sansón Carrasco\"]\nC8[\"Ginés de Pasamonte\"]\nC1 -->|Loves| C3\nC3 -->|Identity of| C4\nC1 -->|Squire of| C2\nC2 -->|Serves| C1\nC2 -->|Married to| C6\nC7 -->|Defeats| C1\nC1 -->|Frees| C8\nC5 -->|Author of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 160,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:11.793Z",
+      "finishedAt": "2026-09-10T18:04:11.793Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Don Quixote\"]\nC2[\"Sancho Panza\"]\nC3[\"Dulcinea del Toboso\"]\nC4[\"Aldonza Lorenzo\"]\nC5[\"Cide Hamete Benengeli\"]\nC6[\"Teresa Panza\"]\nC7[\"Sansón Carrasco\"]\nC8[\"Ginés de Pasamonte\"]\nC1 -->|Loves| C3\nC3 -->|Identity of| C4\nC1 -->|Squire of| C2\nC2 -->|Serves| C1\nC2 -->|Married to| C6\nC7 -->|Defeats| C1\nC1 -->|Frees| C8\nC5 -->|Author of| C1",
+  "mermaidHash": "f767cc228cf38fe86ffdec1cebba314dbb72f56215220b5d7160beea72cce08a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f767cc228cf38fe86ffdec1cebba314dbb72f56215220b5d7160beea72cce08a",
+    "svgHash": "ccc706572574d3023158486f40c8395de16b35375b6ffbc695377f6ec48c5686",
+    "validatedAt": "2026-09-10T18:04:13.143Z",
+    "width": 1092.63818359375,
+    "height": 263
+  },
+  "generatedAt": "2026-09-10T18:04:11.793Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 160,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

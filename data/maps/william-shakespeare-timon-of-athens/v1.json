@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/timon-of-athens",
+  "metadata": {
+    "title": "Timon of Athens",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1607"
+  },
+  "inputHash": "1405e208363942791698da35053aa9e3335c37a99bb8a36a735e43390d74bfcf",
+  "promptHash": "5a2b01a78f3ff6f040a34f532a9c99fcbc45406cef3c85c3c160eafdc2cf5a16",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:08.642Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:08.642Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Timon\"]\nC2[\"Apemantus\"]\nC3[\"Alcibiades\"]\nC4[\"Flavius\"]\nC5[\"Ventidius\"]\nC6[\"Lucullus\"]\nC7[\"Sempronius\"]\nC8[\"Lucius\"]\nC1 -->|Friend of| C5\nC1 -->|Servant of| C4\nC4 -->|Serves| C1\nC1 -->|Hosts| C6\nC1 -->|Hosts| C7\nC1 -->|Hosts| C8\nC6 -->|Refuses aid to| C1\nC7 -->|Refuses aid to| C1\nC8 -->|Refuses aid to| C1\nC2 -->|Mocks| C1\nC3 -->|Friend of| C1\nC1 -->|Gives gold to| C3\nC3 -->|Commands| C1\nC1 -->|Enemy of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 209,
+        "total_tokens": 1766,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:10.427Z",
+      "finishedAt": "2026-09-10T18:16:10.427Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Timon\"]\nC2[\"Apemantus\"]\nC3[\"Alcibiades\"]\nC4[\"Flavius\"]\nC5[\"Ventidius\"]\nC6[\"Lucullus\"]\nC7[\"Sempronius\"]\nC8[\"Lucius\"]\nC1 -->|Friend of| C5\nC1 -->|Servant of| C4\nC4 -->|Serves| C1\nC1 -->|Hosts| C6\nC1 -->|Hosts| C7\nC1 -->|Hosts| C8\nC6 -->|Refuses aid to| C1\nC7 -->|Refuses aid to| C1\nC8 -->|Refuses aid to| C1\nC2 -->|Mocks| C1\nC3 -->|Friend of| C1\nC1 -->|Gives gold to| C3\nC3 -->|Commands| C1\nC1 -->|Enemy of| C2",
+  "mermaidHash": "bdac88eb5f5811c251662597d1afc984f3afdad68edfb3d7d4e4920cf5d7bf78",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "bdac88eb5f5811c251662597d1afc984f3afdad68edfb3d7d4e4920cf5d7bf78",
+    "svgHash": "cfc64fbff2e2bad6d4f3671d608612b707680b84efae883b5eeb8b4942f58815",
+    "validatedAt": "2026-09-10T18:16:11.814Z",
+    "width": 403.06036376953125,
+    "height": 689
+  },
+  "generatedAt": "2026-09-10T18:16:10.427Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 209,
+    "total_tokens": 1766,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "leo-tolstoy/war-and-peace/louise-maude_aylmer-maude",
+  "metadata": {
+    "title": "War and Peace",
+    "authors": [
+      "Leo Tolstoy"
+    ],
+    "year": "1869"
+  },
+  "inputHash": "0f6bbb25bd41cb56f50b74b9f3990b69b682fe4f5de01e390d4ec213d180cbbc",
+  "promptHash": "2881c969bbca581b42150b012dcc2356d5466dffabce63783f9a4806b5f42a47",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:24.251Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:24.251Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Pierre Bezukhov\"]\nC2[\"Natasha Rostova\"]\nC3[\"Andrei Bolkonsky\"]\nC4[\"Nikolai Rostov\"]\nC5[\"Marya Bolkonskaya\"]\nC6[\"Anatole Kuragin\"]\nC7[\"Helene Kuragina\"]\nC8[\"Napoleon Bonaparte\"]\nC1 -->|Friend of| C3\nC1 -->|Married to| C2\nC1 -->|Married to| C7\nC2 -->|Betrothed to| C3\nC2 -->|Loves| C1\nC2 -->|Sister of| C4\nC3 -->|Friend of| C1\nC3 -->|Betrothed to| C2\nC3 -->|Brother of| C5\nC4 -->|Brother of| C2\nC4 -->|Married to| C5\nC5 -->|Sister of| C3\nC5 -->|Married to| C4\nC6 -->|Sister of| C7\nC6 -->|Seduces| C2\nC7 -->|Married to| C1\nC7 -->|Sister of| C6\nC8 -->|Enemy of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 270,
+        "total_tokens": 1827,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:26.088Z",
+      "finishedAt": "2026-09-10T17:50:26.088Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Pierre Bezukhov\"]\nC2[\"Natasha Rostova\"]\nC3[\"Andrei Bolkonsky\"]\nC4[\"Nikolai Rostov\"]\nC5[\"Marya Bolkonskaya\"]\nC6[\"Anatole Kuragin\"]\nC7[\"Helene Kuragina\"]\nC8[\"Napoleon Bonaparte\"]\nC1 -->|Friend of| C3\nC1 -->|Married to| C2\nC1 -->|Married to| C7\nC2 -->|Betrothed to| C3\nC2 -->|Loves| C1\nC2 -->|Sister of| C4\nC3 -->|Friend of| C1\nC3 -->|Betrothed to| C2\nC3 -->|Brother of| C5\nC4 -->|Brother of| C2\nC4 -->|Married to| C5\nC5 -->|Sister of| C3\nC5 -->|Married to| C4\nC6 -->|Sister of| C7\nC6 -->|Seduces| C2\nC7 -->|Married to| C1\nC7 -->|Sister of| C6\nC8 -->|Enemy of| C3",
+  "mermaidHash": "fc1720e9be702e34015088b62154266e21a9bce33e91fbf8fbc44b1c21a1e6f8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fc1720e9be702e34015088b62154266e21a9bce33e91fbf8fbc44b1c21a1e6f8",
+    "svgHash": "34196940df5c2908e9c71f1258a8fac7670489d45260ccc8d727eb5b3eb1d17c",
+    "validatedAt": "2026-09-10T17:50:27.411Z",
+    "width": 1697.666015625,
+    "height": 405.5
+  },
+  "generatedAt": "2026-09-10T17:50:26.088Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 270,
+    "total_tokens": 1827,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

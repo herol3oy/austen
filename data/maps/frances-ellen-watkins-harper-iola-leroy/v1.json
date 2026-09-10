@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "frances-ellen-watkins-harper/iola-leroy",
+  "metadata": {
+    "title": "Iola Leroy",
+    "authors": [
+      "Frances Ellen Watkins Harper"
+    ],
+    "year": "1892"
+  },
+  "inputHash": "f43bffd2daf79b20207d46af1c03b56ea929191bed07bb2fcc0d3745eeff2159",
+  "promptHash": "483b9fe4ddd978ffec590311108e971aab5402d23874eaa0dc2718e717e732f5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:27.846Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:27.846Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Iola Leroy\"]\nC2[\"Eugene Leroy\"]\nC3[\"Marie Leroy\"]\nC4[\"Harry Leroy\"]\nC5[\"Robert Johnson\"]\nC6[\"Dr. Gresham\"]\nC7[\"Tom Anderson\"]\nC8[\"Aunt Linda\"]\n\nC1 -->|Daughter of| C2\nC1 -->|Daughter of| C3\nC1 -->|Sister of| C4\nC2 -->|Husband of| C3\nC2 -->|Father of| C4\nC3 -->|Mother of| C4\nC1 -->|Loves| C5\nC5 -->|Loves| C1\nC6 -->|Proposes to| C1\nC7 -->|Friend of| C1\nC8 -->|Raised by| C1\nC8 -->|Raised by| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 189,
+        "total_tokens": 1748,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:29.378Z",
+      "finishedAt": "2026-09-10T17:37:29.378Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Iola Leroy\"]\nC2[\"Eugene Leroy\"]\nC3[\"Marie Leroy\"]\nC4[\"Harry Leroy\"]\nC5[\"Robert Johnson\"]\nC6[\"Dr. Gresham\"]\nC7[\"Tom Anderson\"]\nC8[\"Aunt Linda\"]\n\nC1 -->|Daughter of| C2\nC1 -->|Daughter of| C3\nC1 -->|Sister of| C4\nC2 -->|Husband of| C3\nC2 -->|Father of| C4\nC3 -->|Mother of| C4\nC1 -->|Loves| C5\nC5 -->|Loves| C1\nC6 -->|Proposes to| C1\nC7 -->|Friend of| C1\nC8 -->|Raised by| C1\nC8 -->|Raised by| C4",
+  "mermaidHash": "82f899b87238b06e38ed280e10382c69f0da55e6fb17eb67c3ef79cd8bf65800",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "82f899b87238b06e38ed280e10382c69f0da55e6fb17eb67c3ef79cd8bf65800",
+    "svgHash": "b2d9eb0a330a24a2c693c262c49646953c3863a86467f538f0d35c4ff366bbcf",
+    "validatedAt": "2026-09-10T17:37:30.744Z",
+    "width": 1253.6151123046875,
+    "height": 385.75
+  },
+  "generatedAt": "2026-09-10T17:37:29.378Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 189,
+    "total_tokens": 1748,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

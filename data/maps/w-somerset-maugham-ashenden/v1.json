@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "w-somerset-maugham/ashenden",
+  "metadata": {
+    "title": "Ashenden",
+    "authors": [
+      "W. Somerset Maugham"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "c362c1650b470f2c58102dd6709ed4e68a6b7f211cd1251907be5a8fe83ca4ed",
+  "promptHash": "2e25e47c820c49fdd777734861d6f44801ed6dd332421bac2a090c661be904c4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:30.452Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:30.452Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ashenden\"]\nC2[\"R\"]\nC3[\"The Hairless Mexican\"]\nC4[\"Caypor\"]\nC5[\"Lady Anne\"]\nC6[\"Sir James\"]\nC7[\"Mrs. Caypor\"]\nC1 -->|Serves| C2\nC2 -->|Commands| C1\nC1 -->|Recruits| C3\nC3 -->|Assists| C1\nC1 -->|Targets| C4\nC4 -->|Married to| C7\nC1 -->|Loves| C5\nC5 -->|Loves| C1\nC6 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 139,
+        "total_tokens": 1698,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:31.797Z",
+      "finishedAt": "2026-09-10T18:12:31.797Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ashenden\"]\nC2[\"R\"]\nC3[\"The Hairless Mexican\"]\nC4[\"Caypor\"]\nC5[\"Lady Anne\"]\nC6[\"Sir James\"]\nC7[\"Mrs. Caypor\"]\nC1 -->|Serves| C2\nC2 -->|Commands| C1\nC1 -->|Recruits| C3\nC3 -->|Assists| C1\nC1 -->|Targets| C4\nC4 -->|Married to| C7\nC1 -->|Loves| C5\nC5 -->|Loves| C1\nC6 -->|Enemy of| C1",
+  "mermaidHash": "a14bc192a82562749590fe4652b7cfd612480225d76e1add4520790575403f12",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a14bc192a82562749590fe4652b7cfd612480225d76e1add4520790575403f12",
+    "svgHash": "304315e35d8f629bdb2adc764e5ccfa6bbf8d99d054a1c26824e8c00e6c5532f",
+    "validatedAt": "2026-09-10T18:12:33.181Z",
+    "width": 970.3529663085938,
+    "height": 370.5
+  },
+  "generatedAt": "2026-09-10T18:12:31.797Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 139,
+    "total_tokens": 1698,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charlotte-bronte/jane-eyre",
+  "metadata": {
+    "title": "Jane Eyre",
+    "authors": [
+      "Charlotte Brontë"
+    ],
+    "year": "1847"
+  },
+  "inputHash": "90e9b2db2eee183f7edd4419bc427c274b8e80d0fde71dfdbc830db1ce023c57",
+  "promptHash": "86b4bf89e425d0a5b17a65415edcc7a13b90212c761213dca0ee7788a250235e",
+  "promptVersion": "1",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T12:34:38.036Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T12:34:38.036Z",
+      "outcome": "invalid_graph",
+      "mermaid": "Jane Eyre[\"Jane Eyre\"]\nEdward Rochester[\"Edward Rochester\"]\nSt John Rivers[\"St. John Rivers\"]\nMrs Reed[\"Mrs. Reed\"]\nBertha Mason[\"Bertha Mason\"]\nHelen Burns[\"Helen Burns\"]\nAdèle Varens[\"Adèle Varens\"]\nJane Eyre -->|Ward of| Mrs Reed\nMrs Reed -->|Abuses| Jane Eyre\nJane Eyre -->|Friend of| Helen Burns\nJane Eyre -->|Governess for| Adèle Varens\nJane Eyre -->|Employed by| Edward Rochester\nEdward Rochester -->|Falls in love with| Jane Eyre\nJane Eyre -->|Falls in love with| Edward Rochester\nEdward Rochester -->|Husband of| Bertha Mason\nBertha Mason -->|Attempts to kill| Edward Rochester\nJane Eyre -->|Cousin of| St John Rivers\nSt John Rivers -->|Proposes to| Jane Eyre\nEdward Rochester -->|Father of| Adèle Varens",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 211,
+        "total_tokens": 410,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 199
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:40.408Z",
+      "finishedAt": "2026-09-10T12:34:40.408Z"
+    },
+    {
+      "attempt": 2,
+      "startedAt": "2026-09-10T12:34:41.544Z",
+      "outcome": "invalid_graph",
+      "mermaid": "Jane Eyre[\"Jane Eyre\"]\nEdward Rochester[\"Edward Rochester\"]\nSt John Rivers[\"St. John Rivers\"]\nMrs Reed[\"Mrs. Reed\"]\nBertha Mason[\"Bertha Mason\"]\nHelen Burns[\"Helen Burns\"]\nAdèle Varens[\"Adèle Varens\"]\nJane Eyre -->|Ward of| Mrs Reed\nMrs Reed -->|Abuses| Jane Eyre\nJane Eyre -->|Friend of| Helen Burns\nJane Eyre -->|Governess for| Adèle Varens\nJane Eyre -->|Falls in love with| Edward Rochester\nEdward Rochester -->|Falls in love with| Jane Eyre\nEdward Rochester -->|Husband of| Bertha Mason\nBertha Mason -->|Attempts to kill| Edward Rochester\nJane Eyre -->|Cousin of| St John Rivers\nSt John Rivers -->|Proposes to| Jane Eyre\nJane Eyre -->|Rejects| St John Rivers\nEdward Rochester -->|Father of| Adèle Varens",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 211,
+        "total_tokens": 410,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 199
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:43.168Z",
+      "finishedAt": "2026-09-10T12:34:43.168Z"
+    }
+  ],
+  "mermaid": "Jane Eyre[\"Jane Eyre\"]\nEdward Rochester[\"Edward Rochester\"]\nSt John Rivers[\"St. John Rivers\"]\nMrs Reed[\"Mrs. Reed\"]\nBertha Mason[\"Bertha Mason\"]\nHelen Burns[\"Helen Burns\"]\nAdèle Varens[\"Adèle Varens\"]\nJane Eyre -->|Ward of| Mrs Reed\nMrs Reed -->|Abuses| Jane Eyre\nJane Eyre -->|Friend of| Helen Burns\nJane Eyre -->|Governess for| Adèle Varens\nJane Eyre -->|Falls in love with| Edward Rochester\nEdward Rochester -->|Falls in love with| Jane Eyre\nEdward Rochester -->|Husband of| Bertha Mason\nBertha Mason -->|Attempts to kill| Edward Rochester\nJane Eyre -->|Cousin of| St John Rivers\nSt John Rivers -->|Proposes to| Jane Eyre\nJane Eyre -->|Rejects| St John Rivers\nEdward Rochester -->|Father of| Adèle Varens",
+  "mermaidHash": "8acb0afc5fd1b166dbd6a50deefd566bf63e74eb11fcbe93b9c07019d31efc92",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T12:34:43.168Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 199,
+    "completion_tokens": 211,
+    "total_tokens": 410,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 199
+  }
+}

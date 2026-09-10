@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nikolay-chernyshevsky/what-is-to-be-done/nathan-haskell-dole_simon-s-skidelsky",
+  "metadata": {
+    "title": "What Is to Be Done?",
+    "authors": [
+      "Nikolay Chernyshevsky"
+    ],
+    "year": "1863"
+  },
+  "inputHash": "5de1e503ab0e486c8741bf116704655422476c0d0085ca3499c9d9d1bbef6a2c",
+  "promptHash": "0f746f60706ce8cc99aa5e3ccf3d14de71046f74f1604564d7072d055cb23a3d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:45.418Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:45.418Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Vera Pavlovna\"]\nC2[\"Dmitry Lopukhov\"]\nC3[\"Alexander Kirsanov\"]\nC4[\"Vasily Rozalsky\"]\nC5[\"Marya Rozalskaya\"]\nC6[\"Rakhmetov\"]\nC7[\"Julie Le Tellier\"]\nC8[\"Pavel Storeshnikov\"]\nC1 -->|Daughter of| C5\nC5 -->|Wife of| C4\nC8 -->|Proposes to| C1\nC1 -->|Rejects| C8\nC2 -->|Marries| C1\nC2 -->|Fakes suicide for| C1\nC3 -->|Friend of| C2\nC3 -->|Loves| C1\nC2 -->|Yields to| C3\nC1 -->|Marries| C3\nC6 -->|Mentor of| C1\nC6 -->|Friend of| C3\nC7 -->|Friend of| C1\nC7 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 223,
+        "total_tokens": 1787,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:47.194Z",
+      "finishedAt": "2026-09-10T18:04:47.194Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Vera Pavlovna\"]\nC2[\"Dmitry Lopukhov\"]\nC3[\"Alexander Kirsanov\"]\nC4[\"Vasily Rozalsky\"]\nC5[\"Marya Rozalskaya\"]\nC6[\"Rakhmetov\"]\nC7[\"Julie Le Tellier\"]\nC8[\"Pavel Storeshnikov\"]\nC1 -->|Daughter of| C5\nC5 -->|Wife of| C4\nC8 -->|Proposes to| C1\nC1 -->|Rejects| C8\nC2 -->|Marries| C1\nC2 -->|Fakes suicide for| C1\nC3 -->|Friend of| C2\nC3 -->|Loves| C1\nC2 -->|Yields to| C3\nC1 -->|Marries| C3\nC6 -->|Mentor of| C1\nC6 -->|Friend of| C3\nC7 -->|Friend of| C1\nC7 -->|Friend of| C2",
+  "mermaidHash": "9eec86055d8d480def2595d80535ef5f6ef4fe8606e65dbc626aa21de4b7ac1f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9eec86055d8d480def2595d80535ef5f6ef4fe8606e65dbc626aa21de4b7ac1f",
+    "svgHash": "0d13f959988eb77231f90ace9b03805b6d48d5542a59f6340eadb1812a07264b",
+    "validatedAt": "2026-09-10T18:04:48.835Z",
+    "width": 1050.294921875,
+    "height": 524
+  },
+  "generatedAt": "2026-09-10T18:04:47.194Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 223,
+    "total_tokens": 1787,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

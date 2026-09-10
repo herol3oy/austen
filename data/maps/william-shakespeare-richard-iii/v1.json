@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/richard-iii",
+  "metadata": {
+    "title": "Richard III",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1592"
+  },
+  "inputHash": "5bfcccb2e609d26f2fb70ac21f5e56f3fead329c179301d07b32ae56dad626ef",
+  "promptHash": "2d6fdbf1b5a88bb293e4668c74b1ad7a127b1f024639cebccac4e2a0ae60d654",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:43.354Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:43.354Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Richard III\"]\nC2[\"Edward IV\"]\nC3[\"George, Duke of Clarence\"]\nC4[\"Queen Elizabeth\"]\nC5[\"Lady Anne\"]\nC6[\"Buckingham\"]\nC7[\"Richmond\"]\nC8[\"Queen Margaret\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC1 -->|Kills| C3\nC1 -->|Married to| C5\nC1 -->|Kills| C5\nC1 -->|Enemy of| C4\nC1 -->|Ally of| C6\nC1 -->|Betrays| C6\nC1 -->|Enemy of| C7\nC2 -->|Married to| C4\nC2 -->|Sibling of| C3\nC8 -->|Enemy of| C1\nC8 -->|Enemy of| C2\nC8 -->|Enemy of| C4\nC7 -->|Defeats| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 215,
+        "total_tokens": 1770,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:44.929Z",
+      "finishedAt": "2026-09-10T18:15:44.929Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard III\"]\nC2[\"Edward IV\"]\nC3[\"George, Duke of Clarence\"]\nC4[\"Queen Elizabeth\"]\nC5[\"Lady Anne\"]\nC6[\"Buckingham\"]\nC7[\"Richmond\"]\nC8[\"Queen Margaret\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC1 -->|Kills| C3\nC1 -->|Married to| C5\nC1 -->|Kills| C5\nC1 -->|Enemy of| C4\nC1 -->|Ally of| C6\nC1 -->|Betrays| C6\nC1 -->|Enemy of| C7\nC2 -->|Married to| C4\nC2 -->|Sibling of| C3\nC8 -->|Enemy of| C1\nC8 -->|Enemy of| C2\nC8 -->|Enemy of| C4\nC7 -->|Defeats| C1",
+  "mermaidHash": "44fcb206236d5521c3a15a676ab3877232fc3de376e3abfef8af3a77d14284b4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "44fcb206236d5521c3a15a676ab3877232fc3de376e3abfef8af3a77d14284b4",
+    "svgHash": "b22c1456cfa9eaa375226bd5b1a2d2bdb0acbd365ddc2b27112e716dfec67622",
+    "validatedAt": "2026-09-10T18:15:46.359Z",
+    "width": 1046.5125732421875,
+    "height": 612.25
+  },
+  "generatedAt": "2026-09-10T18:15:44.929Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 215,
+    "total_tokens": 1770,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

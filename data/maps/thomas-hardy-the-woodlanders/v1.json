@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hardy/the-woodlanders",
+  "metadata": {
+    "title": "The Woodlanders",
+    "authors": [
+      "Thomas Hardy"
+    ],
+    "year": "1887"
+  },
+  "inputHash": "186593d43136e99a9dafd2da67b18483a37f318b8a674b33a582b6a385a2aa80",
+  "promptHash": "2579b08f6256a47397a9ac22b807c95c693c4e7b55691a6810e4e137fe6bd4d9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:01.027Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:01.028Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Grace Melbury\"]\nC2[\"Giles Winterborne\"]\nC3[\"Edred Fitzpiers\"]\nC4[\"Felice Charmond\"]\nC5[\"George Melbury\"]\nC6[\"Marty South\"]\nC7[\"Timothy Tangs\"]\nC1 -->|Loves| C2\nC1 -->|Married to| C3\nC2 -->|Loves| C1\nC3 -->|Married to| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC5 -->|Parent of| C1\nC5 -->|Opposes marriage of| C2\nC6 -->|Loves| C2\nC7 -->|Parent of| C2\nC7 -->|Friend of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 170,
+        "total_tokens": 1726,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:02.712Z",
+      "finishedAt": "2026-09-10T18:11:02.712Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Grace Melbury\"]\nC2[\"Giles Winterborne\"]\nC3[\"Edred Fitzpiers\"]\nC4[\"Felice Charmond\"]\nC5[\"George Melbury\"]\nC6[\"Marty South\"]\nC7[\"Timothy Tangs\"]\nC1 -->|Loves| C2\nC1 -->|Married to| C3\nC2 -->|Loves| C1\nC3 -->|Married to| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC5 -->|Parent of| C1\nC5 -->|Opposes marriage of| C2\nC6 -->|Loves| C2\nC7 -->|Parent of| C2\nC7 -->|Friend of| C5",
+  "mermaidHash": "f1a2d0eb5ba15ceefb6c8cbaa37a820796f66ef9496575c7213638c38b3a4c97",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f1a2d0eb5ba15ceefb6c8cbaa37a820796f66ef9496575c7213638c38b3a4c97",
+    "svgHash": "a2d38bfe78c723f6358d855b302d45b8eda0021fe1cac69f1a0dc535812241d0",
+    "validatedAt": "2026-09-10T18:11:04.040Z",
+    "width": 1291.1541748046875,
+    "height": 328.25
+  },
+  "generatedAt": "2026-09-10T18:11:02.712Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 170,
+    "total_tokens": 1726,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

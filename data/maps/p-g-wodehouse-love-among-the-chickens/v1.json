@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/love-among-the-chickens",
+  "metadata": {
+    "title": "Love Among the Chickens",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1921"
+  },
+  "inputHash": "75711aac1c419ebb7b53ac4ee3d714c9a1c2d40596a57283997e525c82568d7c",
+  "promptHash": "dd373a68794e1248322ef5d0797accf3aab47d0ef22945a9ccf7fe41ebb0dbd2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:40.788Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:40.788Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jeremy Garnet\"]\nC2[\"Stanley Featherstonehaugh Ukridge\"]\nC3[\"Millie Chase\"]\nC4[\"Phyllis Chase\"]\nC5[\"Professor Chase\"]\nC6[\"Mrs. Ukridge\"]\nC7[\"Beale\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C3\nC1 -->|Rival of| C5\nC2 -->|Friend of| C1\nC2 -->|Married to| C6\nC3 -->|Sister of| C4\nC3 -->|Loves| C1\nC4 -->|Sister of| C3\nC5 -->|Parent of| C3\nC5 -->|Parent of| C4\nC5 -->|Disapproves of| C1\nC6 -->|Married to| C2\nC7 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 194,
+        "total_tokens": 1757,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:42.473Z",
+      "finishedAt": "2026-09-10T18:05:42.473Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jeremy Garnet\"]\nC2[\"Stanley Featherstonehaugh Ukridge\"]\nC3[\"Millie Chase\"]\nC4[\"Phyllis Chase\"]\nC5[\"Professor Chase\"]\nC6[\"Mrs. Ukridge\"]\nC7[\"Beale\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C3\nC1 -->|Rival of| C5\nC2 -->|Friend of| C1\nC2 -->|Married to| C6\nC3 -->|Sister of| C4\nC3 -->|Loves| C1\nC4 -->|Sister of| C3\nC5 -->|Parent of| C3\nC5 -->|Parent of| C4\nC5 -->|Disapproves of| C1\nC6 -->|Married to| C2\nC7 -->|Serves| C2",
+  "mermaidHash": "ca8ad96d4f5d41297a3c4417b526f844d97438cf0277321ca5440a2e931ffda8",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ca8ad96d4f5d41297a3c4417b526f844d97438cf0277321ca5440a2e931ffda8",
+    "svgHash": "d71255ceb5b8dc2f8983110ad06e60925fb54c1d03932a746d5930f8125d17eb",
+    "validatedAt": "2026-09-10T18:05:43.842Z",
+    "width": 1089.1492919921875,
+    "height": 353
+  },
+  "generatedAt": "2026-09-10T18:05:42.473Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 194,
+    "total_tokens": 1757,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "christopher-marlowe/the-tragical-history-of-doctor-faustus",
+  "metadata": {
+    "title": "The Tragical History of Doctor Faustus",
+    "authors": [
+      "Christopher Marlowe"
+    ],
+    "year": "1604"
+  },
+  "inputHash": "03f725b6a8501437b5062fd7c294bcf160a384369d07172c761d94e5ffce41d4",
+  "promptHash": "74ff8b47506da3526339d122910ace2b855bd7b99e4696c886a60f30a911806f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:07.424Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:07.424Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Doctor Faustus\"]\nC2[\"Mephistopheles\"]\nC3[\"Lucifer\"]\nC4[\"Wagner\"]\nC5[\"Good Angel\"]\nC6[\"Evil Angel\"]\nC7[\"Helen of Troy\"]\nC1 -->|Sells soul to| C3\nC3 -->|Commands| C2\nC2 -->|Serves| C1\nC1 -->|Student of| C4\nC4 -->|Serves| C1\nC5 -->|Advises| C1\nC6 -->|Tempts| C1\nC1 -->|Conjures| C7\nC1 -->|Loves| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 143,
+        "total_tokens": 1705,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:08.492Z",
+      "finishedAt": "2026-09-10T17:31:08.492Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Doctor Faustus\"]\nC2[\"Mephistopheles\"]\nC3[\"Lucifer\"]\nC4[\"Wagner\"]\nC5[\"Good Angel\"]\nC6[\"Evil Angel\"]\nC7[\"Helen of Troy\"]\nC1 -->|Sells soul to| C3\nC3 -->|Commands| C2\nC2 -->|Serves| C1\nC1 -->|Student of| C4\nC4 -->|Serves| C1\nC5 -->|Advises| C1\nC6 -->|Tempts| C1\nC1 -->|Conjures| C7\nC1 -->|Loves| C7",
+  "mermaidHash": "f5c62b4a3432cc5a14d654cf2720db31b09e2f9df2f759cac3906106aa75cf30",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f5c62b4a3432cc5a14d654cf2720db31b09e2f9df2f759cac3906106aa75cf30",
+    "svgHash": "4341c57978aa3f132f423cf11efe40ceddac404a92728ab066f9f25182148974",
+    "validatedAt": "2026-09-10T17:31:09.853Z",
+    "width": 991.083251953125,
+    "height": 322.75
+  },
+  "generatedAt": "2026-09-10T17:31:08.492Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 143,
+    "total_tokens": 1705,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anna-katharine-green/that-affair-next-door",
+  "metadata": {
+    "title": "That Affair Next Door",
+    "authors": [
+      "Anna Katharine Green"
+    ],
+    "year": "1897"
+  },
+  "inputHash": "a983a727faafc649f866c8f514e65af1b6ac044003ddb0cc9f7cc4b1b78aecec",
+  "promptHash": "79542e49cbde4d48faad24dffe346bc8c8323e6592b96bd6dcd83ae515b1f0c3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:43.161Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:43.161Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Amelia Butterworth\"]\nC2[\"Randolph Stone\"]\nC3[\"Isabella Van Burnam\"]\nC4[\"Howard Van Burnam\"]\nC5[\"Franklin Van Burnam\"]\nC6[\"Mr. Gryce\"]\nC7[\"Silas Van Burnam\"]\nC1 -->|Investigates| C3\nC1 -->|Assists| C6\nC2 -->|Friend of| C1\nC2 -->|Loves| C3\nC3 -->|Married to| C4\nC4 -->|Son of| C7\nC5 -->|Son of| C7\nC5 -->|Brother of| C4\nC4 -->|Kills| C3\nC7 -->|Father of| C4\nC7 -->|Father of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 172,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:44.794Z",
+      "finishedAt": "2026-09-10T17:25:44.794Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Amelia Butterworth\"]\nC2[\"Randolph Stone\"]\nC3[\"Isabella Van Burnam\"]\nC4[\"Howard Van Burnam\"]\nC5[\"Franklin Van Burnam\"]\nC6[\"Mr. Gryce\"]\nC7[\"Silas Van Burnam\"]\nC1 -->|Investigates| C3\nC1 -->|Assists| C6\nC2 -->|Friend of| C1\nC2 -->|Loves| C3\nC3 -->|Married to| C4\nC4 -->|Son of| C7\nC5 -->|Son of| C7\nC5 -->|Brother of| C4\nC4 -->|Kills| C3\nC7 -->|Father of| C4\nC7 -->|Father of| C5",
+  "mermaidHash": "45f4aeb31294a3f57c67daf88b80ae0554f9ceb1a1c17e0c48fa8c3edd28a97c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "45f4aeb31294a3f57c67daf88b80ae0554f9ceb1a1c17e0c48fa8c3edd28a97c",
+    "svgHash": "a54ecdc60ba49dad84ed5550544d7eb68ca3dda78029c28b7f7680ac1529bfdd",
+    "validatedAt": "2026-09-10T17:25:46.215Z",
+    "width": 1735.4296875,
+    "height": 180
+  },
+  "generatedAt": "2026-09-10T17:25:44.794Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 172,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "andre-norton/storm-over-warlock",
+  "metadata": {
+    "title": "Storm Over Warlock",
+    "authors": [
+      "Andre Norton"
+    ],
+    "year": "1960"
+  },
+  "inputHash": "8b2e5cacc7260687efdb321d94e0d408ca76d7cba73ad14075771c2171b0a235",
+  "promptHash": "6c6b4567a70344df54c10b42cd69a16b80ef77c334e235dd990c94680ea29d8f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:25.645Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:25.645Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Shann Lantee\"]\nC2[\"Thorvald\"]\nC3[\"Toggor\"]\nC4[\"Logan\"]\nC5[\"Ragnar\"]\nC6[\"Gyrgo\"]\nC7[\"Wyverns\"]\nC1 -->|Serves| C2\nC1 -->|Friend of| C3\nC1 -->|Enemy of| C4\nC2 -->|Mentor of| C1\nC2 -->|Enemy of| C4\nC4 -->|Commands| C5\nC4 -->|Commands| C6\nC5 -->|Serves| C4\nC6 -->|Serves| C4\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 165,
+        "total_tokens": 1724,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:26.977Z",
+      "finishedAt": "2026-09-10T17:25:26.977Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Shann Lantee\"]\nC2[\"Thorvald\"]\nC3[\"Toggor\"]\nC4[\"Logan\"]\nC5[\"Ragnar\"]\nC6[\"Gyrgo\"]\nC7[\"Wyverns\"]\nC1 -->|Serves| C2\nC1 -->|Friend of| C3\nC1 -->|Enemy of| C4\nC2 -->|Mentor of| C1\nC2 -->|Enemy of| C4\nC4 -->|Commands| C5\nC4 -->|Commands| C6\nC5 -->|Serves| C4\nC6 -->|Serves| C4\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C4",
+  "mermaidHash": "e0b1145b8d04817ce45eaddd521ef74cf88f2ea269c624d397c864572a9b24d1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e0b1145b8d04817ce45eaddd521ef74cf88f2ea269c624d397c864572a9b24d1",
+    "svgHash": "ed3af638321b95fa280bac90ebcd2cf9783553d1ece68ce5ff803f11b0d918c0",
+    "validatedAt": "2026-09-10T17:25:28.487Z",
+    "width": 1092.655029296875,
+    "height": 281.75
+  },
+  "generatedAt": "2026-09-10T17:25:26.977Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 165,
+    "total_tokens": 1724,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

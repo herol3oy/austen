@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "gaston-leroux/the-mystery-of-the-yellow-room/brentanos",
+  "metadata": {
+    "title": "The Mystery of the Yellow Room",
+    "authors": [
+      "Gaston Leroux"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "d0373021f51a2543c1a53aff72cb9df234f9e443867d47cb3997b2cd4580bc7a",
+  "promptHash": "d073db852508c60148d6f0ff61ffeacb8d762a8bd4670b23462863b21df05c65",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:27.186Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:27.186Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Josephine Roulet\"]\nC2[\"Mathilde Stangerson\"]\nC3[\"Robert Darzac\"]\nC4[\"Frederic Larsan\"]\nC5[\"Joseph Rouletabille\"]\nC6[\"Sainclair\"]\nC7[\"Jean Roussel\"]\nC1 -->|Daughter of| C2\nC2 -->|Engaged to| C3\nC4 -->|Rival of| C3\nC5 -->|Investigates| C1\nC5 -->|Protects| C2\nC6 -->|Friend of| C5\nC7 -->|Father of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 131,
+        "total_tokens": 1692,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:29.494Z",
+      "finishedAt": "2026-09-10T17:39:29.494Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Josephine Roulet\"]\nC2[\"Mathilde Stangerson\"]\nC3[\"Robert Darzac\"]\nC4[\"Frederic Larsan\"]\nC5[\"Joseph Rouletabille\"]\nC6[\"Sainclair\"]\nC7[\"Jean Roussel\"]\nC1 -->|Daughter of| C2\nC2 -->|Engaged to| C3\nC4 -->|Rival of| C3\nC5 -->|Investigates| C1\nC5 -->|Protects| C2\nC6 -->|Friend of| C5\nC7 -->|Father of| C5",
+  "mermaidHash": "c1171aa583a40e1c64d03801344c8c27a7fffaa4af727e79a6fec794ed9bdc3e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c1171aa583a40e1c64d03801344c8c27a7fffaa4af727e79a6fec794ed9bdc3e",
+    "svgHash": "6888a4001da0c7bb0a2aba5b6a8bc83f1edd1682cde807284872914758c40d8d",
+    "validatedAt": "2026-09-10T17:39:30.857Z",
+    "width": 1383.829345703125,
+    "height": 213.5
+  },
+  "generatedAt": "2026-09-10T17:39:29.494Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 131,
+    "total_tokens": 1692,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

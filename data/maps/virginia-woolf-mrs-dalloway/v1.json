@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "virginia-woolf/mrs-dalloway",
+  "metadata": {
+    "title": "Mrs. Dalloway",
+    "authors": [
+      "Virginia Woolf"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "12c2878f18c305746ed9719ada8d241d7c4b4e7553e42080bc9d5733a6ab5a63",
+  "promptHash": "606298fbbe13b004b9125150616d505393fa2cb8e8aae1278947de4f0509d2f2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:03.336Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:03.336Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Clarissa Dalloway\"]\nC2[\"Richard Dalloway\"]\nC3[\"Peter Walsh\"]\nC4[\"Sally Seton\"]\nC5[\"Septimus Warren Smith\"]\nC6[\"Lucrezia Smith\"]\nC7[\"Rezia Smith\"]\nC8[\"Sir William Bradshaw\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Friend of| C4\nC3 -->|Friend of| C4\nC5 -->|Married to| C6\nC6 -->|Cares for| C5\nC8 -->|Treats| C5\nC1 -->|Hosts party with| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 160,
+        "total_tokens": 1718,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:04.827Z",
+      "finishedAt": "2026-09-10T18:12:04.827Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Clarissa Dalloway\"]\nC2[\"Richard Dalloway\"]\nC3[\"Peter Walsh\"]\nC4[\"Sally Seton\"]\nC5[\"Septimus Warren Smith\"]\nC6[\"Lucrezia Smith\"]\nC7[\"Rezia Smith\"]\nC8[\"Sir William Bradshaw\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Friend of| C4\nC3 -->|Friend of| C4\nC5 -->|Married to| C6\nC6 -->|Cares for| C5\nC8 -->|Treats| C5\nC1 -->|Hosts party with| C2",
+  "mermaidHash": "1ab6199a9e47c9405ec0490d532811387a6fb1da1280b71e2b5b4b8ce16c6677",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "1ab6199a9e47c9405ec0490d532811387a6fb1da1280b71e2b5b4b8ce16c6677",
+    "svgHash": "0592f7f5fc18aa3801be20c3948b72f18023669cf4a5fbb10ee075de50be45a2",
+    "validatedAt": "2026-09-10T18:12:06.221Z",
+    "width": 869.734375,
+    "height": 345
+  },
+  "generatedAt": "2026-09-10T18:12:04.827Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 160,
+    "total_tokens": 1718,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

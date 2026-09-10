@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-w-chesnutt/the-marrow-of-tradition",
+  "metadata": {
+    "title": "The Marrow of Tradition",
+    "authors": [
+      "Charles W. Chesnutt"
+    ],
+    "year": "1901"
+  },
+  "inputHash": "86c4bcd064c30606c4c13674b179aeb7f805ea3f65d8794b0718de9e1fc9bbe1",
+  "promptHash": "6b57b3bd45dc298add495ba4c7ad5d67425a6a2a77f6000b0dea7b455bb08261",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:41.632Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:41.632Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Major Carteret\"]\nC2[\"Olivia Carteret\"]\nC3[\"Dr. William Miller\"]\nC4[\"Janet Miller\"]\nC5[\"Tom Delamere\"]\nC6[\"Clara Pemberton\"]\nC7[\"Ellis\"]\nC8[\"Jerry\"]\nC1 -->|Married to| C2\nC1 -->|Enemy of| C3\nC2 -->|Sister of| C4\nC3 -->|Married to| C4\nC5 -->|Nephew of| C1\nC5 -->|Suitor of| C6\nC7 -->|Friend of| C3\nC7 -->|Loves| C6\nC8 -->|Serves| C1\nC5 -->|Betrays| C6\nC1 -->|Commands| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 177,
+        "total_tokens": 1739,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:43.458Z",
+      "finishedAt": "2026-09-10T17:30:43.458Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Major Carteret\"]\nC2[\"Olivia Carteret\"]\nC3[\"Dr. William Miller\"]\nC4[\"Janet Miller\"]\nC5[\"Tom Delamere\"]\nC6[\"Clara Pemberton\"]\nC7[\"Ellis\"]\nC8[\"Jerry\"]\nC1 -->|Married to| C2\nC1 -->|Enemy of| C3\nC2 -->|Sister of| C4\nC3 -->|Married to| C4\nC5 -->|Nephew of| C1\nC5 -->|Suitor of| C6\nC7 -->|Friend of| C3\nC7 -->|Loves| C6\nC8 -->|Serves| C1\nC5 -->|Betrays| C6\nC1 -->|Commands| C8",
+  "mermaidHash": "5a80c7925bfb88bdfcc82ff598cf942d0db42fa903b01d8b12a706a91ad5b705",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5a80c7925bfb88bdfcc82ff598cf942d0db42fa903b01d8b12a706a91ad5b705",
+    "svgHash": "9e949429733dedc13328747962fe0cd2888c7159bf9d4b718de0d376cc9067ce",
+    "validatedAt": "2026-09-10T17:30:44.815Z",
+    "width": 1029.8699951171875,
+    "height": 337.75
+  },
+  "generatedAt": "2026-09-10T17:30:43.458Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 177,
+    "total_tokens": 1739,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

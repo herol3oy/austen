@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-nesbit/the-story-of-the-treasure-seekers",
+  "metadata": {
+    "title": "The Story of the Treasure Seekers",
+    "authors": [
+      "E. Nesbit"
+    ],
+    "year": "1899"
+  },
+  "inputHash": "b63713e8deb2e621b2f278958458d68a29f8491e3e180827e2ff7d54abb9aab3",
+  "promptHash": "e98331d56e8089aef0579838768808251f6309e9ac0ea359815a1f3f80df8a41",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:26.315Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:26.315Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dora Bastable\"]\nC2[\"Oswald Bastable\"]\nC3[\"Dickie Bastable\"]\nC4[\"Alice Bastable\"]\nC5[\"Noel Bastable\"]\nC6[\"H. O. Bastable\"]\nC7[\"Albert-next-door\"]\nC8[\"Father\"]\nC1 -->|Sibling of| C2\nC2 -->|Sibling of| C3\nC3 -->|Sibling of| C4\nC4 -->|Sibling of| C5\nC5 -->|Sibling of| C6\nC1 -->|Sibling of| C3\nC1 -->|Sibling of| C4\nC1 -->|Sibling of| C5\nC1 -->|Sibling of| C6\nC2 -->|Sibling of| C4\nC2 -->|Sibling of| C5\nC2 -->|Sibling of| C6\nC3 -->|Sibling of| C5\nC3 -->|Sibling of| C6\nC4 -->|Sibling of| C6\nC7 -->|Friend of| C2\nC8 -->|Parent of| C1\nC8 -->|Parent of| C2\nC8 -->|Parent of| C3\nC8 -->|Parent of| C4\nC8 -->|Parent of| C5\nC8 -->|Parent of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 299,
+        "total_tokens": 1861,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:28.158Z",
+      "finishedAt": "2026-09-10T17:33:28.158Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dora Bastable\"]\nC2[\"Oswald Bastable\"]\nC3[\"Dickie Bastable\"]\nC4[\"Alice Bastable\"]\nC5[\"Noel Bastable\"]\nC6[\"H. O. Bastable\"]\nC7[\"Albert-next-door\"]\nC8[\"Father\"]\nC1 -->|Sibling of| C2\nC2 -->|Sibling of| C3\nC3 -->|Sibling of| C4\nC4 -->|Sibling of| C5\nC5 -->|Sibling of| C6\nC1 -->|Sibling of| C3\nC1 -->|Sibling of| C4\nC1 -->|Sibling of| C5\nC1 -->|Sibling of| C6\nC2 -->|Sibling of| C4\nC2 -->|Sibling of| C5\nC2 -->|Sibling of| C6\nC3 -->|Sibling of| C5\nC3 -->|Sibling of| C6\nC4 -->|Sibling of| C6\nC7 -->|Friend of| C2\nC8 -->|Parent of| C1\nC8 -->|Parent of| C2\nC8 -->|Parent of| C3\nC8 -->|Parent of| C4\nC8 -->|Parent of| C5\nC8 -->|Parent of| C6",
+  "mermaidHash": "10028b467ab67c878125028e48165db45ececebd7253fba9df86bd7c99fbfb17",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "10028b467ab67c878125028e48165db45ececebd7253fba9df86bd7c99fbfb17",
+    "svgHash": "b352757196b2e3d52c89340dffb532a184c643b599c59405a90ccdbbe6f317c8",
+    "validatedAt": "2026-09-10T17:33:29.548Z",
+    "width": 1769.8179931640625,
+    "height": 733.25
+  },
+  "generatedAt": "2026-09-10T17:33:28.158Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 299,
+    "total_tokens": 1861,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

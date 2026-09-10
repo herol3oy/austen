@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "jack-london/the-iron-heel",
+  "metadata": {
+    "title": "The Iron Heel",
+    "authors": [
+      "Jack London"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "775c2f39ca4dc7ebbdd2154e6cf8f37a289ec4879cd749218c14d5fd782e1d2d",
+  "promptHash": "6fec513557f8f283d620dab4cda528aa1ec99eadc9289333eca402d09bc093d5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:35.056Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:35.056Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Avis Everhard\"]\nC2[\"Ernest Everhard\"]\nC3[\"John Cunningham\"]\nC4[\"Meredith\"]\nC5[\"Bishop Morehouse\"]\nC6[\"Wickson\"]\nC7[\"Percival\"]\nC8[\"Dr. Hammerfield\"]\nC1 -->|Loves| C2\nC1 -->|Married to| C2\nC2 -->|Mentor of| C1\nC3 -->|Friend of| C2\nC3 -->|Ally of| C1\nC4 -->|Friend of| C2\nC5 -->|Enemy of| C2\nC6 -->|Enemy of| C2\nC7 -->|Enemy of| C2\nC8 -->|Enemy of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 167,
+        "total_tokens": 1724,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 149
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:36.648Z",
+      "finishedAt": "2026-09-10T18:02:36.648Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Avis Everhard\"]\nC2[\"Ernest Everhard\"]\nC3[\"John Cunningham\"]\nC4[\"Meredith\"]\nC5[\"Bishop Morehouse\"]\nC6[\"Wickson\"]\nC7[\"Percival\"]\nC8[\"Dr. Hammerfield\"]\nC1 -->|Loves| C2\nC1 -->|Married to| C2\nC2 -->|Mentor of| C1\nC3 -->|Friend of| C2\nC3 -->|Ally of| C1\nC4 -->|Friend of| C2\nC5 -->|Enemy of| C2\nC6 -->|Enemy of| C2\nC7 -->|Enemy of| C2\nC8 -->|Enemy of| C2",
+  "mermaidHash": "d5ff53898fa100b4e2fd59970821daad774b35f4e5bccf41ad0837a6854c566a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d5ff53898fa100b4e2fd59970821daad774b35f4e5bccf41ad0837a6854c566a",
+    "svgHash": "e3418436bd49c1bef0dc24ef918104f84663644eaa63a68874181b2f63942003",
+    "validatedAt": "2026-09-10T18:02:37.932Z",
+    "width": 763.920654296875,
+    "height": 618
+  },
+  "generatedAt": "2026-09-10T18:02:36.648Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 167,
+    "total_tokens": 1724,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 149
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "herman-melville/moby-dick",
+  "metadata": {
+    "title": "Moby Dick",
+    "authors": [
+      "Herman Melville"
+    ],
+    "year": "1851"
+  },
+  "inputHash": "2d3248641812dbbe14ec2169bc7e5e53636abd67bd1a39f287d80310ab460d37",
+  "promptHash": "18fe753701871d5e84bcfa24d2e4e9084305d712719dc5ee746f0fb164edc42a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:37.071Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:37.071Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ishmael\"]\nC2[\"Captain Ahab\"]\nC3[\"Queequeg\"]\nC4[\"Starbuck\"]\nC5[\"Stubb\"]\nC6[\"Flask\"]\nC7[\"Moby Dick\"]\nC1 -->|Narrates| C2\nC1 -->|Friend of| C3\nC2 -->|Commands| C1\nC2 -->|Commands| C3\nC2 -->|Commands| C4\nC2 -->|Commands| C5\nC2 -->|Commands| C6\nC4 -->|First Mate of| C2\nC5 -->|Second Mate of| C2\nC6 -->|Third Mate of| C2\nC2 -->|Hunts| C7\nC7 -->|Maimed| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 170,
+        "total_tokens": 1727,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:38.634Z",
+      "finishedAt": "2026-09-10T17:43:38.634Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ishmael\"]\nC2[\"Captain Ahab\"]\nC3[\"Queequeg\"]\nC4[\"Starbuck\"]\nC5[\"Stubb\"]\nC6[\"Flask\"]\nC7[\"Moby Dick\"]\nC1 -->|Narrates| C2\nC1 -->|Friend of| C3\nC2 -->|Commands| C1\nC2 -->|Commands| C3\nC2 -->|Commands| C4\nC2 -->|Commands| C5\nC2 -->|Commands| C6\nC4 -->|First Mate of| C2\nC5 -->|Second Mate of| C2\nC6 -->|Third Mate of| C2\nC2 -->|Hunts| C7\nC7 -->|Maimed| C2",
+  "mermaidHash": "29e18479778a117a706175bd2a6039bbba3592eca119ae2664cca2dacb3945d1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "29e18479778a117a706175bd2a6039bbba3592eca119ae2664cca2dacb3945d1",
+    "svgHash": "3a32b592b9dead5a37781d76ddea36302ce36b268b17598d72eba59502460e6e",
+    "validatedAt": "2026-09-10T17:43:39.912Z",
+    "width": 692.8330688476562,
+    "height": 471.25
+  },
+  "generatedAt": "2026-09-10T17:43:38.634Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 170,
+    "total_tokens": 1727,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

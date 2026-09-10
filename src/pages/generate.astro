@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GeneratorForm from '../components/GeneratorForm.astro';
+import DiagramWorkspace from '../components/DiagramWorkspace.astro';
+import RecentMaps from '../components/RecentMaps.astro';
+---
+<BaseLayout title="Generate a map — Austen">
+  <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
+  <GeneratorForm />
+  <DiagramWorkspace />
+  <RecentMaps />
+  <noscript><p>The generator needs JavaScript. Published maps can be read without it.</p></noscript>
+</BaseLayout>

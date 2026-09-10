@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mark-twain/the-prince-and-the-pauper",
+  "metadata": {
+    "title": "The Prince and the Pauper",
+    "authors": [
+      "Mark Twain"
+    ],
+    "year": "1881"
+  },
+  "inputHash": "7a0d461766cb99de9b12e93bf5463555da993c52533614dab90b1eff207365c3",
+  "promptHash": "5ee1c696876be9bd2d48ebb9dadf27312a843e2a18880948fd3e440a3e819c77",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:01.150Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:01.150Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tom Canty\"]\nC2[\"Edward VI\"]\nC3[\"Miles Hendon\"]\nC4[\"John Canty\"]\nC5[\"Hugh Hendon\"]\nC6[\"Lord Hertford\"]\nC7[\"Humphrey Marlow\"]\nC1 -->|Impersonates| C2\nC2 -->|Impersonates| C1\nC1 -->|Abused by| C4\nC4 -->|Father of| C1\nC3 -->|Protects| C2\nC2 -->|Friendship with| C3\nC5 -->|Brother of| C3\nC5 -->|Betrays| C3\nC6 -->|Serves| C2\nC7 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 159,
+        "total_tokens": 1718,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:02.790Z",
+      "finishedAt": "2026-09-10T18:03:02.790Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tom Canty\"]\nC2[\"Edward VI\"]\nC3[\"Miles Hendon\"]\nC4[\"John Canty\"]\nC5[\"Hugh Hendon\"]\nC6[\"Lord Hertford\"]\nC7[\"Humphrey Marlow\"]\nC1 -->|Impersonates| C2\nC2 -->|Impersonates| C1\nC1 -->|Abused by| C4\nC4 -->|Father of| C1\nC3 -->|Protects| C2\nC2 -->|Friendship with| C3\nC5 -->|Brother of| C3\nC5 -->|Betrays| C3\nC6 -->|Serves| C2\nC7 -->|Serves| C2",
+  "mermaidHash": "7e8034ce3d3b4f6b56b04a533f22b45e2236556eb4520ecec1a5c575ffeb5ec7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7e8034ce3d3b4f6b56b04a533f22b45e2236556eb4520ecec1a5c575ffeb5ec7",
+    "svgHash": "fc29c979a33a419a2227e3958a24e1f689df90011d580a818c91da5b2130e636",
+    "validatedAt": "2026-09-10T18:03:04.248Z",
+    "width": 802.9744262695312,
+    "height": 420
+  },
+  "generatedAt": "2026-09-10T18:03:02.790Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 159,
+    "total_tokens": 1718,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

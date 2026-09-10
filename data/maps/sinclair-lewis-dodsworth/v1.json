@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sinclair-lewis/dodsworth",
+  "metadata": {
+    "title": "Dodsworth",
+    "authors": [
+      "Sinclair Lewis"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "df7d36c01ceeb92516ba18fd43484491c273db5230794d415a16f34b163e6660",
+  "promptHash": "64cce141d33e72285309f4ac18beb5c27887768d1724c95f0fe5fd5fcc2fc2b0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:27.448Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:27.448Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sam Dodsworth\"]\nC2[\"Fran Dodsworth\"]\nC3[\"Edith Cortright\"]\nC4[\"Kurt von Obersdorf\"]\nC5[\"Alec Kynance\"]\nC6[\"Baroness von Obersdorf\"]\nC7[\"Emily Dodsworth McKee\"]\nC1 -->|Married to| C2\nC1 -->|Father of| C7\nC2 -->|Mother of| C7\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC5 -->|Friend of| C1\nC6 -->|Mother of| C4\nC6 -->|Opposes marriage of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 166,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:29.117Z",
+      "finishedAt": "2026-09-10T18:09:29.117Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sam Dodsworth\"]\nC2[\"Fran Dodsworth\"]\nC3[\"Edith Cortright\"]\nC4[\"Kurt von Obersdorf\"]\nC5[\"Alec Kynance\"]\nC6[\"Baroness von Obersdorf\"]\nC7[\"Emily Dodsworth McKee\"]\nC1 -->|Married to| C2\nC1 -->|Father of| C7\nC2 -->|Mother of| C7\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC5 -->|Friend of| C1\nC6 -->|Mother of| C4\nC6 -->|Opposes marriage of| C2",
+  "mermaidHash": "d9eff8e63a3ce5934608c4a9c303388ea2ef2184b671ca40e0e0b40eae174511",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d9eff8e63a3ce5934608c4a9c303388ea2ef2184b671ca40e0e0b40eae174511",
+    "svgHash": "1fb3367c24e41b03b6381a5981340ae2d7521d5fd2e363dcb9948df2d6f210fe",
+    "validatedAt": "2026-09-10T18:09:30.492Z",
+    "width": 1197.8594970703125,
+    "height": 297.8158264160156
+  },
+  "generatedAt": "2026-09-10T18:09:29.117Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 166,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "homer/the-odyssey/william-cullen-bryant",
+  "metadata": {
+    "title": "The Odyssey",
+    "authors": [
+      "Homer"
+    ],
+    "year": "1879"
+  },
+  "inputHash": "d84fe995340d58b48af8950e8f8a43935612c05351dac98e03aca22ef48228b2",
+  "promptHash": "374697b17ba9f5747ab313bd20d1c19c8336f047d5c9ec55fdf15f010bc721d9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:01.611Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:01.611Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Odysseus\"]\nC2[\"Penelope\"]\nC3[\"Telemachus\"]\nC4[\"Athena\"]\nC5[\"Poseidon\"]\nC6[\"Antinous\"]\nC7[\"Eumaeus\"]\nC8[\"Laertes\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC2 -->|Parent of| C3\nC1 -->|Parent of| C8\nC4 -->|Mentor of| C3\nC4 -->|Protects| C1\nC5 -->|Enemy of| C1\nC6 -->|Rival of| C1\nC6 -->|Suitors of| C2\nC7 -->|Serves| C1\nC1 -->|Kills| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 172,
+        "total_tokens": 1727,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:03.007Z",
+      "finishedAt": "2026-09-10T17:44:03.007Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Odysseus\"]\nC2[\"Penelope\"]\nC3[\"Telemachus\"]\nC4[\"Athena\"]\nC5[\"Poseidon\"]\nC6[\"Antinous\"]\nC7[\"Eumaeus\"]\nC8[\"Laertes\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC2 -->|Parent of| C3\nC1 -->|Parent of| C8\nC4 -->|Mentor of| C3\nC4 -->|Protects| C1\nC5 -->|Enemy of| C1\nC6 -->|Rival of| C1\nC6 -->|Suitors of| C2\nC7 -->|Serves| C1\nC1 -->|Kills| C6",
+  "mermaidHash": "7bdf92e4e8c59857aa95084c4652bfa30e96e70c5a9eb421f2f7215cefff69de",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7bdf92e4e8c59857aa95084c4652bfa30e96e70c5a9eb421f2f7215cefff69de",
+    "svgHash": "5f295de2714cc3d369cd82bd0186aef7fedda4a386aaaf52cb6aaa6bbc723014",
+    "validatedAt": "2026-09-10T17:44:04.256Z",
+    "width": 1105.2369384765625,
+    "height": 377.5
+  },
+  "generatedAt": "2026-09-10T17:44:03.007Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 172,
+    "total_tokens": 1727,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

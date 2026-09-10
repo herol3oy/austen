@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jules-verne/from-the-earth-to-the-moon/ward-lock-co",
+  "metadata": {
+    "title": "From the Earth to the Moon",
+    "authors": [
+      "Jules Verne"
+    ],
+    "year": "1865"
+  },
+  "inputHash": "1f5f82b5c512190ec36ce5771384252d7486d3ed5cefde5736b0506091a0b8ce",
+  "promptHash": "1623bdedd50dfdc9ca9cc7c1547d9768cccf1e01d30f85faf40cb4700775e79d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:52.777Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:52.777Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Impey Barbicane\"]\nC2[\"Nicholl\"]\nC3[\"Michel Ardan\"]\nC4[\"J. T. Maston\"]\nC5[\"Captain Blomsberry\"]\nC6[\"President of the Cambridge Observatory\"]\nC1 -->|Rival of| C2\nC1 -->|Friend of| C3\nC1 -->|Commands| C4\nC1 -->|Allies with| C3\nC2 -->|Allies with| C3\nC4 -->|Friend of| C1\nC5 -->|Commands| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 123,
+        "total_tokens": 1684,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:54.033Z",
+      "finishedAt": "2026-09-10T17:48:54.033Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Impey Barbicane\"]\nC2[\"Nicholl\"]\nC3[\"Michel Ardan\"]\nC4[\"J. T. Maston\"]\nC5[\"Captain Blomsberry\"]\nC6[\"President of the Cambridge Observatory\"]\nC1 -->|Rival of| C2\nC1 -->|Friend of| C3\nC1 -->|Commands| C4\nC1 -->|Allies with| C3\nC2 -->|Allies with| C3\nC4 -->|Friend of| C1\nC5 -->|Commands| C6",
+  "mermaidHash": "aee3a8f9451a2c1e8a6588ff750f90cceaa77018ee747743b4c85804e932a353",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "aee3a8f9451a2c1e8a6588ff750f90cceaa77018ee747743b4c85804e932a353",
+    "svgHash": "eab68a7ed63e50eb711033e0476b09f4266bcab4bcd994b98f46ffc5b4111e8d",
+    "validatedAt": "2026-09-10T17:48:55.311Z",
+    "width": 844.8165893554688,
+    "height": 364.3999938964844
+  },
+  "generatedAt": "2026-09-10T17:48:54.033Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 123,
+    "total_tokens": 1684,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

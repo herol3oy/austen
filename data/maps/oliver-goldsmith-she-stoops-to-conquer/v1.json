@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "oliver-goldsmith/she-stoops-to-conquer",
+  "metadata": {
+    "title": "She Stoops to Conquer",
+    "authors": [
+      "Oliver Goldsmith"
+    ],
+    "year": "1773"
+  },
+  "inputHash": "4e328b72b958e4444eb68d17bc67329fc6b9ecef37e6eb8b5d84fb2cdb8bcc0d",
+  "promptHash": "cb809121d4aa1a19a9775c52e3c59ba424f2d05c93e6c053a1b37ee7f58f861b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:00.598Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:00.598Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Charles Marlow\"]\nC2[\"Kate Hardcastle\"]\nC3[\"Mr. Hardcastle\"]\nC4[\"Mrs. Hardcastle\"]\nC5[\"Tony Lumpkin\"]\nC6[\"George Hastings\"]\nC7[\"Constance Neville\"]\nC8[\"Sir Charles Marlow\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C5\nC3 -->|Stepfather of| C5\nC5 -->|Cousin of| C7\nC6 -->|Loves| C7\nC7 -->|Loves| C6\nC4 -->|Guardian of| C7\nC8 -->|Father of| C1\nC5 -->|Friend of| C6\nC5 -->|Pranks| C1\nC1 -->|Friend of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 195,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:02.357Z",
+      "finishedAt": "2026-09-10T18:05:02.357Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Charles Marlow\"]\nC2[\"Kate Hardcastle\"]\nC3[\"Mr. Hardcastle\"]\nC4[\"Mrs. Hardcastle\"]\nC5[\"Tony Lumpkin\"]\nC6[\"George Hastings\"]\nC7[\"Constance Neville\"]\nC8[\"Sir Charles Marlow\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Father of| C2\nC4 -->|Mother of| C5\nC3 -->|Stepfather of| C5\nC5 -->|Cousin of| C7\nC6 -->|Loves| C7\nC7 -->|Loves| C6\nC4 -->|Guardian of| C7\nC8 -->|Father of| C1\nC5 -->|Friend of| C6\nC5 -->|Pranks| C1\nC1 -->|Friend of| C6",
+  "mermaidHash": "dcd493d9b189e07f5551ba4455e4b2febc3c8266bea9d2db980527f1158ff9ab",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "dcd493d9b189e07f5551ba4455e4b2febc3c8266bea9d2db980527f1158ff9ab",
+    "svgHash": "5f287c9ca69e99bedd6c31f3f116ebee966ec546f6510707904a5361431a6347",
+    "validatedAt": "2026-09-10T18:05:03.938Z",
+    "width": 1335.46337890625,
+    "height": 399.25
+  },
+  "generatedAt": "2026-09-10T18:05:02.357Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 195,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

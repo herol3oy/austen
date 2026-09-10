@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-nesbit/hardings-luck",
+  "metadata": {
+    "title": "Harding’s Luck",
+    "authors": [
+      "E. Nesbit"
+    ],
+    "year": "1909"
+  },
+  "inputHash": "f52bf6f63f90c9d7416279d9e4767bd8311317352f58a05fb23e0ab70d238be2",
+  "promptHash": "fa4107aab48a471367d5baaf214259f4d8bc40b1d20133ef42f46542318d2a45",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:09.626Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:09.627Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dickie Harding\"]\nC2[\"Edred\"]\nC3[\"Elfrida\"]\nC4[\"Mr. Beale\"]\nC5[\"Mrs. Beale\"]\nC6[\"Uncle John\"]\nC7[\"Cousin Richard\"]\nC8[\"Mr. Selden\"]\nC1 -->|Adopted by| C4\nC4 -->|Married to| C5\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC2 -->|Sibling of| C3\nC1 -->|Nephew of| C6\nC1 -->|Cousin of| C7\nC1 -->|Serves| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 148,
+        "total_tokens": 1708,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:10.852Z",
+      "finishedAt": "2026-09-10T17:33:10.852Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dickie Harding\"]\nC2[\"Edred\"]\nC3[\"Elfrida\"]\nC4[\"Mr. Beale\"]\nC5[\"Mrs. Beale\"]\nC6[\"Uncle John\"]\nC7[\"Cousin Richard\"]\nC8[\"Mr. Selden\"]\nC1 -->|Adopted by| C4\nC4 -->|Married to| C5\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC2 -->|Sibling of| C3\nC1 -->|Nephew of| C6\nC1 -->|Cousin of| C7\nC1 -->|Serves| C8",
+  "mermaidHash": "c7b12f7a69e7e3abbe33bceae9a48883fbbee860ce7a4688b3729958baf2f84b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c7b12f7a69e7e3abbe33bceae9a48883fbbee860ce7a4688b3729958baf2f84b",
+    "svgHash": "541eca67ea411d9f6afb1ee0a0437be5cb60657dc26f79d3456a4af64f2fd5f9",
+    "validatedAt": "2026-09-10T17:33:12.227Z",
+    "width": 713.3062133789062,
+    "height": 518
+  },
+  "generatedAt": "2026-09-10T17:33:10.852Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 148,
+    "total_tokens": 1708,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

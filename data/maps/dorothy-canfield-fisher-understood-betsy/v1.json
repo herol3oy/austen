@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dorothy-canfield-fisher/understood-betsy",
+  "metadata": {
+    "title": "Understood Betsy",
+    "authors": [
+      "Dorothy Canfield Fisher"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "6ff5dafc9de2d1cab38758883d353e97b57b0eb9490d8eedb7be176f43801f1f",
+  "promptHash": "2e9d8ccd26b3f6576268e5665acfc1c23154c9f6138d5c262fed8722de208824",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:13.107Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:13.108Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Elizabeth Ann\"]\nC2[\"Aunt Harriet\"]\nC3[\"Frances\"]\nC4[\"Uncle Henry\"]\nC5[\"Aunt Abigail\"]\nC6[\"Molly\"]\nC7[\"Ellen\"]\nC8[\"Cousin Ann\"]\nC1 -->|Raised by| C2\nC2 -->|Cousin of| C3\nC1 -->|Sent to live with| C3\nC3 -->|Cousin of| C4\nC3 -->|Cousin of| C5\nC4 -->|Husband of| C5\nC1 -->|Lives with| C4\nC1 -->|Lives with| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 177,
+        "total_tokens": 1737,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:14.735Z",
+      "finishedAt": "2026-09-10T17:32:14.735Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Elizabeth Ann\"]\nC2[\"Aunt Harriet\"]\nC3[\"Frances\"]\nC4[\"Uncle Henry\"]\nC5[\"Aunt Abigail\"]\nC6[\"Molly\"]\nC7[\"Ellen\"]\nC8[\"Cousin Ann\"]\nC1 -->|Raised by| C2\nC2 -->|Cousin of| C3\nC1 -->|Sent to live with| C3\nC3 -->|Cousin of| C4\nC3 -->|Cousin of| C5\nC4 -->|Husband of| C5\nC1 -->|Lives with| C4\nC1 -->|Lives with| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8",
+  "mermaidHash": "8187ce2d26c78af86b7355d2080fb1ad11d3c8659cf0646d45d41c3d67a921c4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8187ce2d26c78af86b7355d2080fb1ad11d3c8659cf0646d45d41c3d67a921c4",
+    "svgHash": "42b3188e9336f7220464b4391d3b30e2dcae9d7976390b503705e25bc7c0c473",
+    "validatedAt": "2026-09-10T17:32:16.122Z",
+    "width": 1183.673583984375,
+    "height": 511
+  },
+  "generatedAt": "2026-09-10T17:32:14.735Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 177,
+    "total_tokens": 1737,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

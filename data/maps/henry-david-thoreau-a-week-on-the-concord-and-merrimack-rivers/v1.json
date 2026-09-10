@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-david-thoreau/a-week-on-the-concord-and-merrimack-rivers",
+  "metadata": {
+    "title": "A Week on the Concord and Merrimack Rivers",
+    "authors": [
+      "Henry David Thoreau"
+    ],
+    "year": "1849, revised 1868"
+  },
+  "inputHash": "7010a2c9a786f1a6cdab9e08c60e8c2656eb4aa519f5062bbb5b6cd86e19c719",
+  "promptHash": "8099afaeb9af4821017bb02189b4c086e688af30079f7c2fb90037564ea04a56",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:58.909Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:58.909Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1570,
+        "completion_tokens": 2,
+        "total_tokens": 1572,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 290
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:59.620Z",
+      "finishedAt": "2026-09-10T17:42:59.620Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:42:59.620Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1570,
+    "completion_tokens": 2,
+    "total_tokens": 1572,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 290
+  }
+}

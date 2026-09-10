@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "langston-hughes/not-without-laughter",
+  "metadata": {
+    "title": "Not Without Laughter",
+    "authors": [
+      "Langston Hughes"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "4bfb3d955772e3f26f2803e3b655ba66817567f36bb10064fdc0dac9ad3f46d3",
+  "promptHash": "bb10ac5e6b48a027e19d4069ce05d15a2c95cbb081eb90f579c3bd7026673ca5",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:06.844Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:06.844Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sandy Rogers\"]\nC2[\"Annjee Rogers\"]\nC3[\"Jimboy Rogers\"]\nC4[\"Aunt Hager\"]\nC5[\"Harriet\"]\nC6[\"Tempy Siles\"]\nC7[\"Maudel\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Wife of| C3\nC4 -->|Mother of| C2\nC4 -->|Mother of| C6\nC4 -->|Grandmother of| C1\nC5 -->|Daughter of| C4\nC6 -->|Aunt of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 147,
+        "total_tokens": 1705,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:07.966Z",
+      "finishedAt": "2026-09-10T17:50:07.966Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sandy Rogers\"]\nC2[\"Annjee Rogers\"]\nC3[\"Jimboy Rogers\"]\nC4[\"Aunt Hager\"]\nC5[\"Harriet\"]\nC6[\"Tempy Siles\"]\nC7[\"Maudel\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Wife of| C3\nC4 -->|Mother of| C2\nC4 -->|Mother of| C6\nC4 -->|Grandmother of| C1\nC5 -->|Daughter of| C4\nC6 -->|Aunt of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "409f514c56da4011d6a4edb0b75f21f0425466f209615ebbb2baa2cd084abb9a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "409f514c56da4011d6a4edb0b75f21f0425466f209615ebbb2baa2cd084abb9a",
+    "svgHash": "9408820aebc7137e5fb247479ed98bd848cb4380b040f1a1827768255f06a252",
+    "validatedAt": "2026-09-10T17:50:09.258Z",
+    "width": 1431.7340087890625,
+    "height": 268.5
+  },
+  "generatedAt": "2026-09-10T17:50:07.966Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 147,
+    "total_tokens": 1705,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

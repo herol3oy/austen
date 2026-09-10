@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "susanna-haswell-rowson/charlotte-temple",
+  "metadata": {
+    "title": "Charlotte Temple",
+    "authors": [
+      "Susanna Haswell Rowson"
+    ],
+    "year": "1791"
+  },
+  "inputHash": "919ff92d453bc5c69f8618f708be6a31e0da3b0d163bf55781ffa7e22264e1a4",
+  "promptHash": "d41fce4a42f4c7a3236dba7fd588d4cd4b534710c5d6d86d2b3dba64d68ac4a0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:08.033Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:08.034Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Charlotte Temple\"]\nC2[\"Montraville\"]\nC3[\"Belcour\"]\nC4[\"Mademoiselle La Rue\"]\nC5[\"Mr. Temple\"]\nC6[\"Mrs. Temple\"]\nC7[\"Lucy Temple\"]\nC8[\"John Temple\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Abandons| C1\nC3 -->|Betrays| C2\nC3 -->|Pursues| C1\nC4 -->|Manipulates| C1\nC4 -->|Betrays| C1\nC5 -->|Parent of| C1\nC6 -->|Parent of| C1\nC5 -->|Parent of| C7\nC6 -->|Parent of| C7\nC5 -->|Parent of| C8\nC6 -->|Parent of| C8\nC7 -->|Sibling of| C1\nC8 -->|Sibling of| C1\nC1 -->|Dies| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 222,
+        "total_tokens": 1781,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:10.084Z",
+      "finishedAt": "2026-09-10T18:10:10.084Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Charlotte Temple\"]\nC2[\"Montraville\"]\nC3[\"Belcour\"]\nC4[\"Mademoiselle La Rue\"]\nC5[\"Mr. Temple\"]\nC6[\"Mrs. Temple\"]\nC7[\"Lucy Temple\"]\nC8[\"John Temple\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Abandons| C1\nC3 -->|Betrays| C2\nC3 -->|Pursues| C1\nC4 -->|Manipulates| C1\nC4 -->|Betrays| C1\nC5 -->|Parent of| C1\nC6 -->|Parent of| C1\nC5 -->|Parent of| C7\nC6 -->|Parent of| C7\nC5 -->|Parent of| C8\nC6 -->|Parent of| C8\nC7 -->|Sibling of| C1\nC8 -->|Sibling of| C1\nC1 -->|Dies| C2",
+  "mermaidHash": "8b15f19b14cadffd27e61cc2ba5951d736d011e139ab98d7e606a88dcb156dc2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8b15f19b14cadffd27e61cc2ba5951d736d011e139ab98d7e606a88dcb156dc2",
+    "svgHash": "a992700ceedf2f5facbc479c70d26f5ccf151bbfdaf94c48fa333a6add63ac03",
+    "validatedAt": "2026-09-10T18:10:11.434Z",
+    "width": 1035.3006591796875,
+    "height": 459.5
+  },
+  "generatedAt": "2026-09-10T18:10:10.084Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 222,
+    "total_tokens": 1781,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

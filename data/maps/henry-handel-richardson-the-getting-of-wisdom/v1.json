@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-handel-richardson/the-getting-of-wisdom",
+  "metadata": {
+    "title": "The Getting of Wisdom",
+    "authors": [
+      "Henry Handel Richardson"
+    ],
+    "year": "1910"
+  },
+  "inputHash": "3132d4689f5bac522bc2d34a5fa946a2960077325f2b619084567c95e940d3c7",
+  "promptHash": "7c0debce22c5f174ad5a1b39bae37f12214596320869b22c2500ca2e50740ae8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:04.739Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:04.739Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Laura Rambotham\"]\nC2[\"Mrs. Rambotham\"]\nC3[\"Pin\"]\nC4[\"Evelyn Souttar\"]\nC5[\"M. P. L. Shepherd\"]\nC6[\"Lilian\"]\nC7[\"Bertha\"]\nC8[\"Kate Horner\"]\nC1 -->|Daughter of| C2\nC2 -->|Mother of| C1\nC1 -->|Sister of| C3\nC1 -->|Friend of| C4\nC1 -->|Student of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC4 -->|Friend of| C1\nC5 -->|Teacher of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 165,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:06.324Z",
+      "finishedAt": "2026-09-10T17:43:06.324Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Laura Rambotham\"]\nC2[\"Mrs. Rambotham\"]\nC3[\"Pin\"]\nC4[\"Evelyn Souttar\"]\nC5[\"M. P. L. Shepherd\"]\nC6[\"Lilian\"]\nC7[\"Bertha\"]\nC8[\"Kate Horner\"]\nC1 -->|Daughter of| C2\nC2 -->|Mother of| C1\nC1 -->|Sister of| C3\nC1 -->|Friend of| C4\nC1 -->|Student of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC4 -->|Friend of| C1\nC5 -->|Teacher of| C1",
+  "mermaidHash": "bbfbc1716e04a41c0f756656ba98f7f854b827907e2352d52df6e46ee9e7c504",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "bbfbc1716e04a41c0f756656ba98f7f854b827907e2352d52df6e46ee9e7c504",
+    "svgHash": "509234c413c0e6400ebc1be0f1ed1cdd0fc59e82e77157c20dddcc327fc1fd8c",
+    "validatedAt": "2026-09-10T17:43:07.638Z",
+    "width": 507.0630798339844,
+    "height": 659
+  },
+  "generatedAt": "2026-09-10T17:43:06.324Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 165,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

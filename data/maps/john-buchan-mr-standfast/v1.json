@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-buchan/mr-standfast",
+  "metadata": {
+    "title": "Mr. Standfast",
+    "authors": [
+      "John Buchan"
+    ],
+    "year": "1919"
+  },
+  "inputHash": "a906f351e9968938a7eefd6892d2ef766b7d7715fa799ff913d6c6da570c4327",
+  "promptHash": "458f9f87369e3b37376061d8aada3e14c802571d63b05f49bb3796c8413c088b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:55.762Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:55.762Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Richard Hannay\"]\nC2[\"Mary Lamington\"]\nC3[\"Sir Walter Bullivant\"]\nC4[\"Peter Pienaar\"]\nC5[\"John Blenkiron\"]\nC6[\"Andrew Amos\"]\nC7[\"Graf von Schwabing\"]\nC8[\"Moxon Ivery\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Serves| C3\nC3 -->|Commands| C1\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Enemy of| C7\nC1 -->|Enemy of| C8\nC7 -->|Enemy of| C1\nC8 -->|Enemy of| C1\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC6 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 210,
+        "total_tokens": 1768,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:57.328Z",
+      "finishedAt": "2026-09-10T17:46:57.328Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard Hannay\"]\nC2[\"Mary Lamington\"]\nC3[\"Sir Walter Bullivant\"]\nC4[\"Peter Pienaar\"]\nC5[\"John Blenkiron\"]\nC6[\"Andrew Amos\"]\nC7[\"Graf von Schwabing\"]\nC8[\"Moxon Ivery\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Serves| C3\nC3 -->|Commands| C1\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Enemy of| C7\nC1 -->|Enemy of| C8\nC7 -->|Enemy of| C1\nC8 -->|Enemy of| C1\nC4 -->|Friend of| C1\nC5 -->|Friend of| C1\nC6 -->|Friend of| C1",
+  "mermaidHash": "c3998cb5a5e58058240376eabafb68815e2bc9575cf207df84791a41f2e9ba92",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c3998cb5a5e58058240376eabafb68815e2bc9575cf207df84791a41f2e9ba92",
+    "svgHash": "a2585d8a8b00cbe3750e1dbee2e9aa91f9b0278aea2834c9ecd000cdad03eb30",
+    "validatedAt": "2026-09-10T17:46:58.634Z",
+    "width": 501.6083068847656,
+    "height": 659
+  },
+  "generatedAt": "2026-09-10T17:46:57.328Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 210,
+    "total_tokens": 1768,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

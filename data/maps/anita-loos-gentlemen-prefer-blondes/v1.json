@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anita-loos/gentlemen-prefer-blondes",
+  "metadata": {
+    "title": "Gentlemen Prefer Blondes",
+    "authors": [
+      "Anita Loos"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "bf37810c915523c1f064e90461a80584d5533cc315b07c0d7e7bd14576ec0e1e",
+  "promptHash": "37b257a7bb307e13bf829cd7fa6759ff88d18264b34bec97a7e5bba65174ec25",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:33.735Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:33.735Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lorelei Lee\"]\nC2[\"Dorothy Shaw\"]\nC3[\"Gus Eisman\"]\nC4[\"Henry Spoffard\"]\nC5[\"Mr. Jennings\"]\nC6[\"Gerry Lamson\"]\nC7[\"Sir Francis Beekman\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C3\nC1 -->|Engaged to| C4\nC1 -->|Daughter of| C5\nC2 -->|Friend of| C1\nC3 -->|Loves| C1\nC4 -->|Engaged to| C1\nC6 -->|Friend of| C1\nC7 -->|Flirts with| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 151,
+        "total_tokens": 1714,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:35.784Z",
+      "finishedAt": "2026-09-10T17:25:35.784Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lorelei Lee\"]\nC2[\"Dorothy Shaw\"]\nC3[\"Gus Eisman\"]\nC4[\"Henry Spoffard\"]\nC5[\"Mr. Jennings\"]\nC6[\"Gerry Lamson\"]\nC7[\"Sir Francis Beekman\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C3\nC1 -->|Engaged to| C4\nC1 -->|Daughter of| C5\nC2 -->|Friend of| C1\nC3 -->|Loves| C1\nC4 -->|Engaged to| C1\nC6 -->|Friend of| C1\nC7 -->|Flirts with| C1",
+  "mermaidHash": "711c7573880bf0f6ef115ad5e1245196c0f80cf3f893eea2b31cb894c8f009d1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "711c7573880bf0f6ef115ad5e1245196c0f80cf3f893eea2b31cb894c8f009d1",
+    "svgHash": "ee2c70cb1ff082ab0b99b9f8cb8bfe2cdad61465b0ab94829b9b57415c6ccdf0",
+    "validatedAt": "2026-09-10T17:25:37.115Z",
+    "width": 752.5912475585938,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:25:35.784Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 151,
+    "total_tokens": 1714,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

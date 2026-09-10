@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-conan-doyle/the-lost-world",
+  "metadata": {
+    "title": "The Lost World",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "year": "1912"
+  },
+  "inputHash": "90e358672eb4572c658a0e504c2c30d81016f694b9986917cc8b44364adf649c",
+  "promptHash": "765f4deaa7dee76c8706cb4a6d0862aef12ae493465f11961ac2895a19e427fb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:00.262Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:00.262Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Edward Malone\"]\nC2[\"Professor Challenger\"]\nC3[\"Lord John Roxton\"]\nC4[\"Professor Summerlee\"]\nC5[\"Gomez\"]\nC6[\"Zambo\"]\nC7[\"Gladys Hungerton\"]\nC1 -->|Loves| C7\nC1 -->|Serves| C2\nC2 -->|Leads| C1\nC2 -->|Rival of| C4\nC2 -->|Commands| C6\nC3 -->|Friend of| C1\nC3 -->|Allied with| C2\nC4 -->|Rival of| C2\nC5 -->|Betrays| C2\nC5 -->|Kills| C3\nC6 -->|Serves| C2\nC6 -->|Protects| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 173,
+        "total_tokens": 1731,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:01.907Z",
+      "finishedAt": "2026-09-10T17:28:01.907Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Edward Malone\"]\nC2[\"Professor Challenger\"]\nC3[\"Lord John Roxton\"]\nC4[\"Professor Summerlee\"]\nC5[\"Gomez\"]\nC6[\"Zambo\"]\nC7[\"Gladys Hungerton\"]\nC1 -->|Loves| C7\nC1 -->|Serves| C2\nC2 -->|Leads| C1\nC2 -->|Rival of| C4\nC2 -->|Commands| C6\nC3 -->|Friend of| C1\nC3 -->|Allied with| C2\nC4 -->|Rival of| C2\nC5 -->|Betrays| C2\nC5 -->|Kills| C3\nC6 -->|Serves| C2\nC6 -->|Protects| C1",
+  "mermaidHash": "df11e216a319177a9e84ddb09611704f241c2ef4cddb59944e9bbdda4f743eaf",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "df11e216a319177a9e84ddb09611704f241c2ef4cddb59944e9bbdda4f743eaf",
+    "svgHash": "55dd4f79f1d5e8edebf2f44387d9c766f365db339ada533decb721004bf6f0e5",
+    "validatedAt": "2026-09-10T17:28:03.270Z",
+    "width": 1279.8028564453125,
+    "height": 300.75
+  },
+  "generatedAt": "2026-09-10T17:28:01.907Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 173,
+    "total_tokens": 1731,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

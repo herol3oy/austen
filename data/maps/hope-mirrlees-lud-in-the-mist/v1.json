@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "hope-mirrlees/lud-in-the-mist",
+  "metadata": {
+    "title": "Lud-in-the-Mist",
+    "authors": [
+      "Hope Mirrlees"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "d55fbe2d65245dd86d4b364fc4120d37d78439424530f5b29d22415886255d36",
+  "promptHash": "4b3bca409d4c3942f5a827d42d5961a0c3f2e35089eb2ad138f6c85b61fd88d0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:30.839Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:30.839Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nathaniel Chanticleer\"]\nC2[\"Ranulph Chanticleer\"]\nC3[\"Luke Chanticleer\"]\nC4[\"Ambrose Honeysuckle\"]\nC5[\"Duke Aubrey\"]\nC6[\"Endymion Leer\"]\nC7[\"Master Nathaniel Chanticleer\"]\nC8[\"Dame Marigold Chanticleer\"]\nC1 -->|Parent of| C2\nC1 -->|Parent of| C3\nC1 -->|Married to| C8\nC2 -->|Friend of| C4\nC4 -->|Friend of| C2\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Serves| C5\nC5 -->|Commands| C1\nC6 -->|Enemy of| C1\nC6 -->|Betrays| C1\nC6 -->|Kills| C4\nC1 -->|Protects| C2\nC2 -->|Son of| C1\nC3 -->|Son of| C1\nC7 -->|Alias of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 244,
+        "total_tokens": 1805,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:32.425Z",
+      "finishedAt": "2026-09-10T17:44:32.425Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nathaniel Chanticleer\"]\nC2[\"Ranulph Chanticleer\"]\nC3[\"Luke Chanticleer\"]\nC4[\"Ambrose Honeysuckle\"]\nC5[\"Duke Aubrey\"]\nC6[\"Endymion Leer\"]\nC7[\"Master Nathaniel Chanticleer\"]\nC8[\"Dame Marigold Chanticleer\"]\nC1 -->|Parent of| C2\nC1 -->|Parent of| C3\nC1 -->|Married to| C8\nC2 -->|Friend of| C4\nC4 -->|Friend of| C2\nC1 -->|Friend of| C4\nC4 -->|Friend of| C1\nC1 -->|Serves| C5\nC5 -->|Commands| C1\nC6 -->|Enemy of| C1\nC6 -->|Betrays| C1\nC6 -->|Kills| C4\nC1 -->|Protects| C2\nC2 -->|Son of| C1\nC3 -->|Son of| C1\nC7 -->|Alias of| C1",
+  "mermaidHash": "6600d59cfafe1b781b91ba724f77a16759af323260b9da0e47d3dcd464f57d1d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6600d59cfafe1b781b91ba724f77a16759af323260b9da0e47d3dcd464f57d1d",
+    "svgHash": "cd58e47e3514adb16d36747620abced14304a51cd9d897eb076aa162d8348a16",
+    "validatedAt": "2026-09-10T17:44:33.739Z",
+    "width": 1277.073486328125,
+    "height": 567.5859375
+  },
+  "generatedAt": "2026-09-10T17:44:32.425Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 244,
+    "total_tokens": 1805,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

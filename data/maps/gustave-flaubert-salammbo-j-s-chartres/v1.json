@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "gustave-flaubert/salammbo/j-s-chartres",
+  "metadata": {
+    "title": "Salammbô",
+    "authors": [
+      "Gustave Flaubert"
+    ],
+    "year": "1862"
+  },
+  "inputHash": "9b1d2240bafcba8c59518b8a13b3a38886b750afac5adf09608a4f4724ef8e78",
+  "promptHash": "e27814c249e03f07cc4992c093e43b4322240da72cd9393802d7062cc25a93cb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:16.093Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:16.093Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Salammbô\"]\nC2[\"Mathô\"]\nC3[\"Hamilcar Barca\"]\nC4[\"Spendius\"]\nC5[\"Narr' Havas\"]\nC6[\"Gisco\"]\nC7[\"Hanno\"]\nC8[\"Schahabarim\"]\nC3 -->|Parent of| C1\nC1 -->|Priestess of| C8\nC8 -->|Mentor of| C1\nC2 -->|Loves| C1\nC1 -->|Loves| C2\nC2 -->|Leads| C4\nC4 -->|Betrays| C2\nC2 -->|Steals| C5\nC5 -->|Protects| C1\nC6 -->|Commands| C2\nC7 -->|Enemy of| C3\nC3 -->|Enemy of| C7\nC1 -->|Kills| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 196,
+        "total_tokens": 1757,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:18.286Z",
+      "finishedAt": "2026-09-10T17:41:18.286Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Salammbô\"]\nC2[\"Mathô\"]\nC3[\"Hamilcar Barca\"]\nC4[\"Spendius\"]\nC5[\"Narr' Havas\"]\nC6[\"Gisco\"]\nC7[\"Hanno\"]\nC8[\"Schahabarim\"]\nC3 -->|Parent of| C1\nC1 -->|Priestess of| C8\nC8 -->|Mentor of| C1\nC2 -->|Loves| C1\nC1 -->|Loves| C2\nC2 -->|Leads| C4\nC4 -->|Betrays| C2\nC2 -->|Steals| C5\nC5 -->|Protects| C1\nC6 -->|Commands| C2\nC7 -->|Enemy of| C3\nC3 -->|Enemy of| C7\nC1 -->|Kills| C2",
+  "mermaidHash": "ffd822dc41c0da4930e5a42874d61eeea37e2610e45ff209ea4c4fe4159d27c0",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ffd822dc41c0da4930e5a42874d61eeea37e2610e45ff209ea4c4fe4159d27c0",
+    "svgHash": "a75639287e72ca748a3e4f362d58d38ee0d3bb9e2151f8b794dd4b75852e3727",
+    "validatedAt": "2026-09-10T17:41:19.580Z",
+    "width": 941.005859375,
+    "height": 331.25
+  },
+  "generatedAt": "2026-09-10T17:41:18.286Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 196,
+    "total_tokens": 1757,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "seneca/dialogues/aubrey-stewart",
+  "metadata": {
+    "title": "Dialogues",
+    "authors": [
+      "Seneca"
+    ],
+    "year": "1887"
+  },
+  "inputHash": "92512a4ef3a0d3ca8edc4d7bca2dc3fea634e9915ff79cba784144a27ce5a508",
+  "promptHash": "d16308c84d2a8deabd257176fc54c172e0a46a023ec14c6a7de3891fc7beae27",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:10.846Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:10.846Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 2,
+        "total_tokens": 1557,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 147
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:11.914Z",
+      "finishedAt": "2026-09-10T18:09:11.914Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:09:11.914Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2,
+    "total_tokens": 1557,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 147
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/the-adventures-of-sally",
+  "metadata": {
+    "title": "The Adventures of Sally",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "991c2a7da850e5bcecac1571c7fe527ee0436a65929ac6570d61e395ddb96f83",
+  "promptHash": "1fd1cd54ad38d0bdbd9e139ae41da6d273cf7fcc70c10d90489a2104b6a8e9cc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:01.721Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:01.721Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sally Nicholas\"]\nC2[\"Fillmore Nicholas\"]\nC3[\"Ginger Kemp\"]\nC4[\"Bruce Carmyle\"]\nC5[\"Gerald Foster\"]\nC6[\"Elsa Doland\"]\nC7[\"Mr. Abrahams\"]\nC1 -->|Sister of| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Former fiancee of| C5\nC5 -->|Engaged to| C6\nC2 -->|Friend of| C3\nC2 -->|Business partner of| C7\nC1 -->|Friend of| C6\nC4 -->|Loves| C1\nC4 -->|Cousin of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 161,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:03.263Z",
+      "finishedAt": "2026-09-10T18:06:03.263Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sally Nicholas\"]\nC2[\"Fillmore Nicholas\"]\nC3[\"Ginger Kemp\"]\nC4[\"Bruce Carmyle\"]\nC5[\"Gerald Foster\"]\nC6[\"Elsa Doland\"]\nC7[\"Mr. Abrahams\"]\nC1 -->|Sister of| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Former fiancee of| C5\nC5 -->|Engaged to| C6\nC2 -->|Friend of| C3\nC2 -->|Business partner of| C7\nC1 -->|Friend of| C6\nC4 -->|Loves| C1\nC4 -->|Cousin of| C3",
+  "mermaidHash": "c2761e5b91bfb0fd2ee5e172ecfa1c76de23ca51d12b2e5ddc3e369e8978a140",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c2761e5b91bfb0fd2ee5e172ecfa1c76de23ca51d12b2e5ddc3e369e8978a140",
+    "svgHash": "4e77c1b000d7ef6ffce2e4230223b42c6596337c710dbdb7221a77e079dbbfbc",
+    "validatedAt": "2026-09-10T18:06:04.629Z",
+    "width": 1093.094970703125,
+    "height": 406
+  },
+  "generatedAt": "2026-09-10T18:06:03.263Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 161,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

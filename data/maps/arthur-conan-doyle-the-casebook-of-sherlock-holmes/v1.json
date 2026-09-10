@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-conan-doyle/the-casebook-of-sherlock-holmes",
+  "metadata": {
+    "title": "The Casebook of Sherlock Holmes",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "124f4f51269ca0f7491901f7ffe394c0f6e8e6afbb7a563ed28229442a0bed0e",
+  "promptHash": "d169dc0bb415b408f563abd53c178ba91ae876985dd9bb276f8d3429bde922fc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:54.312Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:54.312Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"John Watson\"]\nC3[\"Inspector Lestrade\"]\nC4[\"Mycroft Holmes\"]\nC5[\"Irene Adler\"]\nC6[\"Professor Moriarty\"]\nC7[\"Mary Morstan\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC1 -->|Sibling of| C4\nC4 -->|Sibling of| C1\nC1 -->|Enemy of| C6\nC6 -->|Enemy of| C1\nC1 -->|Admires| C5\nC5 -->|Admires| C1\nC2 -->|Married to| C7\nC1 -->|Works with| C3\nC3 -->|Works with| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 169,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:56.176Z",
+      "finishedAt": "2026-09-10T17:27:56.176Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"John Watson\"]\nC3[\"Inspector Lestrade\"]\nC4[\"Mycroft Holmes\"]\nC5[\"Irene Adler\"]\nC6[\"Professor Moriarty\"]\nC7[\"Mary Morstan\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC1 -->|Sibling of| C4\nC4 -->|Sibling of| C1\nC1 -->|Enemy of| C6\nC6 -->|Enemy of| C1\nC1 -->|Admires| C5\nC5 -->|Admires| C1\nC2 -->|Married to| C7\nC1 -->|Works with| C3\nC3 -->|Works with| C1",
+  "mermaidHash": "946aa90145497761dc8f35c51165425e9753940697e8b95fa06575ef38ead7f2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "946aa90145497761dc8f35c51165425e9753940697e8b95fa06575ef38ead7f2",
+    "svgHash": "b685cbefcf8e42d02f5caef6cd0c61f14dba97843472c5a2cb90be5ca7fb832c",
+    "validatedAt": "2026-09-10T17:27:57.560Z",
+    "width": 773.0048828125,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T17:27:56.176Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 169,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

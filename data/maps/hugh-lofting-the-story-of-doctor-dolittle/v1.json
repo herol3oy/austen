@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "hugh-lofting/the-story-of-doctor-dolittle",
+  "metadata": {
+    "title": "The Story of Doctor Dolittle",
+    "authors": [
+      "Hugh Lofting"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "c66b5b44505aecbae1ee4d66df131851b4715c118877bebb1bbe5143dcda38f8",
+  "promptHash": "a95bde54b4ec00b9181461ee28a4833f90783693e8158e5326eeea998d8b1ebf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:44:38.895Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:44:38.895Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Doctor Dolittle\"]\nC2[\"Polynesia\"]\nC3[\"Tommy Stubbins\"]\nC4[\"Jip\"]\nC5[\"Dab-Dab\"]\nC6[\"Gub-Gub\"]\nC7[\"Chee-Chee\"]\nC8[\"Prince Bumpo\"]\nC1 -->|Owns| C2\nC1 -->|Mentor of| C3\nC1 -->|Owns| C4\nC1 -->|Owns| C5\nC1 -->|Owns| C6\nC1 -->|Owns| C7\nC1 -->|Friend of| C8\nC2 -->|Teaches| C1\nC3 -->|Friend of| C1\nC4 -->|Protects| C1\nC5 -->|Serves| C1\nC6 -->|Serves| C1\nC7 -->|Serves| C1\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 205,
+        "total_tokens": 1767,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:44:40.486Z",
+      "finishedAt": "2026-09-10T17:44:40.486Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Doctor Dolittle\"]\nC2[\"Polynesia\"]\nC3[\"Tommy Stubbins\"]\nC4[\"Jip\"]\nC5[\"Dab-Dab\"]\nC6[\"Gub-Gub\"]\nC7[\"Chee-Chee\"]\nC8[\"Prince Bumpo\"]\nC1 -->|Owns| C2\nC1 -->|Mentor of| C3\nC1 -->|Owns| C4\nC1 -->|Owns| C5\nC1 -->|Owns| C6\nC1 -->|Owns| C7\nC1 -->|Friend of| C8\nC2 -->|Teaches| C1\nC3 -->|Friend of| C1\nC4 -->|Protects| C1\nC5 -->|Serves| C1\nC6 -->|Serves| C1\nC7 -->|Serves| C1\nC8 -->|Friend of| C1",
+  "mermaidHash": "0fc7165cc78248966cafa9b96f721ce1e7fce223156b9e030a282e2eea59e2ae",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0fc7165cc78248966cafa9b96f721ce1e7fce223156b9e030a282e2eea59e2ae",
+    "svgHash": "89a2172d22de4b1b325d4bac8feaee9f7def3aa29dda4b1e33500c67dd40b4ad",
+    "validatedAt": "2026-09-10T17:44:41.777Z",
+    "width": 462.79022216796875,
+    "height": 659
+  },
+  "generatedAt": "2026-09-10T17:44:40.486Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 205,
+    "total_tokens": 1767,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

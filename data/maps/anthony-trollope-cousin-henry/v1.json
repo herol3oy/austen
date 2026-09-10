@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/cousin-henry",
+  "metadata": {
+    "title": "Cousin Henry",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1879"
+  },
+  "inputHash": "1c3848424c75dd1d8a4d19ae12ccf6f91f95ccdef6e055840b00cb0e6e051614",
+  "promptHash": "472239781e14da3fa2cbbe45b1e9acd49395b2ea6ec451f05b1a28b45ca2ad7c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:24.933Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:24.933Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Cousin Henry\"]\nC2[\"Indefer Jones\"]\nC3[\"Isabel Brodrick\"]\nC4[\"Mr. Brodrick\"]\nC5[\"Mrs. Brodrick\"]\nC6[\"John Griffith\"]\nC7[\"Mr. Apjohn\"]\nC8[\"Lingen\"]\nC1 -->|Nephew of| C2\nC2 -->|Uncle of| C3\nC3 -->|Cousin of| C1\nC3 -->|Daughter of| C4\nC3 -->|Daughter of| C5\nC4 -->|Father of| C3\nC5 -->|Mother of| C3\nC6 -->|Cousin of| C1\nC6 -->|Cousin of| C3\nC6 -->|Loves| C3\nC3 -->|Loves| C6\nC7 -->|Lawyer of| C2\nC7 -->|Lawyer of| C1\nC8 -->|Lawyer of| C1\nC1 -->|Inherits from| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 231,
+        "total_tokens": 1789,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:26.655Z",
+      "finishedAt": "2026-09-10T17:26:26.655Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Cousin Henry\"]\nC2[\"Indefer Jones\"]\nC3[\"Isabel Brodrick\"]\nC4[\"Mr. Brodrick\"]\nC5[\"Mrs. Brodrick\"]\nC6[\"John Griffith\"]\nC7[\"Mr. Apjohn\"]\nC8[\"Lingen\"]\nC1 -->|Nephew of| C2\nC2 -->|Uncle of| C3\nC3 -->|Cousin of| C1\nC3 -->|Daughter of| C4\nC3 -->|Daughter of| C5\nC4 -->|Father of| C3\nC5 -->|Mother of| C3\nC6 -->|Cousin of| C1\nC6 -->|Cousin of| C3\nC6 -->|Loves| C3\nC3 -->|Loves| C6\nC7 -->|Lawyer of| C2\nC7 -->|Lawyer of| C1\nC8 -->|Lawyer of| C1\nC1 -->|Inherits from| C2",
+  "mermaidHash": "9570e1db0d17f886a316962d4a02a91c5b03257646f522895153d3ae081a31f2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9570e1db0d17f886a316962d4a02a91c5b03257646f522895153d3ae081a31f2",
+    "svgHash": "addeb2a653b2bac466b00274d2010ef158ee82d8a75a4c8c3bf5acf957a2bfb4",
+    "validatedAt": "2026-09-10T17:26:28.088Z",
+    "width": 1262.712646484375,
+    "height": 309.968017578125
+  },
+  "generatedAt": "2026-09-10T17:26:26.655Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 231,
+    "total_tokens": 1789,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

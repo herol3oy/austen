@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "franklin-w-dixon/the-tower-treasure",
+  "metadata": {
+    "title": "The Tower Treasure",
+    "authors": [
+      "Franklin W. Dixon"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "b352e140a9a9baddc3b912fb27119ea492b1b64317e151894732a39744973d84",
+  "promptHash": "ceb78a6cd560e5be3a1f8ac61fb48250b0310afb9f0f360e69f489f8297135cc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:38:06.903Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:38:06.903Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Chet Morton\"]\nC6[\"Chief Collig\"]\nC7[\"John Red Jackley\"]\nC8[\"Hurd Applegate\"]\nC1 -->|Sibling of| C2\nC3 -->|Parent of| C1\nC3 -->|Parent of| C2\nC4 -->|Parent of| C1\nC4 -->|Parent of| C2\nC3 -->|Married to| C4\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC3 -->|Commands| C6\nC7 -->|Steals from| C8\nC7 -->|Betrays| C8\nC1 -->|Investigates| C7\nC2 -->|Investigates| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 189,
+        "total_tokens": 1748,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:38:08.393Z",
+      "finishedAt": "2026-09-10T17:38:08.393Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Frank Hardy\"]\nC2[\"Joe Hardy\"]\nC3[\"Fenton Hardy\"]\nC4[\"Laura Hardy\"]\nC5[\"Chet Morton\"]\nC6[\"Chief Collig\"]\nC7[\"John Red Jackley\"]\nC8[\"Hurd Applegate\"]\nC1 -->|Sibling of| C2\nC3 -->|Parent of| C1\nC3 -->|Parent of| C2\nC4 -->|Parent of| C1\nC4 -->|Parent of| C2\nC3 -->|Married to| C4\nC1 -->|Friend of| C5\nC2 -->|Friend of| C5\nC3 -->|Commands| C6\nC7 -->|Steals from| C8\nC7 -->|Betrays| C8\nC1 -->|Investigates| C7\nC2 -->|Investigates| C7",
+  "mermaidHash": "2cb46967d5fdfe98f98b979d8f607dab6973ddedf464130ece60356dfcd656d2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "2cb46967d5fdfe98f98b979d8f607dab6973ddedf464130ece60356dfcd656d2",
+    "svgHash": "fa4ba6e2cfa8b44586266d8237d5d7cb716206472e303fc8f06a78293ecd608b",
+    "validatedAt": "2026-09-10T17:38:09.746Z",
+    "width": 1531.4696044921875,
+    "height": 384
+  },
+  "generatedAt": "2026-09-10T17:38:08.393Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 189,
+    "total_tokens": 1748,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

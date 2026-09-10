@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-dean-howells/the-rise-of-silas-lapham",
+  "metadata": {
+    "title": "The Rise of Silas Lapham",
+    "authors": [
+      "William Dean Howells"
+    ],
+    "year": "1885"
+  },
+  "inputHash": "9b0e8e8b34e65836a476caf5c172f337b236d815a739a15454eec68dbb29734f",
+  "promptHash": "e3103a49e1c9d7e8c9c3ef59eb951da2966b097f69ac4955cbec9a04e9ea1dcf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:51.167Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:51.167Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Silas Lapham\"]\nC2[\"Persis Lapham\"]\nC3[\"Penelope Lapham\"]\nC4[\"Irene Lapham\"]\nC5[\"Tom Corey\"]\nC6[\"Bromfield Corey\"]\nC7[\"Anna Corey\"]\nC8[\"Rogers\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC3 -->|Sibling of| C4\nC5 -->|Loves| C3\nC4 -->|Loves| C5\nC6 -->|Married to| C7\nC6 -->|Parent of| C5\nC7 -->|Parent of| C5\nC1 -->|Former partner of| C8\nC8 -->|Blackmails| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 196,
+        "total_tokens": 1758,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:52.391Z",
+      "finishedAt": "2026-09-10T18:13:52.391Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Silas Lapham\"]\nC2[\"Persis Lapham\"]\nC3[\"Penelope Lapham\"]\nC4[\"Irene Lapham\"]\nC5[\"Tom Corey\"]\nC6[\"Bromfield Corey\"]\nC7[\"Anna Corey\"]\nC8[\"Rogers\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC3 -->|Sibling of| C4\nC5 -->|Loves| C3\nC4 -->|Loves| C5\nC6 -->|Married to| C7\nC6 -->|Parent of| C5\nC7 -->|Parent of| C5\nC1 -->|Former partner of| C8\nC8 -->|Blackmails| C1",
+  "mermaidHash": "34fca72d3025126a9c4b107c351fd522da1c9a5409e966c63ac0bf92e8d39149",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "34fca72d3025126a9c4b107c351fd522da1c9a5409e966c63ac0bf92e8d39149",
+    "svgHash": "744f174ac52f357ea4596d3e4f0c6094a6f27368502b2fa552ff1ac5e1311d81",
+    "validatedAt": "2026-09-10T18:13:53.866Z",
+    "width": 1307.70263671875,
+    "height": 517
+  },
+  "generatedAt": "2026-09-10T18:13:52.391Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 196,
+    "total_tokens": 1758,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-schuyler/black-no-more",
+  "metadata": {
+    "title": "Black No More",
+    "authors": [
+      "George Schuyler"
+    ],
+    "year": "1931"
+  },
+  "inputHash": "f987c6a86f7faf7381a0906b30c7ddaf2eef447c61fcad98dea8c35ed1c071e2",
+  "promptHash": "0da4470812645ada460451d826273d4e056d2e7e5fc463dfe2b15eab1d9c6421",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:50.757Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:50.757Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Max Disher\"]\nC2[\"Matthew Fisher\"]\nC3[\"Bunny Brown\"]\nC4[\"Helen Givens\"]\nC5[\"Dr. Junius Crookman\"]\nC6[\"Reverend Givens\"]\nC7[\"Harriet Givens\"]\nC8[\"Arthur Snobbcraft\"]\nC1 -->|Friend of| C3\nC1 -->|Loves| C4\nC1 -->|Ally of| C2\nC2 -->|Friend of| C3\nC2 -->|Ally of| C1\nC3 -->|Friend of| C1\nC3 -->|Friend of| C2\nC4 -->|Daughter of| C6\nC4 -->|Daughter of| C7\nC4 -->|Married to| C1\nC5 -->|Creator of| C1\nC5 -->|Creator of| C2\nC6 -->|Father of| C4\nC6 -->|Husband of| C7\nC7 -->|Mother of| C4\nC7 -->|Wife of| C6\nC8 -->|Enemy of| C1\nC8 -->|Enemy of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 259,
+        "total_tokens": 1816,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:53.054Z",
+      "finishedAt": "2026-09-10T17:40:53.054Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Max Disher\"]\nC2[\"Matthew Fisher\"]\nC3[\"Bunny Brown\"]\nC4[\"Helen Givens\"]\nC5[\"Dr. Junius Crookman\"]\nC6[\"Reverend Givens\"]\nC7[\"Harriet Givens\"]\nC8[\"Arthur Snobbcraft\"]\nC1 -->|Friend of| C3\nC1 -->|Loves| C4\nC1 -->|Ally of| C2\nC2 -->|Friend of| C3\nC2 -->|Ally of| C1\nC3 -->|Friend of| C1\nC3 -->|Friend of| C2\nC4 -->|Daughter of| C6\nC4 -->|Daughter of| C7\nC4 -->|Married to| C1\nC5 -->|Creator of| C1\nC5 -->|Creator of| C2\nC6 -->|Father of| C4\nC6 -->|Husband of| C7\nC7 -->|Mother of| C4\nC7 -->|Wife of| C6\nC8 -->|Enemy of| C1\nC8 -->|Enemy of| C2",
+  "mermaidHash": "b77d53ad1045c3f468fbb574a9847039581c4e21bf6ff86c8ee0d7751d0b146d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b77d53ad1045c3f468fbb574a9847039581c4e21bf6ff86c8ee0d7751d0b146d",
+    "svgHash": "2f6448f7b7fc4a0558940e78d2f543e6bba8b18d55cf5bf23da9261365e78537",
+    "validatedAt": "2026-09-10T17:40:54.402Z",
+    "width": 1328.185302734375,
+    "height": 509.0927429199219
+  },
+  "generatedAt": "2026-09-10T17:40:53.054Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 259,
+    "total_tokens": 1816,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

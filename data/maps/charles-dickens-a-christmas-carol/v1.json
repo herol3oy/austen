@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/a-christmas-carol",
+  "metadata": {
+    "title": "A Christmas Carol",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1843"
+  },
+  "inputHash": "24d1035cfb7b5ab72d59dc62e736d97624ffce423ed959ecaa4e3a6295c9f1a5",
+  "promptHash": "da92f56e8da52371f8dde58805b354c998ea769f452fc4288e2b905a5a49372f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:29:46.464Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:29:46.464Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ebenezer Scrooge\"]\nC2[\"Bob Cratchit\"]\nC3[\"Tiny Tim\"]\nC4[\"Fred\"]\nC5[\"Jacob Marley\"]\nC6[\"Ghost of Christmas Past\"]\nC7[\"Ghost of Christmas Present\"]\nC8[\"Ghost of Christmas Yet to Come\"]\nC1 -->|Employer of| C2\nC1 -->|Uncle of| C4\nC2 -->|Father of| C3\nC1 -->|Former partner of| C5\nC5 -->|Warns| C1\nC6 -->|Guides| C1\nC7 -->|Guides| C1\nC8 -->|Guides| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 148,
+        "total_tokens": 1704,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:29:48.325Z",
+      "finishedAt": "2026-09-10T17:29:48.325Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ebenezer Scrooge\"]\nC2[\"Bob Cratchit\"]\nC3[\"Tiny Tim\"]\nC4[\"Fred\"]\nC5[\"Jacob Marley\"]\nC6[\"Ghost of Christmas Past\"]\nC7[\"Ghost of Christmas Present\"]\nC8[\"Ghost of Christmas Yet to Come\"]\nC1 -->|Employer of| C2\nC1 -->|Uncle of| C4\nC2 -->|Father of| C3\nC1 -->|Former partner of| C5\nC5 -->|Warns| C1\nC6 -->|Guides| C1\nC7 -->|Guides| C1\nC8 -->|Guides| C1",
+  "mermaidHash": "7f9131de2884fb95c09c8f7b47020b0d1cfa825ec10352270fa09a87202e0132",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7f9131de2884fb95c09c8f7b47020b0d1cfa825ec10352270fa09a87202e0132",
+    "svgHash": "ec64f5186a9f27df7243ee52fc4dbca55e32c958c3985cb00e2a51e9f7858e88",
+    "validatedAt": "2026-09-10T17:29:49.659Z",
+    "width": 1084.1689453125,
+    "height": 278.3999938964844
+  },
+  "generatedAt": "2026-09-10T17:29:48.325Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 148,
+    "total_tokens": 1704,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

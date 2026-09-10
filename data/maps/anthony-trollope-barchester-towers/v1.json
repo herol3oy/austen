@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/barchester-towers",
+  "metadata": {
+    "title": "Barchester Towers",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1857"
+  },
+  "inputHash": "99301db38a68d2c49d7b91633e6266f3339612c12affd69036ff23b13234c392",
+  "promptHash": "d9c4cb52af64955d736c2f6b6056beec67ddad1f4fa421c640a6a55720531019",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:19.047Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:19.047Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Septimus Harding\"]\nC2[\"Eleanor Bold\"]\nC3[\"John Bold\"]\nC4[\"Obadiah Slope\"]\nC5[\"Mrs. Proudie\"]\nC6[\"Bishop Proudie\"]\nC7[\"Archdeacon Grantly\"]\nC8[\"Mr. Arabin\"]\nC1 -->|Father of| C2\nC2 -->|Widow of| C3\nC4 -->|Pursues| C2\nC5 -->|Wife of| C6\nC5 -->|Controls| C4\nC6 -->|Bishop of| C1\nC7 -->|Son-in-law of| C1\nC7 -->|Rival of| C4\nC8 -->|Loves| C2\nC8 -->|Friend of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 172,
+        "total_tokens": 1729,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:20.370Z",
+      "finishedAt": "2026-09-10T17:26:20.370Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Septimus Harding\"]\nC2[\"Eleanor Bold\"]\nC3[\"John Bold\"]\nC4[\"Obadiah Slope\"]\nC5[\"Mrs. Proudie\"]\nC6[\"Bishop Proudie\"]\nC7[\"Archdeacon Grantly\"]\nC8[\"Mr. Arabin\"]\nC1 -->|Father of| C2\nC2 -->|Widow of| C3\nC4 -->|Pursues| C2\nC5 -->|Wife of| C6\nC5 -->|Controls| C4\nC6 -->|Bishop of| C1\nC7 -->|Son-in-law of| C1\nC7 -->|Rival of| C4\nC8 -->|Loves| C2\nC8 -->|Friend of| C7",
+  "mermaidHash": "eead2821c7e775a1e58dbffdb0155aed959ffe67defc2706a0603a3d0bc04fa4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "eead2821c7e775a1e58dbffdb0155aed959ffe67defc2706a0603a3d0bc04fa4",
+    "svgHash": "6c6b96923d249f140b5f1eb76c9bab83bc606ce534fe290beac0c5ff9df63f4f",
+    "validatedAt": "2026-09-10T17:26:21.807Z",
+    "width": 1282.9483642578125,
+    "height": 308.75
+  },
+  "generatedAt": "2026-09-10T17:26:20.370Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 172,
+    "total_tokens": 1729,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

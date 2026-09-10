@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-dean-howells/a-hazard-of-new-fortunes",
+  "metadata": {
+    "title": "A Hazard of New Fortunes",
+    "authors": [
+      "William Dean Howells"
+    ],
+    "year": "1890"
+  },
+  "inputHash": "d5ed0867b0c8284843ac3fe9ee809c6990f00562b376c2b3c4b9fc5d02a8215c",
+  "promptHash": "30f7c589873145ccccf8598a91144848a65ff0de93b56e2e0fbdbd04c61bebbf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:47.245Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:47.245Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Basil March\"]\nC2[\"Isabel March\"]\nC3[\"Fulkerson\"]\nC4[\"Jacob Dryfoos\"]\nC5[\"Christine Dryfoos\"]\nC6[\"Conrad Dryfoos\"]\nC7[\"Lindy\"]\nC8[\"Margaret Vance\"]\nC1 -->|Married to| C2\nC1 -->|Employed by| C3\nC3 -->|Works for| C4\nC4 -->|Father of| C5\nC4 -->|Father of| C6\nC4 -->|Guardian of| C7\nC5 -->|Sister of| C6\nC6 -->|Loves| C8\nC8 -->|Friend of| C6\nC1 -->|Friend of| C8\nC6 -->|Killed by| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 176,
+        "total_tokens": 1737,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:49.011Z",
+      "finishedAt": "2026-09-10T18:13:49.011Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Basil March\"]\nC2[\"Isabel March\"]\nC3[\"Fulkerson\"]\nC4[\"Jacob Dryfoos\"]\nC5[\"Christine Dryfoos\"]\nC6[\"Conrad Dryfoos\"]\nC7[\"Lindy\"]\nC8[\"Margaret Vance\"]\nC1 -->|Married to| C2\nC1 -->|Employed by| C3\nC3 -->|Works for| C4\nC4 -->|Father of| C5\nC4 -->|Father of| C6\nC4 -->|Guardian of| C7\nC5 -->|Sister of| C6\nC6 -->|Loves| C8\nC8 -->|Friend of| C6\nC1 -->|Friend of| C8\nC6 -->|Killed by| C4",
+  "mermaidHash": "58ef9415ffaa16e8ae08d077483f75a452923a05ea5aaf9b4b4d6b67e7554898",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "58ef9415ffaa16e8ae08d077483f75a452923a05ea5aaf9b4b4d6b67e7554898",
+    "svgHash": "8867211f532bf5c8fa9ff9e052c2b4cb00e985ad49633be20bb78abea7fd0714",
+    "validatedAt": "2026-09-10T18:13:50.383Z",
+    "width": 1564.3250732421875,
+    "height": 310.5
+  },
+  "generatedAt": "2026-09-10T18:13:49.011Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 176,
+    "total_tokens": 1737,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

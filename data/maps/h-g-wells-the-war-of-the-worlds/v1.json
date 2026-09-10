@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-war-of-the-worlds",
+  "metadata": {
+    "title": "The War of the Worlds",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1898"
+  },
+  "inputHash": "5114a86502aea693b8e03427ef24514ac194490542af8fb987fa4ae663b5fd19",
+  "promptHash": "f6dc75eb8a45810d1635e160ac19ff56beef2562ed9e6a568cb03e6bab4d942e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:11.984Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:11.984Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"The Narrator\"]\nC2[\"The Martians\"]\nC3[\"The Artilleryman\"]\nC4[\"The Curate\"]\nC5[\"The Narrator's Brother\"]\nC6[\"Ogilvy\"]\nC7[\"The Narrator's Wife\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 56,
+        "total_tokens": 1617,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:12.904Z",
+      "finishedAt": "2026-09-10T17:42:12.904Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"The Narrator\"]\nC2[\"The Martians\"]\nC3[\"The Artilleryman\"]\nC4[\"The Curate\"]\nC5[\"The Narrator's Brother\"]\nC6[\"Ogilvy\"]\nC7[\"The Narrator's Wife\"]",
+  "mermaidHash": "dc0a5aef84ff30d7351884d4891cb614c8efdecc79c605b4c99f7a39d5fd36fb",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:42:12.904Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 56,
+    "total_tokens": 1617,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

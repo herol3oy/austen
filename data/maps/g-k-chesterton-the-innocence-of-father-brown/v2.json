@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "g-k-chesterton/the-innocence-of-father-brown",
+  "metadata": {
+    "title": "The Innocence of Father Brown",
+    "authors": [
+      "G. K. Chesterton"
+    ],
+    "year": "1911"
+  },
+  "inputHash": "080c97fb4437ee69658063bbc62bb19dd642dd9c3ed20c60811e81a3019c3d88",
+  "promptHash": "99a0c60c8f2d967f7932dd6dd963cb7bf0818c4f67419012d110165126827177",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:25.128Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:25.128Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Father Brown\"]\nC2[\"Flambeau\"]\nC3[\"Valentin\"]\nC4[\"Simeon Barnes\"]\nC5[\"Aramis\"]\nC6[\"Lady Galloway\"]\nC7[\"Lord Galloway\"]\nC1 -->|Friend of| C2\nC1 -->|Adversary of| C2\nC1 -->|Opposes| C3\nC1 -->|Protects| C4\nC1 -->|Investigates| C5\nC1 -->|Investigates| C6\nC1 -->|Investigates| C7\nC2 -->|Serves| C3\nC3 -->|Commands| C2\nC4 -->|Father of| C5\nC6 -->|Married to| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 162,
+        "total_tokens": 1726,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 156
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:26.745Z",
+      "finishedAt": "2026-09-10T18:02:26.745Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Father Brown\"]\nC2[\"Flambeau\"]\nC3[\"Valentin\"]\nC4[\"Simeon Barnes\"]\nC5[\"Aramis\"]\nC6[\"Lady Galloway\"]\nC7[\"Lord Galloway\"]\nC1 -->|Friend of| C2\nC1 -->|Adversary of| C2\nC1 -->|Opposes| C3\nC1 -->|Protects| C4\nC1 -->|Investigates| C5\nC1 -->|Investigates| C6\nC1 -->|Investigates| C7\nC2 -->|Serves| C3\nC3 -->|Commands| C2\nC4 -->|Father of| C5\nC6 -->|Married to| C7",
+  "mermaidHash": "fd9e44aca9dfef8e61097990ceb0dd9580c2a1877769d6fbb7d5bfd73b8fd9fd",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fd9e44aca9dfef8e61097990ceb0dd9580c2a1877769d6fbb7d5bfd73b8fd9fd",
+    "svgHash": "0d68faf0ed1a043421bfcb872cfb62f33c24f84e5272327059a509743dd47301",
+    "validatedAt": "2026-09-10T18:02:28.046Z",
+    "width": 745.3709106445312,
+    "height": 410.5
+  },
+  "generatedAt": "2026-09-10T18:02:26.745Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 162,
+    "total_tokens": 1726,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 156
+  }
+}

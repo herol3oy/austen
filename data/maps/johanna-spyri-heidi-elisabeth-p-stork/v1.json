@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "johanna-spyri/heidi/elisabeth-p-stork",
+  "metadata": {
+    "title": "Heidi",
+    "authors": [
+      "Johanna Spyri"
+    ],
+    "year": "1881"
+  },
+  "inputHash": "19d9cc8b7efd764e01b10af5cdf4a5f88af41e784b73a725514bcfe54df8ec69",
+  "promptHash": "7d2208f5ff240d8e20914507e795f10ce4d48330744534351c392bc8d6df0171",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:45.279Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:45.279Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Heidi\"]\nC2[\"Alm-Uncle\"]\nC3[\"Peter\"]\nC4[\"Clara Sesemann\"]\nC5[\"Fraulein Rottenmeier\"]\nC6[\"Grandmother\"]\nC7[\"Herr Sesemann\"]\nC8[\"Peter's Grandmother\"]\nC1 -->|Granddaughter of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Raised by| C2\nC2 -->|Guardian of| C1\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Guardian of| C4\nC5 -->|Employer of| C1\nC6 -->|Mother of| C2\nC7 -->|Father of| C4\nC8 -->|Grandmother of| C3\nC1 -->|Comforts| C8\nC2 -->|Father of| C6\nC4 -->|Daughter of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 219,
+        "total_tokens": 1776,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:47.054Z",
+      "finishedAt": "2026-09-10T17:46:47.054Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Heidi\"]\nC2[\"Alm-Uncle\"]\nC3[\"Peter\"]\nC4[\"Clara Sesemann\"]\nC5[\"Fraulein Rottenmeier\"]\nC6[\"Grandmother\"]\nC7[\"Herr Sesemann\"]\nC8[\"Peter's Grandmother\"]\nC1 -->|Granddaughter of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Raised by| C2\nC2 -->|Guardian of| C1\nC3 -->|Friend of| C1\nC4 -->|Friend of| C1\nC5 -->|Guardian of| C4\nC5 -->|Employer of| C1\nC6 -->|Mother of| C2\nC7 -->|Father of| C4\nC8 -->|Grandmother of| C3\nC1 -->|Comforts| C8\nC2 -->|Father of| C6\nC4 -->|Daughter of| C7",
+  "mermaidHash": "eb16ab44d6d110d15cdfff20e085b42993378a86878a71087eef9ebdb40f0df3",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "eb16ab44d6d110d15cdfff20e085b42993378a86878a71087eef9ebdb40f0df3",
+    "svgHash": "967684f7e8d1ec9de1a2f85625f2d579124ae814788ce7310bb12c8ed86cd486",
+    "validatedAt": "2026-09-10T17:46:48.362Z",
+    "width": 1139.8935546875,
+    "height": 408.7593078613281
+  },
+  "generatedAt": "2026-09-10T17:46:47.054Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 219,
+    "total_tokens": 1776,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

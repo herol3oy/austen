@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/404.css';
+---
+<BaseLayout title="404 — Austen">
+  <div class="error-shell"><img src={`${import.meta.env.BASE_URL}logo.png`} alt="" class="error-portrait" /><p class="error-kicker">A page misplaced</p><p class="error-code">ERROR / 404</p><h1 class="error-title">Lost between the pages.</h1><p class="error-copy">This page seems to have wandered from the story. Return to Austen and begin with another volume.</p><a href={import.meta.env.BASE_URL} class="error-link">Back to Austen →</a></div>
+</BaseLayout>

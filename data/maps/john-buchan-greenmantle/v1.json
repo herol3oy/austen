@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-buchan/greenmantle",
+  "metadata": {
+    "title": "Greenmantle",
+    "authors": [
+      "John Buchan"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "99181d734de49307fdc90ee1af45f7231f18b5fc926d4daba4004ece99c68578",
+  "promptHash": "8b124c5d1d5bc9bbb1105d5d80a397a7c74d1cbd8ce41b4cc57ee09ca4429ced",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:46:49.211Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:46:49.211Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Richard Hannay\"]\nC2[\"Sandy Arbuthnot\"]\nC3[\"John Blenkiron\"]\nC4[\"Peter Pienaar\"]\nC5[\"Hilda von Einem\"]\nC6[\"Ulrich von Stumm\"]\nC7[\"Colonel Stumm\"]\nC8[\"Rudi von Stumm\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Serves| C1\nC3 -->|Allies with| C1\nC4 -->|Serves| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC6 -->|Enemy of| C1\nC7 -->|Enemy of| C1\nC8 -->|Enemy of| C1\nC5 -->|Commands| C6\nC5 -->|Commands| C7\nC5 -->|Commands| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 212,
+        "total_tokens": 1769,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:46:50.699Z",
+      "finishedAt": "2026-09-10T17:46:50.699Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Richard Hannay\"]\nC2[\"Sandy Arbuthnot\"]\nC3[\"John Blenkiron\"]\nC4[\"Peter Pienaar\"]\nC5[\"Hilda von Einem\"]\nC6[\"Ulrich von Stumm\"]\nC7[\"Colonel Stumm\"]\nC8[\"Rudi von Stumm\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Serves| C1\nC3 -->|Allies with| C1\nC4 -->|Serves| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC6 -->|Enemy of| C1\nC7 -->|Enemy of| C1\nC8 -->|Enemy of| C1\nC5 -->|Commands| C6\nC5 -->|Commands| C7\nC5 -->|Commands| C8",
+  "mermaidHash": "8263a1480bac9a30f7d0d93367f616414a68e5900c2aceb517e3fd59abc3c614",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8263a1480bac9a30f7d0d93367f616414a68e5900c2aceb517e3fd59abc3c614",
+    "svgHash": "1462c0fc692a842f790049e10de502c568c150aff6e535f3784777b7187789b9",
+    "validatedAt": "2026-09-10T17:46:52.008Z",
+    "width": 1063.15576171875,
+    "height": 391.5
+  },
+  "generatedAt": "2026-09-10T17:46:50.699Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 212,
+    "total_tokens": 1769,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-james/the-ambassadors",
+  "metadata": {
+    "title": "The Ambassadors",
+    "authors": [
+      "Henry James"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "07e79a69f7f92cc4e899217ea7594aa436692adca653e30576f0ad24dfe70b8a",
+  "promptHash": "af3e06ea7d4ac0ccf9f322eec84a211b04028a1335f08b08307494ce40a4dff4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:07.649Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:07.649Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lambert Strether\"]\nC2[\"Maria Gostrey\"]\nC3[\"Chadwick Newsome\"]\nC4[\"Madame de Vionnet\"]\nC5[\"Sarah Pocock\"]\nC6[\"Waymarsh\"]\nC7[\"Jim Pocock\"]\nC1 -->|Engaged to| C2\nC1 -->|Sent to retrieve| C3\nC3 -->|Loves| C4\nC1 -->|Friend of| C2\nC1 -->|Friend of| C6\nC1 -->|Enemy of| C5\nC5 -->|Sister of| C3\nC5 -->|Married to| C7\nC1 -->|Betrays| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 153,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:09.212Z",
+      "finishedAt": "2026-09-10T17:43:09.213Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lambert Strether\"]\nC2[\"Maria Gostrey\"]\nC3[\"Chadwick Newsome\"]\nC4[\"Madame de Vionnet\"]\nC5[\"Sarah Pocock\"]\nC6[\"Waymarsh\"]\nC7[\"Jim Pocock\"]\nC1 -->|Engaged to| C2\nC1 -->|Sent to retrieve| C3\nC3 -->|Loves| C4\nC1 -->|Friend of| C2\nC1 -->|Friend of| C6\nC1 -->|Enemy of| C5\nC5 -->|Sister of| C3\nC5 -->|Married to| C7\nC1 -->|Betrays| C5",
+  "mermaidHash": "3e08d6e25f7b914a769a9193c263d8de339d0ef6d33dab3bb5ba40659ff93a68",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3e08d6e25f7b914a769a9193c263d8de339d0ef6d33dab3bb5ba40659ff93a68",
+    "svgHash": "2995e6000f9e85c5c823e75c6ae407cab284241d08e018875ae5f116541c15a5",
+    "validatedAt": "2026-09-10T17:43:10.492Z",
+    "width": 1070.64990234375,
+    "height": 337.75
+  },
+  "generatedAt": "2026-09-10T17:43:09.212Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 153,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

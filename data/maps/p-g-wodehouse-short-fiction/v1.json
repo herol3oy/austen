@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "p-g-wodehouse/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "P. G. Wodehouse"
+    ],
+    "year": "1901–1920"
+  },
+  "inputHash": "9a723721055ebeb5bf3dc2f4fe59df41e382f457d08fabe47102db8cf9632c7f",
+  "promptHash": "5b9af4f68bbaef5be9eb21694644f1ca6773d9e635e271141764ad14b228b087",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:59.579Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:59.579Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 155
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:00.394Z",
+      "finishedAt": "2026-09-10T18:06:00.394Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:06:00.394Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 155
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "erich-maria-remarque/all-quiet-on-the-western-front/a-w-wheen",
+  "metadata": {
+    "title": "All Quiet on the Western Front",
+    "authors": [
+      "Erich Maria Remarque"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "a55f9fff371f2d8fc8e7a2a78827ab4bbd82fc75615dc0ac320957c29f61faad",
+  "promptHash": "b1894c730b4dfc0984cdb3c397776ec4a61b275c6ad91d24c90d79408ebe3181",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:30.091Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:30.091Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Paul Bäumer\"]\nC2[\"Stanislaus Katczinsky\"]\nC3[\"Albert Kropp\"]\nC4[\"Müller\"]\nC5[\"Tjaden\"]\nC6[\"Himmelstoss\"]\nC7[\"Kantorek\"]\nC8[\"Franz Kemmerich\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C8\nC2 -->|Mentor of| C1\nC6 -->|Abuses| C1\nC6 -->|Abuses| C5\nC7 -->|Mentor of| C1\nC7 -->|Persuades to enlist| C1\nC1 -->|Witnesses death of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 185,
+        "total_tokens": 1748,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:31.826Z",
+      "finishedAt": "2026-09-10T17:36:31.827Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Paul Bäumer\"]\nC2[\"Stanislaus Katczinsky\"]\nC3[\"Albert Kropp\"]\nC4[\"Müller\"]\nC5[\"Tjaden\"]\nC6[\"Himmelstoss\"]\nC7[\"Kantorek\"]\nC8[\"Franz Kemmerich\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C8\nC2 -->|Mentor of| C1\nC6 -->|Abuses| C1\nC6 -->|Abuses| C5\nC7 -->|Mentor of| C1\nC7 -->|Persuades to enlist| C1\nC1 -->|Witnesses death of| C8",
+  "mermaidHash": "b2faeba3c1bb8a23e05a060d1e996842680da06e5d9f041780134ed9b4a934a4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b2faeba3c1bb8a23e05a060d1e996842680da06e5d9f041780134ed9b4a934a4",
+    "svgHash": "18df6676e9ccfb04db31b779ff797c7ec72296eb8f30984a7c99c9ab747357cf",
+    "validatedAt": "2026-09-10T17:36:33.186Z",
+    "width": 864.7862548828125,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T17:36:31.826Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 185,
+    "total_tokens": 1748,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-p-lovecraft/the-case-of-charles-dexter-ward",
+  "metadata": {
+    "title": "The Case of Charles Dexter Ward",
+    "authors": [
+      "H. P. Lovecraft"
+    ],
+    "year": "1941"
+  },
+  "inputHash": "69c3f1c132e0c630b6581ed089fd71272c5fc68b531c4beb566c5ddd6bc154c0",
+  "promptHash": "c1d52dddd8ab95dfb7608670d2cfde840cb142a554df23d5038b6fcc0e13f34c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:21.529Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:21.529Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Charles Dexter Ward\"]\nC2[\"Joseph Curwen\"]\nC3[\"Moses Dexter\"]\nC4[\"Theodore Willett\"]\nC5[\"John Ward\"]\nC6[\"Marlon Ezra Weeden\"]\nC7[\"Jedediah Orne\"]\nC8[\"Simon Orne\"]\nC1 -->|Descendant of| C2\nC2 -->|Ancestor of| C1\nC3 -->|Father of| C1\nC5 -->|Father of| C1\nC4 -->|Physician of| C1\nC4 -->|Investigates| C2\nC6 -->|Enemy of| C2\nC6 -->|Ancestor of| C4\nC2 -->|Ally of| C7\nC2 -->|Ally of| C8\nC1 -->|Possessed by| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 183,
+        "total_tokens": 1746,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:23.270Z",
+      "finishedAt": "2026-09-10T17:42:23.270Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Charles Dexter Ward\"]\nC2[\"Joseph Curwen\"]\nC3[\"Moses Dexter\"]\nC4[\"Theodore Willett\"]\nC5[\"John Ward\"]\nC6[\"Marlon Ezra Weeden\"]\nC7[\"Jedediah Orne\"]\nC8[\"Simon Orne\"]\nC1 -->|Descendant of| C2\nC2 -->|Ancestor of| C1\nC3 -->|Father of| C1\nC5 -->|Father of| C1\nC4 -->|Physician of| C1\nC4 -->|Investigates| C2\nC6 -->|Enemy of| C2\nC6 -->|Ancestor of| C4\nC2 -->|Ally of| C7\nC2 -->|Ally of| C8\nC1 -->|Possessed by| C2",
+  "mermaidHash": "c49dcb8d79fc879bf56e526702f157b1ba5b9bd614f0b78e43dfb23fbc7f11b2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c49dcb8d79fc879bf56e526702f157b1ba5b9bd614f0b78e43dfb23fbc7f11b2",
+    "svgHash": "cf7bdf7d590e0320d52aeb6807dc7e6e40db314216380c17cb43ed292cc10443",
+    "validatedAt": "2026-09-10T17:42:24.680Z",
+    "width": 1402.19775390625,
+    "height": 299.75
+  },
+  "generatedAt": "2026-09-10T17:42:23.270Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 183,
+    "total_tokens": 1746,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

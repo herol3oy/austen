@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "knut-hamsun/growth-of-the-soil/w-w-worster",
+  "metadata": {
+    "title": "Growth of the Soil",
+    "authors": [
+      "Knut Hamsun"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "30cc5e574e7f42e28495c7b4a3a9a39628e866b3419f60b5e038625a15b37f73",
+  "promptHash": "4c409ad818f0563e5d3e257619147dbddfbffea7556bb8d36a9661a0c2d0628c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:33.807Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:33.807Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Isak\"]\nC2[\"Inger\"]\nC3[\"Oline\"]\nC4[\"Geissler\"]\nC5[\"Eleseus\"]\nC6[\"Sivert\"]\nC7[\"Barbro\"]\nC8[\"Aronsen\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C5\nC2 -->|Parent of| C5\nC1 -->|Parent of| C6\nC2 -->|Parent of| C6\nC3 -->|Relative of| C2\nC3 -->|Enemy of| C2\nC4 -->|Helps| C1\nC4 -->|Helps| C2\nC5 -->|Son of| C1\nC6 -->|Son of| C1\nC7 -->|Daughter of| C8\nC7 -->|Works for| C1\nC7 -->|Works for| C2\nC8 -->|Father of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 206,
+        "total_tokens": 1766,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:35.079Z",
+      "finishedAt": "2026-09-10T17:49:35.079Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Isak\"]\nC2[\"Inger\"]\nC3[\"Oline\"]\nC4[\"Geissler\"]\nC5[\"Eleseus\"]\nC6[\"Sivert\"]\nC7[\"Barbro\"]\nC8[\"Aronsen\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C5\nC2 -->|Parent of| C5\nC1 -->|Parent of| C6\nC2 -->|Parent of| C6\nC3 -->|Relative of| C2\nC3 -->|Enemy of| C2\nC4 -->|Helps| C1\nC4 -->|Helps| C2\nC5 -->|Son of| C1\nC6 -->|Son of| C1\nC7 -->|Daughter of| C8\nC7 -->|Works for| C1\nC7 -->|Works for| C2\nC8 -->|Father of| C7",
+  "mermaidHash": "3bb5182f21380a083e4501f2ac5c45d27eafda41bc8076085aaeabd6c00859bf",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3bb5182f21380a083e4501f2ac5c45d27eafda41bc8076085aaeabd6c00859bf",
+    "svgHash": "c52e45d1a9bdff0bd7c777ae11702eacf2e2c59140bc7df60bf622c4dd760d3d",
+    "validatedAt": "2026-09-10T17:49:36.442Z",
+    "width": 823.1494140625,
+    "height": 502.7558898925781
+  },
+  "generatedAt": "2026-09-10T17:49:35.079Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 206,
+    "total_tokens": 1766,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/hard-times",
+  "metadata": {
+    "title": "Hard Times",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1854"
+  },
+  "inputHash": "d0af081f73227b482c3e0ebd11030154daf8c1cf9717b019243702c8fe07899c",
+  "promptHash": "ecff85c8203c64e2b380c59596188bd4e0c622def8a1de3e706c16552ddb5ada",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:08.986Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:08.986Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Thomas Gradgrind\"]\nC2[\"Louisa Gradgrind\"]\nC3[\"Tom Gradgrind\"]\nC4[\"Josiah Bounderby\"]\nC5[\"Stephen Blackpool\"]\nC6[\"Rachael\"]\nC7[\"James Harthouse\"]\nC8[\"Sissy Jupe\"]\nC1 -->|Parent of| C2\nC1 -->|Parent of| C3\nC1 -->|Guardian of| C8\nC2 -->|Sibling of| C3\nC2 -->|Married to| C4\nC3 -->|Works for| C4\nC4 -->|Friend of| C1\nC5 -->|Loves| C6\nC5 -->|Employee of| C4\nC7 -->|Loves| C2\nC7 -->|Manipulates| C3\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 190,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:10.999Z",
+      "finishedAt": "2026-09-10T17:30:10.999Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Thomas Gradgrind\"]\nC2[\"Louisa Gradgrind\"]\nC3[\"Tom Gradgrind\"]\nC4[\"Josiah Bounderby\"]\nC5[\"Stephen Blackpool\"]\nC6[\"Rachael\"]\nC7[\"James Harthouse\"]\nC8[\"Sissy Jupe\"]\nC1 -->|Parent of| C2\nC1 -->|Parent of| C3\nC1 -->|Guardian of| C8\nC2 -->|Sibling of| C3\nC2 -->|Married to| C4\nC3 -->|Works for| C4\nC4 -->|Friend of| C1\nC5 -->|Loves| C6\nC5 -->|Employee of| C4\nC7 -->|Loves| C2\nC7 -->|Manipulates| C3\nC8 -->|Friend of| C2",
+  "mermaidHash": "d4bc8e9f1615b28d6132b59d815d5440a8e743040dc17beb27447825f9a59503",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d4bc8e9f1615b28d6132b59d815d5440a8e743040dc17beb27447825f9a59503",
+    "svgHash": "8ac4ee23eca7294624667b450af196e11421b6f58585153403d24b0e66069808",
+    "validatedAt": "2026-09-10T17:30:12.322Z",
+    "width": 1409.6458740234375,
+    "height": 494.75
+  },
+  "generatedAt": "2026-09-10T17:30:10.999Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 190,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

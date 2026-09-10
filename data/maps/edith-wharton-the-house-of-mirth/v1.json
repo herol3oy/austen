@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edith-wharton/the-house-of-mirth",
+  "metadata": {
+    "title": "The House of Mirth",
+    "authors": [
+      "Edith Wharton"
+    ],
+    "year": "1903"
+  },
+  "inputHash": "e4238beae9547924732ae1436adfaeceacb28502b1a370d836dc9052e54354e4",
+  "promptHash": "bd25c3c960db92f0dfa8ebcdf9583031a585bbadd0d75f4bd4e5bc4ed778c7ac",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:32.625Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:32.625Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lily Bart\"]\nC2[\"Lawrence Selden\"]\nC3[\"Simon Rosedale\"]\nC4[\"Gus Trenor\"]\nC5[\"Judy Trenor\"]\nC6[\"Bertha Dorset\"]\nC7[\"George Dorset\"]\nC8[\"Gerty Farish\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C8\nC8 -->|Cousin of| C1\nC1 -->|Friend of| C5\nC5 -->|Married to| C4\nC4 -->|Financially assists| C1\nC1 -->|Rival of| C6\nC6 -->|Married to| C7\nC6 -->|Betrays| C1\nC3 -->|Pursues| C1\nC1 -->|Rejects| C3\nC2 -->|Friend of| C7\nC7 -->|Suspects| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 212,
+        "total_tokens": 1772,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:33.924Z",
+      "finishedAt": "2026-09-10T17:35:33.924Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lily Bart\"]\nC2[\"Lawrence Selden\"]\nC3[\"Simon Rosedale\"]\nC4[\"Gus Trenor\"]\nC5[\"Judy Trenor\"]\nC6[\"Bertha Dorset\"]\nC7[\"George Dorset\"]\nC8[\"Gerty Farish\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C8\nC8 -->|Cousin of| C1\nC1 -->|Friend of| C5\nC5 -->|Married to| C4\nC4 -->|Financially assists| C1\nC1 -->|Rival of| C6\nC6 -->|Married to| C7\nC6 -->|Betrays| C1\nC3 -->|Pursues| C1\nC1 -->|Rejects| C3\nC2 -->|Friend of| C7\nC7 -->|Suspects| C6",
+  "mermaidHash": "70263fc9a0f900cb7257ccc1c86baf69bce43d6b3ea4c8bcfea4e99214f2cea6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "70263fc9a0f900cb7257ccc1c86baf69bce43d6b3ea4c8bcfea4e99214f2cea6",
+    "svgHash": "7b0693a0e591687b0e58156c1158524d4ed3b32b15f5df36c8b4793d9480b19d",
+    "validatedAt": "2026-09-10T17:35:35.318Z",
+    "width": 972.5162353515625,
+    "height": 497.5
+  },
+  "generatedAt": "2026-09-10T17:35:33.924Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 212,
+    "total_tokens": 1772,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

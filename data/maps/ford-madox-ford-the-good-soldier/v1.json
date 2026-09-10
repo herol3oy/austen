@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ford-madox-ford/the-good-soldier",
+  "metadata": {
+    "title": "The Good Soldier",
+    "authors": [
+      "Ford Madox Ford"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "a81aa6c9ce84fe14ab614912f23ccca34dc978691f302db7886713eadeaa674d",
+  "promptHash": "57d96f69f4600af97753dfc3d5bac41c6d19bd604827f7436a240bb0daff2cb0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:23.646Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:23.646Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Dowell\"]\nC2[\"Florence Dowell\"]\nC3[\"Edward Ashburnham\"]\nC4[\"Leonora Ashburnham\"]\nC5[\"Nancy Rufford\"]\nC6[\"Maisie Maidan\"]\nC7[\"Jimmy\"]\nC1 -->|Married to| C2\nC1 -->|Narrates about| C3\nC1 -->|Narrates about| C4\nC2 -->|Loves| C3\nC2 -->|Betrays| C1\nC3 -->|Married to| C4\nC3 -->|Loves| C5\nC3 -->|Affair with| C2\nC3 -->|Affair with| C6\nC4 -->|Married to| C3\nC4 -->|Controls| C3\nC5 -->|Loves| C3\nC6 -->|Loves| C3\nC7 -->|Friend of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 204,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:25.384Z",
+      "finishedAt": "2026-09-10T17:37:25.384Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Dowell\"]\nC2[\"Florence Dowell\"]\nC3[\"Edward Ashburnham\"]\nC4[\"Leonora Ashburnham\"]\nC5[\"Nancy Rufford\"]\nC6[\"Maisie Maidan\"]\nC7[\"Jimmy\"]\nC1 -->|Married to| C2\nC1 -->|Narrates about| C3\nC1 -->|Narrates about| C4\nC2 -->|Loves| C3\nC2 -->|Betrays| C1\nC3 -->|Married to| C4\nC3 -->|Loves| C5\nC3 -->|Affair with| C2\nC3 -->|Affair with| C6\nC4 -->|Married to| C3\nC4 -->|Controls| C3\nC5 -->|Loves| C3\nC6 -->|Loves| C3\nC7 -->|Friend of| C3",
+  "mermaidHash": "9591a306fc98c86a58596f79dfc5d3f8710e00eca1f36fa70323e5a1d9cc4efd",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9591a306fc98c86a58596f79dfc5d3f8710e00eca1f36fa70323e5a1d9cc4efd",
+    "svgHash": "eb7592fe85fb8f7a85123735dfba36d676d09bc7d5768bb4dd378687fe37f9c9",
+    "validatedAt": "2026-09-10T17:37:26.763Z",
+    "width": 1122.453125,
+    "height": 360.1288757324219
+  },
+  "generatedAt": "2026-09-10T17:37:25.384Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 204,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

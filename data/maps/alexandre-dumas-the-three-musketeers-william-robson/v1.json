@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "alexandre-dumas/the-three-musketeers/william-robson",
+  "metadata": {
+    "title": "The Three Musketeers",
+    "authors": [
+      "Alexandre Dumas"
+    ],
+    "year": "1844"
+  },
+  "inputHash": "6bf9b4bb0b7812bcfa90f8a567c157c42f8c9028343f960fa9a726a44956620e",
+  "promptHash": "e0e85a8d8106bfd35c137a78b15906e257806ecceec71218ec2ebfaec7cfb253",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:56.383Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:56.383Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"D'Artagnan\"]\nC2[\"Athos\"]\nC3[\"Porthos\"]\nC4[\"Aramis\"]\nC5[\"Cardinal Richelieu\"]\nC6[\"Milady de Winter\"]\nC7[\"Constance Bonacieux\"]\nC8[\"King Louis XIII\"]\nC1 -->|Friends with| C2\nC1 -->|Friends with| C3\nC1 -->|Friends with| C4\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC3 -->|Friend of| C4\nC1 -->|Loves| C7\nC7 -->|Loves| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC5 -->|Enemy of| C3\nC5 -->|Enemy of| C4\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC6 -->|Enemy of| C3\nC6 -->|Enemy of| C4\nC6 -->|Agent of| C5\nC2 -->|Married to| C6\nC2 -->|Kills| C6\nC8 -->|Commands| C1\nC8 -->|Commands| C2\nC8 -->|Commands| C3\nC8 -->|Commands| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 299,
+        "total_tokens": 1859,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:58.202Z",
+      "finishedAt": "2026-09-10T17:24:58.202Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"D'Artagnan\"]\nC2[\"Athos\"]\nC3[\"Porthos\"]\nC4[\"Aramis\"]\nC5[\"Cardinal Richelieu\"]\nC6[\"Milady de Winter\"]\nC7[\"Constance Bonacieux\"]\nC8[\"King Louis XIII\"]\nC1 -->|Friends with| C2\nC1 -->|Friends with| C3\nC1 -->|Friends with| C4\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC3 -->|Friend of| C4\nC1 -->|Loves| C7\nC7 -->|Loves| C1\nC5 -->|Enemy of| C1\nC5 -->|Enemy of| C2\nC5 -->|Enemy of| C3\nC5 -->|Enemy of| C4\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC6 -->|Enemy of| C3\nC6 -->|Enemy of| C4\nC6 -->|Agent of| C5\nC2 -->|Married to| C6\nC2 -->|Kills| C6\nC8 -->|Commands| C1\nC8 -->|Commands| C2\nC8 -->|Commands| C3\nC8 -->|Commands| C4",
+  "mermaidHash": "5128f0d608f77330d901781ee8418ad9307a156cf3a00055da4e728f57e81f0c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5128f0d608f77330d901781ee8418ad9307a156cf3a00055da4e728f57e81f0c",
+    "svgHash": "511ed2309f52761462391e70abc6a9d0425bb577ac025e135f08589055a9f5a8",
+    "validatedAt": "2026-09-10T17:24:59.585Z",
+    "width": 1831.404541015625,
+    "height": 564.75
+  },
+  "generatedAt": "2026-09-10T17:24:58.202Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 299,
+    "total_tokens": 1859,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

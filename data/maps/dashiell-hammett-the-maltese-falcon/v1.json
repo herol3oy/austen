@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dashiell-hammett/the-maltese-falcon",
+  "metadata": {
+    "title": "The Maltese Falcon",
+    "authors": [
+      "Dashiell Hammett"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "2651dd18a8e8a8f63d8fea3a506330fcc1e3e36aedeacbaf59a39837dcb2c4e1",
+  "promptHash": "1e33085e6b5bbb1286539357ad5af8adcf7b8634c40de260846ec13c18c25273",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:58.225Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:58.225Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sam Spade\"]\nC2[\"Brigid O'Shaughnessy\"]\nC3[\"Joel Cairo\"]\nC4[\"Kasper Gutman\"]\nC5[\"Miles Archer\"]\nC6[\"Effie Perine\"]\nC7[\"Wilmer Cook\"]\nC1 -->|Partner of| C5\nC1 -->|Attracted to| C2\nC1 -->|Betrays| C2\nC2 -->|Hires| C1\nC2 -->|Kills| C5\nC3 -->|Rival of| C1\nC3 -->|Seeks| C2\nC4 -->|Rival of| C1\nC4 -->|Commands| C7\nC4 -->|Seeks| C2\nC7 -->|Serves| C4\nC6 -->|Assistant to| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 181,
+        "total_tokens": 1741,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:59.683Z",
+      "finishedAt": "2026-09-10T17:31:59.683Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sam Spade\"]\nC2[\"Brigid O'Shaughnessy\"]\nC3[\"Joel Cairo\"]\nC4[\"Kasper Gutman\"]\nC5[\"Miles Archer\"]\nC6[\"Effie Perine\"]\nC7[\"Wilmer Cook\"]\nC1 -->|Partner of| C5\nC1 -->|Attracted to| C2\nC1 -->|Betrays| C2\nC2 -->|Hires| C1\nC2 -->|Kills| C5\nC3 -->|Rival of| C1\nC3 -->|Seeks| C2\nC4 -->|Rival of| C1\nC4 -->|Commands| C7\nC4 -->|Seeks| C2\nC7 -->|Serves| C4\nC6 -->|Assistant to| C1",
+  "mermaidHash": "34ffb7ca577f05d8f46622b252cff7ef618658b4800176f3297061f08c1b2d9d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "34ffb7ca577f05d8f46622b252cff7ef618658b4800176f3297061f08c1b2d9d",
+    "svgHash": "c57e5aba0abeff9d8d9247dbafbf5a1c2cddbcf7023fe720ffd2ffe7f26f925c",
+    "validatedAt": "2026-09-10T17:32:01.057Z",
+    "width": 1012.9502563476562,
+    "height": 382.19696044921875
+  },
+  "generatedAt": "2026-09-10T17:31:59.683Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 181,
+    "total_tokens": 1741,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

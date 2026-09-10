@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maurice-leblanc/the-extraordinary-adventures-of-arsene-lupin-gentleman-burglar/george-morehead",
+  "metadata": {
+    "title": "The Extraordinary Adventures of Arsène Lupin, Gentleman-Burglar",
+    "authors": [
+      "Maurice Leblanc"
+    ],
+    "year": "1907"
+  },
+  "inputHash": "0c3ee7be0cc181693d9ad300996486b1019f1c4ae9cd926518ba88325f243b42",
+  "promptHash": "b362f41a1ab39e1f47452b49e830741664bea2c83c1286901e0f62fa44383144",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:46.463Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:46.463Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Ganimard\"]\nC3[\"Beaumont\"]\nC4[\"Daspic\"]\nC5[\"Duc de Charmerace\"]\nC6[\"Mlle. de Saint-Véran\"]\nC7[\"Sonia Kritchnoff\"]\nC8[\"Baron d'Imblevalle\"]\nC1 -->|Enemy of| C2\nC1 -->|Impersonates| C3\nC1 -->|Impersonates| C5\nC1 -->|Loves| C6\nC1 -->|Protects| C7\nC1 -->|Robbed| C8\nC2 -->|Pursues| C1\nC5 -->|Engaged to| C6\nC6 -->|Loves| C1\nC7 -->|Friend of| C1\nC4 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1571,
+        "completion_tokens": 191,
+        "total_tokens": 1762,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 291
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:48.077Z",
+      "finishedAt": "2026-09-10T18:03:48.077Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Ganimard\"]\nC3[\"Beaumont\"]\nC4[\"Daspic\"]\nC5[\"Duc de Charmerace\"]\nC6[\"Mlle. de Saint-Véran\"]\nC7[\"Sonia Kritchnoff\"]\nC8[\"Baron d'Imblevalle\"]\nC1 -->|Enemy of| C2\nC1 -->|Impersonates| C3\nC1 -->|Impersonates| C5\nC1 -->|Loves| C6\nC1 -->|Protects| C7\nC1 -->|Robbed| C8\nC2 -->|Pursues| C1\nC5 -->|Engaged to| C6\nC6 -->|Loves| C1\nC7 -->|Friend of| C1\nC4 -->|Enemy of| C1",
+  "mermaidHash": "c830fc5a9e5d8645527ddc2a53bf89a512ae52265a8bb9b0c13b02f43283e2ec",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c830fc5a9e5d8645527ddc2a53bf89a512ae52265a8bb9b0c13b02f43283e2ec",
+    "svgHash": "3800e48f55b9a1d5e16f5bf44a16ff352df2e76636358129e31d448005afec7a",
+    "validatedAt": "2026-09-10T18:03:49.523Z",
+    "width": 1038.3927001953125,
+    "height": 572.25
+  },
+  "generatedAt": "2026-09-10T18:03:48.077Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1571,
+    "completion_tokens": 191,
+    "total_tokens": 1762,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 291
+  }
+}

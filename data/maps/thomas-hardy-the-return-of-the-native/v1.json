@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hardy/the-return-of-the-native",
+  "metadata": {
+    "title": "The Return of the Native",
+    "authors": [
+      "Thomas Hardy"
+    ],
+    "year": "1878"
+  },
+  "inputHash": "ed6032539430114348493270db43c44d8506b3709e1333cf71e7214bbaab22bd",
+  "promptHash": "dd7f3600ff3adf53bedcbfb8418c5b86a0d32c9d8b09a9a3b46a3c9f20b229d9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:57.904Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:57.904Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Clym Yeobright\"]\nC2[\"Eustacia Vye\"]\nC3[\"Damon Wildeve\"]\nC4[\"Thomasin Yeobright\"]\nC5[\"Diggory Venn\"]\nC6[\"Mrs. Yeobright\"]\nC7[\"Captain Vye\"]\nC1 -->|Cousin of| C4\nC1 -->|Son of| C6\nC1 -->|Loves| C2\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC2 -->|Married to| C1\nC3 -->|Loves| C2\nC3 -->|Married to| C4\nC4 -->|Cousin of| C1\nC4 -->|Daughter of| C6\nC4 -->|Married to| C3\nC5 -->|Loves| C4\nC5 -->|Protects| C4\nC6 -->|Mother of| C1\nC6 -->|Mother of| C4\nC7 -->|Grandfather of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 232,
+        "total_tokens": 1790,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:59.641Z",
+      "finishedAt": "2026-09-10T18:10:59.641Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Clym Yeobright\"]\nC2[\"Eustacia Vye\"]\nC3[\"Damon Wildeve\"]\nC4[\"Thomasin Yeobright\"]\nC5[\"Diggory Venn\"]\nC6[\"Mrs. Yeobright\"]\nC7[\"Captain Vye\"]\nC1 -->|Cousin of| C4\nC1 -->|Son of| C6\nC1 -->|Loves| C2\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC2 -->|Married to| C1\nC3 -->|Loves| C2\nC3 -->|Married to| C4\nC4 -->|Cousin of| C1\nC4 -->|Daughter of| C6\nC4 -->|Married to| C3\nC5 -->|Loves| C4\nC5 -->|Protects| C4\nC6 -->|Mother of| C1\nC6 -->|Mother of| C4\nC7 -->|Grandfather of| C2",
+  "mermaidHash": "4eeb4e2b19ce52b758657910b93a2b745a60a65416c6022a712d410151a1dbba",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4eeb4e2b19ce52b758657910b93a2b745a60a65416c6022a712d410151a1dbba",
+    "svgHash": "399497a4ff2d583908aff73080672f0ff1a9858f1205a10ecfdfaf597945541f",
+    "validatedAt": "2026-09-10T18:11:01.019Z",
+    "width": 1078.4971923828125,
+    "height": 592.25
+  },
+  "generatedAt": "2026-09-10T18:10:59.641Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 232,
+    "total_tokens": 1790,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

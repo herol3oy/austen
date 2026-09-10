@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "virgil/the-aeneid/john-dryden",
+  "metadata": {
+    "title": "The Aeneid",
+    "authors": [
+      "Virgil"
+    ],
+    "year": "1697"
+  },
+  "inputHash": "0c8b08b3b042e991835b1bf95c6fce391482d2606ed0e7e0beb96e0b2f45bdf1",
+  "promptHash": "09e3a0a20670e3b7d0adf12d5fc656e88e3ec78154d56a24448053ffb9562353",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:11:58.390Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:11:58.390Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Aeneas\"]\nC2[\"Dido\"]\nC3[\"Turnus\"]\nC4[\"Anchises\"]\nC5[\"Ascanius\"]\nC6[\"Latinus\"]\nC7[\"Lavinia\"]\nC8[\"Juno\"]\nC1 -->|Son of| C4\nC1 -->|Father of| C5\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Enemy of| C3\nC3 -->|Rival of| C1\nC1 -->|Serves| C8\nC8 -->|Opposes| C1\nC6 -->|Father of| C7\nC1 -->|Marries| C7\nC3 -->|Betrothed to| C7\nC6 -->|Allies with| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 179,
+        "total_tokens": 1736,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:11:59.647Z",
+      "finishedAt": "2026-09-10T18:11:59.648Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Aeneas\"]\nC2[\"Dido\"]\nC3[\"Turnus\"]\nC4[\"Anchises\"]\nC5[\"Ascanius\"]\nC6[\"Latinus\"]\nC7[\"Lavinia\"]\nC8[\"Juno\"]\nC1 -->|Son of| C4\nC1 -->|Father of| C5\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Enemy of| C3\nC3 -->|Rival of| C1\nC1 -->|Serves| C8\nC8 -->|Opposes| C1\nC6 -->|Father of| C7\nC1 -->|Marries| C7\nC3 -->|Betrothed to| C7\nC6 -->|Allies with| C1",
+  "mermaidHash": "ea37c346829803579644bda1be24e833fe27cb7fe7315fc26b78560da530e98f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ea37c346829803579644bda1be24e833fe27cb7fe7315fc26b78560da530e98f",
+    "svgHash": "57df29e7608e8842dec07887e9bb4dcfae0f7a2a09c8795f6bded608acefcc89",
+    "validatedAt": "2026-09-10T18:12:01.033Z",
+    "width": 831.0724487304688,
+    "height": 554
+  },
+  "generatedAt": "2026-09-10T18:11:59.647Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 179,
+    "total_tokens": 1736,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

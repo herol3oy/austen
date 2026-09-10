@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ralph-waldo-emerson/essays",
+  "metadata": {
+    "title": "Essays",
+    "authors": [
+      "Ralph Waldo Emerson"
+    ],
+    "year": "1841–1844"
+  },
+  "inputHash": "16ce1fdce97fe46ea8f92a36c09b50edf339d03c618d066ca690e946eb358bfd",
+  "promptHash": "7729a9050dd610d09f617f686329f1bbba3467d97c7b01518cd0d2c19a504321",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:12.182Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:12.182Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 2,
+        "total_tokens": 1563,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 153
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:13.131Z",
+      "finishedAt": "2026-09-10T18:07:13.131Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:07:13.131Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 2,
+    "total_tokens": 1563,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 153
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/cymbeline",
+  "metadata": {
+    "title": "Cymbeline",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1609"
+  },
+  "inputHash": "e9bee7e156d385b67a9effd311079851e3f4ee81ac3413c75f19e3bf61d8b210",
+  "promptHash": "879d3ab14cecf5133b551c03ed95aa55cd54a5a2cdab7afea7f6cff41cf9bee2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:49.250Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:49.250Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Cymbeline\"]\nC2[\"Imogen\"]\nC3[\"Posthumus Leonatus\"]\nC4[\"Iachimo\"]\nC5[\"Cloten\"]\nC6[\"Queen\"]\nC7[\"Belarius\"]\nC8[\"Pisanio\"]\nC1 -->|Father of| C2\nC1 -->|Married to| C6\nC6 -->|Mother of| C5\nC2 -->|Married to| C3\nC2 -->|Stepdaughter of| C6\nC3 -->|Servant of| C1\nC4 -->|Betrays| C3\nC4 -->|Slanders| C2\nC5 -->|Wants to marry| C2\nC5 -->|Rival of| C3\nC6 -->|Plots against| C2\nC7 -->|Raises| C2\nC8 -->|Serves| C3\nC8 -->|Protects| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 203,
+        "total_tokens": 1759,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:50.716Z",
+      "finishedAt": "2026-09-10T18:14:50.716Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Cymbeline\"]\nC2[\"Imogen\"]\nC3[\"Posthumus Leonatus\"]\nC4[\"Iachimo\"]\nC5[\"Cloten\"]\nC6[\"Queen\"]\nC7[\"Belarius\"]\nC8[\"Pisanio\"]\nC1 -->|Father of| C2\nC1 -->|Married to| C6\nC6 -->|Mother of| C5\nC2 -->|Married to| C3\nC2 -->|Stepdaughter of| C6\nC3 -->|Servant of| C1\nC4 -->|Betrays| C3\nC4 -->|Slanders| C2\nC5 -->|Wants to marry| C2\nC5 -->|Rival of| C3\nC6 -->|Plots against| C2\nC7 -->|Raises| C2\nC8 -->|Serves| C3\nC8 -->|Protects| C2",
+  "mermaidHash": "8db97175c57952137fa30c8f10ac1c35baf14b1464406ec51de8c190cf834457",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8db97175c57952137fa30c8f10ac1c35baf14b1464406ec51de8c190cf834457",
+    "svgHash": "913b62082729224e99581f750a3d023dc9bb0a4466e9bf56b616c2cab9e7dfe1",
+    "validatedAt": "2026-09-10T18:14:52.094Z",
+    "width": 1168.3349609375,
+    "height": 472.75
+  },
+  "generatedAt": "2026-09-10T18:14:50.716Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 203,
+    "total_tokens": 1759,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

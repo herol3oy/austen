@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "w-somerset-maugham/the-painted-veil",
+  "metadata": {
+    "title": "The Painted Veil",
+    "authors": [
+      "W. Somerset Maugham"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "20763f4e3256613fbba2bbeb4151c69ef48e48c4e4fd3a9bb6fc9495f9455359",
+  "promptHash": "0e6340f3c7290c03dbad2b5bad120baa0069bd284e0400bd94b42b633e4f8deb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:43.149Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:43.149Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Kitty Fane\"]\nC2[\"Walter Fane\"]\nC3[\"Charles Townsend\"]\nC4[\"Doris Garstin\"]\nC5[\"Bernard Garstin\"]\nC6[\"Waddington\"]\nC7[\"Mother Superior\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC3 -->|Married to| C4\nC5 -->|Parent of| C1\nC1 -->|Friend of| C6\nC1 -->|Confides in| C7\nC2 -->|Works with| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 137,
+        "total_tokens": 1699,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:44.473Z",
+      "finishedAt": "2026-09-10T18:12:44.474Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Kitty Fane\"]\nC2[\"Walter Fane\"]\nC3[\"Charles Townsend\"]\nC4[\"Doris Garstin\"]\nC5[\"Bernard Garstin\"]\nC6[\"Waddington\"]\nC7[\"Mother Superior\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC3 -->|Married to| C4\nC5 -->|Parent of| C1\nC1 -->|Friend of| C6\nC1 -->|Confides in| C7\nC2 -->|Works with| C6",
+  "mermaidHash": "fa8909f07f0d74a06801e00ef549a9e7439b4537caef20cbd6f979c994e81296",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fa8909f07f0d74a06801e00ef549a9e7439b4537caef20cbd6f979c994e81296",
+    "svgHash": "36968606590b3cc875bbfbff4e7c460dbf59e65e7d14f32910cad046c2ba4376",
+    "validatedAt": "2026-09-10T18:12:45.816Z",
+    "width": 1001.8968505859375,
+    "height": 321
+  },
+  "generatedAt": "2026-09-10T18:12:44.473Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 137,
+    "total_tokens": 1699,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

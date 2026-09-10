@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "virginia-woolf/to-the-lighthouse",
+  "metadata": {
+    "title": "To the Lighthouse",
+    "authors": [
+      "Virginia Woolf"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "d70588df6468cf4ffb25c5069616fac4368ceb397d0008985a95ff8dba6d8183",
+  "promptHash": "69dccd0232346f60e2dab74dc0e01153e91732aff31d15752da2ce3acf37fff4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:15.061Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:15.061Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mrs. Ramsay\"]\nC2[\"Mr. Ramsay\"]\nC3[\"Lily Briscoe\"]\nC4[\"James Ramsay\"]\nC5[\"Cam Ramsay\"]\nC6[\"Prue Ramsay\"]\nC7[\"Andrew Ramsay\"]\nC8[\"Charles Tansley\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC1 -->|Parent of| C6\nC1 -->|Parent of| C7\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC2 -->|Parent of| C6\nC2 -->|Parent of| C7\nC1 -->|Encourages| C8\nC2 -->|Mentor of| C8\nC3 -->|Friend of| C1\nC4 -->|Resents| C2\nC4 -->|Loves| C1\nC5 -->|Loves| C1\nC8 -->|Admires| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 228,
+        "total_tokens": 1784,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:16.646Z",
+      "finishedAt": "2026-09-10T18:12:16.646Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mrs. Ramsay\"]\nC2[\"Mr. Ramsay\"]\nC3[\"Lily Briscoe\"]\nC4[\"James Ramsay\"]\nC5[\"Cam Ramsay\"]\nC6[\"Prue Ramsay\"]\nC7[\"Andrew Ramsay\"]\nC8[\"Charles Tansley\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC1 -->|Parent of| C6\nC1 -->|Parent of| C7\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC2 -->|Parent of| C6\nC2 -->|Parent of| C7\nC1 -->|Encourages| C8\nC2 -->|Mentor of| C8\nC3 -->|Friend of| C1\nC4 -->|Resents| C2\nC4 -->|Loves| C1\nC5 -->|Loves| C1\nC8 -->|Admires| C1",
+  "mermaidHash": "817e4a9e6488c8e9bfb83c9e78a2a5df2519dfe3ed7427b4a2de4e91fa2c397d",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "817e4a9e6488c8e9bfb83c9e78a2a5df2519dfe3ed7427b4a2de4e91fa2c397d",
+    "svgHash": "a7256c33cc50510870f4675d788b7b7ea4e44ae271476c2d56c7643e873ce7dd",
+    "validatedAt": "2026-09-10T18:12:18.024Z",
+    "width": 954.60205078125,
+    "height": 583
+  },
+  "generatedAt": "2026-09-10T18:12:16.646Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 228,
+    "total_tokens": 1784,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

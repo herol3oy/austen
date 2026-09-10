@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/henry-iv-part-ii",
+  "metadata": {
+    "title": "Henry IV, Part II",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1597"
+  },
+  "inputHash": "4ae96540fc53a37de073af5adc690bc86743e3f7e2bdaad6cdf103bd7bae5a73",
+  "promptHash": "027154ea2c805c265b48f072601b43d74be7f65ef64e63c34b6bd18ca5e1cbfe",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:58.874Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:58.874Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Henry IV\"]\nC2[\"Prince Hal\"]\nC3[\"Falstaff\"]\nC4[\"Northumberland\"]\nC5[\"Archbishop Scroop\"]\nC6[\"Lord Chief Justice\"]\nC7[\"Pistol\"]\nC8[\"Doll Tearsheet\"]\nC1 -->|Father of| C2\nC1 -->|Enemy of| C4\nC1 -->|Enemy of| C5\nC2 -->|Friend of| C3\nC2 -->|Serves| C1\nC2 -->|Rejects| C3\nC3 -->|Friend of| C2\nC3 -->|Friend of| C7\nC3 -->|Friend of| C8\nC4 -->|Rebels against| C1\nC5 -->|Rebels against| C1\nC6 -->|Opposes| C3\nC7 -->|Friend of| C3\nC8 -->|Friend of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 203,
+        "total_tokens": 1761,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:00.282Z",
+      "finishedAt": "2026-09-10T18:15:00.282Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Henry IV\"]\nC2[\"Prince Hal\"]\nC3[\"Falstaff\"]\nC4[\"Northumberland\"]\nC5[\"Archbishop Scroop\"]\nC6[\"Lord Chief Justice\"]\nC7[\"Pistol\"]\nC8[\"Doll Tearsheet\"]\nC1 -->|Father of| C2\nC1 -->|Enemy of| C4\nC1 -->|Enemy of| C5\nC2 -->|Friend of| C3\nC2 -->|Serves| C1\nC2 -->|Rejects| C3\nC3 -->|Friend of| C2\nC3 -->|Friend of| C7\nC3 -->|Friend of| C8\nC4 -->|Rebels against| C1\nC5 -->|Rebels against| C1\nC6 -->|Opposes| C3\nC7 -->|Friend of| C3\nC8 -->|Friend of| C3",
+  "mermaidHash": "e0c26ad7820f48186c6e9fc7f941992f6743b9dc1645a3ccf4f658933d74010e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e0c26ad7820f48186c6e9fc7f941992f6743b9dc1645a3ccf4f658933d74010e",
+    "svgHash": "0dc3ec96ba7310de7e66c70dacc4fc5bd5fb5534823a28adc82600313a683ff5",
+    "validatedAt": "2026-09-10T18:15:01.642Z",
+    "width": 990.7642822265625,
+    "height": 413.43231201171875
+  },
+  "generatedAt": "2026-09-10T18:15:00.282Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 203,
+    "total_tokens": 1761,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

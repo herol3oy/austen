@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sinclair-lewis/babbitt",
+  "metadata": {
+    "title": "Babbitt",
+    "authors": [
+      "Sinclair Lewis"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "24b030a292dc6aa719729b32e883563e102b70c106144cf5e5b85ff1e9ea409b",
+  "promptHash": "29316351cc8b6c9bf1173d5e8e596ff4db770849ae5329ba8e23046478221c1d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:24.857Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:24.857Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"George F. Babbitt\"]\nC2[\"Myra Babbitt\"]\nC3[\"Ted Babbitt\"]\nC4[\"Verona Babbitt\"]\nC5[\"Tinka Babbitt\"]\nC6[\"Paul Riesling\"]\nC7[\"Zilla Riesling\"]\nC8[\"Tanis Judique\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC1 -->|Best friend of| C6\nC6 -->|Married to| C7\nC1 -->|Loves| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 173,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:26.045Z",
+      "finishedAt": "2026-09-10T18:09:26.045Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"George F. Babbitt\"]\nC2[\"Myra Babbitt\"]\nC3[\"Ted Babbitt\"]\nC4[\"Verona Babbitt\"]\nC5[\"Tinka Babbitt\"]\nC6[\"Paul Riesling\"]\nC7[\"Zilla Riesling\"]\nC8[\"Tanis Judique\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC1 -->|Best friend of| C6\nC6 -->|Married to| C7\nC1 -->|Loves| C8",
+  "mermaidHash": "fe9a0f263f071690f0f0984d997c6b5d1f17f39cad4aad7e1e58bd4f3212a49f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fe9a0f263f071690f0f0984d997c6b5d1f17f39cad4aad7e1e58bd4f3212a49f",
+    "svgHash": "155575d1bd678b33fb18bebdc246e4c2bfa1c3653efc5dce950b6e81089768e9",
+    "validatedAt": "2026-09-10T18:09:27.440Z",
+    "width": 762.535888671875,
+    "height": 488.75
+  },
+  "generatedAt": "2026-09-10T18:09:26.045Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 173,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

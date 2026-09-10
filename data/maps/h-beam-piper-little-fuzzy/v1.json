@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-beam-piper/little-fuzzy",
+  "metadata": {
+    "title": "Little Fuzzy",
+    "authors": [
+      "H. Beam Piper"
+    ],
+    "year": "1962"
+  },
+  "inputHash": "f707814fcf29155aa810f6171968c739fe4967decb4d77d70c83d1cbbf20e876",
+  "promptHash": "61cb398da1c422b52afb72311029b551b3e13b36b53cfb831fe07c31b9f26741",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:28.329Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:28.329Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jack Holloway\"]\nC2[\"Victor Grego\"]\nC3[\"Leonard Kellogg\"]\nC4[\"Ben Rainsford\"]\nC5[\"Gerd van Riebeek\"]\nC6[\"Ruth Ortheris\"]\nC7[\"Little Fuzzy\"]\nC8[\"Gus Brannhard\"]\nC1 -->|Employed by| C2\nC1 -->|Discovers| C7\nC2 -->|Employed by| C3\nC3 -->|Enemy of| C1\nC3 -->|Orders killing of| C7\nC4 -->|Friend of| C1\nC4 -->|Protects| C7\nC5 -->|Friend of| C1\nC5 -->|Studies| C7\nC6 -->|Daughter of| C8\nC6 -->|Loves| C1\nC8 -->|Lawyer of| C1\nC8 -->|Defends| C7\nC1 -->|Protects| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 212,
+        "total_tokens": 1769,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:30.021Z",
+      "finishedAt": "2026-09-10T17:41:30.021Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jack Holloway\"]\nC2[\"Victor Grego\"]\nC3[\"Leonard Kellogg\"]\nC4[\"Ben Rainsford\"]\nC5[\"Gerd van Riebeek\"]\nC6[\"Ruth Ortheris\"]\nC7[\"Little Fuzzy\"]\nC8[\"Gus Brannhard\"]\nC1 -->|Employed by| C2\nC1 -->|Discovers| C7\nC2 -->|Employed by| C3\nC3 -->|Enemy of| C1\nC3 -->|Orders killing of| C7\nC4 -->|Friend of| C1\nC4 -->|Protects| C7\nC5 -->|Friend of| C1\nC5 -->|Studies| C7\nC6 -->|Daughter of| C8\nC6 -->|Loves| C1\nC8 -->|Lawyer of| C1\nC8 -->|Defends| C7\nC1 -->|Protects| C7",
+  "mermaidHash": "9e4c9ebe045c275cb9122590e6c06b80d3c4fa5e08ed42dd10574b64220f5384",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9e4c9ebe045c275cb9122590e6c06b80d3c4fa5e08ed42dd10574b64220f5384",
+    "svgHash": "047b8121034610b676a167f09073c653c88d66eae9212fedf345a9f996fd8b03",
+    "validatedAt": "2026-09-10T17:41:31.423Z",
+    "width": 1629.0562744140625,
+    "height": 472.75
+  },
+  "generatedAt": "2026-09-10T17:41:30.021Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 212,
+    "total_tokens": 1769,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

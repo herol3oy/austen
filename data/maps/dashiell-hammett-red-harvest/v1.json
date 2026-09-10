@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "dashiell-hammett/red-harvest",
+  "metadata": {
+    "title": "Red Harvest",
+    "authors": [
+      "Dashiell Hammett"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "798c4458ed6cdfeb5897a74814863b5edb18c16c066400f144502a62ea6c1014",
+  "promptHash": "d813893628fbd7716eb05a512bfc80d8099418768a47068e2cd7510974b2ea25",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:51.902Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:51.902Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Continental Op\"]\nC2[\"Elihu Willsson\"]\nC3[\"Donald Willsson\"]\nC4[\"Dinah Brand\"]\nC5[\"Bill Quint\"]\nC6[\"Max Thaler\"]\nC7[\"Ben Shad\"]\nC8[\"Pete the Finn\"]\nC1 -->|Investigates murder of| C3\nC2 -->|Father of| C3\nC2 -->|Hires| C1\nC1 -->|Loves| C4\nC4 -->|Involved with| C6\nC5 -->|Union organizer for| C2\nC6 -->|Rival of| C7\nC6 -->|Rival of| C8\nC7 -->|Gang leader| C8\nC1 -->|Manipulates| C6\nC1 -->|Manipulates| C7\nC1 -->|Manipulates| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 190,
+        "total_tokens": 1748,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:53.335Z",
+      "finishedAt": "2026-09-10T17:31:53.335Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Continental Op\"]\nC2[\"Elihu Willsson\"]\nC3[\"Donald Willsson\"]\nC4[\"Dinah Brand\"]\nC5[\"Bill Quint\"]\nC6[\"Max Thaler\"]\nC7[\"Ben Shad\"]\nC8[\"Pete the Finn\"]\nC1 -->|Investigates murder of| C3\nC2 -->|Father of| C3\nC2 -->|Hires| C1\nC1 -->|Loves| C4\nC4 -->|Involved with| C6\nC5 -->|Union organizer for| C2\nC6 -->|Rival of| C7\nC6 -->|Rival of| C8\nC7 -->|Gang leader| C8\nC1 -->|Manipulates| C6\nC1 -->|Manipulates| C7\nC1 -->|Manipulates| C8",
+  "mermaidHash": "cde0531986fa710346b0d65094e0b5da255d9c8a06d799cd0d71ac498216d6d4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "cde0531986fa710346b0d65094e0b5da255d9c8a06d799cd0d71ac498216d6d4",
+    "svgHash": "e43654d4fc4cef4ad000f97e253c7d78930aa63439fe659629b4c026ab656e12",
+    "validatedAt": "2026-09-10T17:31:54.717Z",
+    "width": 1870.6473388671875,
+    "height": 291
+  },
+  "generatedAt": "2026-09-10T17:31:53.335Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 190,
+    "total_tokens": 1748,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "emile-zola/germinal/havelock-ellis",
+  "metadata": {
+    "title": "Germinal",
+    "authors": [
+      "Émile Zola"
+    ],
+    "year": "1885"
+  },
+  "inputHash": "549cc82ae8c3cb89b710a37c6c6ecbe9911a9b6732b50c54fa4185367d9da0be",
+  "promptHash": "645c1aafaffca3cd3dd32bd15e159b337313618e75218ec7f1c6e9bfc7196e8d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:19.772Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:19.772Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Étienne Lantier\"]\nC2[\"Maheude\"]\nC3[\"Toussaint Maheu\"]\nC4[\"Catherine Maheu\"]\nC5[\"Chaval\"]\nC6[\"Souvarine\"]\nC7[\"Cécile Grégoire\"]\nC8[\"Paul Négrel\"]\nC1 -->|Loves| C4\nC5 -->|Loves| C4\nC5 -->|Rival of| C1\nC5 -->|Abuses| C4\nC3 -->|Married to| C2\nC3 -->|Parent of| C4\nC2 -->|Parent of| C4\nC1 -->|Friend of| C3\nC1 -->|Friend of| C6\nC6 -->|Friend of| C1\nC1 -->|Mentored by| C6\nC8 -->|Nephew of| C7\nC1 -->|Kills| C5\nC5 -->|Kills| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 217,
+        "total_tokens": 1774,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:21.446Z",
+      "finishedAt": "2026-09-10T17:36:21.446Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Étienne Lantier\"]\nC2[\"Maheude\"]\nC3[\"Toussaint Maheu\"]\nC4[\"Catherine Maheu\"]\nC5[\"Chaval\"]\nC6[\"Souvarine\"]\nC7[\"Cécile Grégoire\"]\nC8[\"Paul Négrel\"]\nC1 -->|Loves| C4\nC5 -->|Loves| C4\nC5 -->|Rival of| C1\nC5 -->|Abuses| C4\nC3 -->|Married to| C2\nC3 -->|Parent of| C4\nC2 -->|Parent of| C4\nC1 -->|Friend of| C3\nC1 -->|Friend of| C6\nC6 -->|Friend of| C1\nC1 -->|Mentored by| C6\nC8 -->|Nephew of| C7\nC1 -->|Kills| C5\nC5 -->|Kills| C3",
+  "mermaidHash": "5fd311596c2b55a6506185e5def3622e691d5f9addbb8512fe06f50d602cfa00",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5fd311596c2b55a6506185e5def3622e691d5f9addbb8512fe06f50d602cfa00",
+    "svgHash": "ee074285d9f994063ba322e20f010f5334b5e0bb88d7c065cefb324dcc197177",
+    "validatedAt": "2026-09-10T17:36:22.982Z",
+    "width": 1261.7550048828125,
+    "height": 409.25
+  },
+  "generatedAt": "2026-09-10T17:36:21.446Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 217,
+    "total_tokens": 1774,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

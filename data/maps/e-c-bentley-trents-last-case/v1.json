@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-c-bentley/trents-last-case",
+  "metadata": {
+    "title": "Trent’s Last Case",
+    "authors": [
+      "E. C. Bentley"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "4b154bbc9f18e61c6f5ab34ee82653b5e4beeefee2bc9e7fe859bb1ed61821ba",
+  "promptHash": "1cdef43262bd277577f2a99171fdd3c54acbf164b265edefe20269f9f1a25f89",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:39.830Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:39.830Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Philip Trent\"]\nC2[\"Sigsbee Manderson\"]\nC3[\"John Marlowe\"]\nC4[\"Mabel Manderson\"]\nC5[\"Calvin Bunner\"]\nC6[\"Martin\"]\nC7[\"Inspector Murch\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 54,
+        "total_tokens": 1616,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:40.744Z",
+      "finishedAt": "2026-09-10T17:32:40.744Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Philip Trent\"]\nC2[\"Sigsbee Manderson\"]\nC3[\"John Marlowe\"]\nC4[\"Mabel Manderson\"]\nC5[\"Calvin Bunner\"]\nC6[\"Martin\"]\nC7[\"Inspector Murch\"]",
+  "mermaidHash": "092dc81d54fe6501f8b29d686d45dd5cf32a477516eadb5d493165d4f938feb6",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:32:40.744Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 54,
+    "total_tokens": 1616,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

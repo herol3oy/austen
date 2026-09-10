@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "g-k-chesterton/the-incredulity-of-father-brown",
+  "metadata": {
+    "title": "The Incredulity of Father Brown",
+    "authors": [
+      "G. K. Chesterton"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "1e15b566f60ff65201751ae4d58f7cbbdd391a875abc9474c73b01764b3caa3f",
+  "promptHash": "03abedc77be8e4e9e1c0f31e58da41b31808e2d1efd0aa512ef51c196849c303",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:08.917Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:08.917Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Father Brown\"]\nC2[\"Flambeau\"]\nC3[\"Hercule Flambeau\"]\nC4[\"Mr. Grandison\"]\nC5[\"Lady Mounteagle\"]\nC6[\"Lord Mounteagle\"]\nC7[\"Mr. Hardcastle\"]\nC8[\"Mr. Snaith\"]\nC1 -->|Friend of| C2\nC1 -->|Mentor of| C3\nC1 -->|Protects| C4\nC1 -->|Investigates| C5\nC1 -->|Investigates| C6\nC1 -->|Enemy of| C7\nC1 -->|Enemy of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 139,
+        "total_tokens": 1703,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:10.309Z",
+      "finishedAt": "2026-09-10T17:39:10.309Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Father Brown\"]\nC2[\"Flambeau\"]\nC3[\"Hercule Flambeau\"]\nC4[\"Mr. Grandison\"]\nC5[\"Lady Mounteagle\"]\nC6[\"Lord Mounteagle\"]\nC7[\"Mr. Hardcastle\"]\nC8[\"Mr. Snaith\"]\nC1 -->|Friend of| C2\nC1 -->|Mentor of| C3\nC1 -->|Protects| C4\nC1 -->|Investigates| C5\nC1 -->|Investigates| C6\nC1 -->|Enemy of| C7\nC1 -->|Enemy of| C8",
+  "mermaidHash": "9d04d0cbb6c6045819f7d4a58ff9a7e1a4b585113ce70aaa5d23a6626210c371",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9d04d0cbb6c6045819f7d4a58ff9a7e1a4b585113ce70aaa5d23a6626210c371",
+    "svgHash": "3790313910810949a8809e1211fb0402844111d4f9fd325e9256bc02fc6c5356",
+    "validatedAt": "2026-09-10T17:39:11.702Z",
+    "width": 477.94171142578125,
+    "height": 659
+  },
+  "generatedAt": "2026-09-10T17:39:10.309Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 139,
+    "total_tokens": 1703,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

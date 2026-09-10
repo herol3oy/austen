@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jules-verne/round-the-moon/ward-lock-co",
+  "metadata": {
+    "title": "Round the Moon",
+    "authors": [
+      "Jules Verne"
+    ],
+    "year": "1870"
+  },
+  "inputHash": "7ba9eff8982e57377662495697a5e8dcf27bd9cf6f32574c95c21176855056e5",
+  "promptHash": "50654938e5d4d586e085ee94ab915a58cae11b398be5121c734d514a7085ff40",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:03.734Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:03.734Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Impey Barbicane\"]\nC2[\"Michel Ardan\"]\nC3[\"Nicholl\"]\nC4[\"J. T. Maston\"]\nC5[\"Captain Blomsberry\"]\nC6[\"President of the Cambridge Observatory\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C3\nC1 -->|Rival of| C3\nC1 -->|Colleague of| C4\nC4 -->|Friend of| C1\nC5 -->|Commands| C1\nC6 -->|Advises| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 123,
+        "total_tokens": 1681,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:05.197Z",
+      "finishedAt": "2026-09-10T17:49:05.198Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Impey Barbicane\"]\nC2[\"Michel Ardan\"]\nC3[\"Nicholl\"]\nC4[\"J. T. Maston\"]\nC5[\"Captain Blomsberry\"]\nC6[\"President of the Cambridge Observatory\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C3\nC1 -->|Rival of| C3\nC1 -->|Colleague of| C4\nC4 -->|Friend of| C1\nC5 -->|Commands| C1\nC6 -->|Advises| C1",
+  "mermaidHash": "a94eba3e4df5d9b2cfcf9f96813949dbfa8e4cd93e73f90bfea6187b21d4a0a9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a94eba3e4df5d9b2cfcf9f96813949dbfa8e4cd93e73f90bfea6187b21d4a0a9",
+    "svgHash": "1143dfc090c32f82eec26ffe273f2ee0bba904f2a90e2e6eafbdfbdf05965427",
+    "validatedAt": "2026-09-10T17:49:06.484Z",
+    "width": 1061.141357421875,
+    "height": 223.75
+  },
+  "generatedAt": "2026-09-10T17:49:05.197Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 123,
+    "total_tokens": 1681,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

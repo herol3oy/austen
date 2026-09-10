@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/pellucidar",
+  "metadata": {
+    "title": "Pellucidar",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "41432a802c13ec650337bcd5b21d59be6a7e429d9bda3a9bcc8e8c1f9b5bd53e",
+  "promptHash": "ba6cb42418968aca1d2761c17df83e81fe62be3635e70388d70ba5494fdf0388",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:10.284Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:10.284Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"David Innes\"]\nC2[\"Abner Perry\"]\nC3[\"Ghak\"]\nC4[\"Dian the Beautiful\"]\nC5[\"Hooja the Sly One\"]\nC6[\"Jubal the Ugly One\"]\nC7[\"Ja\"]\nC8[\"Raja\"]\nC1 -->|Loves| C4\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC2 -->|Friend of| C3\nC5 -->|Betrays| C1\nC5 -->|Kidnaps| C4\nC6 -->|Enemy of| C1\nC6 -->|Rival of| C3\nC7 -->|Serves| C6\nC8 -->|Serves| C6\nC3 -->|Rival of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 177,
+        "total_tokens": 1738,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:12.087Z",
+      "finishedAt": "2026-09-10T17:34:12.087Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"David Innes\"]\nC2[\"Abner Perry\"]\nC3[\"Ghak\"]\nC4[\"Dian the Beautiful\"]\nC5[\"Hooja the Sly One\"]\nC6[\"Jubal the Ugly One\"]\nC7[\"Ja\"]\nC8[\"Raja\"]\nC1 -->|Loves| C4\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC2 -->|Friend of| C3\nC5 -->|Betrays| C1\nC5 -->|Kidnaps| C4\nC6 -->|Enemy of| C1\nC6 -->|Rival of| C3\nC7 -->|Serves| C6\nC8 -->|Serves| C6\nC3 -->|Rival of| C6",
+  "mermaidHash": "a30f54f443a34d3010f06a452ec86b3c4a21e66075cfdb81570bdc1a1390ca1b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a30f54f443a34d3010f06a452ec86b3c4a21e66075cfdb81570bdc1a1390ca1b",
+    "svgHash": "b8a093eb03a002b43d586f746fcda1aa73b0ad0cdfe0c3124b1a82d475a8ea92",
+    "validatedAt": "2026-09-10T17:34:13.447Z",
+    "width": 1225.986328125,
+    "height": 475.14666748046875
+  },
+  "generatedAt": "2026-09-10T17:34:12.087Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 177,
+    "total_tokens": 1738,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

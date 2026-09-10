@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-james/washington-square",
+  "metadata": {
+    "title": "Washington Square",
+    "authors": [
+      "Henry James"
+    ],
+    "year": "1880"
+  },
+  "inputHash": "bcf244629d908136f0e5e39b4c7c268f452dd49e9e9c68e7833568c0739452a3",
+  "promptHash": "cf9ee93555081475517b0bbf16822be52dd517b0ab39d053012553040359c404",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:22.085Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:22.085Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Catherine Sloper\"]\nC2[\"Dr. Austin Sloper\"]\nC3[\"Morris Townsend\"]\nC4[\"Lavinia Penniman\"]\nC5[\"Marian Almond\"]\nC6[\"Arthur Townsend\"]\nC7[\"Mrs. Montgomery\"]\nC1 -->|Daughter of| C2\nC2 -->|Father of| C1\nC3 -->|Courts| C1\nC1 -->|Loves| C3\nC2 -->|Disapproves of| C3\nC4 -->|Aunt of| C1\nC4 -->|Encourages| C3\nC5 -->|Sister of| C2\nC5 -->|Cousin of| C1\nC6 -->|Cousin of| C3\nC7 -->|Sister of| C3\nC2 -->|Controls| C1\nC3 -->|Abandons| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 196,
+        "total_tokens": 1751,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:23.789Z",
+      "finishedAt": "2026-09-10T17:43:23.789Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Catherine Sloper\"]\nC2[\"Dr. Austin Sloper\"]\nC3[\"Morris Townsend\"]\nC4[\"Lavinia Penniman\"]\nC5[\"Marian Almond\"]\nC6[\"Arthur Townsend\"]\nC7[\"Mrs. Montgomery\"]\nC1 -->|Daughter of| C2\nC2 -->|Father of| C1\nC3 -->|Courts| C1\nC1 -->|Loves| C3\nC2 -->|Disapproves of| C3\nC4 -->|Aunt of| C1\nC4 -->|Encourages| C3\nC5 -->|Sister of| C2\nC5 -->|Cousin of| C1\nC6 -->|Cousin of| C3\nC7 -->|Sister of| C3\nC2 -->|Controls| C1\nC3 -->|Abandons| C1",
+  "mermaidHash": "9b979d7b9ed84938d3f80af1ca10c92aff37fa2cfbce8c0520f17b887f89dded",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9b979d7b9ed84938d3f80af1ca10c92aff37fa2cfbce8c0520f17b887f89dded",
+    "svgHash": "e1daf45c39dd5de2e201e256967076995c1b4c0ff76fa70668899ee496fb7a81",
+    "validatedAt": "2026-09-10T17:43:25.141Z",
+    "width": 1120.32421875,
+    "height": 578
+  },
+  "generatedAt": "2026-09-10T17:43:23.789Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 196,
+    "total_tokens": 1751,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

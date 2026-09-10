@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henrik-ibsen/ghosts/william-archer",
+  "metadata": {
+    "title": "Ghosts",
+    "authors": [
+      "Henrik Ibsen"
+    ],
+    "year": "1881"
+  },
+  "inputHash": "40df37a59610ab710d793db202c7c7e5c15611a9880fcf86344039259c572e5c",
+  "promptHash": "f2711013fca27d5688542c9c008a87fa86eb3a0d2dff0c67c1808b5300d6b157",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:53.241Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:53.241Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mrs. Alving\"]\nC2[\"Osvald Alving\"]\nC3[\"Pastor Manders\"]\nC4[\"Engstrand\"]\nC5[\"Regine Engstrand\"]\nC6[\"Captain Alving\"]\nC1 -->|Married to| C6\nC1 -->|Parent of| C2\nC6 -->|Parent of| C2\nC1 -->|Confidante of| C3\nC3 -->|Mentor of| C1\nC4 -->|Married to| C1\nC4 -->|Parent of| C5\nC6 -->|Parent of| C5\nC2 -->|Loves| C5\nC5 -->|Sibling of| C2\nC4 -->|Protects| C5\nC3 -->|Betrays| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 177,
+        "total_tokens": 1735,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:54.706Z",
+      "finishedAt": "2026-09-10T17:42:54.706Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mrs. Alving\"]\nC2[\"Osvald Alving\"]\nC3[\"Pastor Manders\"]\nC4[\"Engstrand\"]\nC5[\"Regine Engstrand\"]\nC6[\"Captain Alving\"]\nC1 -->|Married to| C6\nC1 -->|Parent of| C2\nC6 -->|Parent of| C2\nC1 -->|Confidante of| C3\nC3 -->|Mentor of| C1\nC4 -->|Married to| C1\nC4 -->|Parent of| C5\nC6 -->|Parent of| C5\nC2 -->|Loves| C5\nC5 -->|Sibling of| C2\nC4 -->|Protects| C5\nC3 -->|Betrays| C1",
+  "mermaidHash": "f6363122325a9c16e54cc2a39b3e6c6dc5b13fef780a9cc67b30884789298afc",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f6363122325a9c16e54cc2a39b3e6c6dc5b13fef780a9cc67b30884789298afc",
+    "svgHash": "2d23b7263a06f91d8b57b224285fa3c9c4f0f1f801b732a3b7a7838bff21db72",
+    "validatedAt": "2026-09-10T17:42:56.020Z",
+    "width": 1266.571044921875,
+    "height": 376.25
+  },
+  "generatedAt": "2026-09-10T17:42:54.706Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 177,
+    "total_tokens": 1735,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

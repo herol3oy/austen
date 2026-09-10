@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "gaston-leroux/the-phantom-of-the-opera/alexander-teixeira-de-mattos",
+  "metadata": {
+    "title": "The Phantom of the Opera",
+    "authors": [
+      "Gaston Leroux"
+    ],
+    "year": "1910"
+  },
+  "inputHash": "17acd5a05bfb41489b5599a9eb60beeacc2aec7a942d38d240f72e0c99f5f0f4",
+  "promptHash": "32bd4dd770daf180f55cd61a58d6262927b36aad9a819c8f88a5c7fffc9e3219",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:30.862Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:30.862Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Erik\"]\nC2[\"Christine Daae\"]\nC3[\"Raoul de Chagny\"]\nC4[\"Comte Philippe de Chagny\"]\nC5[\"Madame Giry\"]\nC6[\"Meg Giry\"]\nC7[\"The Persian\"]\nC1 -->|Obsessed with| C2\nC1 -->|Mentor of| C2\nC1 -->|Rival of| C3\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC4 -->|Brother of| C3\nC5 -->|Protects| C1\nC5 -->|Mother of| C6\nC6 -->|Friend of| C2\nC7 -->|Knows identity of| C1\nC7 -->|Protects| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 175,
+        "total_tokens": 1735,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:32.157Z",
+      "finishedAt": "2026-09-10T17:39:32.157Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Erik\"]\nC2[\"Christine Daae\"]\nC3[\"Raoul de Chagny\"]\nC4[\"Comte Philippe de Chagny\"]\nC5[\"Madame Giry\"]\nC6[\"Meg Giry\"]\nC7[\"The Persian\"]\nC1 -->|Obsessed with| C2\nC1 -->|Mentor of| C2\nC1 -->|Rival of| C3\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC4 -->|Brother of| C3\nC5 -->|Protects| C1\nC5 -->|Mother of| C6\nC6 -->|Friend of| C2\nC7 -->|Knows identity of| C1\nC7 -->|Protects| C3",
+  "mermaidHash": "73c4b80b1630126ddb9eaa31bd67b394403062f835a024df52ae4ac508dcc8c6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "73c4b80b1630126ddb9eaa31bd67b394403062f835a024df52ae4ac508dcc8c6",
+    "svgHash": "c45f4e4cdd752347c52ce844adcc88b147e189827a24f591e41322276943bcc1",
+    "validatedAt": "2026-09-10T17:39:33.535Z",
+    "width": 1133.120849609375,
+    "height": 341.2622985839844
+  },
+  "generatedAt": "2026-09-10T17:39:32.157Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 175,
+    "total_tokens": 1735,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

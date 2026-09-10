@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-phillips-oppenheim/the-great-impersonation",
+  "metadata": {
+    "title": "The Great Impersonation",
+    "authors": [
+      "E. Phillips Oppenheim"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "23bf6a44a8f16cc2eb8e38486f47c6d291783a8513a61b4900f53b3f3c178876",
+  "promptHash": "48864374b409bc5da0c4e71ae9ad0e849d9faec1a97b8d256a6bf992868e2303",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:33.282Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:33.282Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sir Everard Dominey\"]\nC2[\"Leopold von Ragastein\"]\nC3[\"Rosamund Dominey\"]\nC4[\"Duke of Mersch\"]\nC5[\"Dr. Schmidt\"]\nC6[\"Stephanie\"]\nC7[\"Edith Dominey\"]\nC8[\"Seaman\"]\nC1 -->|Impersonated by| C2\nC2 -->|Impersonates| C1\nC3 -->|Wife of| C1\nC4 -->|Serves| C2\nC5 -->|Mentor of| C2\nC6 -->|Loves| C2\nC7 -->|Sister of| C1\nC8 -->|Kills| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 157,
+        "total_tokens": 1718,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:35.121Z",
+      "finishedAt": "2026-09-10T17:33:35.121Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sir Everard Dominey\"]\nC2[\"Leopold von Ragastein\"]\nC3[\"Rosamund Dominey\"]\nC4[\"Duke of Mersch\"]\nC5[\"Dr. Schmidt\"]\nC6[\"Stephanie\"]\nC7[\"Edith Dominey\"]\nC8[\"Seaman\"]\nC1 -->|Impersonated by| C2\nC2 -->|Impersonates| C1\nC3 -->|Wife of| C1\nC4 -->|Serves| C2\nC5 -->|Mentor of| C2\nC6 -->|Loves| C2\nC7 -->|Sister of| C1\nC8 -->|Kills| C2",
+  "mermaidHash": "37004613c6e873b24860e263c10823cb88104f5ca45fa7c6e8a0535fe2e15575",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "37004613c6e873b24860e263c10823cb88104f5ca45fa7c6e8a0535fe2e15575",
+    "svgHash": "79b12344a1c0580e13a45dac7be63055b2828486af622383dd3bbcc879cd649a",
+    "validatedAt": "2026-09-10T17:33:36.448Z",
+    "width": 890.038818359375,
+    "height": 510.5
+  },
+  "generatedAt": "2026-09-10T17:33:35.121Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 157,
+    "total_tokens": 1718,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

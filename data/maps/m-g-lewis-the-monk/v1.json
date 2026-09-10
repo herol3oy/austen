@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "m-g-lewis/the-monk",
+  "metadata": {
+    "title": "The Monk",
+    "authors": [
+      "M. G. Lewis"
+    ],
+    "year": "1796"
+  },
+  "inputHash": "34910f943ea38f87cacdd271c9db966b7affdf947ed9b8f5297e1a23f7fa9cc3",
+  "promptHash": "074cb15876683e9c17bb48560a9ed0057f59880bd33b90914d048225db60da44",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:22.210Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:22.210Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ambrosio\"]\nC2[\"Matilda\"]\nC3[\"Rosario\"]\nC4[\"Antonia\"]\nC5[\"Lorenzo de Medina\"]\nC6[\"Don Raymond\"]\nC7[\"Agnes de Medina\"]\nC8[\"The Prioress\"]\nC1 -->|Tempted by| C2\nC2 -->|Disguised as| C3\nC1 -->|Lusts for| C4\nC1 -->|Rapes| C4\nC1 -->|Kills| C4\nC1 -->|Sibling of| C4\nC5 -->|Loves| C4\nC5 -->|Sibling of| C7\nC6 -->|Loves| C7\nC7 -->|Loves| C6\nC8 -->|Persecutes| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 177,
+        "total_tokens": 1735,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:23.946Z",
+      "finishedAt": "2026-09-10T17:51:23.946Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ambrosio\"]\nC2[\"Matilda\"]\nC3[\"Rosario\"]\nC4[\"Antonia\"]\nC5[\"Lorenzo de Medina\"]\nC6[\"Don Raymond\"]\nC7[\"Agnes de Medina\"]\nC8[\"The Prioress\"]\nC1 -->|Tempted by| C2\nC2 -->|Disguised as| C3\nC1 -->|Lusts for| C4\nC1 -->|Rapes| C4\nC1 -->|Kills| C4\nC1 -->|Sibling of| C4\nC5 -->|Loves| C4\nC5 -->|Sibling of| C7\nC6 -->|Loves| C7\nC7 -->|Loves| C6\nC8 -->|Persecutes| C7",
+  "mermaidHash": "a3c73daea102c3e10c5967e14d4526a34f929ae52ab01a2b31845a7c65ebda79",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a3c73daea102c3e10c5967e14d4526a34f929ae52ab01a2b31845a7c65ebda79",
+    "svgHash": "04f5d492d0dd89c477020421656bdc1ec30f2ec4850db1fea8c083e14b232337",
+    "validatedAt": "2026-09-10T17:51:25.245Z",
+    "width": 798.5420532226562,
+    "height": 400.5
+  },
+  "generatedAt": "2026-09-10T17:51:23.946Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 177,
+    "total_tokens": 1735,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

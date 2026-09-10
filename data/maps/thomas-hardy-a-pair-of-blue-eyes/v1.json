@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hardy/a-pair-of-blue-eyes",
+  "metadata": {
+    "title": "A Pair of Blue Eyes",
+    "authors": [
+      "Thomas Hardy"
+    ],
+    "year": "1872"
+  },
+  "inputHash": "af895a63ecd4a1504e6d7514a05d96d5cf2fd1ab0cda08d5d6bfecf8e4096cfb",
+  "promptHash": "3ce8db6f32cabbde55a84c25ca87ae0ec785578df96a3c2299522509e08a9b5b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:40.597Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:40.598Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Elfride Swancourt\"]\nC2[\"Stephen Smith\"]\nC3[\"Henry Knight\"]\nC4[\"Christopher Swancourt\"]\nC5[\"Charlotte Swancourt\"]\nC6[\"John Smith\"]\nC7[\"Richard Luxellian\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Friend of| C3\nC4 -->|Parent of| C1\nC5 -->|Stepmother of| C1\nC6 -->|Parent of| C2\nC4 -->|Rector of| C7\nC7 -->|Patron of| C4\nC1 -->|Marries| C3\nC2 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 178,
+        "total_tokens": 1736,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:42.642Z",
+      "finishedAt": "2026-09-10T18:10:42.642Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Elfride Swancourt\"]\nC2[\"Stephen Smith\"]\nC3[\"Henry Knight\"]\nC4[\"Christopher Swancourt\"]\nC5[\"Charlotte Swancourt\"]\nC6[\"John Smith\"]\nC7[\"Richard Luxellian\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Friend of| C3\nC4 -->|Parent of| C1\nC5 -->|Stepmother of| C1\nC6 -->|Parent of| C2\nC4 -->|Rector of| C7\nC7 -->|Patron of| C4\nC1 -->|Marries| C3\nC2 -->|Friend of| C1",
+  "mermaidHash": "8a6760d35c12c0b63bc709cadcf7bc8f3bedbb79b2eadbb298cf0d84616e3db6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8a6760d35c12c0b63bc709cadcf7bc8f3bedbb79b2eadbb298cf0d84616e3db6",
+    "svgHash": "bdee72aeaebe069fb0a241226377864d9a75a7fdd18559f45db644e110e5469e",
+    "validatedAt": "2026-09-10T18:10:44.056Z",
+    "width": 1085.970458984375,
+    "height": 361
+  },
+  "generatedAt": "2026-09-10T18:10:42.642Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 178,
+    "total_tokens": 1736,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "w-somerset-maugham/the-moon-and-sixpence",
+  "metadata": {
+    "title": "The Moon and Sixpence",
+    "authors": [
+      "W. Somerset Maugham"
+    ],
+    "year": "1919"
+  },
+  "inputHash": "531f906a6835a337272e55e4a46ee0d4b10ce06384afc40e2d316e705a791e8d",
+  "promptHash": "ed801ddf7297ec1ddd7838faf1652f1b4d19e3a11fed54907ff19adcd16fc305",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:40.073Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:40.073Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Charles Strickland\"]\nC2[\"Mabel Strickland\"]\nC3[\"Blanche Stroeve\"]\nC4[\"Dirk Stroeve\"]\nC5[\"Narrator\"]\nC6[\"Ata\"]\nC7[\"Captain Nichols\"]\nC8[\"Dr. Coutras\"]\nC1 -->|Husband of| C2\nC1 -->|Leaves| C2\nC1 -->|Friend of| C5\nC1 -->|Lover of| C3\nC1 -->|Betrays| C4\nC1 -->|Marries| C6\nC4 -->|Husband of| C3\nC4 -->|Friend of| C1\nC4 -->|Friend of| C5\nC5 -->|Friend of| C4\nC5 -->|Meets| C1\nC3 -->|Wife of| C4\nC3 -->|Lover of| C1\nC6 -->|Wife of| C1\nC7 -->|Friend of| C1\nC8 -->|Attends| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 230,
+        "total_tokens": 1793,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:41.811Z",
+      "finishedAt": "2026-09-10T18:12:41.811Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Charles Strickland\"]\nC2[\"Mabel Strickland\"]\nC3[\"Blanche Stroeve\"]\nC4[\"Dirk Stroeve\"]\nC5[\"Narrator\"]\nC6[\"Ata\"]\nC7[\"Captain Nichols\"]\nC8[\"Dr. Coutras\"]\nC1 -->|Husband of| C2\nC1 -->|Leaves| C2\nC1 -->|Friend of| C5\nC1 -->|Lover of| C3\nC1 -->|Betrays| C4\nC1 -->|Marries| C6\nC4 -->|Husband of| C3\nC4 -->|Friend of| C1\nC4 -->|Friend of| C5\nC5 -->|Friend of| C4\nC5 -->|Meets| C1\nC3 -->|Wife of| C4\nC3 -->|Lover of| C1\nC6 -->|Wife of| C1\nC7 -->|Friend of| C1\nC8 -->|Attends| C1",
+  "mermaidHash": "e421c441aa8fdce1dad56ee22e32441f5b8c6d4b135d0fd2ca1e307fac671a37",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e421c441aa8fdce1dad56ee22e32441f5b8c6d4b135d0fd2ca1e307fac671a37",
+    "svgHash": "b98a92d4938095d10b0e380d863b1bb7664648defb3d84de6ba8ce6563995417",
+    "validatedAt": "2026-09-10T18:12:43.139Z",
+    "width": 1323.0546875,
+    "height": 480.5
+  },
+  "generatedAt": "2026-09-10T18:12:41.811Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 230,
+    "total_tokens": 1793,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maria-lowell/poetry",
+  "metadata": {
+    "title": "Poetry",
+    "authors": [
+      "Maria Lowell"
+    ],
+    "year": "1907"
+  },
+  "inputHash": "befd0560f1f6b7fab4ce1b2d9f5bc992e9ffa71a664fbc14f1e44f2d08b84de3",
+  "promptHash": "b035622ba9b640a9b4ddd2dc59c3b8c62250f2ef9e41ba8dee9572d8d07f36ee",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:51:54.066Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:51:54.066Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 2,
+        "total_tokens": 1557,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 147
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:55.077Z",
+      "finishedAt": "2026-09-10T17:51:55.077Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:51:55.077Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 2,
+    "total_tokens": 1557,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 147
+  }
+}

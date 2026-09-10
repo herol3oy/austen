@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-webster/the-duchess-of-malfi",
+  "metadata": {
+    "title": "The Duchess of Malfi",
+    "authors": [
+      "John Webster"
+    ],
+    "year": "1623"
+  },
+  "inputHash": "a53271ea783b4e1ec14bd906e07d63c9ce180d42d9236e11567b8abb7bd86921",
+  "promptHash": "f259093e1af4d6b4b09f9f9025f16cc783ebbd0b9721c21bde19217e0425fc5a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:42.599Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:42.599Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Duchess of Malfi\"]\nC2[\"Ferdinand\"]\nC3[\"Cardinal\"]\nC4[\"Antonio Bologna\"]\nC5[\"Bosola\"]\nC6[\"Cariola\"]\nC7[\"Julia\"]\nC1 -->|Sister of| C2\nC1 -->|Sister of| C3\nC2 -->|Brother of| C3\nC1 -->|Married to| C4\nC4 -->|Married to| C1\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC2 -->|Opposes marriage of| C1\nC3 -->|Opposes marriage of| C1\nC2 -->|Hires| C5\nC3 -->|Hires| C5\nC5 -->|Spies on| C1\nC5 -->|Betrays| C1\nC5 -->|Kills| C4\nC5 -->|Kills| C1\nC2 -->|Kills| C1\nC3 -->|Kills| C1\nC6 -->|Servant of| C1\nC6 -->|Confidante of| C1\nC7 -->|Loves| C5\nC5 -->|Loves| C7\nC3 -->|Loves| C7\nC7 -->|Mistress of| C3\nC5 -->|Kills| C7\nC5 -->|Kills| C3\nC2 -->|Kills| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 325,
+        "total_tokens": 1884,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:44.398Z",
+      "finishedAt": "2026-09-10T17:47:44.399Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Duchess of Malfi\"]\nC2[\"Ferdinand\"]\nC3[\"Cardinal\"]\nC4[\"Antonio Bologna\"]\nC5[\"Bosola\"]\nC6[\"Cariola\"]\nC7[\"Julia\"]\nC1 -->|Sister of| C2\nC1 -->|Sister of| C3\nC2 -->|Brother of| C3\nC1 -->|Married to| C4\nC4 -->|Married to| C1\nC1 -->|Loves| C4\nC4 -->|Loves| C1\nC2 -->|Opposes marriage of| C1\nC3 -->|Opposes marriage of| C1\nC2 -->|Hires| C5\nC3 -->|Hires| C5\nC5 -->|Spies on| C1\nC5 -->|Betrays| C1\nC5 -->|Kills| C4\nC5 -->|Kills| C1\nC2 -->|Kills| C1\nC3 -->|Kills| C1\nC6 -->|Servant of| C1\nC6 -->|Confidante of| C1\nC7 -->|Loves| C5\nC5 -->|Loves| C7\nC3 -->|Loves| C7\nC7 -->|Mistress of| C3\nC5 -->|Kills| C7\nC5 -->|Kills| C3\nC2 -->|Kills| C5",
+  "mermaidHash": "313cf238b7e953eeda829c92db48bb5db7d5ee39a93ee002437f74b8247c41eb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "313cf238b7e953eeda829c92db48bb5db7d5ee39a93ee002437f74b8247c41eb",
+    "svgHash": "e3d53400c878e19f37c395793f19a49b618b0f34d87032b36d86410d7ef809a8",
+    "validatedAt": "2026-09-10T17:47:45.770Z",
+    "width": 1465.2481689453125,
+    "height": 723.75
+  },
+  "generatedAt": "2026-09-10T17:47:44.398Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 325,
+    "total_tokens": 1884,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

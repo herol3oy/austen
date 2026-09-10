@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jules-verne/michael-strogoff/w-h-g-kingston",
+  "metadata": {
+    "title": "Michael Strogoff",
+    "authors": [
+      "Jules Verne"
+    ],
+    "year": "1876"
+  },
+  "inputHash": "466a41227d7e8ca48b834ea54b508c0bb7f8c89a241f668da1c49aed3534bc1b",
+  "promptHash": "0ebe23def3985af048edc8eafe1386cf1f04d9da257f2bfe00b3b2effe8cacfd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:00.906Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:00.906Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Michael Strogoff\"]\nC2[\"Nadia Fedor\"]\nC3[\"Ivan Ogareff\"]\nC4[\"Marfa Strogoff\"]\nC5[\"Feofar Khan\"]\nC6[\"Blount\"]\nC7[\"Alcide Jolivet\"]\nC8[\"Nicholas Pigassof\"]\nC1 -->|Serves| C4\nC1 -->|Loves| C2\nC1 -->|Protects| C2\nC3 -->|Enemy of| C1\nC3 -->|Betrays| C1\nC3 -->|Commands| C5\nC5 -->|Commands| C3\nC6 -->|Friend of| C7\nC7 -->|Friend of| C6\nC8 -->|Protects| C1\nC8 -->|Protects| C2\nC1 -->|Friend of| C8\nC2 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 197,
+        "total_tokens": 1756,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:02.430Z",
+      "finishedAt": "2026-09-10T17:49:02.430Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Michael Strogoff\"]\nC2[\"Nadia Fedor\"]\nC3[\"Ivan Ogareff\"]\nC4[\"Marfa Strogoff\"]\nC5[\"Feofar Khan\"]\nC6[\"Blount\"]\nC7[\"Alcide Jolivet\"]\nC8[\"Nicholas Pigassof\"]\nC1 -->|Serves| C4\nC1 -->|Loves| C2\nC1 -->|Protects| C2\nC3 -->|Enemy of| C1\nC3 -->|Betrays| C1\nC3 -->|Commands| C5\nC5 -->|Commands| C3\nC6 -->|Friend of| C7\nC7 -->|Friend of| C6\nC8 -->|Protects| C1\nC8 -->|Protects| C2\nC1 -->|Friend of| C8\nC2 -->|Friend of| C8",
+  "mermaidHash": "87ca4f9f9dbe50db5b9d3e3f672e6d9c34456fd4a630cf1028016fc111f8c245",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "87ca4f9f9dbe50db5b9d3e3f672e6d9c34456fd4a630cf1028016fc111f8c245",
+    "svgHash": "a93b4e6018c2fc223b78d08304795f1de94a8708063f86ae1374b2cb2517f9fd",
+    "validatedAt": "2026-09-10T17:49:03.726Z",
+    "width": 1014.8037719726562,
+    "height": 334
+  },
+  "generatedAt": "2026-09-10T17:49:02.430Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 197,
+    "total_tokens": 1756,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

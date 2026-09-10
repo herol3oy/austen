@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/martin-chuzzlewit",
+  "metadata": {
+    "title": "Martin Chuzzlewit",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1838"
+  },
+  "inputHash": "ad46bedfea743161bdc1fe9ddaafc0fe3a14b8c063bcb510353a60ff870ca2f0",
+  "promptHash": "7585b6857bdc38c8de7c92d2f1265b5deefb922d5104fb7644dd8e3457a8b7da",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:15.588Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:15.588Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Martin Chuzzlewit\"]\nC2[\"Pecksniff\"]\nC3[\"Tom Pinch\"]\nC4[\"Mary Graham\"]\nC5[\"Jonas Chuzzlewit\"]\nC6[\"Mark Tapley\"]\nC7[\"Mercy Pecksniff\"]\nC8[\"Anthony Chuzzlewit\"]\nC1 -->|Grandfather of| C1\nC2 -->|Cousin of| C1\nC2 -->|Employer of| C3\nC2 -->|Guardian of| C4\nC2 -->|Father of| C7\nC3 -->|Friend of| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Nephew of| C1\nC5 -->|Son of| C8\nC5 -->|Married to| C7\nC6 -->|Friend of| C1\nC7 -->|Sister of| C2\nC8 -->|Brother of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 215,
+        "total_tokens": 1772,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:17.347Z",
+      "finishedAt": "2026-09-10T17:30:17.348Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Martin Chuzzlewit\"]\nC2[\"Pecksniff\"]\nC3[\"Tom Pinch\"]\nC4[\"Mary Graham\"]\nC5[\"Jonas Chuzzlewit\"]\nC6[\"Mark Tapley\"]\nC7[\"Mercy Pecksniff\"]\nC8[\"Anthony Chuzzlewit\"]\nC1 -->|Grandfather of| C1\nC2 -->|Cousin of| C1\nC2 -->|Employer of| C3\nC2 -->|Guardian of| C4\nC2 -->|Father of| C7\nC3 -->|Friend of| C1\nC3 -->|Loves| C4\nC4 -->|Loves| C1\nC5 -->|Nephew of| C1\nC5 -->|Son of| C8\nC5 -->|Married to| C7\nC6 -->|Friend of| C1\nC7 -->|Sister of| C2\nC8 -->|Brother of| C1",
+  "mermaidHash": "dfaa0deb1b4904a6f788de81181424e9e8c5179333e328ae5ee7aab28e83c9ae",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "dfaa0deb1b4904a6f788de81181424e9e8c5179333e328ae5ee7aab28e83c9ae",
+    "svgHash": "7b1b24db6028fa28d069cd0f4ccdf75d9b2df147e189e01ab1f8817392998c75",
+    "validatedAt": "2026-09-10T17:30:18.742Z",
+    "width": 1258.2991943359375,
+    "height": 538.75
+  },
+  "generatedAt": "2026-09-10T17:30:17.347Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 215,
+    "total_tokens": 1772,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

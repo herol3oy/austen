@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edwin-a-abbott/flatland",
+  "metadata": {
+    "title": "Flatland",
+    "authors": [
+      "Edwin A. Abbott"
+    ],
+    "year": "1884"
+  },
+  "inputHash": "67c0698e10d9a0828fa1ee47ae6b8d68eb43270181660a7f47c2855fc9bca2ec",
+  "promptHash": "254160ec3ffde3e203e06ba162ba8bdab40780b7650938973c5a0d72a361211c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:52.955Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:52.956Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"A Square\"]\nC2[\"A Sphere\"]\nC3[\"Mrs. Square\"]\nC4[\"A Hexagon\"]\nC5[\"The King of Lineland\"]\nC6[\"A Point\"]\nC7[\"A Square's Grandson\"]\nC1 -->|Married to| C3\nC2 -->|Mentor of| C1\nC2 -->|Reveals higher dimensions to| C1\nC1 -->|Dreams of| C5\nC1 -->|Encounters| C6\nC1 -->|Grandfather of| C7\nC4 -->|Commands| C1\nC1 -->|Serves| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 141,
+        "total_tokens": 1699,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:54.162Z",
+      "finishedAt": "2026-09-10T17:35:54.162Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"A Square\"]\nC2[\"A Sphere\"]\nC3[\"Mrs. Square\"]\nC4[\"A Hexagon\"]\nC5[\"The King of Lineland\"]\nC6[\"A Point\"]\nC7[\"A Square's Grandson\"]\nC1 -->|Married to| C3\nC2 -->|Mentor of| C1\nC2 -->|Reveals higher dimensions to| C1\nC1 -->|Dreams of| C5\nC1 -->|Encounters| C6\nC1 -->|Grandfather of| C7\nC4 -->|Commands| C1\nC1 -->|Serves| C4",
+  "mermaidHash": "7d9d556f3c2f67d50b5f91d611f048e57f48a1284895590f4533eca7a6bdbd68",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7d9d556f3c2f67d50b5f91d611f048e57f48a1284895590f4533eca7a6bdbd68",
+    "svgHash": "c9db6066413f8c2142c98f5f3edf6baa0f885e2c09f20a8676873338aa62a316",
+    "validatedAt": "2026-09-10T17:35:55.559Z",
+    "width": 850.3990478515625,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T17:35:54.162Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 141,
+    "total_tokens": 1699,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

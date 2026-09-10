@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-nesbit/the-railway-children",
+  "metadata": {
+    "title": "The Railway Children",
+    "authors": [
+      "E. Nesbit"
+    ],
+    "year": "1906"
+  },
+  "inputHash": "f413ef2d431fd2305c21e5595b356d69d5b3e8a95241c79e40203d62b0a25993",
+  "promptHash": "7f3565bd9544922290d380ed4c3d975e1f983d160145ad23dcc37e121c0a6c62",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:33:21.068Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:33:21.069Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Roberta\"]\nC2[\"Peter\"]\nC3[\"Phyllis\"]\nC4[\"Mother\"]\nC5[\"Father\"]\nC6[\"Perks\"]\nC7[\"The Old Gentleman\"]\nC8[\"Jim\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC2 -->|Sibling of| C3\nC4 -->|Parent of| C1\nC4 -->|Parent of| C2\nC4 -->|Parent of| C3\nC5 -->|Parent of| C1\nC5 -->|Parent of| C2\nC5 -->|Parent of| C3\nC5 -->|Married to| C4\nC6 -->|Friend of| C1\nC6 -->|Friend of| C2\nC6 -->|Friend of| C3\nC7 -->|Helps| C1\nC7 -->|Helps| C2\nC7 -->|Helps| C3\nC1 -->|Helps| C8\nC2 -->|Helps| C8\nC3 -->|Helps| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 242,
+        "total_tokens": 1800,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:33:22.423Z",
+      "finishedAt": "2026-09-10T17:33:22.423Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Roberta\"]\nC2[\"Peter\"]\nC3[\"Phyllis\"]\nC4[\"Mother\"]\nC5[\"Father\"]\nC6[\"Perks\"]\nC7[\"The Old Gentleman\"]\nC8[\"Jim\"]\nC1 -->|Sibling of| C2\nC1 -->|Sibling of| C3\nC2 -->|Sibling of| C3\nC4 -->|Parent of| C1\nC4 -->|Parent of| C2\nC4 -->|Parent of| C3\nC5 -->|Parent of| C1\nC5 -->|Parent of| C2\nC5 -->|Parent of| C3\nC5 -->|Married to| C4\nC6 -->|Friend of| C1\nC6 -->|Friend of| C2\nC6 -->|Friend of| C3\nC7 -->|Helps| C1\nC7 -->|Helps| C2\nC7 -->|Helps| C3\nC1 -->|Helps| C8\nC2 -->|Helps| C8\nC3 -->|Helps| C8",
+  "mermaidHash": "b5145a96e56547115eefef256928666d1a2a8a38743200a24523d8cedbd4d341",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "b5145a96e56547115eefef256928666d1a2a8a38743200a24523d8cedbd4d341",
+    "svgHash": "4329822821b5f4d6e45096ea8e78b5357e175516db42382d3617981b1c0bad4c",
+    "validatedAt": "2026-09-10T17:33:23.827Z",
+    "width": 1262.2073974609375,
+    "height": 647
+  },
+  "generatedAt": "2026-09-10T17:33:22.423Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 242,
+    "total_tokens": 1800,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

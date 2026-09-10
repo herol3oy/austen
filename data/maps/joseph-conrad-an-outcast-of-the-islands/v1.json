@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/an-outcast-of-the-islands",
+  "metadata": {
+    "title": "An Outcast of the Islands",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1896"
+  },
+  "inputHash": "2a6a5ef1817e6d07590207052d40e57af12498f2f81c178ea59460279e169c44",
+  "promptHash": "a34f68752eb81f54ef53c3dcbfa6fc88c36926d034ff2fea2f85a1c9666766d0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:04.768Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:04.768Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Peter Willems\"]\nC2[\"Tom Lingard\"]\nC3[\"Aissa\"]\nC4[\"Joanna da Souza\"]\nC5[\"Hudig\"]\nC6[\"Babalatchi\"]\nC7[\"Lakamba\"]\nC8[\"Almayer\"]\nC1 -->|Betrays| C2\nC2 -->|Mentor of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Married to| C4\nC1 -->|Friend of| C5\nC1 -->|Serves| C7\nC6 -->|Manipulates| C1\nC6 -->|Serves| C7\nC7 -->|Commands| C6\nC2 -->|Friend of| C8\nC1 -->|Betrays| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 182,
+        "total_tokens": 1741,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:06.108Z",
+      "finishedAt": "2026-09-10T17:48:06.108Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Peter Willems\"]\nC2[\"Tom Lingard\"]\nC3[\"Aissa\"]\nC4[\"Joanna da Souza\"]\nC5[\"Hudig\"]\nC6[\"Babalatchi\"]\nC7[\"Lakamba\"]\nC8[\"Almayer\"]\nC1 -->|Betrays| C2\nC2 -->|Mentor of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC1 -->|Married to| C4\nC1 -->|Friend of| C5\nC1 -->|Serves| C7\nC6 -->|Manipulates| C1\nC6 -->|Serves| C7\nC7 -->|Commands| C6\nC2 -->|Friend of| C8\nC1 -->|Betrays| C8",
+  "mermaidHash": "a72974be315d4c5b9238e89d82de53040633399d8bd6fc6488904ed04e0e01a3",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a72974be315d4c5b9238e89d82de53040633399d8bd6fc6488904ed04e0e01a3",
+    "svgHash": "0ce2a8f646cc0356cb2515157cf3deff35dfb405798af4b72defaafe904a1fda",
+    "validatedAt": "2026-09-10T17:48:07.401Z",
+    "width": 718.8455200195312,
+    "height": 575
+  },
+  "generatedAt": "2026-09-10T17:48:06.108Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 182,
+    "total_tokens": 1741,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

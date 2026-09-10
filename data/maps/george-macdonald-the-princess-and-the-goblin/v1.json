@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-macdonald/the-princess-and-the-goblin",
+  "metadata": {
+    "title": "The Princess and the Goblin",
+    "authors": [
+      "George MacDonald"
+    ],
+    "year": "1872"
+  },
+  "inputHash": "9cdbc619defcbf4dc17202e028902090807451190c7a637b1ab4db3e3f1d10e9",
+  "promptHash": "076e4af3fb5068dbd5f3ecee967e5739e4af6c57192349498958503808000aa2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:40.825Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:40.825Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Princess Irene\"]\nC2[\"Curdie\"]\nC3[\"Great-Grandmother Irene\"]\nC4[\"King Papa\"]\nC5[\"Lootie\"]\nC6[\"Goblin Queen\"]\nC7[\"Goblin King\"]\nC8[\"Peter\"]\nC1 -->|Protected by| C5\nC1 -->|Granddaughter of| C3\nC1 -->|Daughter of| C4\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC2 -->|Son of| C8\nC3 -->|Guides| C1\nC3 -->|Guides| C2\nC4 -->|Father of| C1\nC4 -->|Commands| C5\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2\nC8 -->|Father of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 213,
+        "total_tokens": 1772,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:42.585Z",
+      "finishedAt": "2026-09-10T17:40:42.585Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Princess Irene\"]\nC2[\"Curdie\"]\nC3[\"Great-Grandmother Irene\"]\nC4[\"King Papa\"]\nC5[\"Lootie\"]\nC6[\"Goblin Queen\"]\nC7[\"Goblin King\"]\nC8[\"Peter\"]\nC1 -->|Protected by| C5\nC1 -->|Granddaughter of| C3\nC1 -->|Daughter of| C4\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC2 -->|Son of| C8\nC3 -->|Guides| C1\nC3 -->|Guides| C2\nC4 -->|Father of| C1\nC4 -->|Commands| C5\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2\nC8 -->|Father of| C2",
+  "mermaidHash": "d5b427b22c9435ff551569de31f47a1588e06b4bc5c05dd0596f38b4b78a1b32",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d5b427b22c9435ff551569de31f47a1588e06b4bc5c05dd0596f38b4b78a1b32",
+    "svgHash": "18d793c6ea508a6786af4792bfe14f3164b979fdebd73093889adf4e1f9a13fa",
+    "validatedAt": "2026-09-10T17:40:43.965Z",
+    "width": 1282.4957275390625,
+    "height": 432.5
+  },
+  "generatedAt": "2026-09-10T17:40:42.585Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 213,
+    "total_tokens": 1772,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

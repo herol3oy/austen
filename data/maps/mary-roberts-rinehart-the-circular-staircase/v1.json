@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mary-roberts-rinehart/the-circular-staircase",
+  "metadata": {
+    "title": "The Circular Staircase",
+    "authors": [
+      "Mary Roberts Rinehart"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "8ba7c13fdb3871fb5fb6c1ce4e70a0fe99c1a7c07c055c7c08b3db23c7805db5",
+  "promptHash": "51be36e5411e98b2e23a06b86c588b8d8bb59d2918398c0d0b58574466d81e05",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:13.956Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:13.956Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Rachel Innes\"]\nC2[\"Gertrude Innes\"]\nC3[\"Halsey Innes\"]\nC4[\"Louise Armstrong\"]\nC5[\"Arnold Armstrong\"]\nC6[\"Thomas Johnson\"]\nC7[\"Liddy\"]\nC8[\"Alex Warner\"]\nC1 -->|Aunt of| C2\nC1 -->|Aunt of| C3\nC1 -->|Guardian of| C2\nC1 -->|Guardian of| C3\nC2 -->|Sister of| C3\nC3 -->|Loves| C4\nC4 -->|Sister of| C5\nC5 -->|Father of| C4\nC6 -->|Serves| C1\nC7 -->|Serves| C1\nC8 -->|Friend of| C3\nC8 -->|Loves| C4\nC5 -->|Enemy of| C3\nC5 -->|Kills| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 206,
+        "total_tokens": 1767,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:15.692Z",
+      "finishedAt": "2026-09-10T18:03:15.692Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Rachel Innes\"]\nC2[\"Gertrude Innes\"]\nC3[\"Halsey Innes\"]\nC4[\"Louise Armstrong\"]\nC5[\"Arnold Armstrong\"]\nC6[\"Thomas Johnson\"]\nC7[\"Liddy\"]\nC8[\"Alex Warner\"]\nC1 -->|Aunt of| C2\nC1 -->|Aunt of| C3\nC1 -->|Guardian of| C2\nC1 -->|Guardian of| C3\nC2 -->|Sister of| C3\nC3 -->|Loves| C4\nC4 -->|Sister of| C5\nC5 -->|Father of| C4\nC6 -->|Serves| C1\nC7 -->|Serves| C1\nC8 -->|Friend of| C3\nC8 -->|Loves| C4\nC5 -->|Enemy of| C3\nC5 -->|Kills| C6",
+  "mermaidHash": "8600b1b8a653107a84e071385e8a46c619be2a197455f63aa34cdbebcdd692a5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8600b1b8a653107a84e071385e8a46c619be2a197455f63aa34cdbebcdd692a5",
+    "svgHash": "ba77165d5e3d63a0964d84213352dae5dd17edd99d06d0b880123118b861e528",
+    "validatedAt": "2026-09-10T18:03:17.096Z",
+    "width": 1722.7197265625,
+    "height": 346.5
+  },
+  "generatedAt": "2026-09-10T18:03:15.692Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 206,
+    "total_tokens": 1767,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

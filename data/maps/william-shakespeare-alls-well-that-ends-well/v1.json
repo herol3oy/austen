@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/alls-well-that-ends-well",
+  "metadata": {
+    "title": "All’s Well That Ends Well",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1602"
+  },
+  "inputHash": "4141eb4696d718990a9e127e4d08ecf339c03081bf9ca0a1c60b8876d177477b",
+  "promptHash": "c94004c7aac6d0b85b773d5380d7da926532af15274ec524d48373f0e3595ee1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:14:37.706Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:14:37.706Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Helena\"]\nC2[\"Bertram\"]\nC3[\"Countess of Roussillon\"]\nC4[\"King of France\"]\nC5[\"Parolles\"]\nC6[\"Lafew\"]\nC7[\"Diana\"]\nC8[\"Clown\"]\nC1 -->|Loves| C2\nC1 -->|Ward of| C3\nC2 -->|Son of| C3\nC2 -->|Ward of| C4\nC1 -->|Serves| C4\nC1 -->|Heals| C4\nC4 -->|Commands| C2\nC2 -->|Friend of| C5\nC5 -->|Betrays| C2\nC6 -->|Friend of| C3\nC6 -->|Advisor to| C4\nC1 -->|Pursues| C2\nC2 -->|Married to| C1\nC7 -->|Loves| C2\nC2 -->|Courts| C7\nC8 -->|Serves| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 221,
+        "total_tokens": 1781,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:14:38.983Z",
+      "finishedAt": "2026-09-10T18:14:38.983Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Helena\"]\nC2[\"Bertram\"]\nC3[\"Countess of Roussillon\"]\nC4[\"King of France\"]\nC5[\"Parolles\"]\nC6[\"Lafew\"]\nC7[\"Diana\"]\nC8[\"Clown\"]\nC1 -->|Loves| C2\nC1 -->|Ward of| C3\nC2 -->|Son of| C3\nC2 -->|Ward of| C4\nC1 -->|Serves| C4\nC1 -->|Heals| C4\nC4 -->|Commands| C2\nC2 -->|Friend of| C5\nC5 -->|Betrays| C2\nC6 -->|Friend of| C3\nC6 -->|Advisor to| C4\nC1 -->|Pursues| C2\nC2 -->|Married to| C1\nC7 -->|Loves| C2\nC2 -->|Courts| C7\nC8 -->|Serves| C3",
+  "mermaidHash": "7bef188857691aa58f78e9d5c36d3814816a7c55395e83d524642e3299fbe6da",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7bef188857691aa58f78e9d5c36d3814816a7c55395e83d524642e3299fbe6da",
+    "svgHash": "695a023a4e4d6188f79844e25ec8c6ada7a12caf860e802fc70a149f81c19626",
+    "validatedAt": "2026-09-10T18:14:40.414Z",
+    "width": 698.36376953125,
+    "height": 587.5
+  },
+  "generatedAt": "2026-09-10T18:14:38.983Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 221,
+    "total_tokens": 1781,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

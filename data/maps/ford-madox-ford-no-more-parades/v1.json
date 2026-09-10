@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "ford-madox-ford/no-more-parades",
+  "metadata": {
+    "title": "No More Parades",
+    "authors": [
+      "Ford Madox Ford"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "c2faac2b93de9e3ac44d056ae785d7cdf1e911067e1a49ce7a15f6cc1fc2aef1",
+  "promptHash": "38ac26ae973664d52319ddf1b65759df96900fc3e3dbdba5c774a69a67993099",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:17.298Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:17.298Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Christopher Tietjens\"]\nC2[\"Sylvia Tietjens\"]\nC3[\"Valentine Wannop\"]\nC4[\"Mark Tietjens\"]\nC5[\"Vincent Macmaster\"]\nC6[\"Edith Duchemin\"]\nC7[\"General Campion\"]\nC8[\"O Nine Morgan\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC2 -->|Betrays| C1\nC4 -->|Brother of| C1\nC1 -->|Friend of| C5\nC5 -->|Loves| C6\nC7 -->|Commands| C1\nC1 -->|Protects| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 153,
+        "total_tokens": 1712,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:18.729Z",
+      "finishedAt": "2026-09-10T17:37:18.729Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Christopher Tietjens\"]\nC2[\"Sylvia Tietjens\"]\nC3[\"Valentine Wannop\"]\nC4[\"Mark Tietjens\"]\nC5[\"Vincent Macmaster\"]\nC6[\"Edith Duchemin\"]\nC7[\"General Campion\"]\nC8[\"O Nine Morgan\"]\nC1 -->|Married to| C2\nC1 -->|Loves| C3\nC2 -->|Betrays| C1\nC4 -->|Brother of| C1\nC1 -->|Friend of| C5\nC5 -->|Loves| C6\nC7 -->|Commands| C1\nC1 -->|Protects| C8",
+  "mermaidHash": "1efcb691cdfd2d90483216742c0a7467d10c78882e14acd41a8a44bbcf84f0d7",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "1efcb691cdfd2d90483216742c0a7467d10c78882e14acd41a8a44bbcf84f0d7",
+    "svgHash": "2fae3f66e974c1ad1f00fecca20d7a39494a34b7332f4b4c6633903ecd99dc1d",
+    "validatedAt": "2026-09-10T17:37:20.096Z",
+    "width": 1079.53955078125,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:37:18.729Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 153,
+    "total_tokens": 1712,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

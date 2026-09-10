@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-de-quincey/confessions-of-an-english-opium-eater",
+  "metadata": {
+    "title": "Confessions of an English Opium-Eater",
+    "authors": [
+      "Thomas De Quincey"
+    ],
+    "year": "1821"
+  },
+  "inputHash": "1c27761a83d2ce454c3ce1c01deb68e3472c719d2e8025a943d337cfac74dc5a",
+  "promptHash": "acf638f9adce06f0c9a2e48cef8421e25b894d7acd5bc97aad39839d206095a0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:35.376Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:35.376Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1565,
+        "completion_tokens": 2,
+        "total_tokens": 1567,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 285
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:36.702Z",
+      "finishedAt": "2026-09-10T18:10:36.702Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:10:36.702Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 2,
+    "total_tokens": 1567,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 285
+  }
+}

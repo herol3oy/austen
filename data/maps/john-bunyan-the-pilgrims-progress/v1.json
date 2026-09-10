@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "john-bunyan/the-pilgrims-progress",
+  "metadata": {
+    "title": "The Pilgrim’s Progress",
+    "authors": [
+      "John Bunyan"
+    ],
+    "year": "1678"
+  },
+  "inputHash": "cfcbab97c3f5179b12bb91f418a47fdeb324eed182d05feb84f7ec1fbb519ca2",
+  "promptHash": "8d9b59d9f5e5d5e86eed83c7fe6efdd930f71fe22efbd38917ff56c592864392",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:47:06.693Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:47:06.693Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Christian\"]\nC2[\"Evangelist\"]\nC3[\"Pliable\"]\nC4[\"Obstinate\"]\nC5[\"Faithful\"]\nC6[\"Hopeful\"]\nC7[\"Apollyon\"]\nC8[\"Giant Despair\"]\nC1 -->|Guided by| C2\nC1 -->|Travels with| C3\nC1 -->|Leaves| C4\nC1 -->|Companion of| C5\nC1 -->|Companion of| C6\nC5 -->|Companion of| C6\nC7 -->|Enemy of| C1\nC8 -->|Imprisons| C1\nC8 -->|Imprisons| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 156,
+        "total_tokens": 1715,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:47:07.842Z",
+      "finishedAt": "2026-09-10T17:47:07.842Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Christian\"]\nC2[\"Evangelist\"]\nC3[\"Pliable\"]\nC4[\"Obstinate\"]\nC5[\"Faithful\"]\nC6[\"Hopeful\"]\nC7[\"Apollyon\"]\nC8[\"Giant Despair\"]\nC1 -->|Guided by| C2\nC1 -->|Travels with| C3\nC1 -->|Leaves| C4\nC1 -->|Companion of| C5\nC1 -->|Companion of| C6\nC5 -->|Companion of| C6\nC7 -->|Enemy of| C1\nC8 -->|Imprisons| C1\nC8 -->|Imprisons| C6",
+  "mermaidHash": "9e179793a30f0fafd4a99253c96957e5eff73ae2ae4a3c44f7fe979a32238095",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9e179793a30f0fafd4a99253c96957e5eff73ae2ae4a3c44f7fe979a32238095",
+    "svgHash": "d7bcab4dd966ea303ff598f69c0116f0e950c78068a436b5e13854631b664bbf",
+    "validatedAt": "2026-09-10T17:47:09.122Z",
+    "width": 941.456787109375,
+    "height": 451.5
+  },
+  "generatedAt": "2026-09-10T17:47:07.842Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 156,
+    "total_tokens": 1715,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

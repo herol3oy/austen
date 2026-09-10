@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mark-twain/the-adventures-of-huckleberry-finn",
+  "metadata": {
+    "title": "The Adventures of Huckleberry Finn",
+    "authors": [
+      "Mark Twain"
+    ],
+    "year": "1884"
+  },
+  "inputHash": "56e6c77f64121685462e267fed6316e03def9bb4ef172ebfe477800aac9cd05f",
+  "promptHash": "b10023cbc0eac4fdbb6acba6fce1210f988038e6307697827cb512ff110f10b2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:53.259Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:53.259Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Huckleberry Finn\"]\nC2[\"Jim\"]\nC3[\"Tom Sawyer\"]\nC4[\"Pap Finn\"]\nC5[\"Widow Douglas\"]\nC6[\"Miss Watson\"]\nC7[\"Judge Thatcher\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Son of| C4\nC4 -->|Abuses| C1\nC5 -->|Guardian of| C1\nC6 -->|Guardian of| C1\nC6 -->|Owns| C2\nC7 -->|Protects| C1\nC1 -->|Fakes death to escape| C4\nC2 -->|Protects| C1\nC1 -->|Helps free| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 163,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:55.314Z",
+      "finishedAt": "2026-09-10T18:02:55.314Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Huckleberry Finn\"]\nC2[\"Jim\"]\nC3[\"Tom Sawyer\"]\nC4[\"Pap Finn\"]\nC5[\"Widow Douglas\"]\nC6[\"Miss Watson\"]\nC7[\"Judge Thatcher\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Son of| C4\nC4 -->|Abuses| C1\nC5 -->|Guardian of| C1\nC6 -->|Guardian of| C1\nC6 -->|Owns| C2\nC7 -->|Protects| C1\nC1 -->|Fakes death to escape| C4\nC2 -->|Protects| C1\nC1 -->|Helps free| C2",
+  "mermaidHash": "ba5c222ec13ebfe040982aa56d19f8eb6e80713c693ae61ac87fd9d6810ad944",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ba5c222ec13ebfe040982aa56d19f8eb6e80713c693ae61ac87fd9d6810ad944",
+    "svgHash": "26b062c8175033d25540c3ae34db89cf4d9e5900ffe09313aef1cffb023f2e3a",
+    "validatedAt": "2026-09-10T18:02:56.688Z",
+    "width": 822.4383544921875,
+    "height": 376.136474609375
+  },
+  "generatedAt": "2026-09-10T18:02:55.314Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 163,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

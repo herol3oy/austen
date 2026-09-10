@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maurice-leblanc/the-golden-triangle/alexander-teixeira-de-mattos",
+  "metadata": {
+    "title": "The Golden Triangle",
+    "authors": [
+      "Maurice Leblanc"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "e13baa3a632eb0e087849260615033b56a536e5d171fe378945988c5980cf48d",
+  "promptHash": "2299e231d8f5f82e67431c6ebd48221a9383f4e2ae4c319f40e2bb3bba977dde",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:49.531Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:49.531Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Captain Patrice Belval\"]\nC3[\"Coralie Belval\"]\nC4[\"Essarès Bey\"]\nC5[\"Siméon Diodokis\"]\nC6[\"Yvonne d'Altenheim\"]\nC7[\"Little Mother Coralie\"]\nC1 -->|Protects| C2\nC1 -->|Ally of| C3\nC2 -->|Husband of| C3\nC3 -->|Sister of| C6\nC4 -->|Enemy of| C2\nC4 -->|Enemy of| C1\nC5 -->|Servant of| C4\nC5 -->|Betrays| C4\nC6 -->|Friend of| C3\nC1 -->|Enemy of| C4\nC2 -->|Enemy of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 185,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:50.899Z",
+      "finishedAt": "2026-09-10T18:03:50.900Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Captain Patrice Belval\"]\nC3[\"Coralie Belval\"]\nC4[\"Essarès Bey\"]\nC5[\"Siméon Diodokis\"]\nC6[\"Yvonne d'Altenheim\"]\nC7[\"Little Mother Coralie\"]\nC1 -->|Protects| C2\nC1 -->|Ally of| C3\nC2 -->|Husband of| C3\nC3 -->|Sister of| C6\nC4 -->|Enemy of| C2\nC4 -->|Enemy of| C1\nC5 -->|Servant of| C4\nC5 -->|Betrays| C4\nC6 -->|Friend of| C3\nC1 -->|Enemy of| C4\nC2 -->|Enemy of| C5",
+  "mermaidHash": "d5ae229b3ef56a4bb7fa1cdc73476297a69be5c655077a08cc3c3bec5aa6c152",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "d5ae229b3ef56a4bb7fa1cdc73476297a69be5c655077a08cc3c3bec5aa6c152",
+    "svgHash": "d3fbc520b927ad06db8567f3f2f8dc193326a8207db53410cf707df73fbb1e47",
+    "validatedAt": "2026-09-10T18:03:52.372Z",
+    "width": 1135.6427001953125,
+    "height": 300.4400634765625
+  },
+  "generatedAt": "2026-09-10T18:03:50.899Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 185,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

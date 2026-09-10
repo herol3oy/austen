@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "arthur-conan-doyle/the-memoirs-of-sherlock-holmes",
+  "metadata": {
+    "title": "The Memoirs of Sherlock Holmes",
+    "authors": [
+      "Arthur Conan Doyle"
+    ],
+    "year": "1893"
+  },
+  "inputHash": "cbe19a7c0668dcc5d5ac5a4be8bdc10722a66ab4901e067ec40048f9d384913c",
+  "promptHash": "3aefbe4647e10691f951aeeeb88dc38643b987d304fbb345bde0c7e60d9a3b27",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:28:03.956Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:28:03.956Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"John Watson\"]\nC3[\"Mycroft Holmes\"]\nC4[\"Professor Moriarty\"]\nC5[\"Mary Morstan\"]\nC6[\"Inspector Lestrade\"]\nC7[\"Irene Adler\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC1 -->|Sibling of| C3\nC3 -->|Sibling of| C1\nC1 -->|Enemy of| C4\nC4 -->|Enemy of| C1\nC2 -->|Married to| C5\nC1 -->|Works with| C6\nC1 -->|Admires| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 148,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:28:05.288Z",
+      "finishedAt": "2026-09-10T17:28:05.288Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sherlock Holmes\"]\nC2[\"John Watson\"]\nC3[\"Mycroft Holmes\"]\nC4[\"Professor Moriarty\"]\nC5[\"Mary Morstan\"]\nC6[\"Inspector Lestrade\"]\nC7[\"Irene Adler\"]\nC1 -->|Friend of| C2\nC2 -->|Friend of| C1\nC1 -->|Sibling of| C3\nC3 -->|Sibling of| C1\nC1 -->|Enemy of| C4\nC4 -->|Enemy of| C1\nC2 -->|Married to| C5\nC1 -->|Works with| C6\nC1 -->|Admires| C7",
+  "mermaidHash": "6d19c9a641c61cd25aaa271544cefb42b12b93e4439f6c7b9161a002dc626697",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "6d19c9a641c61cd25aaa271544cefb42b12b93e4439f6c7b9161a002dc626697",
+    "svgHash": "c5eb9960f999a9f8881de6a2a175b6c78f61eac54c00487e8647bc6ca481cd45",
+    "validatedAt": "2026-09-10T17:28:06.705Z",
+    "width": 773.0048828125,
+    "height": 469.5
+  },
+  "generatedAt": "2026-09-10T17:28:05.288Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 148,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

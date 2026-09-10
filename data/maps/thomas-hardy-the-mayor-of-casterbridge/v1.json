@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "thomas-hardy/the-mayor-of-casterbridge",
+  "metadata": {
+    "title": "The Mayor of Casterbridge",
+    "authors": [
+      "Thomas Hardy"
+    ],
+    "year": "1886"
+  },
+  "inputHash": "62c7ed2c74f1535147cd3580d956e10b9b19c19389a40ada95f0200e8f3e6b64",
+  "promptHash": "00dcc139da38a9b7b4b25336a77cf2a40d4c91b7b4bd8d96c9b24ebe01b24513",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:10:54.370Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:10:54.370Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Michael Henchard\"]\nC2[\"Susan Henchard\"]\nC3[\"Elizabeth-Jane Newson\"]\nC4[\"Donald Farfrae\"]\nC5[\"Lucetta Templeman\"]\nC6[\"Richard Newson\"]\nC7[\"Joshua Jopp\"]\nC1 -->|Married to| C2\nC1 -->|Sells| C2\nC1 -->|Parent of| C3\nC2 -->|Parent of| C3\nC6 -->|Believes parent of| C3\nC1 -->|Rival of| C4\nC1 -->|Employer of| C4\nC4 -->|Loves| C3\nC5 -->|Loves| C4\nC5 -->|Former lover of| C1\nC1 -->|Betrays| C4\nC1 -->|Betrays| C5\nC7 -->|Serves| C1\nC7 -->|Betrays| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 202,
+        "total_tokens": 1761,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:10:56.568Z",
+      "finishedAt": "2026-09-10T18:10:56.569Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Michael Henchard\"]\nC2[\"Susan Henchard\"]\nC3[\"Elizabeth-Jane Newson\"]\nC4[\"Donald Farfrae\"]\nC5[\"Lucetta Templeman\"]\nC6[\"Richard Newson\"]\nC7[\"Joshua Jopp\"]\nC1 -->|Married to| C2\nC1 -->|Sells| C2\nC1 -->|Parent of| C3\nC2 -->|Parent of| C3\nC6 -->|Believes parent of| C3\nC1 -->|Rival of| C4\nC1 -->|Employer of| C4\nC4 -->|Loves| C3\nC5 -->|Loves| C4\nC5 -->|Former lover of| C1\nC1 -->|Betrays| C4\nC1 -->|Betrays| C5\nC7 -->|Serves| C1\nC7 -->|Betrays| C1",
+  "mermaidHash": "3bfb55c902c295ad97b5c3da3adf5ccd4e09b890c56e55229927808aea1b02f1",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3bfb55c902c295ad97b5c3da3adf5ccd4e09b890c56e55229927808aea1b02f1",
+    "svgHash": "263239a5db8ccf4fec7504d7f3a73da4f8462edd1b4ca909fd2b0b1c658d02f1",
+    "validatedAt": "2026-09-10T18:10:57.895Z",
+    "width": 1448.156982421875,
+    "height": 393.5
+  },
+  "generatedAt": "2026-09-10T18:10:56.568Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 202,
+    "total_tokens": 1761,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

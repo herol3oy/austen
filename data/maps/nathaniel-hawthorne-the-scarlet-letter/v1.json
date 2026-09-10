@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "nathaniel-hawthorne/the-scarlet-letter",
+  "metadata": {
+    "title": "The Scarlet Letter",
+    "authors": [
+      "Nathaniel Hawthorne"
+    ],
+    "year": "1850"
+  },
+  "inputHash": "4b4d4f3b0f5956fa03945aec7b7d0592d6f1098c2fed27b9262c30cf1018cfa6",
+  "promptHash": "4e9190a3a10f1d08e6279a58e0ebcc8467f65c326e25af25a4eef40874cedc94",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:04:31.302Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:04:31.302Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Hester Prynne\"]\nC2[\"Arthur Dimmesdale\"]\nC3[\"Roger Chillingworth\"]\nC4[\"Pearl\"]\nC5[\"Governor Bellingham\"]\nC6[\"John Wilson\"]\nC7[\"Mistress Hibbins\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Daughter of| C4\nC2 -->|Father of| C4\nC3 -->|Married to| C1\nC3 -->|Torments| C2\nC3 -->|Physician of| C2\nC1 -->|Protects| C4\nC5 -->|Governs| C1\nC6 -->|Questions| C1\nC7 -->|Sister of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 171,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:04:32.903Z",
+      "finishedAt": "2026-09-10T18:04:32.903Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Hester Prynne\"]\nC2[\"Arthur Dimmesdale\"]\nC3[\"Roger Chillingworth\"]\nC4[\"Pearl\"]\nC5[\"Governor Bellingham\"]\nC6[\"John Wilson\"]\nC7[\"Mistress Hibbins\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Daughter of| C4\nC2 -->|Father of| C4\nC3 -->|Married to| C1\nC3 -->|Torments| C2\nC3 -->|Physician of| C2\nC1 -->|Protects| C4\nC5 -->|Governs| C1\nC6 -->|Questions| C1\nC7 -->|Sister of| C5",
+  "mermaidHash": "5aad30875f40c05de6bb44ec522e31494f2cc75b042a7289a3d728f63cfeee11",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5aad30875f40c05de6bb44ec522e31494f2cc75b042a7289a3d728f63cfeee11",
+    "svgHash": "dfd245fccb6d51a2a1a6f168e3426cecd4671cd22c824c1edc60d9d1677782b8",
+    "validatedAt": "2026-09-10T18:04:34.340Z",
+    "width": 1260.7322998046875,
+    "height": 296.5
+  },
+  "generatedAt": "2026-09-10T18:04:32.903Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 171,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-robert-maturin/melmoth-the-wanderer",
+  "metadata": {
+    "title": "Melmoth the Wanderer",
+    "authors": [
+      "Charles Robert Maturin"
+    ],
+    "year": "1820"
+  },
+  "inputHash": "1d63226ca2d397261fb7af87ba82e440c5335771e1e701a1a4a0c2fcea379587",
+  "promptHash": "48b0c645ecb39d81a0a35a80d617ac54b3fbd21e5723de09c00a2ad182ff88f9",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:37.418Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:37.418Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Melmoth\"]\nC2[\"Melmoth the Wanderer\"]\nC3[\"Alonzo Moncada\"]\nC4[\"Immalee\"]\nC5[\"Stanton\"]\nC6[\"Don Francisco de Aliaga\"]\nC7[\"Isidora\"]\nC1 -->|Descendant of| C5\nC1 -->|Inherits curse from| C2\nC2 -->|Ancestor of| C1\nC2 -->|Persecutes| C3\nC2 -->|Loves| C4\nC2 -->|Loves| C7\nC3 -->|Enemy of| C2\nC4 -->|Loves| C2\nC6 -->|Father of| C4\nC7 -->|Sister of| C4\nC6 -->|Father of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 178,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:38.994Z",
+      "finishedAt": "2026-09-10T17:30:38.994Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Melmoth\"]\nC2[\"Melmoth the Wanderer\"]\nC3[\"Alonzo Moncada\"]\nC4[\"Immalee\"]\nC5[\"Stanton\"]\nC6[\"Don Francisco de Aliaga\"]\nC7[\"Isidora\"]\nC1 -->|Descendant of| C5\nC1 -->|Inherits curse from| C2\nC2 -->|Ancestor of| C1\nC2 -->|Persecutes| C3\nC2 -->|Loves| C4\nC2 -->|Loves| C7\nC3 -->|Enemy of| C2\nC4 -->|Loves| C2\nC6 -->|Father of| C4\nC7 -->|Sister of| C4\nC6 -->|Father of| C7",
+  "mermaidHash": "a62083b8b2a85a17372b2155793412332ac375f222e487869fb8dcf68c9dede2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a62083b8b2a85a17372b2155793412332ac375f222e487869fb8dcf68c9dede2",
+    "svgHash": "3718fec6294e71fdd91c213ca14334bde1b01dd1198f571a20a598a30eb31f94",
+    "validatedAt": "2026-09-10T17:30:40.345Z",
+    "width": 1090.031982421875,
+    "height": 395.5
+  },
+  "generatedAt": "2026-09-10T17:30:38.994Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 178,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

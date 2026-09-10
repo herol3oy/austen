@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "a-a-milne/winnie-the-pooh",
+  "metadata": {
+    "title": "Winnie-the-Pooh",
+    "authors": [
+      "A. A. Milne"
+    ],
+    "year": "1926"
+  },
+  "inputHash": "4d8e11c49f0cc336c5978836ea49068e0d5f2cc3c2106b14596a12dbfe14c63c",
+  "promptHash": "ce96d2e2f8c94cc135551c5f7499b3bb4e32a345847ac8eda3a7d133d1dbe1bd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:32.792Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:32.792Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Winnie-the-Pooh\"]\nC2[\"Christopher Robin\"]\nC3[\"Piglet\"]\nC4[\"Eeyore\"]\nC5[\"Rabbit\"]\nC6[\"Owl\"]\nC7[\"Kanga\"]\nC8[\"Roo\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8\nC3 -->|Friend of| C4\nC3 -->|Friend of| C5\nC3 -->|Friend of| C6\nC3 -->|Friend of| C7\nC3 -->|Friend of| C8\nC4 -->|Friend of| C5\nC4 -->|Friend of| C6\nC4 -->|Friend of| C7\nC4 -->|Friend of| C8\nC5 -->|Friend of| C6\nC5 -->|Friend of| C7\nC5 -->|Friend of| C8\nC6 -->|Friend of| C7\nC6 -->|Friend of| C8\nC7 -->|Friend of| C8\nC7 -->|Parent of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 347,
+        "total_tokens": 1911,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:34.437Z",
+      "finishedAt": "2026-09-10T17:23:34.437Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Winnie-the-Pooh\"]\nC2[\"Christopher Robin\"]\nC3[\"Piglet\"]\nC4[\"Eeyore\"]\nC5[\"Rabbit\"]\nC6[\"Owl\"]\nC7[\"Kanga\"]\nC8[\"Roo\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8\nC3 -->|Friend of| C4\nC3 -->|Friend of| C5\nC3 -->|Friend of| C6\nC3 -->|Friend of| C7\nC3 -->|Friend of| C8\nC4 -->|Friend of| C5\nC4 -->|Friend of| C6\nC4 -->|Friend of| C7\nC4 -->|Friend of| C8\nC5 -->|Friend of| C6\nC5 -->|Friend of| C7\nC5 -->|Friend of| C8\nC6 -->|Friend of| C7\nC6 -->|Friend of| C8\nC7 -->|Friend of| C8\nC7 -->|Parent of| C8",
+  "mermaidHash": "9b7184f177fa65d247a32845eb02373eb08eb6fe16e4c92f4703ea104cf6068e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9b7184f177fa65d247a32845eb02373eb08eb6fe16e4c92f4703ea104cf6068e",
+    "svgHash": "1da208f754eb6c22dcc189380601c9c713531e1f48648dc304150c5b430da7e0",
+    "validatedAt": "2026-09-10T17:23:35.993Z",
+    "width": 1742.172119140625,
+    "height": 855.5
+  },
+  "generatedAt": "2026-09-10T17:23:34.437Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 347,
+    "total_tokens": 1911,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

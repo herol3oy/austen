@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edward-whymper/scrambles-amongst-the-alps-in-the-years-1860-69",
+  "metadata": {
+    "title": "Scrambles Amongst the Alps in the Years 1860–69",
+    "authors": [
+      "Edward Whymper"
+    ],
+    "year": "1860"
+  },
+  "inputHash": "33247500ed12cdc9bff18b2c1c386f63dcb28aa7dc9992053f04bbec3f476642",
+  "promptHash": "f57f393d054e3675a6f3ff7154602b75d4be665e91d3cb3c8979bd24bad00f48",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:52.146Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:52.146Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1570,
+        "completion_tokens": 2,
+        "total_tokens": 1572,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 290
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:52.952Z",
+      "finishedAt": "2026-09-10T17:35:52.952Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:35:52.952Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1570,
+    "completion_tokens": 2,
+    "total_tokens": 1572,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 290
+  }
+}

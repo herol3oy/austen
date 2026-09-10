@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sinclair-lewis/main-street",
+  "metadata": {
+    "title": "Main Street",
+    "authors": [
+      "Sinclair Lewis"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "1c7d158159878e41816d9eb1999dc0c040336000e1e2def09a47633a882d16f0",
+  "promptHash": "4f50fd7379cae25e625a53a3a81bcebd09da7bfc52941c242c3e0996e3cbe4d0",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:33.745Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:33.745Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Carol Kennicott\"]\nC2[\"Will Kennicott\"]\nC3[\"Vida Sherwin\"]\nC4[\"Guy Pollock\"]\nC5[\"Erik Valborg\"]\nC6[\"Miles Bjornstam\"]\nC7[\"Bea Sorenson\"]\nC8[\"Raymie Wutherspoon\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C3\nC1 -->|Loves| C4\nC1 -->|Loves| C5\nC3 -->|Friend of| C1\nC6 -->|Loves| C7\nC7 -->|Married to| C6\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 153,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:36.227Z",
+      "finishedAt": "2026-09-10T18:09:36.227Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Carol Kennicott\"]\nC2[\"Will Kennicott\"]\nC3[\"Vida Sherwin\"]\nC4[\"Guy Pollock\"]\nC5[\"Erik Valborg\"]\nC6[\"Miles Bjornstam\"]\nC7[\"Bea Sorenson\"]\nC8[\"Raymie Wutherspoon\"]\nC1 -->|Married to| C2\nC1 -->|Friend of| C3\nC1 -->|Loves| C4\nC1 -->|Loves| C5\nC3 -->|Friend of| C1\nC6 -->|Loves| C7\nC7 -->|Married to| C6\nC8 -->|Friend of| C2",
+  "mermaidHash": "f9a708a1f3f8857dae5db3ff61befc8232986e299f60097cbeeaa53aa690514b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f9a708a1f3f8857dae5db3ff61befc8232986e299f60097cbeeaa53aa690514b",
+    "svgHash": "d5fd91491f0f49c2da45bea72362ecceb368d6952c785fd5276f3606f6ad065f",
+    "validatedAt": "2026-09-10T18:09:37.654Z",
+    "width": 491.734375,
+    "height": 504
+  },
+  "generatedAt": "2026-09-10T18:09:36.227Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 153,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

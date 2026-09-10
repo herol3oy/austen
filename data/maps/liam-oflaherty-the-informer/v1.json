@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "liam-oflaherty/the-informer",
+  "metadata": {
+    "title": "The Informer",
+    "authors": [
+      "Liam O’Flaherty"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "e0ffdf80b391de8a9005782d7aa972cd46a9024f1d9eb29272b7f54f76f761ca",
+  "promptHash": "6b6ecaceb720b57228cc59fb9239e8e77c268dc1819d9a112c588a864c9bf9cf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:41.937Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:41.937Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Gypo Nolan\"]\nC2[\"Francis Joseph McPhillip\"]\nC3[\"Dan Gallagher\"]\nC4[\"Katie Fox\"]\nC5[\"Commandant Butler\"]\nC6[\"Bartly Mulholland\"]\nC7[\"Mrs. McPhillip\"]\nC1 -->|Betrays| C2\nC1 -->|Friend of| C2\nC1 -->|Loves| C4\nC1 -->|Member of| C3\nC3 -->|Commands| C1\nC3 -->|Hunts| C1\nC5 -->|Commands| C3\nC6 -->|Friend of| C1\nC6 -->|Betrays| C1\nC7 -->|Mother of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 155,
+        "total_tokens": 1716,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:43.250Z",
+      "finishedAt": "2026-09-10T17:50:43.250Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Gypo Nolan\"]\nC2[\"Francis Joseph McPhillip\"]\nC3[\"Dan Gallagher\"]\nC4[\"Katie Fox\"]\nC5[\"Commandant Butler\"]\nC6[\"Bartly Mulholland\"]\nC7[\"Mrs. McPhillip\"]\nC1 -->|Betrays| C2\nC1 -->|Friend of| C2\nC1 -->|Loves| C4\nC1 -->|Member of| C3\nC3 -->|Commands| C1\nC3 -->|Hunts| C1\nC5 -->|Commands| C3\nC6 -->|Friend of| C1\nC6 -->|Betrays| C1\nC7 -->|Mother of| C2",
+  "mermaidHash": "0f1033e30b425a181b9b79b0e38df2be0c6b2963ead254b54ac6666b56444c28",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0f1033e30b425a181b9b79b0e38df2be0c6b2963ead254b54ac6666b56444c28",
+    "svgHash": "4c179e60d97edf53c3369ebe12f7b06e012dc68e6ec9a43e021a7e049094a878",
+    "validatedAt": "2026-09-10T17:50:44.617Z",
+    "width": 847.6776123046875,
+    "height": 398.5
+  },
+  "generatedAt": "2026-09-10T17:50:43.250Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 155,
+    "total_tokens": 1716,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

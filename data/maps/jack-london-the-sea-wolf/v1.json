@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jack-london/the-sea-wolf",
+  "metadata": {
+    "title": "The Sea-Wolf",
+    "authors": [
+      "Jack London"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "f57f275202697b5f2b8e8c7bb6f8b84709dac2d2d81667e29711f298e9534cf9",
+  "promptHash": "eb7758d75cd3d8305d6a7f57987a88e0cfd3bd43f9cfc698ed7375831eb19b9a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:42.554Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:42.555Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Humphrey Van Weyden\"]\nC2[\"Wolf Larsen\"]\nC3[\"Maud Brewster\"]\nC4[\"Death Larsen\"]\nC5[\"Mugridge\"]\nC6[\"Johansen\"]\nC7[\"Leach\"]\nC1 -->|Captive of| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Captor of| C3\nC2 -->|Brother of| C4\nC4 -->|Rival of| C2\nC5 -->|Attempts to kill| C1\nC2 -->|Kills| C5\nC2 -->|Commands| C6\nC2 -->|Commands| C7\nC7 -->|Mutinies against| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 168,
+        "total_tokens": 1725,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:44.180Z",
+      "finishedAt": "2026-09-10T17:45:44.180Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Humphrey Van Weyden\"]\nC2[\"Wolf Larsen\"]\nC3[\"Maud Brewster\"]\nC4[\"Death Larsen\"]\nC5[\"Mugridge\"]\nC6[\"Johansen\"]\nC7[\"Leach\"]\nC1 -->|Captive of| C2\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Captor of| C3\nC2 -->|Brother of| C4\nC4 -->|Rival of| C2\nC5 -->|Attempts to kill| C1\nC2 -->|Kills| C5\nC2 -->|Commands| C6\nC2 -->|Commands| C7\nC7 -->|Mutinies against| C2",
+  "mermaidHash": "5de7cc26208e003a9129775cc685f97b5f6f16b205dc3c54ab0c23467ca2d537",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5de7cc26208e003a9129775cc685f97b5f6f16b205dc3c54ab0c23467ca2d537",
+    "svgHash": "e248f21e07aa117a4c8ec9e3e2cec41406d2a4337230d9eaec8121346d5d602d",
+    "validatedAt": "2026-09-10T17:45:45.495Z",
+    "width": 812.065185546875,
+    "height": 492.25
+  },
+  "generatedAt": "2026-09-10T17:45:44.180Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 168,
+    "total_tokens": 1725,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

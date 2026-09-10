@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/a-princess-of-mars",
+  "metadata": {
+    "title": "A Princess of Mars",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "5b622b66f33c01def7fc5dea80984de3daab0a9dac971df111ee8ab0ffcfdaa6",
+  "promptHash": "1894bcfc6fe4b464617cd3a26ea2211b9fa06ab39a5e543333b946cc6f8190b7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:00.708Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:00.708Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Carter\"]\nC2[\"Dejah Thoris\"]\nC3[\"Tars Tarkas\"]\nC4[\"Sola\"]\nC5[\"Sarkoja\"]\nC6[\"Tal Hajus\"]\nC7[\"Matai Shang\"]\nC8[\"Phaidor\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Protects| C1\nC3 -->|Father of| C4\nC5 -->|Enemy of| C4\nC5 -->|Enemy of| C1\nC6 -->|Rival of| C3\nC6 -->|Commands| C5\nC7 -->|Enemy of| C1\nC7 -->|Father of| C8\nC8 -->|Betrays| C1\nC8 -->|Loves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 193,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:02.052Z",
+      "finishedAt": "2026-09-10T17:34:02.052Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Carter\"]\nC2[\"Dejah Thoris\"]\nC3[\"Tars Tarkas\"]\nC4[\"Sola\"]\nC5[\"Sarkoja\"]\nC6[\"Tal Hajus\"]\nC7[\"Matai Shang\"]\nC8[\"Phaidor\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Protects| C1\nC3 -->|Father of| C4\nC5 -->|Enemy of| C4\nC5 -->|Enemy of| C1\nC6 -->|Rival of| C3\nC6 -->|Commands| C5\nC7 -->|Enemy of| C1\nC7 -->|Father of| C8\nC8 -->|Betrays| C1\nC8 -->|Loves| C1",
+  "mermaidHash": "aec35ad7f116ef4e66b0e4faf801b3823b9ee8117e10c703abbc345157a2b872",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "aec35ad7f116ef4e66b0e4faf801b3823b9ee8117e10c703abbc345157a2b872",
+    "svgHash": "c65c7ee014380a6a6277579475f4c8e6cd2610c4b5386d1a243bcf3419f84fba",
+    "validatedAt": "2026-09-10T17:34:03.439Z",
+    "width": 1114.9219970703125,
+    "height": 327.4326171875
+  },
+  "generatedAt": "2026-09-10T17:34:02.052Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 193,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

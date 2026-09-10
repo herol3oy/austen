@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-bernard-shaw/heartbreak-house",
+  "metadata": {
+    "title": "Heartbreak House",
+    "authors": [
+      "George Bernard Shaw"
+    ],
+    "year": "1919"
+  },
+  "inputHash": "115dc3def734ad5964966ebfe9d652a845b82394415d5d5846d6d089f9e8ef6a",
+  "promptHash": "1712e5251ec65c8c754a01941dca50912e4f7f876168dc5a1f48be536be66c98",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:42.502Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:42.502Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Ellie Dunn\"]\nC2[\"Captain Shotover\"]\nC3[\"Hesione Hushabye\"]\nC4[\"Ariadne Utterword\"]\nC5[\"Mazzini Dunn\"]\nC6[\"Boss Mangan\"]\nC7[\"Lady Utterword\"]\nC8[\"Randall Utterword\"]\nC1 -->|Daughter of| C5\nC1 -->|Engaged to| C6\nC1 -->|Loves| C2\nC2 -->|Father of| C3\nC2 -->|Father of| C4\nC3 -->|Married to| C2\nC3 -->|Sister of| C4\nC4 -->|Married to| C8\nC4 -->|Sister of| C3\nC5 -->|Friend of| C2\nC6 -->|Business partner of| C5\nC6 -->|Pursues| C3\nC7 -->|Mother of| C4\nC8 -->|Husband of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 220,
+        "total_tokens": 1777,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:44.240Z",
+      "finishedAt": "2026-09-10T17:39:44.240Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Ellie Dunn\"]\nC2[\"Captain Shotover\"]\nC3[\"Hesione Hushabye\"]\nC4[\"Ariadne Utterword\"]\nC5[\"Mazzini Dunn\"]\nC6[\"Boss Mangan\"]\nC7[\"Lady Utterword\"]\nC8[\"Randall Utterword\"]\nC1 -->|Daughter of| C5\nC1 -->|Engaged to| C6\nC1 -->|Loves| C2\nC2 -->|Father of| C3\nC2 -->|Father of| C4\nC3 -->|Married to| C2\nC3 -->|Sister of| C4\nC4 -->|Married to| C8\nC4 -->|Sister of| C3\nC5 -->|Friend of| C2\nC6 -->|Business partner of| C5\nC6 -->|Pursues| C3\nC7 -->|Mother of| C4\nC8 -->|Husband of| C4",
+  "mermaidHash": "12365b9c75aa66b50cf0c3fa83fc592a8c1cd343caadd5554839e22e9d8a0481",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "12365b9c75aa66b50cf0c3fa83fc592a8c1cd343caadd5554839e22e9d8a0481",
+    "svgHash": "adbe7ded11a3008d2175764655baa2fd2e81741eb9aaf43daaea7ca4b0563256",
+    "validatedAt": "2026-09-10T17:39:45.682Z",
+    "width": 1961.8623046875,
+    "height": 256.25
+  },
+  "generatedAt": "2026-09-10T17:39:44.240Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 220,
+    "total_tokens": 1777,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

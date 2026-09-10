@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-shakespeare/king-lear",
+  "metadata": {
+    "title": "King Lear",
+    "authors": [
+      "William Shakespeare"
+    ],
+    "year": "1606"
+  },
+  "inputHash": "1ce1acc005b3564023f78545d0ad1d26eb17c884a9d80c88982be49a9c4399b9",
+  "promptHash": "85c50a5a70410a592242665def25353bd46af1be13976e96b7ca14f858fdfbd8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:15:19.998Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:15:19.998Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Lear\"]\nC2[\"Goneril\"]\nC3[\"Regan\"]\nC4[\"Cordelia\"]\nC5[\"Earl of Gloucester\"]\nC6[\"Edmund\"]\nC7[\"Edgar\"]\nC8[\"Earl of Kent\"]\nC1 -->|Father of| C2\nC1 -->|Father of| C3\nC1 -->|Father of| C4\nC2 -->|Married to| C5\nC3 -->|Married to| C5\nC1 -->|Betrays| C4\nC4 -->|Loves| C1\nC5 -->|Father of| C6\nC5 -->|Father of| C7\nC6 -->|Betrays| C5\nC6 -->|Betrays| C7\nC7 -->|Protects| C5\nC8 -->|Serves| C1\nC8 -->|Protects| C4\nC2 -->|Allied with| C3\nC2 -->|Rival of| C4\nC3 -->|Rival of| C4\nC6 -->|Rival of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 242,
+        "total_tokens": 1797,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:15:21.787Z",
+      "finishedAt": "2026-09-10T18:15:21.787Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Lear\"]\nC2[\"Goneril\"]\nC3[\"Regan\"]\nC4[\"Cordelia\"]\nC5[\"Earl of Gloucester\"]\nC6[\"Edmund\"]\nC7[\"Edgar\"]\nC8[\"Earl of Kent\"]\nC1 -->|Father of| C2\nC1 -->|Father of| C3\nC1 -->|Father of| C4\nC2 -->|Married to| C5\nC3 -->|Married to| C5\nC1 -->|Betrays| C4\nC4 -->|Loves| C1\nC5 -->|Father of| C6\nC5 -->|Father of| C7\nC6 -->|Betrays| C5\nC6 -->|Betrays| C7\nC7 -->|Protects| C5\nC8 -->|Serves| C1\nC8 -->|Protects| C4\nC2 -->|Allied with| C3\nC2 -->|Rival of| C4\nC3 -->|Rival of| C4\nC6 -->|Rival of| C7",
+  "mermaidHash": "11f7e175668c12a9b0300e60f93923168e732927c897ff82e961802f86cbe207",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "11f7e175668c12a9b0300e60f93923168e732927c897ff82e961802f86cbe207",
+    "svgHash": "d110b1027999a0281a349e8143b56f81d741febc56867833ed5c84074ba27603",
+    "validatedAt": "2026-09-10T18:15:23.191Z",
+    "width": 1551.05908203125,
+    "height": 402
+  },
+  "generatedAt": "2026-09-10T18:15:21.787Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 242,
+    "total_tokens": 1797,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

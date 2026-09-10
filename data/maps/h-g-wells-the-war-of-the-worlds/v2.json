@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "h-g-wells/the-war-of-the-worlds",
+  "metadata": {
+    "title": "The War of the Worlds",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1898"
+  },
+  "inputHash": "5114a86502aea693b8e03427ef24514ac194490542af8fb987fa4ae663b5fd19",
+  "promptHash": "f6dc75eb8a45810d1635e160ac19ff56beef2562ed9e6a568cb03e6bab4d942e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:28.054Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:28.054Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Narrator\"]\nC2[\"Martian\"]\nC3[\"Ogilvy\"]\nC4[\"Artilleryman\"]\nC5[\"Curate\"]\nC6[\"Narrator's Brother\"]\nC7[\"Narrator's Wife\"]\nC1 -->|Narrates| C3\nC1 -->|Witnesses| C2\nC1 -->|Travels with| C4\nC1 -->|Shelters with| C5\nC1 -->|Brother of| C6\nC1 -->|Husband of| C7\nC2 -->|Attacks| C1\nC2 -->|Kills| C3\nC5 -->|Betrays| C1\nC4 -->|Fights| C2\nC6 -->|Flees from| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 171,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 153
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:30.022Z",
+      "finishedAt": "2026-09-10T18:02:30.022Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Narrator\"]\nC2[\"Martian\"]\nC3[\"Ogilvy\"]\nC4[\"Artilleryman\"]\nC5[\"Curate\"]\nC6[\"Narrator's Brother\"]\nC7[\"Narrator's Wife\"]\nC1 -->|Narrates| C3\nC1 -->|Witnesses| C2\nC1 -->|Travels with| C4\nC1 -->|Shelters with| C5\nC1 -->|Brother of| C6\nC1 -->|Husband of| C7\nC2 -->|Attacks| C1\nC2 -->|Kills| C3\nC5 -->|Betrays| C1\nC4 -->|Fights| C2\nC6 -->|Flees from| C2",
+  "mermaidHash": "ad4d5d04c6099833b132d62b165495591eb72f900672b442470f7bb7894bec0c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ad4d5d04c6099833b132d62b165495591eb72f900672b442470f7bb7894bec0c",
+    "svgHash": "bfd47b0a190282b381d63dcad319c9f738aa7c332f7864a9d7eccd69e2583d0f",
+    "validatedAt": "2026-09-10T18:02:31.368Z",
+    "width": 870.4920654296875,
+    "height": 518.75
+  },
+  "generatedAt": "2026-09-10T18:02:30.022Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 171,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 153
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "alfred-lord-tennyson/idylls-of-the-king",
+  "metadata": {
+    "title": "Idylls of the King",
+    "authors": [
+      "Alfred, Lord Tennyson"
+    ],
+    "year": "1859"
+  },
+  "inputHash": "2818371df85376e730bd951b247a6c8323170c02ca113a34f2fb06fb7f0b0142",
+  "promptHash": "d7ca43b835630dc6c687206652fad380158d8b4a309086753f5960e5124e4214",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:25:06.395Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:25:06.395Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"King Arthur\"]\nC2[\"Guinevere\"]\nC3[\"Lancelot\"]\nC4[\"Merlin\"]\nC5[\"Vivien\"]\nC6[\"Elaine of Astolat\"]\nC7[\"Gareth\"]\nC8[\"Modred\"]\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC3 -->|Serves| C1\nC4 -->|Mentor of| C1\nC5 -->|Betrays| C4\nC6 -->|Loves| C3\nC7 -->|Serves| C1\nC8 -->|Betrays| C1\nC8 -->|Enemy of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 160,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:08.214Z",
+      "finishedAt": "2026-09-10T17:25:08.214Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"King Arthur\"]\nC2[\"Guinevere\"]\nC3[\"Lancelot\"]\nC4[\"Merlin\"]\nC5[\"Vivien\"]\nC6[\"Elaine of Astolat\"]\nC7[\"Gareth\"]\nC8[\"Modred\"]\nC1 -->|Married to| C2\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC3 -->|Serves| C1\nC4 -->|Mentor of| C1\nC5 -->|Betrays| C4\nC6 -->|Loves| C3\nC7 -->|Serves| C1\nC8 -->|Betrays| C1\nC8 -->|Enemy of| C1",
+  "mermaidHash": "c0b2ef71c3ef8c9aab64f540786e7df5494219eb24ee4b9da2828703c54b1830",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c0b2ef71c3ef8c9aab64f540786e7df5494219eb24ee4b9da2828703c54b1830",
+    "svgHash": "7e78b478c4d5005e970254ab9ecbb3a0ce6930c7c1adc144dcc650b7ab0619ec",
+    "validatedAt": "2026-09-10T17:25:09.529Z",
+    "width": 1083.83740234375,
+    "height": 263
+  },
+  "generatedAt": "2026-09-10T17:25:08.214Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 160,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

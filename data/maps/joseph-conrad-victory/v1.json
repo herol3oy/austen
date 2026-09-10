@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/victory",
+  "metadata": {
+    "title": "Victory",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1915"
+  },
+  "inputHash": "42f6927e3cb607f068f591262a7f10cb323e54019fc57d869bea8337b7afa36a",
+  "promptHash": "427383815ac602cd7cf0bee59ef5d651b669f45916dcb02ebc04b6942b9eadbf",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:33.074Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:33.074Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Axel Heyst\"]\nC2[\"Lena\"]\nC3[\"Mr. Jones\"]\nC4[\"Martin Ricardo\"]\nC5[\"Pedro\"]\nC6[\"Wang\"]\nC7[\"Morrison\"]\nC8[\"Schomberg\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Enemy of| C1\nC3 -->|Commands| C4\nC3 -->|Commands| C5\nC4 -->|Serves| C3\nC5 -->|Serves| C3\nC4 -->|Kills| C5\nC4 -->|Attempts to kill| C1\nC4 -->|Attacks| C2\nC6 -->|Serves| C1\nC6 -->|Protects| C1\nC7 -->|Friend of| C1\nC8 -->|Enemy of| C1\nC8 -->|Sends| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 205,
+        "total_tokens": 1760,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:34.371Z",
+      "finishedAt": "2026-09-10T17:48:34.371Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Axel Heyst\"]\nC2[\"Lena\"]\nC3[\"Mr. Jones\"]\nC4[\"Martin Ricardo\"]\nC5[\"Pedro\"]\nC6[\"Wang\"]\nC7[\"Morrison\"]\nC8[\"Schomberg\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Enemy of| C1\nC3 -->|Commands| C4\nC3 -->|Commands| C5\nC4 -->|Serves| C3\nC5 -->|Serves| C3\nC4 -->|Kills| C5\nC4 -->|Attempts to kill| C1\nC4 -->|Attacks| C2\nC6 -->|Serves| C1\nC6 -->|Protects| C1\nC7 -->|Friend of| C1\nC8 -->|Enemy of| C1\nC8 -->|Sends| C3",
+  "mermaidHash": "3c7b110a839f11e94e99a5705dad05ad06e4d0191a483a9b71ddc30bf72a2f19",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3c7b110a839f11e94e99a5705dad05ad06e4d0191a483a9b71ddc30bf72a2f19",
+    "svgHash": "6734213e2a7b9dbb7973e2b40d9d9d67aa75cf3269ad391e02486bc34aa306c0",
+    "validatedAt": "2026-09-10T17:48:35.657Z",
+    "width": 1116.0650634765625,
+    "height": 510.25
+  },
+  "generatedAt": "2026-09-10T17:48:34.371Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 205,
+    "total_tokens": 1760,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

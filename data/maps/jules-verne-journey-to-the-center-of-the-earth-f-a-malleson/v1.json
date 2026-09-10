@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jules-verne/journey-to-the-center-of-the-earth/f-a-malleson",
+  "metadata": {
+    "title": "Journey to the Center of the Earth",
+    "authors": [
+      "Jules Verne"
+    ],
+    "year": "1864"
+  },
+  "inputHash": "9debfc7fb943ccebc6a50142c79f7ccb28220ff08abc072c12a275121bb0c232",
+  "promptHash": "d5fbb5e5aa96a53d7cf619d0991f0b949d1f6e2555c972eabaad12e559009626",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:57.890Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:57.890Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Professor Otto Lidenbrock\"]\nC2[\"Axel Lidenbrock\"]\nC3[\"Martha\"]\nC4[\"Grauben\"]\nC5[\"Hans Bjelke\"]\nC6[\"Arne Saknussemm\"]\nC1 -->|Uncle of| C2\nC1 -->|Employer of| C3\nC1 -->|Mentor of| C2\nC2 -->|Nephew of| C1\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC1 -->|Deciphers message of| C6\nC5 -->|Guide of| C1\nC5 -->|Guide of| C2\nC1 -->|Rival of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 162,
+        "total_tokens": 1725,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:59.563Z",
+      "finishedAt": "2026-09-10T17:48:59.563Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Professor Otto Lidenbrock\"]\nC2[\"Axel Lidenbrock\"]\nC3[\"Martha\"]\nC4[\"Grauben\"]\nC5[\"Hans Bjelke\"]\nC6[\"Arne Saknussemm\"]\nC1 -->|Uncle of| C2\nC1 -->|Employer of| C3\nC1 -->|Mentor of| C2\nC2 -->|Nephew of| C1\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC1 -->|Deciphers message of| C6\nC5 -->|Guide of| C1\nC5 -->|Guide of| C2\nC1 -->|Rival of| C6",
+  "mermaidHash": "ea1957e5e50aa22c7159a7aee61a95d5b6e805bfa78c7d16a3334c6cb7fd9c74",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ea1957e5e50aa22c7159a7aee61a95d5b6e805bfa78c7d16a3334c6cb7fd9c74",
+    "svgHash": "73109c1b57d96b9729cf62e79227141cc035e350b32ce06726a9f1ea894ac0c6",
+    "validatedAt": "2026-09-10T17:49:00.884Z",
+    "width": 1089.2779541015625,
+    "height": 292.16326904296875
+  },
+  "generatedAt": "2026-09-10T17:48:59.563Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 162,
+    "total_tokens": 1725,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "george-macdonald/at-the-back-of-the-north-wind",
+  "metadata": {
+    "title": "At the Back of the North Wind",
+    "authors": [
+      "George MacDonald"
+    ],
+    "year": "1871"
+  },
+  "inputHash": "e19695378a7925c444869f3e10d74df367f26661240339105da30199aa03c4db",
+  "promptHash": "2e8fbeedad80dd85a1af41fd77460650b168035e17a874fe66fd807ade70e082",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:40:29.095Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:40:29.095Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Diamond\"]\nC2[\"North Wind\"]\nC3[\"Mr. Raymond\"]\nC4[\"Mrs. Raymond\"]\nC5[\"Nanny\"]\nC6[\"Diamond's Father\"]\nC7[\"Diamond's Mother\"]\nC8[\"Ruby\"]\nC1 -->|Loves| C2\nC2 -->|Protects| C1\nC1 -->|Friend of| C5\nC1 -->|Son of| C6\nC1 -->|Son of| C7\nC6 -->|Husband of| C7\nC1 -->|Friend of| C8\nC1 -->|Serves| C3\nC3 -->|Father of| C4\nC1 -->|Loves| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 157,
+        "total_tokens": 1717,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:40:30.177Z",
+      "finishedAt": "2026-09-10T17:40:30.177Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Diamond\"]\nC2[\"North Wind\"]\nC3[\"Mr. Raymond\"]\nC4[\"Mrs. Raymond\"]\nC5[\"Nanny\"]\nC6[\"Diamond's Father\"]\nC7[\"Diamond's Mother\"]\nC8[\"Ruby\"]\nC1 -->|Loves| C2\nC2 -->|Protects| C1\nC1 -->|Friend of| C5\nC1 -->|Son of| C6\nC1 -->|Son of| C7\nC6 -->|Husband of| C7\nC1 -->|Friend of| C8\nC1 -->|Serves| C3\nC3 -->|Father of| C4\nC1 -->|Loves| C4",
+  "mermaidHash": "3a880c1a346e3ecbb4e88423efb18f19fc17794e0ed8ca0ca68afe9c71df1534",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3a880c1a346e3ecbb4e88423efb18f19fc17794e0ed8ca0ca68afe9c71df1534",
+    "svgHash": "47567b338cc170000427bcc0f9e5f77f2f3c083c208b369f80cc0d0245cd4f4f",
+    "validatedAt": "2026-09-10T17:40:31.555Z",
+    "width": 740.7103271484375,
+    "height": 563.75
+  },
+  "generatedAt": "2026-09-10T17:40:30.177Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 157,
+    "total_tokens": 1717,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "elizabeth-gaskell/cranford",
+  "metadata": {
+    "title": "Cranford",
+    "authors": [
+      "Elizabeth Gaskell"
+    ],
+    "year": "1851"
+  },
+  "inputHash": "aeb14571209c21e4a6d81f41b440ba6fa6c7c1ffe73e13ddd9d73bed01068e34",
+  "promptHash": "8fc5e7403c903b80fda75c2da08fa988f6a86d2f65a0193eaa39dec5a5298ae4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:00.943Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:00.943Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Miss Matty Jenkyns\"]\nC2[\"Miss Deborah Jenkyns\"]\nC3[\"Mary Smith\"]\nC4[\"Captain Brown\"]\nC5[\"Miss Pole\"]\nC6[\"Mr Holbrook\"]\nC7[\"Peter Jenkyns\"]\nC8[\"Lady Glenmire\"]\nC1 -->|Sibling of| C2\nC1 -->|Friend of| C3\nC2 -->|Sibling of| C1\nC3 -->|Friend of| C1\nC3 -->|Friend of| C5\nC4 -->|Friend of| C1\nC4 -->|Friend of| C2\nC5 -->|Friend of| C1\nC6 -->|Loves| C1\nC7 -->|Sibling of| C1\nC7 -->|Sibling of| C2\nC8 -->|Sister of| C4\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1557,
+        "completion_tokens": 200,
+        "total_tokens": 1757,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 277
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:02.271Z",
+      "finishedAt": "2026-09-10T17:36:02.271Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Miss Matty Jenkyns\"]\nC2[\"Miss Deborah Jenkyns\"]\nC3[\"Mary Smith\"]\nC4[\"Captain Brown\"]\nC5[\"Miss Pole\"]\nC6[\"Mr Holbrook\"]\nC7[\"Peter Jenkyns\"]\nC8[\"Lady Glenmire\"]\nC1 -->|Sibling of| C2\nC1 -->|Friend of| C3\nC2 -->|Sibling of| C1\nC3 -->|Friend of| C1\nC3 -->|Friend of| C5\nC4 -->|Friend of| C1\nC4 -->|Friend of| C2\nC5 -->|Friend of| C1\nC6 -->|Loves| C1\nC7 -->|Sibling of| C1\nC7 -->|Sibling of| C2\nC8 -->|Sister of| C4\nC8 -->|Friend of| C1",
+  "mermaidHash": "729fb1103f08315890f0718b17e785e15149a032d2b46edc39d8b73ad1b85ea6",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "729fb1103f08315890f0718b17e785e15149a032d2b46edc39d8b73ad1b85ea6",
+    "svgHash": "df0f800296e7130384fd398ac0042990e51c8962960a335d4921d150ce6f9159",
+    "validatedAt": "2026-09-10T17:36:04.043Z",
+    "width": 1295.820556640625,
+    "height": 400
+  },
+  "generatedAt": "2026-09-10T17:36:02.271Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1557,
+    "completion_tokens": 200,
+    "total_tokens": 1757,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 277
+  }
+}

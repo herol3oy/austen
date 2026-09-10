@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/the-time-machine",
+  "metadata": {
+    "title": "The Time Machine",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1895"
+  },
+  "inputHash": "2c6ddb4ea733ebc8889ec87e77f894b0ae2f9c48970bfe4239599ecc7bec9c51",
+  "promptHash": "9e069fad2b6c7d53bc08c8872427ef44976b640f7f909bd920ff459cbe4d0973",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:09.215Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:09.215Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"The Time Traveller\"]\nC2[\"Weena\"]\nC3[\"The Eloi\"]\nC4[\"The Morlocks\"]\nC5[\"Filby\"]\nC6[\"The Medical Man\"]\nC7[\"The Provincial Mayor\"]\nC8[\"The Psychologist\"]\nC1 -->|Protects| C2\nC1 -->|Enemy of| C4\nC1 -->|Friend of| C5\nC1 -->|Dines with| C6\nC1 -->|Dines with| C7\nC1 -->|Dines with| C8\nC2 -->|Member of| C3\nC4 -->|Preys on| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 143,
+        "total_tokens": 1702,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:10.637Z",
+      "finishedAt": "2026-09-10T17:42:10.637Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"The Time Traveller\"]\nC2[\"Weena\"]\nC3[\"The Eloi\"]\nC4[\"The Morlocks\"]\nC5[\"Filby\"]\nC6[\"The Medical Man\"]\nC7[\"The Provincial Mayor\"]\nC8[\"The Psychologist\"]\nC1 -->|Protects| C2\nC1 -->|Enemy of| C4\nC1 -->|Friend of| C5\nC1 -->|Dines with| C6\nC1 -->|Dines with| C7\nC1 -->|Dines with| C8\nC2 -->|Member of| C3\nC4 -->|Preys on| C3",
+  "mermaidHash": "f0dc518fa14caefdb34f2336450153a2937c322aa2e6a0bcf406b5dace08f78b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f0dc518fa14caefdb34f2336450153a2937c322aa2e6a0bcf406b5dace08f78b",
+    "svgHash": "8a3ec27a1dd8d8af69df5e4c13bcd0463b086e4ed2983d4816d99bebae9b3799",
+    "validatedAt": "2026-09-10T17:42:11.974Z",
+    "width": 756.3383178710938,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T17:42:10.637Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 143,
+    "total_tokens": 1702,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

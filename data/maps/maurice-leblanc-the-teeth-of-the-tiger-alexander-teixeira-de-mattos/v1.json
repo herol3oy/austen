@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maurice-leblanc/the-teeth-of-the-tiger/alexander-teixeira-de-mattos",
+  "metadata": {
+    "title": "The Teeth of the Tiger",
+    "authors": [
+      "Maurice Leblanc"
+    ],
+    "year": "1914"
+  },
+  "inputHash": "ba22426d57f0298434b0dc5a0b94ec76889b287472efe1eba53b05345485db3a",
+  "promptHash": "78e96ec28796ca880330968e465f5d324ebab8202926a4ab9127e05429b3e33b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:57.471Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:57.471Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Don Luis Perenna\"]\nC3[\"Florence Levasseur\"]\nC4[\"Gaston Sauverand\"]\nC5[\"Marie Fauville\"]\nC6[\"Hippolyte Fauville\"]\nC7[\"Inspector Vérot\"]\nC8[\"Mazot\"]\nC1 -->|Alter ego of| C2\nC2 -->|Protects| C3\nC2 -->|Rival of| C4\nC4 -->|Loves| C3\nC5 -->|Married to| C6\nC6 -->|Frames| C5\nC7 -->|Investigates| C6\nC8 -->|Serves| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 157,
+        "total_tokens": 1719,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:59.005Z",
+      "finishedAt": "2026-09-10T18:03:59.005Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Don Luis Perenna\"]\nC3[\"Florence Levasseur\"]\nC4[\"Gaston Sauverand\"]\nC5[\"Marie Fauville\"]\nC6[\"Hippolyte Fauville\"]\nC7[\"Inspector Vérot\"]\nC8[\"Mazot\"]\nC1 -->|Alter ego of| C2\nC2 -->|Protects| C3\nC2 -->|Rival of| C4\nC4 -->|Loves| C3\nC5 -->|Married to| C6\nC6 -->|Frames| C5\nC7 -->|Investigates| C6\nC8 -->|Serves| C2",
+  "mermaidHash": "0b0abd4ea8f81f181ac6e21e6a1be7d6208ccb91ba12dba42d0deaf7bb157598",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0b0abd4ea8f81f181ac6e21e6a1be7d6208ccb91ba12dba42d0deaf7bb157598",
+    "svgHash": "bf79bc2c4b2f81838ff36a0b6ff7ae14b8cc34ffc194bbcdbd6efac99ab84543",
+    "validatedAt": "2026-09-10T18:04:00.414Z",
+    "width": 1048.760009765625,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T18:03:59.005Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 157,
+    "total_tokens": 1719,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

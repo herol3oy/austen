@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henry-james/the-wings-of-the-dove",
+  "metadata": {
+    "title": "The Wings of the Dove",
+    "authors": [
+      "Henry James"
+    ],
+    "year": "1902"
+  },
+  "inputHash": "90189a909d5f611e5b6d1447da7d9d4b8f1a8a5565ebacd2941c75baecef4abe",
+  "promptHash": "1948f545b03ec510781dc071926dbed62b74cc9bc2b4f88ae18558f8dcfa9277",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:19.182Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:19.182Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Kate Croy\"]\nC2[\"Milly Theale\"]\nC3[\"Merton Densher\"]\nC4[\"Maud Lowder\"]\nC5[\"Lionel Croy\"]\nC6[\"Susan Stringham\"]\nC7[\"Lord Mark\"]\nC1 -->|Daughter of| C5\nC1 -->|Sister of| C4\nC1 -->|Loves| C3\nC2 -->|Loves| C3\nC2 -->|Friend of| C6\nC3 -->|Loves| C1\nC3 -->|Courts| C2\nC4 -->|Aunt of| C1\nC4 -->|Manipulates| C1\nC7 -->|Proposes to| C2\nC7 -->|Betrays| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 170,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:20.717Z",
+      "finishedAt": "2026-09-10T17:43:20.717Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Kate Croy\"]\nC2[\"Milly Theale\"]\nC3[\"Merton Densher\"]\nC4[\"Maud Lowder\"]\nC5[\"Lionel Croy\"]\nC6[\"Susan Stringham\"]\nC7[\"Lord Mark\"]\nC1 -->|Daughter of| C5\nC1 -->|Sister of| C4\nC1 -->|Loves| C3\nC2 -->|Loves| C3\nC2 -->|Friend of| C6\nC3 -->|Loves| C1\nC3 -->|Courts| C2\nC4 -->|Aunt of| C1\nC4 -->|Manipulates| C1\nC7 -->|Proposes to| C2\nC7 -->|Betrays| C2",
+  "mermaidHash": "0ca45fee52353308b0b5060fa445efcb9624037c7091c355b19e25892bfe82dd",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0ca45fee52353308b0b5060fa445efcb9624037c7091c355b19e25892bfe82dd",
+    "svgHash": "044e7b4d83e3b2cf00087b1720b85bcc70e61e0299530fda3fff51283d651b67",
+    "validatedAt": "2026-09-10T17:43:22.069Z",
+    "width": 999.6644287109375,
+    "height": 392
+  },
+  "generatedAt": "2026-09-10T17:43:20.717Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 170,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

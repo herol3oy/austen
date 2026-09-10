@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "agatha-christie/partners-in-crime",
+  "metadata": {
+    "title": "Partners in Crime",
+    "authors": [
+      "Agatha Christie"
+    ],
+    "year": "1929"
+  },
+  "inputHash": "f62d11dbe3509af2cc96567011e7db5adeff335690c9c3309bde5199ef60571d",
+  "promptHash": "2d1e6365dd42ea796f8a5efa2f9b1737dc70fa2f7eb7b596a39b97a7b6dcbe6e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:23:57.516Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:23:57.516Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tommy Beresford\"]\nC2[\"Tuppence Beresford\"]\nC3[\"Mr. Carter\"]\nC4[\"Albert\"]\nC5[\"Julius Hersheimmer\"]\nC6[\"Jane Finn\"]\nC7[\"Mr. Brown\"]\nC1 -->|Married to| C2\nC1 -->|Serves| C3\nC2 -->|Serves| C3\nC1 -->|Friend of| C4\nC2 -->|Friend of| C4\nC1 -->|Protects| C6\nC2 -->|Protects| C6\nC5 -->|Cousin of| C6\nC5 -->|Loves| C6\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2\nC7 -->|Enemy of| C5\nC7 -->|Enemy of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 192,
+        "total_tokens": 1750,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:23:58.706Z",
+      "finishedAt": "2026-09-10T17:23:58.706Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tommy Beresford\"]\nC2[\"Tuppence Beresford\"]\nC3[\"Mr. Carter\"]\nC4[\"Albert\"]\nC5[\"Julius Hersheimmer\"]\nC6[\"Jane Finn\"]\nC7[\"Mr. Brown\"]\nC1 -->|Married to| C2\nC1 -->|Serves| C3\nC2 -->|Serves| C3\nC1 -->|Friend of| C4\nC2 -->|Friend of| C4\nC1 -->|Protects| C6\nC2 -->|Protects| C6\nC5 -->|Cousin of| C6\nC5 -->|Loves| C6\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2\nC7 -->|Enemy of| C5\nC7 -->|Enemy of| C6",
+  "mermaidHash": "454459bc0dcc55c2709759de6a3f809cf528094a9a677e263751037e4366119b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "454459bc0dcc55c2709759de6a3f809cf528094a9a677e263751037e4366119b",
+    "svgHash": "f59da454c3c5727d136a4af447c92b8f32101e5030ac710ee8b8d49e007efca5",
+    "validatedAt": "2026-09-10T17:24:00.101Z",
+    "width": 993.3250732421875,
+    "height": 440.75
+  },
+  "generatedAt": "2026-09-10T17:23:58.706Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 192,
+    "total_tokens": 1750,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

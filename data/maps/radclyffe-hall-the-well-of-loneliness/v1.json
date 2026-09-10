@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "radclyffe-hall/the-well-of-loneliness",
+  "metadata": {
+    "title": "The Well of Loneliness",
+    "authors": [
+      "Radclyffe Hall"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "d1a06fa11c869380ae6f364ebe7caaa8d9d2053abac99a9d93467f097a236738",
+  "promptHash": "4a5958db9bfe2c2481dc79783759fb804ed5f32d72a4f6b9ebdde9ba4649e4cb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:07:00.533Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:07:00.533Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Stephen Gordon\"]\nC2[\"Mary Llewellyn\"]\nC3[\"Martin Hallam\"]\nC4[\"Jonathan Brockett\"]\nC5[\"Valérie Seymour\"]\nC6[\"Anna Gordon\"]\nC7[\"Sir Philip Gordon\"]\nC8[\"Jamie\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Loves| C2\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC6 -->|Parent of| C1\nC7 -->|Parent of| C1\nC1 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 147,
+        "total_tokens": 1708,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:07:02.067Z",
+      "finishedAt": "2026-09-10T18:07:02.067Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Stephen Gordon\"]\nC2[\"Mary Llewellyn\"]\nC3[\"Martin Hallam\"]\nC4[\"Jonathan Brockett\"]\nC5[\"Valérie Seymour\"]\nC6[\"Anna Gordon\"]\nC7[\"Sir Philip Gordon\"]\nC8[\"Jamie\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC1 -->|Friend of| C3\nC3 -->|Loves| C2\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC6 -->|Parent of| C1\nC7 -->|Parent of| C1\nC1 -->|Friend of| C8",
+  "mermaidHash": "08580f05c273c89165188554e250fd5175da56fbdf95047378b81ddbbf6bd122",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "08580f05c273c89165188554e250fd5175da56fbdf95047378b81ddbbf6bd122",
+    "svgHash": "4ae819b7d630add378550472f62b72aeefeb78abc0c5a4e14e910d31a05af953",
+    "validatedAt": "2026-09-10T18:07:03.446Z",
+    "width": 1013.4256591796875,
+    "height": 478
+  },
+  "generatedAt": "2026-09-10T18:07:02.067Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 147,
+    "total_tokens": 1708,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

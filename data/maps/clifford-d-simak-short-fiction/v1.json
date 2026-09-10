@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "clifford-d-simak/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "Clifford D. Simak"
+    ],
+    "year": "1932–1963"
+  },
+  "inputHash": "1a00a5fd27545d98837365d185c5385abd6efa086c3d2e01bfc530048f9a367d",
+  "promptHash": "7ce64da8fc4ecd41ac94c900cc30eedba3841931f1358789839e358de9c5b95d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:22.384Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:22.384Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 155
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:23.331Z",
+      "finishedAt": "2026-09-10T17:31:23.331Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:31:23.331Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 155
+  }
+}

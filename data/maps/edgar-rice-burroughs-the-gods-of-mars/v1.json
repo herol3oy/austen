@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/the-gods-of-mars",
+  "metadata": {
+    "title": "The Gods of Mars",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1918"
+  },
+  "inputHash": "d79b927173d2abd71f0f07e8d2c1e616455898710cf3677d4bb9ecf4c4fb90f9",
+  "promptHash": "1554a81f100a1e5ea5492ab601fffea909a8a3d1f1acce9c1ef8f6602a23434e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:35.596Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:35.596Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Carter\"]\nC2[\"Dejah Thoris\"]\nC3[\"Tars Tarkas\"]\nC4[\"Thuvia\"]\nC5[\"Xodar\"]\nC6[\"Matai Shang\"]\nC7[\"Issus\"]\nC8[\"Phaidor\"]\nC1 -->|Husband of| C2\nC1 -->|Friend of| C3\nC1 -->|Protects| C4\nC1 -->|Allied with| C5\nC3 -->|Friend of| C1\nC4 -->|Loves| C1\nC5 -->|Serves| C1\nC6 -->|Enemy of| C1\nC7 -->|Ruler of| C6\nC8 -->|Daughter of| C6\nC8 -->|Betrays| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 176,
+        "total_tokens": 1737,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:36.766Z",
+      "finishedAt": "2026-09-10T17:34:36.766Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Carter\"]\nC2[\"Dejah Thoris\"]\nC3[\"Tars Tarkas\"]\nC4[\"Thuvia\"]\nC5[\"Xodar\"]\nC6[\"Matai Shang\"]\nC7[\"Issus\"]\nC8[\"Phaidor\"]\nC1 -->|Husband of| C2\nC1 -->|Friend of| C3\nC1 -->|Protects| C4\nC1 -->|Allied with| C5\nC3 -->|Friend of| C1\nC4 -->|Loves| C1\nC5 -->|Serves| C1\nC6 -->|Enemy of| C1\nC7 -->|Ruler of| C6\nC8 -->|Daughter of| C6\nC8 -->|Betrays| C1",
+  "mermaidHash": "afef819e24b6d55bc3c346245ed83edc8d53f921b5227168a294897e79a8c2b4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "afef819e24b6d55bc3c346245ed83edc8d53f921b5227168a294897e79a8c2b4",
+    "svgHash": "a01808ccd09a73a57af19a6be3d7b51e2de0b683c29a89f1f125ee28a4ed3ea9",
+    "validatedAt": "2026-09-10T17:34:38.163Z",
+    "width": 932.808349609375,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:34:36.766Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 176,
+    "total_tokens": 1737,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

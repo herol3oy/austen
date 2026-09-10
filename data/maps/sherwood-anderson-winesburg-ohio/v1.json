@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sherwood-anderson/winesburg-ohio",
+  "metadata": {
+    "title": "Winesburg, Ohio",
+    "authors": [
+      "Sherwood Anderson"
+    ],
+    "year": "1919"
+  },
+  "inputHash": "89cbc6d9c55e4defbbe4915018d8e20deb61127ad19304908e2f04234de0cb58",
+  "promptHash": "28a69d9eb3df4e12d07674be9794dd4b306f8718e284585d58b40583278e2f8d",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:09:11.917Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:09:11.917Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"George Willard\"]\nC2[\"Elizabeth Willard\"]\nC3[\"Tom Willard\"]\nC4[\"Wing Biddlebaum\"]\nC5[\"Kate Swift\"]\nC6[\"Helen White\"]\nC7[\"Doctor Reefy\"]\nC8[\"Enoch Robinson\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Married to| C3\nC5 -->|Mentor of| C1\nC1 -->|Loves| C6\nC7 -->|Friend of| C1\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 132,
+        "total_tokens": 1691,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:09:13.654Z",
+      "finishedAt": "2026-09-10T18:09:13.654Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"George Willard\"]\nC2[\"Elizabeth Willard\"]\nC3[\"Tom Willard\"]\nC4[\"Wing Biddlebaum\"]\nC5[\"Kate Swift\"]\nC6[\"Helen White\"]\nC7[\"Doctor Reefy\"]\nC8[\"Enoch Robinson\"]\nC1 -->|Son of| C2\nC1 -->|Son of| C3\nC2 -->|Married to| C3\nC5 -->|Mentor of| C1\nC1 -->|Loves| C6\nC7 -->|Friend of| C1\nC8 -->|Friend of| C1",
+  "mermaidHash": "5900e161ee7cc09304b408432afb6bc2d957839e4c608600363e6810098ea388",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5900e161ee7cc09304b408432afb6bc2d957839e4c608600363e6810098ea388",
+    "svgHash": "7d6d530fff48ec935ad2f2c4284bb3e382586e58a1f7fb611cf68e245939e157",
+    "validatedAt": "2026-09-10T18:09:15.002Z",
+    "width": 999.360595703125,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T18:09:13.654Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 132,
+    "total_tokens": 1691,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

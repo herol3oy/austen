@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/almayers-folly",
+  "metadata": {
+    "title": "Almayer’s Folly",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1895"
+  },
+  "inputHash": "9c8ffb3f2e6fe9eacd0322f5aedfea1425660bff82d823f0dc302b58ce58684b",
+  "promptHash": "a9d90e349525cd981f240cb85205f8156aff2132a88c010714d1fc9ded148314",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:02.118Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:02.119Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Kaspar Almayer\"]\nC2[\"Nina Almayer\"]\nC3[\"Dain Maroola\"]\nC4[\"Lakamba\"]\nC5[\"Mrs Almayer\"]\nC6[\"Taminah\"]\nC7[\"Tom Lingard\"]\nC1 -->|Parent of| C2\nC1 -->|Married to| C5\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC4 -->|Rival of| C1\nC4 -->|Father of| C3\nC6 -->|Loves| C3\nC7 -->|Mentor of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 149,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:03.463Z",
+      "finishedAt": "2026-09-10T17:48:03.463Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Kaspar Almayer\"]\nC2[\"Nina Almayer\"]\nC3[\"Dain Maroola\"]\nC4[\"Lakamba\"]\nC5[\"Mrs Almayer\"]\nC6[\"Taminah\"]\nC7[\"Tom Lingard\"]\nC1 -->|Parent of| C2\nC1 -->|Married to| C5\nC2 -->|Loves| C3\nC3 -->|Loves| C2\nC4 -->|Rival of| C1\nC4 -->|Father of| C3\nC6 -->|Loves| C3\nC7 -->|Mentor of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "a50c494f4f4166d923a58b3c47ada662590fc567c8ff1e843707fd11c4b7174b",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a50c494f4f4166d923a58b3c47ada662590fc567c8ff1e843707fd11c4b7174b",
+    "svgHash": "8928f603892e7d11b3df2f6433f77386fe940a2eb52f0e7722389998fed9649d",
+    "validatedAt": "2026-09-10T17:48:04.761Z",
+    "width": 954.87451171875,
+    "height": 362
+  },
+  "generatedAt": "2026-09-10T17:48:03.463Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 149,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/the-way-we-live-now",
+  "metadata": {
+    "title": "The Way We Live Now",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1875"
+  },
+  "inputHash": "9fc47ec1ed2376fe52b8d98dda3c802840bf7bef551b3abba64ce855b04e1f0f",
+  "promptHash": "cffa5ae1c55bae27e23b9d2a9951c1ad040937cb4ece76174e833c225d556719",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:27:14.802Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:27:14.802Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Augustus Melmotte\"]\nC2[\"Paul Montague\"]\nC3[\"Hetta Carbury\"]\nC4[\"Roger Carbury\"]\nC5[\"Felix Carbury\"]\nC6[\"Marie Melmotte\"]\nC7[\"Mrs Hurtle\"]\nC8[\"Lady Carbury\"]\nC1 -->|Father of| C6\nC1 -->|Fraudulent financier to| C2\nC1 -->|Business associate of| C5\nC2 -->|Loves| C3\nC2 -->|Former lover of| C7\nC3 -->|Loves| C2\nC3 -->|Cousin of| C4\nC4 -->|Loves| C3\nC4 -->|Cousin of| C5\nC5 -->|Brother of| C3\nC5 -->|Son of| C8\nC6 -->|Loves| C2\nC7 -->|Pursues| C2\nC8 -->|Mother of| C3\nC8 -->|Mother of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 225,
+        "total_tokens": 1784,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:27:17.057Z",
+      "finishedAt": "2026-09-10T17:27:17.058Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Augustus Melmotte\"]\nC2[\"Paul Montague\"]\nC3[\"Hetta Carbury\"]\nC4[\"Roger Carbury\"]\nC5[\"Felix Carbury\"]\nC6[\"Marie Melmotte\"]\nC7[\"Mrs Hurtle\"]\nC8[\"Lady Carbury\"]\nC1 -->|Father of| C6\nC1 -->|Fraudulent financier to| C2\nC1 -->|Business associate of| C5\nC2 -->|Loves| C3\nC2 -->|Former lover of| C7\nC3 -->|Loves| C2\nC3 -->|Cousin of| C4\nC4 -->|Loves| C3\nC4 -->|Cousin of| C5\nC5 -->|Brother of| C3\nC5 -->|Son of| C8\nC6 -->|Loves| C2\nC7 -->|Pursues| C2\nC8 -->|Mother of| C3\nC8 -->|Mother of| C5",
+  "mermaidHash": "8e5f94a45d6c517eb64eb6122b2b6e19372bf379acc72069f4eb05ed33a57ef2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8e5f94a45d6c517eb64eb6122b2b6e19372bf379acc72069f4eb05ed33a57ef2",
+    "svgHash": "5a0fa34f7b21968951d4521c37834133cceb334bc2dbad9a2e1333333a3fbf0b",
+    "validatedAt": "2026-09-10T17:27:18.553Z",
+    "width": 1895.427978515625,
+    "height": 252.75
+  },
+  "generatedAt": "2026-09-10T17:27:17.057Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 225,
+    "total_tokens": 1784,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

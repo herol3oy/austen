@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "maurice-leblanc/arsene-lupin-versus-herlock-sholmes/george-morehead",
+  "metadata": {
+    "title": "Arsène Lupin Versus Herlock Sholmes",
+    "authors": [
+      "Maurice Leblanc"
+    ],
+    "year": "1908"
+  },
+  "inputHash": "11d02b2c350764767d77e4def366f40d4d2cbb3b254db447d5017f8084e2476b",
+  "promptHash": "7da32703b53c7da091c836e7cedb8f5eca99a9a53ee78788706cc0ec7b2c295c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:35.485Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:35.485Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Herlock Sholmes\"]\nC3[\"Wilson\"]\nC4[\"Ganimard\"]\nC5[\"Baron d'Hautrec\"]\nC6[\"Clotilde Destange\"]\nC7[\"Alice Destange\"]\nC1 -->|Enemy of| C2\nC2 -->|Rival of| C1\nC3 -->|Assistant of| C2\nC4 -->|Enemy of| C1\nC1 -->|Impersonates| C5\nC1 -->|Loves| C6\nC6 -->|Loves| C1\nC7 -->|Daughter of| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1568,
+        "completion_tokens": 143,
+        "total_tokens": 1711,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 288
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:37.046Z",
+      "finishedAt": "2026-09-10T18:03:37.046Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Arsène Lupin\"]\nC2[\"Herlock Sholmes\"]\nC3[\"Wilson\"]\nC4[\"Ganimard\"]\nC5[\"Baron d'Hautrec\"]\nC6[\"Clotilde Destange\"]\nC7[\"Alice Destange\"]\nC1 -->|Enemy of| C2\nC2 -->|Rival of| C1\nC3 -->|Assistant of| C2\nC4 -->|Enemy of| C1\nC1 -->|Impersonates| C5\nC1 -->|Loves| C6\nC6 -->|Loves| C1\nC7 -->|Daughter of| C6",
+  "mermaidHash": "7436252ea3330ceb0996f93ff78c8e6e4dfdb5fbd18eb6690ef211ae53e9adda",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "7436252ea3330ceb0996f93ff78c8e6e4dfdb5fbd18eb6690ef211ae53e9adda",
+    "svgHash": "15b5f918f8df3c554a4dc628bc90a6c861ef1194a96431d84371a2a16fafb8f9",
+    "validatedAt": "2026-09-10T18:03:38.407Z",
+    "width": 737.5823364257812,
+    "height": 349
+  },
+  "generatedAt": "2026-09-10T18:03:37.046Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1568,
+    "completion_tokens": 143,
+    "total_tokens": 1711,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 288
+  }
+}

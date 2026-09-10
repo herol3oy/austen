@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "r-a-lafferty/short-fiction",
+  "metadata": {
+    "title": "Short Fiction",
+    "authors": [
+      "R. A. Lafferty"
+    ],
+    "year": "1960–1962"
+  },
+  "inputHash": "a9af9932fd4755fd774f52e533e7e94385c3fbda7dfb810de9b8907ff5191aae",
+  "promptHash": "77d1be1ba95028910c548b089e88dfc27e72cce501f26fc8e7ba91ada303a88c",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:41.086Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:41.086Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 2,
+        "total_tokens": 1565,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 155
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:41.995Z",
+      "finishedAt": "2026-09-10T18:06:41.995Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:06:41.995Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 2,
+    "total_tokens": 1565,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 155
+  }
+}

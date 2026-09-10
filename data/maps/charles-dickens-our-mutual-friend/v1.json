@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/our-mutual-friend",
+  "metadata": {
+    "title": "Our Mutual Friend",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1865"
+  },
+  "inputHash": "ca197c9d6ec9d4a4596dd31f2cf8b55074254481d8060e3c04e81ded566aea2c",
+  "promptHash": "a59c6456bc4de540e70468c6dd383c6073e93717a561dd1a53818f826437b217",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:24.955Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:24.955Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"John Harmon\"]\nC2[\"Bella Wilfer\"]\nC3[\"Nicodemus Boffin\"]\nC4[\"Silas Wegg\"]\nC5[\"Lizzie Hexam\"]\nC6[\"Eugene Wrayburn\"]\nC7[\"Bradley Headstone\"]\nC8[\"Mr Venus\"]\nC1 -->|Loves| C2\nC1 -->|Adopted by| C3\nC2 -->|Adopted by| C3\nC3 -->|Employer of| C4\nC4 -->|Blackmails| C3\nC5 -->|Sister of| C1\nC6 -->|Loves| C5\nC7 -->|Rival of| C6\nC7 -->|Obsessed with| C5\nC8 -->|Partner of| C4\nC7 -->|Kills| C6",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 184,
+        "total_tokens": 1740,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:26.664Z",
+      "finishedAt": "2026-09-10T17:30:26.664Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"John Harmon\"]\nC2[\"Bella Wilfer\"]\nC3[\"Nicodemus Boffin\"]\nC4[\"Silas Wegg\"]\nC5[\"Lizzie Hexam\"]\nC6[\"Eugene Wrayburn\"]\nC7[\"Bradley Headstone\"]\nC8[\"Mr Venus\"]\nC1 -->|Loves| C2\nC1 -->|Adopted by| C3\nC2 -->|Adopted by| C3\nC3 -->|Employer of| C4\nC4 -->|Blackmails| C3\nC5 -->|Sister of| C1\nC6 -->|Loves| C5\nC7 -->|Rival of| C6\nC7 -->|Obsessed with| C5\nC8 -->|Partner of| C4\nC7 -->|Kills| C6",
+  "mermaidHash": "32f7fc30fd6f164cf88e5f1fb1fd3d054dd5320cc558115da8f64c2c7cc96d58",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "32f7fc30fd6f164cf88e5f1fb1fd3d054dd5320cc558115da8f64c2c7cc96d58",
+    "svgHash": "6519dd67c455a63a15b2f3cbe670f504227e69ee4439ca94a8e634b145dba97a",
+    "validatedAt": "2026-09-10T17:30:28.007Z",
+    "width": 1776.51611328125,
+    "height": 191.11900329589844
+  },
+  "generatedAt": "2026-09-10T17:30:26.664Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 184,
+    "total_tokens": 1740,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "anthony-trollope/he-knew-he-was-right",
+  "metadata": {
+    "title": "He Knew He Was Right",
+    "authors": [
+      "Anthony Trollope"
+    ],
+    "year": "1869"
+  },
+  "inputHash": "1c0c03642d996eef406de6631248b00f8d8ebc99ab9f87e659d1466a7607f619",
+  "promptHash": "284c5d4b94595302b89f54d321cec3881ffdab195c9636a75e53bd5e6f6d718e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:26:38.251Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:26:38.251Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Louis Trevelyan\"]\nC2[\"Emily Trevelyan\"]\nC3[\"Colonel Osborne\"]\nC4[\"Nora Rowley\"]\nC5[\"Hugh Stanbury\"]\nC6[\"Charles Glascock\"]\nC7[\"Aunt Stanbury\"]\nC8[\"Mr. Trevelyan\"]\nC1 -->|Married to| C2\nC1 -->|Obsessed with| C3\nC2 -->|Friend of| C3\nC1 -->|Separated from| C2\nC1 -->|Kidnaps| C2\nC4 -->|Sister of| C2\nC4 -->|Loves| C5\nC5 -->|Loves| C4\nC6 -->|Loves| C4\nC7 -->|Aunt of| C5\nC7 -->|Friend of| C4\nC8 -->|Father of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 192,
+        "total_tokens": 1752,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:26:39.988Z",
+      "finishedAt": "2026-09-10T17:26:39.988Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Louis Trevelyan\"]\nC2[\"Emily Trevelyan\"]\nC3[\"Colonel Osborne\"]\nC4[\"Nora Rowley\"]\nC5[\"Hugh Stanbury\"]\nC6[\"Charles Glascock\"]\nC7[\"Aunt Stanbury\"]\nC8[\"Mr. Trevelyan\"]\nC1 -->|Married to| C2\nC1 -->|Obsessed with| C3\nC2 -->|Friend of| C3\nC1 -->|Separated from| C2\nC1 -->|Kidnaps| C2\nC4 -->|Sister of| C2\nC4 -->|Loves| C5\nC5 -->|Loves| C4\nC6 -->|Loves| C4\nC7 -->|Aunt of| C5\nC7 -->|Friend of| C4\nC8 -->|Father of| C1",
+  "mermaidHash": "87aa72f40b84416471741734890153b1678aef1e1c44cac5a6e6ec520d31e16c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "87aa72f40b84416471741734890153b1678aef1e1c44cac5a6e6ec520d31e16c",
+    "svgHash": "0ed4c9b17d82b9441cd13d45fd89668da3388455e3b89b248ee82b4a91601165",
+    "validatedAt": "2026-09-10T17:26:41.341Z",
+    "width": 1064.943115234375,
+    "height": 335.79522705078125
+  },
+  "generatedAt": "2026-09-10T17:26:39.988Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 192,
+    "total_tokens": 1752,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

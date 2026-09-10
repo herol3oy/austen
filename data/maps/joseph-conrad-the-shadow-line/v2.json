@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "joseph-conrad/the-shadow-line",
+  "metadata": {
+    "title": "The Shadow Line",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1917"
+  },
+  "inputHash": "e4290459ced64522aae4eec12bafdc5cd216ec67c05f08ba16cec9a07afcf7a5",
+  "promptHash": "74c54e28af8253375a5590b7d7674b6d5e008820b6bf845a9eb5850eaf18108a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:45.075Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:45.075Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Joseph Conrad\"]\nC2[\"Captain\"]\nC3[\"First Mate\"]\nC4[\"Chief Engineer\"]\nC5[\"Mr. Burns\"]\nC6[\"Ransome\"]\nC7[\"Dr. Anderson\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 47,
+        "total_tokens": 1603,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 148
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:46.201Z",
+      "finishedAt": "2026-09-10T18:02:46.201Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Joseph Conrad\"]\nC2[\"Captain\"]\nC3[\"First Mate\"]\nC4[\"Chief Engineer\"]\nC5[\"Mr. Burns\"]\nC6[\"Ransome\"]\nC7[\"Dr. Anderson\"]",
+  "mermaidHash": "a25746e3bfd2488ae0a2d236f8604c2c11ce87220f554593531a3dbcb803e42f",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T18:02:46.201Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 47,
+    "total_tokens": 1603,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 148
+  }
+}

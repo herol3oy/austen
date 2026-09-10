@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jules-verne/dick-sands-the-boy-captain/ellen-e-frewer",
+  "metadata": {
+    "title": "Dick Sands, the Boy Captain",
+    "authors": [
+      "Jules Verne"
+    ],
+    "year": "1878"
+  },
+  "inputHash": "78e4b9fc18c247a5d01cfcc467b02b0092dd851296ee94d40427b1a66e8c5e17",
+  "promptHash": "f6013ad3a16fb9b5ef6a8deeb69d3b646614446339d43188e5a0acb4a8e4ec81",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:45.932Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:45.932Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dick Sands\"]\nC2[\"Mrs. Weldon\"]\nC3[\"Jack Weldon\"]\nC4[\"Cousin Benedict\"]\nC5[\"Tom\"]\nC6[\"Negoro\"]\nC7[\"Harris\"]\nC8[\"Hercules\"]\nC1 -->|Serves as captain for| C2\nC1 -->|Protects| C3\nC2 -->|Mother of| C3\nC2 -->|Cousin of| C4\nC1 -->|Friend of| C5\nC5 -->|Father of| C8\nC6 -->|Enemy of| C1\nC6 -->|Betrays| C2\nC7 -->|Accomplice of| C6\nC7 -->|Deceives| C1\nC8 -->|Protects| C2\nC8 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 184,
+        "total_tokens": 1745,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:47.685Z",
+      "finishedAt": "2026-09-10T17:48:47.685Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dick Sands\"]\nC2[\"Mrs. Weldon\"]\nC3[\"Jack Weldon\"]\nC4[\"Cousin Benedict\"]\nC5[\"Tom\"]\nC6[\"Negoro\"]\nC7[\"Harris\"]\nC8[\"Hercules\"]\nC1 -->|Serves as captain for| C2\nC1 -->|Protects| C3\nC2 -->|Mother of| C3\nC2 -->|Cousin of| C4\nC1 -->|Friend of| C5\nC5 -->|Father of| C8\nC6 -->|Enemy of| C1\nC6 -->|Betrays| C2\nC7 -->|Accomplice of| C6\nC7 -->|Deceives| C1\nC8 -->|Protects| C2\nC8 -->|Friend of| C1",
+  "mermaidHash": "62448154007d2c83e1c3a052f474d215e740fa77d5b4fd0aa92141fa16bb2f3e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "62448154007d2c83e1c3a052f474d215e740fa77d5b4fd0aa92141fa16bb2f3e",
+    "svgHash": "163e0deef7d1cc51077c6452d64fa5e0ab8b89112df8a33b17752dbd3b836d0e",
+    "validatedAt": "2026-09-10T17:48:49.031Z",
+    "width": 1668.3885498046875,
+    "height": 303.5
+  },
+  "generatedAt": "2026-09-10T17:48:47.685Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 184,
+    "total_tokens": 1745,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

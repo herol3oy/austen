@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/tarzan-and-the-jewels-of-opar",
+  "metadata": {
+    "title": "Tarzan and the Jewels of Opar",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1916"
+  },
+  "inputHash": "8efb491009aeff17ab4b52a9c2780f9fac0ea54b53612f94da5bb1df34f536bb",
+  "promptHash": "02cf357733d675fc0b0b9c6bb119eaabb42d8d9f0a019d1532206b7b4916511b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:20.311Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:20.311Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jane Clayton\"]\nC3[\"La\"]\nC4[\"Werper\"]\nC5[\"Achmet Zek\"]\nC6[\"Mugambi\"]\nC7[\"D'Arnot\"]\nC1 -->|Husband of| C2\nC1 -->|Loves| C2\nC3 -->|Loves| C1\nC4 -->|Betrays| C1\nC4 -->|Steals jewels from| C1\nC4 -->|Serves| C5\nC5 -->|Enemy of| C1\nC5 -->|Abducts| C2\nC6 -->|Serves| C1\nC6 -->|Protects| C2\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1566,
+        "completion_tokens": 164,
+        "total_tokens": 1730,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 286
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:21.918Z",
+      "finishedAt": "2026-09-10T17:34:21.918Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Tarzan\"]\nC2[\"Jane Clayton\"]\nC3[\"La\"]\nC4[\"Werper\"]\nC5[\"Achmet Zek\"]\nC6[\"Mugambi\"]\nC7[\"D'Arnot\"]\nC1 -->|Husband of| C2\nC1 -->|Loves| C2\nC3 -->|Loves| C1\nC4 -->|Betrays| C1\nC4 -->|Steals jewels from| C1\nC4 -->|Serves| C5\nC5 -->|Enemy of| C1\nC5 -->|Abducts| C2\nC6 -->|Serves| C1\nC6 -->|Protects| C2\nC7 -->|Friend of| C1",
+  "mermaidHash": "ef756247d97cc48e3aafb2c748d347fae77a34bc4ff0f430d17d4280457e16de",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ef756247d97cc48e3aafb2c748d347fae77a34bc4ff0f430d17d4280457e16de",
+    "svgHash": "c6598ffb96316c3b7b4e46bed43f1b82e9efc8448d6c95935074c57c0f7011a9",
+    "validatedAt": "2026-09-10T17:34:23.272Z",
+    "width": 855.3564453125,
+    "height": 455.5
+  },
+  "generatedAt": "2026-09-10T17:34:21.918Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1566,
+    "completion_tokens": 164,
+    "total_tokens": 1730,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 286
+  }
+}

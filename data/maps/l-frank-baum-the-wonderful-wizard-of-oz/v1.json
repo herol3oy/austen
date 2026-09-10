@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "l-frank-baum/the-wonderful-wizard-of-oz",
+  "metadata": {
+    "title": "The Wonderful Wizard of Oz",
+    "authors": [
+      "L. Frank Baum"
+    ],
+    "year": "1900"
+  },
+  "inputHash": "e7d2c5760cede2a8dbaad2e99c64d967da68e8df38fd86de4684d28710989c54",
+  "promptHash": "916121cb18335d3208a831fb2edf72c2c784cce4da060aec79ce8d0177b2cc0f",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:49:48.686Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:49:48.686Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dorothy Gale\"]\nC2[\"Scarecrow\"]\nC3[\"Tin Woodman\"]\nC4[\"Cowardly Lion\"]\nC5[\"The Wizard of Oz\"]\nC6[\"Wicked Witch of the West\"]\nC7[\"Glinda\"]\nC8[\"Aunt Em\"]\nC1 -->|Travels with| C2\nC1 -->|Travels with| C3\nC1 -->|Travels with| C4\nC2 -->|Companion of| C1\nC3 -->|Companion of| C1\nC4 -->|Companion of| C1\nC1 -->|Seeks help from| C5\nC2 -->|Seeks help from| C5\nC3 -->|Seeks help from| C5\nC4 -->|Seeks help from| C5\nC5 -->|Sends to kill| C6\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC6 -->|Enemy of| C3\nC6 -->|Enemy of| C4\nC7 -->|Helps| C1\nC1 -->|Niece of| C8\nC8 -->|Guardian of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 267,
+        "total_tokens": 1827,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:49:50.046Z",
+      "finishedAt": "2026-09-10T17:49:50.046Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dorothy Gale\"]\nC2[\"Scarecrow\"]\nC3[\"Tin Woodman\"]\nC4[\"Cowardly Lion\"]\nC5[\"The Wizard of Oz\"]\nC6[\"Wicked Witch of the West\"]\nC7[\"Glinda\"]\nC8[\"Aunt Em\"]\nC1 -->|Travels with| C2\nC1 -->|Travels with| C3\nC1 -->|Travels with| C4\nC2 -->|Companion of| C1\nC3 -->|Companion of| C1\nC4 -->|Companion of| C1\nC1 -->|Seeks help from| C5\nC2 -->|Seeks help from| C5\nC3 -->|Seeks help from| C5\nC4 -->|Seeks help from| C5\nC5 -->|Sends to kill| C6\nC6 -->|Enemy of| C1\nC6 -->|Enemy of| C2\nC6 -->|Enemy of| C3\nC6 -->|Enemy of| C4\nC7 -->|Helps| C1\nC1 -->|Niece of| C8\nC8 -->|Guardian of| C1",
+  "mermaidHash": "a98f481ab9ad980a2fff057ec8a3e1d46755de7664e6202d979755bddb5e5e33",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "a98f481ab9ad980a2fff057ec8a3e1d46755de7664e6202d979755bddb5e5e33",
+    "svgHash": "2cfd9a79d8b8b8f0246b213bd71de8588d009f852a6441a650039617b5c2e0c1",
+    "validatedAt": "2026-09-10T17:49:51.373Z",
+    "width": 1591.739990234375,
+    "height": 557
+  },
+  "generatedAt": "2026-09-10T17:49:50.046Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 267,
+    "total_tokens": 1827,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

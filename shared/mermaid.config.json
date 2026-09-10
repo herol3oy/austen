@@ -1,0 +1,12 @@
+{
+  "startOnLoad": false,
+  "securityLevel": "strict",
+  "htmlLabels": false,
+  "flowchart": { "htmlLabels": false },
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#ece6d9", "primaryTextColor": "#282722", "primaryBorderColor": "#40584b",
+    "lineColor": "#727066", "secondaryColor": "#f5f1e8", "tertiaryColor": "#fbf9f4",
+    "edgeLabelBackground": "#fbf9f4", "fontFamily": "Inter, system-ui, sans-serif", "fontSize": "14px"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "evelyn-waugh/vile-bodies",
+  "metadata": {
+    "title": "Vile Bodies",
+    "authors": [
+      "Evelyn Waugh"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "229db78825025a9d31a82c4170bdb629d26b85e17893e6b240fe44285a5274e9",
+  "promptHash": "b88d0b4c3e1eb03180c64715a5c51ee87fc97a7aad3bec649fb4ed8d983ee821",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:56.878Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:56.878Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Adam Fenwick-Symes\"]\nC2[\"Nina Blount\"]\nC3[\"Ginger Littlejohn\"]\nC4[\"Lord Metroland\"]\nC5[\"Lady Metroland\"]\nC6[\"Colonel Blount\"]\nC7[\"Miss Runcible\"]\nC8[\"Miles Malpractice\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Marries| C3\nC1 -->|Friend of| C7\nC2 -->|Daughter of| C6\nC5 -->|Aunt of| C2\nC4 -->|Married to| C5\nC1 -->|Friend of| C8\nC3 -->|Rival of| C1\nC5 -->|Friend of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 169,
+        "total_tokens": 1728,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:58.432Z",
+      "finishedAt": "2026-09-10T17:36:58.432Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Adam Fenwick-Symes\"]\nC2[\"Nina Blount\"]\nC3[\"Ginger Littlejohn\"]\nC4[\"Lord Metroland\"]\nC5[\"Lady Metroland\"]\nC6[\"Colonel Blount\"]\nC7[\"Miss Runcible\"]\nC8[\"Miles Malpractice\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC2 -->|Marries| C3\nC1 -->|Friend of| C7\nC2 -->|Daughter of| C6\nC5 -->|Aunt of| C2\nC4 -->|Married to| C5\nC1 -->|Friend of| C8\nC3 -->|Rival of| C1\nC5 -->|Friend of| C7",
+  "mermaidHash": "73622e6cb59754c5fda7f374f3559ad778ffbf86160bffe3ee2454efdc61979a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "73622e6cb59754c5fda7f374f3559ad778ffbf86160bffe3ee2454efdc61979a",
+    "svgHash": "4f6301a4523b53eef4821c98d85ee683e482bdba2a9d57743cda622ef9f3bbbe",
+    "validatedAt": "2026-09-10T17:36:59.844Z",
+    "width": 1096.94677734375,
+    "height": 420.8582458496094
+  },
+  "generatedAt": "2026-09-10T17:36:58.432Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 169,
+    "total_tokens": 1728,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

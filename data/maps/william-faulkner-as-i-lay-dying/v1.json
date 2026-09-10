@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-faulkner/as-i-lay-dying",
+  "metadata": {
+    "title": "As I Lay Dying",
+    "authors": [
+      "William Faulkner"
+    ],
+    "year": "1930"
+  },
+  "inputHash": "1bc5d26f219b5ae4730576adaa8627440a372a47e47d53d6cb733e315e61ef2e",
+  "promptHash": "1a1449119963e972b84b45daa0a59a5141ef49e9dc1ed2b32ee4eb2636a79722",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:13:54.648Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:13:54.648Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Addie Bundren\"]\nC2[\"Anse Bundren\"]\nC3[\"Cash Bundren\"]\nC4[\"Darl Bundren\"]\nC5[\"Jewel Bundren\"]\nC6[\"Dewey Dell Bundren\"]\nC7[\"Vardaman Bundren\"]\nC8[\"Vernon Tull\"]\nC2 -->|Married to| C1\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC1 -->|Parent of| C6\nC1 -->|Parent of| C7\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C6\nC2 -->|Parent of| C7\nC3 -->|Sibling of| C4\nC4 -->|Sibling of| C5\nC4 -->|Sibling of| C6\nC4 -->|Sibling of| C7\nC5 -->|Sibling of| C6\nC5 -->|Sibling of| C7\nC6 -->|Sibling of| C7\nC8 -->|Friend of| C2\nC8 -->|Helps| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 267,
+        "total_tokens": 1825,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:13:56.383Z",
+      "finishedAt": "2026-09-10T18:13:56.383Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Addie Bundren\"]\nC2[\"Anse Bundren\"]\nC3[\"Cash Bundren\"]\nC4[\"Darl Bundren\"]\nC5[\"Jewel Bundren\"]\nC6[\"Dewey Dell Bundren\"]\nC7[\"Vardaman Bundren\"]\nC8[\"Vernon Tull\"]\nC2 -->|Married to| C1\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC1 -->|Parent of| C6\nC1 -->|Parent of| C7\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C6\nC2 -->|Parent of| C7\nC3 -->|Sibling of| C4\nC4 -->|Sibling of| C5\nC4 -->|Sibling of| C6\nC4 -->|Sibling of| C7\nC5 -->|Sibling of| C6\nC5 -->|Sibling of| C7\nC6 -->|Sibling of| C7\nC8 -->|Friend of| C2\nC8 -->|Helps| C1",
+  "mermaidHash": "f2fd739e7104af933367d06686ea440d9c9d99135a0c42e381c6a0bdd993398e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f2fd739e7104af933367d06686ea440d9c9d99135a0c42e381c6a0bdd993398e",
+    "svgHash": "7551ce9f249de48eb1174a73506d3d5923500a9be6902b78d129bb1c477160de",
+    "validatedAt": "2026-09-10T18:13:57.709Z",
+    "width": 2119.69091796875,
+    "height": 435.7887268066406
+  },
+  "generatedAt": "2026-09-10T18:13:56.383Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 267,
+    "total_tokens": 1825,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "alexandre-dumas/the-vicomte-de-bragelonne/george-routledge-and-co",
+  "metadata": {
+    "title": "The Vicomte de Bragelonne",
+    "authors": [
+      "Alexandre Dumas"
+    ],
+    "year": "1847–1850"
+  },
+  "inputHash": "b2b4f09fb04d96a3805803aaeaad9526daa471ce189689e98d2758726eceaa3a",
+  "promptHash": "5b96de979260d2cd3702d996f3e06760b69bb9302a395a4213d5ee89f7928ee8",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:59.592Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:59.592Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"D'Artagnan\"]\nC2[\"Athos\"]\nC3[\"Porthos\"]\nC4[\"Aramis\"]\nC5[\"Raoul de Bragelonne\"]\nC6[\"Louise de La Valliere\"]\nC7[\"Louis XIV\"]\nC8[\"Philippe\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Father of| C5\nC5 -->|Loves| C6\nC6 -->|Loves| C7\nC7 -->|King of France| C1\nC1 -->|Protects| C8\nC7 -->|Brother of| C8\nC4 -->|Mentor of| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1567,
+        "completion_tokens": 168,
+        "total_tokens": 1735,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 287
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:25:00.728Z",
+      "finishedAt": "2026-09-10T17:25:00.728Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"D'Artagnan\"]\nC2[\"Athos\"]\nC3[\"Porthos\"]\nC4[\"Aramis\"]\nC5[\"Raoul de Bragelonne\"]\nC6[\"Louise de La Valliere\"]\nC7[\"Louis XIV\"]\nC8[\"Philippe\"]\nC1 -->|Friend of| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC2 -->|Father of| C5\nC5 -->|Loves| C6\nC6 -->|Loves| C7\nC7 -->|King of France| C1\nC1 -->|Protects| C8\nC7 -->|Brother of| C8\nC4 -->|Mentor of| C5",
+  "mermaidHash": "c2ccb3c931bde8a9d2218fb33c45369cf92169c0764d4845f626cbaeaae4b474",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c2ccb3c931bde8a9d2218fb33c45369cf92169c0764d4845f626cbaeaae4b474",
+    "svgHash": "81b834b953860aa8b36f61c70257f0fccce2c58ba93bf159ee5c24fbb5e63801",
+    "validatedAt": "2026-09-10T17:25:02.148Z",
+    "width": 1443.09326171875,
+    "height": 361.75
+  },
+  "generatedAt": "2026-09-10T17:25:00.728Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 168,
+    "total_tokens": 1735,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 287
+  }
+}

@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/cormorant-garamond/latin-400.css';
+import '@fontsource/cormorant-garamond/latin-500.css';
+import '@fontsource/cormorant-garamond/latin-600.css';
+import '@fontsource/cormorant-garamond/latin-400-italic.css';
+const { title = 'Austen — Literary relationship maps', description = 'Explore the characters and relationships in classic novels.', canonicalUrl } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href={`${base}favicon.ico`} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+  </head>
+  <body>
+    <header class="site-header container">
+      <a href={base} class="brand" aria-label="Austen home">
+        <img src={`${base}logo.png`} alt="" class="brand-mark" width="64" height="64" />
+        <span class="brand-copy"><span class="brand-name">Austen</span><span class="brand-note">Literary relationship maps</span></span>
+      </a>
+      <nav aria-label="Main navigation"><a href={base}>Maps</a><a href={`${base}catalog/`}>Catalog</a><a href={`${base}generate/`}>Generate</a></nav>
+    </header>
+    <main class="container"><slot /></main>
+    <footer class="container"><p><small>Built in Warsaw, Poland · <a href="https://github.com/herol3oy/austen/">GitHub</a></small><small class="footer-mark">Stories are made of connections.</small></p></footer>
+  </body>
+</html>

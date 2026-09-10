@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "sarah-orne-jewett/the-country-of-the-pointed-firs",
+  "metadata": {
+    "title": "The Country of the Pointed Firs",
+    "authors": [
+      "Sarah Orne Jewett"
+    ],
+    "year": "1896"
+  },
+  "inputHash": "f919535adfd1bf6ad3934671b936ae86e3aa08a1da65c333461b3d6f6ab33554",
+  "promptHash": "ca2b83b21a8e177e9902608a0ca52f21c1f90ba545d2b582a8e0819a7e949158",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:08:56.560Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:08:56.560Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Sarah Orne Jewett\"]\nC2[\"Mrs. Todd\"]\nC3[\"Narrator\"]\nC4[\"William\"]\nC5[\"Mrs. Blackett\"]\nC6[\"Elijah Tilley\"]\nC7[\"Abby Martin\"]\nC8[\"Littlepage\"]\nC1 -->|Author of| C3\nC2 -->|Friend of| C3\nC2 -->|Daughter of| C5\nC4 -->|Brother of| C2\nC4 -->|Son of| C5\nC6 -->|Friend of| C2\nC7 -->|Friend of| C2\nC8 -->|Friend of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 141,
+        "total_tokens": 1705,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:08:57.680Z",
+      "finishedAt": "2026-09-10T18:08:57.680Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Sarah Orne Jewett\"]\nC2[\"Mrs. Todd\"]\nC3[\"Narrator\"]\nC4[\"William\"]\nC5[\"Mrs. Blackett\"]\nC6[\"Elijah Tilley\"]\nC7[\"Abby Martin\"]\nC8[\"Littlepage\"]\nC1 -->|Author of| C3\nC2 -->|Friend of| C3\nC2 -->|Daughter of| C5\nC4 -->|Brother of| C2\nC4 -->|Son of| C5\nC6 -->|Friend of| C2\nC7 -->|Friend of| C2\nC8 -->|Friend of| C2",
+  "mermaidHash": "48a8e5dc6bb6f705e51c96271f207feee1c3aba3d241a687879da43e76889767",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "48a8e5dc6bb6f705e51c96271f207feee1c3aba3d241a687879da43e76889767",
+    "svgHash": "341fd15db1a42cc97676374cc7bfa4d9b47faac96fd9f2c5389d41ab14f1d75e",
+    "validatedAt": "2026-09-10T18:08:59.100Z",
+    "width": 737.6730346679688,
+    "height": 401
+  },
+  "generatedAt": "2026-09-10T18:08:57.680Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 141,
+    "total_tokens": 1705,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

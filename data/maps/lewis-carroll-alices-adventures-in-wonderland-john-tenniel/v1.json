@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "lewis-carroll/alices-adventures-in-wonderland/john-tenniel",
+  "metadata": {
+    "title": "Alice’s Adventures in Wonderland",
+    "authors": [
+      "Lewis Carroll"
+    ],
+    "year": "1865"
+  },
+  "inputHash": "ba2cbcdfc0d1a527be2841774eb196fc5c3cf587a1ef0956480ee783955b786a",
+  "promptHash": "2f9f733840c12ff49b983abfcb163c579da61291e7a0b1b67aa67f7faae433d7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:34.386Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:34.386Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Alice\"]\nC2[\"White Rabbit\"]\nC3[\"Caterpillar\"]\nC4[\"Cheshire Cat\"]\nC5[\"Mad Hatter\"]\nC6[\"March Hare\"]\nC7[\"Queen of Hearts\"]\nC8[\"King of Hearts\"]\nC1 -->|Follows| C2\nC1 -->|Meets| C3\nC1 -->|Meets| C4\nC1 -->|Guest of| C5\nC5 -->|Friend of| C6\nC1 -->|Meets| C6\nC7 -->|Commands| C8\nC7 -->|Threatens| C1\nC8 -->|Married to| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 147,
+        "total_tokens": 1707,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:50:35.923Z",
+      "finishedAt": "2026-09-10T17:50:35.923Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Alice\"]\nC2[\"White Rabbit\"]\nC3[\"Caterpillar\"]\nC4[\"Cheshire Cat\"]\nC5[\"Mad Hatter\"]\nC6[\"March Hare\"]\nC7[\"Queen of Hearts\"]\nC8[\"King of Hearts\"]\nC1 -->|Follows| C2\nC1 -->|Meets| C3\nC1 -->|Meets| C4\nC1 -->|Guest of| C5\nC5 -->|Friend of| C6\nC1 -->|Meets| C6\nC7 -->|Commands| C8\nC7 -->|Threatens| C1\nC8 -->|Married to| C7",
+  "mermaidHash": "19bdb188469c85a533cb38bb5ab83b5a42e7b80e4acbaf5e0b4dad8df84537a2",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "19bdb188469c85a533cb38bb5ab83b5a42e7b80e4acbaf5e0b4dad8df84537a2",
+    "svgHash": "d00b5c5b7951508c3977215a9566b531500f8ecb3052de604b6c79d544e5285e",
+    "validatedAt": "2026-09-10T17:50:37.188Z",
+    "width": 973.9501953125,
+    "height": 420
+  },
+  "generatedAt": "2026-09-10T17:50:35.923Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 147,
+    "total_tokens": 1707,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

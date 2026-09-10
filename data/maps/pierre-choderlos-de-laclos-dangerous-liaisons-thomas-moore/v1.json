@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "pierre-choderlos-de-laclos/dangerous-liaisons/thomas-moore",
+  "metadata": {
+    "title": "Dangerous Liaisons",
+    "authors": [
+      "Pierre Choderlos de Laclos"
+    ],
+    "year": "1782"
+  },
+  "inputHash": "468b3a02ab8da0e276022e35fe04b4a3ee71de3ace51e668577e57b334c33d5f",
+  "promptHash": "2d642ea35c6dbffe7e98a9af817c182d710c552230fd40a31c6991061d103c53",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:06:33.394Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:06:33.394Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Marquise de Merteuil\"]\nC2[\"Vicomte de Valmont\"]\nC3[\"Cécile de Volanges\"]\nC4[\"Madame de Volanges\"]\nC5[\"Présidente de Tourvel\"]\nC6[\"Chevalier Danceny\"]\nC7[\"Madame de Rosemonde\"]\nC1 -->|Former lover of| C2\nC1 -->|Friend of| C3\nC2 -->|Aunt of| C7\nC2 -->|Loves| C5\nC2 -->|Seduces| C3\nC3 -->|Daughter of| C4\nC3 -->|Loves| C6\nC4 -->|Friend of| C1\nC5 -->|Married to| C5\nC6 -->|Loves| C3\nC7 -->|Aunt of| C2\nC1 -->|Manipulates| C3\nC1 -->|Manipulates| C6\nC2 -->|Manipulates| C6\nC2 -->|Betrays| C5\nC1 -->|Betrays| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 240,
+        "total_tokens": 1803,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:06:35.112Z",
+      "finishedAt": "2026-09-10T18:06:35.112Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Marquise de Merteuil\"]\nC2[\"Vicomte de Valmont\"]\nC3[\"Cécile de Volanges\"]\nC4[\"Madame de Volanges\"]\nC5[\"Présidente de Tourvel\"]\nC6[\"Chevalier Danceny\"]\nC7[\"Madame de Rosemonde\"]\nC1 -->|Former lover of| C2\nC1 -->|Friend of| C3\nC2 -->|Aunt of| C7\nC2 -->|Loves| C5\nC2 -->|Seduces| C3\nC3 -->|Daughter of| C4\nC3 -->|Loves| C6\nC4 -->|Friend of| C1\nC5 -->|Married to| C5\nC6 -->|Loves| C3\nC7 -->|Aunt of| C2\nC1 -->|Manipulates| C3\nC1 -->|Manipulates| C6\nC2 -->|Manipulates| C6\nC2 -->|Betrays| C5\nC1 -->|Betrays| C2",
+  "mermaidHash": "ed3a2787c18c11bf97c85819271f04ee60c3733c141a21ee187d27ec83b66e5c",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ed3a2787c18c11bf97c85819271f04ee60c3733c141a21ee187d27ec83b66e5c",
+    "svgHash": "0901f0983a514e8130b68722f198705e101a0be49113ebfb71cbad601546bd12",
+    "validatedAt": "2026-09-10T18:06:36.455Z",
+    "width": 1381.4122314453125,
+    "height": 450.4202575683594
+  },
+  "generatedAt": "2026-09-10T18:06:35.112Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 240,
+    "total_tokens": 1803,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

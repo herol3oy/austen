@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "virginia-woolf/orlando",
+  "metadata": {
+    "title": "Orlando",
+    "authors": [
+      "Virginia Woolf"
+    ],
+    "year": "1928"
+  },
+  "inputHash": "cacf806d0ab96ae366cf81036998bc837ca32dc48c3291c96da147a53c7e697e",
+  "promptHash": "dbc957daf4770dd3090bf00488bac4aee276b4ba554698b4cc653268d25e8a97",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:12:09.212Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:12:09.212Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Orlando\"]\nC2[\"Queen Elizabeth I\"]\nC3[\"Sasha\"]\nC4[\"Marmaduke Bonthrop Shelmerdine\"]\nC5[\"Archduchess Harriet Griselda\"]\nC6[\"Alexander Pope\"]\nC7[\"Nicholas Greene\"]\nC8[\"Rosina Pepita\"]\nC1 -->|Serves| C2\nC1 -->|Loves| C3\nC1 -->|Married to| C4\nC5 -->|Pursues| C1\nC1 -->|Friend of| C6\nC7 -->|Betrays| C1\nC8 -->|Mother of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1555,
+        "completion_tokens": 139,
+        "total_tokens": 1694,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 275
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:12:10.821Z",
+      "finishedAt": "2026-09-10T18:12:10.821Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Orlando\"]\nC2[\"Queen Elizabeth I\"]\nC3[\"Sasha\"]\nC4[\"Marmaduke Bonthrop Shelmerdine\"]\nC5[\"Archduchess Harriet Griselda\"]\nC6[\"Alexander Pope\"]\nC7[\"Nicholas Greene\"]\nC8[\"Rosina Pepita\"]\nC1 -->|Serves| C2\nC1 -->|Loves| C3\nC1 -->|Married to| C4\nC5 -->|Pursues| C1\nC1 -->|Friend of| C6\nC7 -->|Betrays| C1\nC8 -->|Mother of| C1",
+  "mermaidHash": "5d31edd5c48996205853e59f04de175abb3447c7dcbd646ffb32e8b571ee63df",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5d31edd5c48996205853e59f04de175abb3447c7dcbd646ffb32e8b571ee63df",
+    "svgHash": "6e37f35a7088638a0bde42c8703daf0cd07a7960e61dd854f9b6e34d49a03017",
+    "validatedAt": "2026-09-10T18:12:12.281Z",
+    "width": 831.7506103515625,
+    "height": 377.3999938964844
+  },
+  "generatedAt": "2026-09-10T18:12:10.821Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1555,
+    "completion_tokens": 139,
+    "total_tokens": 1694,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 275
+  }
+}

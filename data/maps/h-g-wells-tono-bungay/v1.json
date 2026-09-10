@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "h-g-wells/tono-bungay",
+  "metadata": {
+    "title": "Tono-Bungay",
+    "authors": [
+      "H. G. Wells"
+    ],
+    "year": "1909"
+  },
+  "inputHash": "9cff9b8fb5593c5faaf90abe0802ab88a3b9387cbd3c092a77090439950c02f4",
+  "promptHash": "eec5e52779c2086f7f67b679416c622f24e320752c5f9e1568e439f57584b324",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:14.764Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:14.765Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"George Ponderevo\"]\nC2[\"Edward Ponderevo\"]\nC3[\"Marion Ramboat\"]\nC4[\"Susan Ponderevo\"]\nC5[\"Beatrice Normandy\"]\nC6[\"Ewart\"]\nC7[\"Uncle Nicodemus Frapp\"]\nC8[\"Lord Boom\"]\nC1 -->|Nephew of| C2\nC2 -->|Uncle of| C1\nC1 -->|Assistant to| C2\nC2 -->|Married to| C4\nC1 -->|Married to| C3\nC1 -->|Loves| C5\nC1 -->|Friend of| C6\nC1 -->|Raised by| C7\nC2 -->|Business partner of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 161,
+        "total_tokens": 1722,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:15.897Z",
+      "finishedAt": "2026-09-10T17:42:15.897Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"George Ponderevo\"]\nC2[\"Edward Ponderevo\"]\nC3[\"Marion Ramboat\"]\nC4[\"Susan Ponderevo\"]\nC5[\"Beatrice Normandy\"]\nC6[\"Ewart\"]\nC7[\"Uncle Nicodemus Frapp\"]\nC8[\"Lord Boom\"]\nC1 -->|Nephew of| C2\nC2 -->|Uncle of| C1\nC1 -->|Assistant to| C2\nC2 -->|Married to| C4\nC1 -->|Married to| C3\nC1 -->|Loves| C5\nC1 -->|Friend of| C6\nC1 -->|Raised by| C7\nC2 -->|Business partner of| C8",
+  "mermaidHash": "8ae914e3e63384fe6d3a9b74af6edcf47c558de4810a61f0f948b5abde765750",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "8ae914e3e63384fe6d3a9b74af6edcf47c558de4810a61f0f948b5abde765750",
+    "svgHash": "947e940c65ae0b17dcbb7adf8cd7346350b5202854eb1756884ec3bcbc898230",
+    "validatedAt": "2026-09-10T17:42:17.218Z",
+    "width": 903.7349853515625,
+    "height": 525.5
+  },
+  "generatedAt": "2026-09-10T17:42:15.897Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 161,
+    "total_tokens": 1722,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

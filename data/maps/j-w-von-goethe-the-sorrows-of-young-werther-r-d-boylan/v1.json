@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "j-w-von-goethe/the-sorrows-of-young-werther/r-d-boylan",
+  "metadata": {
+    "title": "The Sorrows of Young Werther",
+    "authors": [
+      "J. W. von Goethe"
+    ],
+    "year": "1774"
+  },
+  "inputHash": "3be79bf1e6761575289dab8518004b3e08228bec66e4b344ec365c2c1fac8736",
+  "promptHash": "6d18dd53b61e6ca6d0f50e71df81772b2284d06ea5308227d980333c7a3b9fa4",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:28.444Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:28.444Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Werther\"]\nC2[\"Lotte\"]\nC3[\"Albert\"]\nC4[\"Wilhelm\"]\nC5[\"Werther's Mother\"]\nC6[\"Werther's Father\"]\nC7[\"Fräulein von B\"]\nC8[\"Heinrich\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C3\nC1 -->|Friend of| C3\nC1 -->|Confidant of| C4\nC1 -->|Son of| C5\nC1 -->|Son of| C6\nC2 -->|Friend of| C7\nC1 -->|Meets| C8\nC8 -->|Loves| C2\nC1 -->|Kills| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1565,
+        "completion_tokens": 161,
+        "total_tokens": 1726,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 285
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:29.640Z",
+      "finishedAt": "2026-09-10T17:45:29.640Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Werther\"]\nC2[\"Lotte\"]\nC3[\"Albert\"]\nC4[\"Wilhelm\"]\nC5[\"Werther's Mother\"]\nC6[\"Werther's Father\"]\nC7[\"Fräulein von B\"]\nC8[\"Heinrich\"]\nC1 -->|Loves| C2\nC2 -->|Married to| C3\nC1 -->|Friend of| C3\nC1 -->|Confidant of| C4\nC1 -->|Son of| C5\nC1 -->|Son of| C6\nC2 -->|Friend of| C7\nC1 -->|Meets| C8\nC8 -->|Loves| C2\nC1 -->|Kills| C1",
+  "mermaidHash": "26ce71167bed4762bff3ea01c9dc708369f05dc502cef0bc3660638f1fe060eb",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "26ce71167bed4762bff3ea01c9dc708369f05dc502cef0bc3660638f1fe060eb",
+    "svgHash": "b725582fcb335794e60b2188753decc580ce494a7a577a9e539f3221534ea7d1",
+    "validatedAt": "2026-09-10T17:45:30.982Z",
+    "width": 927.8603515625,
+    "height": 523.375
+  },
+  "generatedAt": "2026-09-10T17:45:29.640Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1565,
+    "completion_tokens": 161,
+    "total_tokens": 1726,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 285
+  }
+}

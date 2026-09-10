@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "oliver-goldsmith/the-vicar-of-wakefield",
+  "metadata": {
+    "title": "The Vicar of Wakefield",
+    "authors": [
+      "Oliver Goldsmith"
+    ],
+    "year": "1766"
+  },
+  "inputHash": "01563c28eb8c5d37ae3dee237d4fd3785488899017fb849441ddeafe4ac7f1f7",
+  "promptHash": "44295fd5e8f6953d81efe2d03de863f9b105d7892d2b1e218b1762fb6345835e",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:05:03.949Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:05:03.949Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Dr. Charles Primrose\"]\nC2[\"Deborah Primrose\"]\nC3[\"George Primrose\"]\nC4[\"Olivia Primrose\"]\nC5[\"Sophia Primrose\"]\nC6[\"Squire Thornhill\"]\nC7[\"Mr. Burchell\"]\nC8[\"Arabella Wilmot\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC3 -->|Sibling of| C4\nC3 -->|Sibling of| C5\nC4 -->|Sibling of| C5\nC6 -->|Seduces| C4\nC6 -->|Enemy of| C1\nC7 -->|Friend of| C1\nC7 -->|Loves| C5\nC3 -->|Loves| C8\nC8 -->|Betrothed to| C3\nC6 -->|Rival of| C3",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 244,
+        "total_tokens": 1803,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:05:06.127Z",
+      "finishedAt": "2026-09-10T18:05:06.128Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Dr. Charles Primrose\"]\nC2[\"Deborah Primrose\"]\nC3[\"George Primrose\"]\nC4[\"Olivia Primrose\"]\nC5[\"Sophia Primrose\"]\nC6[\"Squire Thornhill\"]\nC7[\"Mr. Burchell\"]\nC8[\"Arabella Wilmot\"]\nC1 -->|Married to| C2\nC1 -->|Parent of| C3\nC1 -->|Parent of| C4\nC1 -->|Parent of| C5\nC2 -->|Parent of| C3\nC2 -->|Parent of| C4\nC2 -->|Parent of| C5\nC3 -->|Sibling of| C4\nC3 -->|Sibling of| C5\nC4 -->|Sibling of| C5\nC6 -->|Seduces| C4\nC6 -->|Enemy of| C1\nC7 -->|Friend of| C1\nC7 -->|Loves| C5\nC3 -->|Loves| C8\nC8 -->|Betrothed to| C3\nC6 -->|Rival of| C3",
+  "mermaidHash": "3f655f6f464da3344ebabc72645ae8de25d7fd1f775c7e320ff7fad1fed04ebf",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3f655f6f464da3344ebabc72645ae8de25d7fd1f775c7e320ff7fad1fed04ebf",
+    "svgHash": "2a68cf1dbb35fe2e302338d3e129dfe6b72e009cd235126945636111d330c677",
+    "validatedAt": "2026-09-10T18:05:07.712Z",
+    "width": 1668.8077392578125,
+    "height": 480
+  },
+  "generatedAt": "2026-09-10T18:05:06.127Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 244,
+    "total_tokens": 1803,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

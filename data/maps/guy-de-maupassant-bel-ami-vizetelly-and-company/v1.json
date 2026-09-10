@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "guy-de-maupassant/bel-ami/vizetelly-and-company",
+  "metadata": {
+    "title": "Bel Ami",
+    "authors": [
+      "Guy de Maupassant"
+    ],
+    "year": "n.d."
+  },
+  "inputHash": "9b593d2da0c299247c2c90c6eae2525a36c71c36c9840283e68fce02624da1fa",
+  "promptHash": "6da601f502ab6c38353617618ae97d809046d472c82fb586a60cc91ac8b20d38",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:41:21.520Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:41:21.520Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Georges Duroy\"]\nC2[\"Charles Forestier\"]\nC3[\"Madeleine Forestier\"]\nC4[\"Clotilde de Marelle\"]\nC5[\"Madame Walter\"]\nC6[\"Suzanne Walter\"]\nC7[\"Monsieur Walter\"]\nC8[\"Laroche-Mathieu\"]\nC1 -->|Friend of| C2\nC2 -->|Employer of| C1\nC1 -->|Married to| C3\nC3 -->|Widow of| C2\nC1 -->|Lover of| C4\nC1 -->|Lover of| C5\nC1 -->|Seduces| C6\nC7 -->|Employer of| C1\nC1 -->|Married to| C6\nC1 -->|Enemy of| C8\nC8 -->|Rival of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 189,
+        "total_tokens": 1751,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:41:22.750Z",
+      "finishedAt": "2026-09-10T17:41:22.750Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Georges Duroy\"]\nC2[\"Charles Forestier\"]\nC3[\"Madeleine Forestier\"]\nC4[\"Clotilde de Marelle\"]\nC5[\"Madame Walter\"]\nC6[\"Suzanne Walter\"]\nC7[\"Monsieur Walter\"]\nC8[\"Laroche-Mathieu\"]\nC1 -->|Friend of| C2\nC2 -->|Employer of| C1\nC1 -->|Married to| C3\nC3 -->|Widow of| C2\nC1 -->|Lover of| C4\nC1 -->|Lover of| C5\nC1 -->|Seduces| C6\nC7 -->|Employer of| C1\nC1 -->|Married to| C6\nC1 -->|Enemy of| C8\nC8 -->|Rival of| C1",
+  "mermaidHash": "ae714fb2c0a1ab79410a52d4ced8f6a4a48045503639c78428527d9fafadf84e",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "ae714fb2c0a1ab79410a52d4ced8f6a4a48045503639c78428527d9fafadf84e",
+    "svgHash": "c2d006f923f907e1cfdbe34364f15046a73bab6fa2c07c0b83d006383cb77178",
+    "validatedAt": "2026-09-10T17:41:24.084Z",
+    "width": 1081.24072265625,
+    "height": 577
+  },
+  "generatedAt": "2026-09-10T17:41:22.750Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 189,
+    "total_tokens": 1751,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

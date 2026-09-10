@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "edgar-rice-burroughs/at-the-earths-core",
+  "metadata": {
+    "title": "At the Earth’s Core",
+    "authors": [
+      "Edgar Rice Burroughs"
+    ],
+    "year": "1914"
+  },
+  "inputHash": "28c6bae0d0f6d25c31af169cc68a1b66d561cf3c4c7ceccf0e1cadd844703ac2",
+  "promptHash": "286a0372afc078b35d5c6b4481d53c9687d314e5274bb45082a09964ffc8e190",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:34:03.450Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:34:03.450Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"David Innes\"]\nC2[\"Abner Perry\"]\nC3[\"Ghakk\"]\nC4[\"Dian the Beautiful\"]\nC5[\"Hooja the Sly One\"]\nC6[\"Jubal the Ugly One\"]\nC7[\"Sagoths\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C4\nC2 -->|Mentor of| C1\nC3 -->|Enemy of| C1\nC3 -->|Enemy of| C2\nC5 -->|Betrays| C1\nC5 -->|Rival of| C1\nC6 -->|Serves| C3\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1563,
+        "completion_tokens": 166,
+        "total_tokens": 1729,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 283
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:34:05.226Z",
+      "finishedAt": "2026-09-10T17:34:05.226Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"David Innes\"]\nC2[\"Abner Perry\"]\nC3[\"Ghakk\"]\nC4[\"Dian the Beautiful\"]\nC5[\"Hooja the Sly One\"]\nC6[\"Jubal the Ugly One\"]\nC7[\"Sagoths\"]\nC1 -->|Friend of| C2\nC1 -->|Loves| C4\nC2 -->|Mentor of| C1\nC3 -->|Enemy of| C1\nC3 -->|Enemy of| C2\nC5 -->|Betrays| C1\nC5 -->|Rival of| C1\nC6 -->|Serves| C3\nC7 -->|Enemy of| C1\nC7 -->|Enemy of| C2",
+  "mermaidHash": "e27352af2332e7e27d00e4f59f0490aef9a324e26a4ee35db5ee7e863eec6fe9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e27352af2332e7e27d00e4f59f0490aef9a324e26a4ee35db5ee7e863eec6fe9",
+    "svgHash": "9059537e4a72aa5e94a78f7c22a2e3f5f390bd8909e50acfba3edbf95b43fa29",
+    "validatedAt": "2026-09-10T17:34:06.747Z",
+    "width": 1028.8325805664062,
+    "height": 318.75
+  },
+  "generatedAt": "2026-09-10T17:34:05.226Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1563,
+    "completion_tokens": 166,
+    "total_tokens": 1729,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 283
+  }
+}

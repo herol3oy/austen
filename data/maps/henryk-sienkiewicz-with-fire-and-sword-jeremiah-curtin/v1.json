@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "henryk-sienkiewicz/with-fire-and-sword/jeremiah-curtin",
+  "metadata": {
+    "title": "With Fire and Sword",
+    "authors": [
+      "Henryk Sienkiewicz"
+    ],
+    "year": "1884"
+  },
+  "inputHash": "aed702665ca3ade7a0acb60383d702798375d654b776e7489eb285b1f7420629",
+  "promptHash": "2d5b5f81b5da9e2e43cbb75da75fa867162bc6e71b4ce26fe9460029a49af7c1",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:43:33.929Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:43:33.929Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Jan Skrzetuski\"]\nC2[\"Helena Kurcewicz\"]\nC3[\"Bohun\"]\nC4[\"Jerzy Michal Wisniowiecki\"]\nC5[\"Jan Onufry Zagloba\"]\nC6[\"Longinus Podbipieta\"]\nC7[\"Bohdan Chmielnicki\"]\nC8[\"Halszka Kurcewicz\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Loves| C2\nC3 -->|Enemy of| C1\nC4 -->|Commands| C1\nC5 -->|Friend of| C1\nC5 -->|Friend of| C6\nC6 -->|Friend of| C1\nC7 -->|Enemy of| C4\nC8 -->|Guardian of| C2\nC3 -->|Kills| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 196,
+        "total_tokens": 1757,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:43:35.767Z",
+      "finishedAt": "2026-09-10T17:43:35.767Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Jan Skrzetuski\"]\nC2[\"Helena Kurcewicz\"]\nC3[\"Bohun\"]\nC4[\"Jerzy Michal Wisniowiecki\"]\nC5[\"Jan Onufry Zagloba\"]\nC6[\"Longinus Podbipieta\"]\nC7[\"Bohdan Chmielnicki\"]\nC8[\"Halszka Kurcewicz\"]\nC1 -->|Loves| C2\nC2 -->|Loves| C1\nC3 -->|Loves| C2\nC3 -->|Enemy of| C1\nC4 -->|Commands| C1\nC5 -->|Friend of| C1\nC5 -->|Friend of| C6\nC6 -->|Friend of| C1\nC7 -->|Enemy of| C4\nC8 -->|Guardian of| C2\nC3 -->|Kills| C8",
+  "mermaidHash": "0aa7aa0a60156a6a3c84a152642b6a83e6392bce4bc3954d226aa9504a97d076",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "0aa7aa0a60156a6a3c84a152642b6a83e6392bce4bc3954d226aa9504a97d076",
+    "svgHash": "c5881d72837683e9b4d8ba7a19fcf70c0dd90cd33963de45a16d71cf7a747a73",
+    "validatedAt": "2026-09-10T17:43:37.062Z",
+    "width": 1168.92529296875,
+    "height": 360
+  },
+  "generatedAt": "2026-09-10T17:43:35.767Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 196,
+    "total_tokens": 1757,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-dickens/great-expectations",
+  "metadata": {
+    "title": "Great Expectations",
+    "authors": [
+      "Charles Dickens"
+    ],
+    "year": "1861"
+  },
+  "inputHash": "ff474217f3c9e75c88713602ca00a2971ee7bdd699520302440d6e1a014cfd60",
+  "promptHash": "3a93b293a29542a4f9fc013acf804fb9404687d267e3deea0ec0f420437ec049",
+  "promptVersion": "1",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T12:34:43.170Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T12:34:43.170Z",
+      "outcome": "invalid_graph",
+      "mermaid": "Pip[\"Pip\"]\nEstella[\"Estella\"]\nMiss Havisham[\"Miss Havisham\"]\nMagwitch[\"Magwitch\"]\nJoe Gargery[\"Joe Gargery\"]\nBiddy[\"Biddy\"]\nHerbert Pocket[\"Herbert Pocket\"]\nPip -->|Loves| Estella\nEstella -->|Raised by| Miss Havisham\nMiss Havisham -->|Adopted| Estella\nMagwitch -->|Benefactor of| Pip\nJoe Gargery -->|Guardian of| Pip\nPip -->|Friends with| Herbert Pocket\nPip -->|Confides in| Biddy\nBiddy -->|Marries| Joe Gargery\nMiss Havisham -->|Manipulates| Pip\nMagwitch -->|Father of| Estella\nPip -->|Reconciles with| Joe Gargery",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 196,
+        "completion_tokens": 178,
+        "total_tokens": 374,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 196
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:45.332Z",
+      "finishedAt": "2026-09-10T12:34:45.332Z"
+    },
+    {
+      "attempt": 2,
+      "startedAt": "2026-09-10T12:34:46.757Z",
+      "outcome": "invalid_graph",
+      "mermaid": "Pip[\"Pip\"]\nEstella[\"Estella\"]\nMissHavisham[\"Miss Havisham\"]\nMagwitch[\"Magwitch\"]\nJoe[\"Joe Gargery\"]\nBiddy[\"Biddy\"]\nHerbert[\"Herbert Pocket\"]\nJaggers[\"Mr. Jaggers\"]\nMissHavisham -->|Adoptive mother of| Estella\nMissHavisham -->|Raises| Pip\nMagwitch -->|Benefactor of| Pip\nMagwitch -->|Father of| Estella\nPip -->|Loves| Estella\nPip -->|Brother-in-law of| Joe\nJoe -->|Husband of| Biddy\nPip -->|Friend of| Herbert\nJaggers -->|Lawyer of| Magwitch\nJaggers -->|Lawyer of| MissHavisham\nPip -->|Friend of| Biddy\nHerbert -->|Friend of| Pip\nEstella -->|Marries| BentleyDrummle\nBentleyDrummle[\"Bentley Drummle\"]\nPip -->|Guardian of| Herbert\nMagwitch -->|Enemy of| Compeyson\nCompeyson[\"Compeyson\"]\nCompeyson -->|Abandons| MissHavisham\nPip -->|Reconciles with| Joe\nPip -->|Reconciles with| Estella",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 196,
+        "completion_tokens": 290,
+        "total_tokens": 486,
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 196
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T12:34:48.694Z",
+      "finishedAt": "2026-09-10T12:34:48.694Z"
+    }
+  ],
+  "mermaid": "Pip[\"Pip\"]\nEstella[\"Estella\"]\nMissHavisham[\"Miss Havisham\"]\nMagwitch[\"Magwitch\"]\nJoe[\"Joe Gargery\"]\nBiddy[\"Biddy\"]\nHerbert[\"Herbert Pocket\"]\nJaggers[\"Mr. Jaggers\"]\nMissHavisham -->|Adoptive mother of| Estella\nMissHavisham -->|Raises| Pip\nMagwitch -->|Benefactor of| Pip\nMagwitch -->|Father of| Estella\nPip -->|Loves| Estella\nPip -->|Brother-in-law of| Joe\nJoe -->|Husband of| Biddy\nPip -->|Friend of| Herbert\nJaggers -->|Lawyer of| Magwitch\nJaggers -->|Lawyer of| MissHavisham\nPip -->|Friend of| Biddy\nHerbert -->|Friend of| Pip\nEstella -->|Marries| BentleyDrummle\nBentleyDrummle[\"Bentley Drummle\"]\nPip -->|Guardian of| Herbert\nMagwitch -->|Enemy of| Compeyson\nCompeyson[\"Compeyson\"]\nCompeyson -->|Abandons| MissHavisham\nPip -->|Reconciles with| Joe\nPip -->|Reconciles with| Estella",
+  "mermaidHash": "c390042fdce961041d5dce3bbbda84e04996a85441981a1117362bb2b3c9e818",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T12:34:48.694Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 196,
+    "completion_tokens": 290,
+    "total_tokens": 486,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 196
+  }
+}

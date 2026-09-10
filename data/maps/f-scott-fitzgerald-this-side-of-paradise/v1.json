@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "f-scott-fitzgerald/this-side-of-paradise",
+  "metadata": {
+    "title": "This Side of Paradise",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "year": "1920"
+  },
+  "inputHash": "e334eb7cb9d82f920aa66fafc8d0a1891530dfaafc3fbe498be8c90a3d702345",
+  "promptHash": "a8017cb3f352a0ffcdef90afe066a6f04987da99cbafd2481c2db3e59451f88b",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:04.074Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:04.074Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Amory Blaine\"]\nC2[\"Beatrice Blaine\"]\nC3[\"Monsignor Darcy\"]\nC4[\"Isabelle Borgé\"]\nC5[\"Rosalind Connage\"]\nC6[\"Eleanor Savage\"]\nC7[\"Clara Page\"]\nC8[\"Tom D'Invilliers\"]\nC1 -->|Son of| C2\nC3 -->|Mentor of| C1\nC1 -->|Loves| C4\nC1 -->|Loves| C5\nC5 -->|Rejects| C1\nC1 -->|Loves| C6\nC1 -->|Loves| C7\nC1 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 150,
+        "total_tokens": 1709,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:05.518Z",
+      "finishedAt": "2026-09-10T17:37:05.518Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Amory Blaine\"]\nC2[\"Beatrice Blaine\"]\nC3[\"Monsignor Darcy\"]\nC4[\"Isabelle Borgé\"]\nC5[\"Rosalind Connage\"]\nC6[\"Eleanor Savage\"]\nC7[\"Clara Page\"]\nC8[\"Tom D'Invilliers\"]\nC1 -->|Son of| C2\nC3 -->|Mentor of| C1\nC1 -->|Loves| C4\nC1 -->|Loves| C5\nC5 -->|Rejects| C1\nC1 -->|Loves| C6\nC1 -->|Loves| C7\nC1 -->|Friend of| C8",
+  "mermaidHash": "c369272a1cd23c3e999d3c33b3d355f3ba61d2c9f2e4d8385b5f2bd9394e8a20",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c369272a1cd23c3e999d3c33b3d355f3ba61d2c9f2e4d8385b5f2bd9394e8a20",
+    "svgHash": "727b8219ab50216411433d0fe9f71de72fc2020f2134af3331f88dfc780c1df8",
+    "validatedAt": "2026-09-10T17:37:06.935Z",
+    "width": 751.0701293945312,
+    "height": 560
+  },
+  "generatedAt": "2026-09-10T17:37:05.518Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 150,
+    "total_tokens": 1709,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

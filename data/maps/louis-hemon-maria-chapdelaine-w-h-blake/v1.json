@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "louis-hemon/maria-chapdelaine/w-h-blake",
+  "metadata": {
+    "title": "Maria Chapdelaine",
+    "authors": [
+      "Louis Hémon"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "3e519f2a4a3d7dc7235de7c44b67d084b3a887f1be33f7758204a830f680853e",
+  "promptHash": "697fcc66c0ddccf96167f5b9cc24f1755b1c8fed14a89855a287de07b0bcc7bc",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:50:59.374Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:50:59.375Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Maria Chapdelaine\"]\nC2[\"Samuel Chapdelaine\"]\nC3[\"Laura Chapdelaine\"]\nC4[\"François Paradis\"]\nC5[\"Lorenzo Surprenant\"]\nC6[\"Eutrope Gagnon\"]\nC7[\"Alma-Rose Chapdelaine\"]\nC8[\"Tit-Sèbe Chapdelaine\"]\nC1 -->|Daughter of| C2\nC1 -->|Daughter of| C3\nC1 -->|Loves| C4\nC1 -->|Loves| C5\nC1 -->|Marries| C6\nC2 -->|Husband of| C3\nC2 -->|Father of| C7\nC2 -->|Father of| C8\nC3 -->|Mother of| C7\nC3 -->|Mother of| C8\nC7 -->|Sibling of| C8\nC4 -->|Suitor of| C1\nC5 -->|Suitor of| C1\nC6 -->|Suitor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 226,
+        "total_tokens": 1784,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:51:00.703Z",
+      "finishedAt": "2026-09-10T17:51:00.703Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Maria Chapdelaine\"]\nC2[\"Samuel Chapdelaine\"]\nC3[\"Laura Chapdelaine\"]\nC4[\"François Paradis\"]\nC5[\"Lorenzo Surprenant\"]\nC6[\"Eutrope Gagnon\"]\nC7[\"Alma-Rose Chapdelaine\"]\nC8[\"Tit-Sèbe Chapdelaine\"]\nC1 -->|Daughter of| C2\nC1 -->|Daughter of| C3\nC1 -->|Loves| C4\nC1 -->|Loves| C5\nC1 -->|Marries| C6\nC2 -->|Husband of| C3\nC2 -->|Father of| C7\nC2 -->|Father of| C8\nC3 -->|Mother of| C7\nC3 -->|Mother of| C8\nC7 -->|Sibling of| C8\nC4 -->|Suitor of| C1\nC5 -->|Suitor of| C1\nC6 -->|Suitor of| C1",
+  "mermaidHash": "fc3e191b268ec542728b05feb236fd7a5d433a29d4c41bd492c2bb1e83bc3c18",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "fc3e191b268ec542728b05feb236fd7a5d433a29d4c41bd492c2bb1e83bc3c18",
+    "svgHash": "505a1b1916353467e625ecc3544abfdf9354a83002ca2290186762cf8f636d40",
+    "validatedAt": "2026-09-10T17:51:02.005Z",
+    "width": 1495.4664306640625,
+    "height": 493
+  },
+  "generatedAt": "2026-09-10T17:51:00.703Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 226,
+    "total_tokens": 1784,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

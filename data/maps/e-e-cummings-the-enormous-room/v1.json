@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "e-e-cummings/the-enormous-room",
+  "metadata": {
+    "title": "The Enormous Room",
+    "authors": [
+      "E. E. Cummings"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "7dd9987e5215de2cc7d5ccec592318ec6102c840032f4a69ad1aecd3bc65c30e",
+  "promptHash": "54444d53fb6f38d085f527da8f4e7cd5f0885ae5ee12703236b75f85444f49aa",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:32:40.745Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:32:40.745Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"E. E. Cummings\"]\nC2[\"B.\"]\nC3[\"The Delectable Mountains\"]\nC4[\"Mexican\"]\nC5[\"Wanderer\"]\nC6[\"Surplice\"]\nC7[\"Zoo-Loo\"]\nC8[\"Joseph Demarchal\"]\nC1 -->|Narrates about| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1561,
+        "completion_tokens": 193,
+        "total_tokens": 1754,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 281
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:32:42.589Z",
+      "finishedAt": "2026-09-10T17:32:42.589Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"E. E. Cummings\"]\nC2[\"B.\"]\nC3[\"The Delectable Mountains\"]\nC4[\"Mexican\"]\nC5[\"Wanderer\"]\nC6[\"Surplice\"]\nC7[\"Zoo-Loo\"]\nC8[\"Joseph Demarchal\"]\nC1 -->|Narrates about| C2\nC1 -->|Friend of| C3\nC1 -->|Friend of| C4\nC1 -->|Friend of| C5\nC1 -->|Friend of| C6\nC1 -->|Friend of| C7\nC1 -->|Friend of| C8\nC2 -->|Friend of| C3\nC2 -->|Friend of| C4\nC2 -->|Friend of| C5\nC2 -->|Friend of| C6\nC2 -->|Friend of| C7\nC2 -->|Friend of| C8",
+  "mermaidHash": "72eb43191bfc7c4d133f55127c9a40501c2657d6418a04c263d35c27e042b0c9",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "72eb43191bfc7c4d133f55127c9a40501c2657d6418a04c263d35c27e042b0c9",
+    "svgHash": "52292c6950f5b960056a46ff6b7ba603ed88968aece0f182634cd4f7e727d997",
+    "validatedAt": "2026-09-10T17:32:43.966Z",
+    "width": 749.80615234375,
+    "height": 587.75
+  },
+  "generatedAt": "2026-09-10T17:32:42.589Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1561,
+    "completion_tokens": 193,
+    "total_tokens": 1754,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 281
+  }
+}

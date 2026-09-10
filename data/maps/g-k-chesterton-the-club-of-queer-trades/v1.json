@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "g-k-chesterton/the-club-of-queer-trades",
+  "metadata": {
+    "title": "The Club of Queer Trades",
+    "authors": [
+      "G. K. Chesterton"
+    ],
+    "year": "1905"
+  },
+  "inputHash": "6bafafead79fc9de7f80c79fa3c1ee92caebaf8e3ba0c62513f0e1c6ce638682",
+  "promptHash": "f4eccdd6a50c717f10e12529d400d63e1b50c9b4266232d533c1a55e1606b625",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:04.815Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:04.815Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Basil Grant\"]\nC2[\"Rupert Grant\"]\nC3[\"Charles Swinburne\"]\nC4[\"Major Brown\"]\nC5[\"Mr. P. G. Northover\"]\nC6[\"Miss Brown\"]\nC7[\"Mr. Montmorency\"]\nC8[\"Mr. Wimpole\"]\nC1 -->|Brother of| C2\nC1 -->|Friend of| C3\nC2 -->|Brother of| C1\nC3 -->|Narrator and friend of| C1\nC4 -->|Client of| C1\nC5 -->|Employer of| C4\nC6 -->|Daughter of| C4\nC7 -->|Associate of| C1\nC8 -->|Associate of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1564,
+        "completion_tokens": 168,
+        "total_tokens": 1732,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 284
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:06.456Z",
+      "finishedAt": "2026-09-10T17:39:06.456Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Basil Grant\"]\nC2[\"Rupert Grant\"]\nC3[\"Charles Swinburne\"]\nC4[\"Major Brown\"]\nC5[\"Mr. P. G. Northover\"]\nC6[\"Miss Brown\"]\nC7[\"Mr. Montmorency\"]\nC8[\"Mr. Wimpole\"]\nC1 -->|Brother of| C2\nC1 -->|Friend of| C3\nC2 -->|Brother of| C1\nC3 -->|Narrator and friend of| C1\nC4 -->|Client of| C1\nC5 -->|Employer of| C4\nC6 -->|Daughter of| C4\nC7 -->|Associate of| C1\nC8 -->|Associate of| C1",
+  "mermaidHash": "01391f690e8738d5b348df2a02f9611e4eb8a8b010a748968ada5eccca21cb32",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "01391f690e8738d5b348df2a02f9611e4eb8a8b010a748968ada5eccca21cb32",
+    "svgHash": "6c9e1af315c6fc19ef47b2455b816f4e141e9ab82f3c33fa266fc6fa9a6586e1",
+    "validatedAt": "2026-09-10T17:39:07.903Z",
+    "width": 1161.13330078125,
+    "height": 312.5
+  },
+  "generatedAt": "2026-09-10T17:39:06.456Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1564,
+    "completion_tokens": 168,
+    "total_tokens": 1732,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 284
+  }
+}

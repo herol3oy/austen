@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "joseph-conrad/nostromo",
+  "metadata": {
+    "title": "Nostromo",
+    "authors": [
+      "Joseph Conrad"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "253c7fb09e6c8c8a80e64a7cf3a58dbc31bd4a0d6200f3aa3978e00067b507fc",
+  "promptHash": "bf282c40d5d2ac0876a02e90810950572a332f4cbcf95ad9d67cb99794a94d3a",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:48:13.955Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:48:13.956Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Nostromo\"]\nC2[\"Charles Gould\"]\nC3[\"Emilia Gould\"]\nC4[\"Martin Decoud\"]\nC5[\"Dr. Monygham\"]\nC6[\"Antonia Avellanos\"]\nC7[\"Giorgio Viola\"]\nC8[\"Pedro Montero\"]\nC1 -->|Loves| C6\nC2 -->|Married to| C3\nC4 -->|Loves| C6\nC5 -->|Friend of| C3\nC7 -->|Father of| C1\nC8 -->|Enemy of| C2\nC1 -->|Serves| C2\nC4 -->|Friend of| C2\nC5 -->|Allied with| C2\nC6 -->|Daughter of| C7\nC3 -->|Confidante of| C5\nC1 -->|Betrays| C4\nC8 -->|Commands| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1556,
+        "completion_tokens": 199,
+        "total_tokens": 1755,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 276
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:48:15.572Z",
+      "finishedAt": "2026-09-10T17:48:15.573Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Nostromo\"]\nC2[\"Charles Gould\"]\nC3[\"Emilia Gould\"]\nC4[\"Martin Decoud\"]\nC5[\"Dr. Monygham\"]\nC6[\"Antonia Avellanos\"]\nC7[\"Giorgio Viola\"]\nC8[\"Pedro Montero\"]\nC1 -->|Loves| C6\nC2 -->|Married to| C3\nC4 -->|Loves| C6\nC5 -->|Friend of| C3\nC7 -->|Father of| C1\nC8 -->|Enemy of| C2\nC1 -->|Serves| C2\nC4 -->|Friend of| C2\nC5 -->|Allied with| C2\nC6 -->|Daughter of| C7\nC3 -->|Confidante of| C5\nC1 -->|Betrays| C4\nC8 -->|Commands| C1",
+  "mermaidHash": "f1411f710758d41404cbe7531969360867e91a6d5c73d71d28dee9f065794e92",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "f1411f710758d41404cbe7531969360867e91a6d5c73d71d28dee9f065794e92",
+    "svgHash": "acba2548bbc211584246a36460fbdaff04f32aa213646f62cabcc6dab79b5617",
+    "validatedAt": "2026-09-10T17:48:16.910Z",
+    "width": 1578.5347900390625,
+    "height": 359.75
+  },
+  "generatedAt": "2026-09-10T17:48:15.572Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1556,
+    "completion_tokens": 199,
+    "total_tokens": 1755,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 276
+  }
+}

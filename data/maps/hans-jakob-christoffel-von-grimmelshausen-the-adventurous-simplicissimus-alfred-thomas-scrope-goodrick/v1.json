@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "hans-jakob-christoffel-von-grimmelshausen/the-adventurous-simplicissimus/alfred-thomas-scrope-goodrick",
+  "metadata": {
+    "title": "The Adventurous Simplicissimus",
+    "authors": [
+      "Hans Jakob Christoffel von Grimmelshausen"
+    ],
+    "year": "1668–1669"
+  },
+  "inputHash": "52d924716bf31db277c0b57151a9c9613913109b5f12514cab6ccd5103b35805",
+  "promptHash": "ebef9d159366ab3f100be40d57c7652fc728777eb4551bbbdc5e16b4a3e593b2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:42:36.888Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:42:36.888Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Simplicissimus\"]\nC2[\"Herzbruder\"]\nC3[\"Olivier\"]\nC4[\"Springinsfeld\"]\nC5[\"Courage\"]\nC6[\"Ulrich Herzbruder\"]\nC7[\"Baldander\"]\nC1 -->|Foster son of| C7\nC1 -->|Friend of| C2\nC1 -->|Enemy of| C3\nC1 -->|Companion of| C4\nC1 -->|Loves| C5\nC2 -->|Son of| C6\nC3 -->|Betrays| C1\nC4 -->|Friend of| C1\nC5 -->|Loves| C1\nC6 -->|Father of| C2\nC7 -->|Raises| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1570,
+        "completion_tokens": 168,
+        "total_tokens": 1738,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 290
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:42:38.323Z",
+      "finishedAt": "2026-09-10T17:42:38.323Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Simplicissimus\"]\nC2[\"Herzbruder\"]\nC3[\"Olivier\"]\nC4[\"Springinsfeld\"]\nC5[\"Courage\"]\nC6[\"Ulrich Herzbruder\"]\nC7[\"Baldander\"]\nC1 -->|Foster son of| C7\nC1 -->|Friend of| C2\nC1 -->|Enemy of| C3\nC1 -->|Companion of| C4\nC1 -->|Loves| C5\nC2 -->|Son of| C6\nC3 -->|Betrays| C1\nC4 -->|Friend of| C1\nC5 -->|Loves| C1\nC6 -->|Father of| C2\nC7 -->|Raises| C1",
+  "mermaidHash": "012ccb5e809fca03048936e955f326a471ba8ab73ac70d2dd2909bfdf296ac88",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "012ccb5e809fca03048936e955f326a471ba8ab73ac70d2dd2909bfdf296ac88",
+    "svgHash": "dfa98c46bc2cfb49145c94e5bd414ab1b537901b6cf832a0782913696a004459",
+    "validatedAt": "2026-09-10T17:42:39.765Z",
+    "width": 760.6268920898438,
+    "height": 469.0483703613281
+  },
+  "generatedAt": "2026-09-10T17:42:38.323Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1570,
+    "completion_tokens": 168,
+    "total_tokens": 1738,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 290
+  }
+}

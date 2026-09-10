@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "gene-stratton-porter/freckles",
+  "metadata": {
+    "title": "Freckles",
+    "authors": [
+      "Gene Stratton-Porter"
+    ],
+    "year": "1904"
+  },
+  "inputHash": "b1872c614385b5eb7cef570620be11e15535cfc58625749c60773cefe8d24a40",
+  "promptHash": "833bb45f5e310f5cce97afb92fd0a5ed1b972114d2e2d5f1595d9e87a16886a2",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:39:33.542Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:39:33.542Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Freckles\"]\nC2[\"John McLean\"]\nC3[\"Angel\"]\nC4[\"Black Jack\"]\nC5[\"Wessner\"]\nC6[\"Duncan\"]\nC7[\"Mrs. Duncan\"]\nC1 -->|Works for| C2\nC2 -->|Guardian of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Parent of| C3\nC4 -->|Enemy of| C1\nC4 -->|Enemy of| C2\nC5 -->|Enemy of| C1\nC5 -->|Serves| C4\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 160,
+        "total_tokens": 1719,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:39:34.716Z",
+      "finishedAt": "2026-09-10T17:39:34.716Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Freckles\"]\nC2[\"John McLean\"]\nC3[\"Angel\"]\nC4[\"Black Jack\"]\nC5[\"Wessner\"]\nC6[\"Duncan\"]\nC7[\"Mrs. Duncan\"]\nC1 -->|Works for| C2\nC2 -->|Guardian of| C1\nC1 -->|Loves| C3\nC3 -->|Loves| C1\nC2 -->|Parent of| C3\nC4 -->|Enemy of| C1\nC4 -->|Enemy of| C2\nC5 -->|Enemy of| C1\nC5 -->|Serves| C4\nC6 -->|Friend of| C1\nC7 -->|Friend of| C1",
+  "mermaidHash": "9f8f8323cfa50be1dbc97a12f8c0e23e27f7de0387673c479d1d1e3b7cb69b88",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "9f8f8323cfa50be1dbc97a12f8c0e23e27f7de0387673c479d1d1e3b7cb69b88",
+    "svgHash": "2648e2ff9aa57fdefc5b84ce1d39afbe84708a577e637053a4baa088a9b1b559",
+    "validatedAt": "2026-09-10T17:39:36.036Z",
+    "width": 1096.071533203125,
+    "height": 323.75
+  },
+  "generatedAt": "2026-09-10T17:39:34.716Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 160,
+    "total_tokens": 1719,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

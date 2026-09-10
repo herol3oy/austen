@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "mary-seacole/wonderful-adventures-of-mrs-seacole-in-many-lands",
+  "metadata": {
+    "title": "Wonderful Adventures of Mrs. Seacole in Many Lands",
+    "authors": [
+      "Mary Seacole"
+    ],
+    "year": "1857"
+  },
+  "inputHash": "f475a86376319b05b1f1646a54a69907b18bdb5e0eb441e7494fd45ca16f66da",
+  "promptHash": "3a9868d906b4b1508dbc7a51948daca78791b6381e67c6f84f60e53e7ff242be",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:03:17.739Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:03:17.739Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Mary Seacole\"]\nC2[\"Mrs. Grant\"]\nC3[\"Mr. Seacole\"]\nC4[\"Edwin Seacole\"]\nC5[\"Thomas Day\"]\nC6[\"Dr. McMurdo\"]\nC7[\"Florence Nightingale\"]\nC1 -->|Daughter of| C2\nC2 -->|Married to| C3\nC1 -->|Sister of| C4\nC1 -->|Mentored by| C5\nC1 -->|Nurse under| C6\nC1 -->|Rival of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1567,
+        "completion_tokens": 126,
+        "total_tokens": 1693,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 287
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:03:19.071Z",
+      "finishedAt": "2026-09-10T18:03:19.071Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Mary Seacole\"]\nC2[\"Mrs. Grant\"]\nC3[\"Mr. Seacole\"]\nC4[\"Edwin Seacole\"]\nC5[\"Thomas Day\"]\nC6[\"Dr. McMurdo\"]\nC7[\"Florence Nightingale\"]\nC1 -->|Daughter of| C2\nC2 -->|Married to| C3\nC1 -->|Sister of| C4\nC1 -->|Mentored by| C5\nC1 -->|Nurse under| C6\nC1 -->|Rival of| C7",
+  "mermaidHash": "015d4273e1682e9478d1569d2f1065d0db0546280da8e4ed4e1f8fd9c96c6455",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "015d4273e1682e9478d1569d2f1065d0db0546280da8e4ed4e1f8fd9c96c6455",
+    "svgHash": "aa1d226a497ec6e24bc3223457360085adfe5decbb7288dee369cff0adab25f7",
+    "validatedAt": "2026-09-10T18:03:20.446Z",
+    "width": 755.9608154296875,
+    "height": 461
+  },
+  "generatedAt": "2026-09-10T18:03:19.071Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 126,
+    "total_tokens": 1693,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 287
+  }
+}

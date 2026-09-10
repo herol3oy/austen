@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "christopher-marlowe/the-jew-of-malta",
+  "metadata": {
+    "title": "The Jew of Malta",
+    "authors": [
+      "Christopher Marlowe"
+    ],
+    "year": "1589"
+  },
+  "inputHash": "3c48755b699d8d2332b2f299bec6420b76855edfc293d7bae1e8b9dd406260ff",
+  "promptHash": "e238f7207eccae641e48899e92eac7d3402ca644bf29e48569d542768354bca3",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:31:04.066Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:31:04.066Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Barabas\"]\nC2[\"Abigail\"]\nC3[\"Ferneze\"]\nC4[\"Lodowick\"]\nC5[\"Mathias\"]\nC6[\"Ithamore\"]\nC7[\"Barabas' First Servant\"]\nC8[\"Barabas' Second Servant\"]\nC1 -->|Parent of| C2\nC1 -->|Enemy of| C3\nC1 -->|Enemy of| C4\nC1 -->|Enemy of| C5\nC1 -->|Master of| C6\nC1 -->|Master of| C7\nC1 -->|Master of| C8\nC2 -->|Daughter of| C1\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC5 -->|Loves| C2\nC4 -->|Kills| C5\nC5 -->|Kills| C4\nC1 -->|Kills| C2\nC1 -->|Kills| C4\nC1 -->|Kills| C5\nC1 -->|Kills| C6\nC1 -->|Kills| C7\nC1 -->|Kills| C8\nC3 -->|Enemy of| C1\nC6 -->|Serves| C1\nC7 -->|Serves| C1\nC8 -->|Serves| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 297,
+        "total_tokens": 1855,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:31:06.051Z",
+      "finishedAt": "2026-09-10T17:31:06.051Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Barabas\"]\nC2[\"Abigail\"]\nC3[\"Ferneze\"]\nC4[\"Lodowick\"]\nC5[\"Mathias\"]\nC6[\"Ithamore\"]\nC7[\"Barabas' First Servant\"]\nC8[\"Barabas' Second Servant\"]\nC1 -->|Parent of| C2\nC1 -->|Enemy of| C3\nC1 -->|Enemy of| C4\nC1 -->|Enemy of| C5\nC1 -->|Master of| C6\nC1 -->|Master of| C7\nC1 -->|Master of| C8\nC2 -->|Daughter of| C1\nC2 -->|Loves| C4\nC4 -->|Loves| C2\nC5 -->|Loves| C2\nC4 -->|Kills| C5\nC5 -->|Kills| C4\nC1 -->|Kills| C2\nC1 -->|Kills| C4\nC1 -->|Kills| C5\nC1 -->|Kills| C6\nC1 -->|Kills| C7\nC1 -->|Kills| C8\nC3 -->|Enemy of| C1\nC6 -->|Serves| C1\nC7 -->|Serves| C1\nC8 -->|Serves| C1",
+  "mermaidHash": "13a7e86fa125cc35c1c6a6191ef289ed36bac4f6e827509e62e02cbff3addfe4",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "13a7e86fa125cc35c1c6a6191ef289ed36bac4f6e827509e62e02cbff3addfe4",
+    "svgHash": "01cbac915f1f48dd54c4933380d0581dced3cb361db56776cf30fffd5ce45ba1",
+    "validatedAt": "2026-09-10T17:31:07.417Z",
+    "width": 918.4737548828125,
+    "height": 743
+  },
+  "generatedAt": "2026-09-10T17:31:06.051Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 297,
+    "total_tokens": 1855,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

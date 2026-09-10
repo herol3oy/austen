@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "francisco-de-quevedo/pablo-de-segovia-the-spanish-sharper/pedro-pineda",
+  "metadata": {
+    "title": "Pablo de Segovia, the Spanish Sharper",
+    "authors": [
+      "Francisco de Quevedo"
+    ],
+    "year": "1626"
+  },
+  "inputHash": "6e2ab5c53f0634d9abf0058b99b1711281f87ac5ea287346ee60ebc5c1a14bdb",
+  "promptHash": "92a2dd79317ebb7fff6018d3a8a71c4da30a0d00f434b9a701d3db2c511e7dde",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:37:42.489Z",
+  "outcome": "unknown_work",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:37:42.489Z",
+      "outcome": "unknown_work",
+      "mermaid": null,
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1567,
+        "completion_tokens": 2,
+        "total_tokens": 1569,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 287
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:37:43.201Z",
+      "finishedAt": "2026-09-10T17:37:43.201Z"
+    }
+  ],
+  "mermaid": null,
+  "mermaidHash": null,
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:37:43.201Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 2,
+    "total_tokens": 1569,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 287
+  }
+}

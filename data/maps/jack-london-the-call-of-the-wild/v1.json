@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "jack-london/the-call-of-the-wild",
+  "metadata": {
+    "title": "The Call of the Wild",
+    "authors": [
+      "Jack London"
+    ],
+    "year": "1906"
+  },
+  "inputHash": "6726464ebca82eb84885d64c251bc0f0617e87cb23987ed35287ed60aa87687f",
+  "promptHash": "cbbedce167108dcfdd9204b89a6c8647a7d91164b111298991c5172940961ccd",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:45:38.308Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:45:38.308Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Buck\"]\nC2[\"John Thornton\"]\nC3[\"Spitz\"]\nC4[\"François\"]\nC5[\"Perrault\"]\nC6[\"Hal\"]\nC7[\"Charles\"]\nC8[\"Mercedes\"]\nC1 -->|Rival of| C3\nC1 -->|Kills| C3\nC1 -->|Serves| C4\nC1 -->|Serves| C5\nC1 -->|Loves| C2\nC2 -->|Owns| C1\nC1 -->|Serves| C6\nC6 -->|Sibling of| C7\nC7 -->|Married to| C8\nC6 -->|Owns| C1\nC7 -->|Owns| C1\nC8 -->|Owns| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 171,
+        "total_tokens": 1729,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:45:39.916Z",
+      "finishedAt": "2026-09-10T17:45:39.916Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Buck\"]\nC2[\"John Thornton\"]\nC3[\"Spitz\"]\nC4[\"François\"]\nC5[\"Perrault\"]\nC6[\"Hal\"]\nC7[\"Charles\"]\nC8[\"Mercedes\"]\nC1 -->|Rival of| C3\nC1 -->|Kills| C3\nC1 -->|Serves| C4\nC1 -->|Serves| C5\nC1 -->|Loves| C2\nC2 -->|Owns| C1\nC1 -->|Serves| C6\nC6 -->|Sibling of| C7\nC7 -->|Married to| C8\nC6 -->|Owns| C1\nC7 -->|Owns| C1\nC8 -->|Owns| C1",
+  "mermaidHash": "3c67e2a74ca8baaccabf105cd82b2c94a303e5f000a265ee3ea1f3d21028120f",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "3c67e2a74ca8baaccabf105cd82b2c94a303e5f000a265ee3ea1f3d21028120f",
+    "svgHash": "0eb757e5b01b18ff8673ccb400c4fac19c15a691b39358c24617996bd0d4be37",
+    "validatedAt": "2026-09-10T17:45:41.219Z",
+    "width": 842.0377807617188,
+    "height": 574.75
+  },
+  "generatedAt": "2026-09-10T17:45:39.916Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 171,
+    "total_tokens": 1729,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

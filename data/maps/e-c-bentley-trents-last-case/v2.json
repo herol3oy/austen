@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "e-c-bentley/trents-last-case",
+  "metadata": {
+    "title": "Trent’s Last Case",
+    "authors": [
+      "E. C. Bentley"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "4b154bbc9f18e61c6f5ab34ee82653b5e4beeefee2bc9e7fe859bb1ed61821ba",
+  "promptHash": "1cdef43262bd277577f2a99171fdd3c54acbf164b265edefe20269f9f1a25f89",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:18.255Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:18.256Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Philip Trent\"]\nC2[\"Sigsbee Manderson\"]\nC3[\"John Marlowe\"]\nC4[\"Mabel Manderson\"]\nC5[\"Nathaniel Cupples\"]\nC6[\"Inspector Murch\"]\nC7[\"Martin Bunner\"]\nC1 -->|Investigates death of| C2\nC1 -->|Friend of| C5\nC1 -->|Loves| C4\nC2 -->|Married to| C4\nC3 -->|Secretary of| C2\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC6 -->|Rival of| C1\nC7 -->|Servant of| C2",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 152,
+        "total_tokens": 1714,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 154
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:19.710Z",
+      "finishedAt": "2026-09-10T18:02:19.710Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Philip Trent\"]\nC2[\"Sigsbee Manderson\"]\nC3[\"John Marlowe\"]\nC4[\"Mabel Manderson\"]\nC5[\"Nathaniel Cupples\"]\nC6[\"Inspector Murch\"]\nC7[\"Martin Bunner\"]\nC1 -->|Investigates death of| C2\nC1 -->|Friend of| C5\nC1 -->|Loves| C4\nC2 -->|Married to| C4\nC3 -->|Secretary of| C2\nC3 -->|Loves| C4\nC4 -->|Loves| C3\nC6 -->|Rival of| C1\nC7 -->|Servant of| C2",
+  "mermaidHash": "c0b51c238d9bf4e57b51ea04a62718cb38e67e1d6851738d79c72b9237627894",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "c0b51c238d9bf4e57b51ea04a62718cb38e67e1d6851738d79c72b9237627894",
+    "svgHash": "eace3476b69b1eb3dcafafe76ec71a2d3dc892542ab2770301ed39e4c8a7f2a1",
+    "validatedAt": "2026-09-10T18:02:21.045Z",
+    "width": 1374.4847412109375,
+    "height": 256.5
+  },
+  "generatedAt": "2026-09-10T18:02:19.710Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 152,
+    "total_tokens": 1714,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 154
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "charles-w-chesnutt/the-conjure-woman",
+  "metadata": {
+    "title": "The Conjure Woman",
+    "authors": [
+      "Charles W. Chesnutt"
+    ],
+    "year": "1899"
+  },
+  "inputHash": "d0ba3f976202c6492c3ff64040fa2014b438a3f06b5564c39f1e82c578a90ab9",
+  "promptHash": "8db004d3155b11fec9e6efb3b948f38efd0816f1a2b8f094125bfb92ad2e8639",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:30:40.352Z",
+  "outcome": "invalid_graph",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:30:40.352Z",
+      "outcome": "invalid_graph",
+      "mermaid": "graph LR\nC1[\"Uncle Julius\"]\nC2[\"John\"]\nC3[\"Annie\"]\nC4[\"Aunt Peggy\"]\nC5[\"Sandy\"]\nC6[\"Tenie\"]\nC7[\"Marse Jeems\"]",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1562,
+        "completion_tokens": 48,
+        "total_tokens": 1610,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 282
+      },
+      "error": "source_policy",
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:30:41.629Z",
+      "finishedAt": "2026-09-10T17:30:41.629Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Uncle Julius\"]\nC2[\"John\"]\nC3[\"Annie\"]\nC4[\"Aunt Peggy\"]\nC5[\"Sandy\"]\nC6[\"Tenie\"]\nC7[\"Marse Jeems\"]",
+  "mermaidHash": "bcf372f58d91b9b5928272f92df87044969e0938ecaa12bbed521df5cd9f6bbb",
+  "validation": {
+    "status": "pending"
+  },
+  "generatedAt": "2026-09-10T17:30:41.629Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1562,
+    "completion_tokens": 48,
+    "total_tokens": 1610,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 282
+  }
+}

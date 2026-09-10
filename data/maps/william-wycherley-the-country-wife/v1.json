@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "william-wycherley/the-country-wife",
+  "metadata": {
+    "title": "The Country Wife",
+    "authors": [
+      "William Wycherley"
+    ],
+    "year": "1675"
+  },
+  "inputHash": "3d576b8062d767a06e3a98cd7c41de7b4e51cf60dc0daaa06bfa38f6571bd878",
+  "promptHash": "44f47ff3876059c7edab61c9188ddb8fcd25dac80dd7ca91c25a457a4f848c71",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:16:24.153Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:16:24.153Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Harry Horner\"]\nC2[\"Margery Pinchwife\"]\nC3[\"Jack Pinchwife\"]\nC4[\"Frank Harcourt\"]\nC5[\"Alithea Pinchwife\"]\nC6[\"Lady Fidget\"]\nC7[\"Sir Jasper Fidget\"]\nC8[\"Sparkish\"]\nC1 -->|Lover of| C2\nC3 -->|Husband of| C2\nC3 -->|Brother of| C5\nC4 -->|Loves| C5\nC5 -->|Betrothed to| C8\nC6 -->|Lover of| C1\nC7 -->|Husband of| C6\nC7 -->|Friend of| C1\nC8 -->|Rival of| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 163,
+        "total_tokens": 1721,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 278
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:16:25.787Z",
+      "finishedAt": "2026-09-10T18:16:25.787Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Harry Horner\"]\nC2[\"Margery Pinchwife\"]\nC3[\"Jack Pinchwife\"]\nC4[\"Frank Harcourt\"]\nC5[\"Alithea Pinchwife\"]\nC6[\"Lady Fidget\"]\nC7[\"Sir Jasper Fidget\"]\nC8[\"Sparkish\"]\nC1 -->|Lover of| C2\nC3 -->|Husband of| C2\nC3 -->|Brother of| C5\nC4 -->|Loves| C5\nC5 -->|Betrothed to| C8\nC6 -->|Lover of| C1\nC7 -->|Husband of| C6\nC7 -->|Friend of| C1\nC8 -->|Rival of| C4",
+  "mermaidHash": "4d81a4ed05036a43d538b251bf583dfde6c17a993039a9a9fa4b223709ffcc1a",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "4d81a4ed05036a43d538b251bf583dfde6c17a993039a9a9fa4b223709ffcc1a",
+    "svgHash": "abcf8f6532f108fe47deb00154d21074db5baf4843b10235c6699b3b1d322bcc",
+    "validatedAt": "2026-09-10T18:16:27.171Z",
+    "width": 1542.8421630859375,
+    "height": 265
+  },
+  "generatedAt": "2026-09-10T18:16:25.787Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 163,
+    "total_tokens": 1721,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 278
+  }
+}

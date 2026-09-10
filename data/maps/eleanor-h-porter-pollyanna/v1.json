@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "eleanor-h-porter/pollyanna",
+  "metadata": {
+    "title": "Pollyanna",
+    "authors": [
+      "Eleanor H. Porter"
+    ],
+    "year": "1913"
+  },
+  "inputHash": "fc0fc4b6b21195115e5c29399e35aa9504288321727625052114f73638535fd1",
+  "promptHash": "fa8c26c652c6eaee15ef29cf2ae2682fb7fcc0ce78c7430a1b73696d087a0128",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:35:55.572Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:35:55.572Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Pollyanna Whittier\"]\nC2[\"Aunt Polly\"]\nC3[\"John Pendleton\"]\nC4[\"Jimmy Bean\"]\nC5[\"Dr. Chilton\"]\nC6[\"Nancy\"]\nC7[\"Mrs. Snow\"]\nC8[\"Mr. Whittier\"]\nC1 -->|Niece of| C2\nC2 -->|Guardian of| C1\nC1 -->|Daughter of| C8\nC8 -->|Father of| C1\nC8 -->|Brother of| C2\nC2 -->|Sister of| C8\nC3 -->|Friend of| C1\nC1 -->|Friend of| C3\nC3 -->|Loves| C2\nC2 -->|Loves| C3\nC4 -->|Friend of| C1\nC1 -->|Friend of| C4\nC5 -->|Mentor of| C1\nC5 -->|Loves| C2\nC2 -->|Loves| C5\nC6 -->|Friend of| C1\nC1 -->|Friend of| C6\nC7 -->|Friend of| C1\nC1 -->|Friend of| C7",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 257,
+        "total_tokens": 1816,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:35:57.117Z",
+      "finishedAt": "2026-09-10T17:35:57.117Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Pollyanna Whittier\"]\nC2[\"Aunt Polly\"]\nC3[\"John Pendleton\"]\nC4[\"Jimmy Bean\"]\nC5[\"Dr. Chilton\"]\nC6[\"Nancy\"]\nC7[\"Mrs. Snow\"]\nC8[\"Mr. Whittier\"]\nC1 -->|Niece of| C2\nC2 -->|Guardian of| C1\nC1 -->|Daughter of| C8\nC8 -->|Father of| C1\nC8 -->|Brother of| C2\nC2 -->|Sister of| C8\nC3 -->|Friend of| C1\nC1 -->|Friend of| C3\nC3 -->|Loves| C2\nC2 -->|Loves| C3\nC4 -->|Friend of| C1\nC1 -->|Friend of| C4\nC5 -->|Mentor of| C1\nC5 -->|Loves| C2\nC2 -->|Loves| C5\nC6 -->|Friend of| C1\nC1 -->|Friend of| C6\nC7 -->|Friend of| C1\nC1 -->|Friend of| C7",
+  "mermaidHash": "381be24452d9ebbf7fcda7bdb30354ebc77babc3f63ffc88b2d4c5c4fbcfdef5",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "381be24452d9ebbf7fcda7bdb30354ebc77babc3f63ffc88b2d4c5c4fbcfdef5",
+    "svgHash": "145247c7712d5ac648288217ebaf40f99fa9d8bd403ff33dd119e93c4638f292",
+    "validatedAt": "2026-09-10T17:35:58.617Z",
+    "width": 754.9784545898438,
+    "height": 710
+  },
+  "generatedAt": "2026-09-10T17:35:57.117Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 257,
+    "total_tokens": 1816,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}

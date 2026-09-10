@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "elizabeth-von-arnim/the-enchanted-april",
+  "metadata": {
+    "title": "The Enchanted April",
+    "authors": [
+      "Elizabeth von Arnim"
+    ],
+    "year": "1922"
+  },
+  "inputHash": "782bc10176d4880d5bed3bb530c371ab39f72741801ba36a0047947eb5bff5b7",
+  "promptHash": "0e935b1dc9a076fd43db1f0b3303c13cea75a21e7c48f87ad197216787552cbb",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:36:08.111Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:36:08.111Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Lottie Wilkins\"]\nC2[\"Rose Arbuthnot\"]\nC3[\"Mrs Fisher\"]\nC4[\"Lady Caroline Dester\"]\nC5[\"Mr Wilkins\"]\nC6[\"Frederick Arbuthnot\"]\nC7[\"Mr Briggs\"]\nC8[\"Costanza\"]\nC1 -->|Friend of| C2\nC1 -->|Married to| C5\nC2 -->|Married to| C6\nC1 -->|Fellow guest of| C3\nC2 -->|Fellow guest of| C3\nC4 -->|Fellow guest of| C3\nC1 -->|Fellow guest of| C4\nC2 -->|Fellow guest of| C4\nC7 -->|Owner of| C3\nC7 -->|Loves| C4\nC8 -->|Serves| C1\nC8 -->|Serves| C2\nC8 -->|Serves| C3\nC8 -->|Serves| C4",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1560,
+        "completion_tokens": 211,
+        "total_tokens": 1771,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 280
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:36:09.745Z",
+      "finishedAt": "2026-09-10T17:36:09.746Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Lottie Wilkins\"]\nC2[\"Rose Arbuthnot\"]\nC3[\"Mrs Fisher\"]\nC4[\"Lady Caroline Dester\"]\nC5[\"Mr Wilkins\"]\nC6[\"Frederick Arbuthnot\"]\nC7[\"Mr Briggs\"]\nC8[\"Costanza\"]\nC1 -->|Friend of| C2\nC1 -->|Married to| C5\nC2 -->|Married to| C6\nC1 -->|Fellow guest of| C3\nC2 -->|Fellow guest of| C3\nC4 -->|Fellow guest of| C3\nC1 -->|Fellow guest of| C4\nC2 -->|Fellow guest of| C4\nC7 -->|Owner of| C3\nC7 -->|Loves| C4\nC8 -->|Serves| C1\nC8 -->|Serves| C2\nC8 -->|Serves| C3\nC8 -->|Serves| C4",
+  "mermaidHash": "e6f2ea5b33e390f3b5c3ee25bf9fe56a10fcd8e297a52e7e8274474fac34e144",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e6f2ea5b33e390f3b5c3ee25bf9fe56a10fcd8e297a52e7e8274474fac34e144",
+    "svgHash": "059b4368aa08adbd102e9da76b8a8f27cd2b1855412fb1414488d4843c71e3d9",
+    "validatedAt": "2026-09-10T17:36:11.275Z",
+    "width": 1302.1024169921875,
+    "height": 461.5
+  },
+  "generatedAt": "2026-09-10T17:36:09.745Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1560,
+    "completion_tokens": 211,
+    "total_tokens": 1771,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 280
+  }
+}

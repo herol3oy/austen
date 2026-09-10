@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v2",
+  "bookId": "hermann-hesse/steppenwolf/basil-creighton",
+  "metadata": {
+    "title": "Steppenwolf",
+    "authors": [
+      "Hermann Hesse"
+    ],
+    "year": "1927"
+  },
+  "inputHash": "8c2b34a8788e51e3dcd875dcde1712c92d226314efd48e346d5f46f00b8cfdb4",
+  "promptHash": "f383edcd8893501cfec67857aa42e9d442ff6a963173fb923e2fc90a73a34ec7",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T18:02:32.485Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T18:02:32.485Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Harry Haller\"]\nC2[\"Hermine\"]\nC3[\"Maria\"]\nC4[\"Pablo\"]\nC5[\"Hermann\"]\nC6[\"Erica\"]\nC7[\"Mozart\"]\nC1 -->|Loves| C2\nC1 -->|Loves| C3\nC2 -->|Mentor of| C1\nC2 -->|Friend of| C3\nC3 -->|Loves| C1\nC4 -->|Friend of| C2\nC4 -->|Mentor of| C1\nC5 -->|Friend of| C1\nC6 -->|Lover of| C1\nC7 -->|Mentor of| C1",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1558,
+        "completion_tokens": 152,
+        "total_tokens": 1710,
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 150
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T18:02:33.707Z",
+      "finishedAt": "2026-09-10T18:02:33.707Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Harry Haller\"]\nC2[\"Hermine\"]\nC3[\"Maria\"]\nC4[\"Pablo\"]\nC5[\"Hermann\"]\nC6[\"Erica\"]\nC7[\"Mozart\"]\nC1 -->|Loves| C2\nC1 -->|Loves| C3\nC2 -->|Mentor of| C1\nC2 -->|Friend of| C3\nC3 -->|Loves| C1\nC4 -->|Friend of| C2\nC4 -->|Mentor of| C1\nC5 -->|Friend of| C1\nC6 -->|Lover of| C1\nC7 -->|Mentor of| C1",
+  "mermaidHash": "5ac41f7fbdace88a580ea243cfbc0d9901a67f7b69812555ce97a04d94ed7586",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "5ac41f7fbdace88a580ea243cfbc0d9901a67f7b69812555ce97a04d94ed7586",
+    "svgHash": "5fa5f45dcd63573dea2eec7621d8740a70bd961026bafc07ecbd8f94bd1cbdac",
+    "validatedAt": "2026-09-10T18:02:35.029Z",
+    "width": 848.7391357421875,
+    "height": 369.5
+  },
+  "generatedAt": "2026-09-10T18:02:33.707Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1558,
+    "completion_tokens": 152,
+    "total_tokens": 1710,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 150
+  }
+}

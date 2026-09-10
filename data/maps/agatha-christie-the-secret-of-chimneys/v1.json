@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "revision": "v1",
+  "bookId": "agatha-christie/the-secret-of-chimneys",
+  "metadata": {
+    "title": "The Secret of Chimneys",
+    "authors": [
+      "Agatha Christie"
+    ],
+    "year": "1925"
+  },
+  "inputHash": "15f4aaba5c3846d8e7cabe37c1e9162072ae13712017fb59ae09e698fd215a23",
+  "promptHash": "ec0af391a64f90f7ed1f69911a8e3196e4a7cc810d7fcd7eabbe8d4206755e03",
+  "promptVersion": "2",
+  "validatorVersion": "1",
+  "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+  "requestedModel": "deepseek-v4-flash",
+  "createdAt": "2026-09-10T17:24:24.572Z",
+  "outcome": "valid",
+  "attempts": [
+    {
+      "attempt": 1,
+      "startedAt": "2026-09-10T17:24:24.572Z",
+      "outcome": "candidate",
+      "mermaid": "graph LR\nC1[\"Anthony Cade\"]\nC2[\"Virginia Revel\"]\nC3[\"James McGrath\"]\nC4[\"Superintendent Battle\"]\nC5[\"Herman Isaacstein\"]\nC6[\"George Lomax\"]\nC7[\"Lord Caterham\"]\nC8[\"Boris Anchoukoff\"]\nC1 -->|Friend of| C3\nC1 -->|Loves| C2\nC2 -->|Widow of| C3\nC1 -->|Works for| C6\nC4 -->|Investigates| C1\nC4 -->|Protects| C2\nC5 -->|Enemy of| C1\nC6 -->|Hosts at| C7\nC8 -->|Kills| C3\nC8 -->|Serves| C5",
+      "reportedModel": "deepseek-flash",
+      "usage": {
+        "prompt_tokens": 1559,
+        "completion_tokens": 164,
+        "total_tokens": 1723,
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 279
+      },
+      "requestedModel": "deepseek-v4-flash",
+      "generatedAt": "2026-09-10T17:24:26.149Z",
+      "finishedAt": "2026-09-10T17:24:26.149Z"
+    }
+  ],
+  "mermaid": "graph LR\nC1[\"Anthony Cade\"]\nC2[\"Virginia Revel\"]\nC3[\"James McGrath\"]\nC4[\"Superintendent Battle\"]\nC5[\"Herman Isaacstein\"]\nC6[\"George Lomax\"]\nC7[\"Lord Caterham\"]\nC8[\"Boris Anchoukoff\"]\nC1 -->|Friend of| C3\nC1 -->|Loves| C2\nC2 -->|Widow of| C3\nC1 -->|Works for| C6\nC4 -->|Investigates| C1\nC4 -->|Protects| C2\nC5 -->|Enemy of| C1\nC6 -->|Hosts at| C7\nC8 -->|Kills| C3\nC8 -->|Serves| C5",
+  "mermaidHash": "e5f68205d8cdfd78f4cf4c38985cd4c789d57421fc777a79b971bc3f0d6d5dfc",
+  "validation": {
+    "status": "valid",
+    "validatorVersion": "1",
+    "rendererVersion": "mermaid-11.16.0/cli-11.17.0",
+    "configHash": "58b199887f250009a65f766dd716f2bedc724e2c6e0dbe2a172ef037c17d853b",
+    "mermaidHash": "e5f68205d8cdfd78f4cf4c38985cd4c789d57421fc777a79b971bc3f0d6d5dfc",
+    "svgHash": "564b61dad4a374e20b521dcfafb9cf2cca515bb3c3bd0ef709adcc93ad430e83",
+    "validatedAt": "2026-09-10T17:24:27.836Z",
+    "width": 1332.932861328125,
+    "height": 272.25
+  },
+  "generatedAt": "2026-09-10T17:24:26.149Z",
+  "reportedModel": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 1559,
+    "completion_tokens": 164,
+    "total_tokens": 1723,
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 279
+  }
+}
