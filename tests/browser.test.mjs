@@ -27,7 +27,12 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   for (const name of ['src', 'shared', 'scripts', 'public']) await cp(resolve(ROOT, name), resolve(root, name), { recursive: true });
   for (const name of ['astro.config.mjs', 'package.json', 'tsconfig.json']) await cp(resolve(ROOT, name), resolve(root, name));
   await symlink(resolve(ROOT, 'node_modules'), resolve(root, 'node_modules'), 'dir');
-  await execute(resolve(ROOT, 'node_modules/.bin/astro'), ['build'], { cwd: root, timeout: 60000, maxBuffer: 2000000, env: { ...process.env, NODE_OPTIONS: `--import=${resolve(ROOT, 'tests/fixtures/offline.mjs')}`, DEEPSEEK_API_KEY: 'STATIC_BUILD_SECRET_SENTINEL' } });
+  await execute(resolve(ROOT, 'node_modules/.bin/astro'), ['build'], { cwd: root, timeout: 60000, maxBuffer: 2000000, env: {
+    ...process.env,
+    // Reproduce a fresh CI machine. The offline preload must disable telemetry itself.
+    CI: 'true', XDG_CONFIG_HOME: resolve(root, 'config'), ASTRO_TELEMETRY_DISABLED: '', TELEMETRY_DISABLED: '',
+    NODE_OPTIONS: `--import=${resolve(ROOT, 'tests/fixtures/offline.mjs')}`, DEEPSEEK_API_KEY: 'STATIC_BUILD_SECRET_SENTINEL',
+  } });
   const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
   const server = createServer(async (req, res) => {
     try {
