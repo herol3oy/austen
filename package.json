@@ -23,6 +23,7 @@
     "maps:revise": "node --env-file-if-exists=.env scripts/revise-map.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "@fontsource/cormorant-garamond": "5.3.0",
     "@fontsource/inter": "5.3.0",
     "@panzoom/panzoom": "4.6.0",
