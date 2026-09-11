@@ -16,7 +16,7 @@ export function normalizeBook(input, { strict = false } = {}) {
   if (year && year.length > 40) throw new Error('Year is too long');
   return { title, authors, year,
     ...(typeof input.id === 'string' && input.id.length <= 600 ? { id: input.id } : {}),
-    ...(Number.isSafeInteger(input.coverId) && input.coverId > 0 ? { coverId: input.coverId } : {}) };
+    ...(typeof input.coverPath === 'string' && /^\/(?:[a-z0-9-]+\/)?_astro\/[a-zA-Z0-9._-]+\.webp$/.test(input.coverPath) ? { coverPath: input.coverPath } : {}) };
 }
 
 export function generationMetadata(book) {

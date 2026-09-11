@@ -2,11 +2,11 @@ import { normalizeBook, generationMetadata, matchPublished } from '../../shared/
 import { validateDiagram } from '../../shared/diagram-policy.mjs';
 export async function searchOpenLibrary(query, signal) {
   const url = new URL('https://openlibrary.org/search.json');
-  url.search = new URLSearchParams({ q: query, fields: 'title,author_name,first_publish_year,cover_i', limit: '12' }).toString();
+  url.search = new URLSearchParams({ q: query, fields: 'title,author_name,first_publish_year', limit: '12' }).toString();
   const response = await fetch(url, { signal }); if (!response.ok) throw new Error('Search unavailable');
   const data = await response.json();
   return (Array.isArray(data.docs) ? data.docs : []).slice(0, 12).flatMap(doc => {
-    try { return [normalizeBook({ title: doc.title, authors: doc.author_name, publishYear: doc.first_publish_year, coverId: doc.cover_i })]; } catch { return []; }
+    try { return [normalizeBook({ title: doc.title, authors: doc.author_name, publishYear: doc.first_publish_year })]; } catch { return []; }
   });
 }
 export function createGenerator({ getState, setState, initializeWorkspace, renderCandidate }) {

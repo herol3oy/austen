@@ -1,0 +1,27 @@
+---
+import { Picture } from 'astro:assets';
+import { coverAssetFor } from '../lib/cover-assets';
+interface Props {
+  book: { title: string; authors: string[]; coverSlug?: string };
+  large?: boolean;
+}
+const { book, large = false } = Astro.props;
+const source = coverAssetFor(book.coverSlug);
+const palette = [...book.title].reduce((sum, character) => sum + character.codePointAt(0)!, 0) % 4;
+---
+<div class={`book-cover book-cover--${palette}`} data-book-cover>
+  <div class="book-cover-fallback" aria-hidden="true">
+    <span class="book-cover-ornament">✦</span>
+    <span class="book-cover-title">{book.title}</span>
+    <span class="book-cover-rule"></span>
+    <span class="book-cover-author">{book.authors.join(', ') || 'Author unknown'}</span>
+  </div>
+  {source && <Picture src={source} formats={['webp']} width={large ? 720 : 360} quality="mid" alt={`Cover of ${book.title}`} loading={large ? 'eager' : 'lazy'} decoding="async" />}
+</div>
+<script>
+  for (const img of document.querySelectorAll<HTMLImageElement>('[data-book-cover] img')) {
+    const showFallback = () => { img.hidden = true; };
+    img.addEventListener('error', showFallback, { once: true });
+    if (img.complete && img.naturalWidth === 0) showFallback();
+  }
+</script>

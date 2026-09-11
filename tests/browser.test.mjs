@@ -1,13 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
-import { readFile, cp, symlink, readdir, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, cp, symlink, readdir, mkdir } from 'node:fs/promises';
 import { resolve, extname } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import puppeteer from 'puppeteer';
 import LZString from 'lz-string';
-import { ROOT, writeJson } from '../scripts/files.mjs';
+import { ROOT, hash, writeJson } from '../scripts/files.mjs';
+import { coverAssetPath } from '../shared/covers.mjs';
 import { syncMaps } from '../scripts/sync-maps.mjs';
 import { renderSvg, validateSvg } from '../scripts/validate-maps.mjs';
 import { decodeShare, loadHistory, normalizeSnapshot } from '../src/scripts/share-history.js';
@@ -22,9 +23,19 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   const extra = Array.from({ length: 51 }, (_, i) => ({ ...book, id: `fixture-author/book-${i}`, slug: `fixture-author-book-${i}`, title: `Fixture ${i}`, year: '1900', category: 'Poetry', ebookUrl: `https://standardebooks.org/ebooks/fixture-author/book-${i}` }));
   catalog.books.push(...extra);
   await writeJson(resolve(root, 'data/catalog/books.json'), catalog);
+  const cover = await readFile(resolve(ROOT, 'src/assets/covers/jane-austen-pride-and-prejudice/cover.jpg'));
+  await writeJson(resolve(root, 'data/catalog/covers.json'), { schemaVersion: 3, books: Object.fromEntries(
+    [book, extra[0], extra.at(-1)].map(entry => [entry.id, {
+      status: 'imported', repository: 'fixture', branch: 'master', sourceSha: 'a'.repeat(40), assetPath: coverAssetPath(entry), sourceHash: hash(cover), checkedAt: generatedAt,
+    }])
+  ) });
   await syncMaps({ root, dryRun: false, ids: [book.id, ...extra.map(b => b.id)], provider: async () => success(), renderer: async () => svg, log: () => {} });
   await syncMaps({ root, dryRun: false, ids: [catalog.books[1].id], provider: async () => ({ ...success(), outcome: 'unknown_work', mermaid: null }), renderer: async () => svg, log: () => {} });
   for (const name of ['src', 'shared', 'scripts', 'public']) await cp(resolve(ROOT, name), resolve(root, name), { recursive: true });
+  for (const entry of [book, extra[0], extra.at(-1)]) {
+    const path = resolve(root, coverAssetPath(entry));
+    await mkdir(resolve(path, '..'), { recursive: true }); await writeFile(path, cover);
+  }
   for (const name of ['astro.config.mjs', 'package.json', 'tsconfig.json']) await cp(resolve(ROOT, name), resolve(root, name));
   await symlink(resolve(ROOT, 'node_modules'), resolve(root, 'node_modules'), 'dir');
   await execute(resolve(ROOT, 'node_modules/.bin/astro'), ['build'], { cwd: root, timeout: 60000, maxBuffer: 2000000, env: {
@@ -33,7 +44,7 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     CI: 'true', XDG_CONFIG_HOME: resolve(root, 'config'), ASTRO_TELEMETRY_DISABLED: '', TELEMETRY_DISABLED: '',
     NODE_OPTIONS: `--import=${resolve(ROOT, 'tests/fixtures/offline.mjs')}`, DEEPSEEK_API_KEY: 'STATIC_BUILD_SECRET_SENTINEL',
   } });
-  const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
+  const mime = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.ico': 'image/x-icon' };
   const server = createServer(async (req, res) => {
     try {
       const path = new URL(req.url, 'http://localhost').pathname;
@@ -48,10 +59,12 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   const browser = await puppeteer.launch({ headless: true, executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined }); t.after(() => browser.close());
   const page = await browser.newPage(); page.setDefaultTimeout(15000);
   const errors = []; page.on('pageerror', error => errors.push(error.message));
+  let searchRequests = 0;
   let providerCalls = 0, apiReply = null, discoveryReply = null;
   await page.setRequestInterception(true);
   page.on('request', request => {
     if (request.url().startsWith(base) || request.url().startsWith('data:') || request.url().startsWith('blob:')) { void request.continue(); return; }
+    if (request.url().startsWith('https://openlibrary.org/search.json')) searchRequests++;
     if (request.url().startsWith('https://austen-api.potato0.workers.dev') && apiReply) {
       if (request.method() === 'OPTIONS') { void request.respond({ status: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' } }); return; }
       providerCalls++; void apiReply(request); return;
@@ -72,8 +85,40 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     const index = JSON.parse(await readFile(resolve(root, 'dist/catalog-index.json'), 'utf8'));
     assert.equal(index.length, 54); assert.ok(!JSON.stringify(index).includes('mermaid'));
     assert.equal(index[0].mapStatus, 'available'); assert.equal(index[1].mapStatus, 'unavailable'); assert.equal(index[1].publishedUrl, null);
+    assert.equal(index[0].coverPath, undefined); assert.equal(index[1].coverPath, undefined);
     assert.equal(index[2].mapStatus, 'pending'); assert.equal(index[2].publishedUrl, null);
     assert.equal((await page.goto(`${base}books/${extra.at(-1).slug}/`)).status(), 200);
+  });
+  await t.test('local covers render without JavaScript; grids and filtering work at all sizes', async () => {
+    await page.setJavaScriptEnabled(false); await page.goto(publishedUrl);
+    assert.ok(await page.$eval('.book-intro [data-book-cover] img', img => img.complete && img.naturalWidth > 0));
+    assert.equal(await page.$eval('.book-intro [data-book-cover] img', img => img.loading), 'eager');
+    assert.ok((await page.$eval('.book-intro [data-book-cover] source', source => source.srcset)).includes('/austen/_astro/'));
+    assert.ok((await page.$eval('.book-intro [data-book-cover] img', img => img.src)).includes('/austen/_astro/'));
+    await page.goto(base);
+    await page.waitForFunction(() => document.querySelector('[data-book-cover] img').naturalWidth > 0);
+    assert.equal(await page.$eval('.book-cover-link', link => link.href), publishedUrl);
+    assert.equal(await page.$$eval('[data-book-cover] img', images => images.every(img => img.loading === 'lazy')), true);
+    await page.setJavaScriptEnabled(true); await page.setViewport({ width: 1280, height: 900 }); await page.goto(base);
+    assert.equal(await page.$$eval('[data-book-cover]', covers => covers.length), 52);
+    assert.equal(await page.$$eval('[data-book-cover]:not(:has(img))', covers => covers.length), 49);
+    const columns = () => page.$eval('.library-list', list => getComputedStyle(list).gridTemplateColumns.split(' ').length);
+    for (const [width, expected] of [[1280, 6], [800, 4], [375, 2]]) {
+      await page.setViewport({ width, height: 900 });
+      assert.equal(await columns(), expected);
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    }
+    await page.type('#library-search', 'Fixture 50');
+    assert.equal(await page.$$eval('[data-library-book]:not([hidden])', cards => cards.length), 1);
+    assert.match(await page.$eval('#library-count', count => count.textContent), /1 book found/);
+    await page.$eval('#library-search', input => { input.value = 'no matching book'; input.dispatchEvent(new Event('input')); });
+    assert.equal(await page.$$eval('[data-library-book]:not([hidden])', cards => cards.length), 0);
+    await page.goto(`${base}catalog/`); assert.equal(await columns(), 2);
+    assert.equal(await page.$$eval('[data-library-book]', cards => cards.length), 54);
+    await page.goto(publishedUrl);
+    assert.equal(await page.$eval('.book-intro', intro => getComputedStyle(intro).gridTemplateColumns.split(' ').length), 1);
+    assert.equal(searchRequests, 0); assert.equal(providerCalls, 0);
+    await page.setViewport({ width: 1280, height: 900 });
   });
   await t.test('saved workspace uses canonical share; edits validate, revert, cancel and save locally with original timestamp', async () => {
     await page.setJavaScriptEnabled(true); await page.goto(publishedUrl);
@@ -107,10 +152,11 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   await t.test('catalog filtering and preselection offer a published map without generating', async () => {
     await page.goto(`${base}catalog/`); await page.type('#library-search', '1813'); assert.equal(await page.$$eval('[data-library-book]:not([hidden])', n => n.length), 1);
     await page.goto(`${base}generate/?book=${encodeURIComponent(book.id)}`); await page.waitForSelector('.published-offer'); assert.equal(providerCalls, 0);
+    assert.equal(await page.$('#selected-book-card img'), null);
   });
   await t.test('legacy homepage shares forward, preserve metadata and render; malformed history and Undo work', async () => {
     const oldShare = (await readFile(resolve(ROOT, 'tests/fixtures/legacy-share.txt'), 'utf8')).trim();
-    await page.goto(`${base}?graph=${new URL(oldShare).searchParams.get('graph')}`); await page.waitForFunction(() => location.pathname === '/austen/generate/' && !document.getElementById('edit-btn').disabled);
+    await page.goto(`${base}?graph=${new URL(oldShare).searchParams.get('graph')}`); await page.waitForFunction(() => location.pathname === '/austen/generate/' && document.getElementById('selected-book-card')?.textContent.includes('Pride and Prejudice') && !document.getElementById('edit-btn').disabled);
     assert.match(await page.$eval('#selected-book-card', n => n.textContent), /Pride and Prejudice/);
     await page.evaluate(({ graph, generatedAt }) => localStorage.setItem('austen-history', JSON.stringify([{ book: { title: 'Legacy', authors: 'malformed', publishYear: 1813 }, mermaid: graph, generatedAt }, { book: null, mermaid: 4 } ])), { graph, generatedAt });
     await page.goto(`${base}generate/`); await page.waitForSelector('.shelf-delete'); await page.click('.shelf-delete'); await page.click('#history-undo-btn'); assert.equal(await page.$$eval('.shelf-row', n => n.length), 1);

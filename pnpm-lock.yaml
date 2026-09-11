@@ -136,6 +136,9 @@ importers:
       mermaid:
         specifier: 11.16.0
         version: 11.16.0
+      sharp:
+        specifier: 0.35.2
+        version: 0.35.2
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.10

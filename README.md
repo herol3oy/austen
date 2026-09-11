@@ -20,11 +20,30 @@ The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panz
 
 | Route | Content |
 | --- | --- |
-| `/austen/` | Searchable published maps |
-| `/austen/catalog/` | Full metadata catalog and availability |
-| `/austen/books/<slug>/` | Published SVG, metadata, attribution, spoilers, and editable workspace |
+| `/austen/` | Searchable cover grid of published maps |
+| `/austen/catalog/` | Full catalog cover grid and availability |
+| `/austen/books/<slug>/` | Book cover, published SVG, metadata, attribution, spoilers, and editable workspace |
 | `/austen/generate/` | OpenLibrary discovery, manual entry, generation, shares, local history |
 | `/austen/catalog-index.json` | Metadata and availability, without graph bodies |
+
+## Book covers
+
+Homepage and catalog cards use local copies of the official Standard Ebooks cover art, with larger artwork on published-book pages. Astro transforms those JPEG sources into sized WebP images with JPEG fallback markup. Grid images load lazily. Missing covers show a title-and-author bookplate. Titles, navigation, and available cover images work without JavaScript.
+
+Populate or update the separate cover metadata cache explicitly:
+
+```sh
+GITHUB_TOKEN=github_pat_... pnpm covers:sync          # Import covers for published maps
+pnpm covers:sync --id jane-austen/pride-and-prejudice # Limit import to one published edition
+pnpm covers:sync --refresh                            # Check source revisions and refresh changed covers
+pnpm covers:sync --refresh --id jane-austen/pride-and-prejudice
+```
+
+The command authenticates every GitHub API request with `GITHUB_TOKEN` (or `GH_TOKEN`; a token from `gh auth login` is also accepted). It lists public repositories in [the Standard Ebooks GitHub organization](https://github.com/standardebooks), intersects them with `data/published.json`, and downloads `images/cover.jpg` only for those published catalog editions. Source JPEGs are saved under `src/assets/covers/`, where Astro processes them during the build. Existing version-2 manifests are migrated from the former `data/covers/` and `public/covers/` copies on the next non-dry sync. Missing repositories and cover files are recorded without stopping the import. `--dry-run` reports results without writing files.
+
+`data/catalog/covers.json` stores outcome, repository, source revision, local asset paths, hashes, and timestamps keyed by stable catalog edition IDs. Successful entries are validated and reused without downloading again; `--refresh` asks GitHub whether the source revision changed. The importer retries temporary GitHub failures and checkpoints after each entry. It never hotlinks GitHub images in the application.
+
+Commit the manifest and downloaded assets with the frontend changes. Ingestion and map generation do not fetch cover data. Builds read local assets without network access. The importer does not change published map hashes.
 
 ## Catalog and map maintenance
 
@@ -75,7 +94,7 @@ GitHub Actions uses [Chrome supplied by the Ubuntu runner image](https://github.
 
 The CLI and frontend both resolve Mermaid **11.16.0**, enforced by `pnpm-workspace.yaml`. They use `shared/mermaid.config.json` with strict security and HTML labels disabled. A restricted graph grammar and SVG element/reference checks precede embedding. `valid` means these automated checks passed; it does not certify factual accuracy. Automatic maps are labeled AI-generated.
 
-The browser suite builds more than 50 automatically published fixture maps with `fetch` disabled. It verifies static SVGs without JavaScript, publication labels, catalog states, unpublished route exclusion, canonical sharing, the old homepage share, malformed history, Undo, stale discovery/generation, invalid drafts, revert/cancel/save, pan/zoom, and full PNG/SVG downloads. Provider calls are mocked; fixture maps never enter the public data.
+The browser suite builds more than 50 automatically published fixture maps with `fetch` disabled. It verifies static SVGs and covers without JavaScript, responsive cover grids, failed-image bookplates, publication labels, catalog states, unpublished route exclusion, canonical sharing, the old homepage share, malformed history, Undo, stale discovery/generation, invalid drafts, revert/cancel/save, pan/zoom, and full PNG/SVG downloads. Provider calls and cover images are mocked; fixture maps never enter the public data.
 
 ## Worker and deployment
 
@@ -101,7 +120,7 @@ Code: [MIT](LICENSE).
 
 Jane Austen Inspired Illustrations, CC-BY 4.0, from [Colorconfetti](https://colorconfetti.com/culture-history-environment/jane-austen/jane-austen-inspired-illustrations/). The transferred portrait/logo retains this attribution.
 
-Catalog metadata: [Sudalyph Standard Ebooks index](https://sudalyph.org/seci/), fetched explicitly; linked editions: [Standard Ebooks](https://standardebooks.org/). OpenLibrary is used only by the optional generator discovery interface.
+Catalog metadata: [Sudalyph Standard Ebooks index](https://sudalyph.org/seci/), fetched explicitly; linked editions and cover art: [Standard Ebooks](https://standardebooks.org/). [Open Library](https://openlibrary.org/) powers optional generator discovery.
 
 Inter and Cormorant Garamond are distributed through Fontsource under their bundled SIL Open Font License. Mermaid, Panzoom and LZ-String retain their dependency licenses. Shared links use the LZ-String URI bitstream format with a bounded decoder.
 

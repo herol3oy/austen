@@ -184,9 +184,9 @@ function buildCatalogCard(book) {
 }
 
 function buildCoverElement(book, width, height) {
-  if (book.coverId) {
+  if (book.coverPath) {
     const img = document.createElement("img");
-    img.src = `https://covers.openlibrary.org/b/id/${book.coverId}-M.jpg`;
+    img.src = book.coverPath;
     img.alt = `Cover of ${book.title}`;
     img.width = width;
     img.height = height;

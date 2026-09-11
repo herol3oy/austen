@@ -1,11 +1,13 @@
 ---
 import type { CatalogEntry } from '../lib/library';
+import BookCover from './BookCover.astro';
 import { searchText } from '../../shared/books.mjs';
 interface Props { book: CatalogEntry }
 const { book } = Astro.props;
 const href = book.publishedUrl || (book.eligible ? `${import.meta.env.BASE_URL}generate/?book=${encodeURIComponent(book.id)}` : null);
 ---
-<li class="library-row" data-library-book data-search={searchText(`${book.title} ${book.authors.join(' ')} ${book.year || ''}`)}>
-  <div><h2>{href ? <a href={href}>{book.title}</a> : book.title}</h2><p>{book.authors.join(', ') || 'Author unknown'} · Year: {book.year || 'unknown'}</p></div>
+<li class="library-card" data-library-book data-search={searchText(`${book.title} ${book.authors.join(' ')} ${book.year || ''}`)}>
+  {href ? <a class="book-cover-link" href={href} aria-label={`Open ${book.title}`}><BookCover book={book} /></a> : <BookCover book={book} />}
+  <div class="library-card-copy"><h2>{href ? <a href={href}>{book.title}</a> : book.title}</h2><p>{book.authors.join(', ') || 'Author unknown'}</p><p class="library-card-year">Year: {book.year || 'unknown'}</p></div>
   <div class="availability">{href ? <a href={href}>{book.availability}<span aria-hidden="true"> →</span></a> : <span>{book.availability}</span>}</div>
 </li>
