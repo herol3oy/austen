@@ -1455,12 +1455,7 @@ a { color: var(--color-green); text-underline-offset: .2em; }
 .library-intro > p:not(.section-kicker) { max-width: 70ch; color: var(--color-ink-muted); }
 .library-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem 1rem; margin: 1.5rem 0 4rem; }
 .library-card { display: flex; flex-direction: column; align-items: stretch; min-width: 0; gap: .85rem; }
-.library-card h2 { font-size: 1.4rem; margin-bottom: .4rem; overflow-wrap: anywhere; }
-.library-card h2 a { text-decoration: none; }
-.library-card h2 a:hover { text-decoration: underline; }
-.library-card p, .metadata-note, .availability { font-size: .85rem; color: var(--color-ink-muted); }
-.library-card-copy { overflow-wrap: anywhere; }
-.library-card-year { margin-top: .25rem; }
+.metadata-note, .availability { font-size: .85rem; color: var(--color-ink-muted); }
 .availability { margin-top: auto; padding-top: .6rem; border-top: 1px solid var(--color-rule); font-size: .75rem; }
 .availability a { text-decoration: none; }
 .availability a:hover { text-decoration: underline; }
@@ -1476,6 +1471,13 @@ a { color: var(--color-green); text-underline-offset: .2em; }
 .book-cover-rule { width: 24px; border-top: 1px solid currentColor; opacity: .55; }
 .book-cover-author { font-size: .65rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .book-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--color-paper-dim); }
+.book-cover--captioned { display: flex; align-items: flex-end; }
+.book-cover--captioned .book-cover-fallback { display: none; }
+.book-cover-caption { position: relative; z-index: 1; width: 100%; padding: 3.5rem .85rem .9rem; background: linear-gradient(to top, rgba(16, 23, 20, .96) 0%, rgba(16, 23, 20, .78) 38%, transparent 100%); color: #fbf9f4; overflow-wrap: anywhere; }
+.book-cover-caption h2 { margin: 0 0 .4rem; font-size: clamp(1.05rem, 1.6vw, 1.4rem); line-height: 1.15; color: inherit; }
+.book-cover-caption p { margin: 0; font-size: .75rem; line-height: 1.4; color: inherit; }
+.book-cover-caption .book-cover-year { margin-top: .35rem; font-size: .7rem; color: #deded8; }
+.book-cover-link:hover .book-cover-caption h2 { text-decoration: underline; text-underline-offset: .15em; }
 .book-intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; max-width: none; align-items: center; }
 .book-intro > .book-cover { max-width: 220px; }
 .book-intro-copy { min-width: 0; }
