@@ -3,22 +3,76 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiagramWorkspace from '../../components/DiagramWorkspace.astro';
 import BookCover from '../../components/BookCover.astro';
 import { loadLibrary } from '../../lib/library';
+import { parseDiagram } from '../../../shared/diagram-policy.mjs';
 export async function getStaticPaths() {
   const { maps } = await loadLibrary();
-  return maps.map(map => ({ params: { slug: map.book.slug }, props: { map } }));
+  return maps.map(map => {
+    try {
+      const diagram = parseDiagram(map.revision.mermaid);
+      return { params: { slug: map.book.slug }, props: { map, diagram } };
+    } catch (cause) {
+      throw new Error(`Could not parse published map for ${map.book.slug}`, { cause });
+    }
+  });
 }
-const { map } = Astro.props;
+const { map, diagram } = Astro.props;
 const { book, revision, svg, review } = map;
 const automatic = review.mode === 'automatic';
 const canonicalUrl = new URL(`${import.meta.env.BASE_URL}books/${book.slug}/`, Astro.site).href;
+const title = `${book.title} Character Relationship Map`;
+const listFormatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
+const introNames = diagram.nodes.slice(0, 5).map(node => node.label);
+if (diagram.nodes.length > 5) introNames.push('the other major characters');
+const description = `Explore the relationships between ${listFormatter.format(introNames)} in ${book.title} by ${listFormatter.format(book.authors)}.`;
+const names = new Map(diagram.nodes.map(node => [node.id, node.label]));
 ---
-<BaseLayout title={`${book.title} — Austen`} canonicalUrl={canonicalUrl}>
+<BaseLayout title={`${title} — Austen`} description={description} canonicalUrl={canonicalUrl}>
   <section class="library-intro book-intro">
     <div class="book-cover-link book-page-cover">
       <BookCover book={book} large />
     </div>
-    <div class="book-intro-copy"><p class="section-kicker">{automatic ? 'An AI-generated relationship map' : 'A reviewed relationship map'}</p><h1>{book.title}</h1><p>{book.authors.join(', ')} · Year: {book.year || 'unknown'}</p><p class="metadata-note">Map generated {revision.generatedAt.slice(0, 10)} · {automatic ? `Published ${review.publishedAt.slice(0, 10)}` : `Reviewed ${review.reviewedAt.slice(0, 10)} · ${review.reviewer}`}</p></div>
+    <div class="book-intro-copy">
+      <p class="section-kicker">{automatic ? 'An AI-generated relationship map' : 'A reviewed relationship map'}</p>
+      <h1>{title}</h1>
+      <p class="book-byline">{book.authors.join(', ')} · {book.year || 'Year unknown'}</p>
+      <p class="book-description">{description}</p>
+      <p class="metadata-note">Map generated {revision.generatedAt.slice(0, 10)} · {automatic ? `Published ${review.publishedAt.slice(0, 10)}` : `Reviewed ${review.reviewedAt.slice(0, 10)} · ${review.reviewer}`}</p>
+    </div>
   </section>
   <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
-  <DiagramWorkspace svg={svg} initial={{ book, mermaid: revision.mermaid, generatedAt: revision.generatedAt, canonicalUrl }} />
+  <DiagramWorkspace svg={svg} showHeading={false} initial={{ book, mermaid: revision.mermaid, generatedAt: revision.generatedAt, canonicalUrl }}>
+    <Fragment slot="after-diagram">
+      <section class="book-details" aria-labelledby="key-characters-heading">
+        <h2 id="key-characters-heading">Key characters</h2>
+        <ul class="character-list" role="list">
+          {diagram.nodes.map(node => <li>{node.label}</li>)}
+        </ul>
+      </section>
+      <section class="book-details" aria-labelledby="key-relationships-heading">
+        <h2 id="key-relationships-heading">Key relationships</h2>
+        <dl class="relationship-list">
+          {diagram.edges.map(edge => (
+            <div>
+              <dt>{names.get(edge.source)} → {names.get(edge.target)}</dt>
+              <dd>{edge.label ?? 'Relationship unspecified'}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    </Fragment>
+  </DiagramWorkspace>
 </BaseLayout>
+
+<style>
+  .book-description { max-width: 70ch; color: var(--color-ink-muted); overflow-wrap: anywhere; }
+  .book-details { padding-top: 1.5rem; border-top: 1px solid var(--color-rule); }
+  .book-details h2 { margin-bottom: 1rem; font-size: clamp(1.75rem, 3vw, 2.25rem); }
+  .character-list, .relationship-list { display: grid; gap: .75rem 2rem; }
+  .character-list li, .relationship-list > div { min-width: 0; overflow-wrap: anywhere; }
+  .relationship-list { margin: 0; gap: 1.25rem 2rem; }
+  .relationship-list dt { font-weight: 600; }
+  .relationship-list dd { margin: .25rem 0 0; color: var(--color-ink-muted); }
+  @media (min-width: 640px) {
+    .character-list, .relationship-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+</style>

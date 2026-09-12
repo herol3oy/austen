@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "test": "node --test tests/catalog.test.mjs tests/covers.test.mjs tests/generation.test.mjs tests/publication.test.mjs tests/sync.test.mjs tests/worker.test.mjs",
+    "test": "node --test tests/catalog.test.mjs tests/covers.test.mjs tests/diagram.test.mjs tests/generation.test.mjs tests/publication.test.mjs tests/sync.test.mjs tests/worker.test.mjs",
     "test:browser": "node --env-file-if-exists=.env --test tests/browser.test.mjs",
     "catalog:ingest": "node scripts/ingest-catalog.mjs",
     "covers:sync": "node --env-file-if-exists=.env scripts/sync-covers.mjs",

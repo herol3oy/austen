@@ -1,14 +1,14 @@
 ---
-const { svg = "", initial = null } = Astro.props;
+const { svg = "", initial = null, showHeading = true } = Astro.props;
 ---
 <div id="diagram-workspace" class="diagram-workspace" hidden={!svg}>
   <section id="mermaid-section" hidden={!svg}>
-    <div class="section-heading">
+    {showHeading && <div class="section-heading">
       <h2>Relationship diagram</h2>
       <p class="workspace-note">
         A visual reading of the book’s central characters and connections.
       </p>
-    </div>
+    </div>}
     <p class="spoiler-notice">Spoilers: this map covers the whole book.</p>
     <div class="mermaid-frame">
       <div
@@ -64,6 +64,8 @@ const { svg = "", initial = null } = Astro.props;
       set:html={svg}></div>
     </div>
   </section>
+
+  <slot name="after-diagram" />
 
   <section id="actions-section" hidden>
     <div class="section-heading">

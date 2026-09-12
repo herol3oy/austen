@@ -23,9 +23,11 @@ The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panz
 | `/austen/` | Generator hero, eight featured classic maps, and a link to all published maps |
 | `/austen/maps/` | Complete searchable cover grid of published maps |
 | `/austen/catalog/` | Full catalog cover grid and availability |
-| `/austen/books/<slug>/` | Book cover, published SVG, metadata, attribution, spoilers, and editable workspace |
+| `/austen/books/<slug>/` | Book cover, character introduction, published SVG, HTML character and relationship lists, metadata, attribution, spoilers, and editable workspace |
 | `/austen/generate/` | OpenLibrary discovery, manual entry, generation, shares, local history |
 | `/austen/catalog-index.json` | Metadata and availability, without graph bodies |
+
+Published book pages parse the saved Mermaid revision at build time to populate the introduction, page metadata, key characters, and key relationships. Every directed relationship keeps its original label and order. These sections are visible without JavaScript and require no model calls; they describe the published revision even when a reader edits the diagram locally.
 
 ## Book covers
 

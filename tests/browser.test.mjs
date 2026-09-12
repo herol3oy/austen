@@ -7,6 +7,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import puppeteer from 'puppeteer';
 import LZString from 'lz-string';
+import { load } from 'cheerio';
 import { ROOT, hash, writeJson } from '../scripts/files.mjs';
 import { coverAssetPath } from '../shared/covers.mjs';
 import { syncMaps } from '../scripts/sync-maps.mjs';
@@ -21,6 +22,10 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   const svg = await renderSvg(graph); assert.ok(validateSvg(svg).width > 0);
   await assert.rejects(renderSvg('graph LR\nend["Reserved identifier"]\nC2["Other"]\nend -->|Knows| C2'), error => error.code === 'invalid_graph');
   const extra = Array.from({ length: 51 }, (_, i) => ({ ...book, id: `fixture-author/book-${i}`, slug: `fixture-author-book-${i}`, title: `Fixture ${i}`, year: '1900', category: 'Poetry', ebookUrl: `https://standardebooks.org/ebooks/fixture-author/book-${i}` }));
+  extra[0] = { ...extra[0], title: 'The Collected Adventures of Friends & Their Extraordinary Companions', authors: ['Author One', 'Author Two'], year: null };
+  const contentNames = ['Élizabeth & Anne', 'Jane Bennet', 'Charles Bingley', 'Fitzwilliam Darcy', 'ACharacterWithAnExceptionallyLongNameThatMustWrapOnSmallScreens', 'George Wickham'];
+  const contentGraph = 'graph LR\n' + contentNames.map((name, i) => `C${i}["${name}"]`).join('\n') + '\nC0 -->|Knows & trusts| C1\nC1 -->|Friend of| C0\nC0 -->|Mentors| C1\nC0 --> C5';
+  const contentSvg = await renderSvg(contentGraph);
   catalog.books.push(...extra);
   await writeJson(resolve(root, 'data/catalog/books.json'), catalog);
   const cover = await readFile(resolve(ROOT, 'src/assets/covers/jane-austen-pride-and-prejudice/cover.jpg'));
@@ -29,7 +34,9 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
       status: 'imported', repository: 'fixture', branch: 'master', sourceSha: 'a'.repeat(40), assetPath: coverAssetPath(entry), sourceHash: hash(cover), checkedAt: generatedAt,
     }])
   ) });
-  await syncMaps({ root, dryRun: false, ids: [book.id, ...extra.map(b => b.id)], provider: async () => success(), renderer: async () => svg, log: () => {} });
+  await syncMaps({ root, dryRun: false, ids: [book.id, ...extra.map(b => b.id)],
+    provider: async metadata => ({ ...success(), mermaid: metadata.title === extra[0].title ? contentGraph : graph }),
+    renderer: async source => source === contentGraph ? contentSvg : svg, log: () => {} });
   await syncMaps({ root, dryRun: false, ids: [catalog.books[1].id], provider: async () => ({ ...success(), outcome: 'unknown_work', mermaid: null }), renderer: async () => svg, log: () => {} });
   for (const name of ['src', 'shared', 'scripts', 'public']) await cp(resolve(ROOT, name), resolve(root, name), { recursive: true });
   for (const entry of [book, extra[0], extra.at(-1)]) {
@@ -74,6 +81,30 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   const publishedUrl = `${base}books/${book.slug}/`;
   await t.test('published maps have static SVG, attribution and spoilers without JavaScript; unpublished books have no routes', async () => {
     await page.setJavaScriptEnabled(false); await page.goto(publishedUrl);
+    const expectedTitle = `${book.title} Character Relationship Map`;
+    const expectedDescription = `Explore the relationships between Elizabeth Bennet and Jane Bennet in ${book.title} by ${book.authors.join(', ')}.`;
+    const $ = load(await readFile(resolve(root, 'dist/books', book.slug, 'index.html'), 'utf8'));
+    $('svg, script, style, textarea').remove();
+    assert.equal($('h1').text(), expectedTitle);
+    assert.equal($('title').text(), `${expectedTitle} — Austen`);
+    assert.equal($('meta[name="description"]').attr('content'), expectedDescription);
+    assert.equal($('.book-description').text(), expectedDescription);
+    assert.equal($('.book-byline').text(), `${book.authors.join(', ')} · ${book.year}`);
+    assert.deepEqual($('.book-details h2').map((_, heading) => $(heading).text()).get(), ['Key characters', 'Key relationships']);
+    assert.deepEqual($('.character-list li').map((_, item) => $(item).text()).get(), ['Elizabeth Bennet', 'Jane Bennet']);
+    assert.equal($('.relationship-list dt').text(), 'Elizabeth Bennet → Jane Bennet');
+    assert.equal($('.relationship-list dd').text(), 'Sister of');
+    assert.equal($('.book-details [hidden], .book-details details').length, 0);
+    assert.equal($('#mermaid-section .section-heading').length, 0);
+    assert.deepEqual($('#diagram-workspace > section').map((_, section) => $(section).attr('id') || $(section).attr('aria-labelledby')).get(), [
+      'mermaid-section', 'key-characters-heading', 'key-relationships-heading', 'actions-section', 'editor-section',
+    ]);
+    for (const width of [320, 375, 800, 1280]) {
+      await page.setViewport({ width, height: 900 });
+      assert.ok(await page.$eval('.character-list', node => node.checkVisibility()));
+      assert.ok(await page.$eval('.relationship-list', node => node.checkVisibility()));
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    }
     assert.ok(await page.$('#mermaid-container svg')); assert.equal(await page.$eval('#diagram-workspace', n => n.hidden), false);
     assert.match(await page.$eval('main', n => n.textContent), /Spoilers:.*whole book/s);
     assert.match(await page.$eval('main', n => n.textContent), /AI-generated/);
@@ -91,6 +122,30 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.equal(index[0].coverPath, undefined); assert.equal(index[1].coverPath, undefined);
     assert.equal(index[2].mapStatus, 'pending'); assert.equal(index[2].publishedUrl, null);
     assert.equal((await page.goto(`${base}books/${extra.at(-1).slug}/`)).status(), 200);
+  });
+  await t.test('book content preserves all relationships, escapes text, and handles larger casts and missing years', async () => {
+    await page.setJavaScriptEnabled(false);
+    await page.goto(`${base}books/${extra[0].slug}/`);
+    assert.deepEqual(await page.$$eval('.character-list li', items => items.map(item => item.textContent)), contentNames);
+    assert.deepEqual(await page.$$eval('.relationship-list dt', items => items.map(item => item.textContent)), [
+      'Élizabeth & Anne → Jane Bennet', 'Jane Bennet → Élizabeth & Anne', 'Élizabeth & Anne → Jane Bennet', 'Élizabeth & Anne → George Wickham',
+    ]);
+    assert.deepEqual(await page.$$eval('.relationship-list dd', items => items.map(item => item.textContent)), [
+      'Knows & trusts', 'Friend of', 'Mentors', 'Relationship unspecified',
+    ]);
+    assert.equal(await page.$eval('.book-description', node => node.textContent),
+      `Explore the relationships between ${contentNames.slice(0, 5).join(', ')}, and the other major characters in ${extra[0].title} by Author One and Author Two.`);
+    assert.equal(await page.$eval('.book-byline', node => node.textContent), 'Author One, Author Two · Year unknown');
+    assert.equal(await page.$eval('h1', node => node.textContent), `${extra[0].title} Character Relationship Map`);
+    assert.equal(await page.$eval('meta[name="description"]', node => node.content), await page.$eval('.book-description', node => node.textContent));
+    const html = await readFile(resolve(root, 'dist/books', extra[0].slug, 'index.html'), 'utf8');
+    assert.ok(html.includes('Élizabeth &amp; Anne'));
+    for (const width of [320, 375, 800, 1280]) {
+      await page.setViewport({ width, height: 900 });
+      assert.ok(await page.$eval('.character-list', node => node.checkVisibility() && node.scrollWidth <= node.clientWidth));
+      assert.ok(await page.$eval('.relationship-list', node => node.checkVisibility() && node.scrollWidth <= node.clientWidth));
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    }
   });
   await t.test('local covers render without JavaScript; grids and filtering work at all sizes', async () => {
     await page.setJavaScriptEnabled(false); await page.goto(publishedUrl);
