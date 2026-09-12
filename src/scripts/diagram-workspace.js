@@ -172,7 +172,7 @@ function buildCatalogCard(book) {
   const author = document.createElement("span");
   author.textContent = book.authors.length
     ? book.authors.slice(0, 2).join(", ") +
-      (book.authors.length > 2 ? ` +${book.authors.length - 2} more` : "")
+    (book.authors.length > 2 ? ` +${book.authors.length - 2} more` : "")
     : "Unknown author";
   const year = document.createElement("span");
   year.textContent = book.year ? String(book.year) : "Year unknown";
@@ -891,11 +891,23 @@ function buildShareUrl() {
 
 async function handleShareClick() {
   if (state.editorOpen) return;
+
   try {
     await copyText(el.shareUrlInput.value);
-    flashStatus("shareStatus", "Share link copied to clipboard.", "success");
+
+    flashStatus(
+      "shareStatus",
+      "Share link copied to clipboard.",
+      "success"
+    );
   } catch (err) {
-    flashStatus("shareStatus", "Couldn't copy the share link.", "error");
+    console.error("Failed to copy share link:", err);
+
+    flashStatus(
+      "shareStatus",
+      "Couldn't copy the share link.",
+      "error"
+    );
   }
 }
 
@@ -1008,28 +1020,27 @@ async function restoreFromHistory(entry) {
 }
 
 async function copyText(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(text);
-    return;
-  }
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  textarea.style.position = "fixed";
-  textarea.style.opacity = "0";
-  document.body.appendChild(textarea);
-  textarea.select();
-  const ok = document.execCommand("copy");
-  textarea.remove();
-  if (!ok) throw new Error("execCommand copy failed");
+  await navigator.clipboard.writeText(text);
 }
 
 async function handleCopyClick() {
   if (state.editorOpen || !el.mermaidSource.value) return;
+
   try {
     await copyText(el.mermaidSource.value);
-    flashStatus("copyStatus", "Mermaid source copied to clipboard.", "success");
+    flashStatus(
+      "copyStatus",
+      "Mermaid source copied to clipboard.",
+      "success"
+    );
   } catch (err) {
-    flashStatus("copyStatus", "Couldn't copy to clipboard.", "error");
+    console.error("Failed to copy Mermaid source:", err);
+
+    flashStatus(
+      "copyStatus",
+      "Couldn't copy to clipboard.",
+      "error"
+    );
   }
 }
 
