@@ -38,7 +38,7 @@
     "@astrojs/check": "0.9.10",
     "@mermaid-js/mermaid-cli": "11.17.0",
     "puppeteer": "25.10.0",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "wrangler": "4.131.0"
   },
   "packageManager": "pnpm@12.3.4"
