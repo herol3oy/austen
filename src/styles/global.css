@@ -649,7 +649,7 @@ button.secondary:hover:not(:disabled) {
 
 .diagram-workspace {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
   align-items: start;
   margin-bottom: clamp(4rem, 8vw, 7rem);
@@ -795,18 +795,12 @@ button.secondary:hover:not(:disabled) {
 }
 
 #actions-section {
-  position: sticky;
-  top: 1.5rem;
   padding: 1.25rem;
   border: 1px solid var(--color-rule);
   border-radius: var(--radius-lg);
   background: rgba(251, 249, 244, 0.7);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(12px);
-}
-
-#actions-section.is-editing {
-  position: static;
 }
 
 #actions-section .section-heading {
@@ -825,9 +819,9 @@ button.secondary:hover:not(:disabled) {
 }
 
 .actions-row {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 1.2rem;
 }
 
@@ -1223,18 +1217,8 @@ footer p small {
 }
 
 @media (max-width: 920px) {
-  .diagram-workspace {
-    grid-template-columns: 1fr;
-  }
-
-  #actions-section {
-    position: static;
-  }
-
   .actions-row {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
   }
 
   .download-block {
@@ -1366,7 +1350,7 @@ footer p small {
   }
 
   .actions-row {
-    display: flex;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .editor-input {
