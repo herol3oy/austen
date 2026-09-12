@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookCard from '../components/BookCard.astro';
+import { loadLibrary } from '../lib/library';
+const { entries } = await loadLibrary();
+const published = entries.filter(book => book.publishedUrl);
+---
+<BaseLayout title="Published maps — Austen">
+  <section class="library-intro">
+    <p class="section-kicker">The relationship library</p>
+    <h1>A map for every story.</h1>
+    <p>Explore the characters and connections in classic literature. AI-generated maps cover the whole book, including spoilers.</p>
+  </section>
+  <section aria-labelledby="library-heading">
+    <div class="section-heading"><h2 id="library-heading">Published maps</h2><span>{published.length.toLocaleString('en')} maps</span></div>
+    {published.length > 0 ? <>
+      <label for="library-search">Find a map</label>
+      <input id="library-search" type="search" placeholder="Title, author, or year" />
+      <p id="library-count" role="status"></p>
+      <ul class="library-list">{published.map(book => <BookCard book={book} headingLevel="h3" />)}</ul>
+    </> : <div class="empty-library">
+      <h3>The first maps are still to come.</h3>
+      <p>Browse the catalog or create a map in your own workspace.</p>
+      <a href={`${import.meta.env.BASE_URL}catalog/`}>Explore the catalog →</a>
+    </div>}
+  </section>
+  <script>import '../scripts/library-search.js';</script>
+</BaseLayout>

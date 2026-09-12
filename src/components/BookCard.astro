@@ -2,8 +2,8 @@
 import type { CatalogEntry } from '../lib/library';
 import BookCover from './BookCover.astro';
 import { searchText } from '../../shared/books.mjs';
-interface Props { book: CatalogEntry }
-const { book } = Astro.props;
+interface Props { book: CatalogEntry; headingLevel?: 'h2' | 'h3' }
+const { book, headingLevel: Heading = 'h2' } = Astro.props;
 const href = book.publishedUrl || (book.eligible ? `${import.meta.env.BASE_URL}generate/?book=${encodeURIComponent(book.id)}` : null);
 const CoverLink = href ? 'a' : 'div';
 ---
@@ -11,7 +11,7 @@ const CoverLink = href ? 'a' : 'div';
   <CoverLink class="book-cover-link" href={href || undefined}>
     <BookCover book={book}>
       <div class="book-cover-caption">
-        <h2>{book.title}</h2>
+        <Heading>{book.title}</Heading>
         <p>{book.authors.join(', ') || 'Author unknown'}</p>
         <p class="book-cover-year">{book.year || 'unknown'}</p>
       </div>

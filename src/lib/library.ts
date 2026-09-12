@@ -9,6 +9,29 @@ export interface Book {
   sourceUrl: string; sourceAnchor: string | null; ebookUrl: string; metadataWarnings: string[]; coverSlug?: string;
 }
 export interface CatalogEntry extends Book { eligible: boolean; publishedUrl: string | null; availability: string; mapStatus: 'available' | 'pending' | 'unavailable' }
+
+const featuredSlugs = [
+  'jane-austen-pride-and-prejudice',
+  'f-scott-fitzgerald-the-great-gatsby',
+  'charlotte-bronte-jane-eyre',
+  'emily-bronte-wuthering-heights',
+  'homer-the-odyssey-william-cullen-bryant',
+  'fyodor-dostoevsky-crime-and-punishment-constance-garnett',
+  'herman-melville-moby-dick',
+  'lewis-carroll-alices-adventures-in-wonderland-john-tenniel',
+];
+
+export function featuredMaps(entries: CatalogEntry[]) {
+  const published = entries.filter(book => book.publishedUrl);
+  const bySlug = new Map(published.map(book => [book.slug, book]));
+  const featured = featuredSlugs.flatMap(slug => {
+    const book = bySlug.get(slug);
+    return book ? [book] : [];
+  });
+  const selected = new Set(featured.map(book => book.id));
+  return [...featured, ...published.filter(book => !selected.has(book.id))].slice(0, 8);
+}
+
 export async function loadLibrary(root = process.cwd()) {
   const catalog = validateCatalog(await readJson(resolve(root, 'data/catalog/books.json')));
   const covers = validateCovers(await readJson(resolve(root, 'data/catalog/covers.json'), { schemaVersion: 3, books: {} }));

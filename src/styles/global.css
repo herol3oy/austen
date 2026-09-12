@@ -1459,7 +1459,68 @@ a { color: var(--color-green); text-underline-offset: .2em; }
 .availability { margin-top: auto; padding-top: .6rem; border-top: 1px solid var(--color-rule); font-size: .75rem; }
 .availability a { text-decoration: none; }
 .availability a:hover { text-decoration: underline; }
-.book-cover-link { display: block; border-radius: 2px 6px 6px 2px; text-decoration: none; }
+.book-cover-link {
+  position: relative;
+  display: block;
+  padding: 0 6px 5px 0;
+  border-radius: 3px 5px 5px 3px;
+  perspective: 1200px;
+  text-decoration: none;
+}
+.book-cover-link::before,
+.book-cover-link::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+/* A thin back board and a recessed stack of cream-colored pages. */
+.book-cover-link::before {
+  inset: 3px 0 0 3px;
+  border-radius: 2px 5px 5px 2px;
+  background: var(--color-ink);
+  box-shadow: 1px 2px 3px rgba(40, 39, 34, .14), 5px 9px 15px rgba(40, 39, 34, .13);
+}
+.book-cover-link::after {
+  inset: 3px 2px 2px 7px;
+  border: 1px solid #d8d0bf;
+  border-radius: 1px 3px 3px 1px;
+  background: repeating-linear-gradient(90deg, #f7f2e8 0 1px, #e4ddcf 1px 2px);
+}
+.book-cover-link > .book-cover {
+  z-index: 1;
+  border-radius: 3px 4px 4px 3px;
+  transform: rotateY(-3deg);
+  transform-origin: left center;
+  transition: transform 420ms cubic-bezier(.2, .65, .3, 1);
+  box-shadow: 1px 0 2px rgba(40, 39, 34, .22);
+}
+/* The spine's rounded edge, hinge crease, and a fine highlight on the board. */
+.book-cover-link > .book-cover::before,
+.book-cover-link > .book-cover::after {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  pointer-events: none;
+}
+.book-cover-link > .book-cover::before {
+  inset: 0 auto 0 0;
+  width: clamp(10px, 6%, 16px);
+  border-right: 1px solid rgba(255, 255, 255, .15);
+  background: linear-gradient(90deg, rgba(0, 0, 0, .24), rgba(255, 255, 255, .09) 28%, rgba(0, 0, 0, .06) 55%, rgba(0, 0, 0, .2) 85%, rgba(0, 0, 0, .1));
+}
+.book-cover-link > .book-cover::after {
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .2), inset -1px 0 rgba(0, 0, 0, .12), inset 0 -1px rgba(0, 0, 0, .18);
+}
+@media (hover: hover) and (pointer: fine) {
+  :is(a.book-cover-link, .book-page-cover):hover > .book-cover { transform: rotateY(-16deg); }
+}
+a.book-cover-link:focus-visible > .book-cover { transform: rotateY(-16deg); }
+@media (prefers-reduced-motion: reduce) {
+  .book-cover-link > .book-cover { transition: none; }
+  :is(a.book-cover-link, .book-page-cover):is(:hover, :focus-visible) > .book-cover { transform: rotateY(-3deg); }
+}
 .book-cover-link:focus-visible { outline: 3px solid var(--color-green); outline-offset: 5px; }
 .book-cover { position: relative; isolation: isolate; width: 100%; aspect-ratio: 2 / 3; overflow: hidden; border-radius: 2px 6px 6px 2px; background: #40584b; color: #fbf9f4; box-shadow: 2px 5px 12px rgba(40, 39, 34, .16); }
 .book-cover--1 { background: #744747; }
@@ -1474,12 +1535,12 @@ a { color: var(--color-green); text-underline-offset: .2em; }
 .book-cover--captioned { display: flex; align-items: flex-end; }
 .book-cover--captioned .book-cover-fallback { display: none; }
 .book-cover-caption { position: relative; z-index: 1; width: 100%; padding: 3.5rem .85rem .9rem; background: linear-gradient(to top, rgba(16, 23, 20, .96) 0%, rgba(16, 23, 20, .78) 38%, transparent 100%); color: #fbf9f4; overflow-wrap: anywhere; }
-.book-cover-caption h2 { margin: 0 0 .4rem; font-size: clamp(1.05rem, 1.6vw, 1.4rem); line-height: 1.15; color: inherit; }
+.book-cover-caption :is(h2, h3) { margin: 0 0 .4rem; font-size: clamp(1.05rem, 1.6vw, 1.4rem); line-height: 1.15; color: inherit; }
 .book-cover-caption p { margin: 0; font-size: .75rem; line-height: 1.4; color: inherit; }
 .book-cover-caption .book-cover-year { margin-top: .35rem; font-size: .7rem; color: #deded8; }
-.book-cover-link:hover .book-cover-caption h2 { text-decoration: underline; text-underline-offset: .15em; }
+.book-cover-link:hover .book-cover-caption :is(h2, h3) { text-decoration: underline; text-underline-offset: .15em; }
 .book-intro { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; max-width: none; align-items: center; }
-.book-intro > .book-cover { max-width: 220px; }
+.book-intro > .book-page-cover { max-width: 220px; }
 .book-intro-copy { min-width: 0; }
 .book-intro-copy h1 { font-size: clamp(2.25rem, 5vw, 4rem); overflow-wrap: anywhere; }
 .book-intro-copy p + p { margin-top: .65rem; }
@@ -1490,7 +1551,7 @@ a { color: var(--color-green); text-underline-offset: .2em; }
 @media (min-width: 1024px) {
   .library-list { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3rem 1.5rem; }
   .book-intro { grid-template-columns: 240px minmax(0, 1fr); gap: 3rem; }
-  .book-intro > .book-cover { max-width: none; }
+  .book-intro > .book-page-cover { max-width: none; }
 }
 .empty-library { border: 1px solid var(--color-rule); border-radius: var(--radius-lg); background: var(--color-surface); padding: 2.5rem; margin-bottom: 3rem; }
 .empty-library h3 { font-size: 2rem; }
@@ -1504,3 +1565,15 @@ a { color: var(--color-green); text-underline-offset: .2em; }
 #manual-book-form button { padding: .7rem 1rem; }
 .published-offer { display: block; margin-bottom: .7rem; font-weight: 600; }
 @media (max-width: 600px) { .site-header { flex-wrap: wrap; gap: 1rem; } .site-header nav { gap: 1rem; } .empty-library { padding: 1.5rem; } }
+
+/* Homepage: create a map, then explore a small shelf of published classics. */
+.homepage-generator #search-section { padding-block: clamp(3rem, 6vw, 5rem) 1rem; scroll-margin-top: 2rem; }
+.homepage-generator #search-section h1 { max-width: 16ch; }
+.featured-maps .section-heading { margin-bottom: 1rem; }
+.featured-list { margin-bottom: 2.5rem; }
+.browse-maps { display: flex; justify-content: center; }
+.browse-maps-link { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; min-height: 48px; padding: .85rem 1.5rem; border: 1px solid var(--color-green); border-radius: var(--radius); background: var(--color-green); color: var(--color-surface); font-size: .85rem; font-weight: 600; text-decoration: none; }
+.browse-maps-link:hover { background: var(--color-green-dark); }
+@media (min-width: 640px) {
+  .featured-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

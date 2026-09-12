@@ -1,22 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookCard from '../components/BookCard.astro';
-import { loadLibrary } from '../lib/library';
+import GeneratorForm from '../components/GeneratorForm.astro';
+import DiagramWorkspace from '../components/DiagramWorkspace.astro';
+import { featuredMaps, loadLibrary } from '../lib/library';
 const { entries } = await loadLibrary();
 const published = entries.filter(b => b.publishedUrl);
+const featured = featuredMaps(entries);
 ---
 <BaseLayout>
-  <section class="library-intro">
-    <p class="section-kicker">The relationship library</p>
-    <h1>See the story between the lines.</h1>
-    <p>Explore the characters and connections in classic literature. AI-generated maps cover the whole book, including spoilers.</p>
-  </section>
-  <section aria-labelledby="library-heading">
-    <div class="section-heading"><h2 id="library-heading">Published maps</h2><span>{published.length} maps</span></div>
-    {published.length > 0 ? <><label for="library-search">Find a map</label><input id="library-search" type="search" placeholder="Title, author, or year" /><p id="library-count" role="status"></p><ul class="library-list">{published.map(book => <BookCard book={book} />)}</ul></> : <div class="empty-library"><h3>The first maps are still to come.</h3><p>Browse the catalog or create a map in your own workspace.</p><a href={`${import.meta.env.BASE_URL}catalog/`}>Explore the catalog →</a></div>}
+  <div class="homepage-generator">
+    <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
+    <GeneratorForm />
+    <DiagramWorkspace />
+    <noscript><p>The generator needs JavaScript. Explore the published maps below.</p></noscript>
+  </div>
+  <section class="featured-maps" aria-labelledby="featured-heading">
+    <div class="section-heading"><h2 id="featured-heading">Start with a classic</h2><span>Ready to explore</span></div>
+    <p class="metadata-note">Discover the characters and connections in familiar stories. These AI-generated maps include spoilers.</p>
+    {featured.length > 0 ? <ul class="library-list featured-list">
+      {featured.map(book => <BookCard book={book} headingLevel="h3" />)}
+    </ul> : <div class="empty-library">
+      <h3>The first maps are still to come.</h3>
+      <p>Create a map above, or explore the catalog.</p>
+      <a href={`${import.meta.env.BASE_URL}catalog/`}>Explore the catalog →</a>
+    </div>}
+    <div class="browse-maps"><a class="browse-maps-link" href={`${import.meta.env.BASE_URL}maps/`}>Browse all {published.length.toLocaleString('en')} maps <span aria-hidden="true">→</span></a></div>
   </section>
   <script>
-    import '../scripts/library-search.js';
     const params = new URLSearchParams(location.search);
     if (params.has('graph')) location.replace(`${import.meta.env.BASE_URL}generate/${location.search}${location.hash}`);
   </script>

@@ -79,9 +79,13 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.match(await page.$eval('main', n => n.textContent), /Spoilers:.*whole book/s);
     assert.match(await page.$eval('main', n => n.textContent), /AI-generated/);
     assert.doesNotMatch(await page.$eval('main', n => n.textContent), /\bReviewed\b/);
-    assert.ok(await page.$('a[href^="https://sudalyph.org"]'));
+    assert.doesNotMatch(await page.$eval('.book-intro-copy', node => node.textContent), /Metadata:|Sudalyph|Standard Ebooks edition/);
     assert.equal((await page.goto(`${base}books/charlotte-bronte-jane-eyre/`)).status(), 404);
-    await page.goto(base); assert.equal(await page.$$eval('[data-library-book]', n => n.length), 52); assert.equal(providerCalls, 0);
+    await page.goto(base); assert.equal(await page.$$eval('[data-library-book]', n => n.length), 8); assert.equal(providerCalls, 0);
+    assert.equal(await page.$eval('.browse-maps-link', link => link.textContent.trim()), 'Browse all 52 maps →');
+    await Promise.all([page.waitForNavigation(), page.click('.browse-maps-link')]);
+    assert.equal(page.url(), `${base}maps/`);
+    assert.equal(await page.$$eval('[data-library-book]', n => n.length), 52);
     const index = JSON.parse(await readFile(resolve(root, 'dist/catalog-index.json'), 'utf8'));
     assert.equal(index.length, 54); assert.ok(!JSON.stringify(index).includes('mermaid'));
     assert.equal(index[0].mapStatus, 'available'); assert.equal(index[1].mapStatus, 'unavailable'); assert.equal(index[1].publishedUrl, null);
@@ -95,11 +99,11 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.equal(await page.$eval('.book-intro [data-book-cover] img', img => img.loading), 'eager');
     assert.ok((await page.$eval('.book-intro [data-book-cover] source', source => source.srcset)).includes('/austen/_astro/'));
     assert.ok((await page.$eval('.book-intro [data-book-cover] img', img => img.src)).includes('/austen/_astro/'));
-    await page.goto(base);
+    await page.goto(`${base}maps/`);
     await page.waitForFunction(() => document.querySelector('[data-book-cover] img').naturalWidth > 0);
     assert.equal(await page.$eval('.book-cover-link', link => link.href), publishedUrl);
     assert.equal(await page.$$eval('[data-book-cover] img', images => images.every(img => img.loading === 'lazy')), true);
-    await page.setJavaScriptEnabled(true); await page.setViewport({ width: 1280, height: 900 }); await page.goto(base);
+    await page.setJavaScriptEnabled(true); await page.setViewport({ width: 1280, height: 900 }); await page.goto(`${base}maps/`);
     assert.equal(await page.$$eval('[data-book-cover]', covers => covers.length), 52);
     assert.equal(await page.$$eval('[data-book-cover]:not(:has(img))', covers => covers.length), 49);
     const columns = () => page.$eval('.library-list', list => getComputedStyle(list).gridTemplateColumns.split(' ').length);
@@ -117,6 +121,33 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.equal(await page.$$eval('[data-library-book]', cards => cards.length), 54);
     await page.goto(publishedUrl);
     assert.equal(await page.$eval('.book-intro', intro => getComputedStyle(intro).gridTemplateColumns.split(' ').length), 1);
+    assert.equal(searchRequests, 0); assert.equal(providerCalls, 0);
+    await page.setViewport({ width: 1280, height: 900 });
+  });
+  await t.test('homepage features eight published covers below the generator with keyboard navigation and responsive columns', async () => {
+    await page.goto(base);
+    assert.ok(await page.$('#search-input'));
+    assert.equal(await page.$eval('#selected-book-section', section => section.hidden), true);
+    assert.equal(await page.$eval('#diagram-workspace', workspace => workspace.hidden), true);
+    assert.deepEqual(await page.$$eval('.featured-list .book-cover-caption h3', titles => titles.map(title => title.textContent)), [book.title, ...extra.slice(0, 7).map(entry => entry.title)]);
+    assert.deepEqual(await page.$$eval('.featured-list .book-cover-link', links => links.map(link => link.href)), [book, ...extra.slice(0, 7)].map(entry => `${base}books/${entry.slug}/`));
+    assert.equal(await page.$('#library-search'), null);
+    assert.equal(await page.$eval('nav a', link => link.href), `${base}maps/`);
+    assert.equal(await page.$eval('nav a:last-child', link => link.href), 'https://github.com/herol3oy/austen/');
+    assert.deepEqual(await page.$$eval('nav a', links => links.map(link => link.textContent)), ['Maps', 'GitHub']);
+    for (const [width, expected] of [[1280, 4], [800, 4], [375, 2], [320, 2]]) {
+      await page.setViewport({ width, height: 900 });
+      assert.equal(await page.$eval('.featured-list', list => getComputedStyle(list).gridTemplateColumns.split(' ').length), expected);
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      assert.ok(await page.evaluate(() => document.querySelector('.featured-maps').getBoundingClientRect().top >= document.querySelector('#search-section').getBoundingClientRect().bottom));
+    }
+    await page.focus('.featured-list .book-cover-link');
+    await Promise.all([page.waitForNavigation(), page.keyboard.press('Enter')]);
+    assert.equal(page.url(), publishedUrl);
+    await page.goto(base);
+    await page.focus('.browse-maps-link');
+    await Promise.all([page.waitForNavigation(), page.keyboard.press('Enter')]);
+    assert.equal(page.url(), `${base}maps/`);
     assert.equal(searchRequests, 0); assert.equal(providerCalls, 0);
     await page.setViewport({ width: 1280, height: 900 });
   });
@@ -162,8 +193,9 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     await page.goto(`${base}generate/`); await page.waitForSelector('.shelf-delete'); await page.click('.shelf-delete'); await page.click('#history-undo-btn'); assert.equal(await page.$$eval('.shelf-row', n => n.length), 1);
     await page.goto(`${base}generate/?graph=broken`); await page.waitForFunction(() => document.getElementById('global-status').textContent.includes('corrupted'));
   });
-  await t.test('generation is click-only; stale generation cannot replace a new selection; valid results enter history after render', async () => {
-    await page.goto(`${base}generate/?book=${encodeURIComponent(book.id)}`); await page.waitForSelector('.published-offer');
+  await t.test('homepage generation is click-only; stale generation cannot replace a new selection; valid results enter history after render', async () => {
+    await page.goto(`${base}?book=${encodeURIComponent(book.id)}`); await page.waitForSelector('.published-offer');
+    assert.equal(providerCalls, 0);
     const reply = (request, content) => request.respond({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify(content) }).catch(() => {});
     apiReply = async request => { await delay(700); await reply(request, { mermaid: graph, generatedAt }); };
     await page.click('#selected-book-card button'); await page.$eval('.manual-entry', n => n.open = true);
@@ -171,15 +203,26 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.match(await page.$eval('#selected-book-card', n => n.textContent), /Another Book/); assert.equal(await page.$eval('#diagram-workspace', n => n.hidden), true);
     apiReply = request => reply(request, { mermaid: graph, generatedAt }); await page.click('#selected-book-card button'); await page.waitForFunction(() => !document.getElementById('edit-btn').disabled);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('austen-history'))[0].book.title), 'Another Book');
+    assert.equal(new URL(await page.$eval('#share-url-input', input => input.value)).pathname, '/austen/generate/');
+    await page.click('#edit-btn');
+    await page.waitForSelector('#editor-section', { visible: true });
+    await page.click('#editor-cancel-btn');
+    assert.equal(await page.$$eval('.featured-list [data-library-book]', cards => cards.length), 8);
     const saved = await page.evaluate(() => localStorage.getItem('austen-history'));
     apiReply = request => reply(request, { mermaid: 'graph LR\nA[broken', generatedAt }); await page.click('#selected-book-card button'); await page.waitForFunction(() => document.getElementById('generate-status').dataset.tone === 'error'); assert.equal(await page.evaluate(() => localStorage.getItem('austen-history')), saved);
     apiReply = request => request.respond({ status: 422, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ code: 'UNKNOWN' }) }); await page.click('#selected-book-card button'); await page.waitForFunction(() => document.getElementById('generate-status').textContent.includes('confidently'));
   });
-  await t.test('stale OpenLibrary discovery results cannot overwrite a newer query', async () => {
+  await t.test('homepage search handles failure and stale OpenLibrary results cannot overwrite a newer query', async () => {
+    await page.goto(base); await page.type('#search-input', 'unavailable');
+    await page.waitForFunction(() => document.getElementById('search-status').textContent.includes('Enter the book details below'));
     discoveryReply = async request => { const query = new URL(request.url()).searchParams.get('q'); await delay(query === 'old' ? 800 : 20); await request.respond({ status: 200, contentType: 'application/json', headers: { 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({ docs: [{ title: query, author_name: ['Author'] }] }) }).catch(() => {}); };
-    await page.goto(`${base}generate/`); await page.type('#search-input', 'old'); await delay(350);
+    await page.goto(base); await page.type('#search-input', 'old'); await delay(350);
     await page.$eval('#search-input', n => { n.value = 'new'; n.dispatchEvent(new Event('input', { bubbles: true })); });
     await page.waitForFunction(() => document.getElementById('search-results').textContent.includes('new')); await delay(600); assert.ok(!(await page.$eval('#search-results', n => n.textContent)).includes('old'));
+    const beforeSelection = providerCalls;
+    await page.click('#search-results button');
+    assert.match(await page.$eval('#selected-book-card', card => card.textContent), /new/);
+    assert.equal(providerCalls, beforeSelection);
   });
   assert.deepEqual(errors, []);
   for (const name of await readdir(resolve(root, 'dist/_astro'))) if (name.endsWith('.js')) assert.ok(!(await readFile(resolve(root, 'dist/_astro', name), 'utf8')).includes('STATIC_BUILD_SECRET_SENTINEL'));

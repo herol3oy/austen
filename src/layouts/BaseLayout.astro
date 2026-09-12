@@ -28,7 +28,7 @@ const base = import.meta.env.BASE_URL;
         <img src={`${base}logo.png`} alt="" class="brand-mark" width="64" height="64" />
         <span class="brand-copy"><span class="brand-name">Austen</span><span class="brand-note">Literary relationship maps</span></span>
       </a>
-      <nav aria-label="Main navigation"><a href={base}>Maps</a><a href={`${base}catalog/`}>Catalog</a><a href={`${base}generate/`}>Generate</a></nav>
+      <nav aria-label="Main navigation"><a href={`${base}maps/`}>Maps</a><a href="https://github.com/herol3oy/austen/">GitHub</a></nav>
     </header>
     <main class="container"><slot /></main>
     <footer class="container"><p><small>Built in Warsaw, Poland · <a href="https://github.com/herol3oy/austen/">GitHub</a> · Covers from <a href="https://standardebooks.org/">Standard Ebooks</a></small><small class="footer-mark">Stories are made of connections.</small></p></footer>

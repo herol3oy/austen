@@ -1,6 +1,6 @@
 # Austen
 
-A static library of literary relationship maps, with a separate on-demand Mermaid workspace. Astro serves the site at `https://herol3oy.github.io/austen/`. Published maps cover whole books and include spoilers.
+A static library of literary relationship maps, with an on-demand Mermaid generator on the homepage. Astro serves the site at `https://herol3oy.github.io/austen/`. Published maps cover whole books and include spoilers.
 
 The checked-in catalog contains **1,504 Sudalyph entries**. One local command generates and automatically publishes character maps across the catalog. Maps pass Mermaid and SVG checks before publication; manual review is optional. Builds do not fetch catalog data, contact DeepSeek, or download ebooks.
 
@@ -16,11 +16,12 @@ pnpm exec astro dev logs
 pnpm exec astro dev stop
 ```
 
-The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panzoom, and LZ-String are bundled locally. One vanilla JavaScript workspace is used on generator and published-book pages.
+The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panzoom, and LZ-String are bundled locally. One vanilla JavaScript workspace is used on the homepage, generator, and published-book pages.
 
 | Route | Content |
 | --- | --- |
-| `/austen/` | Searchable cover grid of published maps |
+| `/austen/` | Generator hero, eight featured classic maps, and a link to all published maps |
+| `/austen/maps/` | Complete searchable cover grid of published maps |
 | `/austen/catalog/` | Full catalog cover grid and availability |
 | `/austen/books/<slug>/` | Book cover, published SVG, metadata, attribution, spoilers, and editable workspace |
 | `/austen/generate/` | OpenLibrary discovery, manual entry, generation, shares, local history |
@@ -28,7 +29,7 @@ The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panz
 
 ## Book covers
 
-Homepage and catalog cards use local copies of the official Standard Ebooks cover art, with larger artwork on published-book pages. Astro transforms those JPEG sources into sized WebP images with JPEG fallback markup. Grid images load lazily. Missing covers show a title-and-author bookplate. Titles, navigation, and available cover images work without JavaScript.
+Homepage, maps, and catalog cards use local copies of the official Standard Ebooks cover art, with larger artwork on published-book pages. Astro transforms those JPEG sources into sized WebP images with JPEG fallback markup. Grid images load lazily. Missing covers show a title-and-author bookplate. Titles, navigation, and available cover images work without JavaScript.
 
 Populate or update the separate cover metadata cache explicitly:
 
@@ -75,7 +76,7 @@ Ingestion requests only `https://sudalyph.org/seci/`, with a 30-second timeout, 
 
 The browser preflight runs before paid requests. Browser failures stop the command with diagnostics; fix the configuration and rerun the same command. Source/syntax failures receive fresh metadata-only attempts on subsequent passes. Network failures, timeouts, 429 and 5xx responses use bounded backoff and honor `Retry-After` across books and restarts. Credentials, credit, and model configuration errors stop the batch. A maintenance lock prevents overlapping writes and automatically recovers a dead local process's lock. Interrupted requests remain recorded and count toward the allowance because the provider may have processed them.
 
-After the command finishes, refresh `/austen/` or `/austen/catalog/` to open published book pages. `/austen/generate/?book=…` preselects a book in the separate generator and offers a link to its published map. Commit revisions, SVGs, and publication pointers together to deploy them; sync does not commit or deploy. Read [the map maintenance guide](docs/editorial-review.md) for optional corrections, review, and deliberate retries beyond the automatic allowance. On-demand generation and browser edits remain local.
+After the command finishes, refresh `/austen/maps/` or `/austen/catalog/` to open published book pages. `/austen/generate/?book=…` preselects a book in the standalone generator and offers a link to its published map. Commit revisions, SVGs, and publication pointers together to deploy them; sync does not commit or deploy. Read [the map maintenance guide](docs/editorial-review.md) for optional corrections, review, and deliberate retries beyond the automatic allowance. On-demand generation and browser edits remain local.
 
 ## Verification
 
