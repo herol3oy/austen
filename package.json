@@ -27,19 +27,19 @@
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource/cormorant-garamond": "5.3.0",
     "@fontsource/inter": "5.3.0",
-    "@panzoom/panzoom": "4.6.0",
+    "@panzoom/panzoom": "4.6.2",
     "astro": "^7.3.2",
     "cheerio": "1.2.0",
     "lz-string": "1.5.0",
-    "mermaid": "11.16.0",
-    "sharp": "0.35.2"
+    "mermaid": "12.0.0",
+    "sharp": "0.35.4"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@mermaid-js/mermaid-cli": "11.17.0",
-    "puppeteer": "24.43.1",
-    "typescript": "6.0.3",
-    "wrangler": "4.130.0"
+    "puppeteer": "25.10.0",
+    "typescript": "7.0.2",
+    "wrangler": "4.131.0"
   },
   "packageManager": "pnpm@12.3.4"
 }
