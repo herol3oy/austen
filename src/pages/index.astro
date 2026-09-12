@@ -8,10 +8,10 @@ const { entries } = await loadLibrary();
 const published = entries.filter(b => b.publishedUrl);
 const featured = featuredMaps(entries);
 ---
-<BaseLayout>
+<BaseLayout structuredData={[{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Austen', url: Astro.site!.href }]}>
   <div class="homepage-generator">
     <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
-    <GeneratorForm />
+    <GeneratorForm heading="Character relationship maps for books" introduction="Explore published maps below, or find a novel on OpenLibrary and create a map of your own. Review metadata before generating." />
     <DiagramWorkspace />
     <noscript><p>The generator needs JavaScript. Explore the published maps below.</p></noscript>
   </div>

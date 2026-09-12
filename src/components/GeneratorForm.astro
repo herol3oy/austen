@@ -1,8 +1,15 @@
+---
+interface Props { heading?: string; introduction?: string }
+const {
+  heading = 'Generate a character relationship map',
+  introduction = 'Find a novel on OpenLibrary or enter its details. Review metadata before generating.',
+} = Astro.props;
+---
 <section id="search-section">
   <p class="section-kicker">A literary map</p>
-  <h1>See the story between the lines.</h1>
+  <h1>{heading}</h1>
   <p class="search-subtitle">
-    Find a novel on OpenLibrary or enter its details. Review metadata before generating.
+    {introduction}
   </p>
   <div class="search-bar">
     <svg
@@ -38,6 +45,10 @@
 <button type="submit">Select book</button>
 </form></details>
 </section>
+
+<style>
+  h1 { overflow-wrap: anywhere; }
+</style>
 
 <section id="selected-book-section" hidden>
   <div class="section-heading">

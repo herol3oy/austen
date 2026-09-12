@@ -5,11 +5,12 @@ import { loadLibrary } from '../lib/library';
 const { entries } = await loadLibrary();
 const published = entries.filter(book => book.publishedUrl);
 ---
-<BaseLayout title="Published maps — Austen">
+<BaseLayout title="Browse Character Relationship Maps — Austen" description={`Browse ${published.length.toLocaleString('en')} published character relationship maps for books. Find a map by title or author and explore the characters and their connections.`}>
   <section class="library-intro">
     <p class="section-kicker">The relationship library</p>
-    <h1>A map for every story.</h1>
+    <h1>Browse character relationship maps</h1>
     <p>Explore the characters and connections in classic literature. AI-generated maps cover the whole book, including spoilers.</p>
+    <p><a href={`${import.meta.env.BASE_URL}catalog/`}>Explore the full catalog</a></p>
   </section>
   <section aria-labelledby="library-heading">
     <div class="section-heading"><h2 id="library-heading">Published maps</h2><span>{published.length.toLocaleString('en')} maps</span></div>

@@ -6,6 +6,7 @@ import { resolve, extname } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import puppeteer from 'puppeteer';
+import sharp from 'sharp';
 import LZString from 'lz-string';
 import { load } from 'cheerio';
 import { ROOT, hash, writeJson } from '../scripts/files.mjs';
@@ -23,6 +24,13 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   await assert.rejects(renderSvg('graph LR\nend["Reserved identifier"]\nC2["Other"]\nend -->|Knows| C2'), error => error.code === 'invalid_graph');
   const extra = Array.from({ length: 51 }, (_, i) => ({ ...book, id: `fixture-author/book-${i}`, slug: `fixture-author-book-${i}`, title: `Fixture ${i}`, year: '1900', category: 'Poetry', ebookUrl: `https://standardebooks.org/ebooks/fixture-author/book-${i}` }));
   extra[0] = { ...extra[0], title: 'The Collected Adventures of Friends & Their Extraordinary Companions', authors: ['Author One', 'Author Two'], year: null };
+  extra[1].authors = ['Author One', 'Author Two'];
+  const escapedAuthor = 'Élodie & </script><script>alert("SEO")</script>';
+  extra[2].authors = [escapedAuthor];
+  extra[2].title = 'A Book & </script><script>alert("SEO")</script>';
+  extra[3].authors = [escapedAuthor];
+  extra[4].authors = ['Anonymous'];
+  extra[5].authors = [];
   const contentNames = ['Élizabeth & Anne', 'Jane Bennet', 'Charles Bingley', 'Fitzwilliam Darcy', 'ACharacterWithAnExceptionallyLongNameThatMustWrapOnSmallScreens', 'George Wickham'];
   const contentGraph = 'graph LR\n' + contentNames.map((name, i) => `C${i}["${name}"]`).join('\n') + '\nC0 -->|Knows & trusts| C1\nC1 -->|Friend of| C0\nC0 -->|Mentors| C1\nC0 --> C5';
   const contentSvg = await renderSvg(contentGraph);
@@ -79,6 +87,129 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     void request.abort();
   });
   const publishedUrl = `${base}books/${book.slug}/`;
+  const builtPage = async path => load(await readFile(resolve(root, 'dist', path, 'index.html'), 'utf8'));
+  const jsonLd = $ => $('script[type="application/ld+json"]').map((_, script) => JSON.parse($(script).text())).get();
+  await t.test('landing metadata, canonicals and generator indexing survive plain and query URLs', async () => {
+    await page.setJavaScriptEnabled(false);
+    const expected = [
+      ['', 'Austen — Character Relationship Maps for Books', 'Character relationship maps for books'],
+      ['maps/', 'Browse Character Relationship Maps — Austen', 'Browse character relationship maps'],
+      ['catalog/', 'Book Catalog and Map Availability — Austen', 'Book catalog and map availability'],
+      ['generate/', 'Generate a Character Relationship Map — Austen', 'Generate a character relationship map'],
+    ];
+    for (const [path, title, heading] of expected) {
+      const $ = await builtPage(path);
+      assert.equal($('title').text(), title);
+      assert.equal($('h1').length, 1);
+      assert.equal($('h1').text(), heading);
+      assert.equal($('meta[name="robots"]').attr('content'), path === 'generate/' ? 'noindex, follow' : undefined);
+      for (const query of ['', '?utm_source=test&fbclid=tracking', `?book=${encodeURIComponent(book.id)}`]) {
+        await page.goto(`${base}${path}${query}`);
+        assert.equal(await page.$eval('link[rel="canonical"]', el => el.href), `https://austen.page/${path}`);
+        assert.equal(await page.$eval('meta[property="og:url"]', el => el.content), `https://austen.page/${path}`);
+        assert.equal(await page.title(), title);
+        if (path === 'generate/') assert.equal(await page.$eval('meta[name="robots"]', el => el.content), 'noindex, follow');
+      }
+      for (const width of [320, 375]) {
+        await page.setViewport({ width, height: 900 });
+        assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${path} wraps at ${width}px`);
+      }
+    }
+    assert.equal((await builtPage(''))('meta[name="description"]').attr('content'), 'Explore character relationship maps for books. Discover the connections between literary characters and create interactive maps of your own.');
+    assert.match((await builtPage('maps/'))('meta[name="description"]').attr('content'), /52 published/);
+    assert.match((await builtPage('catalog/'))('meta[name="description"]').attr('content'), /54 books.*52 published/);
+    assert.equal((await builtPage('maps/'))('a[href="/catalog/"]').first().text(), 'Explore the full catalog');
+    assert.deepEqual(jsonLd(await builtPage('')), [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Austen', url: 'https://austen.page/' }]);
+    const sitemap = load(await readFile(resolve(root, 'dist/sitemap-0.xml'), 'utf8'), { xmlMode: true });
+    const urls = sitemap('loc').map((_, el) => sitemap(el).text()).get();
+    assert.ok(!urls.includes('https://austen.page/generate/'));
+    for (const path of ['', 'maps/', 'catalog/', 'authors/', 'authors/jane-austen/', 'authors/author-one/', 'authors/author-two/', ...[book, ...extra].map(b => `books/${b.slug}/`)]) {
+      assert.ok(urls.includes(`https://austen.page/${path}`), `Sitemap includes ${path}`);
+    }
+    assert.ok(!urls.some(url => url.includes('/authors/anonymous/')));
+    assert.match(await readFile(resolve(root, 'dist/robots.txt'), 'utf8'), /Allow: \//);
+    assert.doesNotMatch(await readFile(resolve(root, 'dist/robots.txt'), 'utf8'), /Disallow:/);
+  });
+  await t.test('author directory, collections, contextual links and matching breadcrumbs are static', async () => {
+    const directory = await builtPage('authors/');
+    assert.deepEqual(directory('.author-directory a').map((_, a) => directory(a).text()).get(), ['Author One', 'Author Two', escapedAuthor, 'Jane Austen']);
+    for (const [path, expectedBooks] of [
+      ['authors/author-one/', extra.slice(0, 2)],
+      ['authors/author-two/', extra.slice(0, 2)],
+      ['authors/jane-austen/', [book, ...extra.slice(6)]],
+    ]) {
+      const $ = await builtPage(path);
+      const name = path.includes('jane-austen') ? 'Jane Austen' : path.includes('author-one') ? 'Author One' : 'Author Two';
+      assert.equal($('title').text(), `${name} Character Relationship Maps — Austen`);
+      assert.equal($('h1').text(), `${name} character relationship maps`);
+      assert.equal($('meta[name="robots"]').length, 0);
+      assert.deepEqual($('.library-list .book-cover-caption h3').map((_, el) => $(el).text()).get(), expectedBooks.map(b => b.title).sort((a, b) => a.localeCompare(b, 'en')));
+      assert.match($('.library-intro p').last().text(), new RegExp(`${expectedBooks.length} published`));
+    }
+    for (const b of [book, extra[0], extra[2]]) {
+      const $ = await builtPage(`books/${b.slug}/`);
+      const data = jsonLd($);
+      const webpage = data.find(item => item['@type'] === 'WebPage');
+      assert.deepEqual(webpage.about, { '@type': 'Book', name: b.title, author: b.authors.map(name => ({ '@type': 'Person', name })) });
+      assert.equal(webpage.name, `${b.title} Character Relationship Map`);
+      assert.equal(webpage.description, $('meta[name="description"]').attr('content'));
+      assert.equal(webpage.url, `https://austen.page/books/${b.slug}/`);
+      assert.equal(webpage.creator, undefined);
+      assert.deepEqual($('.book-byline a').map((_, el) => $(el).text()).get(), b.authors);
+      const links = $('.related-maps .book-cover-link').map((_, el) => $(el).attr('href')).get();
+      assert.ok(links.length > 0 && links.length <= 4);
+      assert.equal(new Set(links).size, links.length);
+      assert.ok(!links.includes(`/books/${b.slug}/`));
+      if (b === extra[0]) assert.deepEqual(links, [`/books/${extra[1].slug}/`]);
+      assert.equal($('.related-maps > p a').length, b.authors.length);
+    }
+    for (const b of [extra[4], extra[5]]) {
+      const $ = await builtPage(`books/${b.slug}/`);
+      assert.equal($('.book-byline a, .related-maps').length, 0);
+    }
+    const escapedHub = directory('.author-directory a').toArray().find(el => directory(el).text() === escapedAuthor);
+    const escapedPath = directory(escapedHub).attr('href').slice(1);
+    for (const path of [`books/${book.slug}/`, `books/${extra[2].slug}/`, 'authors/jane-austen/', escapedPath]) {
+      const $ = await builtPage(path);
+      const breadcrumb = jsonLd($).find(item => item['@type'] === 'BreadcrumbList');
+      const items = $('.breadcrumbs li').toArray().map(el => ({ name: $(el).children().last().text(), href: $(el).find('a').attr('href') || `/${path}` }));
+      assert.deepEqual(breadcrumb.itemListElement, items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: new URL(item.href, 'https://austen.page').href })));
+      assert.equal($('.breadcrumbs [aria-current="page"]').length, 1);
+      await page.goto(`${base}${path}?utm_source=test`);
+      assert.equal(await page.$eval('link[rel="canonical"]', el => el.href), `https://austen.page/${path}`);
+      for (const width of [320, 375, 800]) {
+        await page.setViewport({ width, height: 900 });
+        assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${path} wraps at ${width}px`);
+        assert.ok(await page.$eval('.breadcrumbs', el => el.checkVisibility()));
+      }
+      assert.equal($('script:not([src]):not([type="application/ld+json"])').toArray().some(el => $(el).text().includes('alert("SEO")')), false);
+    }
+    assert.equal((await page.goto(`${base}authors/anonymous/`)).status(), 404);
+    assert.equal((await page.goto(`${base}authors/charlotte-bronte/`)).status(), 404);
+  });
+  await t.test('social previews use actual local portrait JPEG metadata and retain the logo fallback', async () => {
+    for (const [path, hasCover, title] of [[`books/${book.slug}/`, true, book.title], [`books/${extra[0].slug}/`, true, extra[0].title], [`books/${extra[2].slug}/`, false], ['', false], ['authors/jane-austen/', false]]) {
+      const $ = await builtPage(path);
+      const imageUrl = $('meta[property="og:image"]').attr('content');
+      assert.ok(imageUrl.startsWith('https://austen.page/'));
+      assert.equal($('meta[name="twitter:image"]').attr('content'), imageUrl);
+      assert.equal($('meta[name="twitter:card"]').attr('content'), 'summary');
+      const metadata = await sharp(await readFile(resolve(root, 'dist', new URL(imageUrl).pathname.slice(1)))).metadata();
+      assert.equal(Number($('meta[property="og:image:width"]').attr('content')), metadata.width);
+      assert.equal(Number($('meta[property="og:image:height"]').attr('content')), metadata.height);
+      assert.equal($('meta[property="og:image:type"]').attr('content'), `image/${metadata.format}`);
+      const alt = hasCover ? `Cover of ${title}` : 'Austen logo';
+      assert.equal($('meta[property="og:image:alt"]').attr('content'), alt);
+      assert.equal($('meta[name="twitter:image:alt"]').attr('content'), alt);
+      if (hasCover) {
+        assert.equal(metadata.width, 720);
+        assert.equal(metadata.format, 'jpeg');
+        const original = await sharp(cover).metadata();
+        assert.ok(Math.abs(metadata.height / metadata.width - original.height / original.width) < .002);
+        assert.ok(metadata.height > metadata.width);
+      } else assert.equal(imageUrl, 'https://austen.page/logo.png');
+    }
+  });
   await t.test('published maps have static SVG, attribution and spoilers without JavaScript; unpublished books have no routes', async () => {
     await page.setJavaScriptEnabled(false); await page.goto(publishedUrl);
     const expectedTitle = `${book.title} Character Relationship Map`;
@@ -188,7 +319,7 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.equal(await page.$('#library-search'), null);
     assert.equal(await page.$eval('nav a', link => link.href), `${base}maps/`);
     assert.equal(await page.$eval('nav a:last-child', link => link.href), 'https://github.com/herol3oy/austen/');
-    assert.deepEqual(await page.$$eval('nav a', links => links.map(link => link.textContent)), ['Maps', 'GitHub']);
+    assert.deepEqual(await page.$$eval('nav a', links => links.map(link => link.textContent)), ['Maps', 'Authors', 'GitHub']);
     for (const [width, expected] of [[1280, 4], [800, 4], [375, 2], [320, 2]]) {
       await page.setViewport({ width, height: 900 });
       assert.equal(await page.$eval('.featured-list', list => getComputedStyle(list).gridTemplateColumns.split(' ').length), expected);

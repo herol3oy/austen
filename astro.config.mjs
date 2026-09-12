@@ -6,5 +6,5 @@ export default defineConfig({
   site: 'https://austen.page',
   output: 'static',
   trailingSlash: 'always',
-  integrations: [sitemap()]
+  integrations: [sitemap({ filter: page => new URL(page).pathname !== '/generate/' })]
 });

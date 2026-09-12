@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { loadLibrary } from '../../lib/library';
+import { authorCollections } from '../../lib/authors';
+const { entries } = await loadLibrary();
+const authors = authorCollections(entries);
+---
+<BaseLayout title="Authors and Character Relationship Maps — Austen" description={`Browse ${authors.length.toLocaleString('en')} authors with at least two published character relationship maps. Explore each author's collection by book title.`}>
+  <section class="library-intro">
+    <p class="section-kicker">The relationship library</p>
+    <h1>Authors and character relationship maps</h1>
+    <p>Explore authors with at least two published maps. Each collection brings together the characters and connections in their books.</p>
+  </section>
+  <ul class="author-directory" role="list">
+    {authors.map(author => <li><a href={`${import.meta.env.BASE_URL}authors/${author.slug}/`}>{author.name}</a><span class="metadata-note">{author.books.length.toLocaleString('en')} maps</span></li>)}
+  </ul>
+  {authors.length === 0 && <p>No author collections are available yet. <a href={`${import.meta.env.BASE_URL}maps/`}>Browse published maps</a>.</p>}
+</BaseLayout>
+<style>
+  .author-directory { display: grid; gap: 1rem 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+  li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1rem; padding-block: .75rem; border-bottom: 1px solid var(--color-rule); overflow-wrap: anywhere; min-width: 0; }
+  a { font-family: var(--font-display); font-size: 1.5rem; }
+</style>

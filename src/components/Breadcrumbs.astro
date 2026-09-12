@@ -1,0 +1,20 @@
+---
+import type { BreadcrumbItem } from '../lib/seo';
+interface Props { items: BreadcrumbItem[] }
+const { items } = Astro.props;
+---
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol role="list">
+    {items.map((item, index) => <li>
+      {index > 0 && <span class="separator" aria-hidden="true">→</span>}
+      {index === items.length - 1 ? <span aria-current="page">{item.name}</span> : <a href={item.href}>{item.name}</a>}
+    </li>)}
+  </ol>
+</nav>
+<style>
+  .breadcrumbs { margin-block: 1.5rem; color: var(--color-ink-muted); font-size: .8rem; }
+  ol { display: flex; flex-wrap: wrap; gap: .4rem .65rem; }
+  li { display: flex; gap: .65rem; min-width: 0; overflow-wrap: anywhere; }
+  li > :last-child { min-width: 0; }
+  .separator { color: var(--color-ink-faint); }
+</style>
