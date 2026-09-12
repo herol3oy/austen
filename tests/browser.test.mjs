@@ -48,14 +48,13 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   const server = createServer(async (req, res) => {
     try {
       const path = new URL(req.url, 'http://localhost').pathname;
-      if (!path.startsWith('/austen/')) { res.writeHead(404); res.end(); return; }
-      const relative = path.slice('/austen/'.length), file = resolve(root, 'dist', relative.endsWith('/') || !relative ? `${relative}index.html` : relative);
+      const relative = path.slice(1), file = resolve(root, 'dist', relative.endsWith('/') || !relative ? `${relative}index.html` : relative);
       if (!file.startsWith(resolve(root, 'dist') + '/')) throw new Error('Invalid path');
       const content = await readFile(file); res.writeHead(200, { 'Content-Type': mime[extname(file)] || 'application/octet-stream' }); res.end(content);
     } catch { res.writeHead(404, { 'Content-Type': 'text/html' }); res.end(await readFile(resolve(root, 'dist/404.html'))); }
   });
   await new Promise(r => server.listen(0, '127.0.0.1', r)); t.after(() => new Promise(r => server.close(r)));
-  const base = `http://127.0.0.1:${server.address().port}/austen/`;
+  const base = `http://127.0.0.1:${server.address().port}/`;
   const browser = await puppeteer.launch({ headless: true, executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined }); t.after(() => browser.close());
   const page = await browser.newPage(); page.setDefaultTimeout(15000);
   const errors = []; page.on('pageerror', error => errors.push(error.message));
@@ -97,8 +96,8 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     await page.setJavaScriptEnabled(false); await page.goto(publishedUrl);
     assert.ok(await page.$eval('.book-intro [data-book-cover] img', img => img.complete && img.naturalWidth > 0));
     assert.equal(await page.$eval('.book-intro [data-book-cover] img', img => img.loading), 'eager');
-    assert.ok((await page.$eval('.book-intro [data-book-cover] source', source => source.srcset)).includes('/austen/_astro/'));
-    assert.ok((await page.$eval('.book-intro [data-book-cover] img', img => img.src)).includes('/austen/_astro/'));
+    assert.ok((await page.$eval('.book-intro [data-book-cover] source', source => source.srcset)).includes('/_astro/'));
+    assert.ok((await page.$eval('.book-intro [data-book-cover] img', img => img.src)).includes('/_astro/'));
     await page.goto(`${base}maps/`);
     await page.waitForFunction(() => document.querySelector('[data-book-cover] img').naturalWidth > 0);
     assert.equal(await page.$eval('.book-cover-link', link => link.href), publishedUrl);
@@ -154,7 +153,7 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   await t.test('saved workspace uses canonical share; edits validate, revert, cancel and save locally with original timestamp', async () => {
     await page.setJavaScriptEnabled(true); await page.goto(publishedUrl);
     await page.waitForFunction(() => !document.getElementById('edit-btn').disabled);
-    assert.equal(await page.$eval('#share-url-input', n => n.value), `https://herol3oy.github.io/austen/books/${book.slug}/`);
+    assert.equal(await page.$eval('#share-url-input', n => n.value), `https://austen.page/books/${book.slug}/`);
     await page.click('#edit-btn'); const original = await page.$eval('#mermaid-container', n => n.textContent);
     const setDraft = value => page.$eval('#editor-input', (n, value) => { n.value = value; n.dispatchEvent(new Event('input', { bubbles: true })); }, value);
     await setDraft('graph LR\nA[broken'); await page.waitForFunction(() => document.getElementById('editor-status').dataset.tone === 'error');
@@ -164,7 +163,7 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     page.once('dialog', dialog => dialog.accept()); await page.click('#editor-cancel-btn');
     assert.equal(await page.$eval('#mermaid-source', n => n.value), graph);
     await page.click('#edit-btn'); await setDraft(graph.replace('Sister of', 'Sisters')); await page.waitForFunction(() => !document.getElementById('editor-save-btn').disabled); await page.click('#editor-save-btn');
-    const share = new URL(await page.$eval('#share-url-input', n => n.value)); assert.equal(share.pathname, '/austen/generate/');
+    const share = new URL(await page.$eval('#share-url-input', n => n.value)); assert.equal(share.pathname, '/generate/');
     assert.equal(decodeShare(share.searchParams.get('graph')).generatedAt, generatedAt);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('austen-history'))[0].generatedAt), generatedAt);
     await page.reload(); await page.waitForFunction(() => !document.getElementById('edit-btn').disabled); assert.equal(await page.$eval('#mermaid-source', n => n.value), graph);
@@ -187,7 +186,7 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
   });
   await t.test('legacy homepage shares forward, preserve metadata and render; malformed history and Undo work', async () => {
     const oldShare = (await readFile(resolve(ROOT, 'tests/fixtures/legacy-share.txt'), 'utf8')).trim();
-    await page.goto(`${base}?graph=${new URL(oldShare).searchParams.get('graph')}`); await page.waitForFunction(() => location.pathname === '/austen/generate/' && document.getElementById('selected-book-card')?.textContent.includes('Pride and Prejudice') && !document.getElementById('edit-btn').disabled);
+    await page.goto(`${base}?graph=${new URL(oldShare).searchParams.get('graph')}`); await page.waitForFunction(() => location.pathname === '/generate/' && document.getElementById('selected-book-card')?.textContent.includes('Pride and Prejudice') && !document.getElementById('edit-btn').disabled);
     assert.match(await page.$eval('#selected-book-card', n => n.textContent), /Pride and Prejudice/);
     await page.evaluate(({ graph, generatedAt }) => localStorage.setItem('austen-history', JSON.stringify([{ book: { title: 'Legacy', authors: 'malformed', publishYear: 1813 }, mermaid: graph, generatedAt }, { book: null, mermaid: 4 } ])), { graph, generatedAt });
     await page.goto(`${base}generate/`); await page.waitForSelector('.shelf-delete'); await page.click('.shelf-delete'); await page.click('#history-undo-btn'); assert.equal(await page.$$eval('.shelf-row', n => n.length), 1);
@@ -203,7 +202,7 @@ test('built static library and migrated workspace', { timeout: 180000 }, async t
     assert.match(await page.$eval('#selected-book-card', n => n.textContent), /Another Book/); assert.equal(await page.$eval('#diagram-workspace', n => n.hidden), true);
     apiReply = request => reply(request, { mermaid: graph, generatedAt }); await page.click('#selected-book-card button'); await page.waitForFunction(() => !document.getElementById('edit-btn').disabled);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('austen-history'))[0].book.title), 'Another Book');
-    assert.equal(new URL(await page.$eval('#share-url-input', input => input.value)).pathname, '/austen/generate/');
+    assert.equal(new URL(await page.$eval('#share-url-input', input => input.value)).pathname, '/generate/');
     await page.click('#edit-btn');
     await page.waitForSelector('#editor-section', { visible: true });
     await page.click('#editor-cancel-btn');

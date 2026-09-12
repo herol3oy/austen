@@ -1,6 +1,6 @@
 import { generationMetadata } from '../shared/books.mjs';
 import { generateDiagram, readLimitedText, DEFAULT_MODEL } from '../shared/generation.mjs';
-const CORS_ORIGINS = ['https://herol3oy.github.io', 'http://localhost:4321', 'http://127.0.0.1:4321', 'http://localhost:8788'];
+const CORS_ORIGINS = ['https://austen.page', 'https://herol3oy.github.io', 'http://localhost:4321', 'http://127.0.0.1:4321', 'http://localhost:8788'];
 export function getCorsHeaders(origin) {
   return { ...(CORS_ORIGINS.includes(origin) ? { 'Access-Control-Allow-Origin': origin } : {}), 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', Vary: 'Origin', 'Content-Type': 'application/json', 'Cache-Control': 'no-store' };
 }

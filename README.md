@@ -1,6 +1,6 @@
 # Austen
 
-A static library of literary relationship maps, with an on-demand Mermaid generator on the homepage. Astro serves the site at `https://herol3oy.github.io/austen/`. Published maps cover whole books and include spoilers.
+A static library of literary relationship maps, with an on-demand Mermaid generator on the homepage. Astro serves the site at `https://austen.page`. Published maps cover whole books and include spoilers.
 
 The checked-in catalog contains **1,504 Sudalyph entries**. One local command generates and automatically publishes character maps across the catalog. Maps pass Mermaid and SVG checks before publication; manual review is optional. Builds do not fetch catalog data, contact DeepSeek, or download ebooks.
 
