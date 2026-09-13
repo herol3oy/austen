@@ -246,6 +246,121 @@ test('built static library and migrated workspace', {
 		void request.abort()
 	})
 	const publishedUrl = `${base}books/${book.slug}/`
+	await t.test(
+		'CSS protections survive competing layout and inline styles',
+		async (t) => {
+			const isolatedPage = await browser.newPage()
+			t.after(() => isolatedPage.close())
+			isolatedPage.setDefaultTimeout(15000)
+			await isolatedPage.setViewport({ width: 1280, height: 900 })
+			await t.test('hidden flex diagram controls are invisible', async () => {
+				await isolatedPage.setJavaScriptEnabled(false)
+				await isolatedPage.goto(publishedUrl)
+				assert.deepEqual(
+					await isolatedPage.$eval('#diagram-controls', (controls) => ({
+						hidden: controls.hidden,
+						display: getComputedStyle(controls).display,
+						rects: controls.getClientRects().length,
+					})),
+					{ hidden: true, display: 'none', rects: 0 },
+				)
+				assert.equal(
+					await isolatedPage.$eval('#diagram-controls', (controls) => {
+						controls.hidden = false
+						return getComputedStyle(controls).display
+					}),
+					'flex',
+				)
+			})
+			await isolatedPage.setJavaScriptEnabled(true)
+			const openInteractiveDiagram = async () => {
+				await isolatedPage.goto(publishedUrl)
+				await isolatedPage.waitForSelector(
+					'#mermaid-container.is-interactive svg',
+				)
+			}
+			await t.test('reduced motion disables button transitions', async () => {
+				await isolatedPage.emulateMediaFeatures([
+					{ name: 'prefers-reduced-motion', value: 'reduce' },
+				])
+				await openInteractiveDiagram()
+				const durations = await isolatedPage.$eval('#zoom-in-btn', (button) =>
+					getComputedStyle(button)
+						.transitionDuration.split(',')
+						.map(
+							(duration) =>
+								Number.parseFloat(duration) *
+								(duration.trim().endsWith('ms') ? 1 : 1000),
+						),
+				)
+				assert.ok(
+					durations.every((duration) => duration <= 0.01),
+					`Reduced-motion transitions must be at most 0.01ms: ${durations}`,
+				)
+			})
+			await t.test(
+				'interactive SVG fills its container despite inline limits',
+				async () => {
+					await openInteractiveDiagram()
+					const dimensions = await isolatedPage.$eval(
+						'#mermaid-container > svg',
+						(svg) => {
+							svg.style.width = '40px'
+							svg.style.height = '30px'
+							svg.style.maxWidth = '20px'
+							const style = getComputedStyle(svg)
+							return {
+								width: Number.parseFloat(style.width),
+								height: Number.parseFloat(style.height),
+								maxWidth: style.maxWidth,
+								containerWidth: svg.parentElement.clientWidth,
+								containerHeight: svg.parentElement.clientHeight,
+							}
+						},
+					)
+					assert.ok(
+						dimensions.containerWidth > 40 && dimensions.containerHeight > 30,
+					)
+					assert.ok(
+						Math.abs(dimensions.width - dimensions.containerWidth) <= 1,
+						`SVG width must fill its container: ${JSON.stringify(dimensions)}`,
+					)
+					assert.ok(
+						Math.abs(dimensions.height - dimensions.containerHeight) <= 1,
+						`SVG height must fill its container: ${JSON.stringify(dimensions)}`,
+					)
+					assert.equal(dimensions.maxWidth, 'none')
+				},
+			)
+			await t.test(
+				'panning uses grabbing despite Panzoom inline cursor',
+				async () => {
+					await openInteractiveDiagram()
+					const svg = await isolatedPage.$('#mermaid-container > svg')
+					await svg.scrollIntoView()
+					assert.equal(await svg.evaluate((svg) => svg.style.cursor), 'grab')
+					const box = await svg.boundingBox()
+					await isolatedPage.mouse.move(
+						box.x + box.width / 2,
+						box.y + box.height / 2,
+					)
+					await isolatedPage.mouse.down()
+					try {
+						await isolatedPage.waitForSelector('#mermaid-container.is-panning')
+						assert.equal(
+							await svg.evaluate((svg) => getComputedStyle(svg).cursor),
+							'grabbing',
+						)
+					} finally {
+						await isolatedPage.mouse.up()
+					}
+					await isolatedPage.waitForSelector(
+						'#mermaid-container:not(.is-panning)',
+					)
+				},
+			)
+		},
+	)
 	const builtPage = async (path) =>
 		load(await readFile(resolve(root, 'dist', path, 'index.html'), 'utf8'))
 	const jsonLd = ($) =>

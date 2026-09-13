@@ -25,6 +25,7 @@ jobs:
           node-version: '24'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm exec biome ci .
       - run: pnpm check
       - run: pnpm test
       - name: Configure runner Chrome for rendering tests

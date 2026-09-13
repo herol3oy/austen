@@ -31,7 +31,7 @@ Published book pages parse the saved Mermaid revision at build time to populate 
 
 ## Formatting and linting
 
-Biome 2.5.13 checks Astro, JavaScript, TypeScript, CSS, JSON, and JSONC source and configuration files. It uses tabs, double JavaScript quotes, semicolons, LF line endings, and an 80-character line width, with recommended lint rules and import organization.
+Biome 2.5.13 checks Astro, JavaScript, TypeScript, CSS, JSON, and JSONC source and configuration files. It uses tabs, single JavaScript quotes, semicolons only when needed, LF line endings, and an 80-character line width, with recommended lint rules and import organization.
 
 ```sh
 pnpm lint          # Check formatting, lint rules, and import organization
@@ -42,9 +42,24 @@ pnpm format:check # Check formatting without changing files
 
 `pnpm check` runs Astro's diagnostics separately. Full Astro parsing, formatting, and linting are enabled through `html.experimentalFullSupportEnabled`; Biome currently marks this support as [experimental](https://biomejs.dev/internals/language-support/).
 
+For normal changes, apply safe fixes, review the diff, then run lint, Astro checks, and the relevant tests:
+
+```sh
+pnpm lint:fix
+git diff
+pnpm lint
+pnpm check
+pnpm test
+pnpm test:browser # Include for UI, CSS, and workspace changes
+```
+
+Reserve `pnpm exec biome check --write --unsafe --only=<reviewed-rule> <selected-file>` for explicitly selected files and rules whose changes you will review. Avoid repository-wide unsafe fixes.
+
 Biome respects Git ignore files and excludes dependencies, build output, caches, `test-results/`, `data/`, `public/`, `src/assets/`, and HTML, SVG, and text test fixtures. Executable fixtures such as `tests/fixtures/offline.mjs` remain included. Published map files must retain their original bytes because publication checks verify their hashes. Unsupported file types are ignored.
 
-Source formatting and lint errors have been addressed; existing warnings and suggestions remain visible. Intentional control-character matching and list roles needed for Safari accessibility have documented, local lint exceptions. Biome is available locally; CI does not enforce it yet. The fix and format commands apply changes across the included files when invoked.
+GitHub Actions runs `pnpm exec biome ci .` immediately after dependency installation, before Astro checks and tests, using the pinned local dependency. Formatting, lint errors, and import organization are enforced without writing files; warnings remain visible and non-blocking. Intentional control-character matching and list roles needed for Safari accessibility have documented, local lint exceptions. The fix and format commands apply changes across the included files when invoked.
+
+The CSS rule [`linter.rules.complexity.noImportantStyles`](https://biomejs.dev/linter/rules/no-important-styles/) is set to `{ "level": "warn", "fix": "none" }`. It reports `!important` while preserving it even with `--write --unsafe`. These declarations protect hidden controls, reduced-motion behavior, diagram sizing, panning cursors, and cover dimensions; removing them requires deliberate CSS review and browser verification.
 
 ## Book covers
 
@@ -100,6 +115,8 @@ After the command finishes, refresh `/austen/maps/` or `/austen/catalog/` to ope
 ## Verification
 
 ```sh
+pnpm lint
+pnpm format:check
 pnpm check
 pnpm test
 pnpm exec puppeteer browsers install chrome
@@ -114,7 +131,7 @@ GitHub Actions uses [Chrome supplied by the Ubuntu runner image](https://github.
 
 The CLI and frontend both resolve Mermaid **11.16.0**, enforced by `pnpm-workspace.yaml`. They use `shared/mermaid.config.json` with strict security and HTML labels disabled. A restricted graph grammar and SVG element/reference checks precede embedding. `valid` means these automated checks passed; it does not certify factual accuracy. Automatic maps are labeled AI-generated.
 
-The browser suite builds more than 50 automatically published fixture maps with `fetch` disabled. It verifies static SVGs and covers without JavaScript, responsive cover grids, failed-image bookplates, publication labels, catalog states, unpublished route exclusion, canonical sharing, the old homepage share, malformed history, Undo, stale discovery/generation, invalid drafts, revert/cancel/save, pan/zoom, and full PNG/SVG downloads. Provider calls and cover images are mocked; fixture maps never enter the public data.
+The browser suite builds more than 50 automatically published fixture maps with `fetch` disabled. It verifies static SVGs and covers without JavaScript, responsive cover grids, failed-image bookplates, publication labels, catalog states, unpublished route exclusion, canonical sharing, the old homepage share, malformed history, Undo, stale discovery/generation, invalid drafts, revert/cancel/save, pan/zoom, and full PNG/SVG downloads. An isolated page also checks hidden flex controls, reduced-motion button transitions, SVG sizing against restrictive inline styles, and the panning cursor. Provider calls and cover images are mocked; fixture maps never enter the public data.
 
 ## Worker and deployment
 

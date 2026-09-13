@@ -31,7 +31,10 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"preset": "recommended"
+			"preset": "recommended",
+			"complexity": {
+				"noImportantStyles": { "level": "warn", "fix": "none" }
+			}
 		}
 	},
 	"javascript": {
