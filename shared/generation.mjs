@@ -1,12 +1,12 @@
-import { generationMetadata } from './books.mjs';
-import { sanitizeMermaid, validateDiagram } from './diagram-policy.mjs';
-export const PROMPT_VERSION = '2';
-export const DEFAULT_MODEL = 'deepseek-flash';
-export const MAX_OUTPUT_TOKENS = 1200;
+import { generationMetadata } from './books.mjs'
+import { sanitizeMermaid, validateDiagram } from './diagram-policy.mjs'
+export const PROMPT_VERSION = '2'
+export const DEFAULT_MODEL = 'deepseek-flash'
+export const MAX_OUTPUT_TOKENS = 1200
 export function buildGenerationPrompt(book) {
-  const metadata = JSON.stringify(generationMetadata(book));
+	const metadata = JSON.stringify(generationMetadata(book))
 
-  return `
+	return `
 You are generating a canonical whole-book character relationship graph for a literary work.
 
 Your task is to identify the exact book from the supplied metadata using only knowledge already available to you, then produce a concise Mermaid relationship graph of its principal characters.
@@ -252,56 +252,139 @@ Do not reveal this internal checking process.
 BOOK_METADATA_START
 ${metadata}
 BOOK_METADATA_END
-`.trim();
+`.trim()
 }
 
 export class ProviderError extends Error {
-  constructor(code, { retryable = false, fatal = false, retryAfterMs = 0, status = 0 } = {}) {
-    super(code); Object.assign(this, { code, retryable, fatal, retryAfterMs, status });
-  }
+	constructor(
+		code,
+		{ retryable = false, fatal = false, retryAfterMs = 0, status = 0 } = {},
+	) {
+		super(code)
+		Object.assign(this, { code, retryable, fatal, retryAfterMs, status })
+	}
 }
 export async function readLimitedText(response, maxBytes) {
-  if (Number(response.headers.get('content-length')) > maxBytes) { await response.body?.cancel(); throw new Error('Response too large'); }
-  const reader = response.body?.getReader();
-  if (!reader) return '';
-  const decoder = new TextDecoder(); let size = 0, result = '';
-  try { for (;;) { const { done, value } = await reader.read(); if (done) break; size += value.byteLength; if (size > maxBytes) throw new Error('Response too large'); result += decoder.decode(value, { stream: true }); } return result + decoder.decode(); }
-  catch (error) { await reader.cancel().catch(() => {}); throw error; }
-  finally { reader.releaseLock(); }
+	if (Number(response.headers.get('content-length')) > maxBytes) {
+		await response.body?.cancel()
+		throw new Error('Response too large')
+	}
+	const reader = response.body?.getReader()
+	if (!reader) return ''
+	const decoder = new TextDecoder()
+	let size = 0,
+		result = ''
+	try {
+		for (;;) {
+			const { done, value } = await reader.read()
+			if (done) break
+			size += value.byteLength
+			if (size > maxBytes) throw new Error('Response too large')
+			result += decoder.decode(value, { stream: true })
+		}
+		return result + decoder.decode()
+	} catch (error) {
+		await reader.cancel().catch(() => {})
+		throw error
+	} finally {
+		reader.releaseLock()
+	}
 }
 export function classifyResponse(data) {
-  const choice = data?.choices?.[0];
-  const mermaid = sanitizeMermaid(choice?.message?.content);
-  const common = { mermaid: mermaid || null, reportedModel: typeof data?.model === 'string' ? data.model.slice(0, 100) : null, usage: normalizeUsage(data?.usage) };
-  if (choice?.finish_reason !== 'stop') return { ...common, outcome: 'invalid_graph', error: 'truncated_or_incomplete' };
-  if (mermaid === 'UNKNOWN') return { ...common, mermaid: null, outcome: 'unknown_work' };
-  try { validateDiagram(mermaid); return { ...common, outcome: 'candidate' }; }
-  catch { return { ...common, outcome: 'invalid_graph', error: 'source_policy' }; }
+	const choice = data?.choices?.[0]
+	const mermaid = sanitizeMermaid(choice?.message?.content)
+	const common = {
+		mermaid: mermaid || null,
+		reportedModel:
+			typeof data?.model === 'string' ? data.model.slice(0, 100) : null,
+		usage: normalizeUsage(data?.usage),
+	}
+	if (choice?.finish_reason !== 'stop')
+		return {
+			...common,
+			outcome: 'invalid_graph',
+			error: 'truncated_or_incomplete',
+		}
+	if (mermaid === 'UNKNOWN')
+		return { ...common, mermaid: null, outcome: 'unknown_work' }
+	try {
+		validateDiagram(mermaid)
+		return { ...common, outcome: 'candidate' }
+	} catch {
+		return { ...common, outcome: 'invalid_graph', error: 'source_policy' }
+	}
 }
 function normalizeUsage(usage) {
-  if (!usage || typeof usage !== 'object') return null;
-  return Object.fromEntries(Object.entries(usage).filter(([key, value]) => /^[a-z_]+tokens$/.test(key) && Number.isSafeInteger(value) && value >= 0));
+	if (!usage || typeof usage !== 'object') return null
+	return Object.fromEntries(
+		Object.entries(usage).filter(
+			([key, value]) =>
+				/^[a-z_]+tokens$/.test(key) &&
+				Number.isSafeInteger(value) &&
+				value >= 0,
+		),
+	)
 }
-export async function generateDiagram(book, { apiKey, model = DEFAULT_MODEL, fetchImpl = fetch, timeoutMs = 45000 } = {}) {
-  if (!apiKey) throw new ProviderError('missing_credentials', { fatal: true });
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const response = await fetchImpl('https://api.deepseek.com/chat/completions', {
-      method: 'POST', signal: controller.signal,
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-      body: JSON.stringify({ model, messages: [{ role: 'system', content: 'Follow the formatting and metadata-only constraints exactly.' }, { role: 'user', content: buildGenerationPrompt(book) }], thinking: { type: 'disabled' }, temperature: 0.2, max_tokens: MAX_OUTPUT_TOKENS }),
-    });
-    if (!response.ok) {
-      const retryAfter = response.headers.get('retry-after');
-      const delay = retryAfter && /^\d+(?:\.\d+)?$/.test(retryAfter) ? Number(retryAfter) * 1000 : Date.parse(retryAfter || '') - Date.now();
-      await response.body?.cancel();
-      throw new ProviderError('provider_error', { status: response.status, fatal: [400, 401, 402, 403, 404, 422].includes(response.status), retryable: response.status === 429 || response.status >= 500, retryAfterMs: Math.max(0, delay || 0) });
-    }
-    const data = JSON.parse(await readLimitedText(response, 64000));
-    return { ...classifyResponse(data), requestedModel: model, generatedAt: new Date().toISOString() };
-  } catch (error) {
-    if (error instanceof ProviderError) throw error;
-    throw new ProviderError(controller.signal.aborted ? 'timeout' : 'provider_error', { retryable: controller.signal.aborted || error instanceof TypeError });
-  } finally { clearTimeout(timeout); }
+export async function generateDiagram(
+	book,
+	{ apiKey, model = DEFAULT_MODEL, fetchImpl = fetch, timeoutMs = 45000 } = {},
+) {
+	if (!apiKey) throw new ProviderError('missing_credentials', { fatal: true })
+	const controller = new AbortController()
+	const timeout = setTimeout(() => controller.abort(), timeoutMs)
+	try {
+		const response = await fetchImpl(
+			'https://api.deepseek.com/chat/completions',
+			{
+				method: 'POST',
+				signal: controller.signal,
+				headers: {
+					'Content-Type': 'application/json',
+					Authorization: `Bearer ${apiKey}`,
+				},
+				body: JSON.stringify({
+					model,
+					messages: [
+						{
+							role: 'system',
+							content:
+								'Follow the formatting and metadata-only constraints exactly.',
+						},
+						{ role: 'user', content: buildGenerationPrompt(book) },
+					],
+					thinking: { type: 'disabled' },
+					temperature: 0.2,
+					max_tokens: MAX_OUTPUT_TOKENS,
+				}),
+			},
+		)
+		if (!response.ok) {
+			const retryAfter = response.headers.get('retry-after')
+			const delay =
+				retryAfter && /^\d+(?:\.\d+)?$/.test(retryAfter)
+					? Number(retryAfter) * 1000
+					: Date.parse(retryAfter || '') - Date.now()
+			await response.body?.cancel()
+			throw new ProviderError('provider_error', {
+				status: response.status,
+				fatal: [400, 401, 402, 403, 404, 422].includes(response.status),
+				retryable: response.status === 429 || response.status >= 500,
+				retryAfterMs: Math.max(0, delay || 0),
+			})
+		}
+		const data = JSON.parse(await readLimitedText(response, 64000))
+		return {
+			...classifyResponse(data),
+			requestedModel: model,
+			generatedAt: new Date().toISOString(),
+		}
+	} catch (error) {
+		if (error instanceof ProviderError) throw error
+		throw new ProviderError(
+			controller.signal.aborted ? 'timeout' : 'provider_error',
+			{ retryable: controller.signal.aborted || error instanceof TypeError },
+		)
+	} finally {
+		clearTimeout(timeout)
+	}
 }

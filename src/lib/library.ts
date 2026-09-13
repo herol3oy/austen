@@ -1,51 +1,93 @@
-import { resolve } from 'node:path';
-import { validateCatalog } from '../../shared/books.mjs';
-import { savedCoverSlug, validateCovers } from '../../shared/covers.mjs';
-import { readJson } from '../../scripts/files.mjs';
-import { loadPublishedMaps } from '../../scripts/publish-map.mjs';
-import { readBookRecords, nextAction } from '../../scripts/map-records.mjs';
+import { resolve } from 'node:path'
+import { readJson } from '../../scripts/files.mjs'
+import { nextAction, readBookRecords } from '../../scripts/map-records.mjs'
+import { loadPublishedMaps } from '../../scripts/publish-map.mjs'
+import { validateCatalog } from '../../shared/books.mjs'
+import { savedCoverSlug, validateCovers } from '../../shared/covers.mjs'
 export interface Book {
-  id: string; slug: string; title: string; authors: string[]; year: string | null; category: string;
-  sourceUrl: string; sourceAnchor: string | null; ebookUrl: string; metadataWarnings: string[]; coverSlug?: string;
+	id: string
+	slug: string
+	title: string
+	authors: string[]
+	year: string | null
+	category: string
+	sourceUrl: string
+	sourceAnchor: string | null
+	ebookUrl: string
+	metadataWarnings: string[]
+	coverSlug?: string
 }
-export interface CatalogEntry extends Book { eligible: boolean; publishedUrl: string | null; availability: string; mapStatus: 'available' | 'pending' | 'unavailable' }
+export interface CatalogEntry extends Book {
+	eligible: boolean
+	publishedUrl: string | null
+	availability: string
+	mapStatus: 'available' | 'pending' | 'unavailable'
+}
 
 const featuredSlugs = [
-  'jane-austen-pride-and-prejudice',
-  'f-scott-fitzgerald-the-great-gatsby',
-  'charlotte-bronte-jane-eyre',
-  'emily-bronte-wuthering-heights',
-  'homer-the-odyssey-william-cullen-bryant',
-  'fyodor-dostoevsky-crime-and-punishment-constance-garnett',
-  'herman-melville-moby-dick',
-  'lewis-carroll-alices-adventures-in-wonderland-john-tenniel',
-];
+	'jane-austen-pride-and-prejudice',
+	'f-scott-fitzgerald-the-great-gatsby',
+	'charlotte-bronte-jane-eyre',
+	'emily-bronte-wuthering-heights',
+	'homer-the-odyssey-william-cullen-bryant',
+	'fyodor-dostoevsky-crime-and-punishment-constance-garnett',
+	'herman-melville-moby-dick',
+	'lewis-carroll-alices-adventures-in-wonderland-john-tenniel',
+]
 
 export function featuredMaps(entries: CatalogEntry[]) {
-  const published = entries.filter(book => book.publishedUrl);
-  const bySlug = new Map(published.map(book => [book.slug, book]));
-  const featured = featuredSlugs.flatMap(slug => {
-    const book = bySlug.get(slug);
-    return book ? [book] : [];
-  });
-  const selected = new Set(featured.map(book => book.id));
-  return [...featured, ...published.filter(book => !selected.has(book.id))].slice(0, 8);
+	const published = entries.filter((book) => book.publishedUrl)
+	const bySlug = new Map(published.map((book) => [book.slug, book]))
+	const featured = featuredSlugs.flatMap((slug) => {
+		const book = bySlug.get(slug)
+		return book ? [book] : []
+	})
+	const selected = new Set(featured.map((book) => book.id))
+	return [
+		...featured,
+		...published.filter((book) => !selected.has(book.id)),
+	].slice(0, 8)
 }
 
 export async function loadLibrary(root = process.cwd()) {
-  const catalog = validateCatalog(await readJson(resolve(root, 'data/catalog/books.json')));
-  const covers = validateCovers(await readJson(resolve(root, 'data/catalog/covers.json'), { schemaVersion: 3, books: {} }));
-  const { maps } = await loadPublishedMaps(root, catalog);
-  for (const map of maps) map.book = { ...map.book, coverSlug: savedCoverSlug(map.book, covers) };
-  const available = new Map(maps.map(map => [map.book.id, map]));
-  const entries: CatalogEntry[] = [];
-  for (const book of catalog.books as Book[]) {
-    const map = available.get(book.id);
-    const action = map ? 'available' : nextAction(await readBookRecords(root, book)).action;
-    const unavailable = ['unknown', 'exhausted', 'failed'].includes(action);
-    entries.push({ ...book, coverSlug: savedCoverSlug(book, covers), eligible: !unavailable, publishedUrl: map ? `${import.meta.env.BASE_URL}books/${book.slug}/` : null,
-      mapStatus: map ? 'available' : unavailable ? 'unavailable' : 'pending',
-      availability: map ? (map.review.mode === 'automatic' ? 'AI-generated map' : 'Reviewed map') : action === 'unknown' ? 'Character map unavailable' : unavailable ? 'Map unavailable' : 'Map pending · generate a map' });
-  }
-  return { catalog, entries, maps };
+	const catalog = validateCatalog(
+		await readJson(resolve(root, 'data/catalog/books.json')),
+	)
+	const covers = validateCovers(
+		await readJson(resolve(root, 'data/catalog/covers.json'), {
+			schemaVersion: 3,
+			books: {},
+		}),
+	)
+	const { maps } = await loadPublishedMaps(root, catalog)
+	for (const map of maps)
+		map.book = { ...map.book, coverSlug: savedCoverSlug(map.book, covers) }
+	const available = new Map(maps.map((map) => [map.book.id, map]))
+	const entries: CatalogEntry[] = []
+	for (const book of catalog.books as Book[]) {
+		const map = available.get(book.id)
+		const action = map
+			? 'available'
+			: nextAction(await readBookRecords(root, book)).action
+		const unavailable = ['unknown', 'exhausted', 'failed'].includes(action)
+		entries.push({
+			...book,
+			coverSlug: savedCoverSlug(book, covers),
+			eligible: !unavailable,
+			publishedUrl: map
+				? `${import.meta.env.BASE_URL}books/${book.slug}/`
+				: null,
+			mapStatus: map ? 'available' : unavailable ? 'unavailable' : 'pending',
+			availability: map
+				? map.review.mode === 'automatic'
+					? 'AI-generated map'
+					: 'Reviewed map'
+				: action === 'unknown'
+					? 'Character map unavailable'
+					: unavailable
+						? 'Map unavailable'
+						: 'Map pending · generate a map',
+		})
+	}
+	return { catalog, entries, maps }
 }

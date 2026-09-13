@@ -29,6 +29,23 @@ The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panz
 
 Published book pages parse the saved Mermaid revision at build time to populate the introduction, page metadata, key characters, and key relationships. Every directed relationship keeps its original label and order. These sections are visible without JavaScript and require no model calls; they describe the published revision even when a reader edits the diagram locally.
 
+## Formatting and linting
+
+Biome 2.5.13 checks Astro, JavaScript, TypeScript, CSS, JSON, and JSONC source and configuration files. It uses tabs, double JavaScript quotes, semicolons, LF line endings, and an 80-character line width, with recommended lint rules and import organization.
+
+```sh
+pnpm lint          # Check formatting, lint rules, and import organization
+pnpm lint:fix      # Apply formatting, safe lint fixes, and import organization
+pnpm format       # Format included files
+pnpm format:check # Check formatting without changing files
+```
+
+`pnpm check` runs Astro's diagnostics separately. Full Astro parsing, formatting, and linting are enabled through `html.experimentalFullSupportEnabled`; Biome currently marks this support as [experimental](https://biomejs.dev/internals/language-support/).
+
+Biome respects Git ignore files and excludes dependencies, build output, caches, `test-results/`, `data/`, `public/`, `src/assets/`, and HTML, SVG, and text test fixtures. Executable fixtures such as `tests/fixtures/offline.mjs` remain included. Published map files must retain their original bytes because publication checks verify their hashes. Unsupported file types are ignored.
+
+Source formatting and lint errors have been addressed; existing warnings and suggestions remain visible. Intentional control-character matching and list roles needed for Safari accessibility have documented, local lint exceptions. Biome is available locally; CI does not enforce it yet. The fix and format commands apply changes across the included files when invoked.
+
 ## Book covers
 
 Homepage, maps, and catalog cards use local copies of the official Standard Ebooks cover art, with larger artwork on published-book pages. Astro transforms those JPEG sources into sized WebP images with JPEG fallback markup. Grid images load lazily. Missing covers show a title-and-author bookplate. Titles, navigation, and available cover images work without JavaScript.

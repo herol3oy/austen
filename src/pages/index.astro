@@ -1,34 +1,64 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BookCard from '../components/BookCard.astro';
-import GeneratorForm from '../components/GeneratorForm.astro';
-import DiagramWorkspace from '../components/DiagramWorkspace.astro';
-import { featuredMaps, loadLibrary } from '../lib/library';
-const { entries } = await loadLibrary();
-const published = entries.filter(b => b.publishedUrl);
-const featured = featuredMaps(entries);
+import BookCard from '../components/BookCard.astro'
+import DiagramWorkspace from '../components/DiagramWorkspace.astro'
+import GeneratorForm from '../components/GeneratorForm.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { featuredMaps, loadLibrary } from '../lib/library'
+
+const { entries } = await loadLibrary()
+const published = entries.filter((b) => b.publishedUrl)
+const featured = featuredMaps(entries)
 ---
-<BaseLayout structuredData={[{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Austen', url: Astro.site!.href }]}>
-  <div class="homepage-generator">
-    <p id="global-status" class="status-line" role="status" aria-live="polite"></p>
-    <GeneratorForm heading="Character relationship maps for books" introduction="Explore published maps below, or find a novel on OpenLibrary and create a map of your own. Review metadata before generating." />
-    <DiagramWorkspace />
-    <noscript><p>The generator needs JavaScript. Explore the published maps below.</p></noscript>
-  </div>
-  <section class="featured-maps" aria-labelledby="featured-heading">
-    <div class="section-heading"><h2 id="featured-heading">Start with a classic</h2><span>Ready to explore</span></div>
-    <p class="metadata-note">Discover the characters and connections in familiar stories. These AI-generated maps include spoilers.</p>
-    {featured.length > 0 ? <ul class="library-list featured-list">
+
+<BaseLayout
+	structuredData={[{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Austen', url: Astro.site!.href }]}
+>
+	<div class="homepage-generator">
+		<p
+			id="global-status"
+			class="status-line"
+			role="status"
+			aria-live="polite"
+		></p>
+		<GeneratorForm
+			heading="Character relationship maps for books"
+			introduction="Explore published maps below, or find a novel on OpenLibrary and create a map of your own. Review metadata before generating."
+		/>
+		<DiagramWorkspace />
+		<noscript
+			><p>
+				The generator needs JavaScript. Explore the published maps below.
+			</p></noscript
+		>
+	</div>
+	<section class="featured-maps" aria-labelledby="featured-heading">
+		<div class="section-heading">
+			<h2 id="featured-heading">Start with a classic</h2>
+			<span>Ready to explore</span>
+		</div>
+		<p class="metadata-note">
+			Discover the characters and connections in familiar stories. These
+			AI-generated maps include spoilers.
+		</p>
+		{featured.length > 0 ? <ul class="library-list featured-list">
       {featured.map(book => <BookCard book={book} headingLevel="h3" />)}
     </ul> : <div class="empty-library">
       <h3>The first maps are still to come.</h3>
       <p>Create a map above, or explore the catalog.</p>
       <a href={`${import.meta.env.BASE_URL}catalog/`}>Explore the catalog →</a>
     </div>}
-    <div class="browse-maps"><a class="browse-maps-link" href={`${import.meta.env.BASE_URL}maps/`}>Browse all {published.length.toLocaleString('en')} maps <span aria-hidden="true">→</span></a></div>
-  </section>
-  <script>
-    const params = new URLSearchParams(location.search);
-    if (params.has('graph')) location.replace(`${import.meta.env.BASE_URL}generate/${location.search}${location.hash}`);
-  </script>
+		<div class="browse-maps">
+			<a class="browse-maps-link" href={`${import.meta.env.BASE_URL}maps/`}
+				>{`Browse all ${published.length.toLocaleString("en")} maps `}
+				<span aria-hidden="true">→</span></a
+			>
+		</div>
+	</section>
+	<script>
+	const params = new URLSearchParams(location.search)
+	if (params.has('graph'))
+		location.replace(
+			`${import.meta.env.BASE_URL}generate/${location.search}${location.hash}`,
+		)
+	</script>
 </BaseLayout>

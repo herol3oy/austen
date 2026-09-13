@@ -1,15 +1,38 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BookCard from '../components/BookCard.astro';
-import { loadLibrary } from '../lib/library';
-const { catalog, entries } = await loadLibrary();
-const publishedCount = entries.filter(book => book.publishedUrl).length;
+import BookCard from '../components/BookCard.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { loadLibrary } from '../lib/library'
+
+const { catalog, entries } = await loadLibrary()
+const publishedCount = entries.filter((book) => book.publishedUrl).length
 ---
-<BaseLayout title="Book Catalog and Map Availability — Austen" description={`Explore the full catalog of ${entries.length.toLocaleString('en')} books and check character map availability: ${publishedCount.toLocaleString('en')} published maps, plus pending and unavailable works.`}>
-  <section class="library-intro"><p class="section-kicker">The reading room</p><h1>Book catalog and map availability</h1><p>Explore the catalog from <a href={catalog.sourceUrl}>Sudalyph</a>. Open an available character map or generate one in your workspace. Some works do not have a suitable character cast.</p><p class="metadata-note">Source updated: {catalog.sourceUpdated || 'unknown'}. Year values are shown as supplied by the index.</p></section>
-  <label for="library-search">Search {entries.length.toLocaleString('en')} books</label>
-  <input id="library-search" type="search" placeholder="Title, author, or year" />
-  <p id="library-count" class="status-line" role="status"></p>
-  <ul class="library-list">{entries.map(book => <BookCard book={book} />)}</ul>
-  <script>import '../scripts/library-search.js';</script>
+
+<BaseLayout
+	title="Book Catalog and Map Availability — Austen"
+	description={`Explore the full catalog of ${entries.length.toLocaleString('en')} books and check character map availability: ${publishedCount.toLocaleString('en')} published maps, plus pending and unavailable works.`}
+>
+	<section class="library-intro">
+		<p class="section-kicker">The reading room</p>
+		<h1>Book catalog and map availability</h1>
+		<p>
+			Explore the catalog from <a href={catalog.sourceUrl}>Sudalyph</a>. Open an
+			available character map or generate one in your workspace. Some works do
+			not have a suitable character cast.
+		</p>
+		<p class="metadata-note">
+			Source updated: {catalog.sourceUpdated || 'unknown'}. Year values are
+			shown as supplied by the index.
+		</p>
+	</section>
+	<label for="library-search"
+		>Search {entries.length.toLocaleString('en')} books</label
+	>
+	<input id="library-search" type="search" placeholder="Title, author, or year">
+	<p id="library-count" class="status-line" role="status"></p>
+	<ul class="library-list">
+		{entries.map(book => <BookCard book={book} />)}
+	</ul>
+	<script>
+	import '../scripts/library-search.js'
+	</script>
 </BaseLayout>
