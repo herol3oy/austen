@@ -55,10 +55,16 @@ const featured = featuredMaps(entries)
 		</div>
 	</section>
 	<script>
-	const params = new URLSearchParams(location.search)
-	if (params.has('graph'))
-		location.replace(
-			`${import.meta.env.BASE_URL}generate/${location.search}${location.hash}`,
-		)
+	import { navigate } from 'astro:transitions/client'
+
+	document.addEventListener('astro:page-load', () => {
+		if (location.pathname !== import.meta.env.BASE_URL) return
+		const params = new URLSearchParams(location.search)
+		if (params.has('graph'))
+			void navigate(
+				`${import.meta.env.BASE_URL}generate/${location.search}${location.hash}`,
+				{ history: 'replace' },
+			)
+	})
 	</script>
 </BaseLayout>

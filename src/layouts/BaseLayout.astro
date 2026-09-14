@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from 'astro:transitions'
 import '../styles/global.css'
 import '@fontsource/inter/latin-400.css'
 import '@fontsource/inter/latin-500.css'
@@ -72,6 +73,7 @@ const socialImageAlt = preview.alt
 		<link rel="icon" type="image/svg+xml" sizes="any" href={`${base}logo.svg`}>
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link rel="canonical" href={pageUrl}>
+		<ClientRouter />
 		{structuredData.map(data => <script is:inline type="application/ld+json" set:html={serializeStructuredData(data)} />)}
 	</head>
 	<body>
@@ -84,10 +86,9 @@ const socialImageAlt = preview.alt
 					width="64"
 					height="64"
 				>
-				<span class="brand-copy"
-					><span class="brand-name">Austen</span
-					><span class="brand-note">Literary relationship maps</span></span
-				>
+				<span class="brand-copy">
+					<span class="brand-name">Austen</span>
+				</span>
 			</a>
 			<nav aria-label="Main navigation">
 				<a href={`${base}maps/`}>Maps</a><a href={`${base}authors/`}>Authors</a

@@ -16,8 +16,8 @@ export const success = () => ({
 	reportedModel: 'fixture',
 	usage: { prompt_tokens: 100, completion_tokens: 50, total_tokens: 150 },
 })
-export async function fixtureRoot(t) {
-	const root = await mkdtemp(resolve(tmpdir(), 'austen-test-'))
+export async function fixtureRoot(t, { directory = tmpdir() } = {}) {
+	const root = await mkdtemp(resolve(directory, 'austen-test-'))
 	t?.after(() => rm(root, { recursive: true, force: true }))
 	const html = await readFile(
 		resolve(ROOT, 'tests/fixtures/catalog.html'),

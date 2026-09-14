@@ -33,7 +33,10 @@ const delay = (ms) => new Promise((r) => setTimeout(r, ms))
 test('built static library and migrated workspace', {
 	timeout: 180000,
 }, async (t) => {
-	const { root, book, catalog } = await fixtureRoot(t)
+	// Astro's linked components need a common parent with the fixture root.
+	const directory = resolve(ROOT, 'test-results')
+	await mkdir(directory, { recursive: true })
+	const { root, book, catalog } = await fixtureRoot(t, { directory })
 	const svg = await renderSvg(graph)
 	assert.ok(validateSvg(svg).width > 0)
 	await assert.rejects(
@@ -1087,14 +1090,18 @@ test('built static library and migrated workspace', {
 			}
 			await page.focus('.featured-list .book-cover-link')
 			await Promise.all([
-				page.waitForNavigation(),
+				page.waitForFunction((url) => location.href === url, {}, publishedUrl),
 				page.keyboard.press('Enter'),
 			])
 			assert.equal(page.url(), publishedUrl)
 			await page.goto(base)
 			await page.focus('.browse-maps-link')
 			await Promise.all([
-				page.waitForNavigation(),
+				page.waitForFunction(
+					(url) => location.href === url,
+					{},
+					`${base}maps/`,
+				),
 				page.keyboard.press('Enter'),
 			])
 			assert.equal(page.url(), `${base}maps/`)
@@ -1437,6 +1444,176 @@ test('built static library and migrated workspace', {
 				/new/,
 			)
 			assert.equal(providerCalls, beforeSelection)
+		},
+	)
+	await t.test(
+		'client navigation reinitializes search, covers and workspaces through back and forward',
+		async () => {
+			await page.goto(base)
+			await page.evaluate(() => {
+				window.navigationMarker = 'same-document'
+				window.pageLoads = 0
+				window.transitionFinished = true
+				document.addEventListener('astro:page-load', () => window.pageLoads++)
+				document.addEventListener('astro:before-swap', (event) => {
+					window.transitionFinished = false
+					event.viewTransition.finished.finally(() => {
+						window.transitionFinished = true
+					})
+				})
+			})
+			const navigate = async (path, action) => {
+				const previous = await page.evaluate(() => window.pageLoads)
+				await action()
+				await page.waitForFunction(
+					({ path, previous }) =>
+						location.pathname === path &&
+						window.pageLoads > previous &&
+						window.transitionFinished,
+					{},
+					{ path, previous },
+				)
+				assert.equal(
+					await page.evaluate(() => window.navigationMarker),
+					'same-document',
+				)
+			}
+			const follow = (path, selector) =>
+				navigate(path, () => page.click(selector))
+			await follow('/maps/', 'nav a[href="/maps/"]')
+			await page.type('#library-search', '1813')
+			assert.equal(
+				await page.$$eval(
+					'[data-library-book]:not([hidden])',
+					(rows) => rows.length,
+				),
+				1,
+			)
+			await follow('/catalog/', 'a[href="/catalog/"]')
+			await page.type('#library-search', '1813')
+			assert.equal(
+				await page.$$eval(
+					'[data-library-book]:not([hidden])',
+					(rows) => rows.length,
+				),
+				1,
+			)
+			await follow('/authors/', 'nav a[href="/authors/"]')
+			await follow('/authors/jane-austen/', 'a[href="/authors/jane-austen/"]')
+			const bookPath = `/books/${book.slug}/`
+			await follow(bookPath, `.book-cover-link[href="${bookPath}"]`)
+			await page.waitForSelector('#diagram-controls:not([hidden])')
+			await page.click('#zoom-in-btn')
+			await page.waitForFunction(
+				() =>
+					parseInt(
+						document.getElementById('diagram-zoom-level').textContent,
+						10,
+					) > 100,
+			)
+			await page.click('#edit-btn')
+			assert.equal(
+				await page.$eval('#editor-section', (el) => el.hidden),
+				false,
+			)
+			await page.click('#editor-cancel-btn')
+			await navigate('/authors/jane-austen/', () =>
+				page.evaluate(() => history.back()),
+			)
+			await navigate(bookPath, () => page.evaluate(() => history.forward()))
+			await page.waitForSelector('#diagram-controls:not([hidden])')
+			assert.equal(
+				await page.$eval('#share-url-input', (el) => el.value),
+				`https://austen.page${bookPath}`,
+			)
+			await page.click('#zoom-in-btn')
+			await page.waitForFunction(
+				() =>
+					parseInt(
+						document.getElementById('diagram-zoom-level').textContent,
+						10,
+					) > 100,
+			)
+			await page.$eval('[data-book-cover] img', (img) => {
+				img
+					.closest('picture')
+					.querySelectorAll('source')
+					.forEach((source) => {
+						source.remove()
+					})
+				img.removeAttribute('srcset')
+				img.src = '/missing-cover.png'
+			})
+			await page.waitForFunction(
+				() => document.querySelector('[data-book-cover] img').hidden,
+			)
+			await follow('/', '.brand')
+			assert.equal(
+				await page.$eval('body', (body) =>
+					body.classList.contains('has-graph'),
+				),
+				false,
+			)
+			await page.$eval('#manual-book-form', (form) => {
+				form.elements.namedItem('title').value = 'Navigation test'
+				form.requestSubmit()
+			})
+			await page.waitForFunction(() =>
+				document
+					.getElementById('selected-book-card')
+					.textContent.includes('Navigation test'),
+			)
+			const callsBefore = providerCalls
+			let finishGeneration
+			const pendingGeneration = new Promise((resolve) => {
+				finishGeneration = resolve
+			})
+			apiReply = async (request) => {
+				await pendingGeneration
+				await request
+					.respond({
+						status: 200,
+						contentType: 'application/json',
+						headers: { 'Access-Control-Allow-Origin': '*' },
+						body: JSON.stringify({ mermaid: graph, generatedAt }),
+					})
+					.catch(() => {})
+			}
+			try {
+				await page.click('#selected-book-card button')
+				await page.waitForFunction(() =>
+					document
+						.getElementById('generate-status')
+						.textContent.includes('Asking the backend'),
+				)
+				await follow('/maps/', 'nav a[href="/maps/"]')
+			} finally {
+				finishGeneration()
+			}
+			await delay(500)
+			assert.equal(providerCalls, callsBefore + 1)
+			assert.equal(
+				await page.$eval('body', (body) =>
+					body.classList.contains('has-graph'),
+				),
+				false,
+			)
+			await follow('/', '.brand')
+			await page.$eval('#manual-book-form', (form) => {
+				form.elements.namedItem('title').value = 'Returned home'
+				form.requestSubmit()
+			})
+			await page.waitForFunction(() =>
+				document
+					.getElementById('selected-book-card')
+					.textContent.includes('Returned home'),
+			)
+			assert.equal(
+				await page.evaluate(() => window.navigationMarker),
+				'same-document',
+			)
+			assert.equal(page.url(), base)
+			apiReply = null
 		},
 	)
 	assert.deepEqual(errors, [])

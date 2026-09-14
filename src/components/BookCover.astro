@@ -31,13 +31,15 @@ const palette =
 	<slot />
 </div>
 <script>
-for (const img of document.querySelectorAll<HTMLImageElement>(
-	'[data-book-cover] img',
-)) {
-	const showFallback = () => {
-		img.hidden = true
+document.addEventListener('astro:page-load', () => {
+	for (const img of document.querySelectorAll<HTMLImageElement>(
+		'[data-book-cover] img',
+	)) {
+		const showFallback = () => {
+			img.hidden = true
+		}
+		img.addEventListener('error', showFallback, { once: true })
+		if (img.complete && img.naturalWidth === 0) showFallback()
 	}
-	img.addEventListener('error', showFallback, { once: true })
-	if (img.complete && img.naturalWidth === 0) showFallback()
-}
+})
 </script>

@@ -1,7 +1,8 @@
 import { searchText } from '../../shared/books.mjs'
 
-const input = document.getElementById('library-search')
-if (input) {
+document.addEventListener('astro:page-load', () => {
+	const input = document.getElementById('library-search')
+	if (!input) return
 	const rows = [...document.querySelectorAll('[data-library-book]')],
 		count = document.getElementById('library-count')
 	const filter = () => {
@@ -15,4 +16,4 @@ if (input) {
 	}
 	input.addEventListener('input', filter)
 	filter()
-}
+})

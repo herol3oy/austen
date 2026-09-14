@@ -195,16 +195,6 @@ section {
 	line-height: 1;
 }
 
-.brand-note {
-	margin-top: 0.22rem;
-	color: var(--color-ink-muted);
-	font-size: 0.61rem;
-	font-weight: 500;
-	letter-spacing: 0.16em;
-	line-height: 1;
-	text-transform: uppercase;
-}
-
 .github-link {
 	display: inline-flex;
 	align-items: center;
@@ -1273,11 +1263,6 @@ footer p small {
 		font-size: 1.35rem;
 	}
 
-	.brand-note,
-	.github-label {
-		display: none;
-	}
-
 	.github-link {
 		gap: 0.5rem;
 	}
@@ -1814,6 +1799,7 @@ a.book-cover-link:focus-visible > .book-cover {
 
 /* Homepage: create a map, then explore a small shelf of published classics. */
 .homepage-generator #search-section {
+	margin-inline: 0;
 	padding-block: clamp(3rem, 6vw, 5rem) 1rem;
 	scroll-margin-top: 2rem;
 }
