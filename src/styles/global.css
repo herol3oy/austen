@@ -1467,6 +1467,30 @@ a {
 	min-width: 0;
 	gap: 0.85rem;
 }
+.library-pagination {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	margin: -2rem 0 4rem;
+}
+.library-pagination button {
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	padding: 0.5rem 0.75rem;
+	border: 1px solid var(--color-rule);
+	background: var(--color-surface);
+	color: var(--color-green);
+}
+.library-pagination button[aria-current="page"] {
+	background: var(--color-green);
+	color: var(--color-paper);
+}
+.library-pagination button:disabled {
+	opacity: 0.45;
+	cursor: default;
+}
 .metadata-note,
 .availability {
 	font-size: 0.85rem;

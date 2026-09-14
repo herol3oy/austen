@@ -26,14 +26,15 @@ const published = entries.filter((book) => book.publishedUrl)
 	</section>
 	<section aria-labelledby="library-heading">
 		<div class="section-heading">
-			<h2 id="library-heading">Published maps</h2>
+			<h2 id="library-heading" tabindex="-1">Published maps</h2>
 			<span>{published.length.toLocaleString('en')} maps</span>
 		</div>
 		{published.length > 0 ? <>
       <label for="library-search">Find a map</label>
       <input id="library-search" type="search" placeholder="Title, author, or year" />
       <p id="library-count" role="status"></p>
-      <ul class="library-list">{published.map(book => <BookCard book={book} headingLevel="h3" />)}</ul>
+      <ul class="library-list" data-page-size="24">{published.map(book => <BookCard book={book} headingLevel="h3" />)}</ul>
+      <nav class="library-pagination" aria-label="Map pages" hidden></nav>
     </> : <div class="empty-library">
       <h3>The first maps are still to come.</h3>
       <p>Browse the catalog or create a map in your own workspace.</p>
