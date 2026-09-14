@@ -207,7 +207,8 @@ test('built static library and migrated workspace', {
 	let searchRequests = 0
 	let providerCalls = 0,
 		apiReply = null,
-		discoveryReply = null
+		discoveryReply = null,
+		contactReply = null
 	await page.setRequestInterception(true)
 	page.on('request', (request) => {
 		if (
@@ -244,6 +245,13 @@ test('built static library and migrated workspace', {
 			discoveryReply
 		) {
 			void discoveryReply(request)
+			return
+		}
+		if (
+			request.url().startsWith('https://api.web3forms.com/submit') &&
+			contactReply
+		) {
+			void contactReply(request)
 			return
 		}
 		void request.abort()
@@ -395,6 +403,7 @@ test('built static library and migrated workspace', {
 					'Generate a Character Relationship Map — Austen',
 					'Generate a character relationship map',
 				],
+				['contact/', 'Contact — Austen', 'Contact Austen'],
 			]
 			for (const [path, title, heading] of expected) {
 				const $ = await builtPage(path)
@@ -450,6 +459,33 @@ test('built static library and migrated workspace', {
 				),
 				/54 books.*52 published/,
 			)
+			const contact = await builtPage('contact/')
+			assert.equal(
+				contact('meta[name="description"]').attr('content'),
+				'Contact Austen with questions, feedback, or corrections about character relationship maps.',
+			)
+			assert.equal(
+				contact('#contact-form').attr('action'),
+				'https://api.web3forms.com/submit',
+			)
+			assert.equal(contact('#contact-form').attr('method'), 'POST')
+			assert.equal(
+				contact('input[name="access_key"]').attr('value'),
+				'90fe3833-26f2-4e42-b640-71165bc11c55',
+			)
+			assert.deepEqual(
+				contact('#contact-form [required]')
+					.map((_, field) => contact(field).attr('name'))
+					.get(),
+				['name', 'email', 'message'],
+			)
+			assert.deepEqual(
+				contact('#contact-form label')
+					.map((_, label) => contact(label).attr('for'))
+					.get(),
+				['contact-name', 'contact-email', 'contact-message'],
+			)
+			assert.equal(contact('#contact-result').attr('role'), 'status')
 			assert.equal(
 				(await builtPage('maps/'))('a[href="/catalog/"]').first().text(),
 				'Explore the full catalog',
@@ -474,6 +510,7 @@ test('built static library and migrated workspace', {
 				'',
 				'maps/',
 				'catalog/',
+				'contact/',
 				'authors/',
 				'authors/jane-austen/',
 				'authors/author-one/',
@@ -494,6 +531,111 @@ test('built static library and migrated workspace', {
 				await readFile(resolve(root, 'dist/robots.txt'), 'utf8'),
 				/Disallow:/,
 			)
+		},
+	)
+	await t.test(
+		'contact form submits safely and handles API and network failures after client navigation',
+		async () => {
+			await page.setViewport({ width: 375, height: 900 })
+			await page.setJavaScriptEnabled(true)
+			await page.goto(base)
+			await Promise.all([
+				page.waitForFunction(
+					() =>
+						location.pathname === '/contact/' &&
+						document.getElementById('contact-form')?.dataset.initialized ===
+							'true',
+				),
+				page.click('nav a[href="/contact/"]'),
+			])
+
+			await page.type('#contact-name', 'Jane Reader')
+			await page.type('#contact-email', 'jane@example.com')
+			await page.type('#contact-message', 'A thoughtful note')
+
+			let releaseSuccess
+			contactReply = async (request) => {
+				await new Promise((resolve) => {
+					releaseSuccess = resolve
+				})
+				await request.respond({
+					status: 200,
+					contentType: 'application/json',
+					headers: { 'Access-Control-Allow-Origin': '*' },
+					body: JSON.stringify({ success: true }),
+				})
+			}
+			// Wait for smooth scrolling to settle before clicking the mobile form.
+			const submit = page.locator('#contact-form button')
+			await Promise.all([
+				page.waitForRequest('https://api.web3forms.com/submit'),
+				submit.click(),
+			])
+			assert.equal(
+				await page.$eval('#contact-result', (result) => result.textContent),
+				'Sending...',
+			)
+			assert.equal(
+				await page.$eval('#contact-form button', (button) => button.disabled),
+				true,
+			)
+			releaseSuccess()
+			await page.waitForFunction(
+				() =>
+					document.getElementById('contact-result')?.dataset.tone === 'success',
+			)
+			assert.equal(
+				await page.$eval('#contact-result', (result) => result.textContent),
+				'Form Submitted Successfully',
+			)
+			assert.deepEqual(
+				await page.$$eval(
+					'#contact-form input:not([type="hidden"]), #contact-form textarea',
+					(fields) => fields.map((field) => field.value),
+				),
+				['', '', ''],
+			)
+
+			await page.type('#contact-name', 'Jane Reader')
+			await page.type('#contact-email', 'jane@example.com')
+			await page.type('#contact-message', 'Please keep this message')
+			contactReply = (request) =>
+				request.respond({
+					status: 422,
+					contentType: 'application/json',
+					headers: { 'Access-Control-Allow-Origin': '*' },
+					body: JSON.stringify({
+						success: false,
+						message: '<strong>Please try again</strong>',
+					}),
+				})
+			await submit.click()
+			await page.waitForFunction(
+				() =>
+					document.getElementById('contact-result')?.dataset.tone === 'error',
+			)
+			assert.equal(
+				await page.$eval('#contact-result', (result) => result.textContent),
+				'<strong>Please try again</strong>',
+			)
+			assert.equal(await page.$('#contact-result strong'), null)
+			assert.equal(
+				await page.$eval('#contact-message', (field) => field.value),
+				'Please keep this message',
+			)
+
+			contactReply = (request) => request.abort()
+			await submit.click()
+			await page.waitForFunction(
+				() =>
+					document.getElementById('contact-result')?.textContent ===
+					'Something went wrong. Please try again.',
+			)
+			assert.equal(
+				await page.$eval('#contact-form button', (button) => button.disabled),
+				false,
+			)
+			contactReply = null
 		},
 	)
 	await t.test(
@@ -1056,7 +1198,7 @@ test('built static library and migrated workspace', {
 				await page.$$eval('nav a', (links) =>
 					links.map((link) => link.textContent),
 				),
-				['Maps', 'Authors', 'GitHub'],
+				['Maps', 'Authors', 'Contact', 'GitHub'],
 			)
 			for (const [width, expected] of [
 				[1280, 4],

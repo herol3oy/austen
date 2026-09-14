@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+	title="Contact — Austen"
+	description="Contact Austen with questions, feedback, or corrections about character relationship maps."
+>
+	<div class="contact-page">
+		<section class="library-intro" aria-labelledby="contact-heading">
+			<p class="section-kicker">Get in touch</p>
+			<h1 id="contact-heading">Contact Austen</h1>
+			<p>
+				Have a correction, suggestion, or question about a map? Send us a
+				message. Austen is always evolving, and your feedback helps make the
+				maps more accurate and useful.
+			</p>
+		</section>
+		<form
+			id="contact-form"
+			class="contact-form"
+			action="https://api.web3forms.com/submit"
+			method="POST"
+		>
+			<input
+				type="hidden"
+				name="access_key"
+				value="90fe3833-26f2-4e42-b640-71165bc11c55"
+			>
+			<div class="contact-field">
+				<label for="contact-name">Name</label>
+				<input
+					id="contact-name"
+					type="text"
+					name="name"
+					autocomplete="name"
+					maxlength="120"
+					required
+				>
+			</div>
+			<div class="contact-field">
+				<label for="contact-email">Email</label>
+				<input
+					id="contact-email"
+					type="email"
+					name="email"
+					autocomplete="email"
+					maxlength="254"
+					required
+				>
+			</div>
+			<div class="contact-field">
+				<label for="contact-message">Message</label>
+				<textarea
+					id="contact-message"
+					name="message"
+					rows="8"
+					maxlength="5000"
+					required
+				></textarea>
+			</div>
+			<button type="submit">Submit Form</button>
+			<p
+				id="contact-result"
+				class="status-line"
+				role="status"
+				aria-live="polite"
+			></p>
+		</form>
+	</div>
+
+	<script>
+	const setupContactForm = () => {
+		const form = document.getElementById(
+			'contact-form',
+		) as HTMLFormElement | null
+		const result = document.getElementById('contact-result')
+		const button = form?.querySelector(
+			'button[type="submit"]',
+		) as HTMLButtonElement | null
+		if (!form || !result || !button || form.dataset.initialized) return
+
+		form.dataset.initialized = 'true'
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault()
+			result.textContent = 'Sending...'
+			delete result.dataset.tone
+			button.disabled = true
+
+			try {
+				const response = await fetch('https://api.web3forms.com/submit', {
+					method: 'POST',
+					body: new FormData(form),
+				})
+				const data = (await response.json()) as {
+					success?: boolean
+					message?: unknown
+				}
+
+				if (response.ok && data.success) {
+					result.textContent = 'Form Submitted Successfully'
+					result.dataset.tone = 'success'
+					form.reset()
+				} else {
+					result.textContent =
+						typeof data.message === 'string'
+							? data.message
+							: 'Something went wrong. Please try again.'
+					result.dataset.tone = 'error'
+				}
+			} catch {
+				result.textContent = 'Something went wrong. Please try again.'
+				result.dataset.tone = 'error'
+			} finally {
+				button.disabled = false
+			}
+		})
+	}
+
+	document.addEventListener('astro:page-load', setupContactForm)
+	setupContactForm()
+	</script>
+</BaseLayout>
+
+<style>
+.contact-page {
+	max-width: 760px;
+}
+.contact-form {
+	display: grid;
+	gap: 1.25rem;
+	padding: 1.75rem 0 2rem;
+	border-top: 1px solid var(--color-rule);
+	border-bottom: 1px solid var(--color-rule);
+}
+.contact-field {
+	display: grid;
+	gap: 0.45rem;
+}
+.contact-field label {
+	font-size: 0.78rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+.contact-field input,
+.contact-field textarea {
+	width: 100%;
+	padding: 0.8rem 0.9rem;
+	border: 1px solid var(--color-rule);
+	background: var(--color-surface);
+	color: var(--color-ink);
+}
+.contact-field textarea {
+	min-height: 12rem;
+	resize: vertical;
+}
+.contact-field input:focus,
+.contact-field textarea:focus {
+	border-color: var(--color-green);
+	box-shadow: 0 0 0 3px var(--color-green-faded);
+}
+.contact-form button {
+	justify-self: start;
+}
+.contact-form .status-line {
+	margin-top: 0;
+}
+@media (max-width: 480px) {
+	.contact-form button {
+		width: 100%;
+	}
+}
+</style>
