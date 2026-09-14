@@ -1439,6 +1439,16 @@ a {
 	color: var(--color-green);
 	text-underline-offset: 0.2em;
 }
+.site-header nav a {
+	text-decoration-color: transparent;
+	transition:
+		color 180ms ease,
+		text-decoration-color 180ms ease;
+}
+.site-header nav a:is(:hover, :focus-visible, [aria-current]) {
+	color: var(--color-green-dark);
+	text-decoration-color: currentColor;
+}
 .library-intro {
 	max-width: 850px;
 	margin: 2rem 0 3rem;
@@ -1490,6 +1500,13 @@ a {
 .library-pagination button:disabled {
 	opacity: 0.45;
 	cursor: default;
+}
+.library-pagination button:not(:disabled):is(:hover, :focus-visible) {
+	border-color: var(--color-green);
+	background: var(--color-green-faded);
+}
+.library-pagination button[aria-current="page"]:is(:hover, :focus-visible) {
+	background: var(--color-green-dark);
 }
 .metadata-note,
 .availability {

@@ -33,6 +33,12 @@ const {
 	structuredData = [],
 } = Astro.props
 const base = import.meta.env.BASE_URL
+const currentNav = (section: string) => {
+	const href = `${base}${section}/`
+	if (Astro.url.pathname === href) return 'page'
+	if (Astro.url.pathname.startsWith(href)) return 'location'
+	return undefined
+}
 const pageUrl = new URL(canonicalUrl || Astro.url.pathname, Astro.site).href
 const preview = socialImage ?? {
 	url: `${base}logo.png`,
@@ -91,8 +97,11 @@ const socialImageAlt = preview.alt
 				</span>
 			</a>
 			<nav aria-label="Main navigation">
-				<a href={`${base}maps/`}>Maps</a><a href={`${base}authors/`}>Authors</a
-				><a href={`${base}contact/`}>Contact</a
+				<a href={`${base}maps/`} aria-current={currentNav('maps')}>Maps</a
+				><a href={`${base}authors/`} aria-current={currentNav('authors')}
+					>Authors</a
+				><a href={`${base}contact/`} aria-current={currentNav('contact')}
+					>Contact</a
 				><a href="https://github.com/herol3oy/austen/">GitHub</a>
 			</nav>
 		</header>
