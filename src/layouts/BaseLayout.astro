@@ -35,8 +35,8 @@ const base = import.meta.env.BASE_URL
 const pageUrl = new URL(canonicalUrl || Astro.url.pathname, Astro.site).href
 const preview = socialImage ?? {
 	url: `${base}logo.png`,
-	width: 323,
-	height: 361,
+	width: 1254,
+	height: 1254,
 	type: 'image/png',
 	alt: 'Austen logo',
 }
@@ -69,6 +69,7 @@ const socialImageAlt = preview.alt
 		<meta name="twitter:image" content={socialImageUrl}>
 		<meta name="twitter:image:alt" content={socialImageAlt}>
 		<link rel="icon" href={`${base}favicon.ico`}>
+		<link rel="icon" type="image/svg+xml" sizes="any" href={`${base}logo.svg`}>
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link rel="canonical" href={pageUrl}>
 		{structuredData.map(data => <script is:inline type="application/ld+json" set:html={serializeStructuredData(data)} />)}
@@ -77,7 +78,7 @@ const socialImageAlt = preview.alt
 		<header class="site-header container">
 			<a href={base} class="brand" aria-label="Austen home">
 				<img
-					src={`${base}logo.png`}
+					src={`${base}logo.svg`}
 					alt=""
 					class="brand-mark"
 					width="64"
