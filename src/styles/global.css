@@ -164,21 +164,18 @@ section {
 	gap: 0.8rem;
 	color: inherit;
 	text-decoration: none;
+	transition: opacity 180ms ease-in-out;
 }
 
 .brand-mark {
-	width: 48px;
-	height: 54px;
+	width: 64px;
+	height: 64px;
 	object-fit: contain;
 	opacity: 0.88;
-	transition:
-		opacity 180ms ease,
-		transform 180ms ease;
 }
 
-.brand:hover .brand-mark {
-	opacity: 1;
-	transform: rotate(-1.5deg);
+.brand:hover {
+	opacity: 0.7;
 }
 
 .brand-copy {
@@ -1255,8 +1252,8 @@ footer p small {
 	}
 
 	.brand-mark {
-		width: 39px;
-		height: 44px;
+		width: 64px;
+		height: 64px;
 	}
 
 	.brand-name {
