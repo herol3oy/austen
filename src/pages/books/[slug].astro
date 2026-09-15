@@ -117,6 +117,9 @@ const structuredData = [
 				Map generated {revision.generatedAt.slice(0, 10)}{" · "}
 				{automatic ? `Published ${review.publishedAt.slice(0, 10)}` : `Reviewed ${review.reviewedAt.slice(0, 10)} · ${review.reviewer}`}
 			</p>
+			<a class="book-read-link" href={book.ebookUrl} target="_blank" rel="noopener noreferrer">
+				Read the full book on Standard Ebooks
+			</a>
 		</div>
 	</section>
 	<p
@@ -173,6 +176,28 @@ const structuredData = [
 	max-width: 70ch;
 	color: var(--color-ink-muted);
 	overflow-wrap: anywhere;
+}
+.book-read-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	min-height: 44px;
+	margin-top: 1rem;
+	padding: 0.72rem 1.15rem;
+	border: 1px solid var(--color-green);
+	border-radius: var(--radius);
+	background: var(--color-green);
+	color: var(--color-surface);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	text-align: center;
+	text-decoration: none;
+	overflow-wrap: anywhere;
+}
+.book-read-link:hover {
+	background: var(--color-green-dark);
 }
 .book-details {
 	padding-top: 1.5rem;
