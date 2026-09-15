@@ -117,7 +117,12 @@ const structuredData = [
 				Map generated {revision.generatedAt.slice(0, 10)}{" · "}
 				{automatic ? `Published ${review.publishedAt.slice(0, 10)}` : `Reviewed ${review.reviewedAt.slice(0, 10)} · ${review.reviewer}`}
 			</p>
-			<a class="book-read-link" href={book.ebookUrl} target="_blank" rel="noopener noreferrer">
+			<a
+				class="book-read-link"
+				href={book.ebookUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				Read the full book on Standard Ebooks
 			</a>
 		</div>

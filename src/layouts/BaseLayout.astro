@@ -49,6 +49,11 @@ const preview = socialImage ?? {
 }
 const socialImageUrl = new URL(preview.url, Astro.site).href
 const socialImageAlt = preview.alt
+
+const startYear = 2026
+const currentYear = new Date().getFullYear()
+const yearLabel =
+	currentYear > startYear ? `${startYear}–${currentYear}` : `${startYear}`
 ---
 
 <!doctype html>
@@ -80,7 +85,13 @@ const socialImageAlt = preview.alt
 		<link rel="sitemap" href="/sitemap-index.xml">
 		<link rel="canonical" href={pageUrl}>
 		<ClientRouter />
-		{structuredData.map(data => <script is:inline type="application/ld+json" set:html={serializeStructuredData(data)} />)}
+		{structuredData.map((data) => (
+				<script
+					is:inline
+					type="application/ld+json"
+					set:html={serializeStructuredData(data)}
+				/>
+			))}
 	</head>
 	<body>
 		<header class="site-header container">
@@ -97,23 +108,19 @@ const socialImageAlt = preview.alt
 				</span>
 			</a>
 			<nav aria-label="Main navigation">
-				<a href={`${base}maps/`} aria-current={currentNav('maps')}>Maps</a
-				><a href={`${base}authors/`} aria-current={currentNav('authors')}
+				<a href={`${base}maps/`} aria-current={currentNav("maps")}>Maps</a
+				><a href={`${base}authors/`} aria-current={currentNav("authors")}
 					>Authors</a
-				><a href={`${base}contact/`} aria-current={currentNav('contact')}
+				><a href={`${base}contact/`} aria-current={currentNav("contact")}
 					>Contact</a
 				><a href="https://github.com/herol3oy/austen/">GitHub</a>
 			</nav>
 		</header>
 		<main class="container"><slot /></main>
 		<footer class="container">
-			<p>
-				<small
-					>Built in Warsaw, Poland ·
-					<a href="https://github.com/herol3oy/austen/">GitHub</a>
-					· Covers from
-					<a href="https://standardebooks.org/">Standard Ebooks</a></small
-				><small class="footer-mark">Stories are made of connections.</small>
+			<p class="footer-row">
+				<small>Austen {yearLabel}</small>
+				<small>Built in Warsaw, Poland</small>
 			</p>
 		</footer>
 	</body>

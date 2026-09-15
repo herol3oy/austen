@@ -1877,3 +1877,10 @@ a.book-cover-link:focus-visible > .book-cover {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }
+
+.footer-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
