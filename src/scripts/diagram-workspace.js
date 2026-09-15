@@ -5,6 +5,10 @@ import {
 	sanitizeMermaid,
 	validateDiagram,
 } from '../../shared/diagram-policy.mjs'
+import {
+	DIAGRAM_BACKGROUND,
+	themeDiagramSvg,
+} from '../../shared/diagram-theme.mjs'
 import config from '../../shared/mermaid.config.json'
 import { checkSvgElements, checkSvgEnvelope } from '../../shared/svg-policy.mjs'
 import { createGenerator } from './generator.js'
@@ -26,7 +30,7 @@ const DIAGRAM_KEYBOARD_PAN_STEP = 40
 const EDITOR_PREVIEW_DELAY_MS = 400
 const PNG_EXPORT_SCALE = 2
 const PNG_EXPORT_MAX_DIMENSION = 8192
-const PNG_EXPORT_BACKGROUND = '#fbf9f4'
+const PNG_EXPORT_BACKGROUND = DIAGRAM_BACKGROUND
 
 document.addEventListener('astro:page-load', () => {
 	if (!document.getElementById('workspace-data')) return
@@ -566,6 +570,7 @@ document.addEventListener('astro:page-load', () => {
 		if (loadToken !== workspaceLoadToken) return
 		validateBrowserSvg(svg)
 		cancelEditorPreviewWork()
+		svg = themeDiagramSvg(svg)
 		diagramRenderToken++
 		cleanDiagramSvg = svg
 		lastRenderedGraph = graph

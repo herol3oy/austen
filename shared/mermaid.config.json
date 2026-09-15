@@ -5,13 +5,13 @@
 	"flowchart": { "htmlLabels": false },
 	"theme": "base",
 	"themeVariables": {
-		"primaryColor": "#ece6d9",
-		"primaryTextColor": "#282722",
-		"primaryBorderColor": "#40584b",
-		"lineColor": "#727066",
-		"secondaryColor": "#f5f1e8",
-		"tertiaryColor": "#fbf9f4",
-		"edgeLabelBackground": "#fbf9f4",
+		"primaryColor": "#f1e3de",
+		"primaryTextColor": "#3d2b29",
+		"primaryBorderColor": "#915366",
+		"lineColor": "#725b56",
+		"secondaryColor": "#fbf5f2",
+		"tertiaryColor": "#fffaf7",
+		"edgeLabelBackground": "#fffaf7",
 		"fontFamily": "Inter, system-ui, sans-serif",
 		"fontSize": "14px"
 	}

@@ -4,7 +4,47 @@ import { resolve } from 'node:path'
 import test from 'node:test'
 import { load } from 'cheerio'
 import { ROOT, readJson } from '../scripts/files.mjs'
+import { validateSvg } from '../scripts/validate-maps.mjs'
 import { parseDiagram, validateDiagram } from '../shared/diagram-policy.mjs'
+import { themeDiagramSvg } from '../shared/diagram-theme.mjs'
+
+test('diagram theme changes presentation without changing labels, selectors, references or geometry', () => {
+	const svg = `<svg id="40584b" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+<style>#40584b .node {fill:#ECE6D9;stroke:#40584b} #40584b text{fill:#282722} .labelBkg{background-color:rgba(251, 249, 244, 0.5)}</style>
+<defs><linearGradient id="fbf9f4"><stop stop-color="#40584b" offset="0"/></linearGradient></defs>
+<rect id="ece6d9" x="12" y="24" width="120" height="40" fill="url(#fbf9f4)" stroke='#40584b' style="fill:#ece6d9;transform:translate(2px, 4px);stroke-width:2px"/>
+<text fill="#282722" aria-label="fill='#40584b' > rose">#40584b fill="#fbf9f4" &amp; Elizabeth</text>
+</svg>`
+	const themed = themeDiagramSvg(svg)
+	assert.deepEqual(validateSvg(themed), validateSvg(svg))
+	assert.equal(themeDiagramSvg(themed), themed)
+	assert.match(themed, /#40584b \.node \{fill:#f1e3de;stroke:#915366\}/)
+	assert.match(themed, /rgba\(255, 250, 247, 0\.5\)/)
+	assert.match(themed, /stop-color="#915366"/)
+	assert.match(themed, /fill="url\(#fbf9f4\)" stroke='#915366'/)
+	assert.match(themed, /transform:translate\(2px, 4px\);stroke-width:2px/)
+	const original = load(svg, { xml: true })
+	const result = load(themed, { xml: true })
+	assert.equal(result('text').text(), original('text').text())
+	assert.equal(
+		result('text').attr('aria-label'),
+		original('text').attr('aria-label'),
+	)
+	for (const attribute of ['id', 'x', 'y', 'width', 'height'])
+		assert.equal(
+			result('rect').attr(attribute),
+			original('rect').attr(attribute),
+		)
+})
+
+test('diagram recoloring does not bypass SVG validation', () => {
+	const unsafe =
+		'<svg viewBox="0 0 200 100"><rect fill="#40584b" onclick="alert(1)"/></svg>'
+	assert.throws(
+		() => validateSvg(themeDiagramSvg(unsafe)),
+		/Unsafe SVG attribute/,
+	)
+})
 
 test('parser resolves inline declarations and later labels without reordering or duplicating characters', () => {
 	const source =
@@ -108,7 +148,51 @@ test('every published graph has complete character and relationship extraction m
 		const prefix = resolve(ROOT, 'data/maps', book.slug, pointer.revision)
 		const revision = await readJson(`${prefix}.json`)
 		const { nodes, edges } = parseDiagram(revision.mermaid)
-		const $ = load(await readFile(`${prefix}.svg`, 'utf8'), { xml: true })
+		const originalSvg = await readFile(`${prefix}.svg`, 'utf8')
+		const themedSvg = themeDiagramSvg(originalSvg)
+		assert.deepEqual(validateSvg(themedSvg), validateSvg(originalSvg))
+		assert.equal(
+			themeDiagramSvg(themedSvg),
+			themedSvg,
+			`${book.slug}: stable theme`,
+		)
+		const $ = load(originalSvg, { xml: true })
+		const themed = load(themedSvg, { xml: true })
+		for (const selector of ['text', 'tspan', 'title', 'desc'])
+			assert.deepEqual(
+				themed(selector)
+					.toArray()
+					.map((node) => themed(node).text()),
+				$(selector)
+					.toArray()
+					.map((node) => $(node).text()),
+				`${book.slug}: unchanged ${selector}`,
+			)
+		assert.deepEqual(
+			themed('[id], path, rect')
+				.toArray()
+				.map((node) => [
+					node.attribs.id,
+					node.attribs.d,
+					node.attribs.x,
+					node.attribs.y,
+					node.attribs.width,
+					node.attribs.height,
+					node.attribs.transform,
+				]),
+			$('[id], path, rect')
+				.toArray()
+				.map((node) => [
+					node.attribs.id,
+					node.attribs.d,
+					node.attribs.x,
+					node.attribs.y,
+					node.attribs.width,
+					node.attribs.height,
+					node.attribs.transform,
+				]),
+			`${book.slug}: unchanged geometry and IDs`,
+		)
 		assert.equal(
 			nodes.length,
 			$('.nodes .node').length,

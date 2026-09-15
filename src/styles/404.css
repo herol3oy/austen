@@ -7,7 +7,7 @@ body.error-page {
 	background:
 		radial-gradient(
 			circle at 85% 10%,
-			rgba(64, 88, 75, 0.09),
+			rgba(145, 83, 102, 0.09),
 			transparent 28rem
 		),
 		var(--color-paper);
@@ -20,7 +20,7 @@ body.error-page {
 	padding: clamp(2rem, 7vw, 5.5rem);
 	border: 1px solid var(--color-rule);
 	border-radius: var(--radius-lg);
-	background: rgba(251, 249, 244, 0.72);
+	background: rgba(255, 250, 247, 0.72);
 	box-shadow: var(--shadow-md);
 	overflow: hidden;
 }
@@ -40,7 +40,7 @@ body.error-page {
 	align-items: center;
 	gap: 0.75rem;
 	margin-bottom: 2.5rem;
-	color: var(--color-green);
+	color: var(--color-accent);
 	font-size: 0.67rem;
 	font-weight: 600;
 	letter-spacing: 0.16em;
@@ -88,9 +88,9 @@ body.error-page {
 	gap: 0.7rem;
 	min-height: 44px;
 	padding: 0.75rem 1.1rem;
-	border: 1px solid var(--color-green);
+	border: 1px solid var(--color-accent);
 	border-radius: var(--radius);
-	background: var(--color-green);
+	background: var(--color-accent);
 	color: var(--color-surface);
 	font-size: 0.74rem;
 	font-weight: 600;
@@ -102,7 +102,7 @@ body.error-page {
 }
 
 .error-link:hover {
-	background: var(--color-green-dark);
+	background: var(--color-accent-dark);
 	transform: translateY(-1px);
 }
 

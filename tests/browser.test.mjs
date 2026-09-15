@@ -30,6 +30,56 @@ import { fixtureRoot, generatedAt, graph, success } from './helpers.mjs'
 const execute = promisify(execFile)
 const delay = (ms) => new Promise((r) => setTimeout(r, ms))
 
+async function clickInView(page, selector) {
+	const element = await page.waitForSelector(selector, { visible: true })
+	try {
+		await element.evaluate(async (node) => {
+			await document.fonts.ready
+			// Locator checks allow partial visibility, but its final click may
+			// scroll again. Cancel smooth scrolling and expose the whole control.
+			node.scrollIntoView({
+				behavior: 'instant',
+				block: 'center',
+				inline: 'center',
+			})
+		})
+		await page
+			.locator(selector)
+			.filter((node) => {
+				const rect = node.getBoundingClientRect()
+				return (
+					rect.top >= 0 &&
+					rect.left >= 0 &&
+					rect.bottom <= innerHeight &&
+					rect.right <= innerWidth &&
+					node.contains(
+						document.elementFromPoint(
+							rect.left + rect.width / 2,
+							rect.top + rect.height / 2,
+						),
+					)
+				)
+			})
+			.click()
+	} finally {
+		await element.dispose()
+	}
+}
+
+async function partiallyExposeControl(page, selector) {
+	await page.$eval(selector, (node) => {
+		node.scrollIntoView({ behavior: 'instant', block: 'end' })
+		window.scrollBy({ top: -node.offsetHeight / 2, behavior: 'instant' })
+	})
+	assert.ok(
+		await page.$eval(selector, (node) => {
+			const rect = node.getBoundingClientRect()
+			return rect.top < innerHeight && rect.bottom > innerHeight
+		}),
+		`${selector} starts partly outside the viewport`,
+	)
+}
+
 test('built static library and migrated workspace', {
 	timeout: 180000,
 }, async (t) => {
@@ -257,6 +307,46 @@ test('built static library and migrated workspace', {
 		void request.abort()
 	})
 	const publishedUrl = `${base}books/${book.slug}/`
+	await t.test(
+		'published maps match the site palette with and without JavaScript',
+		async () => {
+			for (const javascript of [false, true]) {
+				await page.setJavaScriptEnabled(javascript)
+				await page.goto(publishedUrl)
+				if (javascript)
+					await page.waitForSelector('#mermaid-container.is-interactive')
+				const colors = await page.evaluate(() => {
+					const root = getComputedStyle(document.documentElement)
+					const rgb = (name) => {
+						const hex = root.getPropertyValue(name).trim().slice(1)
+						return `rgb(${hex
+							.match(/../g)
+							.map((channel) => Number.parseInt(channel, 16))
+							.join(', ')})`
+					}
+					const node = getComputedStyle(
+						document.querySelector('#mermaid-container .node rect'),
+					)
+					const text = getComputedStyle(
+						document.querySelector('#mermaid-container .node text'),
+					)
+					const edge = getComputedStyle(
+						document.querySelector('#mermaid-container .flowchart-link'),
+					)
+					return {
+						actual: [node.fill, node.stroke, text.fill, edge.stroke],
+						expected: [
+							'--color-paper-dim',
+							'--color-accent',
+							'--color-ink',
+							'--color-ink-muted',
+						].map(rgb),
+					}
+				})
+				assert.deepEqual(colors.actual, colors.expected)
+			}
+		},
+	)
 	await t.test(
 		'CSS protections survive competing layout and inline styles',
 		async (t) => {
@@ -535,7 +625,7 @@ test('built static library and migrated workspace', {
 	)
 	await t.test(
 		'contact form submits safely and handles API and network failures after client navigation',
-		async () => {
+		async (t) => {
 			await page.setViewport({ width: 375, height: 900 })
 			await page.setJavaScriptEnabled(true)
 			await page.goto(base)
@@ -554,6 +644,10 @@ test('built static library and migrated workspace', {
 			await page.type('#contact-message', 'A thoughtful note')
 
 			let releaseSuccess
+			t.after(() => {
+				releaseSuccess?.()
+				contactReply = null
+			})
 			contactReply = async (request) => {
 				await new Promise((resolve) => {
 					releaseSuccess = resolve
@@ -565,11 +659,11 @@ test('built static library and migrated workspace', {
 					body: JSON.stringify({ success: true }),
 				})
 			}
-			// Wait for smooth scrolling to settle before clicking the mobile form.
-			const submit = page.locator('#contact-form button')
+			// Exercise the partial-visibility case that can trigger a second scroll.
+			await partiallyExposeControl(page, '#contact-form button')
 			await Promise.all([
 				page.waitForRequest('https://api.web3forms.com/submit'),
-				submit.click(),
+				clickInView(page, '#contact-form button'),
 			])
 			assert.equal(
 				await page.$eval('#contact-result', (result) => result.textContent),
@@ -609,7 +703,7 @@ test('built static library and migrated workspace', {
 						message: '<strong>Please try again</strong>',
 					}),
 				})
-			await submit.click()
+			await clickInView(page, '#contact-form button')
 			await page.waitForFunction(
 				() =>
 					document.getElementById('contact-result')?.dataset.tone === 'error',
@@ -625,7 +719,7 @@ test('built static library and migrated workspace', {
 			)
 
 			contactReply = (request) => request.abort()
-			await submit.click()
+			await clickInView(page, '#contact-form button')
 			await page.waitForFunction(
 				() =>
 					document.getElementById('contact-result')?.textContent ===
@@ -1501,7 +1595,17 @@ test('built static library and migrated workspace', {
 			assert.equal(await page.$eval('#mermaid-source', (n) => n.value), graph)
 		},
 	)
-	await t.test('pan/zoom and complete SVG/PNG exports work', async () => {
+	await t.test('pan/zoom and complete SVG/PNG exports work', async (t) => {
+		t.after(() => page.setViewport({ width: 1280, height: 900 }))
+		await page.setViewport({ width: 1280, height: 600 })
+		await page.setJavaScriptEnabled(true)
+		await page.goto(publishedUrl)
+		await page.waitForSelector('#mermaid-container.is-interactive svg')
+		await page.waitForFunction(
+			() =>
+				!document.getElementById('zoom-in-btn').disabled &&
+				!document.getElementById('download-svg-btn').disabled,
+		)
 		const downloads = resolve(root, 'downloads')
 		await mkdir(downloads)
 		const cdp = await page.createCDPSession()
@@ -1509,18 +1613,19 @@ test('built static library and migrated workspace', {
 			behavior: 'allow',
 			downloadPath: downloads,
 		})
-		await page.click('#zoom-in-btn')
+		await partiallyExposeControl(page, '#zoom-in-btn')
+		await clickInView(page, '#zoom-in-btn')
 		await page.waitForFunction(
 			() =>
 				document.getElementById('diagram-zoom-level').textContent !== '100%',
 		)
-		await page.click('#download-svg-btn')
+		await clickInView(page, '#download-svg-btn')
 		await page.waitForFunction(() =>
 			document
 				.getElementById('download-status')
 				.textContent.includes('downloaded'),
 		)
-		await page.click('#download-png-btn')
+		await clickInView(page, '#download-png-btn')
 		await page.waitForFunction(() =>
 			document
 				.getElementById('download-status')
@@ -1546,6 +1651,9 @@ test('built static library and migrated workspace', {
 		const dimensions = validateSvg(savedSvg)
 		assert.ok(dimensions.width > 300)
 		assert.ok(!savedSvg.includes('transform-origin'))
+		assert.match(savedSvg, /fill:#f1e3de/)
+		assert.match(savedSvg, /stroke:#915366/)
+		assert.doesNotMatch(savedSvg, /#ece6d9|#40584b/)
 		const png = await readFile(
 			resolve(
 				downloads,
@@ -1555,6 +1663,12 @@ test('built static library and migrated workspace', {
 		assert.equal(png.toString('hex', 0, 8), '89504e470d0a1a0a')
 		assert.ok(png.readUInt32BE(16) >= dimensions.width)
 		assert.ok(png.readUInt32BE(20) >= dimensions.height)
+		const pixel = await sharp(png)
+			.extract({ left: 0, top: 0, width: 1, height: 1 })
+			.removeAlpha()
+			.raw()
+			.toBuffer()
+		assert.deepEqual([...pixel], [255, 250, 247])
 	})
 	await t.test(
 		'catalog filtering and preselection offer a published map without generating',

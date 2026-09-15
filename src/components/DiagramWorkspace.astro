@@ -1,5 +1,8 @@
 ---
+import { themeDiagramSvg } from '../../shared/diagram-theme.mjs'
+
 const { svg = '', initial = null, showHeading = true } = Astro.props
+const themedSvg = svg ? themeDiagramSvg(svg) : ''
 ---
 
 <div id="diagram-workspace" class="diagram-workspace" hidden={!svg}>
@@ -70,7 +73,7 @@ const { svg = '', initial = null, showHeading = true } = Astro.props
 				aria-label="Interactive relationship diagram"
 				aria-describedby="diagram-instructions"
 				tabindex="-1"
-				set:html={svg}
+				set:html={themedSvg}
 			></section>
 		</div>
 	</section>
