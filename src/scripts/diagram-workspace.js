@@ -1,5 +1,4 @@
 import Panzoom from '@panzoom/panzoom'
-import mermaid from 'mermaid'
 import { normalizeBook } from '../../shared/books.mjs'
 import {
 	sanitizeMermaid,
@@ -31,6 +30,23 @@ const EDITOR_PREVIEW_DELAY_MS = 400
 const PNG_EXPORT_SCALE = 2
 const PNG_EXPORT_MAX_DIMENSION = 8192
 const PNG_EXPORT_BACKGROUND = DIAGRAM_BACKGROUND
+
+let mermaidPromise = null
+function loadMermaid() {
+	if (!mermaidPromise) {
+		mermaidPromise = import('mermaid')
+			.then((mod) => {
+				const mermaid = mod.default || mod
+				mermaid.initialize(config)
+				return mermaid
+			})
+			.catch((err) => {
+				mermaidPromise = null
+				throw err
+			})
+	}
+	return mermaidPromise
+}
 
 document.addEventListener('astro:page-load', () => {
 	if (!document.getElementById('workspace-data')) return
@@ -534,7 +550,6 @@ document.addEventListener('astro:page-load', () => {
 	function handleGenerateClick() {
 		generator?.handleGenerateClick()
 	}
-	mermaid.initialize(config)
 	function validateBrowserSvg(svg) {
 		checkSvgEnvelope(svg)
 		const doc = new DOMParser().parseFromString(svg, 'image/svg+xml')
@@ -551,6 +566,7 @@ document.addEventListener('astro:page-load', () => {
 	}
 	async function renderCandidate(source) {
 		validateDiagram(source, { legacy: true })
+		const mermaid = await loadMermaid()
 		const { svg } = await mermaid.render(
 			`candidate-${crypto.randomUUID()}`,
 			source,
@@ -799,6 +815,7 @@ document.addEventListener('astro:page-load', () => {
 	function handleEditClick() {
 		if (!state.graph || !cleanDiagramSvg || state.editorOpen) return
 
+		loadMermaid().catch(() => {})
 		cancelEditorPreviewWork()
 		lastValidDraftGraph = state.graph
 		lastValidDraftSvg = cleanDiagramSvg
@@ -853,6 +870,7 @@ document.addEventListener('astro:page-load', () => {
 
 		try {
 			validateDiagram(normalizedDraft, { legacy: true })
+			const mermaid = await loadMermaid()
 			await mermaid.parse(normalizedDraft)
 		} catch (error) {
 			if (
@@ -1369,6 +1387,14 @@ document.addEventListener('astro:page-load', () => {
 		el.searchInput?.addEventListener('input', handleSearchInput)
 		el.copyBtn.addEventListener('click', handleCopyClick)
 		el.editBtn.addEventListener('click', handleEditClick)
+		el.editBtn.addEventListener(
+			'pointerenter',
+			() => loadMermaid().catch(() => {}),
+			{ once: true },
+		)
+		el.editBtn.addEventListener('focus', () => loadMermaid().catch(() => {}), {
+			once: true,
+		})
 		el.shareBtn.addEventListener('click', handleShareClick)
 		el.downloadPngBtn.addEventListener('click', () =>
 			handleDiagramDownload('png'),

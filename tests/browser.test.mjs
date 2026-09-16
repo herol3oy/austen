@@ -70,11 +70,19 @@ async function partiallyExposeControl(page, selector) {
 	await page.$eval(selector, (node) => {
 		node.scrollIntoView({ behavior: 'instant', block: 'end' })
 		window.scrollBy({ top: -node.offsetHeight / 2, behavior: 'instant' })
+		const rect = node.getBoundingClientRect()
+		if (rect.bottom <= innerHeight) {
+			node.scrollIntoView({ behavior: 'instant', block: 'start' })
+			window.scrollBy({ top: node.offsetHeight / 2, behavior: 'instant' })
+		}
 	})
 	assert.ok(
 		await page.$eval(selector, (node) => {
 			const rect = node.getBoundingClientRect()
-			return rect.top < innerHeight && rect.bottom > innerHeight
+			return (
+				(rect.top < 0 && rect.bottom > 0) ||
+				(rect.top < innerHeight && rect.bottom > innerHeight)
+			)
 		}),
 		`${selector} starts partly outside the viewport`,
 	)
