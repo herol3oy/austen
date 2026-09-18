@@ -18,6 +18,11 @@ const authors = authorCollections(entries)
 			Explore authors with at least two published maps. Each collection brings
 			together the characters and connections in their books.
 		</p>
+		<p class="metadata-note">
+			<a href={`${import.meta.env.BASE_URL}genres/`}>Browse by genre</a>
+			<span aria-hidden="true"> · </span>
+			<a href={`${import.meta.env.BASE_URL}eras/`}>Browse by era</a>
+		</p>
 	</section>
 	<!-- biome-ignore lint/a11y/noRedundantRoles: Preserve Safari list semantics with list-style: none. -->
 	<ul class="author-directory" role="list">

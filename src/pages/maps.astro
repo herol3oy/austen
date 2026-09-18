@@ -23,6 +23,11 @@ const published = entries.filter((book) => book.publishedUrl)
 				>Explore the full catalog</a
 			>
 		</p>
+		<p class="metadata-note">
+			<a href={`${import.meta.env.BASE_URL}genres/`}>Browse by genre</a>
+			<span aria-hidden="true"> · </span>
+			<a href={`${import.meta.env.BASE_URL}eras/`}>Browse by era</a>
+		</p>
 	</section>
 	<section aria-labelledby="library-heading">
 		<div class="section-heading">

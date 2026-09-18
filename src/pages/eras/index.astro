@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { loadLibrary } from '../../lib/library'
+import { eraCollections } from '../../lib/taxonomy'
+
+const { entries } = await loadLibrary()
+const eras = eraCollections(entries)
+const base = import.meta.env.BASE_URL
+---
+
+<BaseLayout
+	title="Eras and Character Relationship Maps — Austen"
+	description={`Browse ${eras.length.toLocaleString('en')} publication eras with published character relationship maps. Explore each era's collection by book title.`}
+>
+	<section class="library-intro">
+		<p class="section-kicker">The relationship library</p>
+		<h1>Eras and character relationship maps</h1>
+		<p>
+			Explore published maps by publication era. Century groups are derived from
+			each book's year as supplied by the catalog index.
+		</p>
+		<p>
+			<a href={`${base}genres/`}>Browse the library by genre</a>
+		</p>
+	</section>
+	<!-- biome-ignore lint/a11y/noRedundantRoles: Preserve Safari list semantics with list-style: none. -->
+	<ul class="era-directory" role="list">
+		{eras.map(era => <li><a href={`${base}eras/${era.slug}/`}>{era.name}</a><span class="metadata-note">{era.books.length.toLocaleString('en')} maps</span></li>)}
+	</ul>
+	{eras.length === 0 && <p>No era collections are available yet. <a href={`${base}maps/`}>Browse published maps</a>.</p>}
+</BaseLayout>
+<style>
+.era-directory {
+	display: grid;
+	gap: 1rem 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.5rem 1rem;
+	padding-block: 0.75rem;
+	border-bottom: 1px solid var(--color-rule);
+	overflow-wrap: anywhere;
+	min-width: 0;
+}
+a {
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+}
+</style>

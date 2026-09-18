@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { loadLibrary } from '../../lib/library'
+import { genreCollections } from '../../lib/taxonomy'
+
+const { entries } = await loadLibrary()
+const genres = genreCollections(entries)
+const base = import.meta.env.BASE_URL
+---
+
+<BaseLayout
+	title="Genres and Character Relationship Maps — Austen"
+	description={`Browse ${genres.length.toLocaleString('en')} genres with published character relationship maps. Explore each genre's collection by book title.`}
+>
+	<section class="library-intro">
+		<p class="section-kicker">The relationship library</p>
+		<h1>Genres and character relationship maps</h1>
+		<p>
+			Explore published maps by genre. Every genre collection brings together
+			the characters and connections across its books.
+		</p>
+		<p>
+			<a href={`${base}eras/`}>Browse the library by era</a>
+		</p>
+	</section>
+	<!-- biome-ignore lint/a11y/noRedundantRoles: Preserve Safari list semantics with list-style: none. -->
+	<ul class="genre-directory" role="list">
+		{genres.map(genre => <li><a href={`${base}genres/${genre.slug}/`}>{genre.name}</a><span class="metadata-note">{genre.books.length.toLocaleString('en')} maps</span></li>)}
+	</ul>
+	{genres.length === 0 && <p>No genre collections are available yet. <a href={`${base}maps/`}>Browse published maps</a>.</p>}
+</BaseLayout>
+<style>
+.genre-directory {
+	display: grid;
+	gap: 1rem 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.5rem 1rem;
+	padding-block: 0.75rem;
+	border-bottom: 1px solid var(--color-rule);
+	overflow-wrap: anywhere;
+	min-width: 0;
+}
+a {
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+}
+</style>

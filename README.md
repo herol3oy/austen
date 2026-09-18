@@ -24,6 +24,9 @@ The development site is at `http://localhost:4321/austen/`. Fonts, Mermaid, Panz
 | `/austen/maps/` | Complete searchable cover grid of published maps |
 | `/austen/catalog/` | Full catalog cover grid and availability |
 | `/austen/books/<slug>/` | Book cover, character introduction, published SVG, HTML character and relationship lists, metadata, attribution, spoilers, and editable workspace |
+| `/austen/authors/` | Directory of authors with at least two published maps; author hub pages list each collection |
+| `/austen/genres/` | Directory of genres with published maps; hub pages group maps by catalog category |
+| `/austen/eras/` | Directory of publication-era (century) hubs derived from each book's year |
 | `/austen/generate/` | OpenLibrary discovery, manual entry, generation, shares, local history |
 | `/austen/catalog-index.json` | Metadata and availability, without graph bodies |
 

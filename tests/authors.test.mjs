@@ -4,20 +4,29 @@ import test from 'node:test'
 import ts from 'typescript'
 
 // These pure helpers only import types; transpile with the project's existing compiler.
-async function loadHelper(path) {
-	const source = await readFile(new URL(path, import.meta.url), 'utf8')
-	const { outputText } = ts.transpileModule(source, {
-		compilerOptions: {
-			module: ts.ModuleKind.ESNext,
-			target: ts.ScriptTarget.ES2022,
-		},
-	})
+async function loadHelper(...paths) {
+	const modules = []
+	for (const path of paths) {
+		const source = await readFile(new URL(path, import.meta.url), 'utf8')
+		const { outputText } = ts.transpileModule(source, {
+			compilerOptions: {
+				module: ts.ModuleKind.ESNext,
+				target: ts.ScriptTarget.ES2022,
+			},
+		})
+		modules.push(
+			outputText
+				.split('\n')
+				.filter((line) => !/^\s*import\b.*from\s+'\.\//.test(line))
+				.join('\n'),
+		)
+	}
 	return import(
-		`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`
+		`data:text/javascript;base64,${Buffer.from(modules.join('\n')).toString('base64')}`
 	)
 }
 const { authorCollections, authorSlug, collectionsForBook, relatedMaps } =
-	await loadHelper('../src/lib/authors.ts')
+	await loadHelper('../src/lib/slug.ts', '../src/lib/authors.ts')
 const { breadcrumbData, serializeStructuredData } =
 	await loadHelper('../src/lib/seo.ts')
 const entry = (id, title, authors, published = true) => ({

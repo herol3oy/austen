@@ -14,19 +14,36 @@ import {
 import { coverAssetFor } from '../../lib/cover-assets'
 import { loadLibrary } from '../../lib/library'
 import { breadcrumbData } from '../../lib/seo'
+import {
+	eraCollections,
+	eraForBook,
+	genreCollections,
+	genreForBook,
+	relatedByGenre,
+} from '../../lib/taxonomy'
 export async function getStaticPaths() {
 	const { maps, entries } = await loadLibrary()
 	const authors = authorCollections(entries)
+	const genres = genreCollections(entries)
+	const eras = eraCollections(entries)
 	return maps.map((map) => {
 		try {
 			const diagram = parseDiagram(map.revision.mermaid)
+			const related = relatedMaps(map.book, authors)
 			return {
 				params: { slug: map.book.slug },
 				props: {
 					map,
 					diagram,
 					authors: collectionsForBook(map.book, authors),
-					related: relatedMaps(map.book, authors),
+					related,
+					genre: genreForBook(map.book, genres),
+					era: eraForBook(map.book, eras),
+					genrePeers: relatedByGenre(
+						map.book,
+						genres,
+						related.map((book) => book.id),
+					),
 				},
 			}
 		} catch (cause) {
@@ -36,7 +53,7 @@ export async function getStaticPaths() {
 		}
 	})
 }
-const { map, diagram, authors, related } = Astro.props
+const { map, diagram, authors, related, genre, era, genrePeers } = Astro.props
 const { book, revision, svg, review } = map
 const automatic = review.mode === 'automatic'
 const canonicalUrl = new URL(
@@ -164,6 +181,14 @@ const structuredData = [
     <ul class="library-list">{related.map(other => <BookCard book={other} headingLevel="h3" />)}</ul>
     {authors.map(author => <p><a href={authorLinks.get(author.name)}>Explore all {author.books.length.toLocaleString('en')} maps by {author.name} →</a></p>)}
   </section>}
+	{genre && <section class="browse-taxonomy" aria-labelledby="taxonomy-heading">
+    <div class="section-heading"><h2 id="taxonomy-heading">More in {genre.name}</h2></div>
+    {genrePeers.length > 0 && <ul class="library-list">{genrePeers.map(other => <BookCard book={other} headingLevel="h3" />)}</ul>}
+    <p class="browse-taxonomy-links">
+      <a href={`${base}genres/${genre.slug}/`}>All {genre.name} maps</a>
+      {era && <Fragment><span aria-hidden="true"> · </span><a href={`${base}eras/${era.slug}/`}>All {era.name} maps</a></Fragment>}
+    </p>
+  </section>}
 </BaseLayout>
 
 <style>
@@ -174,6 +199,16 @@ const structuredData = [
 	margin-top: 3rem;
 }
 .related-maps p {
+	margin-top: 0.65rem;
+	overflow-wrap: anywhere;
+}
+.browse-taxonomy {
+	margin-top: 3rem;
+}
+.browse-taxonomy-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.5rem;
 	margin-top: 0.65rem;
 	overflow-wrap: anywhere;
 }

@@ -613,6 +613,13 @@ test('built static library and migrated workspace', {
 				'authors/jane-austen/',
 				'authors/author-one/',
 				'authors/author-two/',
+				'genres/',
+				'genres/fiction/',
+				'genres/poetry/',
+				'eras/',
+				'eras/19th-century/',
+				'eras/20th-century/',
+				'eras/publication-year-unknown/',
 				...[book, ...extra].map((b) => `books/${b.slug}/`),
 			]) {
 				assert.ok(
@@ -815,6 +822,8 @@ test('built static library and migrated workspace', {
 			for (const b of [extra[4], extra[5]]) {
 				const $ = await builtPage(`books/${b.slug}/`)
 				assert.equal($('.book-byline a, .related-maps').length, 0)
+				assert.ok($('.browse-taxonomy a[href="/genres/poetry/"]').length)
+				assert.ok($('.browse-taxonomy a[href="/eras/20th-century/"]').length)
 			}
 			const escapedHub = directory('.author-directory a')
 				.toArray()
@@ -875,6 +884,83 @@ test('built static library and migrated workspace', {
 				(await page.goto(`${base}authors/charlotte-bronte/`)).status(),
 				404,
 			)
+		},
+	)
+	await t.test(
+		'genre and era directories, collections and book-page links are static',
+		async () => {
+			const genres = await builtPage('genres/')
+			assert.deepEqual(
+				genres('.genre-directory a')
+					.map((_, a) => genres(a).text())
+					.get(),
+				['Fiction', 'Poetry'],
+			)
+			assert.match(genres('.genre-directory li').first().text(), /1 maps/)
+			const eras = await builtPage('eras/')
+			assert.deepEqual(
+				eras('.era-directory a')
+					.map((_, a) => eras(a).text())
+					.get(),
+				['19th century', '20th century', 'Publication year unknown'],
+			)
+			for (const [path, name, count, only] of [
+				['genres/fiction/', 'Fiction', 1, [book]],
+				['genres/poetry/', 'Poetry', 51, null],
+				['eras/19th-century/', '19th century', 1, [book]],
+				['eras/20th-century/', '20th century', 50, null],
+				[
+					'eras/publication-year-unknown/',
+					'Publication year unknown',
+					1,
+					[extra[0]],
+				],
+			]) {
+				const $ = await builtPage(path)
+				assert.equal(
+					$('title').text(),
+					`${name} Character Relationship Maps — Austen`,
+				)
+				assert.equal($('h1').text(), `${name} character relationship maps`)
+				assert.equal($('meta[name="robots"]').length, 0)
+				assert.match(
+					$('.library-intro p').last().text(),
+					new RegExp(`${count} published`),
+				)
+				const listed = $('.library-list .book-cover-caption h3')
+					.map((_, el) => $(el).text())
+					.get()
+				assert.equal(listed.length, count)
+				if (only)
+					assert.deepEqual(
+						listed,
+						only.map((b) => b.title),
+					)
+			}
+			for (const [b, genreHref, eraHref, peerCount] of [
+				[book, '/genres/fiction/', '/eras/19th-century/', 0],
+				[extra[0], '/genres/poetry/', '/eras/publication-year-unknown/', 4],
+				[extra[4], '/genres/poetry/', '/eras/20th-century/', 4],
+				[extra[10], '/genres/poetry/', '/eras/20th-century/', 4],
+			]) {
+				const $ = await builtPage(`books/${b.slug}/`)
+				assert.ok(
+					$(`.browse-taxonomy a[href="${genreHref}"]`).length,
+					`${b.slug} links to its genre hub`,
+				)
+				assert.ok(
+					$(`.browse-taxonomy a[href="${eraHref}"]`).length,
+					`${b.slug} links to its era hub`,
+				)
+				const peers = $('.browse-taxonomy .book-cover-link')
+					.map((_, el) => $(el).attr('href'))
+					.get()
+				assert.equal(peers.length, peerCount)
+				assert.ok(!peers.includes(`/books/${b.slug}/`))
+				assert.equal(new Set(peers).size, peers.length)
+			}
+			assert.equal((await page.goto(`${base}genres/romance/`)).status(), 404)
+			assert.equal((await page.goto(`${base}eras/21st-century/`)).status(), 404)
 		},
 	)
 	await t.test(

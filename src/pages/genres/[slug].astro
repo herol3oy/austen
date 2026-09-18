@@ -1,0 +1,51 @@
+---
+import BookCard from '../../components/BookCard.astro'
+import Breadcrumbs from '../../components/Breadcrumbs.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { loadLibrary } from '../../lib/library'
+import { breadcrumbData } from '../../lib/seo'
+import { genreCollections } from '../../lib/taxonomy'
+export async function getStaticPaths() {
+	const { entries } = await loadLibrary()
+	return genreCollections(entries).map((genre) => ({
+		params: { slug: genre.slug },
+		props: { genre },
+	}))
+}
+const { genre } = Astro.props
+const count = genre.books.length.toLocaleString('en')
+const description = `Explore ${count} published character relationship maps in the ${genre.name} genre, listed by title. Maps cover the whole book and include spoilers.`
+const base = import.meta.env.BASE_URL
+const breadcrumbs = [
+	{ name: 'Home', href: base },
+	{ name: 'Genres', href: `${base}genres/` },
+	{ name: genre.name, href: `${base}genres/${genre.slug}/` },
+]
+---
+
+<BaseLayout
+	title={`${genre.name} Character Relationship Maps — Austen`}
+	description={description}
+	structuredData={[breadcrumbData(breadcrumbs, Astro.site!)]}
+>
+	<Breadcrumbs items={breadcrumbs} />
+	<section class="library-intro">
+		<p class="section-kicker">A genre collection</p>
+		<h1>{genre.name} character relationship maps</h1>
+		<p>{description}</p>
+	</section>
+	<section aria-labelledby="collection-heading">
+		<div class="section-heading">
+			<h2 id="collection-heading">Published maps</h2>
+			<span>{count} maps</span>
+		</div>
+		<ul class="library-list">
+			{genre.books.map(book => <BookCard book={book} headingLevel="h3" />)}
+		</ul>
+	</section>
+</BaseLayout>
+<style>
+h1 {
+	overflow-wrap: anywhere;
+}
+</style>

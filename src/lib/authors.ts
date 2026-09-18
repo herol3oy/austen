@@ -1,4 +1,5 @@
 import type { Book, CatalogEntry } from './library'
+import { slugify } from './slug'
 
 export interface AuthorCollection {
 	name: string
@@ -6,21 +7,22 @@ export interface AuthorCollection {
 	books: CatalogEntry[]
 }
 
-const compareText = (a: string, b: string) =>
+export const compareText = (a: string, b: string) =>
 	a.localeCompare(b, 'en') || (a < b ? -1 : a > b ? 1 : 0)
-const compareBooks = (a: CatalogEntry, b: CatalogEntry) =>
+export const compareBooks = (a: CatalogEntry, b: CatalogEntry) =>
 	compareText(a.title, b.title) || compareText(a.id, b.id)
 
-export function authorSlug(name: string) {
-	const slug = name
-		.normalize('NFKD')
-		.replace(/\p{M}/gu, '')
-		.toLowerCase()
-		.replace(/[^\p{L}\p{N}]+/gu, '-')
-		.replace(/^-|-$/g, '')
-	if (!slug)
-		throw new Error(`Cannot create an author slug for ${JSON.stringify(name)}`)
-	return slug
+export const authorSlug = (name: string) => {
+	try {
+		return slugify(name)
+	} catch (cause) {
+		throw new Error(
+			`Cannot create an author slug for ${JSON.stringify(name)}`,
+			{
+				cause,
+			},
+		)
+	}
 }
 
 export function authorCollections(entries: CatalogEntry[]): AuthorCollection[] {
