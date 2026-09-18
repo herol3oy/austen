@@ -15,7 +15,10 @@ export default defineConfig({
 	trailingSlash: 'always',
 	integrations: [
 		sitemap({
-			filter: (page) => new URL(page).pathname !== '/generate/',
+			filter: (page) => {
+				const path = new URL(page).pathname
+				return path !== '/generate/' && path !== '/catalog/'
+			},
 			serialize: (entry) => {
 				const timestamp = lastmodByPath.get(new URL(entry.url).pathname)
 				return timestamp ? { ...entry, lastmod: timestamp } : entry

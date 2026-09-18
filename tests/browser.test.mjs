@@ -510,7 +510,9 @@ test('built static library and migrated workspace', {
 				assert.equal($('h1').text(), heading)
 				assert.equal(
 					$('meta[name="robots"]').attr('content'),
-					path === 'generate/' ? 'noindex, follow' : undefined,
+					['generate/', 'catalog/'].includes(path)
+						? 'noindex, follow'
+						: undefined,
 				)
 				for (const query of [
 					'',
@@ -607,7 +609,6 @@ test('built static library and migrated workspace', {
 			for (const path of [
 				'',
 				'maps/',
-				'catalog/',
 				'contact/',
 				'authors/',
 				'authors/jane-austen/',
@@ -653,7 +654,6 @@ test('built static library and migrated workspace', {
 			for (const path of [
 				'',
 				'maps/',
-				'catalog/',
 				'contact/',
 				'authors/',
 				'authors/jane-austen/',

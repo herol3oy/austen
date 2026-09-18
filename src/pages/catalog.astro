@@ -10,6 +10,7 @@ const publishedCount = entries.filter((book) => book.publishedUrl).length
 <BaseLayout
 	title="Book Catalog and Map Availability — Austen"
 	description={`Explore the full catalog of ${entries.length.toLocaleString('en')} books and check character map availability: ${publishedCount.toLocaleString('en')} published maps, plus pending and unavailable works.`}
+	robots="noindex, follow"
 >
 	<section class="library-intro">
 		<p class="section-kicker">The reading room</p>
