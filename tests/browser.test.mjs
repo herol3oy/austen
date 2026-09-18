@@ -628,6 +628,46 @@ test('built static library and migrated workspace', {
 				)
 			}
 			assert.ok(!urls.some((url) => url.includes('/authors/anonymous/')))
+			const lastmodByUrl = new Map(
+				sitemap('url')
+					.get()
+					.map((el) => [
+						sitemap('loc', el).first().text(),
+						sitemap('lastmod', el).first().text() || null,
+					]),
+			)
+			const published = JSON.parse(
+				await readFile(resolve(root, 'data/published.json'), 'utf8'),
+			)
+			for (const pointer of published.books) {
+				const entry = catalog.books.find((b) => b.id === pointer.bookId)
+				if (!entry) continue
+				const expected = pointer.publishedAt ?? pointer.reviewedAt
+				const url = `https://austen.page/books/${entry.slug}/`
+				assert.equal(
+					lastmodByUrl.get(url),
+					new Date(expected).toISOString(),
+					`Sitemap lastmod for ${pointer.bookId}`,
+				)
+			}
+			for (const path of [
+				'',
+				'maps/',
+				'catalog/',
+				'contact/',
+				'authors/',
+				'authors/jane-austen/',
+				'genres/',
+				'genres/fiction/',
+				'eras/',
+				'eras/19th-century/',
+			]) {
+				assert.equal(
+					lastmodByUrl.get(`https://austen.page/${path}`),
+					null,
+					`No sitemap lastmod for ${path}`,
+				)
+			}
 			assert.match(
 				await readFile(resolve(root, 'dist/robots.txt'), 'utf8'),
 				/Allow: \//,
