@@ -1169,7 +1169,7 @@ test('built static library and migrated workspace', {
 			assert.equal(page.url(), `${base}maps/`)
 			assert.equal(
 				await page.$$eval('[data-library-book]', (n) => n.length),
-				52,
+				24,
 			)
 			const index = JSON.parse(
 				await readFile(resolve(root, 'dist/catalog-index.json'), 'utf8'),
@@ -1315,14 +1315,14 @@ test('built static library and migrated workspace', {
 			await page.goto(`${base}maps/`)
 			assert.equal(
 				await page.$$eval('[data-book-cover]', (covers) => covers.length),
-				52,
+				24,
 			)
 			assert.equal(
 				await page.$$eval(
 					'[data-book-cover]:not(:has(img))',
 					(covers) => covers.length,
 				),
-				49,
+				22,
 			)
 			const columns = () =>
 				page.$eval(
@@ -1343,29 +1343,6 @@ test('built static library and migrated workspace', {
 					),
 				)
 			}
-			await page.type('#library-search', 'Fixture 50')
-			assert.equal(
-				await page.$$eval(
-					'[data-library-book]:not([hidden])',
-					(cards) => cards.length,
-				),
-				1,
-			)
-			assert.match(
-				await page.$eval('#library-count', (count) => count.textContent),
-				/Showing 1–1 of 1 matching map/,
-			)
-			await page.$eval('#library-search', (input) => {
-				input.value = 'no matching book'
-				input.dispatchEvent(new Event('input'))
-			})
-			assert.equal(
-				await page.$$eval(
-					'[data-library-book]:not([hidden])',
-					(cards) => cards.length,
-				),
-				0,
-			)
 			await page.goto(`${base}catalog/`)
 			assert.equal(await columns(), 2)
 			assert.equal(
@@ -1387,177 +1364,77 @@ test('built static library and migrated workspace', {
 		},
 	)
 	await t.test(
-		'maps paginate the complete search results and restore URL state',
+		'maps use static pages with crawlable pagination links',
 		async () => {
-			const visibleLinks = () =>
-				page.$$eval(
-					'[data-library-book]:not([hidden]) .book-cover-link',
-					(links) => links.map((link) => link.getAttribute('href')),
-				)
-			const current = (number) =>
-				page.waitForFunction(
-					(number) =>
-						document.querySelector('.library-pagination [aria-current="page"]')
-							?.dataset.page === String(number),
-					{},
-					number,
-				)
-			const setSearch = (value) =>
-				page.$eval(
-					'#library-search',
-					(input, value) => {
-						input.value = value
-						input.dispatchEvent(new Event('input'))
-					},
-					value,
+			const listedLinks = () =>
+				page.$$eval('[data-library-book] .book-cover-link', (links) =>
+					links.map((link) => link.getAttribute('href')),
 				)
 			await page.setJavaScriptEnabled(false)
-			await page.goto(`${base}maps/?page=2`)
-			assert.equal((await visibleLinks()).length, 52)
-			assert.equal(
-				await page.$eval(
-					'.library-pagination',
-					(nav) => getComputedStyle(nav).display,
-				),
-				'none',
-			)
-			const allLinks = await visibleLinks()
-			await page.setJavaScriptEnabled(true)
 			await page.goto(`${base}maps/`)
-			await current(1)
-			assert.deepEqual(await visibleLinks(), allLinks.slice(0, 24))
+			const firstPage = await listedLinks()
+			assert.equal(firstPage.length, 24)
+			assert.equal(await page.$('#library-search'), null)
 			assert.equal(
-				await page.$eval(
-					'[aria-label="Previous page"]',
-					(button) => button.disabled,
+				await page.$$eval(
+					'.library-pagination button',
+					(buttons) => buttons.length,
 				),
-				true,
+				0,
 			)
-			const historyLength = await page.evaluate(() => history.length)
-			await page.focus('[aria-label="Page 2"]')
-			await page.keyboard.press('Enter')
-			await current(2)
-			assert.deepEqual(await visibleLinks(), allLinks.slice(24, 48))
 			assert.equal(
-				await page.evaluate(() => document.activeElement.id),
-				'library-heading',
+				await page.$eval('.library-pagination [aria-current="page"]', (link) =>
+					link.getAttribute('href'),
+				),
+				'/maps/',
 			)
-			assert.equal(page.url(), `${base}maps/?page=2`)
-			assert.equal(await page.evaluate(() => history.length), historyLength)
+			assert.equal(
+				await page.$eval('[aria-label="Next page"]', (link) =>
+					link.getAttribute('href'),
+				),
+				'/maps/2/',
+			)
 			assert.equal(
 				await page.$eval('#library-count', (node) => node.textContent),
-				'Showing 25–48 of 52 maps',
+				'Showing 1–24 of 52 maps',
 			)
-			await page.locator('[aria-label="Next page"]').click()
-			await current(3)
-			assert.deepEqual(await visibleLinks(), allLinks.slice(48))
+			await page.goto(`${base}maps/2/`)
+			const secondPage = await listedLinks()
+			assert.equal(secondPage.length, 24)
 			assert.equal(
-				await page.$eval(
-					'[aria-label="Next page"]',
-					(button) => button.disabled,
+				await page.$eval('.library-pagination [aria-current="page"]', (link) =>
+					link.getAttribute('href'),
 				),
-				true,
-			)
-			await page.locator('[aria-label="Previous page"]').click()
-			await current(2)
-			await page.reload()
-			await current(2)
-			assert.deepEqual(await visibleLinks(), allLinks.slice(24, 48))
-
-			await page.focus('#library-search')
-			await setSearch('Fixture')
-			await current(1)
-			assert.equal(
-				await page.evaluate(() => document.activeElement.id),
-				'library-search',
-			)
-			assert.equal(new URL(page.url()).searchParams.get('page'), null)
-			await page.locator('[aria-label="Next page"]').click()
-			await current(2)
-			assert.equal((await visibleLinks()).length, 24)
-			assert.equal(new URL(page.url()).searchParams.get('q'), 'Fixture')
-			await setSearch('Fixture 50')
-			assert.deepEqual(await visibleLinks(), [`/books/${extra.at(-1).slug}/`])
-			assert.equal(
-				await page.$eval('.library-pagination', (nav) => nav.hidden),
-				true,
-			)
-			await setSearch('no matching book')
-			assert.equal((await visibleLinks()).length, 0)
-			assert.equal(
-				await page.$eval('#library-count', (node) => node.textContent),
-				'No maps found',
+				'/maps/2/',
 			)
 			assert.equal(
-				await page.$eval('.library-pagination', (nav) => nav.hidden),
-				true,
-			)
-			await setSearch('')
-			await current(1)
-			assert.equal(page.url(), `${base}maps/`)
-			assert.deepEqual(await visibleLinks(), allLinks.slice(0, 24))
-
-			for (const [value, expected] of [
-				['0', 1],
-				['-1', 1],
-				['nope', 1],
-				['1.5', 1],
-				['999', 3],
-			]) {
-				await page.goto(
-					`${base}maps/?page=${value}&utm_source=test#library-heading`,
-				)
-				await current(expected)
-				const url = new URL(page.url())
-				assert.equal(
-					url.searchParams.get('page'),
-					expected === 1 ? null : String(expected),
-				)
-				assert.equal(url.searchParams.get('utm_source'), 'test')
-				assert.equal(url.hash, '#library-heading')
-				assert.equal(
-					await page.$eval('link[rel="canonical"]', (link) => link.href),
-					'https://austen.page/maps/',
-				)
-			}
-			await page.goto(`${base}maps/?q=Fixture&page=2`)
-			await current(2)
-			const filteredLinks = await visibleLinks()
-			assert.equal(
-				await page.$eval('#library-search', (input) => input.value),
-				'Fixture',
-			)
-			await Promise.all([
-				page.waitForFunction(
-					() =>
-						location.pathname === '/catalog/' &&
-						!document.querySelector('.library-pagination'),
+				await page.$eval('[aria-label="Previous page"]', (link) =>
+					link.getAttribute('href'),
 				),
-				page.locator('a[href="/catalog/"]').click(),
-			])
-			await page.goBack()
-			await current(2)
-			assert.deepEqual(await visibleLinks(), filteredLinks)
-			await page.goForward()
-			await page.waitForFunction(
-				() =>
-					location.pathname === '/catalog/' &&
-					!document.querySelector('.library-pagination'),
+				'/maps/',
 			)
-			await page.goBack()
-			await current(2)
-			await setSearch('1813')
-			assert.deepEqual(await visibleLinks(), [`/books/${book.slug}/`])
+			assert.equal(
+				await page.$eval('[aria-label="Next page"]', (link) =>
+					link.getAttribute('href'),
+				),
+				'/maps/3/',
+			)
+			assert.equal(
+				await page.$eval('link[rel="canonical"]', (link) => link.href),
+				'https://austen.page/maps/2/',
+			)
+			await page.goto(`${base}maps/3/`)
+			const lastPage = await listedLinks()
+			assert.equal(lastPage.length, 4)
+			assert.equal(await page.$('[aria-label="Next page"]'), null)
+			assert.deepEqual(
+				new Set([...firstPage, ...secondPage, ...lastPage]).size,
+				52,
+			)
 
-			await setSearch('')
-			for (const width of [320, 375, 800, 1280]) {
-				await page.setViewport({ width, height: 900 })
-				assert.ok(
-					await page.evaluate(
-						() => document.documentElement.scrollWidth <= innerWidth,
-					),
-				)
-			}
+			await page.setJavaScriptEnabled(true)
+			await page.goto(`${base}maps/2/`)
+			assert.deepEqual(await listedLinks(), secondPage)
 		},
 	)
 	await t.test(
@@ -2045,14 +1922,6 @@ test('built static library and migrated workspace', {
 			const follow = (path, selector) =>
 				navigate(path, () => page.click(selector))
 			await follow('/maps/', 'nav a[href="/maps/"]')
-			await page.type('#library-search', '1813')
-			assert.equal(
-				await page.$$eval(
-					'[data-library-book]:not([hidden])',
-					(rows) => rows.length,
-				),
-				1,
-			)
 			await follow('/catalog/', 'a[href="/catalog/"]')
 			await page.type('#library-search', '1813')
 			assert.equal(

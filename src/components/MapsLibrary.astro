@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import type { CatalogEntry } from '../lib/library'
+import BookCard from './BookCard.astro'
+
+interface Props {
+	published: CatalogEntry[]
+	currentPage: number
+}
+
+const { published, currentPage } = Astro.props
+const pageSize = 24
+const totalPages = Math.max(1, Math.ceil(published.length / pageSize))
+const first = (currentPage - 1) * pageSize
+const books = published.slice(first, first + pageSize)
+const base = import.meta.env.BASE_URL
+const mapPageUrl = (page: number) =>
+	page === 1 ? `${base}maps/` : `${base}maps/${page}/`
+const pageNumbers = new Set([
+	1,
+	totalPages,
+	currentPage - 1,
+	currentPage,
+	currentPage + 1,
+])
+const paginationPages = [...pageNumbers]
+	.filter((page) => page >= 1 && page <= totalPages)
+	.sort((a, b) => a - b)
+const pageTitle = currentPage > 1 ? ` — Page ${currentPage}` : ''
+const description = `Browse ${published.length.toLocaleString('en')} published character relationship maps for books. Page ${currentPage} of ${totalPages}. Explore the characters and their connections in classic literature.`
+---
+
+<BaseLayout
+	title={`Browse Character Relationship Maps${pageTitle} — Austen`}
+	description={description}
+>
+	<section class="library-intro">
+		<p class="section-kicker">The relationship library</p>
+		<h1>Browse character relationship maps</h1>
+		<p>
+			Explore the characters and connections in classic literature. AI-generated
+			maps cover the whole book, including spoilers.
+		</p>
+		<p>
+			<a href={`${base}catalog/`}>Explore the full catalog</a>
+		</p>
+		<p class="metadata-note">
+			<a href={`${base}genres/`}>Browse by genre</a>
+			<span aria-hidden="true"> · </span>
+			<a href={`${base}eras/`}>Browse by era</a>
+		</p>
+	</section>
+	<section aria-labelledby="library-heading">
+		<div class="section-heading">
+			<h2 id="library-heading" tabindex="-1">Published maps</h2>
+			<span>{published.length.toLocaleString('en')} maps</span>
+		</div>
+		{published.length > 0 ? <>
+			<p id="library-count" class="status-line">
+				Showing {(first + 1).toLocaleString('en')}–{(first + books.length).toLocaleString('en')} of {published.length.toLocaleString('en')} maps
+			</p>
+			<ul class="library-list">
+				{books.map(book => <BookCard book={book} headingLevel="h3" />)}
+			</ul>
+			{totalPages > 1 && <nav class="library-pagination" aria-label="Map pages">
+				{currentPage > 1 ? <a href={mapPageUrl(currentPage - 1)} aria-label="Previous page">Previous</a> : <span class="pagination-disabled" aria-disabled="true">Previous</span>}
+				{paginationPages.map((page, index) => <>
+					{index > 0 && page - paginationPages[index - 1] > 1 && <span aria-hidden="true">…</span>}
+					<a
+						href={mapPageUrl(page)}
+						data-page={page}
+						aria-label={`Page ${page}`}
+						aria-current={page === currentPage ? 'page' : undefined}
+					>{page}</a>
+				</>)}
+				{currentPage < totalPages ? <a href={mapPageUrl(currentPage + 1)} aria-label="Next page">Next</a> : <span class="pagination-disabled" aria-disabled="true">Next</span>}
+			</nav>}
+		</> : <div class="empty-library">
+			<h3>The first maps are still to come.</h3>
+			<p>Browse the catalog or create a map in your own workspace.</p>
+			<a href={`${base}catalog/`}>Explore the catalog →</a>
+		</div>}
+	</section>
+</BaseLayout>

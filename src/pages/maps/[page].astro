@@ -1,0 +1,19 @@
+---
+import MapsLibrary from '../../components/MapsLibrary.astro'
+import { loadLibrary } from '../../lib/library'
+
+export async function getStaticPaths() {
+	const { entries } = await loadLibrary()
+	const published = entries.filter((book) => book.publishedUrl)
+	const totalPages = Math.ceil(published.length / 24)
+
+	return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => ({
+		params: { page: String(index + 2) },
+		props: { published, currentPage: index + 2 },
+	}))
+}
+
+const { published, currentPage } = Astro.props
+---
+
+<MapsLibrary published={published} currentPage={currentPage} />
