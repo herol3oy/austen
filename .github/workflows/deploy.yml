@@ -28,15 +28,9 @@ jobs:
       - run: pnpm exec biome ci .
       - run: pnpm check
       - run: pnpm test
-      - name: Configure runner Chrome for rendering tests
-        shell: bash
-        run: |
-          chrome_path="$(command -v google-chrome)"
-          test -x "$chrome_path"
-          "$chrome_path" --version
-          printf 'PUPPETEER_EXECUTABLE_PATH=%s\n' "$chrome_path" >> "$GITHUB_ENV"
+      - name: Install Playwright Chromium
+        run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:browser
-      - run: pnpm build
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:

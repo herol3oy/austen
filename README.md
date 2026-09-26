@@ -45,13 +45,18 @@ pnpm format:check
 pnpm check
 pnpm test
 pnpm test:browser
-pnpm build
 pnpm worker:check
 ```
 
-Browser tests require Chromium. Set `PUPPETEER_EXECUTABLE_PATH` if the browser
-is not discovered automatically. GitHub Actions uses the Chrome supplied by its
-Ubuntu runner image.
+Browser tests use Playwright against the production build. Install Chromium once
+on a development machine before running them:
+
+```sh
+pnpm exec playwright install chromium
+```
+
+GitHub Actions installs its own Playwright Chromium and required system
+dependencies.
 
 ## Generator and deployment
 

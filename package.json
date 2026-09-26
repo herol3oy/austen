@@ -15,8 +15,10 @@
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write .",
 		"format:check": "biome format .",
-		"test": "node --test tests/authors.test.mjs tests/diagram.test.mjs tests/generation.test.mjs tests/genres.test.mjs tests/library.test.mjs tests/sitemap.test.mjs tests/worker.test.mjs",
-		"test:browser": "node --test tests/browser.test.mjs",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"test:e2e": "playwright test",
+		"test:browser": "pnpm build && pnpm test:e2e",
 		"worker:check": "wrangler deploy --dry-run --config worker/wrangler.jsonc",
 		"worker:deploy": "wrangler deploy --config worker/wrangler.jsonc"
 	},
@@ -34,8 +36,10 @@
 	"devDependencies": {
 		"@astrojs/check": "0.9.10",
 		"@biomejs/biome": "2.5.13",
-		"puppeteer": "25.10.0",
+		"@playwright/test": "^1.63.0",
+		"@types/node": "^26.6.2",
 		"typescript": "6.0.3",
+		"vitest": "5.0.1",
 		"wrangler": "4.131.0"
 	},
 	"packageManager": "pnpm@12.3.4"

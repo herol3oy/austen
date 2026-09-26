@@ -26,3 +26,9 @@ test-results/
 
 # jetbrains setting folder
 .idea/
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
