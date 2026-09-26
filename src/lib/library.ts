@@ -1,9 +1,8 @@
+import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
-import { readJson } from '../../scripts/files.mjs'
-import { nextAction, readBookRecords } from '../../scripts/map-records.mjs'
-import { loadPublishedMaps } from '../../scripts/publish-map.mjs'
 import { validateCatalog } from '../../shared/books.mjs'
 import { savedCoverSlug, validateCovers } from '../../shared/covers.mjs'
+import { loadPublishedMaps } from './published-maps.mjs'
 export interface Book {
 	id: string
 	slug: string
@@ -11,17 +10,13 @@ export interface Book {
 	authors: string[]
 	year: string | null
 	category: string
-	sourceUrl: string
-	sourceAnchor: string | null
 	ebookUrl: string
-	metadataWarnings: string[]
 	coverSlug?: string
 }
 export interface CatalogEntry extends Book {
-	eligible: boolean
 	publishedUrl: string | null
 	availability: string
-	mapStatus: 'available' | 'pending' | 'unavailable'
+	mapStatus: 'available' | 'unavailable'
 }
 
 const featuredSlugs = [
@@ -51,13 +46,16 @@ export function featuredMaps(entries: CatalogEntry[]) {
 
 export async function loadLibrary(root = process.cwd()) {
 	const catalog = validateCatalog(
-		await readJson(resolve(root, 'data/catalog/books.json')),
+		JSON.parse(
+			await readFile(resolve(root, 'data/catalog/books.json'), 'utf8'),
+		),
 	)
 	const covers = validateCovers(
-		await readJson(resolve(root, 'data/catalog/covers.json'), {
-			schemaVersion: 3,
-			books: {},
-		}),
+		JSON.parse(
+			await readFile(resolve(root, 'data/catalog/covers.json'), 'utf8').catch(
+				() => '{"schemaVersion":4,"books":{}}',
+			),
+		),
 	)
 	const { maps } = await loadPublishedMaps(root, catalog)
 	for (const map of maps)
@@ -66,27 +64,18 @@ export async function loadLibrary(root = process.cwd()) {
 	const entries: CatalogEntry[] = []
 	for (const book of catalog.books as Book[]) {
 		const map = available.get(book.id)
-		const action = map
-			? 'available'
-			: nextAction(await readBookRecords(root, book)).action
-		const unavailable = ['unknown', 'exhausted', 'failed'].includes(action)
 		entries.push({
 			...book,
 			coverSlug: savedCoverSlug(book, covers),
-			eligible: !unavailable,
 			publishedUrl: map
 				? `${import.meta.env.BASE_URL}books/${book.slug}/`
 				: null,
-			mapStatus: map ? 'available' : unavailable ? 'unavailable' : 'pending',
+			mapStatus: map ? 'available' : 'unavailable',
 			availability: map
 				? map.review.mode === 'automatic'
 					? 'AI-generated map'
 					: 'Reviewed map'
-				: action === 'unknown'
-					? 'Character map unavailable'
-					: unavailable
-						? 'Map unavailable'
-						: 'Map pending · generate a map',
+				: 'No published map · generate one',
 		})
 	}
 	return { catalog, entries, maps }

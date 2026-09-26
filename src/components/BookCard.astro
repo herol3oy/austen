@@ -10,9 +10,7 @@ interface Props {
 const { book, headingLevel: Heading = 'h2' } = Astro.props
 const href =
 	book.publishedUrl ||
-	(book.eligible
-		? `${import.meta.env.BASE_URL}generate/?book=${encodeURIComponent(book.id)}`
-		: null)
+	`${import.meta.env.BASE_URL}generate/?book=${encodeURIComponent(book.id)}`
 const CoverLink = href ? 'a' : 'div'
 ---
 

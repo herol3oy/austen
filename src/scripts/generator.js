@@ -188,7 +188,7 @@ export function createGenerator({
 			const id = new URLSearchParams(location.search).get('book')
 			if (id) {
 				const book = catalog.find((b) => b.id === id)
-				if (book?.eligible || book?.publishedUrl) selectBook(book)
+				if (book) selectBook(book)
 				else
 					setState({
 						error: {

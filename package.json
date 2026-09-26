@@ -15,17 +15,10 @@
 		"lint:fix": "biome check --write .",
 		"format": "biome format --write .",
 		"format:check": "biome format .",
-		"test": "node --test tests/authors.test.mjs tests/catalog.test.mjs tests/covers.test.mjs tests/diagram.test.mjs tests/generation.test.mjs tests/genres.test.mjs tests/publication.test.mjs tests/sitemap.test.mjs tests/sync.test.mjs tests/worker.test.mjs",
-		"test:browser": "node --env-file-if-exists=.env --test tests/browser.test.mjs",
-		"catalog:ingest": "node scripts/ingest-catalog.mjs",
-		"covers:sync": "node --env-file-if-exists=.env scripts/sync-covers.mjs",
-		"maps:generate": "node --env-file-if-exists=.env scripts/generate-maps.mjs",
-		"maps:sync": "node --env-file-if-exists=.env scripts/sync-maps.mjs",
-		"maps:validate": "node --env-file-if-exists=.env scripts/validate-maps.mjs",
-		"maps:publish": "node --env-file-if-exists=.env scripts/publish-map.mjs",
+		"test": "node --test tests/authors.test.mjs tests/diagram.test.mjs tests/generation.test.mjs tests/genres.test.mjs tests/library.test.mjs tests/sitemap.test.mjs tests/worker.test.mjs",
+		"test:browser": "node --test tests/browser.test.mjs",
 		"worker:check": "wrangler deploy --dry-run --config worker/wrangler.jsonc",
-		"worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",
-		"maps:revise": "node --env-file-if-exists=.env scripts/revise-map.mjs"
+		"worker:deploy": "wrangler deploy --config worker/wrangler.jsonc"
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.7.4",
@@ -41,7 +34,6 @@
 	"devDependencies": {
 		"@astrojs/check": "0.9.10",
 		"@biomejs/biome": "2.5.13",
-		"@mermaid-js/mermaid-cli": "11.17.0",
 		"puppeteer": "25.10.0",
 		"typescript": "6.0.3",
 		"wrangler": "4.131.0"

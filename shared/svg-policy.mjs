@@ -1,3 +1,5 @@
+import { load } from 'cheerio'
+
 const elements = new Set([
 	'svg',
 	'g',
@@ -80,4 +82,19 @@ export function checkSvgEnvelope(svg) {
 		/<!|<\?/.test(svg)
 	)
 		throw new Error('Invalid SVG document')
+}
+
+export function validateSvg(svg) {
+	checkSvgEnvelope(svg)
+	const $ = load(svg, { xml: true })
+	if ($.root().children().length !== 1) throw new Error('Invalid SVG roots')
+	return checkSvgElements(
+		$('*')
+			.toArray()
+			.map((node) => ({
+				name: node.name,
+				attributes: node.attribs,
+				text: $(node).text(),
+			})),
+	)
 }

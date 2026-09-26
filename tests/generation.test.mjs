@@ -1,23 +1,15 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import LZString from 'lz-string'
-import { readJson } from '../scripts/files.mjs'
-import { parseBatchArgs, runBatch } from '../scripts/generate-maps.mjs'
 import { decompressShare } from '../shared/bounded-lz.mjs'
 import { validateDiagram } from '../shared/diagram-policy.mjs'
 import {
 	classifyResponse,
 	DEFAULT_MODEL,
 	generateDiagram,
-	ProviderError,
 } from '../shared/generation.mjs'
-import { fixtureRoot, graph, success, svg } from './helpers.mjs'
+import { graph } from './helpers.mjs'
 
-test('CLI defaults to dry run and --run explicitly enables execution', () => {
-	assert.equal(parseBatchArgs([]).dryRun, true)
-	assert.equal(parseBatchArgs(['--run']).dryRun, false)
-	assert.equal(parseBatchArgs(['--run', '--dry-run']).dryRun, true)
-})
 test('provider request is metadata-only, includes legacy year, disables thinking, caps tokens', async () => {
 	const result = await generateDiagram(
 		{
@@ -112,121 +104,6 @@ test('provider classifies auth, 429, and timeouts without exposing raw errors', 
 		),
 		(e) => e.code === 'timeout' && e.retryable,
 	)
-})
-test('received results persist before rendering; restart retries renderer without spending; valid results skip', async (t) => {
-	const { root, path } = await fixtureRoot(t)
-	let calls = 0
-	await runBatch({
-		root,
-		dryRun: false,
-		provider: async () => {
-			calls++
-			return success()
-		},
-		renderer: async () => {
-			assert.equal((await readJson(path)).outcome, 'candidate')
-			throw new Error('renderer crashed')
-		},
-	})
-	assert.equal((await readJson(path)).outcome, 'render_failed')
-	await runBatch({
-		root,
-		dryRun: false,
-		provider: () => {
-			throw new Error('must not generate')
-		},
-		renderer: async () => svg,
-	})
-	assert.equal((await readJson(path)).outcome, 'valid')
-	await runBatch({
-		root,
-		dryRun: false,
-		provider: () => {
-			throw new Error('must skip')
-		},
-	})
-	assert.equal(calls, 1)
-})
-test('UNKNOWN is terminal; syntax gets one extra attempt; retries and request budget are bounded', async (t) => {
-	const a = await fixtureRoot(t)
-	let calls = 0
-	await runBatch({
-		root: a.root,
-		dryRun: false,
-		provider: async () => {
-			calls++
-			return { ...success(), outcome: 'unknown_work', mermaid: null }
-		},
-	})
-	await runBatch({
-		root: a.root,
-		dryRun: false,
-		provider: () => {
-			throw new Error('UNKNOWN must skip')
-		},
-	})
-	assert.equal(calls, 1)
-	const b = await fixtureRoot(t)
-	calls = 0
-	await runBatch({
-		root: b.root,
-		dryRun: false,
-		provider: async () => {
-			calls++
-			return { ...success(), outcome: 'invalid_graph', mermaid: 'invalid' }
-		},
-		sleep: async () => {},
-	})
-	assert.equal(calls, 2)
-	const c = await fixtureRoot(t)
-	calls = 0
-	await runBatch({
-		root: c.root,
-		dryRun: false,
-		maxRequests: 2,
-		provider: async () => {
-			calls++
-			throw new ProviderError('provider_error', {
-				retryable: true,
-				retryAfterMs: 3000,
-			})
-		},
-		sleep: async (delay) => assert.ok(delay >= 3000),
-	})
-	assert.equal(calls, 2)
-})
-test('interruption is recorded before request and ordinary restart does not spend again; auth stops batch', async (t) => {
-	const { root, path } = await fixtureRoot(t)
-	await assert.rejects(
-		runBatch({
-			root,
-			dryRun: false,
-			provider: async () => {
-				assert.equal((await readJson(path)).attempts[0].outcome, 'requesting')
-				throw new Error('process interruption')
-			},
-		}),
-	)
-	assert.equal((await readJson(path)).outcome, 'interrupted')
-	await runBatch({
-		root,
-		dryRun: false,
-		provider: () => {
-			throw new Error('must skip uncertain request')
-		},
-	})
-	const b = await fixtureRoot(t)
-	await assert.rejects(
-		runBatch({
-			root: b.root,
-			dryRun: false,
-			provider: async () => {
-				throw new ProviderError('provider_error', { fatal: true, status: 402 })
-			},
-		}),
-		/Batch stopped/,
-	)
-	assert.equal((await readJson(b.path)).attempts.length, 1)
 })
 
 test('bounded decoder preserves LZ-String compatibility and rejects compressed expansion', () => {

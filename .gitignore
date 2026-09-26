@@ -17,12 +17,8 @@ pnpm-debug.log*
 .env
 .env.production
 .env.*
-!.env.example
 .dev.vars*
 .wrangler/
-data/.maintenance.lock
-data/.maintenance.lock.recovery
-data/**/*.tmp
 test-results/
 
 # macOS-specific files
